@@ -1,0 +1,15 @@
+{
+  "source_inventory": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\inventory.json",
+    "sha256": "b71c3a2aa74886d9024b7f4ca7fb5ab3b71493ba94dfe832038a0c35e716ad25"
+  },
+  "code": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\tools\\fulltext_reading.py",
+    "sha256": "4e606e6737708921929bbe400622d1c61c8e2a2d1c6e37fbb9ef0bbe6722bd84"
+  },
+  "indexed_at": "2026-11-18T21:24:52.081909+08:00",
+  "records": 187,
+  "pdfs": 185,
+  "pages": 3649,
+  "automatic_extraction_only": true
+}

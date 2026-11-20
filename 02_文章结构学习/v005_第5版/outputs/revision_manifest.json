@@ -1,0 +1,502 @@
+{
+  "created_at": "2026-11-14T22:05:25.055931+08:00",
+  "purpose": "议题在第4步生成；根据8篇引言回查放宽I3；删除强制抽样质疑段及D10",
+  "seed": null,
+  "model": "current Codex session; exact identifier unavailable",
+  "architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "2.1",
+    "profile_path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+    "profile_sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05",
+    "guide_path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+  },
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "path": "基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "387a880296e81132f7495efb100583f9c40d6aa85d1687bfacf784d43902d931"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/templates/writing_profile.json",
+      "sha256": "2de9b0492d64066ffd7095a97ecd7ffa30b923196eb52e2c755880a0010b1e3d"
+    },
+    {
+      "path": "00_项目控制/v002_第2版/tools/project.py",
+      "sha256": "96e24f71b283a159b312b5e1bf17420e21b4d756dc1e81e47454a80f1fdc5b11"
+    },
+    {
+      "path": "00_项目控制/v002_第2版/module_registry.json",
+      "sha256": "bd3736fb6a9df341df7c6ae569e41bf640af8b1d5a639d73f72fe50f86624105"
+    },
+    {
+      "path": "00_项目控制/v002_第2版/project_config.json",
+      "sha256": "1b146c6194e81cc959d79285539b3d609c3a59dd54ba9b0b5f4fa39dfa5e8a6c"
+    },
+    {
+      "path": "10_共享证据与契约/v001_第1版/knowledge.sql",
+      "sha256": "072a01dbfe080625c964ba7f9e9f89fd10a8aafc714887a0cfa23ba5b2b4b5de"
+    }
+  ],
+  "source_pdfs": [
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\SCCKUUS9\\李路路和朱斌 - 2015 - 当代中国的代际流动模式及其变迁.pdf",
+      "sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\MY99VSIF\\刘军强 - 2011 - 资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008).pdf",
+      "sha256": "03350a59af9155c576b77cd07b5486aeaa3a587f8f57032087986b0ab44a33da"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\89UP6KH7\\朱斌 - 2018 - 文化再生产还是文化流动——中国大学生的教育成就获得不平等研究.pdf",
+      "sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\FQ7RQ5NC\\宋健和陈文琪 - 2025 - 低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析.pdf",
+      "sha256": "a8fa2c99ce1edfc84f4d80dc0548e1f254e3e1ba177f9ffb91cde671edc64393"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\CJB64WZK\\张咏雪 - 2024 - 从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究.pdf",
+      "sha256": "a6c04485c67ae0dc7eccc6da981027986dcde9f202a9b8b4b9ada7774ea4f499"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\ZLZANUD2\\范梓腾和宁晶 - 2021 - 技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响.pdf",
+      "sha256": "ebbed199cf68395555e3d0912d966aa7cbfbcd5b985af9dd279670e80ebb9cd9"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\V3CA3AZW\\李忠路和邱泽奇 - 2016 - 家庭背景如何影响儿童学业成就——义务教育阶段家庭社会经济地位影响差异分析.pdf",
+      "sha256": "531bf821c12b9b46d40632b6e06a91185c620b67520db03b36dca8c3f8edc1b7"
+    },
+    {
+      "path": "C:\\Users\\hou\\Zotero\\storage\\GTUTSZDI\\李代和张春泥 - 2016 - 外出还是留守——农村夫妻外出安排的经验研究.pdf",
+      "sha256": "95bf479e4d6d08e66be5d8afdffc6a36b2299612a78c703981ac24ea908e93f2"
+    }
+  ],
+  "validation": {
+    "checked_at": "2026-11-14T22:05:25.055931+08:00",
+    "technical_validation_passed": true,
+    "problems": [],
+    "framework": {
+      "framework_valid": true,
+      "problems": [],
+      "database_table_count": 33,
+      "research_gates_evaluated": false,
+      "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+    },
+    "architecture_version": "2.1",
+    "budgets": {
+      "body": 15000,
+      "intro": 1800,
+      "literature": 2400,
+      "theory": 2200,
+      "design": 2400,
+      "abstract": 400
+    },
+    "introduction_targeted_comparison_count": 8,
+    "resource_G2_status": "needs_review",
+    "research_gates_evaluated": false,
+    "research_work_executed": false,
+    "formal_database_migrated": false,
+    "crawler_modified": false,
+    "unit_test_result": {
+      "command": "python -m unittest discover -s 00_项目控制/v003_第3版/tests -v",
+      "tests_run": 9,
+      "passed": 9,
+      "failed": 0,
+      "record_basis": "observed command result in current revision session; includes API/CLI without issue, legacy run store and SQLite migration tests"
+    }
+  },
+  "outputs": [
+    {
+      "path": "00_项目控制/v003_第3版/CHANGELOG.md",
+      "sha256": "6c3185289ff6eaf6fcde1853cd999f12da1562ac01a4c7d3eba1267149eb4fd7"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/manifest.json",
+      "sha256": "445e406e75a7fc01adb400da04d9bf6818a3143da0e668d099e7d21379eddf2c"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/module_registry.json",
+      "sha256": "e0f9dad7170e264fcbb4f7c9a7fee7a2645c39694c8a56b5729567fba1c29386"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/outputs/README.md",
+      "sha256": "8b7b60d6bbddd47fe0ee1a8ba847a7c6b0ac40e42da8026ebc09bd448728ee30"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/outputs/revision_validation.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/project_config.json",
+      "sha256": "3176575e61e34abb0d81e635b304b081c859950f1bd1ad036ec5bc2663500223"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/templates/README.md",
+      "sha256": "69d229e10903022a00203ea45e9f10ba074eda0dc7dff9e575bd704d4d2a675e"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/tests/README.md",
+      "sha256": "6931212fcfbc66433d15f0a8c3bcbe26e3a6f9f59a063aaf1cc4331090e5cca8"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/tests/test_framework.py",
+      "sha256": "9c8b4a102fe48e03ec1d6a801bd428aef2aeda3a1cc158e24386c5a51c7ac98b"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/tools/project.py",
+      "sha256": "b60ce1470db18450014a08da47f28cbe4bc895e1424b8db7044d5d73861af990"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/实施路线.md",
+      "sha256": "d72973979885889ba362933dda66afff1188fa031f2256e038c59c21b771f075"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/模块说明.md",
+      "sha256": "215036f0f427cd4cb38f897588cad2b32c3e56e512f8046bdc91d84f3dfc764a"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/第1版原件哈希.json",
+      "sha256": "78c5c7c6b00c18b8b50af7e2a53d891172a90a3ef3a5a14938f48c17e1919672"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/README.md",
+      "sha256": "7023ce7b4b088e43a34fae9979ef6aa2f82a2467db66c21f4bcaf3f9cb31277b"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第1版_AGENTS.md",
+      "sha256": "e042edf23ccb0d27a48e4f5bf4175cede36d8672078c7c429c41e1343f1dd995"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第1版_基础要求.md",
+      "sha256": "4cc53ac81ce8767e926de1a828bcbeeb4312b2d4a5a7438328a8f8a438b76cff"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第1版_项目架构.md",
+      "sha256": "16edb15467b9577a34e723e0b1c7575e1d3818de3d26cb25f109027a4b01cac1"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第2版_AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第2版_基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/规范历史/第2版_项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/运行模式说明.md",
+      "sha256": "a4b3d2112b30ca72cb67c336310db1433f0b7cb916549d5eb2b701164a4047fe"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/需求追踪矩阵.csv",
+      "sha256": "8b424f254b5b7b4f270ea79108d9f7872b179ef9e934ad5287ca59afe0558004"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/验证记录.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/验证记录.md",
+      "sha256": "5230f7b914546dd8ed9c4622d51d3bab9b3a54ceb311e53db106d5ba9baae041"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/corpus/README.md",
+      "sha256": "f4c3236b35e5487f90fda69c0b85eb18503f6871c17674947a86df801384c11d"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/00_研究怎样产生.md",
+      "sha256": "73fb799abfd652b2794bfb7797aa2a7bf49ffd9a1e29d38d0e482d3184753a76"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/04_摘要.md",
+      "sha256": "18ded4f8a3b77981420da588a56214f80fce8a0c4883ade0769948176f955943"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/05_引言.md",
+      "sha256": "2fa9010028faed8c632ffb3955b5ad7707647e76add92160d9852d08be68269b"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/06_文献回顾.md",
+      "sha256": "49a68605f270b1ca4157683c814616901914b6402241fba1a1748357da41ba73"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/07_理论与假设.md",
+      "sha256": "65806baedca854fc850caa7fd836aa6b8bbc1f8a13bae7d9dbe34b04c8218001"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/08_研究设计.md",
+      "sha256": "9fa6989372df0ca03bb034da9a9ab594a46316e7fe45c70092b5fb28be859005"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/CHANGELOG.md",
+      "sha256": "b4824866d5e5b9d1234cb608a3f1cc301d7a8f2ef245da58bbbfd7cf066f470b"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/manifest.json",
+      "sha256": "404cec0e46ab40ff77b637374a7481df2e2e21b39ba433fae935baa8a168e0ff"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/intro_comparison_evidence.json",
+      "sha256": "2c54b4e7c26a9dfb3e4d919bbf58f596e6a012f17f2f62413a38530db0f18e12"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/README.md",
+      "sha256": "88bb5ec210d2727b0ec4170b714ecbc025d26aa3a04536d1e32e7a88a271d11d"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+      "sha256": "01cd55a152243ea462bfd05351580e240bb2733230e05daf609e8a644a8b922e"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/revision_validation.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/引言专项对比.md",
+      "sha256": "71f50829c6fe3e5692777526b4053fd3ef64496005e90dda45512bb174b3b5c1"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/abstract_sentences.csv",
+      "sha256": "5ad634713770b886dae6fb9a31cdd5e0bc9c54f306438775172a76a6716ab3d2"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/corpus20.csv",
+      "sha256": "3d58e5e5d65c7ab543f743d8b5919bf868ebf1b710bb21a57ac478261bb3d54c"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/README.md",
+      "sha256": "910c6ac97a2fec1a539dc9db369d51ca182eb6bc2523b2128e51cc053859bec4"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/structure_handbook.md",
+      "sha256": "adbf5f715cb5ccc0235674089c7202a3d0a67070b80e8a2c64c676535037b975"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/structure_moves.csv",
+      "sha256": "f5b5ebc9e8be472f6a8ed454a5358d0d69dc9857a1282888c3743c7438e96e8d"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+      "sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/写作计划.md",
+      "sha256": "afc19b2a2dd780da6b8046a0ade9380da8fa35b8821461fddc571f1d9ba75d43"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/tools/revise_architecture.py",
+      "sha256": "8ca2151d2b318547435e52a8edb42117207408cec7615928a8547bfb10dd7c11"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/tools/validate_revision.py",
+      "sha256": "98d8e2ece4188406b8c4150da75fbf49d2e7af2db2deaec55014615f236e5c67"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/模块说明.md",
+      "sha256": "e2298b444a039f2ff5ab92f64204d3edb4ed161a27d0831ab933d61ea7f11c31"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/CHANGELOG.md",
+      "sha256": "6c3185289ff6eaf6fcde1853cd999f12da1562ac01a4c7d3eba1267149eb4fd7"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/manifest.json",
+      "sha256": "44ae92ef97f87c9ee64164552c1d9b5f8f9329980543f4d2c4524e682db6ee9f"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/outputs/README.md",
+      "sha256": "8b7b60d6bbddd47fe0ee1a8ba847a7c6b0ac40e42da8026ebc09bd448728ee30"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/outputs/revision_validation.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/abstract100.csv",
+      "sha256": "1435b9d3003566dbd283658604349b04505aa214bf1e945417907e49318b2905"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/acquisition_request.json",
+      "sha256": "e35f2f94b41b475adb969b2b48e1127b1302f892e906befd9a49e0bee2316a23"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/context.csv",
+      "sha256": "d054d963e1195c3267062f4a8f89738e49da5c729be3ac52d4e87c8b212fab29"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/core25.csv",
+      "sha256": "a058824ca32b07dda955fc27ccd26f72806c719280839db20989ca410b5f067c"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/dialogue_matrix.csv",
+      "sha256": "455e7506b992b1429c63119d057c7c13b570eae46c3daee439385e880b4e3fab"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/README.md",
+      "sha256": "69d229e10903022a00203ea45e9f10ba074eda0dc7dff9e575bd704d4d2a675e"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/relations.csv",
+      "sha256": "1e19f803f7267c3e27a8bce09763de41eba630722d438f5154ef2687d97e9454"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/search_log.csv",
+      "sha256": "71921db8116482dd3d4daba12b36eaeb10f33884a8f6c9e72de1d13a2a0fc895"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/topic_scope.json",
+      "sha256": "568b6082215af47000cbd7d8e6633968addfd8dbf71f2ce717f40e4d19765f07"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/view_links.csv",
+      "sha256": "f9033fbfe127ac239e4993869b86421359be47c69dcf13e4fbc7e1ea26c52d57"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/templates/views.csv",
+      "sha256": "d503379b7a0923b7d8e57367a8abca73dae8e2ab35bbd1c171cff26de5eb3a0b"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/模块说明.md",
+      "sha256": "a018baacd0c1857f6a76f21ed861b75c1a01905607af7e35f990a238346c2777"
+    },
+    {
+      "path": "04_议题文献与现实/v003_第3版/采集与归档规格.md",
+      "sha256": "ffe201cd3f4542ed7832cc56a5977ee3fd4aaf2801e083a59edf72d693d4b734"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/A稿/README.md",
+      "sha256": "742b6163871a53e07efb9f83a6d57ca4f161ac2d02f2f8f02c0583dc9df17d4f"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/B稿/README.md",
+      "sha256": "50bbb7ebf922d000b9e2794852ad963961a1ae731558db87bde874f42d3c01f6"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/CHANGELOG.md",
+      "sha256": "b4824866d5e5b9d1234cb608a3f1cc301d7a8f2ef245da58bbbfd7cf066f470b"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/C稿/README.md",
+      "sha256": "50df5fc2bc279cfcee3e04ebad3d1f3a3050ad716cf8dd7c9ab4c070fda91aad"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/manifest.json",
+      "sha256": "db49f8111b3dc246f7fd4b9143fdbc039387943d33910e01534c90c57b13a9e7"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/outputs/README.md",
+      "sha256": "88bb5ec210d2727b0ec4170b714ecbc025d26aa3a04536d1e32e7a88a271d11d"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/outputs/revision_validation.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/architecture_self_check.csv",
+      "sha256": "d343341623cc236587bde3a6a3094bdd2770fcaed508f69ff068c9e3301b188a"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/claims.csv",
+      "sha256": "6624ef56840eb5eeadd82d3172004afc870131b890e6b8f350f8bbd83809178e"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/draft_manifest.json",
+      "sha256": "ad64c0039f3f3e0b8f34481d64e30119fd188724cfd10208da49fad6cfae4491"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/frozen_manifest.json",
+      "sha256": "7d9172485bebdf6f203922cbce1037b39ec62b3310ebd551409a7e78c7f22cea"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/manuscript.md",
+      "sha256": "efc19503b8690002c3632ab81ed4cad90e82b4b531a866e289502240e37313f8"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/README.md",
+      "sha256": "910c6ac97a2fec1a539dc9db369d51ca182eb6bc2523b2128e51cc053859bec4"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/self_check.csv",
+      "sha256": "158f555af13d5641860cb66e0b96148ce838b2ba6c7e6a7e7b308aa562e8dd8d"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/writing_architecture_binding.json",
+      "sha256": "9fbbe3840347da8baf88f71b01adbcf05698ea4480f2cc6779e26497f5f69527"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/templates/写作计划.md",
+      "sha256": "afc19b2a2dd780da6b8046a0ade9380da8fa35b8821461fddc571f1d9ba75d43"
+    },
+    {
+      "path": "07_三稿独立写作/v005_第5版/模块说明.md",
+      "sha256": "b4d0d968fd6bad916e0b9ddc58f3003047b07412c60bcfc859505697efa21742"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/CHANGELOG.md",
+      "sha256": "4a88ba49f0b3955bb6350c2bf33d341b50b1490412c75d37961a6478209fd85f"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/evidence_store/README.md",
+      "sha256": "23ed6d207dba9d58522d123f6980356ee2f7a5ca48a95859c8d702135bea2097"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/knowledge.sql",
+      "sha256": "086aac97529717a0bcf12be9abf1c56bfa6e5ff548a2a4e662f5fd093f95c94b"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/manifest.json",
+      "sha256": "a49b513d0396ef766ce821e426d0721ab56478138a7baf518c01de5509bafcd6"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/migrations/v1_to_v2.sql",
+      "sha256": "978ee342b8b1e1f34ec688d1dd313c2e8300e7ce30ea609d4ef4f1c70f73e5ad"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/outputs/README.md",
+      "sha256": "c7c5add81126f1e15f7c93bddb9a6d630f65acd83bc140c11a16d97fec6901bc"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/outputs/revision_validation.json",
+      "sha256": "d9c2ff41d1bec8d4ac11b3be83c6b44b8734bf20db7eef0b5781535f3b210b3d"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/schemas/README.md",
+      "sha256": "f630aaf4406d9d7d35c91639dc0ee1d2eb4e146ef6596e83dba73a38a1facf38"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/schemas/records.schema.json",
+      "sha256": "21edffb72f046e3fa1304426a3e7b23960675893db0fa9af41dd1a04df025dde"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/templates/README.md",
+      "sha256": "7402369535c6466c05dbc463b754f2b1761d63d93d7b02b933a6ea694de6c765"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/数据契约.md",
+      "sha256": "6c4fc38eba871d5ac4c9fc2c1e2287c0ae08065d4150054d2faef072682bc2b7"
+    },
+    {
+      "path": "10_共享证据与契约/v002_第2版/模块说明.md",
+      "sha256": "1ebed522e8634ace0ad650401a30a9ff0fa2895a0d143007812ab81e45e5685f"
+    }
+  ]
+}

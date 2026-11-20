@@ -1,0 +1,20 @@
+{
+  "journal_id": "J088",
+  "source_url": "https://xuebao.ccnu.edu.cn/",
+  "retrieved_at": "2026-11-16T15:03:17.382727+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://xuebao.ccnu.edu.cn/",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J088_957e16ee019c/text.txt",
+  "sha256": "4b7c4a52e83f831bf2e7d18ac8688040f92ed60d52b2fac402efc147637e9139",
+  "original_path": "primary_http/J088_957e16ee019c/response.html",
+  "original_sha256": "1a8ae34275eb3e5f9f35d8f1ee4c219df50f622a004cca6544f62869af78f59d",
+  "line_count": 51,
+  "title": "欢迎访问华中师大学报网（新版）",
+  "guideline_links": [
+    "https://xuebao.ccnu.edu.cn/tgxz2.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

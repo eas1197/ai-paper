@@ -1,0 +1,18 @@
+{
+  "journal_id": "J086",
+  "source_url": "https://qks.hnust.edu.cn/hnkjdxqks/site/menu/20121227020034001",
+  "retrieved_at": "2026-11-16T15:04:16.329124+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://qks.hnust.edu.cn/hnkjdxqks/site/menu/20121227020034001",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J086_edfa5239540a/text.txt",
+  "sha256": "a97100c2ad32115523d4abb2b5fc4a3af871475534cf4956866a7ebd6206c0d6",
+  "original_path": "primary_http/J086_edfa5239540a/response.html",
+  "original_sha256": "1e3d5ce6b2efc95007ec82d16e75bf06ecdafce76585dd9553780ea11b3743e7",
+  "line_count": 46,
+  "title": "期刊概况",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

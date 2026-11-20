@@ -1,0 +1,18 @@
+{
+  "journal_id": "J077",
+  "source_url": "https://llyk.portal.founderss.cn/",
+  "retrieved_at": "2026-11-16T15:04:31.208890+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://journal.ids.fzyun.cn/auth/realms/journal/protocol/openid-connect/auth?client_id=journal-syfj&redirect_uri=https%3A%2F%2Fllyk.portal.founderss.cn%2Foauth%2Fcallback&response_type=code&scope=phone+openid+email+profile&state=3d56139b-9d41-4417-be09-375a0b9e26e2",
+  "content_type": "text/html;charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J077_a3192e3d3244/text.txt",
+  "sha256": "d588701178f6b2eba036dd4b91cad93e8873b606cabea1c0769b5e2b07bc7304",
+  "original_path": "primary_http/J077_a3192e3d3244/response.html",
+  "original_sha256": "a0c20149fe7f04b0d6338f8c59d9ab9106762bbbcbc03789c2fc292e3dd8dcfc",
+  "line_count": 32,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

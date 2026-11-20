@@ -1,0 +1,51 @@
+{
+  "profile_id": "corpus20_language_style",
+  "profile_version": "2.0",
+  "created_on": "2026-11-15",
+  "resource_version": 2,
+  "scope": "expression_style_from_targeted_passages",
+  "focus": [
+    "用词",
+    "主语与谓语",
+    "修饰位置",
+    "长短句节奏",
+    "指代",
+    "段落衔接",
+    "作者语气"
+  ],
+  "style_ids": [
+    "ST01",
+    "ST02",
+    "ST03",
+    "ST04",
+    "ST05",
+    "ST06",
+    "ST07",
+    "ST08",
+    "ST09",
+    "ST10",
+    "ST11",
+    "ST12",
+    "ST13",
+    "ST14",
+    "ST15"
+  ],
+  "guide": {
+    "path": "03_学术语言学习/v004_第4版/outputs/语言风格学习.md",
+    "sha256": "b68954dd411bba35283727eb2ca5a0863c77355e47d4ccbca543718ac3482b3f"
+  },
+  "examples": {
+    "path": "03_学术语言学习/v004_第4版/outputs/original_examples.md",
+    "sha256": "cd4ab5306c3a230a0d50ae49996be48f0962d5e7608ba17ec7360ac98ce0218b"
+  },
+  "application": {
+    "path": "03_学术语言学习/v004_第4版/templates/后续写作风格约定.md",
+    "sha256": "a3cb8b8fc2ea0ad2d98e4b9169c0c2c7e460baa0e838175dae9ea6dc0bcef637"
+  },
+  "author_variation_preserved": true,
+  "fixed_sentence_length": null,
+  "require_semantic_preservation": true,
+  "copy_source_paragraphs": false,
+  "allow_inventing_facts_for_style": false,
+  "formal_resource_gate_status": "needs_review"
+}

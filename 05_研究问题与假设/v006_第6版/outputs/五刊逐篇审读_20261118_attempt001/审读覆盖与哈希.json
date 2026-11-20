@@ -1,0 +1,893 @@
+{
+  "checked_at": "2026-11-19T10:22:57.581298+08:00",
+  "sources": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\全量来源.json",
+    "sha256": "1ecb6f2aaeaf84be9d23f36a0c5b8bbbe4dafd2b66b6f8f59701182f85dbfd53"
+  },
+  "topic_cards": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\逐篇选题卡.json",
+    "sha256": "1a03a2bc139e9abf08adb1bec34d88bbda2432ef117f1756c44cd3aacf486df2"
+  },
+  "articles": 187,
+  "card_count": 187,
+  "full_extracted_text_pass": {
+    "articles": 187,
+    "page_slots": 3688,
+    "missing": [],
+    "unanchored_model_drafts": [
+      "zotero_23JT2TLW",
+      "zotero_2DIIQY3U",
+      "zotero_2I3PSEZJ",
+      "zotero_2PZNHN43",
+      "zotero_37JITBXH",
+      "zotero_3KUGZQ2E",
+      "zotero_3NP7TJAC",
+      "zotero_3RPQPNPH",
+      "zotero_3TRYUA3B",
+      "zotero_43Z2ZUBC",
+      "zotero_48T7TT3A",
+      "zotero_4M8XA5I3",
+      "zotero_53JZV2H6",
+      "zotero_6LS4H3BB",
+      "zotero_6SWMSBKF",
+      "zotero_6Z5UHQQG",
+      "zotero_ACNFQD3N",
+      "zotero_AE7HBG8H",
+      "zotero_AZN57YT6",
+      "zotero_BILI3BW2",
+      "zotero_BMH6QESB",
+      "zotero_EQNMAT5K",
+      "zotero_GQZ4KXMQ",
+      "zotero_HGAWES6P",
+      "zotero_I345GTWA",
+      "zotero_IB3UDL2N",
+      "zotero_IMWG6QTY",
+      "zotero_J7L9RU78",
+      "zotero_KN3WGGZB",
+      "zotero_L26HWFBR",
+      "zotero_L66UGTED",
+      "zotero_LFQA8WHR",
+      "zotero_LG2Z4QMT",
+      "zotero_MEDKAQMK",
+      "zotero_MJQZQSDY",
+      "zotero_MYYMWDH7",
+      "zotero_N3P8USD3",
+      "zotero_N69J9FWK",
+      "zotero_N8KVBVY3",
+      "zotero_PGDNBZ2W",
+      "zotero_Q998TV4G",
+      "zotero_S77TX3SE",
+      "zotero_SRX53GG8",
+      "zotero_T3VDS6L4",
+      "zotero_THTTFWSX",
+      "zotero_TJ9HUEP2",
+      "zotero_UNUBRMCD",
+      "zotero_VPDKCI4P",
+      "zotero_WQVELBCJ",
+      "zotero_YL9FHT48",
+      "zotero_YT4M3TW8",
+      "zotero_Z2AR5XLV",
+      "zotero_ZWQPLKUS"
+    ],
+    "outputs": [
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_23JT2TLW.json",
+        "sha256": "d05c629da729a8758e6bd08186a318415e00662511842637691309d5410dce03"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_26R32WLR.json",
+        "sha256": "5527ed4b0f2696a93a6333adde0c346df155d98f569235b9c880888d7e7d0b17"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_2DIIQY3U.json",
+        "sha256": "94208d06cc15705c244721bd8290be7e4ff1c52ecb3a1a6c0645584b197b6f5b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_2I3PSEZJ.json",
+        "sha256": "e7b61acd628f35b45284798114be18aeab075697a8e67b49f9b82fc919dad47b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_2PZNHN43.json",
+        "sha256": "0743734f3a4e63ec701fa1a0d20040aebe1b76eb3a444b4816c7232f94a30ee7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_2QAIVCT4.json",
+        "sha256": "d9bfa2af2ca7a5a48640e51845683d3c7d34c8300e28e01feaf3db8c2bb511ce"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_37JITBXH.json",
+        "sha256": "114133094cc91edc0430183cfe8b9eadf1f180e8071a5d245b2921557d39edb5"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_3KUGZQ2E.json",
+        "sha256": "97902f765e5900b0df7015a1ba0c090e4df17f4f52891bf2197a4d9c949cf94a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_3NP7TJAC.json",
+        "sha256": "be37a7a478221eefbd1dc24c6274d97d1a3a7e5e189ac95e568ff87ab448cab5"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_3RPQPNPH.json",
+        "sha256": "1e5d13efc23e729519d28cbcf2e16f9482f7922b5cd1bb1be32086248ca60322"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_3TRYUA3B.json",
+        "sha256": "2c8160a4cfdc85c3440e0bdf02ae78ab6a4c2e9bdbe03930806a3ff892aed799"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_43Z2ZUBC.json",
+        "sha256": "886b978788c2479d41491d92194ee8b002394c460c33a27ecd7eb827cb01ab68"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_48T7TT3A.json",
+        "sha256": "4df41a0c07aa49bc09924385616e1d34dfcd6f6290c49e54e3d3b2efb39262d9"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_4BDWZG7L.json",
+        "sha256": "4ed3ec19ce89bcdf78a8cfc7c3678bfdbd6aaf40d0ae7921c38be9cbf90c5655"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_4FHCYF52.json",
+        "sha256": "ece20e23f28386a4b86724ad1d4fb6e47536df9ad299a7d53a4fd0b218fb0e92"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_4INKL4GG.json",
+        "sha256": "55d1fd67f19afb0874bef75f2cfc146de6c3266cddffaea458465df937acc309"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_4KQ9RE2Q.json",
+        "sha256": "7258246a543f94a2c17fa3e93e339c63f11486d3ffba464f2c9b560746eec066"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_4M8XA5I3.json",
+        "sha256": "b238b1065673693fb76037af58c4356c68ce6e82cf64ab13afd815c937dff4cc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_53JZV2H6.json",
+        "sha256": "585b0a99ed7a79247e252a15f9e207497df2f24137f5db6edf2bbe5e901fd71d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_56PU3EGL.json",
+        "sha256": "1cb29370a6169b6c2b5ce21040e42fe7ac2a066f5b0919f3255ecc024754567c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5CPV2KF3.json",
+        "sha256": "d73b979b630178c2706331a379be7fecdf456cafdddfc2b357c97d9e817116e1"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5FJC5SEJ.json",
+        "sha256": "74a3d37c40b48c7222d8ea6c923f719b779b557d4a6bff832de5aecb6ddd0d14"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5J7MIA9Z.json",
+        "sha256": "7c852a03eb4747bbe4cbae5f4f177060c0149c76012441f0cb8823cc301270a7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5PFF3ZR8.json",
+        "sha256": "548f6495e6a69732990e34b174b61571c686bd5422739d87fe216a81cea4c973"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5SKXGHQM.json",
+        "sha256": "69e6ae07cac2fd279a2914152154b6e9a947e862b5801e4ed0237cedcc48c723"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5T2D75XY.json",
+        "sha256": "c7793ef07ffbd744515b5e7e8e407c8fa75c9a269e5f7f213bcf7b5a784812f6"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_5TQ3EADW.json",
+        "sha256": "31e46ed35dc6d7ae7ffec4412d43e08d7120227475bec91bff6d9e2e243166b1"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_653YZ3MB.json",
+        "sha256": "147c28807be6bd028242dc5efda31dfb982eb81d415237029212fbd39122e1dc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_68HLELIY.json",
+        "sha256": "c725a2dc578256827867e2f6810a6f3cd1882d598e37e7392e486d4f77d1aac4"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_6LS4H3BB.json",
+        "sha256": "f5b37623f83760302b9e269cfbf9160f37d7ce1f91a08ae4fbb9b8583d91c219"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_6SWMSBKF.json",
+        "sha256": "aa791f5d879213d115f8d8bfb91c1a24076f6450995bf80fe482454eb4051c02"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_6Z5UHQQG.json",
+        "sha256": "bc714c964dd867cfbee00bb1ce4370a2125a5c50be9f49705122263a555df504"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_749F2ETX.json",
+        "sha256": "7ed9a8cd222fef6b615fee2c467902b347f4c01f69a01d2437313ddfb1359e00"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_7YMEBL52.json",
+        "sha256": "770236b977d19299640d57c3bec1064f63c30472921a8bdb604625ae20593ffc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_84YD2G38.json",
+        "sha256": "4ceca5f5adf927b5dde523fd642f87b0e17503ba17009b350dd77db72f97a056"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_88RC49EA.json",
+        "sha256": "7aa6b2ce51d126117b408134a2eaf68532e975b9ba20f5751f0cf98f5d5d9323"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_8SIYY9SN.json",
+        "sha256": "19abe33989a083573e8547a1db8f4652a94fa99c0984f460f094c70eb5066643"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_9AFZNVZ4.json",
+        "sha256": "269a510fddc7bc03bd12d95c4066c3962b4eec24718cfcedf5614895b446c62c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_9QPV8F52.json",
+        "sha256": "f13f8672324eb92ab6484ed880bc97489d73cd15965b39078b395c343eb5687e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_9QYVECHA.json",
+        "sha256": "e0cfdbaea17d9eb6137f32cbefaefbb2b818c184c5627df4c60024956eef9c33"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_9UA3GFTB.json",
+        "sha256": "4e1680116c3481f50c51fa2d3e3fd2a16d1ec1e78e9d49073e4004fcd99b1cb0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_A2PM6EIR.json",
+        "sha256": "be3b3a90431b70b0f857c0212e85cdbfc3a86f4e12fae4da4f2eb8e662bc6288"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_A9W54JR3.json",
+        "sha256": "ee45a9f085dd2ea0fa8726eb0548cdc97f9a0f1775771bf51f1b3bd8d8e54ecc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ACNFQD3N.json",
+        "sha256": "8d739c5ad29832358ab730e5d1ffc112506db7d1e54ea4e766f6da7f887020ad"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_AE7HBG8H.json",
+        "sha256": "3ef495b49618fe23396a14a3831a1b17e57dcb41811a23ad20d5b1c02ec211ca"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_AIKPILZK.json",
+        "sha256": "ce4efba037a78114096a4f439e08efce48ffd0b56042a29bba1b2bcf61c1fad3"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ANJUDU3G.json",
+        "sha256": "9c85096376019f6b2287dd7818db328b9681a0b145d8869850dca03e9f5a1f8c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_AZN57YT6.json",
+        "sha256": "9b0e4ba146dd2264885562144a9e50bd5c3f4ebcb97d4a6b73545750e6943d29"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_B43K3DAB.json",
+        "sha256": "2662533626ebe44110040bcaf07ccb11655b3272becdfdffa4ebf9c0ba869333"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_B6WPIYZ9.json",
+        "sha256": "047fa53aca7e55d4f12e1502e19e8ac72dd3b54ed78524975247d71734d1da64"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_BILI3BW2.json",
+        "sha256": "beae446edc38a0b02e3a71bbd01550e9177a45f706b1efad499e7002cac77667"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_BMH6QESB.json",
+        "sha256": "f97a2c32f9d747068bf333eea190f85d610443954d27f7e2fde587e6a726a77a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_C247WRCK.json",
+        "sha256": "e3c1321d57a01305481776426477b9555a9d46ca72eed603b3b4c5c34c59d7e9"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_C39EF39G.json",
+        "sha256": "30e3ef8f893a4b696fc412c4b82b06ff5a496b9b5871a3b7ffa56999ceb52038"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_C7JDI8UA.json",
+        "sha256": "c7d7f5cfddc3d358a3f2e7c9ae17de5ecdf6e624b358c6d3eef741ab057d745f"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_CJD3G4XI.json",
+        "sha256": "1269bc781522c25af3b53c74d572cd5430ad3f294d88ad4d3ab03660ed37a8f1"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_CPAIM3Q3.json",
+        "sha256": "9fa69d78bc7e0dfd2d02804b08f13c5a27399a8d76d9636fb80c131d32b494dc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_CXDS55VR.json",
+        "sha256": "a565dba9e28312c939e493f5487ae3858f165881eba0d86e774baafa97f1a253"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_D8FVKPC2.json",
+        "sha256": "e7038344b175e667552fd772a9501e43c7a83b8a1363a41e4b682054cb778799"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_DEGS7BD3.json",
+        "sha256": "8f9f198c246e2ec89191deaa04bde4a324c8443c959f19952cda6088264894ae"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_DY4QFHVM.json",
+        "sha256": "955be170bdb9f97fce209880c8babd0f11b1b7e967115e34c864cc9176cfd01e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ELJT5JX7.json",
+        "sha256": "7acd5b1b21fce6b82f8282815f1725e2bf04041aaf7531389b8abc7cbf2cd4ba"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ELSKYPM5.json",
+        "sha256": "eb994d0165744cf0afca528233e2e64790a0027c6d2db986894e940a539006dc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ENT3BVXK.json",
+        "sha256": "38f2792c7917d8eaf2eb70da3c6159c5444b6967020d6216e28cdc5bfee7915d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_EQNMAT5K.json",
+        "sha256": "40aad52a8c9e90115075bde5a6b7258f6feb9c906ad28f047a4f091690cc4ed7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ES2VS8PZ.json",
+        "sha256": "8e06b85e7c367430db28a8d1953aeba5df21c93e3279ff3eb217c3b0d3a79c69"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_EW4UMRD9.json",
+        "sha256": "8615f01eca57b8b56c6f1c20d86d261c596d43620ce88c666bd90c14572af82b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_EWPR5ZCU.json",
+        "sha256": "5eed6df1250651dd25ab89f55e45ff5056cd9c9c3eceb0e962b70e1473867729"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_F3L3KAVQ.json",
+        "sha256": "b936888449e447d657faa660cc67e1d28c5f5270ba7248c7ecb0e9cada21a208"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_F7K7L2DN.json",
+        "sha256": "b8c618b48262beab12288e6dfb35c02a93263b6659fc631c756ecf7db47cc16e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_FC6Z7KAI.json",
+        "sha256": "88c6a605a2a22db1041d2ecfd0224ec09791655b612a2aee5b60e7deecb259ba"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_FDQ38UIR.json",
+        "sha256": "9efbf0687fccc79086f286f534883e11b4328a3638a446929f7351e5386d3ab2"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_FGYS4AEA.json",
+        "sha256": "3976f8c32ae4863f9ce6bee65f2e9f21707bda1b1b558c82fa2c758d9511da63"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_FJ33KQQ6.json",
+        "sha256": "67b19605f930f71a10b756d1495d70ed8ad16bb3d7688f065cfddeadb823272a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_G5GEDNDG.json",
+        "sha256": "ecca4ef0e7fcbe40805c8a16ec6e17ce470023aecce5e6a0a0e57c48952f69da"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GIZG8MSL.json",
+        "sha256": "11594c6bf02ca3eba6dca12c88ed046b7d8a6712c9ff01c66ed791ea8b9c1aae"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GPVBJHXA.json",
+        "sha256": "ca6f8e0de959b4237d60b11c19259a8fa039dd078da74275e075f7a4614a8882"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GQZ4KXMQ.json",
+        "sha256": "5803319df2ceed0e55ee481eb747dbe22ad238d55b91e21269d86373f2e3ced0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GRGX8UCK.json",
+        "sha256": "a3df7f5c17f2ca479522c701d88bc1f729afa98b499da2ca4e3bbaa107b61712"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GTNHMFDX.json",
+        "sha256": "d4386016c36cdf6c97939e4d10e0a68dae2b4c9fdc5002aba329ffc079759023"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GUXVYVSM.json",
+        "sha256": "67323392a86e9265727d05e9add1f4b1e94eb87a007881c3c434812e840a072c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GVML7D6U.json",
+        "sha256": "6f53033ef73fc96cd8c494e81b4225f924e012a445d18d24f51d900d421109d6"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_GVP2PXNJ.json",
+        "sha256": "7a4f426cefa08d6bdac1c19416921255ecc13638e8af30779be3e6b4c434d1c2"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_H3QGPTVB.json",
+        "sha256": "a0ba1cb8b2b24149ab74d99fb4b49dc59b45fabf1213cbb4587ef61c577bbc85"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_H546DQ5J.json",
+        "sha256": "7ecc5f154861cb62ba49c8833fae37717c268a83b27492d2c179ccd2e9e6f86e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HANRCBBX.json",
+        "sha256": "261fa3f8aa36eab7b5e5cc0399b6a9f7055cb4764988ded601b2ae3b063623b7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HGAWES6P.json",
+        "sha256": "c2ae942507f34767a0d8eda0ac122e1e453d59ad23b18da309b3015d362448e3"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HISXLIWE.json",
+        "sha256": "d41776a4a8504b21f186b87ba22ce228d0dedd9b4882ee087a628f82e2d0aad7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HMEQEXRX.json",
+        "sha256": "09decf445ba50eff65bdbd4d246f18ce4a998a76efb5553c51f273efbe6c3920"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HQR2NHJ8.json",
+        "sha256": "f37f4b965e789bf7c88adc09a5cb81656f3334053bc07d1f77342fb7fa9331d5"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HVZ2P5MN.json",
+        "sha256": "61344d57c5303416bf3046d0a295c3d744105c317988ccd3024498c7276c8edb"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_HYACST6Q.json",
+        "sha256": "0b15c2137149fa776dce6aab9dba96fb73a2a2ed0e989de27ec986f924727c6d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_I345GTWA.json",
+        "sha256": "276ca3db2d74e476150d3ba4f28a31e0979c30af39172ea73e984f728a23bdef"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_I4DWNBQY.json",
+        "sha256": "a4e70b1cd7ff383f5d371cf684dbbbe21136d1d811731078264468526e5a763d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_I4LCBY4P.json",
+        "sha256": "87d80350c63c8ff09a64bbf2da5268902bbe164a31cb55aa325393bf61ff100b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_I5WMM2B9.json",
+        "sha256": "0a86a02881ad019406712b8e9210f571a1a939c1c9c28b960e995118287129f8"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_I62J6VRS.json",
+        "sha256": "6f97c02588f3708c972f2b54a10f08f6b58699a259c59086cd3cc0788e0613ac"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_IB3UDL2N.json",
+        "sha256": "45fd6c07338544f569b2dce9b34a6f895eeccf8eca655644876dd6c2d21f1c90"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_IIWXKK9Z.json",
+        "sha256": "b3e5e505714a17c9daf7c716baee68bce64c4ff5b1374863cc80c9cf0630b8b0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_IMWG6QTY.json",
+        "sha256": "5a2042d408650985a050c52462918e1bb63043fcc59a02e45b9e831ff57345a4"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_IRWGFC9H.json",
+        "sha256": "8395f75b0bfb3f5cb84d32c7b9bc7cb9eadc1aa5c63828941cee704dcc427950"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_IRYRMQK4.json",
+        "sha256": "5bd4a16bd60bd3297e8238bf273a3f8d0720cf8ed96a2f03b8e6dd580c54158b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_J7L9RU78.json",
+        "sha256": "dba3add8da6669b43cb74a0ee9aa8d05ca1b763c3bc8475b49bb770cbaf2e7d0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_J9NU8LXQ.json",
+        "sha256": "4323c0e6fa7078012c4201a275d903abe655f62d32756c304b068e510788e4bc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_JBBJMJCK.json",
+        "sha256": "a7385f5a4721de12e58e2d877ce76a807ddc152899153b6a330961b5997f92f1"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_JJUDAV9B.json",
+        "sha256": "4a17fee8b1bd5d388e7d1bf474071457dffaeded04dfba75369eeaaeccd3a24d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_JUY8WBGE.json",
+        "sha256": "216d6d924e1fde36b3f1f28d319d775467826c7ba566bf8ac8a946e2e15cf7ea"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_KI7CJHJN.json",
+        "sha256": "a26a6f0155550790f34ae65ff3b8bee7b3410a0b6edea1a13fc425343e7d2d16"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_KN3WGGZB.json",
+        "sha256": "f2f44fa1db525a73c14c550a2b6cda5a08b75b2012c1a3a100022889e92e92f9"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_KQAZJUNX.json",
+        "sha256": "90951d334fae27f10eb6a3bb447cc8b29c605b14abe428cdb1cc5eb740fe4cbd"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_KZEV49KG.json",
+        "sha256": "937ed637ebf77827749eead77b2f73f5a093a01acd014fcef2ca34661d9abadf"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_L26HWFBR.json",
+        "sha256": "97159a3c2ce9a70d9b60125a72f3b318f28eabe407440342e9c4ebdb20a5768c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_L5TVBY4M.json",
+        "sha256": "1e2e42488796d6ddc0fb6566f807ea9d1072e654052c7fbb0e6fcc4b870c7ddd"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_L66UGTED.json",
+        "sha256": "97ec1466c787cc1fb71ebfd6a84c072f0b6f764eabd810cf01ffc7a3bb232058"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_L6BXZQIS.json",
+        "sha256": "f5a604ea83a05f7639073bb68c7322678ab7e63f9d7e4380c6d00fb87627d93d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LFQA8WHR.json",
+        "sha256": "b8c6f2d5848af093b580607dd3a2bbfb4f7837a9e5496f0c61b4b6f9dc749005"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LG2Z4QMT.json",
+        "sha256": "586b10ce2b2b929cac0a5e0acf9542a104dc899a0b8ecb1137f0754c0b219d27"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LG45A65F.json",
+        "sha256": "dbdbe8a0d7cf60c68c874045f1177e84b1b55dbb8c3dbfc830dc45fb986c8e4c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LJDB33UU.json",
+        "sha256": "995fe2fab9a3822600d59247eb404af98f3b609c88a544d10c0813ec8bc3b9bb"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LKAX3BQE.json",
+        "sha256": "266cc35f61f107ec7220dd2c5c26a659203190efd054b228d0bc9db7be331371"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LRB6WF8X.json",
+        "sha256": "4c9facd861aea1b8fc0c3281d49d6dba7c9faa7c3a073a7c8597f948e6051d4a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_LZ6JRDNS.json",
+        "sha256": "bd552a023cc0b7f66b71430e8c837d70189db9d6038c4702cd2fc8ba075459e9"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_M67V7JPB.json",
+        "sha256": "7a3f23d2bfe3946c4b6ecb64827d5db215a24a4d2ef77821e2d4519744a94d01"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_M8ZF9IFG.json",
+        "sha256": "53f280969874e105d495103bb52cc59d212b2c39de9cfded06b61c949ee3f5e2"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_MBRG79FK.json",
+        "sha256": "496b24a5edaceab47bb54156e4b67992fe62e1c1786fdde042c6355e744bac69"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_MDYI6LFN.json",
+        "sha256": "bc1c2ae95c8e3fd521bf1ec4f5d01ea064ffad26f62432a3973b7f6ff3833642"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_MEDKAQMK.json",
+        "sha256": "7832e1374063c42571a64c06430aafb950f73f91f3eb8327de5609edb88278a7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_MJQZQSDY.json",
+        "sha256": "5c0297842cb4557d955e1211137b9b6ad228f9025d2f7782e7364dbb3e3c1c29"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_MYYMWDH7.json",
+        "sha256": "07cc14eef3a7a36f48797d8d85e7e056d5fb026de4bd716cb4f2b40514fae7fa"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_N3P8USD3.json",
+        "sha256": "4caa7f96ee7de7979a8589f4b745d838b65ab18fb17e6171848026fdf1d01501"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_N69J9FWK.json",
+        "sha256": "f74d7f50926cd27e6fa5e34db5568ff011bf94c2077426bf2320a48edd68ad7e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_N8KVBVY3.json",
+        "sha256": "b9701798a7a695008c38c238b802348a94539c9f899c6d043d9bc12ccc5235c7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NDFVWRZL.json",
+        "sha256": "cec82554ef1f3cfc75bcca1d12687147e2aa9057e0e5721a42184bf17a374e1e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NRU2MJFT.json",
+        "sha256": "d5987da6e4cd9df98afd07ff1405061419a71ce6f8d544829758bc0ff0b59878"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NUCFC9KJ.json",
+        "sha256": "60108ac13313636e973d405ec10f6f076686b72a9a6fc223fbb126fe70ca10fa"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NW8GFQ9N.json",
+        "sha256": "e3b406bc5b8285d5c5a8eff892a10c62b03f9f21db42d01d21bc3d299a06bb4a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NY2MVXSQ.json",
+        "sha256": "673c4e39ad8101cf04da5f082388f3e93df5881e1126edda3c1ccacacd5b89bf"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_NYVXYIMI.json",
+        "sha256": "ec88e1b60a44e2f9a0fc73758aff3ecc7c4fdb36320515f114209075d19866eb"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_P4AG5UEJ.json",
+        "sha256": "4ae661c9253e59fbf80d5b6a1d1d1e61dfc94051ea1bdc5b81a965b2c9ab54c0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_P6JJQTUP.json",
+        "sha256": "dcca822d2e6a80226e028f2a3636f66bd21abc9dff0451bae6c8957849986a9c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_PEX2DD5E.json",
+        "sha256": "89738940144a9bb54289f7ad0041b41b9ccc4c7475b240540f1def0e1f956eca"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_PGDNBZ2W.json",
+        "sha256": "3cd93ac9d8c7a3b7fc13f2167c55c10327081f83ca9fd25f55f42344f864d919"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_PM6G8CD3.json",
+        "sha256": "db217d78bc6a79241bc7e809d0c0ab26aa7b3f76c7426849a33b9854eb0f6a64"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_PUHQSNJ9.json",
+        "sha256": "e7939d5c70a16efdda730bd8b1a3b8aefbbb33f7fd25fb75176b4cf3d4d236e6"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_Q998TV4G.json",
+        "sha256": "7b035ff3e1d8b865634fcb45770fc0fd4b1217cc17ad567cc86e5c4fb2df3f67"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_QDVAF2KC.json",
+        "sha256": "111d59e75919392a5e3877be664541b2e415fd37daac0f192b08f7888ee74ed1"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_QTLJU8MH.json",
+        "sha256": "aecaa48a861377032122a6f3d01f372a9b0a3a4c7f63124a72af9e98d2599844"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_QWMA2E38.json",
+        "sha256": "e93f359f4a39041cb24941ed519e509b53b5bd67d7b5e4b928496394d635b7e4"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_R6FP8HJQ.json",
+        "sha256": "fcd75f51cddd45892e50e4691a1ba7dab6a498613c7d03aaebf909d7a5d0e73a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_RLSULDT9.json",
+        "sha256": "399e934f36f67fe1c08876bf1e731a65a2dc28e58110bfcb137620f7fd079cac"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_S3592BHS.json",
+        "sha256": "93a5efa153f78b8da0d66078cb0fb6bef10b361b71e3d7167d5938bb1a04487a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_S64EMKIE.json",
+        "sha256": "7363ee5c4c84902a95534b48e2e841deb378b08ae3318d514b0dc854134aa5b0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_S77TX3SE.json",
+        "sha256": "30422e0a71662408d74c514981c737acfb39057ffd317d647089659830a7cf94"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_SRX53GG8.json",
+        "sha256": "ffaafee42c0884822c3966f3fda22374ada074475db686a2a8a1b6c0ab48b6d7"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_T3VDS6L4.json",
+        "sha256": "df5a5e69180cf95c4d9d1f5916491750f06eb745cf7cb91af0c3b313eb7e7f25"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_THTTFWSX.json",
+        "sha256": "e8fee90f94893a0b7bb95658dc0f40f7e3d58067dda5f101dc2aaef1383aa1d0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_TJ4AL5Z9.json",
+        "sha256": "e0f2886d283f108bd9780a02d6ac6847ec58610815ad7fae74d54cbee698d858"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_TJ9HUEP2.json",
+        "sha256": "b39a12fae37d9d2777db69c2cf23d62950840a70baac802a592f0e2b4ad2069e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_TSVM4QCW.json",
+        "sha256": "e54e16f1a1712ba543c8d7d07f98c133024cd7eb5bfa96826ef91af1f838dcfc"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_TTRSU28K.json",
+        "sha256": "3ac0dd02536fe05da92fdf18944c02f3d0cb109004e13beebb6959d2a466de36"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_UDPHMFKL.json",
+        "sha256": "2b7326b255303b92a474bf50e5beac2899e11ed309bca5decf737d13ebe79540"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_UJTG4PUK.json",
+        "sha256": "17dec6d0d9fd1a25168da3147f7fa91b14f5d78c54c9bbdef21198c1c3a4322a"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_UNUBRMCD.json",
+        "sha256": "75f6bb8d3d26843b3d84fa4e673dd09ba91b92cb8c2312e2407a54e265d1395f"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_UWLWPBL5.json",
+        "sha256": "b2077e28d5d8f2fc58f042159d1ec3d30f865371bb6ddc3a854eae2f51caadef"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_V3I8PM35.json",
+        "sha256": "cc6c9d7983097dde9ac0b0c4cbaef6f41d725834ea4085047fa1ccb62d25b4bf"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_V458LHYG.json",
+        "sha256": "6ff7cd8d36be93e802fe61fd3932d449439e3d180a41a329a3730fb6e4891831"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_V4HKWDP3.json",
+        "sha256": "1e1a3474d298e7a801402f5e813041abea3f377e3aeb357ab49d677b8f58b5ef"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_VDZN3C97.json",
+        "sha256": "118293781d2a1144d82e3339e121cb45b6d07865a6a2e4ff80e82331176c83bf"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_VPDKCI4P.json",
+        "sha256": "93f0b44f84b229522f8056889834bd4ace784c2c6311ee1f0486f4f1429e4257"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_VS44I6GH.json",
+        "sha256": "fdd4ae4a599f0735e5a6a623375ce077091579283bad4047adc16284553a77eb"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_VSPDS3FP.json",
+        "sha256": "d3d97184e232f74debede1bf0e42f539606058e9ba466282d2c27e8cc34090fa"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_WHP496XZ.json",
+        "sha256": "6f40d1f6acbbaa2a1a0185df5d0df17202f79d32d5493509af8830d5a5789410"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_WN348NVM.json",
+        "sha256": "297737873a6b3e8acc65eba28d4154b4a2d52b1631c692edd8bcb0136cf42d5b"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_WQVELBCJ.json",
+        "sha256": "fe815d54fb27c6a0c729b463871c0c3a57d98f6284986ab6c634aae271b31ed2"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_X5GM6Z7G.json",
+        "sha256": "5af899ecfb7ab05c5a47f2e7d74e16df1dac6658619f1eda9da00c920678417e"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_XBKDFANE.json",
+        "sha256": "ce20c7b8dff71821f8a037f1fa68897232742b0c79a78ee4b8119cd5a6adb92c"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_Y28WBZUE.json",
+        "sha256": "c46ababd58e707e6cd44158f525791216592c2a412d9e2621b3afaaeac9d3159"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_YG5EIDZ6.json",
+        "sha256": "c8fe8a12744d6dea340fc68d100ee4b46a50d9e4989ec1668f279609edea2e7d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_YL9FHT48.json",
+        "sha256": "b499b5e4e34fe3e9c09dcacf8dde58c7a3de73af8955a34a949efaa6e94633c2"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_YT4M3TW8.json",
+        "sha256": "c6aadc6f70f23ecb4a6f76f6fe7e4d79242de95a343d7fd72351a4173d1d67d3"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_YXBV5RNH.json",
+        "sha256": "e4f4265fa46241410f9d507f7bc818b9507f6b16cca92ae152b8123693a1a581"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_Z2AR5XLV.json",
+        "sha256": "767895a003fa45397f56beae13338e81a17d3ef42c4960fcd245646947909a92"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_Z9QEYNL3.json",
+        "sha256": "10e4a396be68d3a458979a790f1b75964db80f5643d0dd27501ca10781358f7d"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ZBEUMV5I.json",
+        "sha256": "31d85176e60e21880e4bf8084dc4a04c31c18def11541a456eaeac2d5c3a95a0"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ZH8E2LXI.json",
+        "sha256": "884bcd338ff903c3ec196edf9604718b576a1ad899cf7d5cc7044326454a50b4"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ZHAN6EV7.json",
+        "sha256": "13a43d533afee235e4cd5e1220e366f3a2d03d37a33a7f2b957b1f890763e060"
+      },
+      {
+        "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\本地模型通读\\zotero_ZWQPLKUS.json",
+        "sha256": "3c4ce83bc1e2d735afe9fc4e4a2fad18b99ce1e38cf50546aef09831b43f32ec"
+      }
+    ]
+  },
+  "extracted_pages_under_100_chars": [
+    {
+      "paper_id": "zotero_26R32WLR",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "paper_id": "zotero_88RC49EA",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "paper_id": "zotero_CPAIM3Q3",
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "paper_id": "zotero_ES2VS8PZ",
+      "pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "paper_id": "zotero_FJ33KQQ6",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "paper_id": "zotero_GUXVYVSM",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "paper_id": "zotero_LRB6WF8X",
+      "pages": [
+        9,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "paper_id": "zotero_MDYI6LFN",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "paper_id": "zotero_MYYMWDH7",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "paper_id": "zotero_TSVM4QCW",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "human_review_depth": "substantive_sections_reviewed",
+  "meaning_notes_are_independent_from_model_drafts": true
+}

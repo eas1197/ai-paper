@@ -1,0 +1,18 @@
+{
+  "journal_id": "J003",
+  "source_url": "https://cass.cn/keyandongtai/baokanchuban/201401/t20140128_955460.shtml",
+  "retrieved_at": "2026-11-16T15:03:32.207138+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://cass.cn/keyandongtai/baokanchuban/201401/t20140128_955460.shtml",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J003_7d55f4fae001/text.txt",
+  "sha256": "3e7005b650739950f88b2f9aa2937ea96819026e7cd1e833d0fc2826b61135be",
+  "original_path": "primary_http/J003_7d55f4fae001/response.html",
+  "original_sha256": "ab064155e2741d30499a72dcbdd3fdcf092f626c6e160a99df968cbdc4972b63",
+  "line_count": 142,
+  "title": "《社会发展研究》创刊暨征稿启事",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

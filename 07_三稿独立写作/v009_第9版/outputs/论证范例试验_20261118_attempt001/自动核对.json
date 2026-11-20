@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "scope": "automated_text_and_number_checks",
+  "inputs": [
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/段落实写.json",
+      "sha256": "042a81de8ddd1b1b8afcefc1fcd6675398660d1c50c05d0e0fc98e08d1835895"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/同证据写作任务.json",
+      "sha256": "a74915be8432e76c9d8a6c36aba2a8d53cc307a9a88bb8ec7e47f6fba38052ca"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/tools/pilot07.py",
+      "sha256": "706d1d929894edb955999f0018c985dc065462233e0b46e3895c71261ca68341"
+    }
+  ],
+  "checks": [
+    {
+      "code": "QUESTION-1",
+      "condition": "topic",
+      "task": "question",
+      "characters": 167,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "QUESTION-2",
+      "condition": "manual",
+      "task": "question",
+      "characters": 159,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "QUESTION-3",
+      "condition": "function",
+      "task": "question",
+      "characters": 155,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "HYPOTHESIS-1",
+      "condition": "function",
+      "task": "hypothesis",
+      "characters": 140,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "HYPOTHESIS-2",
+      "condition": "manual",
+      "task": "hypothesis",
+      "characters": 146,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "HYPOTHESIS-3",
+      "condition": "topic",
+      "task": "hypothesis",
+      "characters": 140,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "RESULTS-1",
+      "condition": "topic",
+      "task": "results",
+      "characters": 142,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "RESULTS-2",
+      "condition": "function",
+      "task": "results",
+      "characters": 156,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    },
+    {
+      "code": "RESULTS-3",
+      "condition": "manual",
+      "task": "results",
+      "characters": 158,
+      "missing_required_numbers": [],
+      "unexpected_numbers": [],
+      "source_14_character_matches": []
+    }
+  ],
+  "status": "passed"
+}

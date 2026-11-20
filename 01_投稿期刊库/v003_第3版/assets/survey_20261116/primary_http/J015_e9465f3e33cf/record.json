@@ -1,0 +1,18 @@
+{
+  "journal_id": "J015",
+  "source_url": "https://znjj.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:03:43.208042+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://znjj.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J015_e9465f3e33cf/text.txt",
+  "sha256": "fd9d7819c3bcd9e9145effcb47fd9945b5f3dc8126c4998478c7a3436c2d1d35",
+  "original_path": "primary_http/J015_e9465f3e33cf/response.html",
+  "original_sha256": "953a2c96062db330880ee07dc7280afb0199d1292a2cd77e1e81191c0e32bf35",
+  "line_count": 90,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

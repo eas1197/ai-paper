@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "started_from": "C:\\Users\\hou\\Zotero\\zotero.sqlite",
+  "database_read_method": "stable_db_and_wal_copy",
+  "verified_at": "2026-11-18T17:48:05.301546+08:00",
+  "pdfium_version": "5.2.0",
+  "journal_counts": {
+    "中国社会科学": {
+      "zotero_items": 58,
+      "unique_articles": 55,
+      "opening_indexed": 55,
+      "abstract_indexed": 0,
+      "title_only": 0
+    },
+    "社会": {
+      "zotero_items": 9,
+      "unique_articles": 9,
+      "opening_indexed": 9,
+      "abstract_indexed": 0,
+      "title_only": 0
+    },
+    "社会学研究": {
+      "zotero_items": 87,
+      "unique_articles": 82,
+      "opening_indexed": 80,
+      "abstract_indexed": 2,
+      "title_only": 0
+    },
+    "中国青年研究": {
+      "zotero_items": 18,
+      "unique_articles": 18,
+      "opening_indexed": 18,
+      "abstract_indexed": 0,
+      "title_only": 0
+    },
+    "探索与争鸣": {
+      "zotero_items": 23,
+      "unique_articles": 23,
+      "opening_indexed": 23,
+      "abstract_indexed": 0,
+      "title_only": 0
+    }
+  },
+  "code": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\tools\\question_library.py",
+    "sha256": "31d15b5d8703dfabe4f7e29b28b17b5fdf15cf1c7532cfc30f2b783106651ca1"
+  },
+  "inventory": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\inventory.json",
+    "sha256": "b71c3a2aa74886d9024b7f4ca7fb5ab3b71493ba94dfe832038a0c35e716ad25"
+  }
+}

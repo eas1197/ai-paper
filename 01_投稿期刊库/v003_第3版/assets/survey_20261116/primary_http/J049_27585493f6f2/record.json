@@ -1,0 +1,9 @@
+{
+  "journal_id": "J049",
+  "source_url": "https://ggglyzc.ruc.edu.cn/CN/column/column7.shtml",
+  "retrieved_at": "2026-11-16T15:02:55.788266+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "SSLError",
+  "reason": "HTTPSConnectionPool(host='ggglyzc.ruc.edu.cn', port=443): Max retries exceeded with url: /CN/column/column7.shtml (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1007)')))"
+}

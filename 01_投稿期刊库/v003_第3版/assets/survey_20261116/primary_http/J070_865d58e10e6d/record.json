@@ -1,0 +1,18 @@
+{
+  "journal_id": "J070",
+  "source_url": "https://quak.cbpt.cnki.net/",
+  "retrieved_at": "2026-11-16T15:04:30.606217+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://quak.cbpt.cnki.net/EditorH3N/Quit.aspx",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J070_865d58e10e6d/text.txt",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original_path": "primary_http/J070_865d58e10e6d/response.html",
+  "original_sha256": "5b1d33e3c21b22f3480e458e7c3693a9ca6ce005761b1eca748638b542a1bd5c",
+  "line_count": 0,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

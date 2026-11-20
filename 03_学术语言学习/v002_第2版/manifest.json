@@ -1,0 +1,23 @@
+{
+  "module_id": "03",
+  "name": "学术语言学习",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "02",
+    "10"
+  ],
+  "expected_artifacts": [
+    "language_rules.csv",
+    "original_examples.md",
+    "language_audit.csv"
+  ],
+  "folders": [
+    "templates",
+    "outputs"
+  ],
+  "execution_scope": "shared_resource"
+}

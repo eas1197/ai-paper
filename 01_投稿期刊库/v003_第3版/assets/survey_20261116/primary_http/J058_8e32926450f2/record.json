@@ -1,0 +1,20 @@
+{
+  "journal_id": "J058",
+  "source_url": "https://jxsh.cbpt.cnki.net/EditorH3N/Index.aspx",
+  "retrieved_at": "2026-11-16T15:02:58.885870+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jxsh.cbpt.cnki.net/EditorH3N/Index.aspx",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J058_8e32926450f2/text.txt",
+  "sha256": "fc647f553c9fad77480e01e7dc333bbc32210e3c349324f2cf8c96d748634351",
+  "original_path": "primary_http/J058_8e32926450f2/response.html",
+  "original_sha256": "d5df2cc5b2ee8badf057b85a0a6e961c6ffe92d4193a4f99cc89d9ed78f5dbf8",
+  "line_count": 45,
+  "title": "\r\n\t\r\n        期刊协同采编系统\r\n",
+  "guideline_links": [
+    "https://jxsh.cbpt.cnki.net/EditorH3N/PromptPageInfo.aspx?t=v&c=1"
+  ],
+  "review_status": "awaiting_source_readback"
+}

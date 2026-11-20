@@ -1,0 +1,18 @@
+{
+  "journal_id": "J042",
+  "source_url": "https://bjjy.cbpt.cnki.net/EditorDN/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:02:50.062432+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://bjjy.cbpt.cnki.net/EditorDN/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J042_54707f66b82d/text.txt",
+  "sha256": "5c3088ca2c9abc759ab5e97718f1790c78b23b7d71929c567439465ce226b676",
+  "original_path": "primary_http/J042_54707f66b82d/response.html",
+  "original_sha256": "6f330fc8779330266f48b118c36dca05a27b36f6b5624ac0216f41ca47d5e9a5",
+  "line_count": 128,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

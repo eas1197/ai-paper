@@ -1,0 +1,6 @@
+滑动拼图验证码 (https://www.eshukan.com/displayj.aspx?jid=15377 ; rewritten summary of https://www.eshukan.com/verify.aspx)
+citeturn139view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://www.eshukan.com/displayj.aspx?jid=15377","lineno":null}); Redirected to URL: https://www.eshukan.com/verify.aspx; Total lines: 3
+L0: # 请完成验证，以证明您不是机器人
+L1: 
+L2: 滑动拼图验证码
+

@@ -1,0 +1,22 @@
+# 默认不公开研究原件、个案数据、私密配置与运行缓存
+**/__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+**/runs/
+**/assets/fulltext/*
+**/assets/raw_data/*
+**/evidence_store/*
+**/private/*
+*.dta
+*.sav
+*.por
+*.parquet
+*.sqlite
+*.db
+*.db-wal
+*.db-shm
+
+# GitHub 阅读快照保留目录占位及一份阶段验收摘要
+!**/.gitkeep

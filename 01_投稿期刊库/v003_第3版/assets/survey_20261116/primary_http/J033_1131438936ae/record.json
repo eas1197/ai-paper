@@ -1,0 +1,21 @@
+{
+  "journal_id": "J033",
+  "source_url": "https://mue.csu.edu.cn/news/zhenggaoqishi.htm",
+  "retrieved_at": "2026-11-16T15:04:56.517449+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://mue.csu.edu.cn/news/zhenggaoqishi.htm",
+  "content_type": "text/html;charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J033_1131438936ae/text.txt",
+  "sha256": "ff57a43e0a4359c7f58a23613183f6817280a16e99043eaf033d05e4a7d482d7",
+  "original_path": "primary_http/J033_1131438936ae/response.html",
+  "original_sha256": "9f4c76594c2b3a8e92d81531ce486f3cb65801915b31860c3f6de82413a06e45",
+  "line_count": 88,
+  "title": "现代大学教育",
+  "guideline_links": [
+    "https://mue.csu.edu.cn/news/tougaoxuzhi.htm",
+    "https://mue.csu.edu.cn/news/zhenggaoqishi.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

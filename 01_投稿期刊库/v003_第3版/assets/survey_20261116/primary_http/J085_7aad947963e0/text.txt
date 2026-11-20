@@ -1,0 +1,48 @@
+L0: 河南师范大学学报(哲学社会科学版)
+L1: nav
+L2: emailalert
+L3: searchbtn
+L4: searchbox
+L5: tablepage
+L6: yinyongbenwen
+L7: piczone
+L8: journalimg
+L9: journalInfo
+L10: journalinfonormal
+L11: searchdiv
+L12: searchzone
+L13: qikanlogo
+L14: popupnotification
+L15: Your browser does not support the video tag.
+L16: 请选择需要下载的pdf数据
+L17: 中文数据
+L18: 英文数据
+L19: 正在翻译英文数据
+L20: ...
+L21: xinwenxiangqing
+L22: xinwenxiangqingnew
+L23: 河南师范大学学报(哲学社会科学版)
+L24: 首页
+L25: 期刊介绍
+L26: 基本信息
+L27: 编委会
+L28: 编辑队伍
+L29: 征稿简则
+L30: 版权协议
+L31: 期刊订阅
+L32: 下载中心
+L33: 联系我们
+L34: |
+L35: Email-Alert
+L36: 《河南师范大学学报》（哲学社会科学版）投稿格式规范
+L37: 2026-04-17
+L38: 单刊后台管理员
+L39: 分享至：
+L40: 扫码分享到微信或朋友圈
+L41: 使用微信"扫一扫"功能。
+L42: 将此内容分享给您的微信好友或者朋友圈
+L43: webs/hnsk/media/web/2026/04/17/《河南师范大学学报》（哲学社会科学版）投稿格式规范.pdf
+L44: 该系统由中国知网提供技术支持。技术支持使用说明：cb@cnki.net http://find.cb.cnki.net
+L45: 建议使用分辨率为1024*768的IE 10.0或更高版本浏览此页面
+L46: 检 索
+L47: 高级检索

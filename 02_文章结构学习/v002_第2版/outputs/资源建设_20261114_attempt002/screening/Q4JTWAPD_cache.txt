@@ -1,0 +1,782 @@
+∗ 本研究 是 国 家 社 会 科 学 基 金 重 大 项 目 “ 人 口 高 质 量 发 展 视 角 下 积 极 应 对 老 龄 化 问 题 研 究”
+(23&AD187) 的阶段性成果。 研究始于郑丹丹老师指导的学士论文,并受益于刘河庆、林书傲等师友
+及匿名评审专家的宝贵意见,在此作者谨表诚挚的感谢。 文责自负。
+数字时代的中国青年文化变迁:
+趣味模式、社会区隔与平台化∗
+刘太石
+提要:数字时代与中国青年文化的耦合带来了全新的理论与实证问题。
+本研究以某青年文化平台的数字痕迹为例,通过“ 计算扎根” 展示中国青年
+文化的数字境况与变迁。 研究发现,平台化的中国青年文化呈现杂食性为
+主体、单食性并存的趣味模式,并与性别、世代等社会区隔要素具有同源性。
+进一步考察文化的数字变迁后发现,青年文化平台历经亚文化、多元化与主
+流化的发展阶段,其背后是宏观社会进程下青年文化实践与平台技术运作
+的共同作用。 青年文化在数字时代的蓬勃发展使其与主流文化的关联愈发
+紧密,进而成为当代中国文化重要的推动者与创造者。
+关键词:青年文化 杂食性 社会区隔 计算扎根 数字平台
+一、问题的提出
+这是一个流变的数字时代。 数字技术与文化领域的持续交融释放出巨大的
+文化活力,而青年文化在其中扮演着愈发重要的角色。 在当代中国,数字时代与
+青年文化间的深层共鸣带来了青年文化平台的繁荣。 如何理解数字时代中国青
+年文化的现状与发展动态是全新的研究议题。
+青年文化研究有两种经典理论范式:“亚文化”理论和“ 新部落” 理论。 亚文
+化理论的代表性研究来自“ 伯明翰学派” ( Birmingham School) ,他们以英国战后
+青年文化为例,将青年文化视作阶层化的符号实践,塑造了仪式抵抗的青年文化
+形象( Hall & Jefferson,1976;Hebdige,1979;Clarke,1982) 。 其后,“ 后亚文化” 研
+159
+
+
+究通过对亚文化研究中的结构主义视角进行批评与发展,强调青年文化的差异
+性与动态性。 而新部落理论则关注消费主义与媒介化进程中的青年文化部落
+( Bennett,1999;Robards & Bennett,2011) ,其与亚文化理论始于 21 世纪初的争
+论一直延续至今。
+亚文化理论与新部落理论之争的焦点在于个体与结构的平衡问题,这体现
+了青年文化研究面临的三重困境。 首先,学界认为,相关研究应在新部落的多元
+流变 中 找 回 亚 文 化 的 阶 层 属 性 ( Shildrick & MacDonald, 2006; Griffin, 2011;
+Hollingworth,2015) 。 其次, 数字化的深度发展, 尤其是平台 化 进 程 ( van Dijck
+et al.,2018;赵一璋、王明玉,2023) ,则为理解当下青年文化带来了全新的挑战,
+学界对此问题的研究尚存不足。 最后,国内的青年文化研究多着眼于对具体文
+化现象或社群的讨论,缺乏对内在机制及宏观趋势的探析。 面对上述三重困境,
+笔者试图基于文化社会学的视角对青年文化的经典研究脉络进行理论重构,并
+通过对平台数字痕迹的“ 计算扎根” 分析,直接考察中国青年文化的现状与变
+迁。 本研究选取了国内某大型数字青年文化平台 B 作为研究案例。 作为国内大
+型青年文化社区之一,B 平台为透视中国青年文化的数字境况与动态提供了绝
+佳案例,其数字痕迹中视频、创作者与用户间的关系构成了趣味测量的代理变
+量,使得对中国青年文化的宏观及长线描摹成为可能。
+二、文献回顾
+( 一) 从“ 亚文化” 到“ 新部落” :经典青年文化的理论脉络
+亚文化理论是关于青年文化的经典理论,其发展与“ 伯明翰学派” 密不可
+分。 科恩( Phil Cohen) 在 1972 年针对英国工人阶级青年文化的研究揭开了伯明
+翰学派的帷幕( Cohen,1972) 。 通过对青年文化进行“ 政治—符号” 解读,并纳入
+战后“ 失落” 的英国工人阶级的情感和状态,该研究奠定了亚文化研究的基础。
+此后,研究者进一步引入“ 文化霸权” ( cultural hegemony) 这一分析概念,塑造了
+“ 仪式抵抗” ( ritual resistance) 的青年文化形象( Hall & Jefferson,1976) 。 赫伯迪
+格( Dick Hebdige) 与克拉克( John Clarke) 对朋克文化的研究是“ 亚文化” 研究的
+巅峰之作( Hebdige,1979;Clarke,1982) ,通过将青年群体的符号实践放回到鲜活
+的社群中,他们揭示了青年文化背后“ 文化” 与“ 社群” 的同源性。
+亚文化理论主导了 20 世纪 70、80 年代的青年文化研究,但也逐渐受到批
+160
+社会学研究 2025. 3
+
+
+判。 一些批评者指出,亚文化理论将青年文化视作文本而忽略了其日常实践,且
+该理论对边界与风格的过度强调把青年文化幻想为静态、凝固的结构( Fine &
+Kleinman,1979;Clarke,1982;Redhead,1990) 。 另一些批评集中在亚文化理论对
+阶层 的 关 注 上, 不 少 学 者 认 为 其 高 估 了 阶 层 的 作 用 ( Muggleton & Weinzierl,
+2003) 。 此外,女性主义者指出性别因素 在 青 年 文 化 研 究 中 被 系 统 性 地 忽 视
+(McRobbie & Garber,1976) 。 最后,信息技术及其媒介化也未在亚文化研究中得
+到重视( Thornton,1995 ) 。 上述 批 判 共 同 促 成 了 青 年 文 化 研 究 的 民 族 志 转 向
+( Bennett,1999) ,研究者援引后现代理论,形成了后亚文化理论阵地。
+后亚文化理论明确反对亚文化理论对于结构主义的吸收和运用,并致力于
+让青年文化回归原貌。 雷德黑德( Steve Redhead) 关于俱乐部( club) 文化的民族
+志研究被公认为后亚文化研究的开端( Redhead,1990) ,该研究将青年文化解读
+为“ 拟像” ( simulacra) ,这解构了亚文化的结构主义底色。 此后,后亚文化阵地
+迎来蓬勃发展,并孕育了新部落主义( neo-tribalism) 这一代表性理论。 受到“ 部
+落社会” 理论的启发( Maffesoli,1996) ,新部落理论及其追随者认为,在消费与数
+字化的共同影响下,青年文化已经转变为多元流变的文化部落( Bennett,1999) 。
+此后,该理论在流行音乐研究中得到了广泛应用( Malbon,1999;Ueno,2003;Riley
+et al.,2010) ,并被用来解释数字化的青年文化( Robards & Bennett,2011;Guerra,
+2020) 。
+亚文化与新部落是青年文化研究的两种经典理论,但二者对当代青年文化
+的解释却激发了长期的争论,争论的焦点在于青年文化中个体与结构的平衡问
+题( Muggleton,2005;Blackman,2005;Bennett,2011) 。 不少研究者同意新部落理
+论对青年文化新兴特征的观察,但同时也强调亚文化理论中社会阶层对青年文
+化的影响( Shildrick & MacDonald,2006;Griffin,2011;Hollingworth,2015) 。
+( 二) 重构青年文化理论:青年的文化社会学视角
+经典青年文化理论中“ 个体” 与“ 结构” 之辩的背后是青年文化中“ 趣味”
+( taste) 与“ 阶层” ( class) 的复杂关系,以及青年群体所嵌入的文化空间与社会空
+间。 经典青年文化研究大量吸收了文化研究( cultural studies) 的理论资源,但却
+鲜少从文化社会学中汲取养分,后者围绕文化空间与社会空间的关系与张力展
+开,重构了经典青年文化理论的核心争议;而从文化社会学的问题意识出发,当
+代青年在文化场域中日益重要的实践性地位则为“ 青年的文化社会学” 提供了
+更深的理据( Savage,2015;Prieur et al.,2023) 。
+161
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+文化社会学最重要的研究支点是布尔迪厄( Pierre Bourdieu) 的《 区隔:趣味
+的社会判断力批判》 ( Distinction:A Social Critique of the Judgement of Taste) ( 以下
+简称《 区隔》 ) 一书( Bourdieu,1984) 。 在书中,布尔迪厄对法国各社会阶层的生
+活方式进行了全景式的研究。 通过蒙太奇式的材料组合,布尔迪厄揭示了文
+化空间与社会空间深刻的同源性。 趣味之“ 高雅 / 低俗” 的分类系统本质是社
+会再生产的帷幕。 精英阶层借资本与权力之手,对文化空间进行配置与塑造,
+实现了隐秘的“ 象征性支配” ( symbolic domination) ( Bourdieu,1984) 。 学界习惯
+用“ 区隔” ( distinction) 来概括布尔迪厄的发现,但其中包含了社会区隔与象征性
+支配两种不同的文化机制。 社会区隔机制是指文化趣味与社会群体间的同源
+性,即在社会空间中处境相似的群体通常也在生活方式上具有一致性。 象征性
+支配机制则是指权力对文化空间的塑造,即精英阶层通过对文化资本的垄断与
+配置构建了“高雅 / 低俗”的文化层级,进而巩固了阶层再生产。
+《 区隔》 中的研究发现为文化社会学奠定了重要基础并获得大量佐证( 例如
+DiMaggio,1987;Lamont,1992) 。 但数年后,彼得森( Richard A. Peterson) 及其合
+作者以美国的艺术公共参与调查( Survey of Public Participation in the Arts) 为支
+撑对布尔迪厄的学说发起了挑战。 他们提出“ 杂食性” 假说来明确反对《 区隔》
+中关于象征性支配机制的发现,认为全球化驱动的文化多样性才是美国高阶层
+人群中主导性的趣味模式( Peterson & Kern,1996) 。 后来,“ 杂食性” 假说与象征
+性支配机制这两种 文 化 分 类 假 说 被 简 化 为 “ 杂 食 性” ( omnivore) 与 “ 单 食 性”
+( univore) 命题。 “ 杂食性” 假说很快成为文化社会学的研究重心。 一方面,大量
+对“ 杂食性” 的验证研究在不同国家开展,或多或少佐证了其存在( van Eijck,
+2001;Sintas & Álvarez,2002;Katz-Gerro,2002;Chan & Goldthorpe,2007) ;另一方
+面,围绕“ 杂食性” ,研究者进行了理论澄清与拓展,细化其边界与机制,并 研 究
+了“ 杂食性” 与社会排斥、 社会网络、 身份 认 同 的 关 系 ( Bryson,1996; Erickson,
+1996;Lizardo,2006;Ollivier,2008) 。 不过,随着研究者对当代文化空间考察的深
+入,“杂食性”假说收获了大量批评。 首先,“ 杂食性” 假说中存在概念混淆的问
+题,分类系统中由文化包容驱动的杂食性与普遍意义上趣味多样性的杂食性常
+常被混为一谈( Warde et al.,2007;de Vries & Reeves,2021) 。 其次,“ 杂食性” 假
+说对布尔迪厄学说的否定多源于简化与误读。 以埃克森( Will Atkinson) 为代表
+的研究者 在 考 据 了 《 区 隔》 的 原 始 文 本 后, 主 张 “ 回 到 布 尔 迪 厄” ( Atkinson,
+2011) ,着 重 考 察 文 化 的 社 会 区 隔 ( Holt, 1997; Jarness, 2015; Flemmen et al.,
+2018) 。 最后,“ 新兴文化资本” 学说则给出新的理论模型,诠释了当代文化空间
+162
+社会学研究 2025. 3
+
+
+的全新模式。
+与“ 杂食性” 假说对《 区隔》 的否定不同,“ 新兴文化资本” 理论认为社会区隔
+仍是当代文化空间的核心机制,但曾以阶层为中心的社会区隔轴线却发生了复
+调化( polyphony) ( Bennett et al.,2009;Prieur & Savage,2013;Savage et al.,2013) 。
+具体而言,萨维奇( Mike Savage) 基于大规模混合方法的研究发现,虽然“ 单食
+性”假说的解释力出现了衰弱,但“ 杂食性” 假说对社会区隔的否定也是不真实
+的,文化多样性是新兴“ 社会区隔” 轴线交汇的结果( Savage,2015)。 在全球化与
+数字化的宏观背景下,当代文化空间普遍的繁荣与多元化背后是文化参与、文化潮
+流、代际差异、数字化、全球化等多个轴线的融合与并置(Friedman et al.,2015)。
+新兴文化资本理论的讨论重构了青年文化理论的争议,并为青年的文化社
+会学提供了分析框架与理论意涵( Prieur et al.,2023) 。 首先,社会区隔作为核心
+机制调和了杂食性与单食性的争议,并容纳了阶层这一经典轴线。 其次,该理论
+注意到了高等教育扩张的影响( Prieur & Savage,2013;Savage et al.,2013) ,高等
+教育的代际差异赋予了青年在新兴文化中的结构性优势。 最后,青年群体更高
+的新兴文化参与度( Savage et al.,2013;Lizardo & Skiles,2015) 、更多的跨国文化
+资本( Weenink,2008;Igarashi & Saito,2014) 以及作为数字原住民的数字技能与
+素养( Palfrey & Gasser,2011;Mihelj et al.,2019) 都预示着青年文化空间中多条社
+会区隔轴线在同时运作并相互交织。
+( 三) 数字时代的青年文化:平台的嵌入与重塑
+新兴文化资本理论虽注意到青年文化与数字技术的亲和性( Mihelj et al.,
+2019;Prieur et al.,2023) ,但仍低估了数字化对青年文化的影响。 随着平台社会
+的到来( van Dijck et al.,2018) ,当代青年文化的面貌在平台的复杂作用下已日
+益模糊。
+平台借助算法实现了对个体的信息分治( Burrell & Fourcade,2021) 。 通过
+把复杂的社会关系与过程映射到稳定而精密的分类系统中( Amoore,2020) ,算
+法构建了碎片化的信息茧房( Bail,2022;陈云松,2022) ,并全景塑造着个体层面
+的信息流( Zuboff,2019;刘河庆、梁玉成,2023;刘河庆,2024) 。 在对个体的精细
+调控外,平台还表现出了宏观治理的属性,其数字基础设施的本质带来了广泛而
+深刻的社会效应( Gorwa,2019;吕鹏等,2022) 。 此外,平台动力学指出,数字平
+台的运作与变迁背后是技术、社会与政治经济力量的复杂作用( Nieborg & Poell,
+2018;Nieborg & Helmond,2019) 。
+163
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+数字平台对文化空间的作用在杂食性与社会区隔上都有例证。 研究者针对
+音乐平台 Spotify 的研究揭示了推荐算法对文化实践的引导与塑造 ( Webster,
+2020) 。 而针对视频平台 Youtube 的研究则发现,算法构建的技术文化回路强化
+了社会区隔( Airoldi,2021) 。 最近,基于 Facebook 数据的研究发现,杂食性已成
+为数字文化空间的基本配置,但令人意外的是低阶层人群的杂食性更高,阶层通
+过构建文化边界再现了社会区隔( Sivertsen,2025) 。
+此外, 还 有 少 量 研 究 探 究 了 数 字 青 年 文 化 的 “ 新 部 落” 特 性 ( Robards &
+Bennett,2011;Robards,2018;Guerra,2020) 。 国内学界的一些研究关注到青年文
+化的数字圈层及其形成动态与话语机制 ( 冯济海,2021; 毛 丹 等,2021; 曾 昕,
+2023;王文锋、姜宗德,2023) ;另一些研究则聚焦于青年文化的数字实践,解析了
+数字时代为青年文化带来的全新特质( 孙萍等,2024) 。 但总的来说,相关研究
+缺乏对于数字时代青年文化的内在机制与宏观结构的考察。
+综上,本研究使用新兴文化资本理论对数字时代的中国青年文化展开多轴
+线的文化社会学考察,基于国内 B 平台跨度超过 10 年的分层抽样数据对上述理
+论与实证问题进行“ 计算扎根”,全景透视中国青年文化的数字境况与变迁,进
+而展现中国更为宏观的数字化进程。 在方法论层面,结合国内外学界的最新讨
+论,笔者秉持“ 计算扎根” 的实证策略( Nelson,2020;周涛等,2022;陈茁、陈云松,
+2023) ,即借助充分而扎实的数据计算与理论解读,从复杂的数据表象中挖掘深
+层的社会事实。
+三、数据获取与变量生成
+( 一) 数据获取:依时段分层的过度抽样
+本研究的数据源于 B 平台的数字痕迹。 B 平台作为国内大型青年文化平台
+之一,自 2009 年运营至今,经历了中国数字化的发展过程。 商业报告指出,B 平
+台目前已有超过一亿的月活用户,而青年是其主力用户,该平台 78% 的活跃用
+户年龄在 18 ~ 35 岁。1 这为研究数字时代的中国青年文化提供了理想的视窗。
+B 平台上数字痕迹的规模庞大,这为数据收集带来了一定困难。 综合考虑
+164
+社会学研究 2025. 3
+1 B 站商 业 动 态, 2023, 《 B 站 用 户 人 群 分 析 报 告 2023 》 , 腾 迅 内 容 开 放 平 台, 12 月 5 日 ( https: / / page. om. qq. com / page / O2OXpK9U3tOchhhBf3k7W - 5gO) 。
+
+
+后,本研究选择了分层随机抽样的方法,将用户 ID 作为抽样框,ID 位数作为分
+层依据。 由于 B 平台在 2023 年前为用户按注册顺序发放 ID,该数字与用户注
+册时间存在对应关系,ID 位数可作为简洁而有效的分层标准。 另一个抽样上的
+问题源于平台用户增长的不均匀性,这意味着等比例的分层随机抽样会使注册
+日期更早的子群失去统计效力。 为了解决该问题,笔者在小比例的预抽样后,采
+用了逐层降低抽样比例的过度抽样方法,1以确保在时段更早的抽样层内获得
+具有统计意义的样本。 过度抽样为后续的组间分析带来了一些统计波动,但由
+于每个子群的样本规模较大,这个波动的影响其实并不大。
+笔者按照上述思路在 B 平台上进行了抽样,在剔除空白及无法分析的样本
+后共获得了 75251 条用户数字痕迹用于后续分析。 这些数字痕迹在时段上完整
+覆盖了 B 平台的发展历史,为研究数字时代的中国青年文化提供了实证素材。
+为量化青年文化趣味,本研究进一步获取了用户的关注列表、列表中的内容生产
+者、内容生产者制作的视频等相关数据。
+( 二) 青年文化的特征:使用 HDP 主题模型生成趣味向量
+对青年文化的分析依赖于对趣味的量化测量,而数字痕迹中的“ 用户关注
+列表”信息构成了绝佳的代理变量。 关注列表是 B 平台中最常使用的界面功
+能,通过点选关注,用户可以便捷地订阅相关视频,这可以直观地反映用户近期
+的趣味模式。 B 平台的内容生产者通常被称作“ UP 主” ,他们的内容创作特征则
+可以用其发布视频的标签数据来量化测量。 每个视频都有一组质量较高的文本
+标签,视频附属的标签集合构成了理想的词袋模型( wordbag model) ,并适用于主
+题模型( topic model) 建模。 基于此,本研究对青年文化趣味进行操作化的流程
+如下:(1) 对每个 UP 主的“ 视频—标签” 信息进行整合,再以此为语料来训练主
+题模型;(2) 使用主题模型对每个 UP 主的趣味分布进行推断,生成趣味向量;
+(3) 将 UP 主的趣味向量映射到用户关注列表,具体流程可参见图 1。
+遵循上述 流 程, 本 研 究 首 先 训 练 主 题 模 型。 考 虑 到 潜 在 狄 利 克 雷 分 布
+( Latent Dirichlet Allocation,简称 LDA) 结果的不稳定性以及本研究的数据规模
+可能带来调参困难,笔者最终选用了层次狄利克雷过程 ( Hierarchical Dirichlet
+Process,简称 HDP) ( Teh et al.,2006) 进行训练。 该模型引入了自动化参数选择,
+165
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+1 笔者基于 2022 年 5 月 31 日时用户 ID 的位数设定过度抽样的比例:4 位 ID 以下为 10% ,5 位 ID 为 5% ,6 位 ID 为 2% ,7 位 ID 为 1% ,8 位 ID 为 1‰,9 位 ID 为 0. 5‰。 笔者对后续计算都据此进行了加 权处理。
+
+
+实际建模中的效果更优。 HDP 主题建模可使用 Tomotopy 模块完成,1该模块采
+用吉布斯 ( Gibbs) 采 样 进 行 模 型 的 迭 代 优 化, 并 可 用 “ 单 词 对 数 似 然” ( Log
+Likelihood per Word) 评估收敛进度。 笔者进行了两万次迭代,最终获得收敛模
+型。 虽然 HDP 会自动剔除质量较差的主题,但在数据规模较大的情况下,该模
+型仍识别了 289 个主题。 但是,视频标签的误用、同标签的跨板块混用以及跨板
+块视频的标签关联或污染都导致了无效及混淆主题的出现。 因此,基于可解释
+性对主题模型进行事后调整就显得尤为重要。 笔者基于普遍性、一致性与有效
+性原则,对原始模型中占比过低、存在混淆和存在谬误的主题进行了精细的人工
+识别及清理,对过度拆分的主题进行了合并,最终获得了 140 个有效主题来代表
+B 平台的青年文化空间。 本文的趣味建模取得了很好的效果,主题词表内具有
+很强的一致性与关联性,并可清晰地归纳出背后的青年文化特征。
+图 1 根据关注列表生成趣味向量的流程
+在趣味向量的基础上,笔者结合新兴文化资本理论,引入了三个对趣味特征
+进行评估的高阶指标。 一是流行性。 新兴文化资本理论认为流行文化在不同社
+会阶层得到了更多文化包容 ( Friedman et al.,2015 ) , 这与 “ 单食性” 假说相左
+( Bourdieu,1984;Lamont,1992) 。 为测量趣味的流行性,笔者计算了用户关注列
+表中所有 UP 主粉丝数量的均值,以此反映特定趣味的大众化程度。 二是多元
+性。 新兴文化资本理论认为多条区隔轴线的并置造成了杂食性现象 ( Savage
+166
+社会学研究 2025. 3
+1 Tomotopy 模块是近年来兴起的主题模型模块,在训练速度及质量上优于常用的 Gensim,尤其在复杂 主题模型上有着更好的训练表现。
+
+
+et al.,2013) ,但也有研究认为单食性仍持续具有影响( Atkinson,2011) 。 为测量
+趣味的多元性,笔者计算了每个用户趣味向量的香农熵以测量文化“ 食性” 的
+“ 杂” 或“ 单” 。 香农熵最早由香农( Claude Elwood Shannon) 在信息论中提出,以
+衡量信息的混乱程度( Shannon,1948) ,在社会科学中可用于衡量集合中类别分
+布的均匀性与多样性( Stirling,2007) 。 本研究中趣味向量的基准相对稳定,故可
+使用香农熵测量趣味的多元性,具体计算方法见公式(1) :
+SE = - ∑
+n
+i =1
+( Ptopici × log2 Ptopici ) (1)
+其中,SE 为香农熵,n 为 140 个趣味变量,Ptopic 为单个趣味变量在个人趣味向
+量中的占比。 香农熵越高,则用户趣味越多元,反之亦然。 三是趣味分区。 由于
+B 平台本身划分了 20 个大型趣味分区,笔者将 140 个趣味特征放回上述分区,
+变相生成了 20 维的高阶趣味来代表文化边界。
+当然,在主要的趣味特征外,本研究也生成了两个社会空间特征用于后续
+的研究。 一是性别。 这是数据痕迹中基本的用户信息,但存在相当比例的缺
+失值。 笔者通过“ 极端梯度提升” ( XGBoost) 算法用趣味向量对性别进行了预
+测,并借此填补缺失值。 二是世代。 该变量由用户 ID 转化生成,笔者根据不同
+位数 ID 的首个及最后一个账户的注册时间,对各位数区间内的 ID 进行线性插
+值以获得区间内账户的注册时间,用该数值减去 B 平台的创始年份就获得了
+世代变量。
+( 三) 青年文化的社群:基于谱聚类的侦测
+除了个体层次的趣味模式与社会区隔要素外,本研究还考察了青年文化平
+台中“文化—社会空间” 的同源性,这反映在围绕青年文化构建的社群中。 为
+此,笔者引入了谱聚类方法( spectral clustering) 对这些社群进行识别。
+谱聚类方法近年来因出色的聚类效果而受到欢迎,它不引入对聚簇形态的
+先验指定,并适用于高维数据( Luxburg,2007) 。 但是,由于谱聚类的基础是相似
+度矩阵,其计算负担随样本量增长而出现指数级增长。 考虑到计算效率问题,笔
+者最终选用 k 近邻方法进行相似度计算以节约计算资源。 在纵向比较了不同聚
+类中心数量下三种聚类测量指标的变化1以及聚类结果的可解释性后,笔者选
+择了聚 类 中 心 数 量 为 40 的 模 型。 识 别 的 聚 簇 在 可 视 化 降 维 结 果 ( Uniform
+167
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+1 三种测量指标分别为 Calinski-Harabasz 指数,轮廓系数以及 Davies-Bouldin 指数。
+
+
+Manifold Approximation and Projection,简称 UMAP) 中有着清晰的轮廓,具有很强
+的可解释性。 社群的趣味及其他特征的描述性分析见表 1。
+表 1 B 平台青年文化空间中主要青年文化社群的描述性统计结果
+分区 社群 主要趣味(% ) 性别 世代 流行性 多元性 体量(万人)
+游戏
+单机游戏 单机游戏(17. 9) 0. 905 - 1. 192 0. 030 0. 981 225. 337
+英雄联盟 英雄联盟(32. 8) 0. 874 0. 077 1. 277 - 0. 725 168. 160
+手机游戏 手机游戏(23. 3) 0. 873 0. 089 1. 075 0. 625 147. 181
+王者荣耀 王者荣耀(33. 4) 0. 637 1. 219 0. 817 - 1. 003 139. 019
+我的世界 我的世界(20. 9) 0. 892 1. 893 1. 475 0. 294 117. 670
+反恐精英 反恐精英(21. 2) 0. 932 - 0. 384 - 0. 795 1. 284 94. 958
+第五人格 第五人格(27. 5) 0. 439 0. 974 - 0. 456 0. 213 57. 680
+多人在线 多人在线(28. 5) 0. 513 - 1. 542 - 1. 017 0. 716 47. 355
+二次元手游 二次元手游(21. 4) 0. 899 - 0. 756 0. 517 0. 721 46. 659
+知识
+多元知识 中国社会(7. 3) 0. 725 - 0. 091 0. 488 1. 574 594. 554
+高中学习 高中学习(37. 1) 0. 351 1. 948 0. 140 - 1. 578 194. 384
+英语学习 英语学习(35. 3) 0. 377 1. 382 - 0. 653 - 1. 322 143. 215
+考研学习 考研学习(30. 6) 0. 416 1. 708 - 0. 763 - 0. 953 139. 803
+IT 教程 IT 教程(38. 6) 0. 750 1. 035 - 1. 077 - 1. 545 96. 278
+软件教程 软件教程(33. 2) 0. 683 0. 529 - 0. 937 - 0. 531 91. 250
+娱乐
+韩国男团 韩国男团(31. 9) 0. 031 - 0. 309 - 1. 119 - 1. 252 113. 219
+影视片段 影视片段(20. 6) 0. 051 0. 164 - 1. 294 0. 045 112. 726
+博君一肖 博君一肖(46. 8) 0. 009 0. 983 - 1. 175 - 2. 475 90. 094
+日本女团 日本女团(34. 1) 0. 261 - 1. 698 - 1. 197 0. 016 45. 315
+泰国明星 明星泰国(30. 3) 0. 086 - 0. 465 - 1. 228 - 0. 222 42. 923
+生活 绘画 绘画(32. 7) 0. 330 - 0. 253 - 0. 623 0. 205 114. 987
+音乐 音乐翻唱 翻唱(28. 0) 0. 364 - 0. 395 0. 132 - 0. 290 137. 530
+音乐演奏 演奏(30. 6) 0. 582 0. 292 - 0. 814 - 0. 147 98. 670
+动画 多元动画 动漫杂谈(19. 6) 0. 770 0. 671 0. 416 - 0. 158 155. 014
+早期 ACG 早期 ACG(18. 6) 0. 762 - 2. 870 - 0. 969 0. 628 31. 552
+影视 影视杂谈 影视杂谈(25. 9) 0. 614 - 0. 400 1. 748 0. 242 117. 213
+运动 健身减脂 健身(40. 5) 0. 257 0. 815 0. 824 - 1. 819 115. 481
+足球篮球 足球篮球(22. 8) 0. 902 0. 395 - 0. 131 1. 014 76. 716
+美食 美食探店 美食探店(22. 5) 0. 409 0. 128 3. 398 - 0. 090 158. 026
+美食制作 美食制作(29. 4) 0. 354 - 0. 576 1. 398 0. 102 118. 161
+数码 数码 数码(30. 0) 0. 973 - 0. 095 0. 879 0. 317 148. 755
+拍照摄影 拍照摄影(24. 7) 0. 805 - 0. 298 - 0. 255 0. 983 59. 271
+时尚 生活方式 美妆护肤(20. 5) 0. 069 - 0. 178 0. 093 0. 504 543. 471
+168
+社会学研究 2025. 3
+
+
+续表 1
+分区 社群 主要趣味(% ) 性别 世代 流行性 多元性 体量(万人)
+汽车 汽车 汽车(22. 3) 0. 948 - 0. 872 0. 066 1. 393 89. 100
+舞蹈 国风舞蹈 国风舞蹈(26. 4) 0. 657 - 0. 568 - 0. 148 0. 034 123. 417
+舞蹈 舞蹈(37. 4) 0. 215 0. 599 - 0. 548 - 1. 726 36. 587
+虚拟 UP 主
+虚拟 UP 主 虚拟 UP 主(19. 6) 0. 824 - 1. 792 - 0. 374 1. 261 140. 152
+睡前助眠 ASMR(23. 7) 0. 709 0. 275 - 0. 420 0. 532 67. 527
+鬼畜 鬼畜 鬼畜(23. 2) 0. 865 - 0. 241 0. 675 0. 423 98. 648
+搞笑 多元搞笑 搞笑(10. 0) 0. 685 - 0. 203 0. 546 1. 730 1431. 420
+注:(1) 趣味变量标记的概率值为特定趣味在社群中的平均占比。 (2) 世代、流行性及多元性为取消 量纲后的 β 值,以便读者进行对比与查阅。 (3) 社群体量为加权后的估计值,该估计针对的群体是 B 平台未注销账号、关注列表可见且关注人数大于 5 的正式用户。 (4) 表中性别变量数值系男性用户 占比。 (5) “ 鬼畜区” 是指以网络迷因( meme) 为创作素材,生产混剪搞笑内容的分区。
+四、中国青年文化的数字境况:趣味模式与社会区隔
+( 一) 青年文化空间:趣味模式的杂食性与单食性
+新兴文化资本理论认为,当代文化空间中多条区隔轴线并置的特性使大众
+的趣味模式表现出杂食性模式( Savage,2015) 或文化趣味多元性。 此外,由于流
+行文化的吸引力不断提高并表现出了跨越阶层的趋势( Prieur et al.,2023) ,杂食
+性的趣味模式还对流行文化表现出包容的倾向。 与之相反的是,单食性的趣味
+模式则 表 现 为 在 文 化 层 级 上 的 单 调 性, 以 及 对 流 行 文 化 的 疏 远 或 拒 绝
+( Bourdieu,1984;Atkinson,2011) 。
+首先,笔者考察了“杂食性”假说在解释青年文化空间时的适当性。 在仔细对
+所有青年文化社群进行考察后,笔者发现了三个高度杂食性的社群:“ 多元搞笑”
+“ 多元知识” 和“ 生活方式” ,这三者在青年文化空间中具有较大的规模,意 味 着 杂
+食性在数字时代青年趣味模式中占有主导地位。 其中,“ 多元搞笑” 与“ 多元知
+识”的杂食性特征最为典型。 二者总体特征相似,唯一差别是主导趣味的不同,
+前者为“ 搞笑” ( 主要趣味占比为 10% ,见表 1) ,后者为“ 中国社会” ( 主要趣味占
+比为 7. 3% ) 。 此外,二者拥有所有社群中最高的多元性( 表 1 中多元性取值分
+别为 1. 730 和 1. 574) ,并对流行文化相对包容( 表 1 中流行性取值分别为 0. 546
+和 0. 488) 。
+“ 生活方式” 社群与上述两个非常明显的杂食性社群不同,笔者之所以将其归
+于杂食性社群,主要是考虑到性别因素的影响。 青年文化空间中存在明显的性别
+169
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+分化,在游戏、娱乐等趣味板块均存在较高程度的性别偏向。 在纳入性别差异后,
+笔者发现“ 生活方式” 社群在所有女性主导的青年文化社群中有着最高的多元性
+(0. 504)以及远高于女性主导社群平均水平的流行文化包容性(0. 093)。 因此,笔
+者将该社群也纳入杂食性社群。 此外,如果从青年文化空间的整体状况来看,趣味
+多元性高于均值的社群在总体中占到了 70. 8% ,这印证了新近研究中关于数字文
+化空间中普遍存在杂食性的发现( Sivertsen,2025) 。
+同时,单食性的趣味模式也获得了例证支持,但在具备单食性特征的青年文
+化空间中,笔者发现了例外,即存在五个由特定学习任务主导的功能性社群( 占
+总体的 10. 1% ) ,笔者称之为“ 学习” 社群。 每个“ 学习” 社群的趣味都聚焦于明
+确的“ 学习目标” ( 英语、高考、考研、IT、软件) ,并存在用户的世代区分,这意味
+着其成员具有临时性,并由不同教育阶段所对应的社会时间表加以组织。 排除
+学习社群之后,典型的单食性社群还有三个,分别为“博君一肖” “韩国男团” 以及
+“舞蹈”。 这三个社群有着青年文化空间中最低的多元性与流行性取值,并均由女
+性主导(社群中的女性占比分别为 99. 1% 、96. 9% 、78. 5% ),这表明社群中存在性
+别的社会区隔。 此外,这些社群的趣味构成均与“娱乐” 板块高度关联,结合学界
+近年对“粉圈”“饭圈” 的研究发现( 冯济海,2021;毛丹等,2021),笔者认为上述社
+群中的单食性可能受到粉丝文化与社群机制的强化,而非单纯由社会区隔驱动。
+总体而言,杂食性构成了数字时代的青年文化空间的基本趣味模式,这受到
+青年群体与新兴文化的亲和性影响,也与数字平台对文化创造与传播的推动作
+用有关。 此外,单食性模式仍然存在。 如果不考虑对流行文化的包容度,我们还
+能在一些游戏、动画、音乐及体育社群中观察到趣味的单调性。 因此,用“ 杂食
+性主导,单食性并存” 来描述青年文化空间的趣味模式比较适当。
+( 二) 青年文化的社会区隔:性别与世代的效应
+上一节提到已有证据表明社群中存在性别区隔。 在本节中,笔者效仿布尔迪
+厄的做法,将青年文化空间与社会空间进行叠合,进一步考察二者的同源性。
+笔者首先考察了图 2 中的性别子图,并发现了显著的性别区隔。 女性主导
+的青年文化社群多处于文化空间的左下方,呈现单食性特征;与之相比,男性主
+导的社群有着更高的杂食性,处于文化空间的右上方。 总体而言,社会性别是趣
+味模式非常直接的区隔因素。 笔者进一步对由男性或女性主导的社群,如数码
+( 表 1 中性别变量取值为 0. 973) 、汽车(0. 948 ) 、反恐精英 (0. 932 ) 、单机游戏
+(0. 905) 、生活方式(0. 069) 、影视片段(0. 051) 、韩国男团(0. 031) 以及博君一肖
+170
+社会学研究 2025. 3
+
+
+(0. 009) 等进行考察,并计算以性别为自变量的预测模型的夏普利值( Shapley
+Value) 来识别最具性别区分度的趣味。 性别之间的核心差异在于,女性的辨识
+性趣味为娱乐、生活、舞蹈和健身;男性的辨识性趣味则是游戏、动画、数码和汽
+车。 一个出乎意料的差异是在“学习”与“知识”趣味之间:女性在功能性的学习
+社群中占有更高比重,而男性则更偏好宽泛多元的知识社群。 笔者认为青年文
+化中性别区隔的深层原因是青年女性在趣味上聚焦于与现实联系更为紧密的生
+活方式与自我提升,相对来说具有更强的实用性与功能性;与之相比,年轻男性
+的趣味则与科学技术与数字生活相关,偏好新奇体验与乐趣享用。 这些差异背
+后的社会结构因素仍有待进一步研究。
+图 2 B 平台青年文化空间与社会空间的关系地图
+在性别区隔外,笔者还对青年文化空间的世代差异进行了探究。 作为曼海
+姆( Karl Mannheim) 的理论遗产,世代( generation) 研究关注不同历史时期及社会
+文化语境下同期群体的核心特征( Mannheim,1952 ) 。 研究者发现,“ 数字原住
+民” 相比非数字时代出生的世代有着更频繁的数字生活以及更强的文化吸收与
+创造能力( Palfrey & Gasser,2011) 。 新兴文化资本理论认为,世代效应与数字技
+术的交互构成了当代文化空间中重要的区隔轴线 ( Savage,2015;Prieur et al.,
+2023) 。 本文使用“ 平台注册年份” 对世代进行测量,但需要注意的是,该指标不
+可避免地吸收了年龄、同辈文化语境及数字平台漂变( shifting) 的影响。
+本研究考察青年文化空间的世代演化并发现,前文提及的三个杂食性社群
+171
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+均不存在明显的世代区隔,这或许意味着杂食性是数字世代的普遍特征,在不同
+世代中保持着相对稳定的比例。 在排除杂食性社群与学习社群后,笔者观察到
+世代效应对单食性社群的系统性影响。 从图 2 的世代子图中可以看到,世代更
+迭伴随着趣味多元性的降低,这可能与较新世代尚未充分参与数字青年文化实
+践有关。 此外,世代更迭与流行文化变迁表现出同步趋势,从旧潮流中分化而来
+的单食性社群反映了青年文化空间的演化结果。 这集中体现在“ 动画” 与“ 游
+戏” 社群的分化过程中。
+“ 动画、漫画与游戏” ( Animation,Comic,Game,简称 ACG) 文化是 B 平台发
+展初期重要的趣味类型。 时至今日,这些早期的文化要素在青年文化空间的整
+体演化中已汇入到动画与游戏等大型趣味板块中,并随世代及其他因素分化出
+了十余个社群。 以早期世代为例,这批“ 骨灰级” ACG 文化爱好者保留了以“ 东
+方” 为代表的早期 ACG 趣味。 此后,中期世代的“ 动画” 趣味则流变为“ 虚拟 UP
+主” 1“ 多元动画” “ ACG 手游” 及“ 音乐翻唱” 等趣味。 而在较新的世代中,“ 动
+画” 趣味逐渐淡化并让位于以“ 手机游戏” 为代表的游戏趣味。
+类似趋势在游戏趣味的世代演化中更加明显。 在 B 平台发展初期,“ 魔兽
+世界”等网络游戏代表了早期世代的游戏趣味。 而伴随着新兴游戏的发行与传
+播,中期世代的趣味转向了“ 单机游戏” 和“ 电子竞技”,其中一部分则偏好手机
+游戏尤其是“二次元手游”。 而新兴世代则偏好“ 王者荣耀” “ 我的世界” 等时兴
+游戏。 上述证据表明,世代演化对数字时代的青年文化空间表现出社会区隔
+作用。
+五、中国青年文化的数字变迁
+( 一) 青年文化空间的流变:亚文化、多元化与主流化
+本节首先讨论青年文化空间自身的流变,笔者绘制了 B 平台中 16 个2大型
+趣味板块占当时段的社区趣味整体比例的逐年变化趋势,详见图 3。 在平台发
+172
+社会学研究 2025. 3
+1
+2
+“ 虚拟 UP 主” 是一个在 2018 年左右才成熟的趣味类型,但其社群成员大多来自早期世代,这可能意 味着“ 虚拟 UP 主” 承载或取代了一些在 B 平台发展中逐渐消失的趣味类型。 原始数据为 17 个板块,考虑到信息呈现的清晰度,在可视化时笔者对占比较低的“ 鬼畜区” 进行了剔 除。 值得注意的是,鬼畜区曾是 B 平台非常热门的分区,但随着平台治理的开展而逐渐变得边缘化, 直到现在几乎完全消失。 遗憾的是,本研究使用的是追溯性的历时数据,难以厘清该历程。
+
+
+图 3 B 平台不同趣味板块占比的变化趋势
+展初期,B平台尚是小型ACG亚文化社区,其社群准入机制非常严格,正式会员仅
+能通过限时注册的方式分批少量进入。 这种状况在 2013 年 5 月发生了改变,彼
+时 B 平台正式开放注册,但也提高了社群准入的筛选标准。 所有注册用户须通
+过 100 道 ACG 文化相关的问题考核。 而从 2015 年 5 月 19 日开始,社区筛选标
+准大幅放宽,对正式用户的考核内容从亚文化转向了更为普遍的常识性知识与
+社区互动礼仪,题目总量也减少了一半。 从青年文化空间的演化来看,平台在
+2013 年和 2015 年的策略变化产生了决定性影响,前者推动了 B 平台的“ 多元
+化” 转变,后者则推动了平台“ 主流化” 的进程。 具体而言,从 2013 年“ 提高门
+槛,扩大容量”开始,B 平台从一个小众的亚文化社区变得日益多元化。 从数据
+来看,B 平台中不同青年文化子空间的发展趋于均衡。 随着社群规模的扩大、社
+群人员的异质化,以游戏、动画为代表的 ACG 文化作为平台建立之初的主要趣
+味在总体中所占的比重逐渐降低;与此同时,社群整体与流行文化的亲和性不断
+上升,杂食性水平保持高位,这些都标记了一个明确的多元化过程。 笔者绘制了
+平台结构性特征的变化趋势来展示这一进程,详见图 4。
+不过,B 平台文化多元化进程在 2015 年左右出现了停滞,且青年文化空间
+的演化发生了断裂,笔者在图 4 中对“ 断点” 进行了标注( 图中垂直虚线所示位
+置)。 在放松了社群筛选标准后,B 平台经历了从多元化到主流化的转变。 具体
+173
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+注:(1)图中标注为原始数值,为便于理解,笔者对趋势( 深色线) 进行了时间序列的平滑处理( 浅色
+线) 。 (2) 水平虚线为均值线,垂直虚线为“断点” 线。
+图 4 B 平台青年文化总体特征的变化趋势
+而言,青年文化空间的变迁逻辑体现在两个相互关联的趋势中。 首先,分别以搞
+笑、知识与生活方式为主要趣味的三个杂食性社群在平台推动下迎来迅速扩张,
+并塑造了数字时代中国青年文化的主要结构;与此同时,单食性社群的比例下降
+并趋于稳定,呈现独立分化的状态,与杂食性社群形成了比较明确的文化界限。
+杂食性主导与单食性分化作为两个同步发生的进程共同引导了青年文化平台整
+体的主流化。 在这一阶段,B 平台中新兴文化的漂变趋于稳定,用户结构逐渐平
+衡。 此外,值得关注的是,B 平台整体的文化多样性开始下降。 这一现象提醒我
+们关注其中潜在的数字区隔现象。 平台化对文化空间的区隔作用在既有研究中
+已有一些初步证据支持。 研究发现,平台通过推荐算法塑造技术文化回路,强化
+了数字空间中的社会区隔( Airoldi,2021;Sivertsen,2025) 。 该现象在本研究中也
+获得了证据支持,若将 2020—2022 年的文化多样性均值与 2009—2015 年的相
+应均值进行比较,可发现文化多样性下降了约 20% 。 结合已有的国内外平台研
+究的相关推测,笔者认为这一青年文化空间的双向演化应与推荐算法的社会效
+应有关。 基于个性化的算法,数字平台可对文化空间进行全局观测,并通过识别
+个体的趣味偏好进行信息流的塑造( 刘河庆、梁玉成,2023;刘河庆,2024) 。 上
+述平台层面的算法化分治与个人层面的青年文化实践形成了递归化的社会技术
+回路( Airoldi,2021) ,协同演化出当下主流与支流并存的文化边界。
+总体而言,青年文化空间的流变展示了数字技术的双向作用。 在亚文化社
+群的多元化阶段,数字技术提升了青年文化流变的规模与速率,并推动了文化空
+174
+社会学研究 2025. 3
+
+
+间的多元化进程;而在主流化阶段,平台逻辑及推荐算法的引入则强化了文化空
+间中的社会区隔。 通过技术文化回路的塑造,算法再生产了文化边界,进而巩固
+了杂食性与单食性并存的状态。
+( 二) 数字变迁:宏观进程中的平台动力学
+在本节中,笔者进一步考察了青年文化空间流变背后的平台动力学,主要关
+注两个重要宏观因素:互联网普及与高等教育扩张的影响。
+图 5 绘制了中国互联网普及与 B 平台发展进程的折线图,并对期间重要事
+件予以标注。 中国互联网上网人数与 B 平台活跃用户( 估算) 的增长变化趋势
+具有一致性( 见图 5 左图) ,2015 年 B 平台主流化进程开始后,两者比值逐渐稳
+定在两个数量级(100 倍) 左右( 见图 5 右图) 。 宏观层面由国家推动的基础设施
+建设与数字技术的普及通过创造潜在受众为 B 平台的发展奠定了坚实基础。
+注:右图中字母系社群发展中的重要事件。
+图 5 互联网普及与 B 平台增长趋势
+在网络普及之 外, 另 一 个 重 要 的 宏 观 因 素 是 中 国 的 第 三 次 高 等 教 育 扩 张
+( 叶晓阳、丁延庆,2015) 。 从 1999 年开始,中国高等教育开始了史上最大规模的
+扩张,高校招生人数以每年 40 万人以上的速度增长( 叶晓阳、丁延庆,2015) 。 到
+2024 年,全国的普通本科和专科招生人数已达 1068. 9 万人。1 青年群体普遍受
+益于教育扩张,以“90 后” 为例,其平均受教育年限约为 13 年,接受高等教育的
+比例达 40% ( 李春玲,2019) 。 高等教育的代际差异预示着中国文化资本分布的
+175
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+1 国家统计局,2024,《各级各类学历教育招生数》,国家统计局官网( https: / / data. stats. gov. cn / easyquery. htm? cn = C01&zb = A0M0201&sj = 2024) 。
+
+
+年轻化。 从新兴文化资本理论的视角来看,高等教育为新兴文化实践提供了基
+础,并推动了青年群体数字技能及素养的提升。 这进一步扩大了青年在新兴文
+化场域中的优势,为数字青年文化的繁荣提供了重要动力。
+在考察了上述宏观社会进程的影响后,笔者试图解析 B 平台发展中的事件
+逻辑。 笔者首先对两次平台筛选机制的变迁进行了标注,事件 A“ 提高门槛,扩
+大容量” 与事件 B“ 降低门槛” 是指平台推动的注册模式的改变,二者均带动了
+平台的高速增长。 参考 B 平台的融资经历可知,该平台在注册模式变动前进行
+了大规模商业融资。 这意味着,在数字时代,金融力量是平台规模扩张的重要推
+力,平台演化高度依赖于数字设施、平台治理及商业运营上的经济投注。 事件 C
+是 B 平台的付费化尝试。 2016 年,B 平台开启了会员模式,商业模式的转变短
+暂刺激了平台增长。 事件 D 则是平台治理的介入。 2017 年前后,B 平台开展了
+内部的党建活动并强化了平台内容的规范化及审查机制。 同年 10 月 8 日,中国
+互联网实名制正式实施。1 一系列平台治理事件的日常化为平台运作提供了规
+范性保证,也进一步促进了平台内容的主流化。 上述事件的合力使得 B 平台越
+过了平台化的政治经济障碍,获得了商业上的可持续性及政治上的合规性。 在
+经历上述转型期后,B 平台的发展逐渐稳定,平台化进程基本完成。 随后,在事
+件 E 与事件 F 所标识的大型社会融资后,2B 平台在金融力量的加持下进一步
+发展为中国大型青年文化平台之一,平台内部的技术运作与外部的经济政治力
+量相协调,最终与青年群体的文化实践形成合力,共同塑造了这个充满活力的新
+兴文化场域。
+六、结论与讨论
+平台社会的到来使经典青年文化理论的解释力面临挑战。 为更好地回应数
+字时代中国青年文化研究所面临的全新问题,笔者基于文化社会学的视角,使用
+B 平台的历时性数字痕迹,并以“计算扎根”为方法论策略,考察了中国青年文化
+的当下境况与数字变迁。 研究发现:(1) 平台中的青年文化空间呈现“ 杂食性主
+176
+社会学研究 2025. 3
+1
+2
+中国网信网,2017,《 国家互联网信息办公室公布〈 互联网跟帖评论服务管理规定〉 》 ,国家互联网信息 办公室官网( https: / / www. cac. gov. cn / 2017 - 08 / 25 / c_1121541481. htm) 。
+值得注意的是,2019 年后 B 平台的增长受到新冠疫情影响,由疫情带来的额外闲暇时间对不少互联 网平台的发展都有推动作用。
+
+
+导、单食性并存” 的趣味模式;(2) 青年文化空间存在性别与世代的社会区隔;
+(3)在历时性演化中,青年文化平台经历了“ 亚文化” “ 多元化” 与“ 主流化” 三个
+阶段,其中多元化与主流化进程展示了数字技术对青年文化空间的解放与重塑,
+主流化对文化空间的重塑构成了平台化的重要特征;(4) 互联网普及与高等教
+育扩张是青年文化平台繁荣的基础,而青年文化流变与平台技术运作则是其繁
+荣的动力;(5 ) 数字时代的中国青年文化与主流文化的联系日益紧密,青年群体
+在当代文化中具有愈发重要的推动与创造作用。
+本研究对相关研究有如下启示。 首先,新兴文化资本理论在数字青年文
+化和文化社会学研究领域具有很好的理论潜能。 该理论延续了经典社会学议
+题,并容纳了文化参与、流行文化、代际差异、数字化及全球化等多条轴线,为
+未来的文化研究提供了更为明确的实证焦点。 在可操作性与方法兼容性上,
+由于新兴文化资本理论源于对大规模混合方法研究的理论归纳( Savage et al.,
+2013) ,研究者在不同研究层级上都可对其进行良好的研究设计,并与计算方
+法相适配。
+其次,在青年文化和文化社会学的研究方法与议题上,学界应推动双重
+的“数字转向”。 一方面,数字化进程的不断加深使得数字平台成为青年文
+化的主要载体,相关数字痕迹为文化研究提供了绝佳材料。 基于“ 计算扎
+根”的方法论策略,研究者可以“ 远观” 相关文化模式与深层动态。 另一方
+面,平台化进程已经重塑了社会文化空间。 复杂的数字效应牵动着文化特征
+及机制的变动,并向研究者提出新的问题。 推动文化社会学研究议题与方法
+的双重数字转向,有助于在方法与议题上触及数字时代的核心问题,探索更
+为广阔的理论空间。
+参考文献:
+陈云松,2022,《 观念的“ 割席” ———当代中国互联网空间的群内区隔》 ,《 社会学研究》 第 4 期。
+陈茁、陈云松,2023,《 计算扎根:定量研究的理论生产方法》 ,《 社会学研究》 第 4 期。
+冯济海,2021,《 “ 粉” “ 黑” 之争:网络迷群极化的“ 日常化” 转向》 ,《 社会学研究》 第 6 期。
+李春玲,2019,《 改革开放的孩子们:中国新生代与中国发展新时代》 ,《 社会学研究》 第 3 期。
+刘河庆,2024,《 观念流:一个分析数字时代信息扩散与观念演化的新视角》 ,《 社会学研究》 第 6 期。
+刘河庆、梁玉成,2023,《 透视算法黑箱:数字平台的算法规制与信息推送异质性》 ,《 社会学研究》 第 2 期。
+吕鹏、周旅军、范晓光,2022,《 平台治理场域与社会学参与》 ,《 社会学研究》 第 3 期。
+毛丹、王敬雅、陈佳俊,2021,《 “ 饭圈” 观察:组织特征与圈内外关系》 ,《 社会学研究》 第 6 期。
+孙萍、何锦娜、刘姿君,2024,《 青年文化的数字化生产:平台的日常化与表达的政治》 ,《 中国青年研究》 第
+2 期。
+177
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+王文锋、姜宗德,2023,《 “ V 圈” 粉丝跨文化社群的形成机理研究》 ,《 青年研究》 第 4 期。
+叶晓阳、丁延庆,2015,《 扩张的中国高等教育:教育质量与社会分层》 ,《 社会》 第 3 期。
+曾昕,2023,《 圈地自萌或破壁生长:古风音乐的亚文化发展矛盾》 ,《 中国青年研究》 第 5 期。
+赵一璋、王明玉,2023,《 数字社会学:国际视野下的源起、发展与展望》 ,《 社会学研究》 第 2 期。
+周涛、高馨、罗家德,2022,《 社会计算驱动的社会科学研究方法》 ,《 社会学研究》 第 5 期。
+Airoldi, Massimo 2021. “ The Techno-Social Reproduction of Taste Boundaries on Digital Platforms: The Case of
+Music on YouTube. ” Poetics 89.
+Amoore, Louise 2020, Cloud Ethics: Algorithms and the Attributes of Ourselves and Others. Durham: Duke
+University Press.
+Atkinson, Will 2011, “ The Context and Genesis of Musical Tastes: Omnivorousness Debunked, Bourdieu
+Buttressed. ” Poetics 39(3) .
+Bail, Chris 2022, Breaking the Social Media Prism: How to Make Our Platforms Less Polarizing. Princeton:
+Princeton University Press.
+Bennett, Andy 1999, “ Subcultures or Neo-tribes? Rethinking the Relationship Between Youth, Style and Musical
+Taste. ” Sociology 33(3) .
+——— 2011, “ The Post-subcultural Turn: Some Reflections 10 Years On. ” Journal of Youth Studies 14(5) .
+Bennett, Tony, Mike Savage, Elizabeth Bortolaia Silva, Alan Warde, Modesto Gayo-Cal & David Wright 2009,
+Culture, Class, Distinction. London: Routledge.
+Blackman, Shane 2005, “ Youth Subcultural Theory: A Critical Engagement with the Concept, Its Origins and
+Politics, from the Chicago School to Postmodernism. ” Journal of Youth Studies 8(1) .
+Bourdieu, Pierre 1984, Distinction: A Social Critique of the Judgement of Taste. Trans. by Richard Nice
+Cambridge: Harvard University Press.
+Bryson, Bethany 1996, “ Anything But Heavy Metal: Symbolic Exclusion and Musical Dislikes. ” American
+Sociological Review 61(5) .
+Burrell, Jenna & Marion Fourcade 2021, “ The Society of Algorithms. ” Annual Review of Sociology 47.
+Chan, Tak Wing & John H. Goldthorpe 2007, “ Social Stratification and Cultural Consumption: Music in
+England. ” European Sociological Review 23(1) .
+Clarke, Gary 1982, “ Defending Ski-Jumpers: A Critique of Theories of Youth Sub-cultures. ” In Centre For
+Contemporary Cultural Studies ( ed. ) Stencilled Occasional Paper. Birmingham: The University of
+Birmingham.
+Cohen, Phil 1972, “ Sub-cultural Conflict and Working Class Community. ” Working Paper, Centre for
+Cantemporary Cultural Studies ( CCCS) .
+de Vries, Robert & Aaron Reeves 2021, “ What Does it Mean to Be A Cultural Omnivore? Conflicting Visions of
+Omnivorousness in Empirical Research. ” Sociological Research Online 27(2) .
+DiMaggio, Paul 1987, “ Classification in Art. ” American Sociological Review 52(4) .
+Erickson, Bonnie H. 1996, “ Culture, Class, and Connections. ” American Journal of Sociology 102(1) .
+Fine, Gary Alan & Sherryl Kleinman 1979, “ Rethinking Subculture: An Interactionist Analysis. ” American
+Journal of Sociology 85(1) .
+178
+社会学研究 2025. 3
+
+
+Flemmen, Magne, Vegard Jarness & Lennart Rosenlund 2018, “ Social Space and Cultural Class Divisions: The
+Forms of Capital and Contemporary Lifestyle Differentiation. ” The British Journal of Sociology 69(1) .
+Friedman, Sam, Mike Savage, Laurie Hanquinet & Andrew Miles 2015, “ Cultural Sociology and New Forms of
+Distinction. ” Poetics 53.
+Gorwa, Robert 2019, “ What is Platform Governance?” Information, Communication & Society 22(6) .
+Griffin, Christine Elizabeth 2011, “ The Trouble with Class: Researching Youth, Class and Culture Beyond the
+‘ Birmingham School’. ” Journal of Youth Studies 14(3) .
+Guerra, Paula 2020, “ Under-connected: Youth Subcultures, Resistance and Sociability in the Internet Age. ” In
+Keith Gildart, Anna Gough-Yates, Sian Lincoln, Bill Osgerby, Lucy Robinson, John Street, Peter Webb &
+Matthew Worley ( eds. ) , Hebdige and Subculture in the Twenty-First Century: Through the Subcultural Lens.
+Cham: Palgrave Macmillan.
+Hall, Stuart & Tony Jefferson ( eds. ) 1976, Resistance Through Rituals: Youth Subcultures in Post-war Britain.
+London: Hutchinson.
+Hebdige, Dick 1979, Subculture: The Meaning of Style. London & New York: Methuen.
+Hollingworth, Sumi 2015, “ Performances of Social Class, Race and Gender Through Youth Subculture: Putting
+Structure Back in to Youth Subcultural Studies. ” Journal of Youth Studies 18(10) .
+Holt, Douglas B. 1997, “ Distinction in America? Recovering Bourdieu's Theory of Tastes From Its Critics. ”
+Poetics 25(2 - 3) .
+Igarashi, Hiroki & Hiro Saito 2014, “ Cosmopolitanism As Cultural Capital: Exploring the Intersection of
+Globalization, Education and Stratification. ” Cultural Sociology 8(3) .
+Jarness, Vegard 2015, “ Modes of Consumption: From ‘ What’ to ‘ How’ in Cultural Stratification Research. ”
+Poetics 53.
+Katz-Gerro, Tally 2002, “ Highbrow Cultural Consumption and Class Distinction in Italy, Israel, West Germany,
+Sweden, and the United States. ” Social Forces 81(1) .
+Lamont, Michèle 1992, Money, Morals, and Manners: The Culture of the French and American Upper-Middle
+Class. Chicago: The University of Chicago Press.
+Lizardo, Omar 2006, “ How Cultural Tastes Shape Personal Networks. ” American Sociological Review 71(5) .
+Lizardo, Omar & Sara Skiles 2015, “Musical Taste and Patterns of Symbolic Exclusion in the United States 1993 
+2012: Generational Dynamics of Differentiation and Continuity. ” Poetics 53.
+Luxburg, Ulrike von 2007, “ A Tutorial on Spectral Clustering. ” Statistics and Computing 17(4) .
+Maffesoli, Michel 1996, The Time of the Tribes: The Decline of Individualism in Mass Society. London: SAGE.
+Malbon, Ben 1999, Clubbing: Dancing, Ecstasy and Vitality. London: Routledge.
+Mannheim, Karl 1952, Essays on the Sociology of Knowledge. London: Routledge & Kegan Paul.
+McRobbie, Angela & Jenny Garber 1976, “ Girls and Subcultures. ” In Stuart Hall & Tony Jefferson ( eds. ) ,
+Resistance Through Rituals: Youth Subcultures in Post-war Britain. London: Hutchinson.
+Mihelj, Sabina, Adrian Leguina & John Downey 2019, “ Culture is Digital: Cultural Participation, Diversity and
+the Digital Divide. ” New Media & Society 21(7) .
+Muggleton, David & Rupert Weinzierl 2003, “ What is ‘ Post-subcultural Studies’ Anyway?” In David Muggleton
+179
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+& Rupert Weinzierl( eds. ) , The Post-subcultures Reader. Oxford & New York: Berg.
+Muggleton, David 2005, “ From Classlessness to Clubculture: A Genealogy of Post-war British Youth Cultural
+Analysis. ” Young 13(2) .
+Nelson, Laura K. 2020, “ Computational Grounded Theory: A Methodological Framework. ” Sociological Methods
+& Research 49(1) .
+Nieborg, David B. & Anne Helmond 2019, “ The Political Eeconomy of Facebook's Platformization in the Mobile
+Ecosystem: Facebook Messenger As a Platform Instance. ” Media, Culture & Society 41(2) .
+Nieborg, David B. & Thomas Poell 2018, “ The Platformization of Cultural Production: Theorizing the Contingent
+Cultural Commodity. ” New Media & Society 20(11) .
+Ollivier, Michèle 2008, “ Modes of Openness to Cultural Diversity: Humanist, Populist, Practical, and
+Indifferent. ” Poetics 36(2 - 3) .
+Palfrey, John & Urs Gasser 2011, Born Digital: Understanding the First Generation of Digital Natives. New York:
+Basic Books.
+Peterson, Richard A. & Roger M. Kern 1996, “ Changing Highbrow Taste: From Snob to Omnivore. ” American
+Sociological Review 61(5).
+Prieur, Annick & Mike Savage 2013, “ Emerging Forms of Cultural Capital. ” European Societies 15(2) .
+Prieur, Annick, Mike Savage & Magne Paalard Flemmen 2023, “ Distinctions in the Making: A Theoretical
+Discussion of Youth and Cultural Capital. ” The British Journal of Sociology 74(3) .
+Redhead, Steve 1990, The End-of-the-Century Party: Youth and Pop Towards 2000. Manchester & New York:
+Manchester University Press.
+Riley, Sarah C. E. , Christine Griffin & Yvette Morey 2010, “ The Case for ‘ Everyday Politics’ : Evaluating Neo
+tribal Theory As a Way to Understand Alternative Forms of Political Participation, Using Electronic Dance
+Music Culture as an Example. ” Sociology 44(2) .
+Robards, Brady 2018, “ Belonging and Neo-tribalism on Social Media Site Reddit. ” In Anne Hardy, Andy
+Bennett & Brady Robards ( eds. ) , Neo-tribes: Consumption, Leisure and Tourism. Cham: Palgrave
+Macmillan.
+Robards, Brady & Andy Bennett 2011, “ MyTribe: Post-subcultural Manifestations of Belonging on Social Network
+Sites. ” Sociology 45(2) .
+Savage, Mike 2015, Social Class in the 21st Century. London: Penguin Books.
+Savage, Mike, Fiona Devine, Niall Cunningham, Mark Taylor, Yaojun Li, Johs Hjellbrekke, Brigitte Le Roux,
+Sam Friedman & Andrew Miles 2013, “ A New Model of Social Class? Findings From the BBC's Great British
+Class Survey Experiment. ” Sociology 47(2) .
+Shannon, C. E. 1948, “ A Mathematical Theory of Communication. ” The Bell System Technical Journal 27(3) .
+Shildrick, Tracy & Robert MacDonald 2006, “ In Defence of Subculture: Young People, Leisure and Social
+Divisions. ” Journal of Youth Studies 9(2) .
+Sintas, Jordi López & Ercilia García Álvarez 2002, “ Omnivores Show Up Again: The Segmentation of Cultural
+Consumers in Spanish Social Space. ” European Sociological Review 18(3) .
+Sivertsen, Morten Fischer 2025, “ Taste on Facebook: Revisiting the Omnivore-Univore Hypothesis Using Digital
+180
+社会学研究 2025. 3
+
+
+Trace Data. ” Poetics 109.
+Stirling, Andy 2007, “ A General Framework for Analysing Diversity in Science, Technology and Society. ”
+Journal of the Royal Society Interface 4(15) .
+Teh, Yee Whye, Michael I. Jordan, Matthew J. Beal & David M. Blei 2006, “ Hierarchical Dirichlet
+Processes. ” Journal of the American Statistical Association 101 (476) .
+Thornton, Sarah 1995, Club Cultures: Music, Media, and Subcultural Capital. Cambridge: Polity Press.
+Ueno, Toshiya 2003, “ Unlearning to Raver: Techno-Party as the Contact Zone in Trans-local Formations. ” In
+David Muggleton & Rupert Weinzierl ( eds. ) , The Post-subcultures Reader. Oxford & New York: Berg.
+van Dijck, José, Thomas Poell & Martijn de Waal 2018, The Platform Society: Public Values in a Connective
+World. Oxford: Oxford University Press.
+van Eijck, Koen 2001, “ Social Differentiation in Musical Taste Patterns. ” Social Forces 79(3) .
+Warde, Alan, David Wright & Modesto Gayo-Cal 2007, “ Understanding Cultural Omnivorousness: Or, the Myth
+of the Cultural Omnivore. ” Cultural Sociology 1(2) .
+Webster, Jack 2020, “ Taste in the Platform Age: Music Streaming Services and New Forms of Taste-Making. ”
+Information, Communication & Society 23(13) .
+Weenink, Don 2008, “ Cosmopolitanism as a Form of Capital: Parents Preparing Their Children for a Globalizing
+World. ” Sociology 42(6) .
+Zuboff, Shoshana 2019, The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of
+Power. New York: Public Affairs.
+作者单位:布里斯托大学社会数字未来研究中心、
+华中科技大学数字社会研究中心
+责任编辑:胡含之
+181
+论 文 数字时代的中国青年文化变迁:趣味模式、社会区隔与平台化
+
+
+Weak Incentive Innovation: An Analysis of Industrial Behaviors of Grassroots
+Governments ................................................ Ling Zheng & Guo Ning 137
+Abstract: How do grassroots governments cultivate new industries? Existing research focuses on
+the behavior of “ typical industry building” under “ strong incentives” at the grassroots level.
+This paper takes the e-commerce industry in Town L as an example and finds that the
+development of this industry does not conform to the logic of building typical industries. This is
+because the internal incentive structure within the grassroots government is not uniform and
+aligned. Under strong incentives, the development of industry is usually led by the leadership
+team and the main functional departments through “ leading interventions” , while under weak
+incentives, the development is explored autonomously by peripheral departments. This paper
+refines the latter's industry-building behavior as “ weak-incentive innovation ” . The weak
+incentive structure provides institutional conditions beyond the “ incentive paradox ” for the
+innovation of the above-mentioned objects. Grassroots governments can solve problems at a
+lower cost through long-term exploration, avoid falling into the “ inefficient operation—changing
+industries” inertial cycle and bring “ unexpected gains” to the development of industries. Weak
+incentive innovation provides a new perspective for understanding the issue of “ incentives and
+government behavior” .
+PAPER
+The Digital Transformation of Chinese Youth Culture: Taste Dispositions, Social
+Distinction, and Platformization .......................................... Liu Taishi 159
+Abstract: The coupling of the digital technology and Chinese youth culture has raised novel
+theoretical and empirical questions. Taking the digital traces of a certain youth culture platform as
+an example, this study examines the digital situations and transformations of Chinese youth culture
+through “ computational grounding” . It finds that platformized Chinese youth culture presents a
+pattern of omnivorousness as the main body and univorousness coexisting, and has homology with
+social distinction factors such as gender and generation. Further examination of digital transformation
+reveals that the youth culture platform has gone through the development stages of subculture,
+diversification and mainstreaming, which is the result of the joint effect of youth cultural practices
+and platform technology operations under the macro social process. The vigorous development of
+youth culture in the digital age has made it increasingly closely linked with mainstream culture,
+becoming an important driver and creator of contemporary Chinese culture.
+229

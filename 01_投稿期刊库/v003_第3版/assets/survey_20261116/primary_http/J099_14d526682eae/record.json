@@ -1,0 +1,18 @@
+{
+  "journal_id": "J099",
+  "source_url": "https://journal.shnu.edu.cn/main.htm",
+  "retrieved_at": "2026-11-16T15:03:29.657388+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://journal.shnu.edu.cn/main.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J099_14d526682eae/text.txt",
+  "sha256": "d1c13bf05c0f9aba60bb6522b59994898c7b0d0c9e933e11fe24257375f8f3f8",
+  "original_path": "primary_http/J099_14d526682eae/response.html",
+  "original_sha256": "a9e7e86481421549cf43d5639222957bdf5d69639f3d05915c66bd51ae4d4ee1",
+  "line_count": 98,
+  "title": "期刊社",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

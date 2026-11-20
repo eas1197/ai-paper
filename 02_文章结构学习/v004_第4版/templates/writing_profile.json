@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "profile_id": "quant_sociology_cn_architecture",
+  "profile_version": "2.0",
+  "module_version": 4,
+  "created_at": "2026-11-14T21:10:37.043310+08:00",
+  "status": "available_as_user_requested_writing_norm",
+  "authority": "user_request_20261114",
+  "basis": "prior section/abstract coding plus explicitly identified project design",
+  "empirical_G2_status": "needs_review",
+  "journal_requirement": false,
+  "guide_path": "02_文章结构学习/v004_第4版/assets/写作架构/定量社会学论文写作架构.md",
+  "guide_sha256": "387a880296e81132f7495efb100583f9c40d6aa85d1687bfacf784d43902d931",
+  "default_body_characters": 15000,
+  "count_rule": "visible body characters including punctuation, excluding whitespace; title, abstract, headings, table contents, notes, references and appendices excluded",
+  "sections": [
+    {
+      "id": "I",
+      "title": "问题的提出",
+      "target_characters": 1800,
+      "default_paragraph_slots": 7
+    },
+    {
+      "id": "L",
+      "title": "文献回顾",
+      "target_characters": 2400,
+      "default_paragraph_slots": null
+    },
+    {
+      "id": "T",
+      "title": "理论分析与研究假设",
+      "target_characters": 2200,
+      "default_paragraph_slots": null
+    },
+    {
+      "id": "D",
+      "title": "研究设计",
+      "target_characters": 2400,
+      "default_paragraph_slots": 10
+    },
+    {
+      "id": "R",
+      "title": "实证结果",
+      "target_characters": 4000,
+      "default_paragraph_slots": 13
+    },
+    {
+      "id": "C",
+      "title": "结论与讨论",
+      "target_characters": 2200,
+      "default_paragraph_slots": 8
+    }
+  ],
+  "length_profiles": {
+    "short": [
+      1400,
+      1800,
+      1800,
+      2000,
+      3300,
+      1700
+    ],
+    "standard": [
+      1800,
+      2400,
+      2200,
+      2400,
+      4000,
+      2200
+    ],
+    "long": [
+      2100,
+      2800,
+      2700,
+      3000,
+      4800,
+      2600
+    ]
+  },
+  "introduction_routes": [
+    "reality_theory_tension",
+    "theory_unexplained_gap"
+  ],
+  "abstract": {
+    "target_characters": 400,
+    "default_sentence_slots": 6,
+    "sentence_budgets": [
+      50,
+      50,
+      60,
+      100,
+      80,
+      60
+    ],
+    "functions": [
+      "scope_or_tension",
+      "unresolved_question",
+      "data_design",
+      "main_answer",
+      "additional_answer_or_boundary",
+      "specific_contribution"
+    ],
+    "sentence_count_is_flexible": true
+  },
+  "conditional_result_branches": [
+    "pathway",
+    "heterogeneity",
+    "theory_competition",
+    "measurement",
+    "time_comparison",
+    "exploratory",
+    "none"
+  ],
+  "required_conclusion_opening": [
+    "return_to_question",
+    "briefly_identify_evidence",
+    "state_concentrated_answer"
+  ],
+  "fixed_phrases_required": false,
+  "causal_language_must_match_design": true,
+  "writing_modes": [
+    "single",
+    "three_plus_review"
+  ],
+  "default_writing_mode": "single",
+  "format": {
+    "page": "A4",
+    "margin_cm": 2.5,
+    "body_font": "宋体",
+    "body_pt": 12,
+    "line_spacing": 1.5,
+    "first_line_indent_chinese_chars": 2,
+    "heading_levels": [
+      "一、",
+      "（一）",
+      "1."
+    ],
+    "reference_style": "author_year_internal_default; target_journal_overrides"
+  },
+  "theoretical_advances": [
+    "G1_reality_explanation",
+    "G2_same_level_gap",
+    "G3_scope_adjustment",
+    "G4_relation_revision"
+  ],
+  "literature_review": {
+    "preferred_path_count": [
+      2,
+      4
+    ],
+    "path_count_is_flexible_with_reason": true,
+    "default_competition": false,
+    "relations": [
+      "parallel",
+      "complementary",
+      "sequential",
+      "nested",
+      "shared_condition",
+      "competitive",
+      "revision"
+    ],
+    "budgets": {
+      "concepts": 240,
+      "paths_total": 1440,
+      "path_connections": 240,
+      "theory_opportunity": 300,
+      "paper_position": 180
+    }
+  },
+  "theory_budgets": [
+    300,
+    500,
+    650,
+    500,
+    250
+  ],
+  "introduction_paragraph_budgets": [
+    200,
+    240,
+    260,
+    300,
+    200,
+    340,
+    260
+  ],
+  "research_inputs": {
+    "theme_issue_question_distinct": true,
+    "abstract_target": 100,
+    "core_fulltext_target": 25,
+    "abstract_and_fulltext_reading_separate": true,
+    "policy_basis": "prefer_directly_relevant_national_primary_source_at_opening",
+    "news_lookback_years": 3,
+    "same_level_dimensions": [
+      "abstraction",
+      "unit",
+      "relation_role",
+      "explanatory_dimension",
+      "timing"
+    ],
+    "core_fulltext_dialogue_required": true
+  }
+}

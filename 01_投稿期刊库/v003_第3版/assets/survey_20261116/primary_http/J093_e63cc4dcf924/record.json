@@ -1,0 +1,22 @@
+{
+  "journal_id": "J093",
+  "source_url": "https://journal.jnu.edu.cn/37571/list.htm",
+  "retrieved_at": "2026-11-16T15:05:23.125301+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://journal.jnu.edu.cn/37571/list.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J093_e63cc4dcf924/text.txt",
+  "sha256": "cf2169d12f3ef75fb410c9daf68e1bd5c2dfe917584fccca20294788bc442405",
+  "original_path": "primary_http/J093_e63cc4dcf924/response.html",
+  "original_sha256": "64d581f8a77250a2f9b16bf28cb3be1e2bbd88e37d38c580f99c7cd6bfb7c20f",
+  "line_count": 33,
+  "title": "投稿指南",
+  "guideline_links": [
+    "https://journal.jnu.edu.cn/2023/0330/c37571a741813/page.htm",
+    "https://journal.jnu.edu.cn/2023/0330/c37571a741815/page.htm",
+    "https://journal.jnu.edu.cn/37571/list.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

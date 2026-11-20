@@ -1,0 +1,46 @@
+{
+  "notice": "仅字段示意，不是真实数据身份、题目、假设或可运行分析",
+  "dataset": {
+    "dataset_id": "D_数据波次文件",
+    "name": "与05测量dataset一致",
+    "wave": "与05测量wave一致",
+    "path": "原始数据绝对路径",
+    "sha256": "原始数据SHA256",
+    "keys": {"person_key": "实际原始主键变量名"},
+    "metadata_sidecar": null,
+    "identity_status": "raw_original_verified",
+    "identity_basis": "如何根据官方发布、文件版本和来源确认身份",
+    "identity_evidence": {"path": "本地官方发布记录.txt或.pdf", "sha256": "发布记录SHA256", "locator": "章节/页码", "pdf_page": null, "short_excerpt": "原文短摘"},
+    "access_basis": "数据授权/协议依据",
+    "review_status": "verified",
+    "verified_at": "实际核验时间"
+  },
+  "variable": {
+    "variable_id": "与05一致的ID",
+    "dataset_id": "对应数据集ID",
+    "source_variable": "原始列名",
+    "expected_label": "元数据实际标签",
+    "special_missing": {},
+    "transform": {"op": "identity"}
+  },
+  "model": {
+    "model_id": "M01",
+    "method_id": "OLS",
+    "method_tags": [],
+    "hypothesis_id": "与05一致的H或RQ",
+    "analysis_role": "primary",
+    "outcome": "Y变量ID",
+    "predictors": ["X变量ID", "控制变量ID"],
+    "intercept": true,
+    "categorical": {},
+    "interactions": [],
+    "covariance": "HC1",
+    "cluster": null,
+    "exposure": null,
+    "ci_level": 0.95,
+    "diagnostics_required": ["converged", "rank", "condition_number", "r_squared"]
+  },
+  "join": {"right_dataset": "D_family", "on": ["person_key"], "how": "left", "validate": "many_to_one", "rationale": "事前连接规则与层级"},
+  "sample_filter": {"variable": "变量ID", "op": "ge", "value": 18, "reason": "事前确定的纳入理由"},
+  "csv_sidecar": {"data_sha256": "实际CSV哈希", "columns": {"实际列名": {"label": "实际标签", "value_labels": {}, "special_missing": {}}}}
+}

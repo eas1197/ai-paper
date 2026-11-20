@@ -1,0 +1,9 @@
+{
+  "journal_id": "J040",
+  "source_url": "https://esr20230126.com/",
+  "retrieved_at": "2026-11-16T15:04:42.023943+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "ConnectionError",
+  "reason": "HTTPSConnectionPool(host='esr20230126.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='esr20230126.com', port=443): Failed to resolve 'esr20230126.com' ([Errno 11001] getaddrinfo failed)\"))"
+}

@@ -1,0 +1,1960 @@
+{
+  "run_id": "resource_structure_20261114",
+  "stage_id": "02",
+  "attempt": 2,
+  "module_version": 2,
+  "schema_version": 1,
+  "resource_candidate_version": 1,
+  "status": "needs_review",
+  "published": false,
+  "verified_at": "2026-11-14T19:37:22.553475+08:00",
+  "input_files": [
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_6V7LJIWN",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\6V7LJIWN\\黄健和邓燕华 - 2021 - 制度的力量——中国社会保障制度建设与收入分配公平感的演化.pdf",
+      "sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_6V7LJIWN",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\6V7LJIWN\\.zotero-ft-cache",
+      "sha256": "21a21cce220ef7bee16afabda2192c564ac5d3fc97e52f2402c51e9feb52678c"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_SCCKUUS9",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\SCCKUUS9\\李路路和朱斌 - 2015 - 当代中国的代际流动模式及其变迁.pdf",
+      "sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_SCCKUUS9",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\SCCKUUS9\\.zotero-ft-cache",
+      "sha256": "dd124a198038d52ed2d0901319d8977c088b0f9ef3773d2382e612b99f8f8b9f"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_J5XDE43I",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\J5XDE43I\\罗楚亮和刘晓霞 - 2018 - 教育扩张与教育的代际流动性.pdf",
+      "sha256": "1fa8c237d07962f1fa78dcc87d288dc0c00c0d7a1a2e3b55d6b1f7d6983b9d9e"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_J5XDE43I",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\J5XDE43I\\.zotero-ft-cache",
+      "sha256": "5ca66d8d7f33319134d93aa2bcee118f3b1e7f1288b802bd07c56cf0b36b2c58"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_Y32DRMKW",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\Y32DRMKW\\陆益龙 - 2008 - 户口还起作用吗——户籍制度与社会分层和流动.pdf",
+      "sha256": "84b11621e936dfeb5c8f0df946b001c7e1b61c46a523970cf2e38bc5c0a95a88"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_Y32DRMKW",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\Y32DRMKW\\.zotero-ft-cache",
+      "sha256": "fab18ad56b4cb924e7cb027ead83df3a423e16f0f350f5c7750f78698fce4fd8"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_MY99VSIF",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\MY99VSIF\\刘军强 - 2011 - 资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008).pdf",
+      "sha256": "03350a59af9155c576b77cd07b5486aeaa3a587f8f57032087986b0ab44a33da"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_MY99VSIF",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\MY99VSIF\\.zotero-ft-cache",
+      "sha256": "1cb8c64e368249d8ed54f790eae223d9c6661a0ecfa4439727450193943a58d7"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_J38BV4A5",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\J38BV4A5\\李骏和吴晓刚 - 2012 - 收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析.pdf",
+      "sha256": "245bbf45908382fc7e8d6348616d8f8fb6401b49a23eb4dba6a478fc29d48ab8"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_J38BV4A5",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\J38BV4A5\\.zotero-ft-cache",
+      "sha256": "e3f82cc18e110d090a880978f2ead3b2d9aef2d77042aa08fef435b03283d5d7"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_S823QAM2",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\S823QAM2\\李强 - 2003 - 影响中国城乡流动人口的推力与拉力因素分析.pdf",
+      "sha256": "e7c1347c87fb4c66b0651086828e623382c20bd457ba5163f35cf606e253a831"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_S823QAM2",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\S823QAM2\\.zotero-ft-cache",
+      "sha256": "90cdb4bc2a3492a2e6e9804c85e99cece75125e34d36f4fb2e49a8d7b2148dd2"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_89UP6KH7",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\89UP6KH7\\朱斌 - 2018 - 文化再生产还是文化流动——中国大学生的教育成就获得不平等研究.pdf",
+      "sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_89UP6KH7",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\89UP6KH7\\.zotero-ft-cache",
+      "sha256": "ce1594fc4dd45820535df6825e217eae0e5f8b61fb8f55b529bc099226da7bed"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_AVUPRP3F",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\AVUPRP3F\\许丹红和桂勇 - 2023 - 如何助子成龙——家庭教养方式对优质高等教育获得的作用.pdf",
+      "sha256": "3b8df1020c8341be75a1a97246586b9584650ef14c1fc76e575eedbb22fc0836"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_AVUPRP3F",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\AVUPRP3F\\.zotero-ft-cache",
+      "sha256": "70c53135ac035a9ad6c12cb8c8f37bbc295809b15a050a5ade5536d75974eaa0"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_FQ7RQ5NC",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\FQ7RQ5NC\\宋健和陈文琪 - 2025 - 低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析.pdf",
+      "sha256": "a8fa2c99ce1edfc84f4d80dc0548e1f254e3e1ba177f9ffb91cde671edc64393"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_FQ7RQ5NC",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\FQ7RQ5NC\\.zotero-ft-cache",
+      "sha256": "8aa4664a61164ed62dbeb11dac46a55887c5e56d2f292491dccb58d69e88786a"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_NLVHWHF6",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\NLVHWHF6\\卿石松 - 2024 - 女性教育提升与生育行为变迁——基于夫妻匹配视角的研究.pdf",
+      "sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_NLVHWHF6",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\NLVHWHF6\\.zotero-ft-cache",
+      "sha256": "2c0bc4d9e2e8b24fa5e37ea55bf37e53dce0614b02123e1226743a81b229dd9c"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_CJB64WZK",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\CJB64WZK\\张咏雪 - 2024 - 从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究.pdf",
+      "sha256": "a6c04485c67ae0dc7eccc6da981027986dcde9f202a9b8b4b9ada7774ea4f499"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_CJB64WZK",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\CJB64WZK\\.zotero-ft-cache",
+      "sha256": "d89d6b30f6bd5622c3b1efca43d9545c96841e64038ce0a1546244886c741220"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_DD4I5QA4",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\DD4I5QA4\\张文宏和张莉 - 2012 - 劳动力市场中的社会资本与市场化.pdf",
+      "sha256": "0d0ebc416548ae6871db64d99948e82fc45f997259c5d8811f5eb9c9fb51feb9"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_DD4I5QA4",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\DD4I5QA4\\.zotero-ft-cache",
+      "sha256": "3cfaf7e84337fc304b19a0d5b062d4425a38f5e0b25b04dbedeea9cecff4e0cf"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_NUR2L8DP",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\NUR2L8DP\\吴晓刚 - 2007 - 中国的户籍制度与代际职业流动.pdf",
+      "sha256": "732ebf72bda52757137468b1babd7b43e6500cd481d4989561943fbf9787c7fa"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_NUR2L8DP",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\NUR2L8DP\\.zotero-ft-cache",
+      "sha256": "b4de925ec08fecbfbc770c830a955a080e99f21d35f4f8fa17dd041b8ddffd04"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_ZLZANUD2",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\ZLZANUD2\\范梓腾和宁晶 - 2021 - 技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响.pdf",
+      "sha256": "ebbed199cf68395555e3d0912d966aa7cbfbcd5b985af9dd279670e80ebb9cd9"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_ZLZANUD2",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\ZLZANUD2\\.zotero-ft-cache",
+      "sha256": "997032a6b6dc1ba9c0bd3b9e0ee7cf73d96e9d1c35f0ffe8d94a46447b7ae7da"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_V3CA3AZW",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\V3CA3AZW\\李忠路和邱泽奇 - 2016 - 家庭背景如何影响儿童学业成就——义务教育阶段家庭社会经济地位影响差异分析.pdf",
+      "sha256": "531bf821c12b9b46d40632b6e06a91185c620b67520db03b36dca8c3f8edc1b7"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_V3CA3AZW",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\V3CA3AZW\\.zotero-ft-cache",
+      "sha256": "8bbc73d54ea0f64476a39df2adbce140dcc649a56c16e3cccfb9ab08a680a855"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_QIL2SNVK",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\QIL2SNVK\\刘欣和胡安宁 - 2023 - 共同富裕愿景下的幸福感提升：双重公平论的视角.pdf",
+      "sha256": "1c495db20c441ded679a2051d742bb2f59d8229253c5415aa1345164e98a8ae3"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_QIL2SNVK",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\QIL2SNVK\\.zotero-ft-cache",
+      "sha256": "f5465d2cd8f48fce719b3ffbfa1d73775727ccd9e17f276f0c3e7e0759a7109f"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_3G222LKC",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\3G222LKC\\马磊和刘欣 - 2010 - 中国城市居民的分配公平感研究.pdf",
+      "sha256": "5a12cc3e8f369e824c879d6a42a989582683816025a2cb0028e308a478e301a4"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_3G222LKC",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\3G222LKC\\.zotero-ft-cache",
+      "sha256": "2d81f7f6e7c94800d977be132cbc6cd1d15a3dfc0beebd1ccbaa4db323e58f58"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_GTUTSZDI",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\GTUTSZDI\\李代和张春泥 - 2016 - 外出还是留守——农村夫妻外出安排的经验研究.pdf",
+      "sha256": "95bf479e4d6d08e66be5d8afdffc6a36b2299612a78c703981ac24ea908e93f2"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_GTUTSZDI",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\GTUTSZDI\\.zotero-ft-cache",
+      "sha256": "fba8e7029df434d270086d894c69bbc4492af7e2fd70e227f975f963cd3857b6"
+    },
+    {
+      "role": "selected_original_pdf",
+      "paper_id": "zotero_GUQJU4JA",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\GUQJU4JA\\石智雷和杨云彦 - 2012 - 家庭禀赋、家庭决策与农村迁移劳动力回流.pdf",
+      "sha256": "a9cabe0444bfff5f134562aef0bfa8574a3415cbf60a288c7c065950e640d35f"
+    },
+    {
+      "role": "zotero_text_cache",
+      "paper_id": "zotero_GUQJU4JA",
+      "path": "C:\\Users\\hou\\Zotero\\storage\\GUQJU4JA\\.zotero-ft-cache",
+      "sha256": "710e2a12cfbd2a1e43d3c8f40b2897943834640096f7dcdb10744fad84374659"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\模块说明.md",
+      "sha256": "d0babd10d00801f033629583307ce12aad73d2b1051fc118e2ea4d8e555cf8ab"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\manifest.json",
+      "sha256": "25d6bf3fb9fdc9b4f438b4a51bb56447f6fb23996befe3d6c3febae677ccfaca"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\module_registry.json",
+      "sha256": "1dfc397b154ee582ab8266135d096457d0f4001acb8d9cddc456593b751ab1cf"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v001_第1版\\manifest.json",
+      "sha256": "d8067b9f6fc467875f2b210c9ed6e81604afe4833e891c1f8cdba30a99526084"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v001_第1版\\manifest.json",
+      "sha256": "5ea69dd0c10e0c7d56b52051e6eec0028c604e60121ca38e0082d518ecc16782"
+    }
+  ],
+  "config_sha256": "c644791838c631107cf54b59d2c2df0dd0083a5f8accad314de7a7fac601727f",
+  "root_requirements_sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b",
+  "upstream_manifest_hashes": [
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\模块说明.md",
+      "sha256": "d0babd10d00801f033629583307ce12aad73d2b1051fc118e2ea4d8e555cf8ab"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\manifest.json",
+      "sha256": "25d6bf3fb9fdc9b4f438b4a51bb56447f6fb23996befe3d6c3febae677ccfaca"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\module_registry.json",
+      "sha256": "1dfc397b154ee582ab8266135d096457d0f4001acb8d9cddc456593b751ab1cf"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v001_第1版\\manifest.json",
+      "sha256": "d8067b9f6fc467875f2b210c9ed6e81604afe4833e891c1f8cdba30a99526084"
+    },
+    {
+      "role": "requirements_or_upstream_manifest",
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v001_第1版\\manifest.json",
+      "sha256": "5ea69dd0c10e0c7d56b52051e6eec0028c604e60121ca38e0082d518ecc16782"
+    }
+  ],
+  "prompt_and_model": {
+    "provider": "Codex desktop current conversation",
+    "exact_model_version": "not_exposed_in_runtime",
+    "separate_api_calls": false,
+    "prompt_version": "user_request_20261114_and_explicit_storage_expansion"
+  },
+  "scripts": [
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\annotations.py",
+      "sha256": "aed4e57a1e63d3160f7c9b54e50c850df88fd87ff3bfd747a76bccfe581389a1"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\build_reports.py",
+      "sha256": "1b9480446cff9245f23d76a5d536db38c46e56104c51fc530f375f1904e9de2a"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\extract.py",
+      "sha256": "da03a75d20c67423349c92a12b655513a3974f34b510293224ee2078f143012d"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\finalize.py",
+      "sha256": "6c3f987002b9c6d8662d7a5e1edad97c2f3f3a0978ed731cb80188336dd68d77"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\prepare_reading.py",
+      "sha256": "5b3a5646da215ec272ba0548caa1d5188d51638cf6de6c512fec1eeb6b3d8eee"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\scan.py",
+      "sha256": "acf29bcb0adfd4e1d904ada2fe9d3700a335121281db88436ebe1a5233d10be6"
+    }
+  ],
+  "runtime": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "pdfplumber": "0.11.8",
+    "pdfminer_six": "20251107"
+  },
+  "random_seed": null,
+  "output_files": [
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\abstract_raw.json",
+      "sha256": "c37b6f2846f86dee28d724c053f5ba31a0191decabc7e9b443a75e78b2663032",
+      "bytes": 32798
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\abstract_sentences.csv",
+      "sha256": "cbe750ae4a56f064e41ee2397a016339e775eec18fa563346f151a4682a9b5ce",
+      "bytes": 38019
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\annotations.json",
+      "sha256": "0898bdf327deb0db2f16e33f48d16d28ff0cbcab901833f2949873b5d81b99fb",
+      "bytes": 58404
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\candidate_snapshot.json",
+      "sha256": "f2eb63fd899ecfe97bec327f9f1a42da989ab6fe33bbfbf48f8da9e922429b3a",
+      "bytes": 514
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\confirmed_exclusions.csv",
+      "sha256": "541788c2ec80ebfcb2a46ae31e26e411e43edd1d8d0d7115bcae63f53f12acd4",
+      "bytes": 326
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\corpus20.csv",
+      "sha256": "515c9825026e063c92281b57f15246f08a30bff39b1146b1ccdca47f0b1eddd4",
+      "bytes": 18976
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\coverage_audit.csv",
+      "sha256": "ed325cd0e31f23c1421b85a66362966221202acbcac8441cc135bd19de98ca46",
+      "bytes": 2485
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\evidence.jsonl",
+      "sha256": "1d8155bc346053438191ea426778abac951ee04b6695a1e65e72af63286e614e",
+      "bytes": 1661879
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\3G222LKC\\pages.json",
+      "sha256": "9328d7157e99b643378538dc8b057fa08c0101342e611ec0c6102f68b819f08c",
+      "bytes": 181878
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\3G222LKC\\paragraph_candidates.json",
+      "sha256": "aaceb91707e364e524cb20e1efd2bc2c512b5ea1caab0afc28e0b5a7bcbb9279",
+      "bytes": 50601
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\3G222LKC\\source.json",
+      "sha256": "d350adc13e5e5b768fcc91f0b620acebe23e955d84855c81bcac878d6066f90b",
+      "bytes": 944
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\3G222LKC\\全文.txt",
+      "sha256": "90f8b661d9d95c0d1cf73106bc0d0175062413804e137f440ed22d6b3025edd3",
+      "bytes": 41801
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\3G222LKC\\结构阅读包.txt",
+      "sha256": "5eaec531907201b9502cab5869ea30f815e11194f9302cdec315dcfc8a03e8c0",
+      "bytes": 22814
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\6V7LJIWN\\pages.json",
+      "sha256": "1988016fcb9720d4338a3273703baeae871404ab63b930441bce83976c8f5815",
+      "bytes": 287225
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\6V7LJIWN\\paragraph_candidates.json",
+      "sha256": "c7afb65a6d0d884805e78afd2c65b8bdeac4f9ffdcf515c0ecbb8bcc73de2f34",
+      "bytes": 74818
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\6V7LJIWN\\source.json",
+      "sha256": "0cfd9facb77c5a3db21ff7303ce391a35425d6784bdbf0c396852d595d8b4868",
+      "bytes": 1061
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\6V7LJIWN\\全文.txt",
+      "sha256": "316d2bea71d847bae656d0b8e05b725aa5ab00679ee7151fb3824727d268240c",
+      "bytes": 78612
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\6V7LJIWN\\结构阅读包.txt",
+      "sha256": "b6624b597ebee212f6f32ba2ca074e663961ca387d18c66955a547af15954155",
+      "bytes": 42988
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\89UP6KH7\\pages.json",
+      "sha256": "617672cb0ec40bd557c6ef765c8b76ecace936d7d8400524ff1530ed2c05ae2d",
+      "bytes": 302490
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\89UP6KH7\\paragraph_candidates.json",
+      "sha256": "4553bde936cfa2640c22bff88eab916028b296c283d4c747dab4136e6ec90d5d",
+      "bytes": 85132
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\89UP6KH7\\source.json",
+      "sha256": "a58f7deb778e8204ed3199569b1a015c362b8c81fdf1f6f51a9b8041de4fda14",
+      "bytes": 1111
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\89UP6KH7\\全文.txt",
+      "sha256": "e644c4350bd4bf0db136f7b8c9922c560ba1a032f735440de69fa9dd11a8a664",
+      "bytes": 67024
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\89UP6KH7\\结构阅读包.txt",
+      "sha256": "208bb300fab68e0777ab895382883db0a3afb2adf219a0846b8ee5cbddc8185e",
+      "bytes": 45306
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\AVUPRP3F\\pages.json",
+      "sha256": "e6c8aa57b7b2fd54f219524d006149cf1afb0b95069594f625c0c68cc53cd02b",
+      "bytes": 286611
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\AVUPRP3F\\paragraph_candidates.json",
+      "sha256": "3b3b994f55ef71fb4ea815c010ca4eee34fd5345a25a85ec9f06c6b3cfe1b999",
+      "bytes": 86295
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\AVUPRP3F\\source.json",
+      "sha256": "764eb5bf5b4b40ad7b535b97f49eda26783e5eaa898d996d860cdc9efae7c158",
+      "bytes": 1087
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\AVUPRP3F\\全文.txt",
+      "sha256": "fbc371e6b079917961255fecfce26f9fe7998b7647f9dc1b4902cfd64b769303",
+      "bytes": 67444
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\AVUPRP3F\\结构阅读包.txt",
+      "sha256": "080378a575068536d0a67c235e4f42883be5d54b2ca1eb421413df3a2a3b6e22",
+      "bytes": 44400
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\BA5F5I6L\\pages.json",
+      "sha256": "b7172b8d71afbe37de0d2ded4cd4f1f4bb77f653890f7a58692eb40d56401e75",
+      "bytes": 155673
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\BA5F5I6L\\source.json",
+      "sha256": "120f6b7a0d11cae6876d43b4a66260f561bec65ebb67b6996ac2130ae4d75ea6",
+      "bytes": 981
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\BA5F5I6L\\全文.txt",
+      "sha256": "a0cfb6769ab9157adf9c11828eff3ddb0e350f39d07c2cfdee3f3a5af215ce36",
+      "bytes": 39521
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\CJB64WZK\\pages.json",
+      "sha256": "c7a77a685234a6b96656312669936462ea734cec3b3c0faf40dca0481ed51e0b",
+      "bytes": 350462
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\CJB64WZK\\paragraph_candidates.json",
+      "sha256": "ec83060acd2c9abcbace63de74cc81ec18a8be067a67821d5d638a0021c21b16",
+      "bytes": 77192
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\CJB64WZK\\source.json",
+      "sha256": "c16a0f830d09eccc5dea4c18499d50542e989c3f7d8d12238e3c777bc5421d47",
+      "bytes": 1106
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\CJB64WZK\\全文.txt",
+      "sha256": "eda31a299d68279f4db14911d155c9bafcff349b7fa6a071e180a60b40b6601a",
+      "bytes": 66927
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\CJB64WZK\\结构阅读包.txt",
+      "sha256": "6248d3f85d8708a09e4fc538d5bb3c1195fb45552d6d47e0a5267085f95c3d2c",
+      "bytes": 40525
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\DD4I5QA4\\pages.json",
+      "sha256": "33e0d327b97869873d488df2f21a6dac734687fe34c05e416a518e0c12998442",
+      "bytes": 265993
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\DD4I5QA4\\paragraph_candidates.json",
+      "sha256": "8881608a1bba413f0e4eb5b1b36666586482f3a629cfa5aa8c66987027a5e531",
+      "bytes": 82528
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\DD4I5QA4\\source.json",
+      "sha256": "6094869a48ba54c4d70d7a512f0710dfc04c287a331575236d136f565770787f",
+      "bytes": 1011
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\DD4I5QA4\\全文.txt",
+      "sha256": "8078d46a89adf6fe6a31ff92398a9d7be2d203da36427c2b6789a364e5fa01d8",
+      "bytes": 60465
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\DD4I5QA4\\结构阅读包.txt",
+      "sha256": "c6b27604adbf55b3713e2fe08aa8b52b6a6bac4a078281209cb7afa7a144c5e4",
+      "bytes": 41267
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FK7SICYJ\\pages.json",
+      "sha256": "ed77c2a27e3e5c3dc1c645835f53f78ec4f5e80c683b1942b77affd1fffc9d85",
+      "bytes": 151312
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FK7SICYJ\\source.json",
+      "sha256": "20e152ccbbb180cb6804fdb73bf7daa092cb8f0128c56ccbb6f9ad19a6d8ae88",
+      "bytes": 931
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FK7SICYJ\\全文.txt",
+      "sha256": "e51c5e661ebd65fa077a206dc42f404fa29b4f0338206da4c97776b003fae67f",
+      "bytes": 37882
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FQ7RQ5NC\\pages.json",
+      "sha256": "a1b74018e65c15f97593aea8257bd80235a442ba0b342e4a959f22fb1dd23aed",
+      "bytes": 439695
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FQ7RQ5NC\\paragraph_candidates.json",
+      "sha256": "3eaffe102fb1edf5d61969a01f326420d5872ae683f7525d191a2f2fa47b27dd",
+      "bytes": 91475
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FQ7RQ5NC\\source.json",
+      "sha256": "ee9b738a6504b8d339f1233eac1cc0f871c747758cf2e7fd3d8ad948eca4f200",
+      "bytes": 1138
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FQ7RQ5NC\\全文.txt",
+      "sha256": "ed680f13a88234a3e763005fe9b58a6b05573a63111ede93cdbecf6bd4a60158",
+      "bytes": 95236
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\FQ7RQ5NC\\结构阅读包.txt",
+      "sha256": "c12a760826959ac264739d5614dfef05be8b22c7ec0b5c5d586ebb8b81fc76b1",
+      "bytes": 39686
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GTUTSZDI\\pages.json",
+      "sha256": "d9dd44e5c16270c09d3f1f3e66a831179ea3f75e4a469bc1e70e97477dd7e8ef",
+      "bytes": 281390
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GTUTSZDI\\paragraph_candidates.json",
+      "sha256": "5ac6adb8f1e36868796551c4e176895c4bb725f83f03423645927842477653ff",
+      "bytes": 82684
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GTUTSZDI\\source.json",
+      "sha256": "23795956faa88bec7b3f0cae64d2ba7c1367a94675521a772e91f8d4d0644533",
+      "bytes": 1064
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GTUTSZDI\\全文.txt",
+      "sha256": "ff1121fa5eae1274183dd0d4e197b0e657c9a28de5cd8678da856b0f672e9189",
+      "bytes": 64197
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GTUTSZDI\\结构阅读包.txt",
+      "sha256": "7d22e2bf1529866bcd950e29b877def2f95261ec144b3a683ea14f89f62ca2b4",
+      "bytes": 42253
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GUQJU4JA\\pages.json",
+      "sha256": "8209a02097e83f54d07c61e623f559a13d24df22b82532fc0887869bda918ae1",
+      "bytes": 308647
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GUQJU4JA\\paragraph_candidates.json",
+      "sha256": "61644a812eb39d18e4e7c2b1f58a28e51b3719ddf0cd9edad5a31c6c08812251",
+      "bytes": 85378
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GUQJU4JA\\source.json",
+      "sha256": "b4cba773b05c65f306cdfaf494c4e131b2558ad4908b8b9ed7948c57f274c5f4",
+      "bytes": 1062
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GUQJU4JA\\全文.txt",
+      "sha256": "45295b790224e82bf6210b0316ec970bb6198e789f5e60366a51ea48d9313fba",
+      "bytes": 71692
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\GUQJU4JA\\结构阅读包.txt",
+      "sha256": "23faf141a83405d15eb5016dbcb1611f0efa7602a097d6ff5bac47950d9eb069",
+      "bytes": 49158
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J38BV4A5\\pages.json",
+      "sha256": "c0a5b6c3c5d872e8da166a78efa88273b3d5e8e516075aea4695b0ef672f9904",
+      "bytes": 237639
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J38BV4A5\\paragraph_candidates.json",
+      "sha256": "7318f8a6c65a94f0e44df4f2c5aebaa5e3d49468fed517a69c48ddf65dc91e7d",
+      "bytes": 62776
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J38BV4A5\\source.json",
+      "sha256": "acead98a9791bbde6eddbe976bc7da4fb7cf7f14b2e0f806e6627486540b44b0",
+      "bytes": 1055
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J38BV4A5\\全文.txt",
+      "sha256": "027a2dcd0fbdedf97330d27de0190ef617647debb26789367c53b84db939e86c",
+      "bytes": 67382
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J38BV4A5\\结构阅读包.txt",
+      "sha256": "959cb0a697d79c07d8c5f13b73ce8283d86463dc311379aa4bdff4d7bd462051",
+      "bytes": 34675
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J5XDE43I\\pages.json",
+      "sha256": "569c241a16d92ed5316bc6eb13b2287929362ef7bb7a25cd8676b24027a04f32",
+      "bytes": 295535
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J5XDE43I\\paragraph_candidates.json",
+      "sha256": "8d9b41292e714423bfe6f1ac7858fa3a88e89a011a503b7a2056af788f64d218",
+      "bytes": 81385
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J5XDE43I\\source.json",
+      "sha256": "f47819a5fac5c425ed91ea5d89961a390acb6b7a84c4025c91d5899803c91666",
+      "bytes": 976
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J5XDE43I\\全文.txt",
+      "sha256": "4ced49faae112d89f774a39332f036847df3c7e2a0b346a6c59e11322459ddf6",
+      "bytes": 78310
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\J5XDE43I\\结构阅读包.txt",
+      "sha256": "f61af9a72c43a79f298b7045e3dd4eca9d67c21a951230479852ac01a1dfaebc",
+      "bytes": 45373
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\MY99VSIF\\pages.json",
+      "sha256": "070f6ea804806b3d7eff0030271133374c74b71192aeff712490c23495922877",
+      "bytes": 399446
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\MY99VSIF\\paragraph_candidates.json",
+      "sha256": "4ee0d2f6560a15b2c81aa581d9a267dbaa6a28c2c9b33bc31e0c66c48002e519",
+      "bytes": 105198
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\MY99VSIF\\source.json",
+      "sha256": "ad476795400fc49e6cbec8f33a94ee5f8646ebb89d88108d81bcf3f71f5c805e",
+      "bytes": 1038
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\MY99VSIF\\全文.txt",
+      "sha256": "2ff2e3b5ce2102ccabc5bedae6acc455f2089d27cbab526c93a231e850a0cd98",
+      "bytes": 75579
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\MY99VSIF\\结构阅读包.txt",
+      "sha256": "9a4295797f7cd3e0de7acd37ce0ae8e0a15afa5694bad6e643d58931f477bb9c",
+      "bytes": 41976
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NLVHWHF6\\pages.json",
+      "sha256": "bf6043128537ba99305e703dc1aa47b730dbc9a3396b24b19e551433a5f3b2f9",
+      "bytes": 370601
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NLVHWHF6\\paragraph_candidates.json",
+      "sha256": "92236e09e9bb309c77474e14ca0eee8eee4fd5847ead3a01677f8f3f6a2d2bd9",
+      "bytes": 86151
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NLVHWHF6\\source.json",
+      "sha256": "8cded2e4f7ccbeae1ce99e9727c09891d2e7a08daaf85f189ce3fb3ac6bf5244",
+      "bytes": 1071
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NLVHWHF6\\全文.txt",
+      "sha256": "eaac9c6b94b967819b8daf9b901de4c2f9b9efb5b801db90f296a4b0ec6760cb",
+      "bytes": 70517
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NLVHWHF6\\结构阅读包.txt",
+      "sha256": "115ec8867ef9d21f8f4093e15137dcec8ba257be44709c2c05e4c16d31f218d9",
+      "bytes": 48559
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NUR2L8DP\\pages.json",
+      "sha256": "fbedb8148ffbde77843f5137fdd5c51d910400131f090725c90adc31e41c95ab",
+      "bytes": 507037
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NUR2L8DP\\paragraph_candidates.json",
+      "sha256": "75579f4c727b8d4339ec4f69d962c7b35443db312a1035213d7486618d66aeaa",
+      "bytes": 89597
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NUR2L8DP\\source.json",
+      "sha256": "f8505b7b6fa03e3dd9fb6fa80463fcc5f31919ae17d34d6a9f68660e54d86895",
+      "bytes": 1056
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NUR2L8DP\\全文.txt",
+      "sha256": "3211b2a7169b86c03ea78b6e880e80f3272ed2ae709fb932a427e79b7a001a0e",
+      "bytes": 83626
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\NUR2L8DP\\结构阅读包.txt",
+      "sha256": "b69fcb7bbd379e6b70b6af497a89e556913a6cbef9f9a503f538fd5301b7b5a4",
+      "bytes": 44401
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\QIL2SNVK\\pages.json",
+      "sha256": "d519135349441adcdd73e8964df753aaebb9107142e6980ab62364215ddea074",
+      "bytes": 349337
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\QIL2SNVK\\paragraph_candidates.json",
+      "sha256": "90fa3e645872ef81ea409d581b8e0346501857bc992cf46d13d5db863ce9ebaa",
+      "bytes": 78903
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\QIL2SNVK\\source.json",
+      "sha256": "2bf539a564b9b0d25014e2143f9b0a9edd46e04415cef5c8ebd56311f852c7e6",
+      "bytes": 1031
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\QIL2SNVK\\全文.txt",
+      "sha256": "16f50c7be21cf6ef493ee0687f96113306826e84591f51e04e4d5fd12b44e548",
+      "bytes": 74288
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\QIL2SNVK\\结构阅读包.txt",
+      "sha256": "cffdf2cc9bd8013acb31c1fd6e97ce3a81b02cd540afab6e3cbaa52d688230f2",
+      "bytes": 38478
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\S823QAM2\\pages.json",
+      "sha256": "152cee4a10706791550c3042a54b79ad49c5c650fe6215bbb4f028a12d40fc7c",
+      "bytes": 263008
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\S823QAM2\\paragraph_candidates.json",
+      "sha256": "57ea6f7f2267899a8830e7bc4341d29b61b0c3d1ab3dc2a5f220d89386329275",
+      "bytes": 60287
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\S823QAM2\\source.json",
+      "sha256": "2a1e42815a2f02e45e4bfd433b6ce5ab4af925d20ed92db77a450818be388f89",
+      "bytes": 904
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\S823QAM2\\全文.txt",
+      "sha256": "9d2ca26c4c4986c6856f675912f5fa78f69e1721f4b793ddd4c463a35d5241cd",
+      "bytes": 47896
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\S823QAM2\\结构阅读包.txt",
+      "sha256": "e0c1e41febc5da40828c8ce56af3a9f34cb4dbe4b64ae9108219855dbaa8b6fd",
+      "bytes": 31714
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\SCCKUUS9\\pages.json",
+      "sha256": "11dad8c315cf1a3e8507333c32d5665c545d3f44a41e3c4e2fe74e5b0d6e463c",
+      "bytes": 428107
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\SCCKUUS9\\paragraph_candidates.json",
+      "sha256": "866d341f0b00f0cbb8ec93aa13b468b2263b1cb62e752032e88b0aa124121207",
+      "bytes": 76026
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\SCCKUUS9\\source.json",
+      "sha256": "4123354adb9ca54db39bc3fd27e49ef79edb84eebd2ba46d33ba69e9c2333f04",
+      "bytes": 974
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\SCCKUUS9\\全文.txt",
+      "sha256": "56d7768f1bfd7888d21e2937cc6b106e9697e95891c3e332adb0236b29774c26",
+      "bytes": 86420
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\SCCKUUS9\\结构阅读包.txt",
+      "sha256": "2a934540d45f8c024980e5bc769d30e75b4aa00562cf395d154e752a35f94a47",
+      "bytes": 40341
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\V3CA3AZW\\pages.json",
+      "sha256": "548482131e0de441b11c1debe658d27592c91378f97fb16eaa6daf7db940f51e",
+      "bytes": 262637
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\V3CA3AZW\\paragraph_candidates.json",
+      "sha256": "545cdd01e92a4b4834068665c93377a5d1423677388183d04f852bb34839bb7a",
+      "bytes": 77842
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\V3CA3AZW\\source.json",
+      "sha256": "c870444a82d383cd08a5165ad9b371bc49f5cfe0a260decefffd9a4a1403eb3b",
+      "bytes": 1182
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\V3CA3AZW\\全文.txt",
+      "sha256": "16d615d7d9cd45ee714d6177724c8fde1673c267c8e509a1d97b22ef2a794b87",
+      "bytes": 58431
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\V3CA3AZW\\结构阅读包.txt",
+      "sha256": "00e9410c76c277562a7d24f01eb5b0ebd7e14e861861b359c862b905f8765556",
+      "bytes": 38728
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\Y32DRMKW\\pages.json",
+      "sha256": "a9642e5e8ffd0aada168f7eab894b780fec564fdb58715f79fed8ca47bb4bf12",
+      "bytes": 341052
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\Y32DRMKW\\paragraph_candidates.json",
+      "sha256": "1b3f34a89534e4f1da303835693acc64b67a50e10d80c778652dca88a2a08b24",
+      "bytes": 63275
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\Y32DRMKW\\source.json",
+      "sha256": "164711f3641de9af2570b81bcfcaea2680d735f7e5403b35225a5850884516ba",
+      "bytes": 949
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\Y32DRMKW\\全文.txt",
+      "sha256": "680f93135be570de6a7898dfc1cf1366d540a4b560ca95583d15ec309f441cd8",
+      "bytes": 63621
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\Y32DRMKW\\结构阅读包.txt",
+      "sha256": "b9c366f5c6558c0db73e7cf5f19956f76c9da2cb145c404480e520b352d68014",
+      "bytes": 36686
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\ZLZANUD2\\pages.json",
+      "sha256": "08715a7875ceb67aa23769b0da469b17cd3ebe87fed4753a4576a7c718365649",
+      "bytes": 242881
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\ZLZANUD2\\paragraph_candidates.json",
+      "sha256": "a39795e874d0e73f6ad5e5b90764ca9e90dfc58484963b4a368ad2d24bc15241",
+      "bytes": 70977
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\ZLZANUD2\\source.json",
+      "sha256": "d997c6763334722914a734dbd0457bd930cc75135cff0df981ab2aec9febddd3",
+      "bytes": 1073
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\ZLZANUD2\\全文.txt",
+      "sha256": "0066b13d764ea68c77233399715a0548455101fd769654dc60f5e794f5bb740d",
+      "bytes": 56428
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\fulltext\\ZLZANUD2\\结构阅读包.txt",
+      "sha256": "0d3ecd923cce30a93a4bcc236d1b41d169eff2072cd351b330d4d655db261fde",
+      "bytes": 39637
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\gate_report.json",
+      "sha256": "3a871e5aa6ac4923f0988242d396047d3d97b2bc693aaa1d56fa1b6db66e6799",
+      "bytes": 740
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\paragraph_index.csv",
+      "sha256": "c35a289d1800e4250b27adbcd991b1a2a1bcb3d1469df5487553c54bbadf1673",
+      "bytes": 1503433
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P01_制度的力量——中国社会保障制度建设与收入分配公平_结构拆解.md",
+      "sha256": "5edba1c196992dca30a7a29ed9b6d0c8d8a7975883c866c760597d4aafe452d3",
+      "bytes": 8677
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P02_当代中国的代际流动模式及其变迁_结构拆解.md",
+      "sha256": "753dd98298f81d0b9e816d4d5e925344ced67e655f6d30cf3c7514741c3cae07",
+      "bytes": 8099
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P03_教育扩张与教育的代际流动性_结构拆解.md",
+      "sha256": "eddaa568033b63a2cf0fdf3891d7c7be172015f53ebf42931199f7e8839439cc",
+      "bytes": 8083
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P04_户口还起作用吗——户籍制度与社会分层和流动_结构拆解.md",
+      "sha256": "11b642e10a6966dd591affcd63e2e971495aba407bac78eb3cf7f4b33a9721f5",
+      "bytes": 7496
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P05_资源、激励与部门利益：中国社会保险征缴体制的纵贯_结构拆解.md",
+      "sha256": "98d36ead44f94abf656717fda72881fe5a0ab28404e53dd435532f4fd30fb92b",
+      "bytes": 9694
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P06_收入不平等与公平分配：对转型时期中国城镇居民公平_结构拆解.md",
+      "sha256": "5fefefa3571974be26284efa632ca58fdea91be6a664618cf92a9caf9ccf7ce8",
+      "bytes": 8034
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P07_影响中国城乡流动人口的推力与拉力因素分析_结构拆解.md",
+      "sha256": "65fab5425d8c508834ca46defe676eafae566794cc58dc3b12e4fd39e2d7e92f",
+      "bytes": 7143
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P08_文化再生产还是文化流动——中国大学生的教育成就获_结构拆解.md",
+      "sha256": "1379ca8a234cfbb108c7480826ed007f22155a74fbf8c5161a84f7c33088fad4",
+      "bytes": 7691
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P09_如何助子成龙——家庭教养方式对优质高等教育获得的_结构拆解.md",
+      "sha256": "aba6ad3b0dab833ddef63a398e93fec9a123df1c3392ce3c607bbb89360fe9c6",
+      "bytes": 9409
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P10_低生育率社会中的家庭结构与育儿功能——基于资源供_结构拆解.md",
+      "sha256": "d15dd955d1dd08f8f72f8e9cba75906f4019d89c883024162c0dae90380b57d3",
+      "bytes": 8407
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P11_女性教育提升与生育行为变迁——基于夫妻匹配视角的_结构拆解.md",
+      "sha256": "3e81e4761f8e2428de36268f71dd21c5c7eeacfdc16365ec778c56d85496f97a",
+      "bytes": 8856
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P12_从自动化技术到生成式人工智能——技术对劳动者影响_结构拆解.md",
+      "sha256": "5126eaae987d31fc4eb9e33882aa24ae5be38794d3caa19debaae700184ffe74",
+      "bytes": 9203
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P13_劳动力市场中的社会资本与市场化_结构拆解.md",
+      "sha256": "d74790f846bc10014ebcf187a0eafda5d976aca78070a3a4eabe64ee57629624",
+      "bytes": 8098
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P14_中国的户籍制度与代际职业流动_结构拆解.md",
+      "sha256": "4648052a95b8599e935a5829b230ead53f54c4edd3e5dc219dbc58c667c0da7d",
+      "bytes": 7173
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P15_技术变革中的福利态度转变——自动化替代对个体养老_结构拆解.md",
+      "sha256": "6abc74222091afe8069768e92f3d75778223d7ca869f40e74674e2132a77d29c",
+      "bytes": 7936
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P16_家庭背景如何影响儿童学业成就——义务教育阶段家庭_结构拆解.md",
+      "sha256": "291ff7b114bf458c814bc34599a98348084754f236fa3b4fddb79060b59a883d",
+      "bytes": 9027
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P17_共同富裕愿景下的幸福感提升：双重公平论的视角_结构拆解.md",
+      "sha256": "d7ee258248c124025ccfd5e028472c9451e3e4180118cabad37ccd0fc97ed867",
+      "bytes": 8004
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P18_中国城市居民的分配公平感研究_结构拆解.md",
+      "sha256": "cae5e1c6ef5ea4b468f21c694e5773820563cdf852119e4b31e3b2fba5eeb425",
+      "bytes": 8073
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P19_外出还是留守——农村夫妻外出安排的经验研究_结构拆解.md",
+      "sha256": "1ef59d905dc4513f74e2fdeb105937897fee14225a71f0370d17931dfdef5096",
+      "bytes": 7225
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\reports\\P20_家庭禀赋、家庭决策与农村迁移劳动力回流_结构拆解.md",
+      "sha256": "dd13860927b2538260669ec4453ad96d044e319c4c559b78f2c6998c3d2d3665",
+      "bytes": 8447
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\DD4I5QA4_p19.png",
+      "sha256": "0e59e3a48efe35ae1627a22464f90a4535f34c8b6fb502d018ef125c4eb89d74",
+      "bytes": 214836
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\MY99VSIF.png",
+      "sha256": "45c538181d81d533cab60a7568e8037564ab8d8f30a36db4dd689ed915da11ff",
+      "bytes": 453596
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\S823QAM2.png",
+      "sha256": "87f8eda74b831ad347a175dbb4ff2cede81fa65287cef16899b70d55f352b849",
+      "bytes": 405993
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\SCCKUUS9.png",
+      "sha256": "ebfa76f1145c03e3636d4a23ec23fe0b04e1db51e2c3d37148244669586a3048",
+      "bytes": 210789
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\Y32DRMKW.png",
+      "sha256": "3fc97f34ccd990f6951f7cdbbce713ebc469a9b45687a52a6a58de11b48c78b4",
+      "bytes": 463254
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\ZLZANUD2_p1.png",
+      "sha256": "4619c0d0a91f75fabfdb6fafb4306fa2aaec5298b18f193715518c6149d8da0d",
+      "bytes": 355898
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\review_images\\ZLZANUD2_p17.png",
+      "sha256": "8ae5d1dd8cf4c1c3bee097133009cfdec8c4ca27f190283eb533fc13b009cf4b",
+      "bytes": 470247
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\run_config.json",
+      "sha256": "c644791838c631107cf54b59d2c2df0dd0083a5f8accad314de7a7fac601727f",
+      "bytes": 1077
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2DJM7CM4_cache.txt",
+      "sha256": "f79e5ef67188a555ee0c7b0ac093fe7658d66fbecf7e06fd0787c62d59ff18eb",
+      "bytes": 42653
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2DYVDBJB_cache.txt",
+      "sha256": "712839b747647b92ad8fddb04aef677acad8ba8075b47ffefdc925979903241f",
+      "bytes": 73310
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2PRH25QY_cache.txt",
+      "sha256": "739053925dd7cb428af61a71202cf399b3442846c5f010af8d6ad12e8705b534",
+      "bytes": 69455
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2SKTAPLF_cache.txt",
+      "sha256": "acadc856c95762256198b512814fbf5fcb3f2555bea1b6c9dbfe32d3175f46a1",
+      "bytes": 64350
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2WAMWBIJ_cache.txt",
+      "sha256": "127a399caab11ddf0046a4fecda4199a59557465055f16d76db9cd879bf79603",
+      "bytes": 71742
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\2ZC7RYLP_cache.txt",
+      "sha256": "e3263042f6535830ee5546fd80386ee1be5cf5ddc3b9db6794915819545f033c",
+      "bytes": 58198
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\39ERQM27_cache.txt",
+      "sha256": "b5fa5c601d20029115d78b4e39b6fb7f565fa78f1d5968a8e2af3a771c7f7185",
+      "bytes": 54519
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\3G222LKC_cache.txt",
+      "sha256": "703a8795cc6e1e6704a9239de1bf68bccc75181147d3a8618cacb6042a7b2281",
+      "bytes": 40695
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\3QXYRZL3_cache.txt",
+      "sha256": "d9f756077c5ce66f3b1497cef8b5225f44aaa47a2f731644016ea77d5325ea79",
+      "bytes": 67510
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\3YEZIR52_cache.txt",
+      "sha256": "1097b9290f81bcd7400bd7e3b2b6e12e48b2c94053aa5ff4c37c11622fb1427d",
+      "bytes": 50657
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\426GXS9Q_cache.txt",
+      "sha256": "1d1b6e20e64a9410e42d891945738a4bb13f64a8381e22234cc11f5587c38e15",
+      "bytes": 112142
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\468I47DW_cache.txt",
+      "sha256": "95c8d3824a8b896eb7a1c61c0ebda0e81fa52517a85804a2e02e542b52325a8b",
+      "bytes": 45248
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\4AKCER5W_cache.txt",
+      "sha256": "3fcb91a665899fbbc32714c814ff166f4fa842592c8434cb2c2030388c11c7a2",
+      "bytes": 70214
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\4F8LIAPK_cache.txt",
+      "sha256": "1d0f44bc9a13bc73159cb7c210a7dbaa8eb27f32253a44663fa40da7e5575554",
+      "bytes": 55774
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\4N2ZU4BX_cache.txt",
+      "sha256": "0e56760a18d498fc1faccd98d0192cbb31885d9aad48b070f09e055815fb8f34",
+      "bytes": 37683
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\4ZXVFSS3_cache.txt",
+      "sha256": "8f190944cc39ee9a2ca855d65c786ac3c5f2c9636e6124b842e80ed21832a0f8",
+      "bytes": 43776
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\54PYRR8V_cache.txt",
+      "sha256": "1016d93319d7753b40a5417e049992f53f453ca58b29f0038afec0a01ddc677b",
+      "bytes": 81967
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\57J5UYNW_cache.txt",
+      "sha256": "9b9bfba19116b9bbfd49d9ea17df89d0aaadf074ccd3be23c908b4251beca90e",
+      "bytes": 45347
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\58YW8VT2_cache.txt",
+      "sha256": "f8d57d3bd46b73d54040275a3fde8886bc25ec522737a2e44b7dfe66619d992d",
+      "bytes": 78211
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\5MMD3QBA_cache.txt",
+      "sha256": "11f9fbd80ccfd08cb53dcd1ded1d22cecb4c79c74a82cd28195743334b2dbe17",
+      "bytes": 56284
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\5MVN2QLE_cache.txt",
+      "sha256": "095553256fb51befa8fc4bc5582893e04983b006414b8fe0783170680fb136da",
+      "bytes": 72258
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\5U4B28WH_cache.txt",
+      "sha256": "346d06994111f53a3e4d772f3384218e0d205bd9a0e0145f05ff403c22101fc7",
+      "bytes": 60579
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\6V7LJIWN_cache.txt",
+      "sha256": "5d138cc85a3b6619b0256fffedcac2bbc85c6a625554467cef112561cf3c394d",
+      "bytes": 63130
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\7A7CYZHB_cache.txt",
+      "sha256": "b501565ca9cba33d94942e65b91e8baa432c482f59f79b687bbed6a0b9ae8923",
+      "bytes": 38917
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\7J3YM4I3_cache.txt",
+      "sha256": "5bf13f9bb30573527deb0ced1a9db4e4e4cee830e66dc20c54c7bccfa540c918",
+      "bytes": 66255
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\7UXDWS84_cache.txt",
+      "sha256": "81e010aaa4fe3f69816bad396d6006f0cd32c21cc8a6b2eeb65a3aed60fb3c8b",
+      "bytes": 97078
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\7YINUFQE_cache.txt",
+      "sha256": "173ae79dff15bdd34264d77ccff34df5b5716c0b332cabba5df0b3620e990b99",
+      "bytes": 34724
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\89G5MGWW_cache.txt",
+      "sha256": "6ff0dde02aee42a87a5781129478e5daedda68f86719dea886dc7fee0b77d5b6",
+      "bytes": 38184
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\89UP6KH7_cache.txt",
+      "sha256": "d7371ff1ff377b95c11039a020d04baaaa0f4b8d62b2d55f5fb22c3e37455be8",
+      "bytes": 64843
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8B575M9S_cache.txt",
+      "sha256": "78bf0ee6b040aaa774f7e0201c94b3efb4303b74d230aa38de405b56ce5ef7d4",
+      "bytes": 69725
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8DMURTFB_cache.txt",
+      "sha256": "1b809fdfd46f8eb50449b7ba11e90b5265a27d5e14c7b774d154d6c851b88d27",
+      "bytes": 76436
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8EAFSWWT_cache.txt",
+      "sha256": "223c82214a8e67247703efb44885eb5860775f4866674f04f9226f2fe59dbc26",
+      "bytes": 68560
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8FXBVJYT_cache.txt",
+      "sha256": "1c86dba7330dddbb65c1a721308594315e5514091989d35ef5dd8ef71bc38634",
+      "bytes": 67823
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8GJ2ZET7_cache.txt",
+      "sha256": "d0d3c182947ff7d889789a7cfcee073d26a2f500bdfb4e6be39522d7b69fa611",
+      "bytes": 58738
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8HHQEXPK_cache.txt",
+      "sha256": "76cb8410b75615e252241eea359374a9ddd2cd662c87d4202e2311c8598eb480",
+      "bytes": 75613
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\8MPV2ED9_cache.txt",
+      "sha256": "3a16f170b7f51dc47a1b67b582aa18be4fc8742204f9590a1e02e50682d4e90b",
+      "bytes": 46413
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\92KQFMTM_cache.txt",
+      "sha256": "aa97a4aac2327f889b86fca4946ce64ffcb04a33d1d596c5862819f9b00e6c5e",
+      "bytes": 68813
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\9DCA4R3A_cache.txt",
+      "sha256": "9e7f324f7f21f730abd1904c2419b8a75912dab9fad2bb92da09ac2e05dc8f7e",
+      "bytes": 70414
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\9I8UXGLR_cache.txt",
+      "sha256": "916ea1479a7904bd684b632830bb2b1a596a98333e85624f4442d5666d4d6f51",
+      "bytes": 74492
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\9R3CSV5I_cache.txt",
+      "sha256": "757e8701e076096955746cd0f13a934f408b750835632ff04b0ff98a0fe74bb6",
+      "bytes": 63614
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\9WUWPWN2_cache.txt",
+      "sha256": "af8702b31ca9129d17a2339b2b808fab93d3ab7466d706ccdc8767c498e588c1",
+      "bytes": 69840
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\A5BILU52_cache.txt",
+      "sha256": "29bdc94ca162ba095655f05f39ce089d11131a2a58e93d0b12d5661c987808ff",
+      "bytes": 63943
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\A7FV5ZC4_cache.txt",
+      "sha256": "ea10111687a3ab0b4063169588a13742bc9f5e5c55e993c42ae72c6a87941910",
+      "bytes": 85140
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\A957WGGX_cache.txt",
+      "sha256": "8b1cfd4d4063070f000471ed9e6bf3a62861cd619691969f4c175858b6fcb80a",
+      "bytes": 56517
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\AI9XTDSR_cache.txt",
+      "sha256": "3af051d3738d62f93d9fe022e86264bbfe81f80ea1fd60add20d02bf5d90a04f",
+      "bytes": 69544
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ATWVUUAY_cache.txt",
+      "sha256": "1b3430ab5c9cee2b9334146cbc1ca0698938bf9eee93c975393cb6441d2da3ff",
+      "bytes": 11898
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\AVUPRP3F_cache.txt",
+      "sha256": "46e701fb6d7ba94545cf2b1d4610f69d29fdbabfd89d2fb3a1b2a3bd179fc516",
+      "bytes": 65645
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\B8X8J4QP_cache.txt",
+      "sha256": "8d2ba95bebe9bf75852ad99d7326b757c113f5d76a46a760835f1b1e213b03ee",
+      "bytes": 72123
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BA5F5I6L_cache.txt",
+      "sha256": "35a47294536fca40afac9921e39778254755b93efca5528dcf782dc5a074a185",
+      "bytes": 36930
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BGXTF5GD_cache.txt",
+      "sha256": "f62a7e0c5ce8a4f66201e88622c1452cdfc3ef335a907bfeb4612edd809bb6b4",
+      "bytes": 65517
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BKE6CYYI_cache.txt",
+      "sha256": "f76f375616f91211b57351fbeef2fd2e040d70b85e56dc5fa4cd7a337e2959d5",
+      "bytes": 69315
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BKFZB8L3_cache.txt",
+      "sha256": "2195c73b314683c44ea47fd2d83a0ac1b3a41c23b12574f12de060fd794a497b",
+      "bytes": 74198
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BMH76YU8_cache.txt",
+      "sha256": "2ac34050cd0ff70703a3e741a3dad7f6a83a29296d9450c2d8da62cbaa06d87b",
+      "bytes": 70895
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BNM39FUG_cache.txt",
+      "sha256": "993994c22bf36446e372d7be4b6ae0e29de835de7c6121fc56f6342b3eebd34b",
+      "bytes": 65521
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\BQNXF3W9_cache.txt",
+      "sha256": "3c86b43e7b00bd6de03c3aff8327a1093b5af58f0f744ed8b79efb3c1a432692",
+      "bytes": 58912
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\C3DPG4ZB_cache.txt",
+      "sha256": "916ea1479a7904bd684b632830bb2b1a596a98333e85624f4442d5666d4d6f51",
+      "bytes": 74492
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\CCLYXRPH_cache.txt",
+      "sha256": "d6a8996bfa72447311318d6c8c2a603c7a26d0d274c44ef7b7e277ae6a9d7e72",
+      "bytes": 73180
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\CJB64WZK_cache.txt",
+      "sha256": "1815cf8ef6ade2a69ab3308dbcf1a65d823dc8e98284f6f3cdcea49b7362cbc5",
+      "bytes": 64777
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\CTM992JE_cache.txt",
+      "sha256": "f4ccef84b040c1b20abf694e2b30a625d105612c4e536864d5e8464104bcb0cd",
+      "bytes": 52545
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\CX9UWVCX_cache.txt",
+      "sha256": "12624c0a3cbdc2d6c04049513a5bf19fda80237a26e78cf973048e70d4bcdd45",
+      "bytes": 39842
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\D3T932FP_cache.txt",
+      "sha256": "594962c0ee5a15235e5451895040810bf739639a6cb56ab216b7f3a834789a5a",
+      "bytes": 16567
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\D99D3NG2_cache.txt",
+      "sha256": "28bf498d1124f0a9b3b6a694fe8323ec995fcc2a11c50ad4de584ae2be4fa0d7",
+      "bytes": 59395
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\DD4I5QA4_cache.txt",
+      "sha256": "8c9b7bba6059f34f9d89ac68efdd752d41d70ba684c20238705cfbe73e4ca948",
+      "bytes": 58956
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\DIH4GL6A_cache.txt",
+      "sha256": "911d3f15f885f0ffb3e710743e202d8a20fa92a7e94df69345a70378add33b87",
+      "bytes": 63031
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\DQ2UYECZ_cache.txt",
+      "sha256": "5c75f4ae21ea946af4902efad8b88ed50c304eebd592bf2646c9059b4ec4cbc4",
+      "bytes": 70239
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\DYHE6Y6S_cache.txt",
+      "sha256": "30099fc29ff47fd635af05fe5e3be6700e936901b58825afa471008e3239a15f",
+      "bytes": 56417
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ETRP5TES_cache.txt",
+      "sha256": "c074b36c26b212f44565d5314e0a871aabe99f7aed5f4f8aef112e9d62d43f28",
+      "bytes": 41899
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ETXRUCCP_cache.txt",
+      "sha256": "0551a2d80c9517b455e8f360834d4abbfa55f23902e737a0f33bb3eb44d5b1d4",
+      "bytes": 80773
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\F4PTY3QU_cache.txt",
+      "sha256": "da6c022e17f5e96e49238657e9755dd212a754d27ae6e3a32d0d0ae1da1dbbf1",
+      "bytes": 86181
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FE3LALV5_cache.txt",
+      "sha256": "313561e0896e086585dffb3e6035910a8620cae73f66249477bf6f979e262155",
+      "bytes": 56957
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FEHRYT8W_cache.txt",
+      "sha256": "059a802408792a3bdb51cbc356bde9fa481332765e151122f74248a251886494",
+      "bytes": 69768
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FK7SICYJ_cache.txt",
+      "sha256": "70717426330ac33419c9c156ee886e6260abbbcef0d2a3506bceb5da334cc0da",
+      "bytes": 35098
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FMHR8BVR_cache.txt",
+      "sha256": "911d3f15f885f0ffb3e710743e202d8a20fa92a7e94df69345a70378add33b87",
+      "bytes": 63031
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FMVMG85L_cache.txt",
+      "sha256": "89d0cc4ab9fb9bd65000ef973da30278bc95dfb886544d13d1230779bd79f921",
+      "bytes": 64009
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\FQ7RQ5NC_cache.txt",
+      "sha256": "4401582c4c56a2c4ee147c637ec0bf1e4e1475465f2ceaaf2fd886ddae0d39af",
+      "bytes": 72674
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\G5HIFZKQ_cache.txt",
+      "sha256": "91ad58fb79b586a644f20b9ee59056e558c64dd50a581fcbb98a1ca11e82da58",
+      "bytes": 34493
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GALUV7ER_cache.txt",
+      "sha256": "f76f375616f91211b57351fbeef2fd2e040d70b85e56dc5fa4cd7a337e2959d5",
+      "bytes": 69315
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GDCUCRWK_cache.txt",
+      "sha256": "5f948eca2ee0d0fa6a35e2c8a168d26c1fc6fcf9477f5c64741736487da94c12",
+      "bytes": 48392
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GH5AUS65_cache.txt",
+      "sha256": "c98919da1fe52fe9e3753c472b75151699cd7fdb7d3c16c33725b9ee3d602828",
+      "bytes": 64762
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GHLFJX44_cache.txt",
+      "sha256": "05df76740b60ad56952f014338f968ddbe471164dc9fa508ec07f6c5f722717f",
+      "bytes": 69000
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GTUTSZDI_cache.txt",
+      "sha256": "280b8167787a1fa5b6b6ed883edb077e2e6cb5e4afe3b1a46d730e87cf834692",
+      "bytes": 63236
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GUQJU4JA_cache.txt",
+      "sha256": "d2e4ddeb3853b25c90e541a0dba8676449016bf7343640fb2e9076b353532b52",
+      "bytes": 69449
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\GZPNSGHQ_cache.txt",
+      "sha256": "0e3ac2f918d7a1f1c6256ecd1964b7b8591662b45cd6eb28da722dc2784abfc0",
+      "bytes": 69087
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\HE44WC7E_cache.txt",
+      "sha256": "23e949d1397c6c13553998eb1f77552227360221c85105a9672b58124bf2f1d0",
+      "bytes": 71228
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\HVGMWXVR_cache.txt",
+      "sha256": "47c88c40c3c7f221e8cb3732e54faf42c6e2dfb5287f317a205f366155ca8ba1",
+      "bytes": 65575
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\I2QM8FP8_cache.txt",
+      "sha256": "fb0cee9216c6f9ea6d8a76371ffb8d244cece5d885027ced242e167e2ef4ec6c",
+      "bytes": 58542
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\IFYBIRP2_cache.txt",
+      "sha256": "cf3f553782b1aa89a0a65008df7202ce38d723532ec41d39af7e45122df67a6e",
+      "bytes": 63428
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\IJQN5C7W_cache.txt",
+      "sha256": "227b737c004abf3d74176ad0b88669b5605249c762ed70c9d940c018ebf1f434",
+      "bytes": 71373
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\INNQV775_cache.txt",
+      "sha256": "1fb57928fbcf9aee1295c614a9f85cef5db1f796dac730169fbada16a4e5adba",
+      "bytes": 75699
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\inventory.json",
+      "sha256": "58251576b9dc24013b6b468f07bc9210044591bddc42c2167b8b8357fab0b4d0",
+      "bytes": 201058
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\J38BV4A5_cache.txt",
+      "sha256": "76b36782ea2848ae38136c246fbc2e571990e4bdc6d11ff2a6a5d51757190a57",
+      "bytes": 47441
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\J5XDE43I_cache.txt",
+      "sha256": "528fcfe9d5a070128d8fe55177615b602ea10c2d20f7c1eb3b5ba7484bad0f7d",
+      "bytes": 63970
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\J6NY3KEZ_cache.txt",
+      "sha256": "9d59d31ffc6588a4df5a42286d20c10f553674a3a9e6b2347bdc8ddc0f7406a1",
+      "bytes": 72342
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\JCC2JPZI_cache.txt",
+      "sha256": "7baa594841f39d31151a869fccd91535ab93623dd841f6b848bc5ce9ce0d23d9",
+      "bytes": 73591
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\JIVHR7VC_cache.txt",
+      "sha256": "10417334fec53c851b6d576148fb2062a1c2fa3cb886840eb6b57f9a36ef32eb",
+      "bytes": 46909
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\JJ2LHA9V_cache.txt",
+      "sha256": "236c26b5fed7ebfc8f8b28cdf4da8c7fbbc24a419311e8fb566fcc7b87ac1243",
+      "bytes": 38712
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\KHCHS6EH_cache.txt",
+      "sha256": "8d2ba95bebe9bf75852ad99d7326b757c113f5d76a46a760835f1b1e213b03ee",
+      "bytes": 72123
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\KULIE6WN_cache.txt",
+      "sha256": "bb5a75d167c4a32c9b6759b1438e37886e60a09216bfb05f2386f1ca60a96fa6",
+      "bytes": 69368
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\KYCYDCG4_cache.txt",
+      "sha256": "caa4b7c7f0c5efb8ba87f2e40ec9a530b812fc48ece0b69515d31704e8eb3ac3",
+      "bytes": 70579
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\L9AJFJ5E_cache.txt",
+      "sha256": "b38aa50663af529640aa5f334ebe11a477e50ebd4c42d208f1e05c518be1ec91",
+      "bytes": 65706
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\LCCLADR3_cache.txt",
+      "sha256": "2d383a6025e2ff721789a30d50449be457985ea7668d80a5b4da4639b2db2144",
+      "bytes": 66243
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\LLIZ22ZJ_cache.txt",
+      "sha256": "bdce53202f03d65d8f1d80337883fe19d2fb3237eedc92890c5c81ea770095cd",
+      "bytes": 67398
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\LS93R9SS_cache.txt",
+      "sha256": "3cc5a4e2f2d074b28b57078ddfde049650aa9adb8f0503284ebd85ffab24a0f9",
+      "bytes": 100526
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\M739AK9Q_cache.txt",
+      "sha256": "0ec5b461c3d7a193f353b378590b898df4bec17f81f258fba41ece94b8fb74ec",
+      "bytes": 77134
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MB2ULSRN_cache.txt",
+      "sha256": "fb97a3adc42df70a2fe16fe55ee9ec53eb59177acf53850cabb761bb76e1edb6",
+      "bytes": 43664
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MH4FPRNL_cache.txt",
+      "sha256": "0607ea1841aa55b562a8d42aae6fb59e0ceea5f839eaab81d6b8748cee4236a8",
+      "bytes": 53683
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MK385948_cache.txt",
+      "sha256": "790f1559f2d9f8706ccec57468db7678dabd364a0af78e55b4246d6a666efcb6",
+      "bytes": 24118
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MQLVJZ7T_cache.txt",
+      "sha256": "0221aa17ff9dc7fd463842973ca548735f3710e76f4f807a941bf49d5c53342a",
+      "bytes": 46483
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MY99VSIF_cache.txt",
+      "sha256": "0369c3f4b1e38080a3035d7be1de9e3fd076acd363c29d61ea1c492625ee509c",
+      "bytes": 68757
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\MYR6B89Z_cache.txt",
+      "sha256": "5d710e546fd9c9e7dd3a88836c3ef8b3871f2ad6eab076c6dd01252f58ffc8bb",
+      "bytes": 77328
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NHC7VRC8_cache.txt",
+      "sha256": "865b8795be5be848dc9893ada5630c595d0571d60f316c6ea7b065d41237af2c",
+      "bytes": 60836
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NHCSKDDH_cache.txt",
+      "sha256": "107279e1dc1f3d588297c33efbcdcecdefd4fa210f583734cf20fde444f63e97",
+      "bytes": 56360
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NLVHWHF6_cache.txt",
+      "sha256": "7c8525b44717adcaacf66c3a2b456fa4dd242f67cc47463a04a39d0b54d61d34",
+      "bytes": 68732
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NR8I9J8G_cache.txt",
+      "sha256": "1cf2986e48f888acd9aa86902b1d55997f071b0547193504838c9e20d816f789",
+      "bytes": 69073
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NSES926F_cache.txt",
+      "sha256": "b763ff7daed06ce4d5e3e211f9fa9d08c2e6a6474e3d4608016f80649d35242e",
+      "bytes": 69956
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NTCZ4DFN_cache.txt",
+      "sha256": "7271c11037bc1889654e6b73c4028c8cbc2440b9636585fbf3f30515fa4f186b",
+      "bytes": 72076
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NU3YY8ZA_cache.txt",
+      "sha256": "2834ece3b7fe5617254fa37afd9403bf54139e5b89fa0fbccc17db59179230f2",
+      "bytes": 55513
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NUR2L8DP_cache.txt",
+      "sha256": "a0f65c705ad629d851f2c9b18c6b6229bbcd9a1d47e13155973258557bc34f19",
+      "bytes": 74070
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\NXSPSK4F_cache.txt",
+      "sha256": "859d795815ec006a4c9b8e1de8cd9694b7bd98cdcaa7a579cc7019fea5c39ac5",
+      "bytes": 57848
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\P6GLQAE6_cache.txt",
+      "sha256": "2dc611708af797be466bda6c5bed2cbe40da0e01a1a15da5704d75bb1669e93b",
+      "bytes": 64877
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\PS7HBHGN_cache.txt",
+      "sha256": "4f93a572ac7641dce1ef052d90c39663f9360e12b6711e8888e9c8f6e61c5266",
+      "bytes": 52335
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\PV7WT73J_cache.txt",
+      "sha256": "dc163aefb5ae3f632b79c944a60575ff033c115e6fc7472ad3ce4455c4c84f48",
+      "bytes": 60230
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\PWF8S8JJ_cache.txt",
+      "sha256": "275d598d08ec8ee2dcceb007a4168ba4be28a707c4d33222274af57390d3ad62",
+      "bytes": 66244
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\Q4JTWAPD_cache.txt",
+      "sha256": "8bef74b8f97bb73bd052035bdf2cdc9de422a8b9069b1611f5ace096a5a37c46",
+      "bytes": 64787
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\Q4SW7T4Q_cache.txt",
+      "sha256": "f666f745216a948d7e406674921395a4c64e65a87c8aaac0e2c7b033cfea704b",
+      "bytes": 103641
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\QIL2SNVK_cache.txt",
+      "sha256": "5b8cd3df8a45b596b36e8d01e5f3952964ffbb8744d72e030c105c4e85704df4",
+      "bytes": 55720
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\RESAEYPK_cache.txt",
+      "sha256": "673e2bb3087b76fe9488f6be173a93beed5e32f574c3618ed389c35321f96a9b",
+      "bytes": 45414
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\S823QAM2_cache.txt",
+      "sha256": "c595dda4c2b31cd2e3e4ff132106cf81b659488a50bb76d8e40187f10e31294c",
+      "bytes": 43838
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\SCBEKA84_cache.txt",
+      "sha256": "1c4ebb0245eacc6749d912ce64cf9e3c8ad9ad15190102b8817beb00e358b087",
+      "bytes": 68647
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\SCCKUUS9_cache.txt",
+      "sha256": "efb2259864d465de01d9eb8ce8269e101f56e517f3c3c1ca87e8410e379bec15",
+      "bytes": 79961
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\SRKZXSFE_cache.txt",
+      "sha256": "efe284281fd6d8b3f858d9f34d84421d580a1507ce7992fb12ddb0af1c1ad6c2",
+      "bytes": 94090
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\T4W3ZV7U_cache.txt",
+      "sha256": "982c58010978a7fdad1d2af39a2b2ab0abef7493b696f8896444543e0169193d",
+      "bytes": 75827
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\TFQM38G2_cache.txt",
+      "sha256": "bbedffd8ee9b2dd4048eb9039a93d5a06f193f317f404e4b06153f93470da378",
+      "bytes": 69598
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\TWLELHMQ_cache.txt",
+      "sha256": "aa3d90827b59ec1d4c7991f6638ac95105bc442a9c5d735c226671b380b6d2a1",
+      "bytes": 43763
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\TYXYFPJD_cache.txt",
+      "sha256": "2da9dbd260e176403983bddf70a1f90eb83aee65babd8c812056cfc695f2f946",
+      "bytes": 35679
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\TZQEKJJH_cache.txt",
+      "sha256": "40324152643e3fe86da41c4b70aedfe7b39a46091d99baed740865d6ca9881ef",
+      "bytes": 63622
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\UBVCHIB3_cache.txt",
+      "sha256": "5155a5d92a10f3943cccecb57d139d2d409454165e46236cf702a3e1ca225756",
+      "bytes": 64836
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\UE3BAWPD_cache.txt",
+      "sha256": "a66172e9820b9f2bb7b91b3098ddeee0c80a180cba396aed3304c40363dfab30",
+      "bytes": 57234
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\UIIDHQM6_cache.txt",
+      "sha256": "db0df48af34b6aa712c956f19de6df088418912ddd16062ec4c87229fe8bae15",
+      "bytes": 59763
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\URG63LSG_cache.txt",
+      "sha256": "b5a167ec61d11d16ab23be20765e5702fcdecec09ad8ac1ad65616de0b92f967",
+      "bytes": 65712
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\V2WBWBPS_cache.txt",
+      "sha256": "360cb84ab270ae947bc3e8568bc13b00401d1c2debc2c9dcf5c9c0f4dbaff6b1",
+      "bytes": 104177
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\V3CA3AZW_cache.txt",
+      "sha256": "cca6c10ddb97dfb1754e2806d43cb562ea9ee94df82d8e800d54c7942bea8976",
+      "bytes": 57013
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\V9MHHI8V_cache.txt",
+      "sha256": "b2d8ee6422e0c6f845b865614cd88c68cbe040ad33463922be1d6b6693d4ebfc",
+      "bytes": 69364
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\VF4H54SG_cache.txt",
+      "sha256": "fab9e5a5a5d711fea82d74eb6d545d760ffd7f1020745e06b8d3f7b0b9a79052",
+      "bytes": 81882
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\VNT2Q3YL_cache.txt",
+      "sha256": "67578439e85621358022064011d7c0e42fb3eaee3ef48a89cce98f23012874bb",
+      "bytes": 52465
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\VTLX3U9G_cache.txt",
+      "sha256": "a11d199bd12449552193d95d512022ea01b89765b5e8e36c7e2cc6df3c8bd628",
+      "bytes": 39076
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\W2RYZ3GB_cache.txt",
+      "sha256": "316d4d60e4d9d63acdcdb6aea11923cf80d699a8de68100ac45e2c318ae3871c",
+      "bytes": 76132
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\WBV458JN_cache.txt",
+      "sha256": "1cee244dd5bb2d3ea2f95588779cd0179286fa45a681fea6c24fc0a913a41d4f",
+      "bytes": 43674
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\WPWDXCNN_cache.txt",
+      "sha256": "9dc9ee57834a393dbe343bb0e453b24a3ada179120940300a8763a29b21c8a8f",
+      "bytes": 11429
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\X88U69EU_cache.txt",
+      "sha256": "45deb71e4c5d915a16d14676dc05b97b7837a722637b2be579a07dbaf92b1cd5",
+      "bytes": 49218
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\XVT9ELUY_cache.txt",
+      "sha256": "636d7132b5dadd374da41068ca73409284f33e36a0b1f4224d88ceaf4cc9639d",
+      "bytes": 67778
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\Y32DRMKW_cache.txt",
+      "sha256": "991aab032a7b6f580381696c96321211c041423465ea7b0f851f39427c4605c0",
+      "bytes": 58866
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\Y7GKHT6V_cache.txt",
+      "sha256": "95585bb8c7487401bde240d592f70880459df378a146eccac13285d159b9c865",
+      "bytes": 79556
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\Y8WNZ3AN_cache.txt",
+      "sha256": "4d4c92f4294562dc696a9b6e45e7bedccadeb9e853924d48df6e34e2494e4837",
+      "bytes": 74071
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\YA5NETQ4_cache.txt",
+      "sha256": "56542103e5ee9a1ae7f44f390d2b6793473c1ee7a9a47d869a985f3b67ef0c4d",
+      "bytes": 91205
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\YTPUAEYR_cache.txt",
+      "sha256": "4df2b080f079eb4fb9aa3d40dcb6f64e3d8526878424f46ff5ef22785bfb78d9",
+      "bytes": 62881
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\YWG2A85S_cache.txt",
+      "sha256": "f82197204486ec2009f4a3f153597aa468415aafd1d9da972caa6adeee98673f",
+      "bytes": 114863
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ZCHRDIAX_cache.txt",
+      "sha256": "9bc640c7b64f86a4cdfb03e4f28f678129974394b6e364de767900bfd5ed5768",
+      "bytes": 72234
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ZFEESUUE_cache.txt",
+      "sha256": "1495258021f7b12e1c20644f099a80f24989d451bb035535e3e847304f957593",
+      "bytes": 54172
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ZLZANUD2_cache.txt",
+      "sha256": "6ff916f436ecbcaf0ac0b2187eb0b22bcc7eb9292bdabca6e6b04ac2888f4c43",
+      "bytes": 55028
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\screening\\ZVEEAGSX_cache.txt",
+      "sha256": "950a2539ec1bfaef60fdda8e9310dd62fc77186241922c2e6fdc982e3927cfd3",
+      "bytes": 46384
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\annotations.py",
+      "sha256": "aed4e57a1e63d3160f7c9b54e50c850df88fd87ff3bfd747a76bccfe581389a1",
+      "bytes": 58894
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\build_reports.py",
+      "sha256": "1b9480446cff9245f23d76a5d536db38c46e56104c51fc530f375f1904e9de2a",
+      "bytes": 25241
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\extract.py",
+      "sha256": "da03a75d20c67423349c92a12b655513a3974f34b510293224ee2078f143012d",
+      "bytes": 2245
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\finalize.py",
+      "sha256": "6c3f987002b9c6d8662d7a5e1edad97c2f3f3a0978ed731cb80188336dd68d77",
+      "bytes": 7046
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\prepare_reading.py",
+      "sha256": "5b3a5646da215ec272ba0548caa1d5188d51638cf6de6c512fec1eeb6b3d8eee",
+      "bytes": 4632
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\scripts\\scan.py",
+      "sha256": "acf29bcb0adfd4e1d904ada2fe9d3700a335121281db88436ebe1a5233d10be6",
+      "bytes": 1392
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\structure_handbook.md",
+      "sha256": "b1e9aad521197da084e12bc6f7fae1ae393efe8c55825b1f86ca8e18e9cb3c4f",
+      "bytes": 6277
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\structure_moves.csv",
+      "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d",
+      "bytes": 47733
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\technical_validation.json",
+      "sha256": "b59c80ff525c77ff8cc43c973b3f175d7a2299c4466a96b2735f5197565e41b4",
+      "bytes": 745
+    },
+    {
+      "path": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\阅读入口.md",
+      "sha256": "5f10f7ba1921bb17861ee7dbe1251593f6a6657b243e47e2201df46ffe8650c2",
+      "bytes": 9136
+    }
+  ],
+  "gate_report": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\gate_report.json",
+  "exceptions": [
+    "P15 abstract/body directions disagree for intergenerational companionship and public services",
+    "P13 PDF19 is an inserted rotated table with no extracted text",
+    "Paragraph candidates are not reviewed; no fulltext_read=complete certification"
+  ],
+  "certification": "Technical audit only. No G2 passed resource snapshot was published."
+}

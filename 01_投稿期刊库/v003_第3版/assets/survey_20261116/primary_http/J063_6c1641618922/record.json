@@ -1,0 +1,20 @@
+{
+  "journal_id": "J063",
+  "source_url": "https://zzxk1979.cn/Article/index/cid/69/lid/71/id/182.html",
+  "retrieved_at": "2026-11-16T15:05:07.771938+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zzxk1979.cn/Article/index/cid/69/lid/71/id/182.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J063_6c1641618922/text.txt",
+  "sha256": "3ec032dde6bd777449001799b33ded30f8b9c5ecb954b96c1efb10596327eb09",
+  "original_path": "primary_http/J063_6c1641618922/response.html",
+  "original_sha256": "2c61247f3e0f8d10b040cf5bb052403065600ff0efb6fa40bff9738904379503",
+  "line_count": 52,
+  "title": "中州学刊",
+  "guideline_links": [
+    "https://zzxk1979.cn/Article/index/cid/69/lid/71/id/182.html"
+  ],
+  "review_status": "awaiting_source_readback"
+}

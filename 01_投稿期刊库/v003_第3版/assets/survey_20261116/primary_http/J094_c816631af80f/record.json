@@ -1,0 +1,21 @@
+{
+  "journal_id": "J094",
+  "source_url": "https://www.journal.sdu.edu.cn/tgzn/tgsgxt.htm",
+  "retrieved_at": "2026-11-16T15:05:23.998408+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.journal.sdu.edu.cn/tgzn/tgsgxt.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J094_c816631af80f/text.txt",
+  "sha256": "fd5c6de73821b4bbf1da2178b0bf7a1f8eb89d0ddc6de47e289ad5d1aaaf6b41",
+  "original_path": "primary_http/J094_c816631af80f/response.html",
+  "original_sha256": "f7da48c2878501ce77ad2f9aef6adabacf2f20ff50ca78d10d52af709c2f4ffe",
+  "line_count": 86,
+  "title": "投稿审稿系统-山东大学学报（哲学社会科学版）",
+  "guideline_links": [
+    "https://www.journal.sdu.edu.cn/tgzn/tgsgxt.htm",
+    "https://www.journal.sdu.edu.cn/tgzn/zgqs.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

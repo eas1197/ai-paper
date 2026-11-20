@@ -1,0 +1,57 @@
+{
+  "activated_at": "2026-11-14T22:48:58.237155+08:00",
+  "module_id": "03",
+  "from_version": 2,
+  "to_version": 3,
+  "activated_as": "needs_review_candidate",
+  "old_research_runs_migrated": false,
+  "before": [
+    {
+      "path": "00_项目控制/v003_第3版/module_registry.json",
+      "sha256": "e0f9dad7170e264fcbb4f7c9a7fee7a2645c39694c8a56b5729567fba1c29386",
+      "backup_path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/00_module_registry.json"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/project_config.json",
+      "sha256": "3176575e61e34abb0d81e635b304b081c859950f1bd1ad036ec5bc2663500223",
+      "backup_path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/01_project_config.json"
+    },
+    {
+      "path": "03_学术语言学习/版本索引.md",
+      "sha256": "e503f5c07067aa57efc579cc755a2c2db9d130d92e3c41c7d77eea435545080b",
+      "backup_path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/02_版本索引.md"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/CHANGELOG.md",
+      "sha256": "6c3185289ff6eaf6fcde1853cd999f12da1562ac01a4c7d3eba1267149eb4fd7",
+      "backup_path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/03_CHANGELOG.md"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4f660de1f2db3f71be2ff45602a362e5761eb7a19cae61ded12d5fc7c3a00367",
+      "backup_path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/04_README.md"
+    }
+  ],
+  "after": [
+    {
+      "path": "00_项目控制/v003_第3版/module_registry.json",
+      "sha256": "ef3147b0e8c01e76ea928a3008eed83dcb05938b47fcf90337befd3949f33f41"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/project_config.json",
+      "sha256": "2c6f4049a11e77f39cba25b4b28c74e8fb55f5762ae40133f23ff6a2419d8fa2"
+    },
+    {
+      "path": "03_学术语言学习/版本索引.md",
+      "sha256": "eb089019d6108e686f2e59d33d9e5db275463ba95c12856ad4c7f36bb2156919"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/CHANGELOG.md",
+      "sha256": "058b6d0414948b6486ace1b21084f7b7e58c3342d276f80b2850a6be2d615baa"
+    },
+    {
+      "path": "README.md",
+      "sha256": "49cdf308eef01d9fbfa39863d80b3c3445a8951e75809017e9dcc493ae0c9e9e"
+    }
+  ]
+}

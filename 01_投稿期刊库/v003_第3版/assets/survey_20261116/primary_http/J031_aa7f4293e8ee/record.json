@@ -1,0 +1,21 @@
+{
+  "journal_id": "J031",
+  "source_url": "https://fef.fudan.edu.cn/tgxz/list.htm",
+  "retrieved_at": "2026-11-16T15:02:44.370106+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://fef.fudan.edu.cn/tgxz/list.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J031_aa7f4293e8ee/text.txt",
+  "sha256": "3a594dc0637e414a281a1c6acc0ee3ca37915fbaadc896438905404d35fc89d4",
+  "original_path": "primary_http/J031_aa7f4293e8ee/response.html",
+  "original_sha256": "cc02411967080e91c308d485c5c709710fd25aaede84c27b93cd799cacf4deca",
+  "line_count": 65,
+  "title": "投稿须知",
+  "guideline_links": [
+    "https://fef.fudan.edu.cn/tgxz/list.htm",
+    "https://fef.fudan.edu.cn/zzfw/list.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

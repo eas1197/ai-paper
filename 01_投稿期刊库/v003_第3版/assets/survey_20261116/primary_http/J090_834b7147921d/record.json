@@ -1,0 +1,20 @@
+{
+  "journal_id": "J090",
+  "source_url": "https://journal-s.scnu.edu.cn/",
+  "retrieved_at": "2026-11-16T15:03:18.061794+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://journal-s.scnu.edu.cn/",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J090_834b7147921d/text.txt",
+  "sha256": "b9e54560da5fce159c3f34d75118e1755ab3ada1ba6d324c6e89af3efb78eadf",
+  "original_path": "primary_http/J090_834b7147921d/response.html",
+  "original_sha256": "fc513bbfcb5e499717c2b57fc9cfeb5e599069e7983da85088bbaaf1faa48fe2",
+  "line_count": 257,
+  "title": "华南师范大学学报（社会科学版）",
+  "guideline_links": [
+    "https://journal-s.scnu.edu.cn/tougaoxuzhi_skb"
+  ],
+  "review_status": "awaiting_source_readback"
+}

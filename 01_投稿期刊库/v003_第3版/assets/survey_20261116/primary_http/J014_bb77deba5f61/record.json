@@ -1,0 +1,20 @@
+{
+  "journal_id": "J014",
+  "source_url": "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/news/sbpl_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:04:52.911329+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/news/sbpl_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J014_bb77deba5f61/text.txt",
+  "sha256": "7bc2fe924643db6a78555bb15055d01f0b151b6047420c31b141b29454795ff8",
+  "original_path": "primary_http/J014_bb77deba5f61/response.html",
+  "original_sha256": "3bfef0083392e0a55d84c5df1fd25fffe4dd47a928796c25bb8c8c0e00f01562",
+  "line_count": 92,
+  "title": "社会保障评论",
+  "guideline_links": [
+    "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/news/sbpl_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

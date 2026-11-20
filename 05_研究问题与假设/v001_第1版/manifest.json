@@ -1,0 +1,23 @@
+{
+  "module_id": "05",
+  "name": "研究问题与假设",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "04"
+  ],
+  "expected_artifacts": [
+    "gap_cards.csv",
+    "hypotheses.json",
+    "dag.md",
+    "analysis_design.json"
+  ],
+  "folders": [
+    "templates",
+    "outputs"
+  ]
+}
+

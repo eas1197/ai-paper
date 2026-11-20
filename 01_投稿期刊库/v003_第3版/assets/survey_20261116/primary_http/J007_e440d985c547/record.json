@@ -1,0 +1,18 @@
+{
+  "journal_id": "J007",
+  "source_url": "https://www.oaj.pku.edu.cn/Journalx_rkyfz/basicinfo/viewHtmlFile.action?id=8",
+  "retrieved_at": "2026-11-16T15:03:37.647500+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.oaj.pku.edu.cn/Journalx_rkyfz/basicinfo/viewHtmlFile.action?id=8",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J007_e440d985c547/text.txt",
+  "sha256": "4b610e05df31440efeda7b8187f36dd0b20b37ea734aebdfa3c680c6b40c14cb",
+  "original_path": "primary_http/J007_e440d985c547/response.html",
+  "original_sha256": "d1122a8205d45e951c8dc19f86eda20ef83520b79bf9630c52d8b2fb24238498",
+  "line_count": 6,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

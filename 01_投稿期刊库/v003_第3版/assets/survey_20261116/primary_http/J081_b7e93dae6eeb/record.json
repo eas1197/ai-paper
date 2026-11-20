@@ -1,0 +1,21 @@
+{
+  "journal_id": "J081",
+  "source_url": "https://tjsk.cbpt.cnki.net/WKH/WebPublication/index.aspx?mid=TJSK",
+  "retrieved_at": "2026-11-16T15:04:12.855599+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://tjsk.cbpt.cnki.net/WKH/WebPublication/index.aspx?mid=TJSK",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J081_b7e93dae6eeb/text.txt",
+  "sha256": "b4266a34d7343a8c0965d019d9eb958e1449f754870f0097deb7124c86d63263",
+  "original_path": "primary_http/J081_b7e93dae6eeb/response.html",
+  "original_sha256": "b21e8831d0cf4fce09fd5b710e1c5a048620595352b2903444befc2c17834986",
+  "line_count": 399,
+  "title": "\r\n\t天津社会科学\r\n",
+  "guideline_links": [
+    "https://tjsk.cbpt.cnki.net/WKH/WebPublication/wkTextContent.aspx?navigationContentID=41e9ce00-fe66-4e5f-830c-774d6449dece&mid=tjsk",
+    "https://tjsk.cbpt.cnki.net/WKH/WebPublication/wkTextContent.aspx?navigationContentID=98b47930-5e45-4f40-8d24-47949651169e&mid=tjsk"
+  ],
+  "review_status": "awaiting_source_readback"
+}

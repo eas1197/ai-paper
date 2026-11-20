@@ -1,0 +1,787 @@
+∗ 感谢清华大学计算社会科学与国家治理实验室以及腾讯研究项目“ 基于 QQ 大数据意见领袖识别研
+究” (20182001706) 的资助。
+复杂社会系统的涌现现象∗
+———以大数据分析结构与行动共同演化
+罗家德 万 怡 高 馨
+提要:本文结合实证案例探讨如何以社会计算研究社会系统中的涌现
+现象。 中国风险投资产业的案例说明 VC 投资行为与产业网络结构共演过
+程中的正反馈导致了“精英俱乐部型小世界网络” 的结构涌现,解释了个体
+行为如何促成集体涌现;某大型科技公司的案例展现了集体智能涌现的过
+程及因素,并说明了系统转型前后团队创新能力的影响因素存在差异,解释
+了非线性发展对员工行为的影响。 案例体现了调查数据与大数据结合、多种
+社会计算方法综合运用的方法取向及其在复杂系统研究中应用的可行性。
+关键词:复杂社会系统 大数据 非线性演化 涌现
+一、引 言
+本文的主旨在于通过大数据及相关建模方法来解释复杂社会系统中的集体
+涌现( emergence) 现象及涌现后的系列结果。 涌现是复杂系统中主体与系统内
+部外部环境相互作用、不断演化从而导致系统产生全新特性的一种现象,这种新
+的特性是整体特性,并且能够持续演化。 涌现是存在于各类复杂系统中的共性
+现象。 复杂社会系统研究为社会科学开启了新视角,也促使社会科学研究的方
+法发生变革。 得益于大数据的累积、分析与动态建模的发展,研究者可以综合运
+用社会计算的多种方法,解释社会系统的集体涌现现象。
+本文聚焦于个体行动与社会网络结构共同演化而使集体涌现的新结构、新
+制度以及这些新特性带来的后续影响。 在内容安排上,本文首先介绍复杂社会
+134
+
+
+系统的基本特征,特别是系统非线性演化的一些基本概念,以及相关概念理论为
+社会科学研究带来的启发。 接下来说明如何在复杂系统理论新网络科学的视角
+下,引入网络结构与个体行动的共同演化来解释社会系统的非线性演化现象,并
+与大数据分析、动态建模相衔接。 然后,以两个类型的研究案例说明如何在相关
+概念上构建理论与模型,同时结合各类社会计算方法加以验证并发展理论。 这
+两类案例既包括由微观到宏观在演化中涌现集体性质,也包括非线性发展下由
+宏观到微观的个体行为的改变。 最后,总结讨论复杂社会系统理论与大数据、社
+会计算方法的结合,指出此种结合正在快速形成重要的研究范式。
+二、复杂系统视角下的社会研究
+( 一) 复杂社会系统中的非线性发展
+对于复杂系统研究的相关概念进入社会学研究后给研究者带来的启发,卡
+斯特兰尼和哈弗蒂( Castellani & Hafferty,2009) 做出了如下总结。
+第一,社会系统以主体行动者为基础,主体共同构成网络结构。 复杂性表现
+为连接的错综性( 莫兰,2001) ,网络中包含大量能进行决策、具备行动力的主体
+( Macy & Willer,2002) 。 行动的交互影响发生于主体间特定的网络结构中。
+第二,社会系统是演化的,由无序到有序,随着时间、系统层次不断向上演化
+产生。 从小团体到社群,再到诸如城市、产业生态系统等大集体,以及如国家、经
+济、社会等更大的集体,最后成为世界系统,层层演化、层层涌现,最终出现新的
+社会规范与制度,产生新秩序。
+第三,社会系统的复杂性来自“ 简单” 的“ 叠加”,复杂性在局部网络表现为
+某种简单规则。 莫兰(2001) 曾借用物理学的“ 全息原则” 强调元素的重要性。
+在不同小范围局域社会网络中被行动者所接受的简单规则或网络结构,经由系
+统规模扩展以后,行为与结构不断叠加,演变为极其复杂的形态,从而呈现各不
+相同的体制、文化等,而系统中基本单元的网络结构特征却始终贯穿其中。
+第四,社会系统是自组织的。 由于主体相互连结,自组织成为可能。 人类行
+动者出于自我意识、基于人际关系自组织出基本的网络结构逐步演化形成社会
+系统中的子系统。 区别于物理的物质或生态的物种的自组织( Prigogine,1955;
+Haken,1988) ,大部分人类社会中主体形成的自组织同时会有“ 他组织” 作为由
+上而下的控制力量,但这种力量并不绝对。
+135
+论 文 复杂社会系统的涌现现象
+
+
+第五,社会系统有时会远离平衡态。 随着系统外在环境的变化、内在主体间
+的互动失序,有序会逐渐向无序转变。 譬如在大变迁时代,经济、社会规则剧烈
+变化,可能出现社会失范甚或爆发革命、战争,使社会系统处于系统崩解( system
+catastrophe) 边缘( Chang & Luo, 2002) ,秩序需要整体重组,这便是远离平衡态
+的表现。 良好的社会系统转型可以理解为系统即使远离平衡态,也仍能通过有
+效导引较为顺利地过渡至新状态,而非通过崩解、战争、革命或牺牲社会成员的
+方式转型。 这关乎人类社会的福祉。 由此,研究系统演化过程中如何平衡多元
+力量间的矛盾格外有意义。
+复杂系统理论的发展与介入使得研究者不再将线性发展视为社会系统的基
+本特征,并关注到主体行动、自组织与网络结构。 本文试图以定量和建模方法对
+社会系统的涌现现象加以研究,特别关注特定网络结构中主体间互动导致或正
+或负的反馈而自组织出的系统的非线性发展,以及系统涌现出的新特质反过来
+对后续的网络结构与主体行为模式产生的影响。
+( 二) 新网络科学视角———以网络结构与行动的共演研究结构与制度涌现
+著名的“科尔曼之舟”(Coleman's Boat)对“个体—集体”研究的还原论观点进
+行了批判(Coleman, 1990),该模型中由集体状态到个体状态的过程经常表现为过
+度社会化的研究倾向,即认为个体只是集体文化、规范、体制的反映,而由个体结果
+到集体结果的过程又往往表现为低度社会化的研究倾向,认为个体各自独立,个体
+行动结果的加总会造成集体结果(Granovetter, 1985)。 以新网络科学(new science
+of network)(Newman, 2003)视角观之,个体之间连结形成社会网络,并与行为在不
+同层次上相互作用、共同演化,在过程中彼此正、负反馈,导致系统中某些力量可能
+因正反馈持续增强而发展成趋势,进而产生过往不具备的特质,使系统在无序中涌
+现出规范与制度,变为有序,这就是本文探讨的社会系统中的涌现现象。 主体因自
+身能动性可以摆脱原有系统的束缚自我组织、产生创新,在一定的社会网络结构条
+件下,行动会通过跨尺度演化涌现出新的集体行为、思想文化、制度规范或网络结
+构(Granovetter, 2017),展现出非线性发展和演化过程。
+新网络科学视角将人际关系、社会网络与网络结构纳入对从个体行动结果
+到集体 结 果 这 一 演 化 过 程 的 解 释。 除 主 体 的 行 动 外, 网 络 动 态 学 ( network
+dynamics) 还主张主体切断或建立关系会导致网络结构演化。 网络结构与行动
+交互影响、共同演化,自组织出新的集体行动与网络结构。 长期、持续的行动与
+结构的共演会涌现新的规范类或信息类的“ 场力” ( field forces) ,比如制度、道德
+136
+社会学研究 2024. 2
+
+
+约束、例行化的合作机制、新趋势( DiMaggio & Powell, 1982) 等,从而因应外在环
+境变化。 这是系统自我创新、自我适应的过程,并能导致系统的非线性演化( 罗
+家德等,2008) 。 同样,个体特质并非仅是集体特质的映射,其间还可能包括集体
+的、信息的、规范的场力( DiMaggio & Powell, 1982) 所导致的个体行为的变化,尤
+其在系统非线性发展时,为了回应系统变化,个体行为会随系统涌现的新状态发
+生改变。 简言之,主体行动与网络结构会相互影响、共同演化,导致集体性质发
+生非线性变化,进而又反作用于集体中的个体。
+此种视角有助于为社会系统现象研究提供新解释。 比如“ 集成式” 生产管
+理方式在汽车行业的运用发展就可以在此视角下得到解释( Granovetter, 2017) 。
+此种方式在汽车 行 业 的 最 终 失 败 说 明 其 对 于 行 业 并 无 效 能, 它 早 期 酝 酿 成 的
+“大势”并非高效能与市场选择的结果。 那么应当如何解释趋势的形成? “集成
+式” 理念在计算机行业取得成功后,受到管理学专家和企业顾问的大力推崇,引
+发了汽车行业的关注。 由于汽车企业高管与专家联系紧密且专家在行业中处于
+权威地位,数家大型汽车公司参与了麻省理工学院的“ 国际汽车管理” 研究项
+目。 尽管汽车行业原本的管理和生产方式运转良好,这些公司仍然成了“集成式”
+的先行者。 在此种模式下,一级供应商将生产的基本单位从零件改为“模块”,导
+致产业链上的节点发生重大变化,部分供应商开始生产模块,与车厂的互动方式随
+之改变。 与此同时,随着管理学界对“集成式” 的支持方与反对方的持续争论,大
+型汽车公司作为这一框架的实践者持续受到影响并采纳了相关建议。 “集成式”制
+度结构最终在菲亚特等企业中得到实施,但与计算机行业的原始模式存在显著差
+异。 这一现象反映了汽车行业中主体行动与网络结构的相互作用。
+( 三) 社会计算———复杂社会系统涌现现象研究的新方法
+上述汽车行业案例中对结构与行动共演的阐释仅采用了定性证据,进一步
+而言,引入结构与行动共演来解释结构与制度的涌现时,新数据、新方法能够促
+进这类复杂演化研究的长足发展。 从动态建模、计算机仿真、复杂网络分析,到
+使用机器学习、深度学习算法建构预测模型,再到使用可解释人工智能辅助寻找
+理论洞见,以及以各类算法衡量变量、从而验证理论模型,一系列方法与大数据、
+社会科学相结合,形成了新的方法领域———社会计算( social computing) 。 社会
+计算指涉两个核心概念: 计算性与社会性, 两者相互促进、 相 互 启 发 ( Evans,
+2020) 。 社会计算一方面关注社会研究如何助力于计算研究,如社交软件设计、
+社交网络算法等;另一方面关注计算研究如何助力于社会研究,即全新的数据与
+137
+论 文 复杂社会系统的涌现现象
+
+
+方法被引入社会科学研究后可能带来的发展。
+本文主要探讨社会计算在社会系统涌现现象研究中的应用,我们在此介绍
+一些关键方法。 鉴于大数据分析和人工智能算法正处于快速发展阶段,难以穷
+举所有社会计算方法,但可以大致将其归纳为四大类。 第一类,数据转化与变量
+衡量技术。 这类技术涉及将文本、图像、语音、地理位置信息、网络浏览行为、网
+络交互等非结构化电子印迹数据转化为特定应用场景所需的结构化数据;还包
+括自然语言分析、图像分析、地理位置分析、复杂网络分析和多模态分析等与理
+论相关的变量衡量技术。 第二类,数据资源整合技术。 这类技术着重于整合不同
+的数据资源,如大数据与调查问卷数据的结合、与二手结构化数据的融合,以及使
+用联邦算法整合不同大数据源。 第三类,大数据分析方法。 这包括针对大数据或
+不同类型数据库的分析方法,如用于构建预测模型的机器学习技术( 如支持向量
+机、决策树、随机森林和 XBoost)、深度学习(如卷积神经网络和图神经网络),以及
+可解释人工智能(interpretable AI),同时也包括网络分析和统计分析等传统定量方
+法。 第四类,基于理论的建模。 这类方法包括遗传算法、动态网络建模和主体建模
+等。 社会计算尽管主要采用系统建模方法,但也不排除对因果模型和统计验证手
+段的运用。 由于本文聚焦于社会系统的涌现现象,这类建模将成为研究的重点。
+将社会计算方法运用于复杂社会系统研究,不仅可以有效地解释和预测社会系
+统的非线性演化,还有助于理解非线性系统转型后对行为的影响。 接下来,我们将以
+两个案例说明复杂社会系统涌现现象如何被解释及验证。
+三、行动与社会网络结构的共演与涌现现象
+( 一) 中国 VC1 产业中的联合投资网络
+我们首先以中国的 VC( 风险投资) 产业中联合投资行为和产业网络结构的
+共演作为集体结构涌现的案例。 数据主要来自各新闻媒体中 VC 宣布的投资事
+件,经清科数据库2一次结构化、本研究团队二次结构化建立 VC 联合投资网络
+数据,结合清科数据库的 VC 行为资料,解释主体行动与网络结构的共同演化形
+成正反馈时某种产业结构形态涌现的过程。 对 2000—2018 年多期 VC 联合投
+138
+社会学研究 2024. 2
+1
+2
+Venture Capital,简称 VC。 本文的 VC 有两种指代,既指风险投资行为,也指风险投资机构。 清科研究中心旗下数据库,覆盖中国创业投资领域数据( https: / / www. pedata. cn) 。
+
+
+资网的分析得出,当 VC 产业的网络结构和联合投资伙伴的选择行为形成正反
+馈时,会涌现“精英俱乐部型小世界网络” 的产业网络结构。 而且特定结构一经
+形成,会在一定程度上僵化,导致头部 VC、主要 VC 间形成的联盟、投资潮流在
+长期演化过程中即使都发生变化,涌现的结构也很难在短时间内随之改变。
+在中国的 VC 产业网络中,一个头部 VC 会有大量联合投资伙伴,包含较小的、
+多频次合作的“ 跟随者”,形成一个以头部 VC 为中心、小型 VC 跟随者环绕的圈
+子,各个圈子并不孤立,而是通过“ 长桥” 连结起来。 在中国,扮演长桥角色的通常
+是头部 VC,由此形成瓦茨(Watts, 1999)提出的“小世界网络”,同时,作为长桥的头部
+VC 聚集形成 “精英俱乐部”,故而这种结构被称为“精英俱乐部型小世界网络”。
+从理性选择视角出发,对 VC 投资行为的研究通常更关注投资者的投资利
+益动机,但从网络科学视角出发,将主体行动者之间的关系纳入考察框架,可以
+发现合作行为会导致 VC 之间的关系发生变化。 针对中国 VC 产业联合投资行
+为构建链路预测模型( link predication) ( Wang et al., 2016) ,结果显示影响 VC 发
+展关系的主要因素有两类。 一类是相似性,主要如产权、投资产业、地理相近性,
+等等。 另一类是嵌入性,包括:(1) 关系嵌入性,其假设为两家 VC 合作频率高、
+既往合作经验的持续性都与再次合作的可能性正相关;(2) 结构嵌入性,其假设为
+若两家 VC 过去没有合作经验,那么它们拥有共同合作伙伴数量越多则未来合作
+可能性越高,而如果没有共同伙伴作中介,即两家 VC 的网络距离在三步或以上,
+它们的合作概率为零。 这些假设均得到了证实(罗家德、曹立坤等,2018)。
+关系嵌入因素说明了圈子结构对 VC 联盟行为的影响,圈内相较于圈外为
+密网结构,基于圈内紧密的联合投资关系会得到更高的未来合作概率,所以圈子
+结构会加强关系嵌入性及其行为后果。 结构嵌入因素说明圈子之间原本没有合
+作关系的 VC 可能会通过共同合作伙伴的介绍形成长桥,但也表明与圈外 VC 建
+立合作的可能性很低,如果没有共同伙伴,几乎不会有联合投资的可能。 小世界
+结构中圈子间的连结会促成更多长桥出现,所以尽管圈外的联合投资网相对稀
+疏,却能促成建立长桥的行为。
+同时, VC 产 业 中 存 在 偏 好 依 附 ( preferential attachment ) 现 象 ( Barabasi,
+2005),即一个 VC 较高的行业地位会提高其他 VC 与其合作的可能性,此一假设亦
+得到证实(罗家德、曹立坤等,2018)。 这说明进入“精英俱乐部”的 VC 会成为其他
+VC 竞相联盟的对象,从而进一步巩固其权力位置,加之精英俱乐部也会因嵌入性因
+素而加强内聚力,故而精英俱乐部结构既会吸引外部连结,也会形成更多内部连结。
+上述三个产业网络结构影响投资行为的假设获得证实,说明圈子密度能够
+139
+论 文 复杂社会系统的涌现现象
+
+
+加强圈内联合投资行为,小世界结构会促成圈子间搭建长桥的行为,而偏好依附
+现象则导致精英的权力集中度更高、精英间抱团更为紧密。
+( 二) 嵌入性行动对结构的影响———基于动态建模的研究
+什么样的行为因素会导致中国 VC 产业中特殊结构的涌现? 通过多主体建
+模( Multi-agent Based Model, MBM) ( Gu et al., 2019) ,我们能够以网络动态学的
+仿真模拟探究“ 精英俱乐部型小世界网络” 的形成原因。
+在 2000—2013 年,共有 1436 家 VC 参加了联合投资。 本文使用德菲尔专家
+调查法挖掘和定义“ 精英” ,计算所有 VC 的 k-shell 并依次列表,从中选择高地位
+VC。 高地位 VC 在每次投资中作为主投,并具有呼唤一群跟投者的号召力。 有
+42 家 VC 获得参加头部 VC 评选的四位专家的一致认可( Yang et al., 2020) ,1可
+被视作网络结构中的“ 精英” 。
+“ 精英俱乐部型小世界网络” 的特征可以用一些网络和行为指标加以衡量,
+节点属性中的度、k-shell、中介性以及投资次数这四项指标中精英和跟随者间的
+比值可说明双方力量的差距;精英俱乐部的网络密度和 E-I 指标2显示了头部
+VC 抱团的紧密程度;各精英圈子的平均网络密度3以及 E-I 指标4显示出精英
+圈子内抱团的紧密程度( Wasserman & Faust, 1994) 。
+表 1 2013 年精英俱乐部型小世界网络的八项指标
+网络指标名称 真实网络计算得到的指标数值
+节点属性 精英 跟随者 VC 产业整体网络
+度 18. 216 3. 650 6. 440
+k-shell 12. 000 2. 330 3. 678
+中介性 0. 014 0. 002 0. 008
+投资次数 47. 310 4. 090 8. 500
+密度( 精英俱乐部网络) 0. 492 0. 003 0. 004
+精英俱乐部内外的 E-I 指标 123 — 
+密度( 精英圈子的平均值) 0. 100 0. 003 0. 004
+精英圈子内外的 E-I 指标 25 — 
+注:数据引自谷伟伟等人的文章( Gu et al., 2019) 。
+140
+社会学研究 2024. 2
+1
+2
+3
+4
+我们也可以通过数据挖掘的聚类分析和排序来较为精确地指出头部 VC( Yang et al.,2020) 。 精英俱乐部网络密度与整个产业网络密度的比值。 42 家头部 VC 和其紧密跟随者形成的 42 个精英圈子的网络密度的均值。 各精英圈子的网络密度与整个产业网络密度的比值。
+
+
+如表 1 所示,2013 年头部 VC 在各项指标上均优于跟随者数倍乃至十数倍。
+精英俱乐部内部网络密度达到了产业网络密度的 123 倍,各精英圈子内的网络
+密度为产业网络密度的 25 倍, 这些指标说明 “ 精英俱乐部” 和圈子结构确实
+存在。
+我们通过计算机模拟建立多主体模型,以理解此结构的逐步涌现过程。 以 VC
+和被投资公司作为节点建立二模网络(2-mode network),先后建构用于比较的随机
+投资模型和加入“一个机制、两个行为假设”的嵌入模型(Gu et al., 2019)。
+在随机投资模型中,所有联合投资行为均为随机行为,没有任何理论预设,
+仅进行 2000—2013 年 14 年间共 14 期的仿真,任意一期 VC 随机选择被投资对
+象,若两家 VC 在同一期中选择同一投资目标,则计为一次联合投资。 依照真实
+数据计算得出模型参数:(1) 年成长率 30% ,基于起始年 75 家有联合投资行为
+的 VC 和 375 家被投资公司逐年增长;(2) VC 分为九类、两个维度、三类投资频
+率和三类投资合作倾向,其中高、中、低投资频率者每期投资的次数分别为 5 次、
+0. 8 次(5 期投资 4 次) 和 0. 25 次(4 期投资 1 次) 。
+在随机模型基础上加入“ 一个机制、两个行为假设”,形成嵌入模型。 一
+个机制指头部 VC 高 频 率 承 担 主 投 者 的 角 色, 撰 写 投 资 计 划 并 邀 请 其 他 VC
+成为跟投者。 主投者寻找投资伙伴时采取两类行为:(1) 关系嵌入行为。 即
+主投者选择有既往合作经历 VC 进行新一轮合作的概率高于既往无合作经历
+者,并且既往合作频次越高,新一轮合作的概率也越高,不同 合 作 次 数 的 VC
+间下一轮合作机率由真实数据计算得出。 (2)结构嵌入行为。 即主投者面对
+既往无合作经历者时,双方共同拥有的合作过的伙伴数量越多,新一轮合作
+机率也越高;如果双方没有共同伙伴,则新一轮合作概率为零。 共同伙伴数
+量带来的未来合作机率同样基于真实数据,由网络统计计算得出。 真实数据
+表明,主投 VC 会邀请不同数量的跟投者,高、中、低投资合作倾向者每次会邀
+请的合作伙伴数量分别为 0. 9 个、0. 6 个和 0. 2 个。 模拟模型中各变量所需
+参数皆由真实资料计算得到。
+对于结构嵌入模型进行 14 期仿真,与随机模型结果、累积的真实网络数据
+进行比较,同时,分别计算衡量“精英俱乐部型小世界网络” 的八项指标,求取其
+相关系数演化轨迹。 如图 1 所示,随机模型指标结果与真实数据的相关系数在
+14 期中几乎没有发生变化;而结构嵌入模型的相关系数随着 14 期演化,从 0. 55
+成长到 0. 86,表明理论模型模拟的结果与真实数据越来越接近,展现了“ 精英俱
+乐部型小世界网络” 逐步涌现的过程。 精英俱乐部成员抱团越来越紧密,以精
+141
+论 文 复杂社会系统的涌现现象
+
+
+英为中心的各圈子内成员也越聚越紧,并且圈子间长桥角色的扮演者主要是圈
+子领袖,而非跟随者。
+注:精英圈子内聚力用“ 有四次及以上连带 VC 的合作次数与合作总次数的比率” 来表征, 具体计算方式为:从 2000 年至坐标年有过四次及以上联合投资的行为的 VC 在坐标年后 5 年 的合作次数与坐标年后 5 年中所有 VC 合作的总次数的比值;精英俱乐部内聚力用“ 精英的合 作次数与合作总次数的比率” 来表征,具体计算方式为:从 2000 年至坐标年精英 VC 的联合投 资次数在坐标年后 5 年的合作次数与坐标年后 5 年中所有 VC 合作总次数的比值。 图 1 八项指标的相关系数演化轨迹(左侧纵坐标)与精英圈子、
+精英俱乐部内聚力的演化轨迹( 右侧纵坐标)
+进一步考察精英圈子、精英俱乐部内聚力的变化过程。 图 1 显示,随着
+时间的推进,有多次联合投资经历的 VC 的合作次 数 在 所 有 VC 的 合 作 总 次
+数中的占比的上升趋势经过数年后逐渐平缓,这意味着随着产业结构的涌
+现,各 VC 圈子的内聚力 达 到 一 定 程 度 后 趋 于 稳 定; 精 英 俱 乐 部 成 员 在 每 一
+坐标年后续 5 年的合作次数与 5 年间所有 VC 合作总次数的比率随着时间推
+进不断增加,并在后期快速上升,这表明精英俱乐部内的合作行为在“ 精英
+俱乐部型小世界网络” 结构出现后得到持续增长,进而使得精英之间抱团更
+加紧密。
+( 三) 正反馈下的结构涌现
+上述模型演化过程使得“ 精英俱乐部型小世界网络” 结构的涌现得到初步
+解释。 值得注意的是,涌现而出的产业网络结构有很强的持续性,与产业整体的
+快速发展形成了对比。
+142
+社会学研究 2024. 2
+
+
+在 VC 产业发展的十数年间,有几个方面发生了重大变化。 首先是产业中头
+部 VC 的变动。 以聚类加排序的计算方法学习形成的头部 VC 算法( Yang et al.,
+2020)预测得出 2018 年前 42 家头部 VC,并与 2013 年的头部 VC 进行比较,发现
+有 15 家 VC 出局,另外 15 家 VC 成长为头部,精英变化率达 36% 。 其次是产业
+内联盟形成的社群及社群投资方向的变化。 基于 2000—2018 年投资数据( 包含
+投资方、企业名称、投资阶段、投资金额、行业等字段属性) 结合 VC 联合投资网
+络,使用半监督社群侦测算法( community detection) ( Xiong & Fan,2021) ,侦测主
+要的联合投资子社群,列出其主要投资领域的排序。 比如在 2000—2008 年,以
+深创投为头部 VC 的社群所投资的行业以新材料、IT 服务及应用软件为主;2008
+年停市风波后,以深创投为头部 VC 的社群所投资的行业转向新材料、化工原料
+生产及其他机械制造;2013—2015 年,社群投资方向再次改变,以深创投为头部
+VC 的社群投资方向迁移至电子商务、IT 服务、网络服务;2015 年,由于停市和新
+股发行体制改革的进一步推进,各社群的投资阶段前移,在 2015—2018 年的联
+合投资网络中,以深创投为核心、以 IDG 和红杉资本为核心、以德同资本为核心
+的数个社群在主要投资行业上一致地将重心放在互联网市场上,且均对大量初
+创期及扩张期的企业进行投资。
+尽管头部 VC 形成的精英俱乐部有进有出,VC 联盟网络形成的社群有聚有
+散,社群投资的主要方向也有变化,但“ 精英俱乐部型小世界网络” 结构却并未
+被破坏,这一涌现而出的结构形态在中国 VC 产业中转化为常态。
+分析 2000—2018 年的联合投资网,网络中有 2494 家 VC,计算 42 家头部
+VC 及整个产业网络的八项指标。 表 2 中 2018 年数据显示,随着有连结的 VC
+网络规模的扩大,精英的度、k-shell、中介性及投资次数都有所增长,相较于 2013
+年,2018 年头部 VC 内聚的指标结果与跟随者间的差距倍数加大;并且图 1 显示
+精英俱乐部内联合投资比例持续增加,也表明精英与跟随者间的力量变得更不
+均衡。 表 2 中精英俱乐部内网络密度与产业网络密度的比值上升到 215,说明
+精英抱团程度有增无减;图 1 中表示精英圈子内聚力的折线在结构涌现后没有
+延续上升趋势,这一点在精英圈子的 E-I 指标上也有所体现,仅从 25 增长至 27,
+无显著变化。
+从验证假设、建立动态模型、比较不同时期网络指标的分析过程中,我们可
+以发现,中国 VC 产业中存在关系和结构嵌入的联合投资行为。 将相关行为纳
+入动态仿真模型,结果显示,随着仿真时间的增长,衡量“ 精英俱乐部型小世界
+网络” 结构的各类指标结果与真实资料拟合的效果越 来 越 好, 体 现 了 网 络 结 构
+143
+论 文 复杂社会系统的涌现现象
+
+
+逐渐涌现的过程。 从 2013 年到 2018 年,精英抱团更紧,且与跟随者节点属性比
+值明显增长,也表明偏好依附效应确乎存在,使得 VC 们都倾向于与高地位 VC
+建立联盟,这进一步巩固了精英的网络地位。
+表 2 2018 年精英俱乐部型小世界网络的八项指标
+网络指标名称 真实网络计算得到的指标数值
+节点属性 精英 跟随者 整网
+度 182. 8 10. 05 12. 96
+k-shell 34. 48 6. 734 7. 20
+中介性 0. 024 0. 00045 0. 00085
+投资次数 11. 68 0. 39 0. 58
+密度( 精英俱乐部网络) 0. 56 0. 0018 0. 0026
+俱乐部内外的 E-I 指标 215. 38 — 
+密度( 精英圈子的平均) 0. 07 0. 0018 0. 0026
+精英圈子内外的 E-I 指标 26. 92 — 
+此种相互促进的过程表明,中国 VC 产业中嵌入行为与网络结构形成了正反
+馈,精英选择联盟伙伴时的行为促成了“ 精英俱乐部型小世界网络” 的涌现,这正
+是产业网络中主体行动与网络结构相互作用生成的集体性质。 此结构正向影响圈
+内联合投资行为,促进圈子间搭建“ 长桥” ,并使精英的权力更集中、精英俱乐部更
+聚拢。 偏好依附效应使得其他节点更加向精英靠拢,精英从而拥有更大选择权,拉
+大了与跟随者的地位差距。 持续的嵌入行为会正向增强结构,结构又造成嵌入行
+为和偏好依附持续增强,导致涌现的结构固化并长久延续。
+本节案例中主要使用了第四类社会计算方法中的多主体模型,这一模型对
+于讨论个体行为如何影响集体结果从而导致涌现,是一种非常适用的研究方法。
+当主体具备适应性且互动取决于既往经验时,数学分析得出动态结果的能力有
+限,多主体模型通过计算机模拟,设定主体复杂的性质、行为及互动规则,生成动
+态演化的理论,以模拟未来的集体结果。 案例还运用第一类社会计算技术,将新
+闻稿件中 VC 投资信息整理成为联合投资网络,同时使用第三类社会计算技术
+中的复杂网络分析与网络统计。 我们通过网络分析得到研究所需的社会网络指
+标,通过网络统计对多主体模型中的所有变量做二模网络规模年成长率、不同类
+别 VC 的联合投资连结程度等参数估计,从而计算出拟合计算机模拟结果与真
+实网络演化结果的各类指标,比如各类模体( motif) 的数量、全网程度中心性分
+布、全网 k-shell 值分布等( Gu et al., 2019) 。 此外,通过有监督机器学习,我们能
+144
+社会学研究 2024. 2
+
+
+够以 2013 年数据为基础,以扎根真相( ground truth) 建立预测头部 VC 模型,进
+而运用预测模型和 2018 年数据计算出新的头部 VC。
+四、系统演化中的行动
+( 一) 组织系统何以适应环境
+本节案例使用国内某大型高科技公司的组织行为资料,运用动态模型模拟
+集体智能的涌现过程,同时,也研究整个组织系统非线性演化导致系统转型后集
+体的重大变化如何影响小团队集体智能的涌现。
+集体层次的涌现导致系统呈现非线性发展,使得系统可能从常态发展迈入
+非常态阶段,在此前提下,系统或基于系统稳定性( Newman,2003) 回归原有常
+态;或发生大转型,转换至新的行为模式、网络结构以适应环境,一旦成功,就能
+够可持续发展,展现强大的系统韧性( system robustness) ( Jen,2006) 。 复杂系统
+通常包含多层子系统,每一层都有其“个体”行为(或子系统的集体行为) 以及网
+络结构,因而复杂系统的演化一方面表现为自下而上的演化,另一方面表现为上
+层系统在非线性演化后的转型对下一层子系统的影响。
+集体智能(collective intelligence)的目的是增强组织知识与环境之间的匹配程
+度(Levinthal & March,1981;Csaszar,2018),从而达到组织系统对外在环境的成功
+适应。 在现代平台型企业中,团队成为制定和执行公司战略、促进公司成功的重要
+单元(Mortensen & Haas,2018)。 为了提高学习与创新能力,组织从流程严密的管
+理系统转化为以小团体为运作核心的合作网络,即将组织视为多个异质小团体构
+成的网络系统。 集体智能是团队创新能力的重要来源,是影响公司创新、生存和实
+施战略转型的关键(Anderson et al.,2014;Amabile & Pratt,2016)。 随着组织内部、
+外部动态环境的变化,影响和提高团队创新的因素也有所不同。
+本节中的组织案例研究便能够说明子系统( 团队或部门) 集体智能如何产
+生,以及整个组织的系统转型如何影响此一过程。 研究数据来自某大型高科技
+公司( 下文中代称为 α 公司) ,分析样本共有 3152 个研发或产品团队,平均团队
+规模为 4. 12 人。 数据的时间跨度为 2014—2018 年,根据这一期间 α 公司发生
+的组织重构,将组织变化阶段分为 2014—2017 年的常态期和 2018 年的颠覆性
+变革期。 由于外在环境的巨大变化,α 公司在 2018 年进行组织流程再造,创新
+模式由制定全公司齐一方向转化为鼓励探索式研究,由团队、部门各自在市场中
+145
+论 文 复杂社会系统的涌现现象
+
+
+找寻商机。 α 公司以团队创新为核心,不断发展新技术、新产品,为集体智能涌
+现的大数据定量研究提供了多元且丰富的结构化与非结构化数据。
+案例结合了几个数据来源:(1) 员工参与共同项目数据,此一非结构化数据
+可以计算团队或部门的合作网络结构;(2) 正式和非正式培训项目数据,包含每
+个培 训 课 程 的 标 题、 持 续 时 间 和 参 与 者, 使 用 自 然 语 言 分 析 ( nature language
+processing) 中的文字嵌入方法( word embedding) 、大语言模型 BERT( Bidirectional
+Encoder Representations from Transformers) 计算培训为团队、部门带来的知识多
+样性;(3) 人力资源部门的新员工招聘评估数据,用同样的 NLP 方法计算新员工
+给团队、部门带来的知识多样性;(4) 员工的人口统计数据。 使用第一类社会计
+算方法处理数据,将培训课程内容转化为员工知识点的学习行为,并将员工间的
+历史合作关系转化为合作网络。 同时,使用第二类社会计算技术将该公司的部
+分二手组织行为资料与大数据相整合。 团队创新能力通过公司每年末提供的年
+度高创新奖励( 例如专利创新奖) 来衡量( Gao & Luo, 2023) 。
+( 二) 常态期的集体智能涌现
+本部分首先探讨组织常态期涌现集体智能需具备的因素。 此处使用 α 公司
+2014—2017 年数据,涵盖 2642 个团队,分布在 329 个部门。
+集体智能发源于组织系统多样化知识组合过程中的互动和头脑风暴( Xiao
+et al., 2022) ,其发展有赖于反复的团队合作。 合作过程中不同想法组合的不断
+出现可能会形成达成共识的成本( Fiol, 1994; Dong et al., 2017) 、决策变动的成
+本,以及基于不同组织任务而组建不同团队时出现的转换成本( Artz & Brush,
+2000) 。 在多样性知识、重复合作的益处与成本并存的情况下,员工多样化的知
+识与重复合作是如何导致集体智能涌现的?
+本研究将基于第四类社会计算方法中的主体建模( agent-based model,ABM)
+来观察动态过程,探讨成员的认知多样性和集体智能之间的关系是否会受到重
+复合作概率的影响( 林子秋等,2023; Lin & Luo, 2023) 。 遵循“ 真实世界模型”
+( real world model) ( March, 1991) ,模拟真实情境下合作网络内的决策过程、决
+策绩效与学习机制,其中集体智能在模型中以集体决策的绩效所表示。
+决策绩效的衡量方式是:假设组织需完成 1000 个任务,每轮模拟生成一个
+任务,并将长度为 N( 本例中 N 为 12) 的由 0 / 1 组成的字符串设置为“ 真实结
+果”,记为 r。 r 被假设为组织应对外部环境刺激任务的正确答案,N 是整个组织
+设置中认知的维数。 集体决策由各成员的 N 维认知所决定,结合成员智力输出
+146
+社会学研究 2024. 2
+
+
+生成团队决策 y(个人决策记为 yi),由团队成员多数决策产生,也是一个长度为
+N 的字符串。 y 与 r 相匹配的位数、yi 与 r 相匹配的位数分别为团队和个人决策
+能力的绩效分数。
+团队决策的机制是:每轮模拟生成一个新任务,每个新任务的决策将选取团
+队中固定数量的成员(本例中为 3 人) 决定。 每次运行开始时,成员选择的过程
+将重复 3 次,重复合作概率参数越高,现有网络中已有合作经验的成员被选中的
+概率越高;反之,新成员被选中的概率越高( Guimerà et al., 2005) 。 成员认知多
+样性程度参数越高,越有可能选择具有与组织不同的 N 维认知(例如,为新成员
+的 12 个维度随机分配 12 位) ,反之亦然。 在选择成员后,三名成员的决策将共
+同决定任务的最终决策(即每一维由过半数的 0 / 1 数值所决定)。
+当认知多样性不显著时,任务最终决策可以预见,主要来源于主流认知;而
+在认知多样化环境中,最终决策与成员个体决策之间的差异会更大。 团队成员
+可能会基于任务结果进行认知更新,具体的学习机制为:团队任务结束后,若某
+成员的个体决策绩效低于团队绩效,该成员将经历一个学习过程,并根据团队的
+更优决策调整自己的认知,其他成员则保持自身原始认知不变。
+对认知多样性和重复合作概率的各种组合运行 400 次模拟。 重复合作概
+率、认知多样性程度的参数设置为 0 ~ 0. 95,每次模拟变化 0. 05。 通过模拟过程
+能够研究这两个变量及其交互效应对集体智能的影响。 整体效用水平采用平均
+方差效用 U 来表示( Sargent,2009) ,这是由于决策面临的核心问题是风险和回
+报之间的权衡。 该公式综合考虑了平均值和方差,并给出了一个总体效用。 这
+个公式的基本假设为效用是集体智能结果的指数函数,而结果样本遵循正态分
+布;风险规避参数的值设定为 0. 5。 每次模拟会有 1000 个集体决策绩效的平均
+值与标准差。
+模型及其模拟结果有三个发现:第一,认知多样性对集体智能的影响在不同
+条件下有极大差距,呈现正相关、倒 U 型相关、不相关,故很难得出一致结论;第
+二,高重复合作概率可以帮助减轻集体智能的方差并实现高绩效均值;第三,在
+高重复合作概率的模拟过程中,认知多样性较好的团队在初期阶段的集体智能
+低于多样性较差的团队,但随着时间的推移会实现超越,并在长期内达到最高的
+集体智能水平( Lin & Luo, 2023) 。 进一步来看,从模拟模型的发现中得到两个
+假设:(1)重复合作概率正向影响集体决策的表现;(2) 高重复合作概率正向影
+响认知多样性对集体智能的影响。 使用 α 公司常态期 329 个部门的资料进行验
+证,能够证实这两个假设,说明模型与真实资料十分契合,对真实世界有较强的
+147
+论 文 复杂社会系统的涌现现象
+
+
+理论解释性。
+本研究在此模型上进行更多模拟,显示的三种结果见图 2。 可以发现:当认
+知多样性非常低时,高重复合作概率对集体决策绩效水平有轻微正面影响;当认
+知多样性增加,重复合作概率对集体智能的出现变得更加重要,体现在 S 曲线更
+陡、最终绩效水平更高;认知多样性越高,重复合作概率对集体智能出现的影响
+就越加显著,当认知多样性为 0. 95 时,S 曲线最陡,且集体智能出现明显的“ 阈
+值点” ( Lin & Luo, 2023) 。 集体智能在一个动态的组织团队、认知多样性组合、
+集体决策与个体学习的过程中涌现出来。
+图 2 三种认知多样性程度下集体智能呈现的 S 曲线
+( 三) 系统颠覆性变革的影响
+在更高层次系统的转型过程中,小团队集体智能的涌现又会受到怎样的影
+响? 这是科尔曼之舟中集体如何影响个体的问题。 非线性演化使得对同一行为
+的影响因素在系统转型前后可能存在较大差异,所以对转型节点的划分成为研
+究的关键,α 公司于 2018 年进行的企业再造工程提供了很好的分割点。 接下来
+的研究能够说明集体非线性演化对小团队行为的影响( Gao & Luo, 2023) 。
+在前述研究中重复合作比例以组成团队时新加入成员的比例来衡量,新成
+员会影响小团队的网络结构,降低合作网络密度,其带来的多样性与合作网络形
+成行动与结构的共同演化,导致集体涌现现象。 新成员可能带来两种类型的多
+样性:(1) 个人知识多样性,指新招聘员工既具备新知识,也有和原团队成员重
+叠的知识,从而易于融入团队;(2) 个人与公司知识的差异性,指新招聘员工和
+现有员工知识背景极为不同,加入团队会带来较强的异质思想,而在工作整合上
+可能存在一定困难。
+本研究首先应用 TextRank 算法( Mihalcea & Tarau,2004) 识别招聘面试中新
+员工陈述里与知识、技能最相关的关键词,采用 jieba 分词工具做分词处理并进
+一步加以提炼;随后利用百度开发的 LAC( Lexical Analysis of Chinese) 识别专有
+148
+社会学研究 2024. 2
+
+
+名词,以准确捕捉与知识、技能相关的专业术语;接着,使用 Tencent AI Lab 开发
+的 Chinese and English Term Embedding Corpora 获取专业术语的向量表示,该模
+型与 BERT 类似,是无须预训练的基准模型。 最后通过计算每个团队中这些术
+语向量的平均余弦相似度,得到对知识多样性水平的描述。
+新招聘员工与公司知识差异性的评估通过比较一个团队的知识分布与公司
+其他团队的知识分布得以实现。 使用 KL 散度( Kullback-Leibler Divergence,也称
+为相对熵)计算两个知识概率分布间的差异。 这种方法可以确定一个团队的知
+识分布与其他所有新员工的知识分布是否相似。
+结合真实资料,我们发现企业在常态期和颠覆性变革期采用的招聘策略极
+为不同,因此这一研究的分析特别关注两个时期的比较。 依照相关理论对改善
+团队创新能力的条件进行推导,得到六个假设。
+假设 1. 1:个人知识多样性对团队创新能力产生积极影响。
+假设 1. 2:个人与公司知识差异性对团队创新能力产生积极影响。
+假设 2. 1:新员工的个人知识多样性对团队创新能力的影响在颠覆性变革
+时期通过密集的合作网络得到正向调节。
+假设 2. 2:新员工的个人知识多样性对团队创新能力的影响在常态期通过
+密集的合作网络得到负向调节。
+假设 2. 3:合作网络密度在颠覆性变革时期正向调节新员工的个人与公司
+知识差异性和团队创新能力之间的关系。
+假设 2. 4:合作网络密度在常态期负向调节新员工的个人与公司知识差异
+性和团队创新能力之间的关系。
+与大多数因果模型一样,本文也使用回归分析进行验证,控制包括团队规模、
+平均成员工作年资、是否新聘员工以及平均团队成员表现在内的变量,得到针对上
+述研究假设的回归结果。 结果显示:(1)个人与公司知识差异性在平常期、颠覆性
+变革期均可提高团队创新能力,而个人知识多样性仅在颠覆性变革期增强团队创
+新能力;(2) 合作网络密度对个人知识多样性与团队创新能力的关系在常态期呈
+负调节作用,在颠覆性变革期表现为显著正向调节;(3) 较高的网络密度在颠覆性
+变革期增强了个人与公司知识差异性对团队创新能力的正向影响,正向调节效果
+显著,而在常态期这种调节效果没有显著影响(Gao & Luo, 2023)。
+可以发现,集体智能涌现的因素在系统转型之前、之后存在显著差异。 当然,
+在公司组织的案例中,存在“ 他组织” 由上而下的控制,小团体的行为、网络结构或
+多或少受到公司激励政策的导引。 尽管集体智能的涌现过程仍受到新成员带来的
+149
+论 文 复杂社会系统的涌现现象
+
+
+异质性与网络结构共演的影响,但在常态期与颠覆性变革期,这些因素的作用呈现
+共性和差异。 从共性来看,招聘与公司既有知识结构差异大的员工十分关键,此外
+合作网络密度也是一个关键因素,且通常对团队集体创新能力呈倒 U 型影响。 而
+这些因素在常态期与颠覆性变革期的作用差异在于:颠覆性变革期招聘个人知识
+多样性高的新员工特别重要,而常态期这一点可以忽略;颠覆性变革期团队合作网
+络密度偏高为佳,在新成员加入前,团队网络密度保持在较高水平可以使个人知识
+多样性、个人与公司知识差异性得到正向调节,但在常态期,较高的团队合作网络
+密度反而会产生负向调节作用。 系统在涌现重大新事件、新规范或新集体行为的
+前后,内部的个体( 或较小子系统) 行为也受到明显影响。
+本节案例整合大数据与传统二手数据,并通过自然语言分析、大语言模型来
+衡量知识多样性,同时也使用了网络分析与传统的统计回归模型。 网络科学与
+大数据结合后,能够超越基于经验观察对复杂网络的理解,探寻到特定指标与行
+为模式。 因此,我们得以用主体模型建立一个小团体的成员选取、共同决策并相
+互学习的演化模型,说明集体智能涌现过程中行动与结构共演的机制。 此外,案
+例中更以复杂网络分析与深度学习方法衡量数千个团队的合作网络密度、组织
+招聘数千新员工的行为,并与公司人力资源资料库整合得到团队创新绩效与成
+员社会经济背景资料,进而推导假设,考察组织在非线性发展前后行为的异同。
+五、结论与讨论
+( 一) 基于社会计算的复杂社会系统研究
+本文的两个案例均展现了多种社会计算方法的结合运用。 在 VC 产业案
+例中,我们以回归模型验证了结构对行为的影响,多主体模型从 VC 与被投资
+公司间的关系选择行为建构产业网动态演化分析,描述性统计与网络统计被
+用来计算动态模型中变量的参数,计算机仿真模拟了系统演化,与真实大数据
+比对验证了涌现现象的存在。 在组织变革案例中,通过大数据与二手数据整
+合得到团队创新研究的相关资料,主体模型说明了“ 行为—结构” 共同演化如
+何导致小团体集体智能涌现,最后同样用回归模型验证了系统转型前后团队
+创新能力的解释因素。
+本文案例只说明了非常简单的主体行动与网络结构共同演化导致的涌现,
+以及系统非线性演化对个体行为产生的影响,核心集中于社会系统的涌现现象
+150
+社会学研究 2024. 2
+
+
+与非线性发展中个体与集体关系的问题。 复杂社会系统研究还有许多议题,如
+“ 有序—无序” 的循环往复、简单规则的跨尺度叠加、自组织的过程等,本文尚未
+涉及。 研究者所面对的社会系统往往更为复杂,从规模维度而言,组织、产业之
+上还有更大规模的系统,牵涉到更高层次、更多尺度的行动与结构共同演化与涌
+现的研究。 从时间维度而言,VC 产业案例涉及十九年间累积的数据,其间产业
+发生了一次网络结构的涌现与固化,我们尚未从数据中侦测到发生第二次结构
+大转变的迹象;而组织变革案例数据仅为五年期,恰逢 α 公司企业流程与结构再
+造,使组织重新面对一种不确定性的环境展开探索,进入重新自组织与建构新秩
+序的状态,但也止于一次非线性演化。 社会系统的演化过程很可能是层层涌现、
+多次转型,比如美第奇( Medici) 家族带动文艺复兴的历史( Granovetter, 2017) 、
+中国以及苏联改革的过程( Padgett & Powell, 2012) 等。 更多尺度、更长时间的
+演化如何与大数据和社会计算整合,仍然是待解决的难题。
+尽管本文案例所使用的只是社会计算方法中的一部分,关注的也是较为简
+单的涌现现象,却能够说明如何将方法与相关理论进行综合运用,从而完成复杂
+社会系统视角下对社会现象的解释与分析。 计算机技术的发展使得复杂系统中
+的行为能够被充分模拟,因而对涌现现象的研究成为可能。 同时,通过机器学
+习、深度学习方法有助于从数据中建立预测模型,可解释人工智能方法更有助于
+在最好的预测模型中解析出可能的因果关系,提供建立解释模型与验证理论的
+启发。 机器学习、深度学习与计算机模拟作为社会计算的主流方法,可用于各类
+复杂系统研究。 仅从本文的案例就能看出,对于复杂社会系统中涌现现象的探
+讨已经不止于单一研究方法与单一学科视角。 跨学科研究方法因其能够更全面
+地认识问题而显示出重要性,又因社会计算的发展而成为可能。
+社会计算与传统的定性、定量方法的整合能够开创崭新的研究议题与理论
+视野,并且呈现极为迅速的发展态势,新方法特别是人工智能方法层出不穷。 尽
+管本文所涉及的社会计算方法仅是一小部分,但仍可说明,在复杂系统理论的新
+网络科学视角下,对于行动与网络结构的共同演化及涌现机制的研究可以用大
+数据和人工智能算法辅助理论的验证,甚至进一步构建预测模型,并在系统非线
+性发展的情境下进行因果推论。 新数据、新方法的引入对研究过去所不曾发展
+的理论或过去理论所不能解决的问题有实质性的增益。
+值得强调的是,数据、模型、计算机技术并非社会计算与复杂社会系统研究的全
+部,理论的重要性不会被弱化。 理论更多地参与到研究当中,有助于研究者从数据中
+获得更多理解(罗家德、刘济帆等,2018; Evans, 2020; Hofman et al., 2021)。
+151
+论 文 复杂社会系统的涌现现象
+
+
+( 二) 复杂社会系统研究的进路
+以社会计算方法所进行的复杂社会系统研究已经相当丰富,对基于系统内
+网络的交互、自组织与行为演化,从而涌现出新系统特质的研究目前已有许多研
+究案例。 比如在 SIR 模 型 之 外 引 入 复 杂 社 会 网 络 以 建 立 流 行 病 爆 发 的 模 型
+( Pastor-Satorras et al., 2015 ) , 考 虑 了 社 会 与 行 为 因 素 及 社 群 影 响 力 的 模 型
+( Bedson et al., 2021 ) , 以 及 将 此 类 模 型 和 大 数 据 结 合 所 展 现 的 研 究 潜 力
+( Heesterbeek et al.,2015 ) ; 又 比 如 对 复 杂 网 络 如 何 影 响 传 播 趋 势 的 大 爆 发
+( Centola, 2010) 的研究,还有个体创新行为与复杂网络相互作用如何导致集体
+智能涌现( Pentland, 2014; Almaatouq et al., 2020) 的研究等,复杂系统研究和社
+会计算的结合正在向包括社会学在内的社会科学的各类子领域扩展。
+更重要的是,“ 科尔曼之舟” ( Coleman, 1990) 讨论的四类研究( 以个体解释
+个体、以个体解释集体、以集体解释集体、以集体解释个体) 是循环往复的。 个
+体行为与网络的共同演化涌现集体行动、新网络结构与新制度规范,新集体性质
+反过来又会影响个体行为,周而复始,并且影响力可能越来越大,系统会层层升
+级、不断扩张。 如何建立长时间、多尺度的集体与个体的互动模型,展现开放系
+统中多层次涌现的全过程动态,并通过大数据加以验证进而构建有效预测模型,
+还需历经十分漫长的探索,本文所举案例仅是万里长征的起始之步。 另外,本文
+讨论的涌现还仅限于人类主体互动带来的集体结果,未来或许能够以复杂网络
+方法探讨人类与人工智能体的互动导致的涌现现象。
+复杂系统研究的一系列概念在自然科学、社会科学中都已得到运用与发展,大
+数据和社会计算的加入使得此一研究视角有了长足进步。 比如,以往研究对复杂
+网络动态演化模型的验证无能为力,因为问卷调查方法收集的人际关系网络资料
+覆盖人数很少,也极难有多期动态发展资料,但随着社交网络软件的发展和广泛使
+用,长时间、大范围、大规模的多期网络资料得以被收集并用于分析,方使得复杂社
+会网络结构分析、动态演化以及结构与行动共同演化以涌现新系统性质的研究成
+为可能。 正因大数据与社会计算方法的出现与发展,网络结构与行动共同演化才
+能提上实证研究的议程,系统非线性演化的建模才能够有数据支持。
+细粒度数据也是大数据的贡献之一。 复杂系统的动态模型通常影响因素
+多、因素间关系复杂、参数多,留下大量调参空间,预期的仿真结果靠改变某些参
+数值就能实现。 在缺乏大规模、细粒度数据积累的情况下,现实收集的数据粒度
+不细、容易拟合,导致动态过程仿真模型虽有理论建构的意义,却很难说是理论
+被数据验证。 随着大数据的大量沉淀,具备了足够的长时段、细粒度数据,一方
+152
+社会学研究 2024. 2
+
+
+面能够计算出所有参数,另一方面也可以用细粒度数据拟合模型仿真结果,得到
+有效度的验证。 模型在不断验证中得以持续修正,理论也可以得到发展。
+在验证理论之外,社会计算还提供了大量人工智能算法以建立预测模型,同
+时能够通过可解释人工智能算法帮助寻找理论中的可能因素变量和人的行为模
+式,这既有利于研究者建构理论与解释模型,也可以提供好的预测模型,增加了
+理论与模型的可应用性。
+包括复杂组织研究在内的复杂社会研究的理论与解释模型仍在不断发展,
+社会计算的方法也日新月异,本文难免挂一漏万,但本文所介绍的社会计算与复
+杂社会系统研究的结合却是一个未来社会科学可以期待并有所施展的方向。 新
+的理论视角、新的数据及人工智能方法正在社会科学中兴起,它们可能带来的新
+研究范式值得研究者正视。
+参考文献:
+林子秋、张天逸、李秋甫,2023, 《 动态网络型组织中的成员认知异质性、重复合作概率与学习绩效》 ,《 系
+统管理学报》第 5 期。
+罗家德、曹立坤、郭戎,2018,《 嵌入性如何影响 VC 间的联合投资》 ,《 江苏社会科学》 第 4 期。
+罗家德、刘济帆、杨鲲昊、傅晓明,2018,《 论社会学理论导引的大数据研究———大数据、理论与预测模型的
+三角对话》 ,《 社会学研究》第 5 期。
+罗家德、王竞、张佳音、谢朝霞,2008,《 社会网研究的架构———以组织理论与管理研究为例》 ,《 社会》 第
+6 期。
+莫兰,埃德加,2001,《 复杂思想:自觉的科学》 ,陈一壮译,北京: 北京大学出版社。
+Almaatouq, Abdullah, Alejandro Noriega-Campero, Abdulrahman Alotaibi, P. M. Krafft, Mehdi Moussaid &
+Alex Pentland 2020, “ Adaptive Social Networks Promote the Wisdom of Crowds. ” Proceedings of the
+National Academy of Science 117(21) .
+Amabile, Teresa M. & Michael G. Pratt 2016,“ The Dynamic Componential Model of Creativity and Innovation in
+Organizations: Making Progress, Making Meaning. ” Research in Organizational Behavior 36.
+Anderson, Neil, Kristina Poto ˇcnik & Jing Zhou 2014, “ Innovation and Creativity in Organizations: A State of the
+Science Review, Prospective Commentary, and Guiding Framework. ” Journal of Management 40(5) .
+Artz, Kendall W. & Thomas H. Brush 2000, “Asset Specificity, Uncertainty and Relational Norms: An Examination of
+Coordination Costs in Collaborative Strategic Alliances. ” Journal of Economic Behavior & Organization 41(4).
+Barabasi, Albert-László 2005,“ Taming Complexity. ” Nature Physics 1(2) .
+Bedson, Jamie, Laura A. Skrip, Danielle Pedi, Sharon Abramowitz, Simone Carter, Mohamed F. Jalloh,
+Sebastian Funk, Nina Gobat, Tamara Giles-Vernick, Gerardo Chowell, João Rangel de Almeida, Rania
+Elessawi, Samuel V. Scarpino, Ross A. Hammond, Sylvie Briand, Joshua M. Epstein, Laurent Hébert
+Dufresne & Benjamin M. Althouse 2021,“ A Review and Agenda for Integrated Disease Models Including
+Social and Behavioural Factors. ” Nature Human Behaviour 5(7) .
+153
+论 文 复杂社会系统的涌现现象
+
+
+Castellani, Brian & Frederic William Hafferty 2009, Sociology and Complexity Science: A New Field of Inquiry.
+Berlin: Springer-Verlag.
+Centola, Damon 2010, “ The Spread of Behavior in an Online Social Network Experiment. ” Science 329(5996) .
+Chang, Fu & Jar-Der Luo 2002, “ System Catastrophe: A Distributive Model for Organizational Collective
+Phenomenon. ” Journal of Mathematical Sociology 26.
+Coleman, James S. 1990, Foundations of Social Theory. Cambridge: Belknap Press of Harvard University Press.
+Csaszar, Felipe A. 2018,“ A Note on How NK Landscapes Work. ” Journal of Organization Design 7(15) .
+DiMaggio, Paul J. & Walter W. Powell 1982, The Iron Cage Revisited: Conformity and Diversity in
+Organizational Fields. New Heaven: Yale University Press.
+Dong, Yucheng, Zhaogang Ding, Luis Martínez & Francisco Herrera 2017, “ Managing Consensus Based on
+Leadership in Opinion Dynamics. ” Information Sciences 397 - 398.
+Evans, James 2020,“ Social Computing Unhinged. ” Journal of Social Computing 1(1) .
+Fiol, C. Marlene 1994,“ Consensus, Diversity, and Learning in Organizations. ” Organization Science 5(3) .
+Gao, Xin & Jar-Der Luo 2023,“ How Can We Improve Team Innovativeness in Times of Organizational Change?”
+Paper Presented at 2023 American Academy of Management Annual Meeting, Boston, August 4 - 8.
+Granovetter, Mark 1985,“ Economic Action and Social Structure: The Problem of Embeddedness. ” The American
+Journal of Sociology 91(3) .
+——— 2017, Society and Economy: Framework and Principles. Cambridge: Harvard University Press.
+Gu, Weiwei, Jar-der Luo & Jifan Liu 2019, “ Exploring Small-World Network with an Elite-Clique: Bringing
+Embeddedness Theory into the Dynamic Evolution of a Venture Capital Network. ” Social Networks 57.
+Guimerà, Roger, Brian Uzzi, Jarrett Spiro & Luís A. Nunes Amaral 2005, “ Team Assembly Mechanisms
+Determine Collaboration Network Structure and Team Performance. ” Science 308(5722) .
+Haken, Hermann 1988, Information and Self-Organization: A Macroscopic Approach to Complex Systems. Berlin:
+Springer-Verlag.
+Heesterbeek, Hans, Roy M. Anderson, Viggo Andreasen, Shweta Bansal, Daniela De Angelis, Chris Dye, Ken
+T. D. Eames, W. John Edmunds, Simon D. W. Frost, Sebastian Funk, T. Deirdre Hollingsworth, Thomas
+House, Valerie Isham, Petra Klepac, Justin Lessler, James O. Lloyd-Smith, C. Jessica E. Metcalf, Denis
+Mollison, Lorenzo Pellis, Juliet R. C. Pulliam, Mick G. Roberts, Cecile Viboud & Isaac Newton Institute
+IDD Collaboration 2015, “ Modeling Infectious Disease Dynamics in the Complex Landscape of Global
+Health. ” Science 347(6227) .
+Hofman, Jake M., Duncan J. Watts, Susan Athey, Filiz Garip, Thomas L. Griffiths, Jon Kleinberg, Helen
+Margetts, Sendhil Mullainathan, Matthew J. Salganik, Simine Vazire, Alessandro Vespignani & Tal Yarkoni
+2021,“ Integrating Explanation and Prediction in Computational Social Science. ” Nature 595(7866) .
+Jen, Erica 2006, Robust Design: A Repertoire of Biological, Ecological, and Engineering Case Studies. Oxford:
+Oxford University Press.
+Levinthal, Daniel & James G. March 1981,“ A Model of Adaptive Organizational Search. ” Journal of Economic
+Behavior & Organization 2(4) .
+Lin, Ziqiu & Jar-Der Luo 2023, “ Cognition Diversity, Repeated Cooperation, and Collective Intelligence in
+154
+社会学研究 2024. 2
+
+
+Dynamic Cooperative Networks. ” Paper presented at 2023 American Academy of Management Annual
+Meeting, Boston, August 4 - 8.
+Macy, Michael W. & Robert Willer 2002,“ From Factors to Actors: Computational Sociology and Agent-Based
+Modeling. ” Annual Review of Sociology 28(1) .
+March, James G. 1991,“ Exploration and Exploitation in Organizational Learning. ” Organization Science 2(1) .
+Mihalcea, Rada & Paul Tarau 2004,“ Textrank: Bringing Order into Text. ” Paper presented at Proceedings of the
+2004 Conference on Empirical Methods in Natural Language Processing, Barcelona, July 25 - 26.
+Mortensen, Mark & Martine R. Haas 2018, “ Rethinking Teams: From Bounded Membership to Dynamic
+Participation. ” Organization Science 29(2) .
+Newman, M. E. J. 2003,“ The Structure and Function of Complex Networks. ” SIAM Review 45(2) .
+Padgett, John F. & Walter W. Powell 2012, The Emergence of Organizations and Markets. New Jersey: Princeton
+University Press.
+Pastor-Satorras, Romualdo, Claudio Castellano, Piet van Mieghem & Alessandro Vespignani 2015, “ Epidemic
+Processes in Complex Networks. ” Reviews of Modern Physics 87(3) .
+Pentland, Alex 2014, Social Physics: How Good Ideas Spread - The Lessons from A New Science. New York:
+Penguin Books.
+Prigogine, I. 1955,Introduction to Thermodynamics of Irreversible Processes. New York: Ryerson Press.
+Sargent, Thomas J. 2009, Dynamic Macroeconomic Theory. Cambridge: Harvard University Press.
+Wang, Zhiyuan, Yun Zhou, Jie Tang & Jar-der Luo 2016, “ The Prediction of Venture Capital Co-Investment
+Based on Structural Balance Theory. ” IEEE Transactions on Knowledge and Data Engineering 28(2) .
+Wasserman, Stanley & Katherine Faust 1994, Social Network Analysis: Methods and Applications. New York:
+Cambridge University Press.
+Watts, Duncan J. 1999,“ Dynamics and the Small-World Phenomenon. ” American Journal of Sociology 105(2) .
+Xiao, Ting, Mona Makhija & Samina Karim 2022, “ A Knowledge Recombination Perspective of Innovation:
+Review and New Research Directions. ” Journal of Management 48(6) .
+Xiong, Hong & Ying Fan 2021,“ How to Better Identify Venture Capital Network Communities: Exploration of a
+Semi-Supervised Community Detection Method. ” Journal of Social Computing 2(1) .
+Yang, Hu, Jar-der Luo, Ying Fan & Li Zhu 2020,“Using Weighted K-Means to Identify Chinese Leading Venture
+Capital Firms Incorporating with Centrality Measures. ” Information Processing & Management 57(2).
+作者单位:清华大学社会科学学院、公共管理学院( 罗家德)
+清华大学社会科学学院( 万怡)
+哥本哈根大学传播学院( 高馨)
+责任编辑:刘保中
+155
+论 文 复杂社会系统的涌现现象
+
+
+history of market transition in the Northeast region, pointing out that the life experience of ordinary
+people has shaped the transition posture, development dynamics and social composition of the
+region in different periods, and thereby played an important mediating role in the transformation
+process.
+PAPER
+Emergence in Complex Social Systems: An Analysis of Structure and Action Co
+evolution through Big Data ..................... Luo Jar-der, Wan Yi & Gao Xin 134
+Abstract: Through empirical case studies, this paper aims to explore how social computing can be
+used to study emergent phenomena in social systems. The case of China's venture capital ( VC)
+industry demonstrates how positive feedback between VC investment behavior and industry network
+structure leads to the emergence of a “ small-world network with an elite-clique”. This explains how
+individual actions contribute to collective emergence. The case of a large technology company
+illustrates the evolution process of team innovation and the factors behind the emergence of a team's
+high innovative ability. Additionally, it demonstrates differences in factors influencing the innovation
+capabilities of internal subsystems before and after systemic transformation, shedding light on the
+impact of non-linear development on employee behavior. These cases highlight the feasibility of
+combining survey data with big data and employing various social computing methods in complex
+system research.
+The Production of the “ Interface” : The Practical Mechanism in the Construction of
+the Grassroots Governance Openness ................................. Shi Yunqing 156
+Abstract: Faced with the complex reality, the construction of openness has become a key issue in
+the modernization of governance, but how can it be achieved in the interaction with closure rooted in
+the general demands that exist with China's national governance? Taking the construction of a new
+public cultural space as an example, this paper explains how actors can produce an “ interface” as
+the connecting mechanism and an “ intermediary ” as the translator by making an issue of the
+interface point ( space) , interface ( culture and society) and junction mechanism ( governance
+mechanism) , so as to dissolve the tension and open the field of grass-roots governance. “ The
+production of the interface ” reveals the production of inclusive institutional flexibility and the
+process of constructing the State-society interface mechanism, reflecting the hidden flexibility of
+power operations, and is of theoretical and practical significance in exploring the frontiers of
+Chinese-style governance modernization.
+229

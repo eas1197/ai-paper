@@ -1,0 +1,136 @@
+{
+  "validated_at": "2026-11-15T15:04:26.775440+08:00",
+  "technical_passed": true,
+  "checks": [
+    {
+      "name": "joint_tests",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v004_第4版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 22,
+      "log": "joint_tests.log"
+    },
+    {
+      "name": "framework_regression",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 9,
+      "log": "framework_regression.log"
+    },
+    {
+      "name": "framework_validation",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tools\\project.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": null,
+      "log": "framework_validation.log"
+    },
+    {
+      "name": "skill_validation",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "C:/Users/hou/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v004_第4版\\skills\\research-evidence-hypotheses"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": null,
+      "log": "skill_validation.log"
+    },
+    {
+      "name": "empty_cli_smoke",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v004_第4版\\tools\\research.py",
+        "run",
+        "--input",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v004_第4版\\templates\\workflow_input.json",
+        "--run-id",
+        "TEST_code_smoke_20261115_150426",
+        "--stage",
+        "both"
+      ],
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "log": "empty_cli_smoke.log",
+      "run_id": "TEST_code_smoke_20261115_150426",
+      "meaning": "empty evidence must not pass; no selected real research topic"
+    }
+  ],
+  "research_completed": false,
+  "business_gates_certified": false,
+  "real_abstracts_claimed": 0,
+  "real_core_fulltexts_claimed": 0,
+  "test_materials": "TEST fixtures in temporary directories only; no survey microdata",
+  "network_or_external_messages": false,
+  "code_files": [
+    {
+      "path": "04_议题文献与现实/v004_第4版/tests/test_workflow.py",
+      "sha256": "2b121a56ec6c4b3778db900b82379d58c994da8ae10e16c29b2aecb12579377e"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/knowledge.py",
+      "sha256": "d87e9270d14f11cba990a7381855f2ca0457dfb8ec2a8cc244cab9f06e2d8db2"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/providers.py",
+      "sha256": "113f085f5fac9fc2ced2f84ebecdb7c19ba3d747cf55c803f37315d48f04eae9"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/research.py",
+      "sha256": "a518ebbb1f5d0ea4bda10cf7ce0b5b20acdec3ae5becb56c530ca01d45ee35ac"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/runtime.py",
+      "sha256": "c0adfbd0f15e3b06d2af58a26428412725b5ed73b11cf60cc5a96a4811c793d4"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/stage04.py",
+      "sha256": "a713d0677688fe7e70b8ae982519561417d8a5c7972840186c7db3d485671f5b"
+    },
+    {
+      "path": "04_议题文献与现实/v004_第4版/tools/verify_release.py",
+      "sha256": "87cca9df05d4afa8ca028ada6cb03229218d7e059de873350be0cdc800a07bc3"
+    },
+    {
+      "path": "05_研究问题与假设/v003_第3版/tools/stage05.py",
+      "sha256": "d8cdcabb4c8b17ab3ba686546ddd04452bbd12c148f2050f00ec8b478c36cb5c"
+    }
+  ]
+}

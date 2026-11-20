@@ -1,0 +1,20 @@
+{
+  "journal_id": "J092",
+  "source_url": "https://xb.gzhu.edu.cn/skb/CN/column/column3.shtml",
+  "retrieved_at": "2026-11-16T15:03:19.366442+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://xb.gzhu.edu.cn/skb/CN/column/column3.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J092_abf427290e19/text.txt",
+  "sha256": "1f68b2a5b264a8460b4db18d58c28a410d571944ccf81534d6e7934b56c213a5",
+  "original_path": "primary_http/J092_abf427290e19/response.html",
+  "original_sha256": "39f6b055954e51b6e27414a6d4e24a355461af4731483aa856b0de61242eb1ca",
+  "line_count": 130,
+  "title": "广州大学学报(社会科学版) 投稿须知",
+  "guideline_links": [
+    "https://xb.gzhu.edu.cn/skb/CN/column/column3.shtml"
+  ],
+  "review_status": "awaiting_source_readback"
+}

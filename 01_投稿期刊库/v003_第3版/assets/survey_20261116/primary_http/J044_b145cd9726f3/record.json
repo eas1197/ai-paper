@@ -1,0 +1,18 @@
+{
+  "journal_id": "J044",
+  "source_url": "https://qks.hunnu.edu.cn/lxwm/qksfwzn.htm",
+  "retrieved_at": "2026-11-16T15:02:51.757478+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://qks.hunnu.edu.cn/lxwm/qksfwzn.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J044_b145cd9726f3/text.txt",
+  "sha256": "53f4a11c8f3e224f67167e8dd0c92a7cf5bfd1e8d46f64db02cdd822a22d447a",
+  "original_path": "primary_http/J044_b145cd9726f3/response.html",
+  "original_sha256": "5229db55d00b760756e27617bdec0a35cba0927aabe5f82f83223e1c39462a28",
+  "line_count": 51,
+  "title": "期刊社服务指南-湖南师范大学期刊社",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

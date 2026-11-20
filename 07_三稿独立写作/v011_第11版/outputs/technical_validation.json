@@ -1,0 +1,93 @@
+{
+  "verified_on": "2026-11-18",
+  "scope": "technical_only",
+  "module_versions": {
+    "02": 5,
+    "03": 5,
+    "07": 11
+  },
+  "mapped_units": 52,
+  "reused_style_rules": 15,
+  "g3_snapshot_files_rehashed": 11,
+  "tests": {
+    "stage07_v11": 6,
+    "stage07_v10": 5,
+    "framework": 9
+  },
+  "framework_valid": true,
+  "verified_behaviors": [
+    "正常prepare命令编译逐段任务",
+    "任务含实际规则、关联材料、段落衔接及合格范例",
+    "阻止跨稿任务、无效证据、段落漏项和修改后的任务文件",
+    "同提纲重试复用，改提纲生成新计划",
+    "技术夹具完成交稿、具名复核和导出",
+    "实盘待审时未生成新冻结写作包"
+  ],
+  "real_research": {
+    "G2": "needs_review",
+    "G3": "needs_review",
+    "G7": "not_run"
+  },
+  "verified_files": [
+    {
+      "path": "00_项目控制/v003_第3版/project_config.json",
+      "sha256": "39d7b54dfb910a0b8f059c67800c24e75e1c6bfae7b0312b1bf0bf70546d63fe"
+    },
+    {
+      "path": "00_项目控制/v003_第3版/module_registry.json",
+      "sha256": "a01b23cf378fd38616e6f7576a081e4a6934b3c9131fe2a876262c4a556e4ef9"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/assets/paragraph_style.json",
+      "sha256": "0f0c4563ebd2eb94aef0463789c7dbf1694fe5f0e11fc986df820ce0d245b19a"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/style_profile.json",
+      "sha256": "4f867c6669633b1a49950416aabaab87cfe8c8a02ae992ddb204b91c088f618d"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/resource_snapshot.json",
+      "sha256": "e45b3ea7c3fb40ead3686fd4e03ca2f5eafd165102f5ba2dda906e5709f02483"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/templates/paragraph_outline.json",
+      "sha256": "4573bfef1134b514bd901d0efb75abd5059399f1f879ee08f17a8d1a907b2184"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/templates/draft_input.json",
+      "sha256": "25c4809757ae6a022f98c5a469e6a63ad2ed8785a72ac81f5c83eec4e89f6f85"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/templates/文字要求.md",
+      "sha256": "4fcacd0d28e1a666a694dacf17f5343a8ac8c50c7d96522931a4e6927706ef8c"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/exemplars07.py",
+      "sha256": "17bad4124fad1a5ff524f92229f98d735ce3537bda616bda987eef3c45824751"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/inputs07.py",
+      "sha256": "e5f891c852116165e41820517498805a98b9578b81cbc076f8d56162fb793686"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/language07.py",
+      "sha256": "d9e7408dc1b2290d9c49f0b2afb65c761db6a6c5711df1ddc52d9363413be9fc"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/manuscript07.py",
+      "sha256": "7b4b5d2728e50d1c6fb3569771dbd5fce488522ab28bf6b7e75ae4af1d904a44"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/paragraph07.py",
+      "sha256": "9754e5916963651a9ad98989e7e027c03c79536826548465504496e6ce316e67"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tools/stage07.py",
+      "sha256": "b32ce7ce91dce56f8d10b25e6d6ff5f05d0e1dde19bf193e2beac39ddfe3d50f"
+    },
+    {
+      "path": "07_三稿独立写作/v011_第11版/tests/test_stage07.py",
+      "sha256": "ff181a91177a67900b774060baea3d7a073d4be93f5c68c618059878cfb0e929"
+    }
+  ]
+}

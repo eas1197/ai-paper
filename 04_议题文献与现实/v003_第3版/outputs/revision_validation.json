@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-14T22:05:25.055931+08:00",
+  "technical_validation_passed": true,
+  "problems": [],
+  "framework": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "architecture_version": "2.1",
+  "budgets": {
+    "body": 15000,
+    "intro": 1800,
+    "literature": 2400,
+    "theory": 2200,
+    "design": 2400,
+    "abstract": 400
+  },
+  "introduction_targeted_comparison_count": 8,
+  "resource_G2_status": "needs_review",
+  "research_gates_evaluated": false,
+  "research_work_executed": false,
+  "formal_database_migrated": false,
+  "crawler_modified": false,
+  "unit_test_result": {
+    "command": "python -m unittest discover -s 00_项目控制/v003_第3版/tests -v",
+    "tests_run": 9,
+    "passed": 9,
+    "failed": 0,
+    "record_basis": "observed command result in current revision session; includes API/CLI without issue, legacy run store and SQLite migration tests"
+  }
+}

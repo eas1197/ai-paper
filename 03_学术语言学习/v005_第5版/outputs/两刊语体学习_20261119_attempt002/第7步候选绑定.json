@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "pilot",
+  "use": "stage07_exemplar_pilot",
+  "created_at": "2026-11-19",
+  "source_module_versions": {
+    "02": 5,
+    "03": 5,
+    "07": 11
+  },
+  "index": {
+    "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/writing_exemplars.json",
+    "sha256": "2e3f7be2bccf368254c37b4a0a95907bb2899e962b4f1cf31bb39f8a94644dfc"
+  },
+  "router": {
+    "path": "07_三稿独立写作/v011_第11版/tools/exemplars07.py",
+    "sha256": "17bad4124fad1a5ff524f92229f98d735ce3537bda616bda987eef3c45824751"
+  },
+  "files": [
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261119_attempt002/结构手册.md",
+      "sha256": "af3bf002f1431ad1554f3a524ab0c0fff8409e7af611532af38cf495e601e94b"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261119_attempt002/覆盖与验收.json",
+      "sha256": "4f27d989ee52db6456003eac925806240f6256979e9c943df2f30dec229969ca"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/语言范例手册.md",
+      "sha256": "818b3e240b99a8383872271a21acacb0ae1dc052cbd61c42e219cc2c44d7bdb6"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/范例核验.json",
+      "sha256": "6a14f27ada8d7e4298b5369448c297d07a12eb859c1cd1722ed87bfee1e713b5"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/第7步范例调用试跑.json",
+      "sha256": "aab58e4f9e2e401dcf34b6402f32737b25cb54399fb7d6b81aa22dfab88613af"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/第7步使用说明.md",
+      "sha256": "0a28052cfe4d70ff273a6b659d84e7bb37561145825adc4620341ec9e9481cf3"
+    },
+    {
+      "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/build_examples.py",
+      "sha256": "daef61c4800b3c59c699f7a268f585c5ad7f7077992ab7561cb33ea495d264aa"
+    }
+  ]
+}

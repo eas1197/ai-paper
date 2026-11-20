@@ -1,0 +1,9 @@
+{
+  "journal_id": "J064",
+  "source_url": "http://www.xueshujie.net.cn/",
+  "retrieved_at": "2026-11-16T15:04:28.689593+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "ConnectionError",
+  "reason": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+}

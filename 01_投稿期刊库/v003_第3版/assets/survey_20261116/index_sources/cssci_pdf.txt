@@ -1,0 +1,8 @@
+附件下载 (https://www.csust.edu.cn/system/_content/download.jsp?owner=1383593566&urltype=news.DownloadAttachUrl&wbfileid=11754736)
+citeturn36view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({"ref_id":"turn10view0","id":36}); Total lines: 5
+L0: # 请输入验证码下载附件
+L1: 
+L2: [Input]
+L3: 
+L4: [Input]
+

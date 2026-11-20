@@ -1,0 +1,18 @@
+{
+  "module_id": "05",
+  "name": "研究问题与假设",
+  "version": 6,
+  "version_label": "第6版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "implementation_status": "implemented",
+  "business_status": "planned",
+  "depends_on": ["04"],
+  "expected_artifacts": [
+    "bundle.json", "stage_manifest.json", "gate_report.json", "reasoning_tasks.json",
+    "question_learning.json", "question_review.json", "hypotheses.json", "analysis_design.json",
+    "feedback_to_04.json", "writing_handoff.json", "gap_cards.csv", "same_level_review.csv",
+    "literature_dialogue.csv", "knowledge.sqlite"
+  ],
+  "folders": ["tools", "tests", "templates", "skills", "outputs", "assets/literature", "assets/policies", "assets/news"]
+}

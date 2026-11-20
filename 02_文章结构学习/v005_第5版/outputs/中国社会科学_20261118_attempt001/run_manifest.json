@@ -1,0 +1,144 @@
+{
+  "run_id": "中国社会科学_20261118_attempt001",
+  "stage_id": "02",
+  "attempt": 1,
+  "module_version": 5,
+  "schema_version": 1,
+  "status": "needs_review",
+  "audit_status": "attachment_hashes_index_and_annotation_coverage_checked",
+  "checked_at": "2026-11-18T14:19:31+08:00",
+  "coverage": {
+    "zotero_records": 58,
+    "unique_articles": 55,
+    "direct_pdf_files_sha256_checked": 58,
+    "pdf_pages_of_canonical_attachments": 1038,
+    "indexed_paragraph_candidates": 4028,
+    "indexed_sentence_candidates": 16533,
+    "articles_with_section_overview": 55,
+    "articles_with_full_annotation": 1,
+    "articles_with_partial_annotation": 1,
+    "articles_with_section_overview_only": 53,
+    "close_reading_paragraphs": 24,
+    "close_reading_sentences": 115
+  },
+  "source_snapshot": {
+    "zotero_query_export": "馆藏清单.json",
+    "sha256": "9bd1a788a2cc09c5c1effab9884144e15e03d53f61d6cec027ebd69a1f19814c"
+  },
+  "config": {
+    "publicationTitle": "中国社会科学",
+    "deleted": false,
+    "attachment_type": "application/pdf",
+    "dedup_fields": [
+      "normalized_title",
+      "year",
+      "issue",
+      "pages"
+    ],
+    "selection": "use available stored PDF; select duplicate with fuller Zotero text cache unless reused identified source"
+  },
+  "random_seed": null,
+  "runtime": {
+    "python": "3.10.11"
+  },
+  "code_sha256": {
+    "build_index.py": "1cb124f7ebfc10853e4aa83f7e211626b4bdaf1cef6e0fc19e69a9a3f27ca662",
+    "publish_report.py": "f5799259167bb8102adeb9c93250b30be6ac54eb948efcc653b03eee14e601bb"
+  },
+  "root_requirements_sha256": {
+    "AGENTS.md": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd",
+    "基础要求.md": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b",
+    "项目架构.md": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+  },
+  "output_sha256": {
+    "馆藏清单.json": "9bd1a788a2cc09c5c1effab9884144e15e03d53f61d6cec027ebd69a1f19814c",
+    "阅读总目录.md": "4fd9df60a11b8fba6195799531e71ee996332aea4323c0310d9412aee92575ab",
+    "章节路线.tsv": "7a16a764b37093d5d297e4987b94001ed5d294a46b23ab56365509c1441f107c",
+    "逐篇解析/01_第二个结合与文化主体性重建.md": "ea34a8f7cad82fb5e1d4bdac2b56cc9e571a52fe288febe634600e4d899b7b65",
+    "逐篇解析/02_制度的力量_摘要引言与第一节.md": "b787c8516bbf97d32af4717108d21d45a85a7dccffe0694bfc7bec70a13d8f37",
+    "定位索引/zotero_2PRH25QY.json": "d797159bbc4c50a003771becb9d9b2efce024bbb0fe0386de93d286ced9694eb",
+    "定位索引/zotero_2SKTAPLF.json": "8f0898f61071bb3b813bed95cf66bdaebd400f47bf1a9c6e8a1a29e24e6512bd",
+    "定位索引/zotero_3NGT5FI8.json": "a7d3734e0e6fb9b0d0a2cc911793bf824e913efd060109c0be9b3f399db0af9e",
+    "定位索引/zotero_4F8LIAPK.json": "2fd322a1a9fb69f7c86619148f4eb54859bf1183021680440528bb9b7c54ac9d",
+    "定位索引/zotero_54PYRR8V.json": "6e4ea96450096342068fd655148a83a37840f4c3271e3859aa6b8de10cd501c8",
+    "定位索引/zotero_5MVN2QLE.json": "90af2263afc57ed513373489971474147cc8c9d4e934964c1831d9526817f960",
+    "定位索引/zotero_5U4B28WH.json": "891c1b26d2de39274e6d6c227027a84f9c22c7d221ef4273e008c23e84ed20b1",
+    "定位索引/zotero_6V7LJIWN.json": "6aa7389d7a5cca00fa568459c603b6536f8cf7987d7cda3ec567d48c399b5e4e",
+    "定位索引/zotero_7A7CYZHB.json": "bff943e3ddf9514df1c6fe46fda55407678c5f98594f08fbf1628486e2239b26",
+    "定位索引/zotero_7J3YM4I3.json": "b8e77587cfd7012f73020304ed963fcff47ca0e42187098fd4de0de7751a87e0",
+    "定位索引/zotero_7UXDWS84.json": "3b49cad74fe8a950bc5975c3b04804b99c124ee56e5d5850361b77aa36487e86",
+    "定位索引/zotero_7YINUFQE.json": "7388f5a38977dde854765cfc358e0e44c8ec47c63300b416cfe4d5bf08b7420a",
+    "定位索引/zotero_8B575M9S.json": "359be2ed6b58fac9be4edd241de7cc807a0da99853a2b88cb72e6056fdd1d2b4",
+    "定位索引/zotero_8DMURTFB.json": "bd742bf4f91f9826c262640bfdd3f99d6e60f8d5d1abc538b0f2700e375303da",
+    "定位索引/zotero_92KQFMTM.json": "fb4d39b17f44757e003aa27c8be503bd2a83a90f85c128d2894345f87a0b665e",
+    "定位索引/zotero_A957WGGX.json": "863c64c3644e037c23c626c27c502693d18e54aeb81a9f773903fce9af937f4f",
+    "定位索引/zotero_BKFZB8L3.json": "0d676b56a2b4f54aec50cdd963a1d987199bb074f2904a6f5d6ebf7ac5a97cf3",
+    "定位索引/zotero_BNM39FUG.json": "55faa4725700b5d8b524d79688e01f54a23f0831e063ec589e9471d297c1f71a",
+    "定位索引/zotero_CX9UWVCX.json": "3e06a3a06ca1286f21303f63f04edbe2aa72a7765acbfbfce9458c79d17dca49",
+    "定位索引/zotero_DYHE6Y6S.json": "8b556067250b173f5af3f77cc254cc6bdedf1d4fd84f7e0c4b18228f7b5a56c7",
+    "定位索引/zotero_ETXRUCCP.json": "f99b65a2799596fb8d4351f37547184ded00b0ded2158d41352ff6def27b7569",
+    "定位索引/zotero_F4PTY3QU.json": "c5241a4ec9a838af8317f30443a66f2f7567f67a52a93d1f65d776a0da6134df",
+    "定位索引/zotero_FMHR8BVR.json": "457e402be19e951046cd9ff5af75c4feb0dd1a51c6fceb7678bd2c5a0d134b88",
+    "定位索引/zotero_FMVMG85L.json": "cfa9e702723e80417e57cab93a02ca99c0bc0d3588e5d981d3565634f5040f4d",
+    "定位索引/zotero_G5HIFZKQ.json": "a6748dce52b1ca79cdec8c6a20ddce4313ab33a36c639f4a76e1f03a777deee8",
+    "定位索引/zotero_GH5AUS65.json": "dbb7d28f518a58f053e6a6efdfba15a33140de6d7f5b061fd25927a6e6f5d782",
+    "定位索引/zotero_HVGMWXVR.json": "cac9571b6b7d8d34fde239619ab0b48630eb02195b7a7dee1f905e0cd58a034d",
+    "定位索引/zotero_I89YJHR3.json": "d9677d88a5bcbcd1773c516db001d832d7598065bc0a1b98093d6b8647e82772",
+    "定位索引/zotero_IJQN5C7W.json": "cfe369bd04ff90baa487f7b862a6df545d608acab9a0e865a2325df7e8a6c919",
+    "定位索引/zotero_J38BV4A5.json": "27fea490a17239fb182d8f1f9a96e894f0530d8335832cca83e02888a48b1cf0",
+    "定位索引/zotero_J5XDE43I.json": "8f838b809615f971ac5353e80e0177f4df5beea6881bae285e1a6172e13082ff",
+    "定位索引/zotero_JCC2JPZI.json": "b6b95a818e855ba6c8e49d899a096478e5cbccbfa782293b6ae9b578e28c149d",
+    "定位索引/zotero_LS93R9SS.json": "50f9359f2eea3968c15d775bd2d9764f8c6cdd4c13a2efddb0252d833cd2b71c",
+    "定位索引/zotero_M739AK9Q.json": "a66de769f608cc20f455628703aaaf687f570c3a42017b16db79f9a523fdfdf6",
+    "定位索引/zotero_MY99VSIF.json": "be42afb96e636443649c110d45abe76db6cc9d5901dbd7965b35ee564798a3c9",
+    "定位索引/zotero_NHCSKDDH.json": "67bc7d59d3827f2f59991f17df0866d9bfbd1b9bcdf0025456e4edc048a64061",
+    "定位索引/zotero_PWF8S8JJ.json": "d5999708c1cd6348339c7f070752e2da73f4ef0e2a0410e60ec60556cd965bec",
+    "定位索引/zotero_Q4SW7T4Q.json": "a6d7e44923495a4bee88ddff65f5ff3bc2a28cad9e25a2a9fed8dc10c4ccd2a4",
+    "定位索引/zotero_S823QAM2.json": "2b27736c1058cd77180729a3c33db349e6810b7ab547afa1060f10480133a57b",
+    "定位索引/zotero_SCBEKA84.json": "af2bf5012ea9ae1cec75aebb8b90d110073d79a20dfa22765e1e0da62b9136e1",
+    "定位索引/zotero_SCCKUUS9.json": "7bf1fa9bbe94fd9705a0984efc1233a31bb2ca1a053560ffa631de710bad2b03",
+    "定位索引/zotero_T4W3ZV7U.json": "5cf588a6687b2820b59e2d497a5af4b6668b4b6d0a6acfe2f773931fc4c55db3",
+    "定位索引/zotero_TWLELHMQ.json": "2a2182cd8d5410d206a53e5903a2b4122eb73cce56e9df82f96f6bc1cb965ce1",
+    "定位索引/zotero_UE3BAWPD.json": "6c34f6f3cf1377714358c1a13598eb66dda5da296b30668c67d9b8222db92e86",
+    "定位索引/zotero_UIIDHQM6.json": "0467fd0fb6900ec3804621cb4f5cbda9937073fda4f4081a8fab4a4aba296f47",
+    "定位索引/zotero_VF4H54SG.json": "a871ebbdc30e9507d03b3994f9d7dc90bd897367a9c4458b31413341c5b59bfe",
+    "定位索引/zotero_VTLX3U9G.json": "0691c94abe0ae1d37155714957290bfc90338099c1d5f17ad9b55f6369293290",
+    "定位索引/zotero_WLY82J4Z.json": "dbcfc4a5c7af529156e002332197693a0ec348b6934269109e439dd9a4bcd566",
+    "定位索引/zotero_WPWDXCNN.json": "bc5a1a9313d67201bac042878031fe5e3090b8f0e2706d8d77e376378cce8f97",
+    "定位索引/zotero_XVT9ELUY.json": "e079d2a98ffcd4b873a7b29605ec8ce0ad60bca989a8c1df41fa2648ca8e7e83",
+    "定位索引/zotero_Y32DRMKW.json": "f74e3f7496134ec203d11b390d2d909fb84d17620ec18a696848953946e34641",
+    "定位索引/zotero_Y8WNZ3AN.json": "5520b91d2634b1af85cf5c27e231bfb68cb56381dc4ec23310ed788a1052362b",
+    "定位索引/zotero_YA5NETQ4.json": "9f598b6dc29be460504d8b714e895e6bd0f9ec7ff0e1427963e1e2b0d48879a7",
+    "定位索引/zotero_ZCHRDIAX.json": "04bfd5b66994b1a0ce6d8a97ca80eb3c888c1b7d6b264ac63b0ca908a16cb1eb",
+    "定位索引/zotero_ZVEEAGSX.json": "b934699a7b3eec934fc612b8ab25b7557573724e4e29a8e58b89bf67e2b7f06b"
+  },
+  "annotation_coverage": {
+    "WPWDXCNN": {
+      "file": "逐篇解析/01_第二个结合与文化主体性重建.md",
+      "paragraphs": 10,
+      "sentences": 45,
+      "status": "正文逐句逐段完成"
+    },
+    "6V7LJIWN": {
+      "file": "逐篇解析/02_制度的力量_摘要引言与第一节.md",
+      "paragraphs": 14,
+      "sentences": 70,
+      "status": "已逐句分析摘要、引言与第一节"
+    }
+  },
+  "verified_footnote_fragments": {
+    "6V7LJIWN": [
+      "P008"
+    ]
+  },
+  "pdf_extraction_flags": {
+    "zotero_8B575M9S": [
+      "双栏及缺字页需回看原版"
+    ]
+  },
+  "limits": [
+    "All 55 section maps are preliminary readings. Full annotation only in the recorded scope.",
+    "Existing shared resource gate G2/G3 is unaffected; candidate index counts are not annotation counts."
+  ],
+  "config_sha256": "35a1336762f70b1089bae4af731af90fdd28e57e4e44e3a8b26c39c2a9115357"
+}

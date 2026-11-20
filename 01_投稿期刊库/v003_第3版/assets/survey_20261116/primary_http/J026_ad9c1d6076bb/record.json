@@ -1,0 +1,18 @@
+{
+  "journal_id": "J026",
+  "source_url": "https://www.cnsaes.org.cn/news?id=13669&orgId=33",
+  "retrieved_at": "2026-11-16T15:03:49.059660+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.cnsaes.org.cn/news?id=13669&orgId=33",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J026_ad9c1d6076bb/text.txt",
+  "sha256": "fcd65444194d9eea092bf5d7596340e68e08b0f1c4778f6746be55ad7d491152",
+  "original_path": "primary_http/J026_ad9c1d6076bb/response.html",
+  "original_sha256": "dd75261dd62fc9d646d209a4b5a9172f6b1a51a6ae91dbe761086761701267ca",
+  "line_count": 1,
+  "title": "上海市教育科学研究院",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

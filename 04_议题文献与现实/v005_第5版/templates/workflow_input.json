@@ -1,0 +1,19 @@
+{
+  "config": {
+    "abstract_target": 100,
+    "core_target": 25,
+    "seed": 20261114,
+    "model_call_limit": 12
+  },
+  "04": {
+    "theme": null,
+    "literature": [],
+    "annotations": null,
+    "quality_review": null
+  },
+  "05": {
+    "upstream": null,
+    "annotations": null,
+    "quality_review": null
+  }
+}

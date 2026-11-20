@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-15",
+  "from_module_version": 3,
+  "to_module_version": 4,
+  "previous_control_files": [
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/activation_before/module_registry.json",
+      "sha256": "ef3147b0e8c01e76ea928a3008eed83dcb05938b47fcf90337befd3949f33f41"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/activation_before/project_config.json",
+      "sha256": "2c6f4049a11e77f39cba25b4b28c74e8fb55f5762ae40133f23ff6a2419d8fa2"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/activation_before/版本索引.md",
+      "sha256": "eb089019d6108e686f2e59d33d9e5db275463ba95c12856ad4c7f36bb2156919"
+    }
+  ],
+  "active_registry": {
+    "path": "00_项目控制/v003_第3版/module_registry.json",
+    "sha256": "1e1af67a3e5794754d72432167551769fa786d2e3d2952e6564ad0d990dd2024"
+  },
+  "active_config": {
+    "path": "00_项目控制/v003_第3版/project_config.json",
+    "sha256": "e4354a3755f1838e75450a00a606523a3c6855753ea928dabd1d85fc9c55b055"
+  },
+  "old_runs_migrated": false
+}

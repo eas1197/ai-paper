@@ -1,0 +1,20 @@
+{
+  "journal_id": "J039",
+  "source_url": "https://jykx.lnnu.edu.cn/CN/column/column9.shtml",
+  "retrieved_at": "2026-11-16T15:05:01.225382+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jykx.lnnu.edu.cn/CN/column/column9.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J039_e0e354731fc6/text.txt",
+  "sha256": "04a657cad79419c4b7eed21ec4c9abfaedda0b070f60fc7f32fc156183c4faf1",
+  "original_path": "primary_http/J039_e0e354731fc6/response.html",
+  "original_sha256": "46a40b4b20f170667032d1257f5b5aee023b16438c57b33d4c094a8828ececc7",
+  "line_count": 128,
+  "title": "教育科学 投稿指南",
+  "guideline_links": [
+    "https://jykx.lnnu.edu.cn/CN/column/column9.shtml"
+  ],
+  "review_status": "awaiting_source_readback"
+}

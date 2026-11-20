@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-14T21:10:37.043310+08:00",
+  "passed": true,
+  "problems": [],
+  "framework": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "profile_version": "2.0",
+  "preferred_views": [
+    2,
+    4
+  ],
+  "view_relation_count": 7,
+  "budget_sums_checked": [
+    1800,
+    2400,
+    2200,
+    15000
+  ],
+  "resource_G2_status": "needs_review",
+  "research_gates_evaluated": false,
+  "empirical_work_executed": false,
+  "crawler_modified": false
+}

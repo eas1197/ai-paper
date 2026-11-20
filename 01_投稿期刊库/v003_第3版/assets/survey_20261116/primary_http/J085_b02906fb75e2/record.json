@@ -1,0 +1,20 @@
+{
+  "journal_id": "J085",
+  "source_url": "https://hnsk.cbpt.cnki.net/portal/journal/portal/client/news/HNSK_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:05:16.722592+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://hnsk.cbpt.cnki.net/portal/journal/portal/client/news/HNSK_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J085_b02906fb75e2/text.txt",
+  "sha256": "e7aa921b589e73cfd732a086b7b0a7e5b9efb9fa24f979f367ab2b7e18764322",
+  "original_path": "primary_http/J085_b02906fb75e2/response.html",
+  "original_sha256": "d0ec22ea02ccf4a3e02dcc6bb1f9f6d71faca8cf7bf27407350a592b5ee8025a",
+  "line_count": 93,
+  "title": "河南师范大学学报(哲学社会科学版)",
+  "guideline_links": [
+    "https://hnsk.cbpt.cnki.net/portal/journal/portal/client/news/HNSK_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

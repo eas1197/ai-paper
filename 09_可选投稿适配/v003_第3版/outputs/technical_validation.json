@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-18",
+  "exit_code": 0,
+  "log": "test_accepted_family_stops_other_versions (test_submission.SubmissionTests) ... ok\r\ntest_active_submission_cannot_be_superseded (test_submission.SubmissionTests) ... ok\r\ntest_approval_hash_must_match_body_and_recipient (test_submission.SubmissionTests) ... ok\r\ntest_different_families_can_be_active (test_submission.SubmissionTests) ... ok\r\ntest_disabled_stage_has_no_workspace_or_network (test_submission.SubmissionTests) ... ok\r\ntest_duplicate_journal_blocks_sampling (test_submission.SubmissionTests) ... ok\r\ntest_insufficient_pool_cannot_pad (test_submission.SubmissionTests) ... ok\r\ntest_only_one_active_per_family (test_submission.SubmissionTests) ... ok\r\ntest_pending_predecessor_cannot_be_skipped (test_submission.SubmissionTests) ... ok\r\ntest_rejected_with_receipt_unlocks_next (test_submission.SubmissionTests) ... ok\r\ntest_seed_and_order_reproducible (test_submission.SubmissionTests) ... ok\r\ntest_timeout_cannot_be_treated_as_rejection (test_submission.SubmissionTests) ... ok\r\ntest_unknown_delivery_blocks_next (test_submission.SubmissionTests) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 13 tests in 0.449s\r\n\r\nOK\r\n",
+  "test_sources": {
+    "test_submission.py": "233aa2c97220d96796220bdc81c96a2030f6a69beb3be0dbc9ae8dcc0ef653a5"
+  }
+}

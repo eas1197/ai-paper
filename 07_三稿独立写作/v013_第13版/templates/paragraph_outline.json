@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "pack_id": "由prepare返回的pack_id",
+  "label": "A",
+  "paragraphs": [
+    {
+      "paragraph_id": "P01",
+      "heading": "摘要",
+      "units": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "continues": "全文的研究问题和主要证据",
+      "purpose": "简要交代对象、资料、答案和新增认识",
+      "sources": {
+        "result_ids": [
+          "RESULT_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P02",
+      "heading": "一、问题的提出",
+      "units": [
+        "I3",
+        "I4",
+        "I5"
+      ],
+      "continues": "已经交代的研究情境与对象",
+      "purpose": "提出一个具体、可回答的问题",
+      "sources": {
+        "evidence_ids": [
+          "EVIDENCE_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P03",
+      "heading": "二、文献回顾",
+      "units": [
+        "L0",
+        "L_PATH"
+      ],
+      "continues": "引言提出的关系",
+      "purpose": "解释一条具体文献路径及其适用范围",
+      "sources": {
+        "evidence_ids": [
+          "EVIDENCE_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P04",
+      "heading": "三、理论分析与研究假设",
+      "units": [
+        "T1",
+        "T2"
+      ],
+      "continues": "已界定的解释路径",
+      "purpose": "说明理论理由并导出一项可观察预期",
+      "sources": {
+        "evidence_ids": [
+          "EVIDENCE_ID"
+        ],
+        "hypothesis_ids": [
+          "HYPOTHESIS_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P05",
+      "heading": "四、研究设计",
+      "units": [
+        "D3",
+        "D4",
+        "D7"
+      ],
+      "continues": "需要识别的关系与假设",
+      "purpose": "交代真实测量和比较如何对应这个问题",
+      "sources": {
+        "variable_ids": [
+          "VARIABLE_ID"
+        ],
+        "model_ids": [
+          "MODEL_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P06",
+      "heading": "五、实证结果",
+      "units": [
+        "R4",
+        "R6"
+      ],
+      "continues": "已交代的估计对象和比较组",
+      "purpose": "并列报告主要估计并直接回答问题",
+      "sources": {
+        "result_ids": [
+          "RESULT_ID"
+        ]
+      }
+    },
+    {
+      "paragraph_id": "P07",
+      "heading": "六、结论与讨论",
+      "units": [
+        "C1",
+        "C4"
+      ],
+      "continues": "实证结果已给出的集中答案",
+      "purpose": "带上关键适用条件，回应开篇及既有命题",
+      "sources": {
+        "result_ids": [
+          "RESULT_ID"
+        ],
+        "evidence_ids": [
+          "EVIDENCE_ID"
+        ]
+      }
+    }
+  ]
+}

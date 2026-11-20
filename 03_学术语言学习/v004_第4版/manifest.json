@@ -1,0 +1,16 @@
+{
+  "module_id": "03",
+  "name": "学术语言风格学习",
+  "version": 4,
+  "version_label": "第4版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "needs_review",
+  "depends_on": ["02", "10"],
+  "expected_artifacts": ["language_rules.csv", "original_examples.md", "language_audit.csv", "style_profile.json"],
+  "folders": ["assets", "templates", "tools", "outputs"],
+  "execution_scope": "shared_resource",
+  "resource_version": 2,
+  "focus": "lexicon_syntax_rhythm_cohesion_voice",
+  "formal_release": false
+}

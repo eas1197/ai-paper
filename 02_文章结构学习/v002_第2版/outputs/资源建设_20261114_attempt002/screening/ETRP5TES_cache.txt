@@ -1,0 +1,548 @@
+80 总第四O 五期
+互联网已深度融入现代人的日常生活,人际互动也因此呈现出新格局。虚拟情境下,人与
+人的互动面临道德边界划定、礼仪重塑等诸多问题。网络容纳多元话语的同时,也成为网民情
+绪宣泄的平台,网络暴力事件频发,对事件当事人造成了不可逆的伤害,如 2023 年 6 月 2 日,
+“武汉校内被撞小学生母亲坠楼”事件引发广泛关注。社会热点议题进入网络公共话语空间,说
+明事件引起了多方关注,应该在反思社会现状的同时完善社会治理体系。该事件本应是校园安全
+治理的典型事件,但网民却对当事人展开话语质疑与攻击,使得网络暴力再次成为社会讨论的焦
+点。虽然社会各界都重视网络暴力问题,但依然难以根除,这也是社会治理中难以避开的问题。
+当下,网络暴力表现形式呈现多样化的态势,不同网络暴力案件的发生情境、演化过程、参与主
+条件与机制 :网络暴力的 社会心态透视
+王俊秀 1 云 庆 2
+【内容摘要】 网络因具备了消解暴力者“冲突性紧张”的条件,从而导致网络暴力易发。对此,可以
+从社会认知、社会情绪、社会价值观等社会心态的核心内容层面对网络暴力的发生机制
+进行分析。其中,信息简化使事实标签化、身份区隔使不同群体观念对立、部分主体为
+获取流量而误导网民,是网络暴力发生的社会认知机制;因与分享者观念冲突而导致情
+绪倒错,网络的情绪聚集使得负向情绪相互感染,是网络暴力发生的社会情绪机制;网
+络去抑制效应下的“道德假期”及施暴者假借道德名义肆意审判和惩罚,是网络暴力发
+生的社会价值观机制。基于此,应从网络使用者个体、互联网平台、媒体和社会协同治
+理的角度,探索网络暴力治理的基本路径。
+【关 键 词】 网络暴力 社会心态 冲突性紧张 道德假期
+【作 者】 1 王俊秀,温州医科大学精神医学学院特聘教授,中国社会科学院社会学所研究员。(浙
+江温州 325035)
+2 云 庆,中国社会科学院社会学所博士后。(北京 100732)
+·网络暴力治理专题·
+微信公众号
+
+
+争 鸣 二 O 二三年 第七期
+81
++VM 2023
+体均有所不同,但其背后反映的社会心态具有一定相似性,本文以社会心态理论为分析框架,从
+社会认知、社会情绪、社会价值观念三个方面对网络暴力进行分析,并以此为基础进一步探究网
+络暴力的社会治理手段。
+“冲突性紧张”的消弭与网络暴力的产生
+近期的网络暴力事件表现出一些新的特征。一是多发、易发。网络暴力事件时时刻刻都在发生,
+且任何信息或事件都可能引发网络暴力,任何人都可能成为网络暴力攻击的对象。2022 年的一项
+调研结果显示,有 61.11% 的受访网民或多或少遭遇过网络暴力。1二是施暴者众多。众多的网民
+都可能成为网络暴力中的施暴者,他们在各类平台随意发泄自己的不满情绪,并不在意由此导致
+的消极影响。
+人们一般认为,在传统社会,“人类只有在特定社会形态下才会诉诸系统的暴力行动,暴力
+绝不仅仅源于人类出于自我保护的生理反应或追求利益的心理动机,它更是一种社会现象和社会
+过程。但暴力并不是社会失序的必然产物,它离不开一系列复杂的社会机制”。2作为争夺资源和
+利益的工具,暴力与人类的历史一样悠久,并且随着现代文明进程的推进在逐渐减少。但是,进
+入互联网时代,这一特点似乎发生了变化,网络暴力这种新的暴力形态出现,并随着互联网的普
+及呈现出逐渐上升的趋势。虽然互联网主管部门及各大互联网平台对网络暴力的治理力度不断加
+大,但依然难以遏制网络暴力蔓延的势头。网络暴力的社会治理建立在对网络暴力的深入研究基
+础之上,因此必须搞清网络暴力的发生和蔓延背后有着怎样的社会机制和社会心理规律。
+传统暴力是指在实体空间中发生的,施暴者与受暴者同时在场,并经常以身体甚至生命的侵
+害为主,并且必然伴有心理上的伤害,主要的表现形式包括肢体冲突、虐待、恐吓或杀害等。网
+络暴力是指一些人在互联网空间内的社交媒体平台,以攻击性的言论或信息对他人进行恶意攻击、
+侮辱、威胁或造谣的行为。网络暴力伴随着互联网而生,与传统意义上的暴力有着根本性的区别。
+网络暴力一般指发生在虚拟空间的暴力行为,主要存在于互联网平台等公共领域,施暴者和受暴
+者并不发生面对面的互动和冲突,且施暴者常常具有匿名性,施暴的过程完全公开,并有大规模
+传播的可能。
+除特殊情况下,传统的暴力基本发生于个体或少数人之间,但网络暴力的施暴者经常人数众
+多,且这些施暴者之间一般并无联系,他们与受暴者之间也并无恩怨和利益冲突。因为网络暴力
+发生在公共网络空间,因此有大量的与双方均无关联的围观者,这些围观者甚至也可能加入施暴
+者的行列。网络暴力的表现形式包括散布谣言、人肉搜索、恶意评论和诽谤,以及滥用图片和视
+频等。网络暴力是一种精神暴力,会对受害者造成心理层面的消极影响,3严重的甚至会导致受
+害者产生自我否定、抑郁症甚至自杀等极端行为。
+以上这些是传统暴力与网络暴力的表面特征,要理解网络暴力为什么容易发生,首先应了解
+传统暴力为什么逐渐减少,或者说为什么并不是非常容易发生。
+兰德尔·柯林斯在《暴力 :一种微观社会学理论》中为我们揭示了暴力鲜为人知的真相。他
+分析了不同种类的暴力形式,通过对各种形式的材料的分析,提出没有暴力个体只有暴力情境的
+论断,认为是情境塑造了个体的情绪和行为。他通过对暴力发生时的互动情境分析发现,“暴力
+在真实情境中表现为人类恐惧、愤怒、激动等情绪的交织,其方式往往与正常情境中的传统道德
+1 企 鹅 有 调:
+《2022 年 全 国 网
+民网络 安 全 感满
+意度“网络 暴力
+防控与网络文明”
+专题 调查报 告》
+https://www.iscn.
+org.cn,2022 年
+12 月18日。
+2 罗杰·古尔德 :
+《意愿的冲撞 :社
+会等级的歧义如
+何孕育冲突》,吴
+心 越 译, 上 海 :
+华东师范大学出版
+社,2018 年,总序。
+3 参见彭凯平等:
+《虚拟社 会心理
+学 :现实,探索及
+意义》,《心 理 科
+学进 展》2011 年
+第 7 期。
+
+
+82 总第四O 五期
+背道而驰”,“暴力是围绕在冲突性紧张和恐惧周围的一系列路径”。1用通俗的话讲,在各种暴力
+冲突中,大部分的暴力参与者的表情是恐惧的,即使是那些因为愤怒所引发的暴力,在暴力发生
+时参与者也是恐惧的,柯林斯称之为“冲突性紧张”。这样的话,“暴力究竟是否会发生,取决于
+一系列条件或曰转折点将会往哪个方向塑造这种紧张和恐惧,并如何重新将在场所有人的情绪组
+织为一个互动过程,包括敌对双方、观众乃至表面完全不相干的路人”。2也就是说,暴力的发生
+取决于施暴者如何绕过“冲突性紧张”,柯林斯总结了施暴者绕过障碍的三个条件 :第一个条件
+是攻击弱者,既包括身体的弱者也包括情境中的弱者 ;第二个条件是一群高度团结的暴力行动者
+从彼此身上获得社会支持,通过把注意力集中在自己的节奏上而忽略了与敌对者之间的冲突性紧
+张 ;第三个条件是有一群观众围观,施暴者由于关注自己在围观者眼中的表现而忽视了冲突性紧
+张,暴力成了为围观者的表演。3柯林斯对传统暴力的透彻分析,解释了为什么当下环境的传统
+暴力越来越少,即暴力发生的条件已不具备。同时,这也让我们理解了为什么网络暴力更容易发生,
+因为网络满足了暴力的行动者彻底摆脱冲突性紧张的三个条件。
+首先,网络冲突的非面对面互动消除了暴力的情境性,施暴者不会体会到紧张和恐惧,网络
+的匿名性更使得施暴者仿佛带上了传统暴力行动者所佩戴的面具,可以轻松逃避追责。相比之下,
+被施暴者彻底沦为弱者。其次,网络暴力的施暴者很容易获得群体性支持,虽然并非是团结的,
+但暴力参与者的行动确实具有一致性,甚至是竞赛性地争相施恶。我们看到许多网络暴力场景都
+是一言不合“群起而攻之”,看到有众多助攻者,暴力行动者似乎有着“替天行道”的“使命感”。
+最后,网络中从来不缺乏围观者,任何言论、事件、人物都是会成为被评头论足的对象。网络暴
+力的攻击过程更能吸引所谓的“吃瓜群众”,这些围观者或者加入施暴者行列,或者无形中成为
+网络暴力的观众,成了网络暴力表演的欣赏者,起到了“助纣为虐”的效果。
+柯林斯的暴力理论的核心是冲突情境中的紧张和恐惧情绪,这为我们理解网络暴力提供了一
+个视角,网络具备了消解暴力者冲突性紧张的条件,使得网络暴力易发,但网络暴力的频发还有
+一些另外的原因,包括社会认知、社会价值观、其他社会情绪和社会认同等,这些也是社会心态
+的主要指标,接下来我们将进一步分析网络暴力发生的社会心态机制。
+网络暴力的社会心态分析
+社会心态研究作为一种宏观的社会心理研究范式,关注一定时期的社会心理特点及其变化,
+并试图解释社会发展变迁中凸显的关键问题。社会心态受一定时期的社会环境和文化等因素的影
+响,可以从社会成员的心理特点和行为模式中捕捉到。社会心态研究既关注社会文化中深层、稳
+定的成分,也关注随社会变迁、社会转型而变化的成分,既研究整体的社会心态,也研究局部的
+社会心态。4因为网络暴力的发生在不同程度上与社会价值观念的变化有内在的一致性。例如,“高
+考宣誓女孩被网暴”的发生背景,是“躺平”成为当下不可忽视的社会心态。
+社会心态的研究关注个体如何集结为群体,群体是如何思维与行动的,个体心理与群体心理
+的关系为何?网络暴力作为一种产生于群体的暴力行为,行动者之间怎样的连接使得个体行为转
+变为群体暴力?现有对网络暴力的研究虽然将其归类为社会心态问题,但还未触及背后的具体机
+制。个体在网络环境中如何被聚集?个人评论转变为集体讨伐的机制是什么?这是本文关注的核
+心议题。
+123 兰德
+尔·柯林斯 :《暴
+力:一种微 观社
+会学理论》,刘冉
+译,北京 :北京大
+学出版社,2016 年,
+中译版序。
+4 参见王俊秀:
+《社 会心态的机
+构 和 指 标 体系》,
+《社会科学战线》
+2013 年第 2 期。
+
+
+争 鸣 二 O 二三年 第七期
+83
++VM 2023
+(一)网络暴力产生的社会认知机制
+许多网络暴力的发生是由一些人对事件中的个人行为或观点的错误认知或偏见所引发的,或
+者是因信息简化、事实标签化,或者是身份的区隔带来观念对立,或者是某些主张为获取商业流
+量而误导网民,这是网络暴力发生的社会认知机制。
+1. 信息简化造成事实标签化
+与传统读书、读报等信息获取方式不同,互联网信息的获取者面对海量信息,往往缺乏足够
+的耐心,其不再是仔细阅读,而是快速浏览,即使是完整的事件或故事,经过信息获取者的主观
+提取也会成为点状或片状的认知结果。所谓点状的认知结果,可能就是一个符号、一个简单化的
+结论。2022 年 1 月,在“刘学州事件”中,部分媒体只选择一些吸引眼球的信息进行片面化展示,
+为网络群体获取“关键”信息提供了便利。此外,寻亲事件的人物焦点从刘学州自己到父母再到
+奶奶,叙事内容从通过寻亲赚取流量再到利用舆论要求买房,事件的焦点不断被转移,就是信息
+简化造成的结果。
+面对面交流时,我们可以获知相对方的身份、地位、言谈举止等信息,而网络交流以被简化
+的符号和文字为基础,判断信息可信与否的参考因素单一,海量网络信息又加大了用户搜索事件
+真相的成本。符号化是人们面对复杂信息时所采取的一种简化手段,经过网络群体多重表征的信
+息,对事件或个体中的某一种特征进行强调,在简化其所有特征时将对方类别化,并将其视为异
+类或另类,贴上一个批判性的标签如“渣男”“海王”“绿茶”等,就具备了攻击的合理性,也能
+煽动更多同类加入,进行群体攻击。信息被简化的后果就是事实被模糊,甚至被篡改。比如,“粉
+发女硕士事件”中,女孩除粉色头发外,其他特质都被隐去,而在日常生活中,粉色头发被认为
+是非常规的,女孩因此被贴上了叛逆者标签。尽管之后关于女孩在校表现优秀的相关信息开始传
+播,但难以改变网络群体已形成的整体性偏见,对女孩“专升本”学历、保送资格质疑以及不良
+女的身份猜想,均建立在粉色头发这一元素上。
+2. 身份认同导致观点极化
+现实社会中人们生活在不同的地理空间,也存在社会空间的差异,人们的身份、地位、受教
+育水平等社会空间特性将不同阶层的人群区隔开来,人们与自己社会空间特性相似的人互动,这
+也决定了其不太可能产生极端的观点冲突。而在互联网上,一些热点事件使不同社会阶层的人群
+处于同一个网络场域中,区隔被隐去,阶层差异导致他们之间难以理解和沟通,甚至产生言论的
+分化和对立。例如,此前“90 后”女子全款买保时捷的消息出现在热搜榜,部分极端仇富群体在
+留言区谩骂,甚至进行身份诬陷,女孩无奈之下求助警方才平息了网络暴力。1可见,不同阶层
+人群的认知差异是产生语言暴力的重要原因。
+社会认同理论认为,个体将群体成员身份内化,使其成为自我概念的一个方面,从而使
+身份依赖于与相关社会群体的联系。2 Keipi 等人提出“气泡身份强化模型”(Identity Bubble
+Reinforcement Model),3认为社交媒体促进了身份气泡的形成,并强化了共享身份、社会同质性
+以及对气泡中共享信息的依赖。同时,在网络平台信息推荐的影响下,容易形成“信息共享圈”,
+不同“信息共享圈”在价值观、认知方式和态度上都存在很大差异,当面对一些热点事件时,这
+种观点极化就会引发对立,进而助长网络暴力的滋生。
+3. 流量误导使得真相远离
+互联网的信息缺乏系统性,许多事件的信息是碎片化的、片段的、分散的,这本身为公众了
+1《女子全款 76
+万买保时捷晒照
+遭 网友 辱 骂,报
+警 后滋事者 道
+歉 :内心极 度 懊
+悔与愧 疚》,“九
+派新闻”百家号,
+ht t ps:/ / bai jia hao.
+baidu.com/s?id=17
+43933621675486639
+&wfr=spider&for=
+pc,2022 年 9 月14
+日。
+2 H. Ta jf el, J.
+C. Turner,“An
+Integrative Theory
+of Intergroup
+Conflict,”In W. G.
+Austin, S. Worchel,
+eds., T he Social
+Psycholog y
+o f Intergrou p
+Rel ations,CA:
+Brooks Cole, 1979,
+pp. 33–47.
+3 Markus
+Kaakinen, Anu
+Sirola, Iina
+Savolainen,
+Atte Oksanen,
+“Shared Identity
+and Shared
+Information in
+Social Media:
+Development and
+Validation of the
+Identity Bubble
+Reinf orcement
+Scale,”M ed ia
+Psycholog y, vol.
+23, no. 1, 2020.
+
+
+84 总第四O 五期
+解事件真相带来困难,学者称我们身处“后真相”时代,1人们传递的信息在被媒介多重表征之后,
+偏离了事实本身。网络中的信息生产较为复杂 :一是主体复杂。官方媒体与普通用户同属于信息
+生产者,权威信息的传播力量被削减 ;二是内容复杂。信息内容夹杂情绪表达,信息内容会偏离
+事实本身。
+流量是支撑网络平台商业模式的基础,信息生产者为了在短时间内获得更多人关注,会将原
+有故事情节打乱并剪辑以误导观众,或者对同一事件推出对立且极端的观点进行营销,蓄意引起
+“对骂”。上述粉发女孩被网暴事件的开端便是营销号为了赚取流量,发布了大量不实的信息。在
+网络暴力事件中,普遍存在模糊事实与焦点的情况,施暴者基于片段化的信息产生观点,话语易
+走向极端。例如,2022 年 11 月,医生鲁某的孩子与唐女士的孩子与在幼儿园发生冲突,鲁某上
+门讨要说法,双方发生了冲突,唐女士的父亲被鲁某打伤,视频被唐女士剪辑后发布在网络。舆
+论普遍认为医生行为恶劣,但随着事件进一步发展,完整视频被放出,网民发现,唐女士刚开始
+公布的视频中,将孩子爷爷先动手打人的片段隐去了,网民的矛头又指向剪辑视频的唐女士。2
+对此,有网民评论 :“利用流量获得利益的人终会被流量反噬。”可见,部分主体对流量的片面追求,
+是导致网络暴力产生的重要诱因。
+(二)网络暴力产生的社会情绪机制
+1. 观念冲突导致情绪倒错
+互联网给个人提供了信息分享的便利,而与他人共享信息,建立对世界的共同看法是人们
+的基本需求。Festinger 认为,当人们与自己非常相似的人分享观点时,他们会觉得自己的观点是
+有效的,3这会使个人体验到有效和可靠的世界观,并获得或保持联系和归属感。情绪分享也是
+人们的社会需要,Rimé 将这种专注于情感体验的分享称为“情绪的社会分享”(Social Sharing of
+Emotion),积极情绪和消极情绪的分享是相似的,更强烈的情绪会引发更丰富的分享,情绪的社
+会分享不仅会对个体产生内在影响,还可以有效地提升个体的人际与社会关系,促进个体的社会
+融合。4但是,在一些网络暴力事件中,一些人对于别人的积极分享不但没有产生积极的情绪,
+反而因为观念和态度不一致而产生消极的情绪,进而表现出恶意的攻击行为。
+2.“网络群氓”聚集下的负向情绪感染
+柯林斯提出“互动仪式链”模型作为情绪能量产生的机制,认为互动仪式链产生的情感能量
+是维持社会运行的理想状态。有效的互动仪式链产生的要素为“共同在场”,强调人们在某一场
+域中的情感连接与互动,而不是一群人在物理空间的聚集。人们有相互关注的焦点,有能唤起成
+员身份感的集体符号,而且需要有共享的情感。通过互动仪式,个人的消极情感能转化为积极情感。
+柯林斯强调了情感共享中“亲身在场”的必要性,他指出人类的社会活动越是通过远程媒介以较
+低的互动仪式来展开,人们就越缺少团结感,也越会缺乏对共同符号物的尊重,而且以情感能量
+形式表现的热情的个人动机也会减少。5在网络情境中,没有了仪式的基础,没有相互关注与情
+感联结,互联网的“在场”是完全不同的。
+布鲁默将群体分为“crowd”“mass”及“public”。6“crowd”是人群或聚群,也就是勒庞
+讲的“群氓”,是一群临时聚集的,组织松散的群体,在事件的刺激下,很容易感情冲动并产生
+集体攻击行为,一旦刺激消失,人群也就消失了。“mass”是大众,大众是不同阶层地位、不同
+职业、不同文化素养或不同兴趣的个体的聚集。大众虽然聚集到了一起,但有着强烈的自我意
+识,大众的组织虽然是松散的,并不像“群氓”那样会产生集体行动,却能对某一种结构、程
+1 参见史安斌、
+杨云康 :《后真相
+时代政治传播的
+理论重建和路径
+重构》,《国际新闻
+界》2017 年第9 期。
+2《南 京 一医 生
+掌掴孩子幼儿
+园同学?警 方 通
+报》,“扬子晚报”
+百 家 号,https://
+bai jia hao.baid u.
+com/s?id=174901
+1115551869509&wf
+r=spider&for=pc,
+2022 年 11 月9日。
+3 L. Festinger,
+“Informal Social
+Communication”,
+P s ychol ogical
+Review, vol. 57,
+no. 5, 1950.
+4 B. Rimé,
+“Emotion Elicits
+the Social Sharing
+of Emotion: Theory
+and Empirical
+R e v i e w,”E m ot
+Rev, vol.1, no.1,
+2009.
+5 参见兰德
+尔·柯林斯 :《互
+动 仪 式 链 》,林
+聚任等译,北京 :
+商务印书馆,2012
+年。
+6 Blunter,
+Herbert,
+“Collective
+Be h a v i o r,”i n
+Alf red M. Lee,
+ed., New Outlines
+of the Principles
+o f S ociol o g y,
+New York: Barnes
+and Nobel, 1946,
+pp.167-222.
+
+
+争 鸣 二 O 二三年 第七期
+85
++VM 2023
+序、文化或传统产生颠覆性的影响。“public”是公众,公众是产生对话、形成理性、达成共识
+与建构民主的群体,但同时也具有被操纵与行动缓慢的局限性。布鲁默特别强调,在某种情况下,
+公众可能会变成“群氓”。
+如果现实情境下更多是大众或公众的聚集的话,网络情境下则更容易产生“群氓”聚集效应。
+相互匿名的网络使用者类似于在街上漫无目的游荡者,受到某个热点事件的刺激就会聚集起来。
+韩炳哲将网络环境下的群体称为“数字群”,1即没有灵魂、没有思想,没有内向性的群体。“数字群”
+不具有团结特质,是情绪把个体联结在一起,基于对内容的关注,进而产生短暂的集体兴奋情绪 ;
+也没有稳定的群体认同,难以形成正向的情感能量,更容易形成负向的聚集效应。
+被情绪聚集起来的网络群体具有多变性与攻击性,网络群体与现实群体相比,情绪更活跃。
+勒庞认为,“群氓”的典型特征是自我特征与意识的消失,受群体心理同一律的支配。2莫斯科维
+奇也指出 :“一个群体或者一群民众就是摆脱了束缚的社会动物......通常都在暴力行为中表达他
+们的梦想、情感,以及所有的英雄主义、野蛮残暴、稀奇古怪和自我牺牲。”3情绪与暴力之间有
+天然的联系,柯林斯极具洞见性地指出 :“与其说暴力是身体上的冲突,不如说是情绪上的冲突,
+只要获得情绪上的支配权,就能获得身体上的支配权。”4在网络暴力事件中,情绪作用下的个体
+不再反思自己的行为,点赞、转发、评论等都是情绪支配的行为。网络暴力中的群体情绪经常表
+现为认知扭曲下的愤怒,群体的聚集使得愤怒情绪相互感染,并被逐渐放大和升级,5这时的群
+众就成为失去了理智的“群氓”。例如,在对粉发女孩身份与生活状态的诸多猜测中,愤怒情绪
+逐渐累积,“愤怒的浪潮在捆绑注意力方面是十分高效的”,6这使群体被带入不同的情绪浪潮中,
+而忽略了事件的真相。
+(三)网络暴力产生的社会价值观机制
+1. 网络去抑制效应下的“道德假期”
+在每一个文明人的内心一直有一个野蛮人性潜伏着。“野性”好似沉睡在每个心智健全的健康
+的现代人体内,并且准备在人们疏忽之际醒过来并且发疯,它们是凭直觉被知晓和被透露的。7
+网络给了一些人的“野性”以苏醒的机会,网络为人们的行为创造了“道德假期”的基本情境,
+网络暴力因此蔓延。社会的良性运行依靠社会规范系统发挥作用,个体的行为是受到约束和控制
+的,但在利益刺激、冲动情绪影响下,个体会进入“道德假期”。柯林斯认为,“道德假期”在时
+间与空间中建造了一个自由地带,让众人感觉限制已不复存在,个人认为自己在群体中会受到保
+护。8网络的匿名性使个体隐藏于群体中,赋予个体自由表达的空间,减少了对行为的约束,言
+论与行为比现实情境中更为激进大胆,日常生活中“温文尔雅”的文明人变成了“野蛮人”,在
+网络中口出狂言、暴躁谩骂。这也被称为“网络去抑制效应”,9盲目的情感宣泄是网络去抑制效
+应的典型体现,这造成网络场域出现大量负面情绪信息,侮辱性语言被聚集起来,并不顾及对他
+人造成的伤害。
+2. 假借道德名义肆意审判和惩罚
+吊诡的是,网络施暴者经常用更高的道德标准来审判和惩罚那些和自己处事方式与价值观
+念不同的人,而他们自己并不受这个道德标准的约束,时时处在“道德假期”。在一些事件中,
+网络暴力的发起者经常将许多态度、观念分歧进行泛道德化处理,对不合自己心意的人和事进
+行道德评价,继而进行道德审判,并通过网络暴力实施惩罚。在对网络暴力案例的梳理中不难
+发现,网络攻击的话语大多是网络暴力群体站在道德制高点对个体的审判,仿佛自己就是正义
+1 参见韩炳哲:
+《在群中:数字媒
+体时代的大众心
+理学》,程 巍 译,
+北 京 :中 信出 版
+社,2019 年。
+25 参见古斯塔
+夫·勒庞 :《乌合
+之众》,杨献军译,
+北 京:台海出版
+社,2018 年。
+3 参见莫斯科
+维奇 :《群氓的时
+代》,许列民等译,
+南京 :江苏人民出
+版社,2003 年。
+48 参见兰德
+尔·柯林斯 :《暴
+力:一种微 观社
+会学理论》,2016
+年。
+6 参见韩炳哲:
+《暴 力 拓 扑 学》,
+安 妮、 马 琰 译,
+北 京 :中 信出 版
+社,2019 年。
+7 参见齐格蒙
+特·鲍曼 :《生活
+在 碎片之中:论
+后现 代的道 德》,
+上海 :学林出版
+社,2002 年。
+9 J.Suler,“The
+Online
+Disinhibition
+E f f e c t ,”
+C yber psycholog y
+& Behavior, vol.7,
+no.3, 2004.
+
+
+86 总第四O 五期
+的化身,缺少行为边界。“道德审判与宣泄式的攻击动机下,网络群体容易参与到网络暴力事件
+中”,1道德作为武器让他们具有了超越任何行动边界的合法性。“道德的奖惩并不是涵盖着人的
+一切行动,它有自己的适用范围,有许多行动涉及个人的自由空间,这是自涉(self-regarding)
+的行动,只有他涉(other-regarding)行动,会影响到他人的权利和利益行动,才有道德评价的
+意蕴。”2网络给了公众讨论社会议题的便利,但因没有明显的网络发言和行为规范,使得一些
+人的网络语言和行为长久没有得到有效约束,逐渐养成了网络恶习;而长期的姑息让这种恶习得
+不到矫正,失序和失范成为一种常态,这使得一些新入网者以为这就是互联网的规则,任何人
+都有权利对他人发起审判和惩罚,语言暴力、人肉搜索、侵犯隐私等网络暴力行为自然就会常
+态化。失范是指社会秩序紊乱和道德规范失衡,3也指当社会规范不力、彼此矛盾或者规范缺失时,
+个人与社会中出现混乱状态。目前网络暴力产生的原因就是网络失范,对网络的系统控制缺失、
+约束失效。
+网络暴力的社会治理路径
+近年来,国家从立法层面逐渐加大了对网络暴力行为的处罚力度,互联网平台也从自身的社
+会责任层面以技术手段加强了网络暴力的防控,但网络暴力事件依然屡见不鲜,并未从根本上得
+到有效遏制。可见,网络暴力是一个复杂的社会问题,需要社会各界深入研究并形成治理合力。
+以上我们分析了为何网络暴力相比于传统暴力更容易发生,从社会认知、社会情绪和社会价值观
+三个方面对网络暴力产生的社会心态机制进行了描摹,并认为网络暴力的根源是网络场域的失范。
+要遏制网络暴力的发生,要从网络暴力产生的机制上寻找可行的路径。网络暴力需要综合治理,
+不仅需要国家层面的立法,也需要互联网运营机构的协同,需要媒体的有效引导,更需要每一个
+互联网使用者遵循良好的网络礼仪规范。
+(一)网络社会需要新的公序良俗
+人类社会一直致力于营造公序良俗,良好的公共秩序和良好的习俗是社会治理的目标。网络
+环境的治理需要新的公序良俗标准,现实社会的公共秩序和礼仪习俗明显无法平移到网络社会,
+需要从最基本的礼仪规范开始学习和引导。互联网作为一种科技社会发展的新形态,需要人们具
+备相应的素养,以往我们强调网络素养的提高,基本上着眼于提高人们使用网络的能力,告诉他
+们用网络可以做什么,而没有注意引导他们在网络上不可以做什么。因此,要引导网络使用者提
+升自身素养,树立正确的网络行为意识,养成良好的网络礼仪规范,用每个人的良好言行去实现
+网络空间整体公序良俗的建构。
+“网络礼仪”(Netiquette)在 1994 年就被提出,强调虚拟交流会对交流对象产生与现实交流
+一样的影响,并认为网络空间有相应的信仰或标准,用以判断行为正确与否,或什么是可以做的,
+什么是不被允许的。然而这一概念提出至今,还没有引起学界足够的重视。Kumazaki 等人早在
+2011 年就发现,网络礼仪对网络欺凌行为有良好的调节作用,4而我国学界这方面的研究较多集
+中在 2003 年前后国内互联网刚兴起时。事实上,互联网发展至今,我国还没有形成鼓励使用互
+联网礼仪的氛围,对于网民缺乏礼貌、礼仪,以及违规行为也没有约束的手段,更没有形成网
+民自觉净化网络空间的风气。目前网络暴力的发生,一定意义上与互联网生态环境有直接的关系,
+人们指责网络暴力,但缺乏对自身网络语言和行为的约束,网络成了人们宣泄不良情绪的场所,
+1 侯玉波、李昕
+琳 :《中国网民网
+络 暴 力的动 机 与
+影响因素分 析》,
+《北京大学学报》
+(哲学 社 会 科学
+版)2017 年第1 期。
+2 参 见高国希:
+《道德哲学》,上海 :
+复旦大学出版社,
+2005 年。
+3 参见渠敬东:
+《缺席与断裂 :有
+关失范的社会学
+研究》,北京 :商
+务 印 书 馆,2017
+年。
+4 A. Kumazaki,
+K. Suzuki, R.
+Katsura, A.
+Sakamoto, M.
+Kashibuchi,
+“The Eff ects of
+Netiquette and
+ICT Skills on
+School-bullying
+and Cyber
+Bullying: The
+Two-wave Panel
+Study of Japanese
+Elementar y,
+Secondary, and High
+School Students,”
+Procedia-Social
+and Behavioral
+Sciences, vol.29,
+2011.
+
+
+争 鸣 二 O 二三年 第七期
+87
++VM 2023
+陷入了语言暴力置换语言暴力的恶性循环之中。同理心是减少攻击行为的有效方式,要唤起网
+络中个体更多的同理心,对网络空间中的不同观念与行为给予更多包容,才能构建美美与共的
+良性网络生态。
+(二)平台应致力于网络互动规范的建立
+随着网络暴力越来越成为影响网络环境的负面因素,部分网络平台也推出了应对机制,例
+如抖音平台推出一键防暴功能,还鼓励网民举报网暴内容,小红书也有类似的举报功能,引导
+网民互相监督,也有平台引入人工智能对网暴内容进行实时监控,但上述措施的整体效果有限。
+总体来看,网络空间中的内容表达有“技巧化”与“超文本”的特点。实名认证、地域公开等
+使社交媒体的匿名性减弱,人们因顾虑个人生活被暴露,情绪表达呈现修辞化的特点,网民常
+使用隐喻、重复、反语,借代等方式包装自己的网络语言,互动行为如点赞、转发、关注,都
+能作为情绪表达的方式,还能借助表情与符号,这在一定程度上增加了信息的复杂性,也加大
+了数据处理主体对情绪与暴力内容的识别难度。在人工智能技术突飞猛进的今天,ChatGPT 让
+我们看到了未来的通用人工智能对于语言惊人的理解能力,也让我们看到了从技术层面解决语
+言暴力的可能。但是当下,互联网平台更应该重视建立网络使用者的行为规范,从完善规范识别、
+防范暴力语言和网络暴力行为层面,引导网民形成良好的互联网使用礼仪,努力营造适合网民
+理性沟通的平台。
+(三)媒体与意见领袖应发挥正向引领作用
+网络暴力的突出表现是情绪化,缺乏理智思考,因此,面对网络热点事件和问题时,媒体应
+该引导民众理智思考。当下,自媒体的影响越来越大,甚至超越了主流媒体,但一些自媒体为了
+流量和热度故意制造冲突,甚至有意煽动网络暴力,自媒体运营平台应该建立切实可行的规范,
+使自媒体健康运营。网络空间需要的不仅仅是信息传播者,对网络失范行为更需要“调停者”发
+挥作用。对热点事件的传播,官方媒体、自媒体等媒体组织应该更加谨慎,也应该贡献更多有价
+值和有意义的信息,不能简单转发以“蹭”流量。在事件发生的关键时间节点,媒体应引领舆论
+走向正面,在议题设置中体现网络礼仪。意见领袖应该拥有承担社会责任的意识,而不仅仅是以
+流量为导向生产信息,要更多输出有价值、客观、理性的观点,引导舆论走出偏激。
+(四)整合社会资源,营造良好的网络秩序
+从 2020 年开始,我国正式实施《网络信息内容生态治理规定》,并且从不同层面立法立规促
+进网络生态文明建设,明令禁止网络暴力。立法与立规是守住社会底线及建立网络场域规范的最
+低要求。网络暴力在一定程度上是网络场域系统内生性问题,应该有顶层的、系统的设计以调动
+并整合社会系统中具有影响力的资源。教育机构应加强关于网络暴力内容与危害的教育,向公众
+普及网络暴力的影响,提倡尊重、理解和互助的网络行为准则。同时,应倡导积极的网络文化,
+鼓励人们发表和传播正面、建设性的言论和信息,为网络空间营造良好的氛围。鼓励用户积极参
+与和互动,培养良好的网络行为习惯,增强网络社区的互助和支持。互联网管理部门应该加大监
+督和网络治理力度,鼓励和推动各类互联网平台防治网络暴力的技术化、制度化创新。创新数字
+治理手段,从价值治理、规则治理等角度综合发力以改善网络生态。
+编辑 孙冠豪
+
+
+178 总第四O 五期
+Seeking Solutions to the Unique Challenges of the “Big Party” Zhou Shuzhen & Cui Jinpeng & Gao Minzheng & Zeng Jun & Zhou Jianyong & Zhao Dapeng & Shu Yun Abstract: The situation, tasks, difficulties, and challenges faced by the Party’s construction in the New Era represent the latest exploration and summary made by the CPC on the regularity and particularity of governing a big party. The six featured articles in this journal argue that we need to accurately comprehend the profound connotation and underlying causes of the “unique challenges of the big party”, pay attention to the complexity of party size and big party governance, and seek solutions to these unique challenges, which requires focusing on institutional construction, spiritual development, self-supervision, technical governance, and other approaches. However, it is important to note that the Party’s construction is an ongoing process, and finding solutions to the unique challenges of the big party is also an ongoing endeavor that requires continuous exploration and summarization.
+Conditions and Mechanisms: A Social Mentality Perspective on Online Violence Wang Junxiu & Yun Qing
+Abstract: The prevalence of online violence is attributed to the inherent conditions of the internet that mitigate “confrontational tension” among individuals. It delves into the mechanisms underlying the occurrence of online violence, exploring key aspects of social mentality including social cognition, social values and social emotions. It reveals that the occurrence of online violence is influenced by several social cognitive mechanisms. These include the simplification of information, which leads to the labeling of facts; the segregation of identities, which fosters ideological opposition; and the pursuit of commercial interests, resulting in the misleading of internet users for the sake of gaining traffic. Moreover, social emotional mechanisms also play a role in online violence, such as conflicts with content sharers leading to emotional inversion, and the contagion effect of negative emotions in online environments. Additionally, the “Moral Holidays” effect in online environments, where perpetrators exploit moral justifications to engage in unrestrained judgment and punishment, contributes to perpetuating online violence. To address online violence effectively, it is crucial to explore potential solutions from the perspectives of individual internet users, internet platforms, media, and comprehensive social governance. Keywords: online violence; social mentality; confrontational tension; Moral Holidays
+The Female Body Trapped in Binary Discourse: Rethinking Gender Issues in Public Events Huang Yingying
+Abstract: Starting from contemporary sex/gender events, the social issues and analysis paths behind these events can be problematized from two perspectives. Contrary to existing analyses focusing on violence and gender, repositioning “sex” at the core framework and adopting a cultural constructivist perspective, we reexamine why women’s sexual bodies have become the focal point of discourse explosion in public events such as online violence. This approach presents a fresh research perspective. Based on a concise review of women’s sexuality and its evolutionary process from a comparative perspective between modern China and the West, we observe the hybrid characteristics of sex/ gender issues in current Chinese society. These issues are increasingly politicized, highlighting tensions between reality and discourse, and analysis paths often fall into binary oppositions such as “structure-autonomy” and “dangerhappiness”. Additionally, there is a noticeable shift in the discourse on “dangerous” sex/gender. In response, it is crucial to explore potential strategies and tactics for critiquing and reconstructing daily life, with the aim of fostering more just, flexible, and intimate interpersonal relationships and life worlds. Keywords: gender; sex; female body; structure-autonomy; daily life
+How to Govern “Harmful Information” Type of Online Violence: Analysis Based on Field Domain Theory Zhang Linghan
+Abstract: The illegal characteristics of “harmful information” type of online violence are not obvious. It mainly manifests through sarcasm, incitement and ambiguous expressions. However, the harm caused to the victims is no less than that of false accusations, insults, invasions of privacy, and other forms of traditional online violence. The identification of “harmful information” type of online violence is constrained by the existing legal dichotomy of “illegal-legal” information, making it difficult to provide evidence and enforce regulations efficiently. Moreover, the vast amount of malicious information poses challenges to enforcement measures. Research on the governance of “harmful information” type of online violence should consider the influence of the “field” as a critical factor in the identification, intervention and punishment. In the online space, the characteristics of the field, such as users’ weak social connections and anonymity, become fertile ground for the proliferation of violence. The abundance of users turns individual private matters into public issues, making it difficult to apply traditional legal systems based on individual behavior. Victims of online violence are prone to a state of psychological paralysis similar to the “battered person syndrome” in domestic violence, making it difficult to determine the criminal and civil liability for subsequent severe consequences such as depression and suicide. Comprehensive governance of various forms of online violence,
+
+
+主 编 叶祝弟
+副主编 李梅
+编辑部主任 杜运泉
+本 期 执 编 屠毅力
+张蕾
+版式设计 张 页
+英译校对 张 蕾
+本刊不以任何形式收取版面费 举报电话:010-63098272
+2023 年第 7 期
+(总第 405 期)
+定价:38.00 元
+每月 20 日出版
+王俊秀,1963 年生,内蒙古呼和浩特人。1997 年内蒙古
+师范大学教育系发展心理学硕士毕业,2004 年中国社会科学
+院研究生院发展社会学专业博士毕业。现为中国社会科学院社
+会学研究所社会心理学研究室主任、研究员,中国社会科学院
+大学教授、博士生导师,温州医科大学精神医学学院特聘教授,
+中国社会心理学会副会长,中国社会科学院国家治理智库研究
+员。主要研究领域为社会变迁与社会心态、社会发展与社会空
+间、风险社会与风险认知。主持完成国家社科基金重大项目
+“社会心理建设:社会治理的心理学路径”,目前主持教育部
+哲学社会科学研究重大课题攻关项目“新冠肺炎疫情对国民社
+会心态影响研究”。主编《社会心态蓝皮书》《美好生活蓝皮
+书》《社会心理建设丛书》,出版专著《社会心态理论:一种
+宏观社会心理学范式》《中国社会心态10年》等,在《社会学
+研究》《心理学报》《社会》等发表论文百余篇。

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J081",
+  "source_url": "https://tjsk.cbpt.cnki.net/WKH/WebPublication/wkTextContent.aspx?navigationContentID=98b47930-5e45-4f40-8d24-47949651169e&mid=tjsk",
+  "retrieved_at": "2026-11-16T15:05:14.179266+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://tjsk.cbpt.cnki.net/WKH/showValidateCode.aspx",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J081_25027e9b01d3/text.txt",
+  "sha256": "fe4ad79a134c477f6e81e6b99ec14caee718619e3adb096c441978a0940c14b1",
+  "original_path": "primary_http/J081_25027e9b01d3/response.html",
+  "original_sha256": "6de88670e4662f55ad7470eababfb9c980276bc95cdb383b804c2697bba3b6cd",
+  "line_count": 8,
+  "title": "\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

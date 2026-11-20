@@ -1,0 +1,20 @@
+{
+  "journal_id": "J062",
+  "source_url": "https://gzsk.cbpt.cnki.net/portal/journal/portal/client/news/gzsk_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:04:08.307508+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://gzsk.cbpt.cnki.net/portal/journal/portal/client/news/gzsk_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J062_ac21a8df7970/text.txt",
+  "sha256": "26cf34a456b481afb2f3ac93f413ba8860003436802a11237a28a7c797993971",
+  "original_path": "primary_http/J062_ac21a8df7970/response.html",
+  "original_sha256": "be88b2b7dbf2ef111f67ad596bc4630d86ebae031b6816a92559e3cf85faa07b",
+  "line_count": 143,
+  "title": "贵州社会科学",
+  "guideline_links": [
+    "https://gzsk.cbpt.cnki.net/portal/journal/portal/client/news/gzsk_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

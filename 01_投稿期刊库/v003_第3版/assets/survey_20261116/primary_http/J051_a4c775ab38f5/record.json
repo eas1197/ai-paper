@@ -1,0 +1,18 @@
+{
+  "journal_id": "J051",
+  "source_url": "https://cssrac.nju.edu.cn/xscb/lyqk/20200524/i83080.html",
+  "retrieved_at": "2026-11-16T15:04:01.901379+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://cssrac.nju.edu.cn/xscb/lyqk/20200524/i83080.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J051_a4c775ab38f5/text.txt",
+  "sha256": "9ca54721760830622b73f5f9c9100989f281b742410150a144a6815788ca89c1",
+  "original_path": "primary_http/J051_a4c775ab38f5/response.html",
+  "original_sha256": "dc783df3086f5c756e3708692de68f36c89f6ada5e4f7795a5aa0203efbd90b7",
+  "line_count": 41,
+  "title": "社会科学研究Social Science Research",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

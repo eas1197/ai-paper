@@ -1,0 +1,20 @@
+{
+  "journal_id": "J038",
+  "source_url": "https://zone.cbpt.cnki.net/portal/journal/portal/client/news/ZONE_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:02:48.891070+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zone.cbpt.cnki.net/portal/journal/portal/client/news/ZONE_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J038_ae5904f50a79/text.txt",
+  "sha256": "310d924264e5be0aca26e77b605d3f8a47a2e937eeea8aad6f0df93b01c33c2d",
+  "original_path": "primary_http/J038_ae5904f50a79/response.html",
+  "original_sha256": "770f6a61527aadc58495946eb6d77540cabf76f09c4cf4b813fe641a47b759a9",
+  "line_count": 73,
+  "title": "中国职业技术教育",
+  "guideline_links": [
+    "https://zone.cbpt.cnki.net/portal/journal/portal/client/news/ZONE_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,23 @@
+{
+  "technical_status": "passed",
+  "business_gate_status": "needs_review",
+  "G3_passed": false,
+  "errors": [],
+  "counts": {
+    "corpus_pdfs": 20,
+    "journals": {
+      "中国社会科学": 7,
+      "社会学研究": 13
+    },
+    "candidates_read_in_context": 181,
+    "selected_evidence": 113,
+    "unselected_candidates": 68,
+    "rules": 27,
+    "original_examples": 27,
+    "counterexamples": 27,
+    "source_wording_cautions": 3,
+    "fulltext_read_complete_certified_by_this_attempt": 0
+  },
+  "checked_at": "2026-11-14T22:49:11.829267+08:00",
+  "note": "Anchor/hash/schema/count validation is not research-quality acceptance."
+}

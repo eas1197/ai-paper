@@ -1,0 +1,4 @@
+selenium>=4.11,<5
+beautifulsoup4>=4.12,<5
+requests>=2.31,<3
+pdfplumber>=0.11,<1

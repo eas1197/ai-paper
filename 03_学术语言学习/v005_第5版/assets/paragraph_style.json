@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "architecture_profile_id": "quant_sociology_cn_architecture",
+  "architecture_profile_version": "2.1",
+  "mapping_origin": "02架构2.1与03现有规则的项目映射",
+  "units": {
+    "S1": {
+      "section": "A",
+      "purpose": "界定摘要的对象和问题",
+      "style_ids": [
+        "ST01",
+        "ST04"
+      ]
+    },
+    "S2": {
+      "section": "A",
+      "purpose": "交代需要推进的已有认识",
+      "style_ids": [
+        "ST05",
+        "ST12"
+      ]
+    },
+    "S3": {
+      "section": "A",
+      "purpose": "概括数据、研究对象和设计",
+      "style_ids": [
+        "ST03",
+        "ST04"
+      ]
+    },
+    "S4": {
+      "section": "A",
+      "purpose": "直接交代主要回答和必要量级",
+      "style_ids": [
+        "ST01",
+        "ST03",
+        "ST13"
+      ]
+    },
+    "S5": {
+      "section": "A",
+      "purpose": "呈现进一步回答或重要条件",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ]
+    },
+    "S6": {
+      "section": "A",
+      "purpose": "点明本篇新增的具体认识",
+      "style_ids": [
+        "ST08",
+        "ST13"
+      ]
+    },
+    "I1": {
+      "section": "I",
+      "purpose": "交代相关政策或制度安排及其实际关系",
+      "style_ids": [
+        "ST01",
+        "ST02"
+      ]
+    },
+    "I2": {
+      "section": "I",
+      "purpose": "从所处情境中提出待解释的现象",
+      "style_ids": [
+        "ST04",
+        "ST05"
+      ]
+    },
+    "I3": {
+      "section": "I",
+      "purpose": "聚焦本篇研究的对象、过程或关系",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST09"
+      ]
+    },
+    "I4": {
+      "section": "I",
+      "purpose": "说明既有解释需要推进的位置",
+      "style_ids": [
+        "ST05",
+        "ST10",
+        "ST12"
+      ]
+    },
+    "I5": {
+      "section": "I",
+      "purpose": "提出中心问题和必要的递进子问",
+      "style_ids": [
+        "ST09",
+        "ST12",
+        "ST14"
+      ]
+    },
+    "I6": {
+      "section": "I",
+      "purpose": "交代资料、设计和核心回答",
+      "style_ids": [
+        "ST01",
+        "ST03",
+        "ST11"
+      ]
+    },
+    "I7": {
+      "section": "I",
+      "purpose": "具体说明该研究怎样推进既有认识",
+      "style_ids": [
+        "ST02",
+        "ST10",
+        "ST13"
+      ]
+    },
+    "L0": {
+      "section": "L",
+      "purpose": "框定概念、分析单位和关系",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST06"
+      ]
+    },
+    "L_PATH": {
+      "section": "L",
+      "purpose": "展开一条解释路径的命题、证据和范围",
+      "style_ids": [
+        "ST02",
+        "ST03",
+        "ST15"
+      ]
+    },
+    "LR": {
+      "section": "L",
+      "purpose": "说明各条解释路径之间的关系",
+      "style_ids": [
+        "ST07",
+        "ST09",
+        "ST12"
+      ]
+    },
+    "LG": {
+      "section": "L",
+      "purpose": "定位真正待推进的理论位置",
+      "style_ids": [
+        "ST05",
+        "ST10",
+        "ST12"
+      ]
+    },
+    "LP": {
+      "section": "L",
+      "purpose": "明确本文承接的命题并转入理论分析",
+      "style_ids": [
+        "ST09",
+        "ST11",
+        "ST12"
+      ]
+    },
+    "T0": {
+      "section": "T",
+      "purpose": "对齐理论命题、对象和适用条件",
+      "style_ids": [
+        "ST02",
+        "ST04",
+        "ST09"
+      ]
+    },
+    "T1": {
+      "section": "T",
+      "purpose": "解释新增条件或过程怎样进入原关系",
+      "style_ids": [
+        "ST02",
+        "ST06",
+        "ST15"
+      ]
+    },
+    "T2": {
+      "section": "T",
+      "purpose": "逐环推导核心关系和可检验预期",
+      "style_ids": [
+        "ST02",
+        "ST12",
+        "ST15"
+      ],
+      "subtask": "单项关联"
+    },
+    "T3": {
+      "section": "T",
+      "purpose": "推出有依据的分项或条件性预期",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST15"
+      ],
+      "subtask": "分项比较"
+    },
+    "T4": {
+      "section": "T",
+      "purpose": "说明假设怎样进入测量和比较",
+      "style_ids": [
+        "ST09",
+        "ST10",
+        "ST12"
+      ]
+    },
+    "D1": {
+      "section": "D",
+      "purpose": "交代数据来源、分析单位和适用性",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST13"
+      ]
+    },
+    "D2": {
+      "section": "D",
+      "purpose": "交代样本筛选、匹配与缺失处理",
+      "style_ids": [
+        "ST03",
+        "ST08",
+        "ST13"
+      ]
+    },
+    "D3": {
+      "section": "D",
+      "purpose": "说明结果变量的问项、编码和方向",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST06"
+      ]
+    },
+    "D4": {
+      "section": "D",
+      "purpose": "说明解释变量的构造、单位和基准",
+      "style_ids": [
+        "ST02",
+        "ST04",
+        "ST06"
+      ]
+    },
+    "D5": {
+      "section": "D",
+      "purpose": "交代实际用到的进一步测量",
+      "style_ids": [
+        "ST04",
+        "ST09",
+        "ST13"
+      ]
+    },
+    "D6": {
+      "section": "D",
+      "purpose": "说明控制变量为什么纳入",
+      "style_ids": [
+        "ST02",
+        "ST04",
+        "ST15"
+      ]
+    },
+    "D7": {
+      "section": "D",
+      "purpose": "说明模型如何对应研究问题和比较",
+      "style_ids": [
+        "ST02",
+        "ST06",
+        "ST12"
+      ]
+    },
+    "D8": {
+      "section": "D",
+      "purpose": "交代实际估计和推断设置",
+      "style_ids": [
+        "ST03",
+        "ST04",
+        "ST13"
+      ]
+    },
+    "R1": {
+      "section": "R",
+      "purpose": "交代样本和关键指标分布",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST13"
+      ]
+    },
+    "R2": {
+      "section": "R",
+      "purpose": "提炼描述性统计中的具体差别",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ],
+      "subtask": "并列估计"
+    },
+    "R3": {
+      "section": "R",
+      "purpose": "重申本节要估计的主要比较",
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST09"
+      ]
+    },
+    "R4": {
+      "section": "R",
+      "purpose": "在同一尺度上报告主估计与区间",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ],
+      "subtask": "并列估计"
+    },
+    "R5": {
+      "section": "R",
+      "purpose": "把估计量转成有内容且同尺度的判断",
+      "style_ids": [
+        "ST03",
+        "ST06",
+        "ST13"
+      ],
+      "subtask": "单位转译"
+    },
+    "R6": {
+      "section": "R",
+      "purpose": "用直接比较回答假设或研究问题",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ],
+      "subtask": "直接比较"
+    },
+    "R7": {
+      "section": "R",
+      "purpose": "指出必要的进一步理论比较",
+      "style_ids": [
+        "ST04",
+        "ST09",
+        "ST12"
+      ]
+    },
+    "R8": {
+      "section": "R",
+      "purpose": "报告进一步检验的实际估计",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ],
+      "subtask": "并列估计"
+    },
+    "R9": {
+      "section": "R",
+      "purpose": "解释进一步结果与主解释的关系",
+      "style_ids": [
+        "ST02",
+        "ST03",
+        "ST10"
+      ]
+    },
+    "R10": {
+      "section": "R",
+      "purpose": "交代针对具体问题的稳健性比较",
+      "style_ids": [
+        "ST04",
+        "ST07",
+        "ST13"
+      ]
+    },
+    "R11": {
+      "section": "R",
+      "purpose": "概括检查后仍成立的主要判断",
+      "style_ids": [
+        "ST03",
+        "ST07",
+        "ST13"
+      ]
+    },
+    "R12": {
+      "section": "R",
+      "purpose": "集中回答研究问题",
+      "style_ids": [
+        "ST01",
+        "ST08",
+        "ST13"
+      ]
+    },
+    "R13": {
+      "section": "R",
+      "purpose": "指出决定主判断的关键适用条件",
+      "style_ids": [
+        "ST03",
+        "ST10",
+        "ST13"
+      ]
+    },
+    "C1": {
+      "section": "C",
+      "purpose": "回到研究问题并给出总回答",
+      "style_ids": [
+        "ST01",
+        "ST09",
+        "ST13"
+      ]
+    },
+    "C2": {
+      "section": "C",
+      "purpose": "概括主要结果和实质差别",
+      "style_ids": [
+        "ST07",
+        "ST08",
+        "ST13"
+      ]
+    },
+    "C3": {
+      "section": "C",
+      "purpose": "说明进一步发现或有实质影响的条件",
+      "style_ids": [
+        "ST03",
+        "ST06",
+        "ST13"
+      ]
+    },
+    "C4": {
+      "section": "C",
+      "purpose": "用结果回应文献中的具体命题",
+      "style_ids": [
+        "ST02",
+        "ST09",
+        "ST12"
+      ]
+    },
+    "C5": {
+      "section": "C",
+      "purpose": "回到现实情境或理论适用条件",
+      "style_ids": [
+        "ST03",
+        "ST10",
+        "ST12"
+      ]
+    },
+    "C6": {
+      "section": "C",
+      "purpose": "说明证据支持的一项具体含义",
+      "style_ids": [
+        "ST02",
+        "ST03",
+        "ST13"
+      ]
+    },
+    "C7": {
+      "section": "C",
+      "purpose": "讨论确实改变解释的资料或设计条件",
+      "style_ids": [
+        "ST03",
+        "ST06",
+        "ST13"
+      ]
+    },
+    "C8": {
+      "section": "C",
+      "purpose": "以有范围的新增判断收束",
+      "style_ids": [
+        "ST03",
+        "ST08",
+        "ST13"
+      ]
+    }
+  }
+}

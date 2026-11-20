@@ -1,0 +1,57 @@
+{
+  "module_id": "06",
+  "name": "数据方法与分析",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 2,
+  "framework_status": "ready",
+  "implementation_status": "implemented",
+  "business_status": "planned",
+  "depends_on": [
+    "05",
+    "10"
+  ],
+  "expected_artifacts": [
+    "method_catalog.csv",
+    "method_references.csv",
+    "variable_dictionary.csv",
+    "sample_flow.csv",
+    "analysis_plan.json",
+    "results.csv",
+    "diagnostics.json",
+    "reproduction.json",
+    "knowledge.sqlite"
+  ],
+  "folders": [
+    "tools",
+    "templates",
+    "方法库",
+    "tests",
+    "outputs"
+  ],
+  "entrypoint": "tools/stage06.py",
+  "privacy": "local_only; no individual records in artifacts or model calls",
+  "implemented_builtin_methods": [
+    "OLS",
+    "BINARY_LOGIT",
+    "ORDERED_LOGIT",
+    "MULTINOMIAL_LOGIT",
+    "POISSON",
+    "NEGATIVE_BINOMIAL",
+    "ZIP",
+    "ZINB"
+  ],
+  "unsupported_is_blocking": true,
+  "method_library_resource": {
+    "resource_id": "methods06_library_v001_20261115",
+    "data_version": 1,
+    "snapshot_directory": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/snapshot",
+    "snapshot_manifest": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/snapshot/resource_snapshot.json",
+    "snapshot_manifest_sha256": "1d5593a57309676b0017b12aeb4481a6b67aa3b0cbc0b6a3957b66c55388ecf1",
+    "resource_manifest": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/resource_manifest.json",
+    "resource_manifest_sha256": "84dba70a49735eb03180320ce47268f96abe69630fda5452475e9673a878f48a",
+    "handbook": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/方法手册.md",
+    "status": "passed",
+    "review_scope": "AI方法资源自查；非独立人工评议/非课题G6"
+  }
+}

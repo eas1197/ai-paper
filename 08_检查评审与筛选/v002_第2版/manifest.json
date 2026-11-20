@@ -1,0 +1,26 @@
+{
+  "module_id": "08",
+  "name": "检查评审与筛选",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "07"
+  ],
+  "expected_artifacts": [
+    "review_checklist.csv",
+    "scores.csv",
+    "selection.json",
+    "delivery_manifest.json"
+  ],
+  "folders": [
+    "templates",
+    "outputs"
+  ],
+  "execution_scope": "research",
+  "enabled_when": {
+    "writing.mode": "three_plus_review"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J010",
+  "source_url": "https://www.cycra.org.cn/scholars/show/6.html?20250618=OLCNI.scm",
+  "retrieved_at": "2026-11-16T15:03:38.995180+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.cycra.org.cn/scholars/show/6.html?20250618=OLCNI.scm",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J010_81bb0a2a2e7f/text.txt",
+  "sha256": "015b732f10d00bd14e58c57882f2008bd697712db32af2d4b26be37061e69d55",
+  "original_path": "primary_http/J010_81bb0a2a2e7f/response.html",
+  "original_sha256": "6ff568e9b7a03d2e78f007af552a23fe6256d66c2c8e4a9286c4543a245178d8",
+  "line_count": 177,
+  "title": "专家学者 - 《中国青年研究》投稿须知 - 最新信息 - 中国青少年研究会",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

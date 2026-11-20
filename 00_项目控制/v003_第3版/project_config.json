@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "project_name": "定量社会学研究与写作",
+  "timezone": "Asia/Shanghai",
+  "initial_as_of": "2026-11-14",
+  "scope": "framework",
+  "sources": {
+    "zotero_storage": "C:/Users/hou/Zotero/storage",
+    "education_data": "E:/文章/教育",
+    "legacy_crawler": "E:/文章/cnki爬虫/cnki-spider-main",
+    "meeting_pdf": "C:/Users/hou/xwechat_files/wxid_e0k3qmlwdwlp41_db9f/temp/RWTemp/2026-11/9e20f478899dc29eb19741386f9343c8/社会学研究智能Skill技能包_会议纪要与初步方案.pdf"
+  },
+  "targets": {
+    "cssci_journals": 50,
+    "pku_journals": 50,
+    "distinct_journals": 100,
+    "fulltext_style_min": 20,
+    "abstract_target": 100,
+    "core_fulltext": 25,
+    "references_per_method_min": 2
+  },
+  "journals": {
+    "cssci_category": "source_only",
+    "allow_quota_overlap": false,
+    "prefer_email": true,
+    "prefer_undergraduate_evidence": true,
+    "refresh_reminder_days": 30,
+    "require_recheck_before_submission": true,
+    "latest_published_editions": {
+      "CSSCI": "2025-2026",
+      "PKU": "2023"
+    },
+    "edition_verified_on": "2026-11-16"
+  },
+  "research": {
+    "news_lookback_years": 3,
+    "policy_preference": "national_primary_source",
+    "theme": null,
+    "issue": null,
+    "question": null,
+    "literature_workflow": {
+      "abstract_target": 100,
+      "core_fulltext_target": 25,
+      "preferred_view_count": [
+        2,
+        4
+      ],
+      "view_relations": [
+        "parallel",
+        "complementary",
+        "sequential",
+        "nested",
+        "shared_condition",
+        "competitive",
+        "revision"
+      ],
+      "triggers": [
+        "reality_theory_tension",
+        "theory_unexplained_gap"
+      ],
+      "advances": [
+        "G1_reality_explanation",
+        "G2_same_level_gap",
+        "G3_scope_adjustment",
+        "G4_relation_revision"
+      ],
+      "policy_preference": "national_primary_source_direct_relevance",
+      "inputs_before_final_question": [
+        "abstract_relation_scope_map",
+        "core25_fulltext_dialogue",
+        "policy_reality_context"
+      ],
+      "actual_topic_selected": false,
+      "issue_generation_stage": "04",
+      "issue_required_before_stage_04": false,
+      "issue_refinement_stages": [
+        "04",
+        "05"
+      ]
+    }
+  },
+  "datasets": {
+    "enabled": [
+      "CFPS",
+      "CGSS"
+    ],
+    "external_inputs_read_only": true,
+    "individual_data_to_model": false
+  },
+  "analysis": {
+    "preferred_engines": [
+      "stata",
+      "r",
+      "python"
+    ],
+    "stata_compatibility_target": 14,
+    "seed": 20261114,
+    "pre_analysis_plan_required": true,
+    "method_library_resource": {
+      "resource_id": "methods06_library_v001_20261115",
+      "data_version": 1,
+      "snapshot_directory": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/snapshot",
+      "snapshot_manifest": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/snapshot/resource_snapshot.json",
+      "snapshot_manifest_sha256": "1d5593a57309676b0017b12aeb4481a6b67aa3b0cbc0b6a3957b66c55388ecf1",
+      "resource_manifest": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/resource_manifest.json",
+      "resource_manifest_sha256": "84dba70a49735eb03180320ce47268f96abe69630fda5452475e9673a878f48a",
+      "handbook": "06_数据方法与分析/v002_第2版/方法库/resources/library_v001_20261115/方法手册.md",
+      "status": "passed",
+      "review_scope": "AI方法资源自查；非独立人工评议/非课题G6"
+    }
+  },
+  "writing": {
+    "mode": "single",
+    "allowed_modes": [
+      "single",
+      "three_plus_review"
+    ],
+    "draft_counts_by_mode": {
+      "single": 1,
+      "three_plus_review": 3
+    },
+    "draft_labels_by_mode": {
+      "single": [
+        "A"
+      ],
+      "three_plus_review": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "review_stage_by_mode": {
+      "single": false,
+      "three_plus_review": true
+    },
+    "single_draft_self_check_required": true,
+    "shared_frozen_pack_required": true,
+    "architecture": {
+      "profile_id": "quant_sociology_cn_architecture",
+      "profile_version": "2.1",
+      "profile_path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+      "profile_sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05",
+      "guide_path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+      "guide_sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+    },
+    "language_style": {
+      "profile_path": "03_学术语言学习/v005_第5版/outputs/style_profile.json",
+      "profile_sha256": "4f867c6669633b1a49950416aabaab87cfe8c8a02ae992ddb204b91c088f618d",
+      "purpose": "学习并运用原语料的表达风格；保留意思与证据强度",
+      "formal_resource_status": "needs_review"
+    }
+  },
+  "submission": {
+    "enabled": false,
+    "mode": "prepare_then_sequential",
+    "cssci_candidates": 5,
+    "pku_candidates": 5,
+    "seed": 20261114,
+    "require_distinct_journals": true,
+    "one_active_per_manuscript_family": true,
+    "transport_capabilities": {
+      "email": "SMTP_SSL",
+      "system": "official_portal_handoff"
+    }
+  },
+  "runtime": {
+    "implemented_stage_executors": [
+      "01",
+      "04",
+      "05",
+      "06",
+      "07",
+      "09"
+    ],
+    "model_provider": null,
+    "network_execution_enabled": false,
+    "stage_executor_implemented": false,
+    "run_store_root": "00_项目控制/v002_第2版/runs"
+  },
+  "framework_version": 2,
+  "question_library": {
+    "path": "05_研究问题与假设/v005_第5版/outputs/五刊提问资源_20261118_attempt002/question_library.json",
+    "sha256": "ba21fcf2b9708cbb33342ec6fd8059897dbf7990045339fcdc6bc64285d542ea"
+  },
+  "shared_resources": {
+    "build_once": [
+      "01",
+      "02",
+      "03"
+    ],
+    "rebuild_per_research": false,
+    "bind_version_and_hash": true,
+    "submission_target_recheck_only": true,
+    "resource_manifests": {
+      "01": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/resource_snapshot.json",
+      "02": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+      "03": "03_学术语言学习/v005_第5版/outputs/resource_snapshot.json"
+    }
+  }
+}

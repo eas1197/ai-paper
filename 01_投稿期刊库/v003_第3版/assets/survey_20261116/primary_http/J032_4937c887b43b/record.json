@@ -1,0 +1,18 @@
+{
+  "journal_id": "J032",
+  "source_url": "https://zggjyj.cahe.edu.cn/CN/item/downloadFile.do?id=10003",
+  "retrieved_at": "2026-11-16T15:04:56.286375+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zggjyj.cahe.edu.cn/CN/item/downloadFile.do?id=10003",
+  "content_type": "application/x-download;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J032_4937c887b43b/text.txt",
+  "sha256": "28c7d9300f0ca76b14fb149cf06ad37e36c06f5d0ba16a282f1cc3b13ef10408",
+  "original_path": "primary_http/J032_4937c887b43b/response.html",
+  "original_sha256": "b2b86dc309a5d53ecd1d5bfca0a6e46b77c57b72fddfe8c05f5a1b23408431af",
+  "line_count": 299,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

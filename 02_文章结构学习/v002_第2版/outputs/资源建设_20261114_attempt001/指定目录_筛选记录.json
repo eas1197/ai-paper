@@ -1,0 +1,41 @@
+{
+  "paper_id": "doi_10.19633_j.cnki.11-2579_d.2021.0088",
+  "title": "不平等的“贵子”：基于网络民族志的“小镇做题家”就读体验研究",
+  "authors": [
+    "张茜",
+    "刘庆帅"
+  ],
+  "year": 2021,
+  "journal": "中国青年研究",
+  "issue": "06",
+  "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\PITUVLXH\\张茜和刘庆帅 - 2021 - 不平等的“贵子”：基于网络民族志的“小镇做题家”就读体验研究.pdf",
+  "pdf_sha256": "7b5324a9c9c55d5276ee7e59d92c0d2f7cf492247b3a110b0662e4e1e84b3262",
+  "pdf_page_count": 9,
+  "screening_status": "excluded",
+  "target_journal_match": false,
+  "quantitative_confirmed": false,
+  "reasons": [
+    "期刊不属于中国社会科学或社会学研究",
+    "作者明确采用网络民族志、参与式观察和线上深度访谈，不满足定量研究筛选条件"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "PITUVLXH_E01",
+      "type": "direct",
+      "locator": "PDF第1页；刊内第69页；页脚及摘要",
+      "short_excerpt": "中国青年研究",
+      "supports": "期刊身份"
+    },
+    {
+      "evidence_id": "PITUVLXH_E02",
+      "type": "direct",
+      "locator": "PDF第3页；刊内第71页；三、研究方法",
+      "short_excerpt": "本研究主要运用网络民族志的研究方法",
+      "supports": "研究方法分类"
+    }
+  ],
+  "extraction": "PDF正文文字提取；首页渲染目视核对；Zotero全文缓存辅助交叉核对",
+  "checked_at": "2026-11-14T18:21:04.1207388+08:00",
+  "fulltext_read": "not_counted_excluded_at_screening",
+  "source_read_only": true
+}

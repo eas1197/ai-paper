@@ -1,0 +1,30 @@
+[
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\readme.md",
+    "sha256": "aac9e90f68074b4dd0b9ea8404b585cd6f1f53c87e4e273b2d215db71a812f14"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\requirements.txt",
+    "sha256": "33b8fa14fed25f2c2067bf892eeacf6c5dcd006cd84e1a62a16ce6fa8190553a"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\s-1 2txt.py",
+    "sha256": "6907da7ee0e4ddcafe89b875f5bd38e0a81414a1d6661afcc15ff14356246fff"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\txt格式修改.py",
+    "sha256": "4b495714ec0ecafd1fb0d62bd663457a01af0d6c9abadce148befd13928e3fa7"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\从出版物检索获取文章链接.py",
+    "sha256": "39fcb53ed0566c44eff00eb5c015d8e7e434bb0fdf62465283cd4a6508123379"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\从搜索界面获取文章链接.py",
+    "sha256": "587d7bce97e722b1e8db09f2a4d061f267c91c4afa46ea7386dfc994e1d9fa7a"
+  },
+  {
+    "path": "E:\\文章\\cnki爬虫\\cnki-spider-main\\从文章链接下载文章文件.py",
+    "sha256": "3aea2c0232ae4313e9d98261895df2a7e58f4337fd56c496d731fe61ac6a9e9f"
+  }
+]

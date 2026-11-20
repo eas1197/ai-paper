@@ -1,0 +1,45 @@
+L0: 学习与实践
+L1: nav
+L2: emailalert
+L3: searchbtn
+L4: searchbox
+L5: tablepage
+L6: yinyongbenwen
+L7: piczone
+L8: journalimg
+L9: journalInfo
+L10: journalinfonormal
+L11: searchdiv
+L12: searchzone
+L13: qikanlogo
+L14: popupnotification
+L15: Your browser does not support the video tag.
+L16: 请选择需要下载的pdf数据
+L17: 中文数据
+L18: 英文数据
+L19: 正在翻译英文数据
+L20: ...
+L21: xinwenxiangqing
+L22: xinwenxiangqingnew
+L23: 学习与实践
+L24: 中文核心期刊
+L25: 首页
+L26: 期刊介绍
+L27: 投稿指南
+L28: 编委会
+L29: 广告业务
+L30: 联系我们
+L31: 期刊征订
+L32: |
+L33: Email-Alert
+L34: 投稿指南
+L35: 2023-12-07
+L36: 分享至：
+L37: 扫码分享到微信或朋友圈
+L38: 使用微信"扫一扫"功能。
+L39: 将此内容分享给您的微信好友或者朋友圈
+L40: 建设中...
+L41: 该系统由中国知网提供技术支持。技术支持使用说明：cb@cnki.net http://find.cb.cnki.net
+L42: 建议使用分辨率为1024*768的IE 10.0或更高版本浏览此页面
+L43: 检 索
+L44: 高级检索

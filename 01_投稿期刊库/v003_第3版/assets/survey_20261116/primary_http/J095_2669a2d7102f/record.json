@@ -1,0 +1,9 @@
+{
+  "journal_id": "J095",
+  "source_url": "https://www.jstu.sdnu.edu.cn/info/1002/1711.htm",
+  "retrieved_at": "2026-11-16T15:04:20.835231+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "SSLError",
+  "reason": "HTTPSConnectionPool(host='www.jstu.sdnu.edu.cn', port=443): Max retries exceeded with url: /info/1002/1711.htm (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.jstu.sdnu.edu.cn'. (_ssl.c:1007)\")))"
+}

@@ -1,0 +1,55 @@
+{
+  "stage_id": "02",
+  "attempt": "资源建设_20261114_attempt001",
+  "module_version": 2,
+  "status": "needs_review",
+  "scope": "C:\\Users\\hou\\Zotero\\storage\\PITUVLXH",
+  "target_n": 20,
+  "scanned_pdf_n": 1,
+  "eligible_n": 0,
+  "fulltext_read_complete_n": 0,
+  "gap_n": 20,
+  "gate": "G2_not_passed",
+  "checked_at": "2026-11-14T18:21:04.1207388+08:00",
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "path": "基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "path": "02_文章结构学习\\v002_第2版\\模块说明.md",
+      "sha256": "d0babd10d00801f033629583307ce12aad73d2b1051fc118e2ea4d8e555cf8ab"
+    }
+  ],
+  "source_pdf_sha256": "7b5324a9c9c55d5276ee7e59d92c0d2f7cf492247b3a110b0662e4e1e84b3262",
+  "outputs": [
+    {
+      "path": "目录核查与缺口.md",
+      "sha256": "c12697d6d3b2e2bf6cce70bccb06222d3601488f65ea94beb23db177ea450e73"
+    },
+    {
+      "path": "指定目录_筛选记录.json",
+      "sha256": "fb2653cf1d2f5b1eb8f432843063054e65f34bd9fed6dc9502ee126de387fb36"
+    },
+    {
+      "path": "指定文件夹_首页核对.png",
+      "sha256": "e85312d94490e818dd463b4a6b2ec44f48b360a18cdb952fa586678af4fc299e"
+    }
+  ],
+  "seed": null,
+  "model": "Codex session, exact model revision unavailable",
+  "prompt_version": "user request 2026-11-14: two-journal quantitative fulltext structure learning",
+  "execution": "PowerShell, Python pdfplumber, Poppler; no web or external messaging",
+  "deviations": [
+    "指定附件目录仅1篇且不符合条件；范围扩展待明确"
+  ],
+  "resource_snapshot_published": false
+}

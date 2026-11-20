@@ -1,0 +1,538 @@
+地理研究
+GEOGRAPHICAL RESEARCH
+第 43 卷 第 6 期 2024 年 6 月
+Vol.43, No.6 June, 2024
+뎡폲쫓뷇쿂돇쫐펰ퟓ뷌폽뗄뿕볤럖틬퇐뺿
+ꆪꆪ틔컷낲쫐훷돇쟸캪샽
+雒占福,柏 雪
+(西北师范大学地理与环境科学学院,兰州 730070)
+햪튪ꎺ快速增长的影子教育不仅带来了学生课业增加、家庭负担加大的社会经济问题,而且因 空间分异加剧了教育不公平问题。本研究以西安市主城区影子教育机构为研究对象,借助布 迪厄的场域理论构建影子教育场域模型,运用 GIS 空间分析技术,定量认识影子教育场域的多 维度多尺度分异特征及其形成机制。结果表明:1 基于地理空间要素表征的影子教育场域模 型的拟合效果良好,影子教育场强值越高的空间拟合效果越好。2 西安市主城区影子教育场 强在城市尺度上呈现核心区-核心边缘区-外围区的圈层式分异特征,即围绕西安古城与二环 之间形成高场强的核心区,在二环与三环之间为核心边缘区,依次向外影子教育场强呈递减趋 势。3 在区级尺度上呈现多核心等级性分异特征,表征场域的经济资本、文化资本与社会资本 的区级分异显著,核心区的碑林区、新城区与莲湖区的三类资本的场强值最为突出,而外部三 区的经济资本与文化资本都比较低。4 在街道尺度上呈现多类型的功能性分异特征,形成单 一功能型、复合功能型以及弱功能型的三大场域类型。5 影子教育场域的空间分异是供需主 体在教育内卷、文化消费、城市动态扩张的功能差异、城市设施不均的空间资源差异、阶层分异 的消费差异等社会经济因素及空间因素综合作用的结果。 맘볼듊ꎺ场域;空间分异;社会空间;地理空间;分异机制;西安 DOI: 10.11821/dlyj020231022
+1 引言
+影子教育 (shadow education) 是一种普遍的全球性教育培训现象[1],在中国也称校 外培训教育,经过近十多年的快速发展带来了学生课业负担与家庭经济负担加重[2]、教育 竞争内卷化与普通家庭参与边缘化的社会分异问题[3],空间上以城市为主要载体,形成了 “影子教育+名校、影子教育+高档住区、影子教育+商业区”等空间不均衡集聚的领域化 现象[4]。地理现象格局与过程的产生、时空分布、相互耦合等具有尺度依赖性[5]。影子教 育的社会分异与其教育空间形成发展有何尺度依赖与空间关联?影子教育的供 (培训机 构) 需 (学生) 主客体基于各自成本收益、时空可达性下的培训场所选择在不同尺度上 呈现何种空间分异特征?这些问题值得探索。2021 年 7 月,中共中央办公厅、国务院办 公厅印发 《关于进一步减轻义务教育阶段学生作业负担和校外培训负担的意见》,旨在持 续规范校外培训,有效落实双减政策;2023 年 7 月全国校外教育培训监管与服务综合平 台正式上线,标志着学科类、非学科类,线上、线下培训机构管理的规范化。不断出台
+收稿日期:2023-11-14;录用日期:2024-03-16 基金项目:国家自然科学基金项目 (42061034) 作者简介:雒占福 (1975-),男,甘肃通渭人,博士,副教授,硕士生导师,研究方向为人文地理与城乡规划。 E-mail: luozf200@163.com
+通讯作者:柏雪 (1996-),女,甘肃秦州人,硕士研究生,研究方向为人文地理与城乡规划。 E-mail: baixue202309@163.com 1462-1481 页
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+的教育政策为影子教育的规范化管理提出了新要求,也为精准的空间识别与空间管理提 出了新课题,亟需从社会-空间互动视角对影子教育进行多尺度多维度空间的分异研究。 国外学者在较早关注影子教育现象及其全球扩张的同时,非常关注影子教育所引致 的教育公平与社会分异问题[1]:Gross Christiane 等认为影子教育的社会经济可及性具有跨 国差异性,不同国别教育政策下的影子教育会加剧社会不平等[6];Tsiplakides 发现英语补 习教育加强了社会阶层、家庭文化经济资本与教育成果之间的关系,提高了优势地位阶 层学生的职业前景,助长了社会阶级不平等问题[7];Prashant 发现影子教育只会对高中成 绩优异的学生产生积极影响,加剧与成绩不佳学生之间大学入学机会的不平等[8]。整体 上,国外学者已开展了参与影子教育的学生因其家庭社会阶层、家庭文化资本与经济资本 的差异而加剧教育不公平的社会分异问题[9]。国内学者根据中国影子教育的发展进程,也 相应开展了影子教育的社会再生产[3]、家庭文化资本与经济资本的教育获得差异[10,11]、文 化资本代际传递的阶层差异[12]及影子教育不平等的再生产路径[13]的社会分异研究。近年 来也开始从空间角度关注其分布问题,发现幼儿托教、课程辅导、艺术培训与职资培训 等不同类型的影子教育机构具有异质性的空间集聚特征[14],即便针对儿童的学科与艺术 培训机构其空间集聚特征也不同[15],发现了影子教育机构具有城乡不均衡[16]、城区不均 衡
+[17]与领域化特征[4]的空间分异现象。 总体来看,基于教育学与社会学视角的影子教育社会分异研究成果较丰硕,但基于地 理学的空间视角与社会-空间融合视角研究较为不足。近年来“场域”理论作为社会学研 究的有效工具开始引入文化地理研究中[18,19],开始了场域-空间结合研究的探索[20],教育 场域是布迪厄场域理论研究的基本场域[21],基于场域理念进行影子教育空间分异研究有 助于揭示其分异特征与分异机制;从研究对象看,相关研究多以影子教育客体的学生或 家庭为研究对象,关注其参与影子教育所引致的文化、经济与阶层等的社会分异问题[10-13], 然而完整的教育活动是供给主体 (教育机构) 与需求客体 (学生) 在特定空间 (教学场 所) 共同作用的教学过程,因而缺失供给主体与教学场所空间要素的影子教育研究则是 不完整的,亟需加强影子教育主客体在供需作用下的空间能动性、教学场所选址的空间 行为性及其空间社会性的空间关联研究;从研究尺度看,多以单一的城市尺度[3,14,17]、城 乡尺度[16]为主,缺少城市、区、街道的多尺度研究,难以全面反映影子教育空间分异特 征和规律。因此,本文以西安市主城区为案例区,以 POI 影子教育机构为研究对象,借 助布迪厄的场域理论构建影子教育场域的概念模型,运用 GIS 空间分析技术,从城市、 区与街道尺度定量刻画影子教育的空间分异特征,揭示影子教育空间分异机制,为科学 引导、精准管理、有效落实“双减”政策提供借鉴。
+2 内涵解析与框架分析
+2.1 쓚몭뷢컶
+2.1.1 影子教育空间的内涵解析 行为主义地理学关注细分群体或微观个体对空间的认知 和行为决策机制,通过行为分异与个体关联解析群体行为与空间的形成过程和机理[22]。 影子教育作为一种个性化、市场化教育形式,是教育活动主客体在各自成本-收益决策行 为下的教育场地选择过程[14]。即以赢利为目的的影子教育机构为教育供给主体,以培优 补差的学生为教育需求主体,二者不同的成本-收益决策行为影响着教学场所的空间选择 与教学活动的供需平衡:影子教育供给主体的教学场所选址既要考虑地价、租金等经济 成本问题,又要考虑城市区位与城市设施的便利条件,以及接近居住区、主流学校以增
+1463
+
+
+地 理 研 究 43 卷
+加生源数量的市场条件;而影子教育需求主体既要考虑家庭经济状况的补习费用支付能 力与家庭文化资本状况的支付意愿,又要考虑教学培训机构的教学质量与教育声誉等, 更要考虑教学场所的距离远近、场所区位的交通网络、交通站点、周边设施的可达性问 题。因此,影子教育空间分布的实质是影子教育活动主体与地理空间要素综合作用的教 育空间生产过程,是供需双方各自成本-收益决策行为下的空间响应。 2.1.2 影子教育场域的内涵解析 法国社会学家皮埃尔·布迪厄 (Pierre Bourdieu) 将物 理学“场”(field) 的概念引入社会学研究中,提出社会“场域”理论。从“场域”的构 成要素看,“场域”由行动者、惯习和资本三部分构成,其中,行动者具有主观能动性,是 场域建构的主体;惯习是场域建构的内在逻辑,是资本分配的行为倾向;而资本是构成 主体行动的基础,各类资本之间是可以相互流动与转化的,是催生场域扩张的动力[23]; 从“场域”的社会结构形态看,“场域”是一个以关系联结的社会网络,行动者在社会联 系中占据着一个特定的位置,对应着相应的社会资源[24],亦即以物质空间资源为载体的 社会资本、文化资本和经济资本的占有决定了行动者在场域中的位置[25]。因而,影子教 育场域是以影子教育机构与学生为核心行动者,以学生的文化消费为供需关系的纽带, 以满足核心行动者各自需求的行为逻辑为惯习,以群体性核心行动者参与的提升各自资 源占有能力或增加各自资本价值总量的一种社会化教育的再生产过程。 2.2 퇐뺿뿲볜
+通过影子教育地理空间与社会场域的内涵解析,表明城市影子教育的地理空间分布 既是教育活动主体与地理空间要素相互作用的教育场所选择的空间决策反映,又是教育 活动供需主体在教育再生产作用下的教育场域的反映,供需双方不同的社会经济基础必 然引起不同的空间决策行为,地理空间承载社会空间,社会空间形塑地理空间,二者之 间存在一致的内在逻辑,并在不同尺度上表现为不同的空间分异特征。因而,基于场域 视角的影子教育空间分异研究不仅是影子教育社会空间与地理空间交互作用关系的理论 探索,而且是地理空间要素的社会属性的异质性认识,更是地理空间要素相互作用的各 类资本的文化教育再生产关系与再生产过程的认识 (图 1)。
+图 1 影子教育空间分异的研究框架
+Fig. 1 Research framework for spatial differentiation of shadow education
+1464
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+3 研究区概况与数据来源
+3.1 퇐뺿쟸룅뿶
+西安市位于渭河流域中部,北临渭河和黄土高原,南接秦岭,总面积 10752 km2。西 安市作为中国西部的中心城市与国家重要的科研教育基地,已成为西部地区影子教育集 中发展的主要城市。本 文选择西安主城区为研 究区,包括新城区、碑 林区、灞桥区、雁塔 区、莲湖区以及未央区 6 个行政区 (图 2),共辖 55 个 街 道 , 总 面 积 836.02 km2。2020 年,六 区 常 住 人 口 719.67 万 人 (含 产 业 区 人 口), 小 学 与初中学校 472 所 (小学 315 所 , 初 中 157 所), 中学 240 所,而影子教育 机构数量达 3203 个。 3.2 쫽뻝살풴폫뒦샭
+本研究采用的数据主要包括三大类:1 空间 POI 数据。均由高德地图开放平台通过 网络爬虫软件获取,获取时间为 2021 年 9—11 月,为了提高数据的覆盖率,按照各区分 别爬取,共获得西安市城区六区的影子教育机构记录 4863 条。继而对爬取记录的坐标进 行纠偏、空间配准及其坐标转换以满足数据准确率要求。在此基础上参照相关文献进行 重新分类,按照影子教育供给主体、需求服务与教育性质 (主营业务) 进行属性名称的 识别清洗,筛选得到有效数据 4179 条。然后使用天眼查 APP 对每条影子教育机构经营状 态进行逐一核查,删除经营状态为注销的数据,并将天眼查中的地址与爬取的坐标进行 精度核实,得到有效机构数据 3866 条。最后,根据数据唯一性剔除重复名称与重复位置 坐标的机构,最终得到 3203 条有效数据;通过相同方法获取居住区 (4572 个)、中小学 校 (712 所)、书店 (505 个)、图书馆 (113 所)、商场 (372 个)、高校科研机构 (649 所)、地铁站 (163 个)、公交站 (1006 个) 等点位数据;房价数据来源于 2021 年安居客 网站爬取的西安市主城区住宅小区交易挂牌价格 (https://www.anjuke.com);主城区道路 交通数据由 OSM 开源地图获取,经过分层、筛选、拓扑处理后结合高清影像图进行修正 得到。2 基础地图数据。西安市主城区的区、街道行政区数据由高清天地图数字化获 得。3 社会经济数据。街道人口数据来源于第七次全国人口普查数据,人口教育、职业 类型等社会经济数据来自西安市统计年鉴。各类数据通过投影转换,统一为 GCS_WGS_ 1984 地理坐标系,形成空间分析的数据集。
+4 研究方法
+4.1 펰ퟓ뷌폽뎡폲움볛쒣탍
+4.1.1 模型建立 本文根据影子教育空间分异研究框架与影子教育空间地理要素对场域资
+图 2 研究区域及研究对象 Fig. 2 Study area and research object
+1465
+
+
+地 理 研 究 43 卷
+本的作用特点,构建以经济资本、社会资本与文化资本为评价维度的影子教育场域评价 模型 (表 1),并通过影子教育场强大小来刻画城市不同空间所具有产生和培育影子教育 形成发展能力的强弱。 经济资本 (economic capital,EC):经济资本是最有效的资本形式,是行动者的经济 基础,并能转化为其他资本。影子教育场域的经济资本是支撑影子教育发展的经济基础或 经济能力,在对应的地理空间里,居住区空间是影子教育发生、发展的生源地空间[15], 影子教育的就生源地布局是最大限度覆盖消费市场获得经济资本的惯习行为,居住区密 度与其房价体现其家庭参与影子教育的经济支付环境;各类商业设施集中的繁华地段是 城市最主要的消费空间,也是影子教育选址集聚的空间[26],其密度越大越具有满足多层 次、多类型、多目标社会化教育需求的经济资本能力。 文化资本 (cultural capital,CC):文化资本是有助于文化提升的文化条件或文化环 境
+[25]。主流教育的各类学校、高校与科研机构、图书馆与书店等文化教育设施是文化资 本存在的载体,影子教育接近文化设施布局是最大限度利用文化资本的惯习行为。 社会资本 (social capital,SC):教育场域大致分为制度的、认知的与关系的三类社 会资本[27],其中,制度的社会资本是学校良好运行的制度环境,是相对客观的,对于同 一个城市的影子教育而言可视为无差别的;认知的社会资本因个人所处的家庭经济、社 会阶层或不同地域而具有不同的文化背景、教育理念乃至择校倾向,从而具有差异性。 城市中居住空间的选择是家庭经济、社会阶层乃至教育理念的综合反映,具有认知的社 会资本属性,可通过居住区交通可达性表征其大小;而关系的社会资本是行动者通过社 会网络之间的关系而获得的资本,是具有公共物品属性的、持续的、集体拥有的关系网 络
+[24],由于影子教育场所的区位选择的行为惯习是影子教育机构尽可能通过接近生源地 以占有消费市场,而学生或家庭则以便捷性作为参与影子教育的最基本考虑,因而关系 的社会资本则内化为交通网络的空间便捷性,生源环境的适龄人口密度、教育观念和社 会阶层的接近性。 4.1.2 影子教育场综合评估 利用 ArcGIS 10.2 软件中的栅格计算器并结合熵权法权重对
+뇭 1 펰ퟓ뷌폽뎡폲닢뛈횸뇪쳥쾵
+Tab. 1 Shadow education field measurement index system
+场域构成
+经济资本 (0.26) 影子教育发展的 经济基础
+文化资本 (0.49) 影子教育发展的 文化氛围
+社会资本 (0.25) 影子教育发展的 机会可得性
+地理空间指标
+经济支付环境 (0.615)
+商业设施环境 (0.385)
+主流教育环境 (0.272)
+文化设施环境 (0.231)
+社会教育环境 (0.139)
+文化科研环境 (0.358)
+交通设施环境 (0.180)
+交通网络环境 (0.120)
+交通可达性环境 (0.180)
+生源环境 (0.160)
+教育观念 (0.180)
+社会阶层 (0.180)
+表征指标
+住宅区密度
+住房价格
+大型商场密度
+学校等级 (省/市/县示范性学校)
+图书馆、书店密度
+拥有大学 (指大专及以上) 文化程度的人口 (人/10 万人) 高校科研机构密度
+地铁、公交站点密度
+路网密度
+住宅到影子教育机构可达性
+适龄人口密度 (5~19 岁)
+人口教育程度分级
+职业类型分级
+权重
+0.070
+0.090
+0.100
+0.140
+0.120
+0.070
+0.160
+0.045
+0.030
+0.045
+0.040
+0.045
+0.045
+1466
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+各项指标进行叠加分析,测算基于地理单元尺度的城市影子教育场强值。计算公式如下: Si =∑b1xi1 + b2 xi2⋯ + bj xij (1)
+式中:Σbi=1;Si是地理单元的影子教育场场强;xij为第 i 个地理单元中第 j 个测度指标得 分;bj为第 j 个指标权重[28]。 4.2 뿕볤럖컶랽램
+4.2.1 格网分析法 格网分析法是基于空间坐标系统来描述、分析、虚拟区域地理现象的 有效方法之一,在空间格局的研究中具有广泛的应用[29]。本文利用 ArcGIS 10.2 软件创建 0.6 km×0.6 km 共 2101 个尺度格网,通过计算网格单元内影子教育机构点密度,以探讨 影子教育机构空间分布格局。
+4.2.2 核密度方法 核密度估计 (Kernel Density Estimation,KDE) 是基于数据密集度函 数聚类算法的一种空间密度分析方法,能直观准确的反映要素测量值在连续区域内的相 对集聚程度[28],计算方法如下:
+fh(x) = 1n i= ∑1
+n
+kh(x - xi) = n1h i= ∑1
+n
+kæ
+èç ö
+ø÷
+x - xi
+h (2)
+式中:f(x)为核密度函数值;x 为影子教育机构的位置;xi为落在以 x 为圆心的影子教育机 构;h 为宽带 (h>0);k 为空间权重;n 为阈值范围的点数;i 取值为 0~1。 4.2.3 潜能模型 潜能模型是基于供需关系考虑的空间可达性评价方法[30],本文利用 ArcGIS 10.2 网络分析工具中的 O-D 距离成本计算每个格网中心到地铁站点、公交站点的距 离,并基于潜能模型评价影子教育的交通可达性环境,公式如下: Ai =∑j( )
+Sj /D β
+ij (3)
+式中:Ai指影子教育机构周围的居民点到影子教育机构的可达性累计值;Sj指设定居民点 i 所对应的影子教育 j 的规模,以影子教育机构的分店数量来表征其规模,影子教育机构 分店数量越多,其规模越大;Dij 指居民点获得教育辅导服务时的交通阻抗,具体可解释 为设定居民点与影子教育机构之间的空间距离;β表示潜能衰减系数,本文中β=1。 4.3 쿠맘탔럖컶
+在统计学中,皮尔森积矩相关系数 (PPMCC) 可用于度量两个变量 X 和 Y 之间的相 关性 (线性相关),其值介于-1~1 之间,描述的是两个变量间线性相关强弱的程度,其 绝对值越大,表明相关性越强。本文以此验证影子教育场域模型的合理性及其揭示影子 教育分异特性的科学性。皮尔森相关系数的计算公式为[31]:
+r = n 1- 1 i- ∑1
+næ
+èçç ö
+ø÷÷
+Xi - Xs
+X
+æ
+èçç ö
+ø÷÷
+Yi - Ys
+Y
+(4)
+式中:r 为皮尔森相关系数;Xi表示某一空间位置的影子教育核密度值;Yi表示该空间的
+影子教育场强值或各类资本值;以 X- 、 Y- 和 sx、sY为样本平均值和样本标准差。
+5 影子教育的空间分异特征分析
+本文利用影子教育场域评价模型,首先按照影子教育场域评价指标体系生成各指标 的空间表达,再按指标权重计算影子教育场域的经济资本、文化资本与社会资本值,最 后测算影子教育场强值。为了检测评价模型的科学性与评价结果的有效性,进行了影子 教育场域与影子教育空间分布的拟合性分析,在此基础上进行场域视角的影子教育空间 分异特征分析。
+1467
+
+
+地 理 研 究 43 卷
+5.1 펰ퟓ뷌폽뎡폲뗄쓢뫏탔럖컶
+本文按照五分钟、十分钟、十五分钟生活圈的平均半径 600 m 为网格单元长度,以 600 m×600 m 为网格单元进行城区尺度、区级尺度与街道尺度的影子教育场强与影子教 育核密度值的相关分析。结果表明影子教育场强值越高的空间拟合效果越好。 在城区尺度上,影子教育分布与影子教育场强的 Pearson 相关性在 0.05 的置信度下呈 现显著正相关,相关系数 0.769,拟合效果很好,也就是影子教育场强越大的空间,越具 有影子教育形成发展的资本条件,表明影子教育场域模型能够较好揭示影子教育的空间 分布特征 (图 3)。 在区级尺度上,除了碑林区外,各区的影子教育分布与影子教育场强的 Pearson 相关 系 数 呈 现 正 相 关 , 灞 桥 区 (0.626) < 莲 湖 区 (0.647) < 新 城 区 (0.726) < 未 央 区 (0.749) <雁塔区 (0.778),且在 0.05 水平显著,拟合效果较好,也表明各区的影子教育 场域能够较好揭示影子教育的空间分布特征 (表 2)。 在街道尺度上,只有核心区街道的 Pearson 相关系数呈现拟合效果较好的正相关,主 要 为 西 一 路 、 中 山 门 街 道 (0.322) < 长 安 路 、 小 寨 路 街 道 (0.593) < 十 里 铺 街 道 (0.661) <青年路、解放路街道 (0.681) <张家村街道 (0.685) <张家堡街道 (0.772) < 胡家庙、长乐中街道 (0.758) <丈八沟、电子城街道 (0.826) <环城西路街道 (0.939), 且在 0.05 水平显著。表明核心区街道空间既是影子教育高场强值空间,又是影子教育集
+图 3 影子教育分布与影子教育场域回归分析
+Fig. 3 Shadow education distribution and shadow education field regression analysis
+1468
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+聚空间,也表明影子教育场域在该尺度上具有揭示其空间分异的有效性 (表 3)。 5.2 펰ퟓ뷌폽뗄뿕볤럖틬쳘헷
+5.2.1 城市尺度的空间分异特征 根据影子教育场域模型的测算与场强等级划分标准 (表 4),西安市主城区影子教育场强呈现核心区-核心边缘区-外围区的圈层式分异特征,即 围绕西安古城与二环之间形成高场强的核心区,二环与三环之间为核心边缘区,依次向 外影子教育场强呈递减趋势 (图 4a)。其中,高场强的核心区涉及 11 个街道 35.5 km2,核 心边缘区涉及 10 个街道 112.6 km2与外围 28 个街道 718.05 km2。核心区是西安市历史文化 氛围浓厚、科教文化资源富集与高学历人才集聚的优势区位,对影子教育具有强大吸引 力,而外围区人口密度、科教文化资源、经济基础相对薄弱,吸引影子教育的能力较弱。 从已获取的西安市主城区影子教育机构 POI 数据的空间核密度看,呈现“内密外 疏”的“多核心”分布特征,围绕西安古城,沿着未央路、环城南路、二环南路、西二 环路形成影子教育密集的“多核心集聚区”,以碑林、莲湖和新城为主是集聚区的核心 区,集聚区外的未央区、雁塔区与灞桥区影子教育分布稀疏 (图 4b)。按照影子教育 POI 核密度值大于 0.5 的 600 m×600 m 网格单元进行统计,高值网格数达 31 个,集聚区面积 达 11.16 km2;碑林区以张家村街道、小寨路街道、文艺路街道、太乙路街道、东关南街 街道最为集中,高值网格数达 29 个,集聚区面积达 10.44 km2;莲湖区的环城西路街道、 红庙坡街道、北院门街道与北关街道为核心集聚区,高值网格数达 14 个,集聚区面积达
+뇭 3 컷낲쫐뷖뗀펰ퟓ뷌폽럖늼폫펰ퟓ뷌폽뎡폲쿠맘탔뷡맻
+Tab. 3 Correlation between the distribution of shadow education in streets and shadow education fields in Xi'an
+街道名称
+张家堡街道
+红庙坡街道
+环城西路街道
+丈八沟、电子城街道
+张家村街道
+长安路、小寨路街道
+太乙路街道
+青年路、解放路街道
+西一路、中山门街道
+胡家庙、长乐中街道
+十里铺街道
+场强
+相关系数
+0.77
+0.20
+0.94
+0.83
+0.69
+0.59
+-0.37
+0.68
+0.32
+0.76
+0.66
+R
+2
+0.59
+0.04
+0.86
+0.68
+0.47
+0.33
+0.04
+0.66
+0.10
+0.55
+0.39
+经济资本
+相关系数
+0.44
+0.39
+0.84
+0.74
+-0.13
+0.53
+-0.56
+0.22
+0.28
+0.66
+0.79
+R
+2
+0.17
+0.13
+0.65
+0.55
+0.02
+0.26
+0.24
+0.05
+0.08
+0.40
+0.58
+文化资本
+相关系数
+0.69
+0.09
+0.92
+0.78
+0.74
+0.35
+-0.02
+0.68
+0.17
+0.73
+0.53
+R
+2
+0.47
+0.01
+0.81
+0.60
+0.51
+0.09
+-0.11
+0.44
+0.03
+0.51
+0.28
+社会资本
+相关系数
+0.55
+0.10
+0.96
+0.58
+-0.16
+-0.29
+-0.15
+0.24
+-0.25
+0.32
+0.69
+R
+2
+0.29
+0.01
+0.92
+0.33
+0.03
+0.09
+0.02
+0.06
+0.06
+0.04
+0.43
+显著性 检验
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+뇭 2 컷낲쫐룷쟸펰ퟓ뷌폽럖늼폫펰ퟓ뷌폽뎡폲쿠맘탔뷡맻
+Tab. 2 Correlation between shadow education distribution and shadow education field in Xi'an districts
+区名称
+灞桥区
+碑林区
+莲湖区
+未央区
+新城区
+雁塔区
+场强
+相关系数
+0.63
+-0.17
+0.65
+0.75
+0.73
+0.78
+R
+2
+0.39
+0.03
+0.30
+0.61
+0.52
+0.58
+经济资本
+相关系数
+0.56
+-0.42
+0.54
+0.65
+0.68
+0.56
+R
+2
+0.31
+0.17
+0.29
+0.43
+0.46
+0.32
+文化资本
+相关系数
+0.63
+-0.04
+0.50
+0.66
+0.71
+0.68
+R
+2
+0.40
+-0.01
+0.24
+0.44
+0.50
+0.46
+社会资本
+相关系数
+0.37
+-0.05
+0.32
+0.39
+0.13
+0.45
+R
+2
+0.14
+0.00
+0.10
+0.15
+0.02
+0.20
+显著性 检验
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+<0.05
+1469
+
+
+地 理 研 究 43 卷
+5.04 km2;以及雁塔区的丈八沟街道与 小寨路街道、未央区的张家堡街道与大 明宫街道、灞桥区的十里铺街道是相应 的核密度高值区 (图 5a)。这与场强模 型的圈层式形态结果较为一致,也印证 了二者良好的拟合性分析。 西安市主城区影子教育场域的经济 资本、文化资本与社会资本的空间差异 较大 (图 5b),其中,经济资本与文化 资本的中心-外围结构显著,空间集聚性突出,以莲湖、碑林和新城的核心区最典型,而 社会资本相对均衡,即整个城区空间交通网络较发达和均衡,能够便捷地支撑影子教育 与外部资源之间的社会关系网络,这也表明构成影子教育场域的经济资本、文化资本与 社会资本有各自的特点与规律,在影子教育场域的形成中具有不同强度的作用 (图 6)。 5.2.2 区级尺度的空间分异特征 根据影子教育场域模型的分区测算结果,西安市主城区 各分区影子教育场强呈现多核心等级差异 (图 7a),其中多个高场强中心的碑林区总场强 值最高,场强值达 1.81,其次是新城区与莲湖区,其场强值分别是 1.57 与 1.08,而外围 的雁塔区、未央区与灞桥区总场强值相对较低,介于 0.24~0.72 之间。按照各区高场强中
+뇭 4 컷낲쫐뷖뗀펰ퟓ뷌폽뎡폲뎡잿뗈벶뮮럖 Tab. 4 Classification of shadow education field strength levels in streets of Xi'an
+等级
+高级(H)
+中高级(MH)
+中级(M)
+中低级(ML)
+低级(L)
+场强值
+2≤Si
+1.5≤Si<2
+1.0≤Si<1.5
+0.5≤Si<1.0
+0≤Si<0.5
+街道数
+8
+3
+10
+17
+17
+等级占比(%)
+14.55
+5.45
+18.18
+30.91
+30.91
+图 4 西安市影子教育场强与核密度格局
+Fig. 4 Spatial distribution of field strength and kernel density of shadow education in Xi'an
+图 5 西安市影子教育核密度与场强统计分析
+Fig. 5 Statistical analysis of kernel density and field strength of shadow education in Xi'an
+1470
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+心的数量统计,核心区的碑林区大致有 5 个高场强中心,莲湖区有 4 个高场强中心,而其 他各区大致有 3 个高场强中心。不仅如此,不同高场强中心的构成要素及其要素的规模 也有所不同,各高场强中心周围的小学、中学与教育科研机构数量差异很大 (图 7b)。 若按影子教育机构数量的分区统计看,虽然各区数量差异较大,中心-外围的空间分 异性不明显,如外围区的未央区最多达 699 个,比核心区的新城区多 205 个,但从影子教 育的分区密度看,中心-外围的空间分异性较显著,如城区核心的碑林区建成区影子教育 密度最高达 24 个/km2,新城区与莲湖区基本为 16 个/km2,而外围三区基本为 5 个/km2; 而中心三区常住人口的影子教育密度基本为 6~8 个/万人,外围三区基本为 3~5 个/万人。 可见,影子教育的分区密度差异不仅体现了影子教育的空间分异性,而且有力地印证了 影子教育场域模型刻画影子教育场域特征的科学性与有效性。
+图 6 西安市影子教育场域资本分布
+Fig. 6 Capital distribution of shadow education field in Xi'an
+图 7 西安市区级尺度影子教育场强与集聚核心统计分析
+Fig. 7 Statistical analysis of district-scale shadow education field strength and agglomeration core in Xi'an
+1471
+
+
+地 理 研 究 43 卷
+从分区的影子教育场域的各资本值看,西安主城区影子教育场域的经济资本、文化 资本与社会资本的在各分区之间与分区内有较大差异。其中,核心区的碑林区、新城区 与莲湖区的三类资本最为突出,但碑林区的经济资本 (2.15) >文化资本 (1.79) >社会 资本 (1.45),新城区的经济资本 (1.96) >社会资本 (1.54) >文化资本 (1.22),莲湖区 的社会资本 (1.34) >经济资本 (1.25) >文化资本 (0.89),而外部三区的经济资本与文 化资本都比较低。这说明西安主城区各区的商业设施与生源地居住区的数量及其集聚程 度大为不同,从而使得其影子教育场域的经济资本差异显著;由于各区的学校、科研机 构、图书馆等文化教育设施的数量、等级及其集聚程度有所不同,则其分区的文化资本 也差异显著 (图 8)。 5.2.3 街道尺度的空间分异特征 西安市主城区各街道影子教育场强差异显著,按照场强 等级划分标准,中级以上场强值的街道 21 个,占总街道数的 38.18%,而低级与中低级场 强值的街道数 34 个,占总街道数的 61.82%。在空间上,高场强值街道基本分布于核心 区,而低场强值街道多分布于外围区。 西安市主城区各街道呈现多类型多功能场域分异特征 (表 5),大致形成经济资本 (EC)、文化资本 (CC) 与社会资本 (SC) 主导的单一功能型,相互组合的复合功能型 以及弱功能型三类,其中复合功能型可分为经济资本与文化资本复合型 (EC-CC)、经济 资本与社会资本复合型 (EC-SC)、文化资本与社会资本复合型 (CC-SC) 及其三类复合 型 (EC-CC-SC)。充分体现了影子教育场域形成的要素差异性及其要素空间集聚的差异 性,形成了不同的场域功能类型,如经济资本主导型 (EC) 的“影子教育+家属区、影 子教育+高档住区、影子教育+商业区”等类型,文化资本主导型 (CC) 的“影子教育+ 中小学校、影子教育+高校科研机构、影子教育+文化设施”等类型,以及社会资本主导 型 (SC) 主要表现为“影子教育+交通枢纽站”。 从各类型的空间分布看,三类复合型主要分布于西安主城区的核心区,电子城街 道、长延堡街道、红庙坡街道等传统商圈、南部科教文化区等社会经济文化发展水平较 高的区域,拥有良好的交通网络环境与较高受教育水平,从而形成了综合型的功能区; 两类复合型多分布于核心边缘区,如 EC-CC 复合型的北院门街道与张家村街道,EC-SC 复合型的胡家庙街道、汉城街道、建章路街道与新筑街道,CC-SC 复合型的枣园街道、 鱼化寨街道与土门街道等;而单一功能型与弱功能型街道多分布于外围区,EC 主导型主 要位于各区经济中心、商圈,如雁塔区的小寨街道、经开区的徐家湾街道、三桥街道、 未央宫街道和大明宫街道等;CC 主导型的位于西安市科教文化功能集中的环城西路街道 和大雁塔街道;SC 主导型的主要分布在如交通网络发达的六村堡街道,以及以管理类为 主的等驾坡街道和红旗街道。
+图 8 西安市各区影子教育场域的资本构成
+Fig. 8 Capital composition of shadow education field in Xi'an districts
+1472
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+6 影子教育的空间分异机制分析
+影子教育的空间分异实质是培训场所选择的空间规律的体现,是涉及供需主客体的社 会经济地位、文化消费习惯、区位的资本特性等多要素的综合作用结果,是一个复杂的社 会-空间关系的映射。因此,本文从场域的社会因子与空间因子的互动关系中选择教育内 卷、文化消费、阶层分异与城市功能分区、城市设施空间差异等因素进行分异机制分析。 6.1 뷌폽쓚뻭뗄뺺헹톹솦탎돉쇋닎폫펰ퟓ뷌폽톧쾰뗄좺쳥탔맟쾰
+教育内卷化是指由于总体收益锁定 (升学率锁定),为获得有限教育资源,同质化竞 争方式导致同龄段学生、同类型教育机构、同时期家长之间展开激烈而无效的竞争,甚 至出现边际收益不变乃至下降的情形[32]。然而,相关研究表明影子教育对学业成绩具有 显著的正向影响,且存在群体性差异,即家庭社会经济地位越高,文化资本越高,越有 可能参加影子教育的培训学习[33]。因此,教育内卷化过程中形成了参与影子教育的群体 性惯习,即个体为破解以考试为主要手段、以分数为依据的筛选机制[34],只有加入与加 大影子教育投资来提升竞争力是基本途径,进而催生影子教育快速增长,带动竞争强度 不断升级。尽管教育内卷化有诸多非理性竞争问题[35],但内卷化的群体性惯习已然让影 子教育成为提升竞争的必要方式,加速推动了家庭社会、经济、文化资本的再生产与再 分配,进一步强化了社会分异进程。
+6.2 컄뮯쿻럑뗄춶퟊릦쓜잿뮯쇋닎폫펰ퟓ뷌폽톧쾰뗄뷗닣뮯럖틬
+随着中国物质消费的不断丰富,文化消费能力也不断提升[36]。美国著名经济学家舒 尔茨认为文化消费具有消费与投资两种意义,布迪厄认为文化消费具有社会区分的社会
+뇭 5 컷낲쫐뷖뗀펰ퟓ뷌폽뎡폲샠탍뮮럖
+Tab. 5 Classification of street shadow education field types in Xi'an
+类型
+单一功能型
+复合功能型
+弱功能型
+EC 主导型
+CC 主导型
+SC 主导型
+EC-CC 复合型
+EC-SC 复合型
+CC-SC 复合型
+EC-CC-SC 复合型
+判断依据 EC-CC-SC
+M-L-ML
+M-L-L
+ML-M-ML
+ML-L-H/M
+M-M-ML
+M-L-M
+ML-M-MH/M
+H-H-H
+H-H-MH
+H-MH-H/MH
+H-M-H
+MH-MH-H/MH/M
+MH-M-H/MH
+M-MH-M
+M-M-MH
+ML-L-ML
+街道
+未央宫街道、三桥街道、徐家湾街道、大明宫街道、席王街 道、新合街道
+小寨路街道、中山门街道、北关街道、青年路街道、洪庆街 道、狄寨街道、十里铺街道 大雁塔街道、环城西路街道
+六村堡街道/等驾坡街道、未央湖街道、灞桥街道、红旗街道
+北院门街道、张家村街道
+胡家庙街道、汉城街道、建章路街道、新筑街道
+枣园街道/鱼化寨街道、张家堡街道、桃园路街道、土门街道
+自强路街道、长乐西路街道、解放门街道、东关南街街道、 长安路街道、 文艺路街道
+西一路街道、长乐坊街道/西关街道
+曲江街道
+韩森寨街道/长延堡街道/柏树林街道
+辛家庙街道、纺织城街道/红庙坡街道
+太乙路街道、南院门街道
+电子城街道、长乐中路街道、草滩街道、谭家街道
+丈八沟街道、太华路街道
+1473
+
+
+地 理 研 究 43 卷
+行为意义,亦即人们的文化消费具有不断找寻与自身相同习惯的社群,从而形成特定阶 层的特定消费品位,带来不同阶层之间品位的差异[37]。因此,参与影子教育既是一种文 化消费行为[38],又是一种文化投资行为,更是隐含阶层分异的一种社会跃迁行为的重要 途径。研究发现中产阶层家庭对子女教育有更高的期待和投入,在校外辅导班或兴趣班 的选择上具有显著的阶层化偏好[39]。近年来西安市影子教育由老城向外围地区的快速发 展,一方面体现了文化教育消费大众化与文化教育投资大提升的发展态势,但另一方面 形成的影子教育高场强由核心区向边缘区到外围区依次递减的圈层式分异特征,体现了 不同圈层的文化教育消费传统、文化消费理念以及文化阶层的差异性,集中于城市核心 区的中产阶层更具社会资本、经济资本与文化资本进行影子教育的投资偏好与投资能力。 6.3 돇쫐뚯첬삩헅뗄릦쓜럖쟸탎돉쇋늻춬뗈벶펰ퟓ뷌폽벯뻛쟸럖틬뗄믹놾뿕볤룱뻖
+城市规划政策引导下的城市空间动态扩张推动了城市功能的集聚演化,在不同功能 空间影子教育场域的形成条件不同。西安市第一版城市总规 (1953—1972 年) 确定了 “南郊大学城、西郊电工城、东郊纺织城”功能分区规划,初步形成了功能差异的教育资 源、文化资源、科研机构乃至居住空间不均的老城区空间功能基底。第二版城市总规 (1980 年—2000 年) 进一步强化了工业、科学、文教功能的空间分区,形成了东郊、西 郊与北郊工业区,以及南一环路与南三环路之间的高新技术开发区与南郊工业区,中部 与偏东部之间为大专院校密集分布的科研文教区。第三版城市总规 (1995—2010 年) 在 强化高新区功能扩张的同时,在三环外建设了西部大学城、东郊白鹿原和未央大学城, 形成了小寨、胡家庙、金花路、张家堡、土门等市级商业文化功能区。第四版城市总规 (2008—2020 年) 强化了二环内的商贸旅游服务区、东南部旅游生态度假区、南部文教 科研区、西南部高新技术产业区、西部综合新区、北部装备制造业区、东部工业区与东 北部居住旅游生态区等空间分区的功能性。西安市区级尺度的多核心等级性分异特征充 分揭示了不同功能区的影子教育场域形成能力的空间差异性,老城区办学积淀深厚的中 小学校、教育理念强的单位制家属区、中南部大专院校集中的科研文教区与二环内商业 文化服务区形成了高等级的影子教育集聚核心,以西北部大学城、白鹿原和未央大学城 为主要形成了中等级的影子教育集聚核心,而这些影子教育集聚的中心即为西安市多版 规划引导形成的居住、商业、教育、文体、大学与科研机构等功能分区驱动的结果。 6.4 돇쫐짨쪩퟊풴뗄닮틬탔잿뮯쇋펰ퟓ뷌폽뗄뛠샠탍릦쓜탔럖틬
+城市基础设施是城市生存和发展所必须具备的工程性设施和社会性设施的总称,其 中,工程性设施一般指能源供给、给排水、道路交通、通信、环境卫生以及城市防灾等 六大系统,而社会性设施则指城市行政管理、教育科研、文化体育、医疗卫生、商业服 务、宗教、社会福利等。就影子教育而言,工程型设施系统的完备是影子教育选址运营的 最基本条件,而交通系统更是影响供需主体以可达性来扩大生源、降低成本的基本考虑。 社会性设施类型多而杂,不同类型设施对影子教育场域的形成体现的资本类型不同,进 而形成不同功能与复合功能的场域类型。如商业设施集中的空间是影子教育供需双方特 别关注的正外部性的经济资本空间,既具有良好城市区位的空间可达性,又具有多类型 与多选择的消费服务条件而形成综合功能型场域[40-42]。与此同时,不同城市区位的社会性 设施的数量、规模与等级不同,其周围形成的影子教育场域场强不同。因而西安市主城 区影子教育随着城市设施的区位、等级及其集聚性在区级尺度上形成了多核心、等级性 场域特征,在城区空间上呈现核心区、边缘区向外围区降低的空间分异特征 (图 9)。 6.5 뷗닣럖틬뗄뿕볤쿻럑닮틬잿뮯쇋펰ퟓ뷌폽뗄뿕볤럖틬
+随着社会经济的快速发展,西安市阶层分异问题受到广泛关注,不同阶层群体因公共
+1474
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+服务设施[43,44]、公共服务设施可达性[45]、交通条件[46]而引起房价变化的居住区空间分异[47], 其实质是阶层分异在空间利用与空间消费的分异,社会阶层之间的生活品质界限、社会 资源利用能力、空间消费差异越来越清晰。由于教育再生产具有影响人们社会流动与社 会地位提升的功能,主动接受更多教育获得更强竞争力,促使个人向上层流动占据更为 有利的社会地位[48]。因此,通过影子教育增强家庭资本购买孩子未来的发展资本成为普 遍教育惯习,亦即有条件的家庭有通过“购买希望”以提升文化再生产能力,提高未来 的经济收益和社会地位。正是社会性的阶层分化通过影子教育媒介加剧了家庭资本的再 分配与再生产差异,并与城市功能空间、不同设施的经济资本、文化资本与社会资本特 点相结合,转化为以影子教育为表象的空间分异。西安市影子教育的多尺度空间分异充 分揭示了西安市不同功能区的影子教育场域形成能力的空间异质性,如受教育程度高的 管理类与职业类行业集中区、分布有中小“名校”的老城区、中南部科研文教区与二环 内商业文化服务区等都形成为中高等级的影子教育集聚核心,而这些区域也是西安市社 会阶层分化加剧的区域。 综上,以教育内卷与文化消费为代表的社会因素塑造了严峻的教育竞争氛围,强化 了参与培训学习的群体性惯习,提升了家庭参与影子教育的资本再分配,推动了影子教 育的规模扩张,并在城市动态扩张的功能分区、城市设施资源差异与阶层消费差异的共 同作用下,形成了影子教育供需双方基于自身资本增值下的影子教育场域的空间生产及 其空间分异,这是社会经济因素与空间因素综合作用的结果 (图 10)。
+7 结论与讨论
+7.1 뷡싛
+(1) 基于地理空间要素表征的影子教育场域模型的拟合分析,影子教育场强值越高 的空间拟合效果越好,越是影子教育集聚的空间。在城区尺度上影子教育分布与影子教
+图 9 西安市影子教育场域的多尺度空间分异模式
+Fig. 9 Patterns of multi-scale spatial differentiation in the shadow education field in Xi'an
+1475
+
+
+地 理 研 究 43 卷
+育场强呈显著性正相关,相关系数 0.769,拟合效果很好;在区级尺度上呈显著性正相 关,但各区之间有较大差异;在街道尺度上只有核心区街道的 Pearson 相关系数呈现拟合 效果较好的正相关。 (2) 在城市尺度上,西安市主城区影子教育场强呈现核心区-核心边缘区-外围的圈 层式场域分异特征,即围绕西安古城与二环之间形成高场强的核心区,在二环与三环之间 为核心边缘区,依次向外影子教育场强呈递减趋势,与“内密外疏”的“多核心”的影 子教育核密度分布形态基本一致,不仅如此,影子教育场域构成的经济资本与文化资本的 中心-外围结构最为显著,空间集聚性突出,以莲湖、碑林和新城区的核心区最为典型。 (3) 在区级尺度上,西安市主城区各分区的影子教育场强呈多核心等级性分异特 征,体现了表征经济资本、文化资本与社会资本的社会经济要素在分区尺度上的分异。 核心区的碑林区、新城区与莲湖区的三类资本的场强值最突出,外部三区的经济资本与 文化资本均较低。表明主城区各区的商业设施与生源地居住区的数量及其集聚程度不 同,各区的学校、科研机构、图书馆等文化教育设施的数量、等级及其集聚程度也不同。 (4) 在街道尺度上,西安市主城区各街道影子教育场强呈现多类型的功能性分异特 征,如高等级、中高级场强值的街道数仅为 20%,而低级与中低级场强值的街道数达 61.82%,而且场强资本的功能类型差异显著,大致形成单一功能型、复合功能型以及弱 功能型三类,其中三类复合型主要分布于西安主城区的核心区,而两类复合型多分布于
+图 10 影子教育空间分异的形成机制
+Fig. 10 The formation mechanism of spatial differentiation of shadow education
+1476
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+核心边缘区,而单一功能性与弱功能型街道多分布于外围区,充分体现了影子教育场域 形成要素的空间分异性及其要素空间集聚的分异性。 (5) 影子教育场域的空间分异是供需主体在教育内卷、文化消费、城市动态扩张的 功能差异、城市设施不均的空间资源差异、阶层分异的消费差异等社会经济因素及空间 因素综合作用的结果。 7.2 쳖싛
+(1) 布迪厄研究了许多场域,如美学、法律、宗教、政治、文化、教育等场域,每 个场域都以一个市场为纽带,将场域中象征性商品的生产者和消费者联结起来[4]。影子教 育属于围绕培训教育而展开的供需之间相互作用的教学场所选择的一种场域形态。本文 基于场域的社会空间与地理空间的相互作用逻辑建构了影子教育场域模型,根据模型测 算结果与影子教育的空间分布进行拟合分析,发现在不同尺度的高集聚区拟合效果较 好,越是影子教育场强高值的空间,越是影子教育集聚的空间,研究结果与张晓倩相关 研究结论较为一致[49]。但场域是一个复杂的社会概念,是一个无明确空间范围的认识社 会空间规律的理论工具,以明确空间范围的地理空间表征无明确空间范围的场域本身是 一个值得探索的难点问题,特别通过人口分布为基础的交通网络、生源环境、教育观念、 阶层分异等多方面进行社会资本的空间化表达,但难以全面体现社会资本的复杂性[27], 值得进一步思考探索。 (2) 影子教育场域的形成、发展及其空间分异过程是综合的复杂过程。借助场域理 论能较好揭示影子教育供需主体间的空间能动性、教学场所选址的空间行为性及其空间 社会性的复杂性问题,既刻画了影子教育场域的经济、文化与社会资本的多维度性,又 体现了多尺度的空间分异性,一定程度上丰富了影子教育空间分异的规律性认识,也表 明通过社会学、教育学与地理学的交叉融合研究更有助于人文地理现象的整体性认识。 但面对影子教育空间分异暴露出来的复杂社会问题,应积极加强影子教育空间分异的空 间分区管理研究,在目前教育内卷、阶层分异的市场驱动与“双减”政策调控下,众多 影子教育以更加隐蔽与高成本的方式存在,更加强了社会优势阶层的教育再生产到社会 再生产的可能性,抬高了低收入群体教育再生产门槛,助推低收入阶层的边缘化,更加 不利于实现教育公平[13]。因此,根据影子教育空间分异所形成的教育资源集聚优势与教 培行业市场秩序,如何认识影子教育正规化重构的内生动力?如何从教育环境、教育意 识、城市区位、城市设施等方面营造规范化影子教育场域的经济、文化与社会资本的形 成,正确引导社会各界关注学生的全面发展、完善人才培养理念?如何将影子教育高集 聚空间作为“双减”政策管理的重点区,疏堵结合,推动“双减”治理的有效性?等方 面将成为分区管理研究的重要任务。 (3) 影子教育空间分异是一个动态过程,POI 数据虽然具有基于位置服务的记录地 理实体所承载人类活动与地理位置相互关联的优势,适合于空间格局、人类活动、区域 综合等关键地理问题研究[50],但本文采用截面的 POI 数据难以跟踪支撑西安市影子教育 的空间分异与管理的动态研究,应充分发挥大数据的优势,获取 POI 面板数据,加强时 间过程的空间分异的动态认识。 (4) 本研究只以西安市主城区为案例,定量认识了平原地形下的城市影子教育空间 分异特征,应该说不同城市形态、城市性质、城市规模及其发展阶段的城市空间分布特 点规律必然不同,未来应加强不同类型城市的对比研究,探寻其空间分异的共性规律。 因此,影子教育空间分异问题仍需进一步挖掘探究,为科学引导、精准管理、有效落实 “双减”政策提供理论借鉴。
+1477
+
+
+地 理 研 究 43 卷
+致谢: 真诚感谢匿名评审专家在论文评审中所付出的时间和精力,专家对本文研究 框架、指标选取、数据处理、结论梳理等方面提出了客观、有建设性的修改意见,使本 文获益匪浅。同时感谢王晋同学、刘娟琴同学和郑伟同学为本篇文章在数据收集,文章 梳理等方面做出的贡献。
+닎뾼컄쿗ꎨReferencesꎩ
+[ 1 ] 马克·贝磊, 廖青.“影子教育”之全球扩张:教育公平、质量、发展中的利弊谈. 比较教育研究, 2012, 34(2): 13-17. [Mark Bray, Liao Qing. The global expansion of shadow education: Subverting or enhancing equity, quality and development?. International and Comparative Education, 2012, 34(2): 13-17.] DOI: 10.20013/j.cnki.ice.2012.02.003. [ 2 ] 周常稳, 周霖.“影子教育”: 一个不可忽视的教育问题. 广西社会科学, 2018, 34(1): 212-216. [Zhou Changwen, Zhou Lin. Shadow education: An undeniable educational issue. Social Sciences in Guangxi, 2018, 34(1): 212- 216.] DOI: 10.3969/j.issn.1004-6917.2018.01.041. [ 3 ] 薛海平. 从学校教育到影子教育: 教育竞争与社会再生产. 北京大学教育评论, 2015, 13(3): 47-69, 188-189. [Xue Haiping. From school education to shadow education: Education competition and social reproduction. Peking University Education Review, 2015, 13(3): 47-69, 188-189.] DOI: 10.19355/j.cnki.1671-9468.2015.03.005.
+[ 4 ] 刘春卉, 谷跃, 刘予, 等. 城市影子教育机构的空间分异与教育资源领域化: 以南京为例. 经济地理, 2021, 41(5): 155164. [Liu Chunhui, Gu Yue, Liu Yu, et al. The spatial differentiation of urban shadow educational institutions and the territorialization of educational resources: A case study of Nanjing, China. Economic Geography, 2021, 41(5):155- 164.] DOI: 10.15957/j.cnki.jjdl.2021.05.017. [ 5 ] 李双成, 蔡运龙. 地理尺度转换若干问题的初步探讨. 地理研究, 2005, 24(1): 11-18. [Li Shuangcheng, Cai Yunlong. Some scaling issues of geography. Geographical Research, 2005, 24(1): 11- 18.] DOI: 10.3321/j.issn:10000585.2005.01.002. [ 6 ] Gross Christiane, Hadjar Andreas , Entrich Steve R. Worldwide shadow education and social inequality: Explaining differences in the socioeconomic gap in access to shadow education across 63 societies. International Journal of Comparative Sociology, 2020, 61(6): 441-475. DOI: 10.1177/0020715220987861. [ 7 ] Tsiplakides I. Shadow education and social class inequalities in secondary education in Greece: The case of teaching English as a foreign language. RISE, 2018, 7(1): 71-93. DOI: 10.17583/rise.2018.2987. [ 8 ] Prashant Loyalka, Andrey Zakharov. Does shadow education help students prepare for college? Evidence from Russia. International Journal of Educational Development, 2016, 49: 22-30. DOI: org/10.1016/j.ijedudev.2016.01.008. [ 9 ] Gross Christiane, Hadjar Andreas, Zwier Dieuwke, et al. Social inequality in shadow education: The role of high-stakes testing. International Journal of Comparative Sociology, 2020, 61(6): 412-440. DOI: org/10.1177/0020715220984500. [10] 薛海平. 家庭资本与教育获得: 影子教育的视角. 教育科学研究, 2017, (2): 31-41, 48. [Xue Haiping. Family capital and access to education: A shadow education perspective. Educational Science Research, 2017, (2): 31- 41, 48.] DOI: CNKI:SUN:JYKY.0.2017-02-008. [11] 姜帅, 龙静. 家庭文化与经济资本对教育获得的影响效应. 教育学术月刊, 2022, (1): 51-57. [Jiang Shuai, Long Jing. The influence of family culture and economic capital on education acquisition. Education Research Monthly, 2022, (1): 51-57.] DOI: 10.16477/j.cnki.issn1674-2311.2022.01.007.
+[12] 文军, 李珊珊. 文化资本代际传递的阶层差异及其影响: 基于上海市中产阶层和工人阶层家庭的比较研究. 华东师 范大学学报: 哲学社会科学版, 2018, 50(4): 101-113, 175. [Wen Jun, Li Shanshan. The class difference of intergenerational transmission of cultural capital and its influence: A comparative study of the middle class and working class families in Shanghai. Journal of East China Normal University: Humanities and Social Sciences, 2018, 50(4): 101-113, 175.] DOI: 10.16382/j.cnki.1000-5579.2018.04.011.
+[13] 刘予, 贾敏.“影子教育”: 不平等呈现、资本传递与再生产路径探析. 哈尔滨学院学报, 2021, 42(11): 118-122. [Liu Yu, Jia Min.“Shadow Education”: On the path of inequality, capital transmission and reproduction. Journal of Harbin University, 2021, 42(11): 118-122.] DOI: 10.3969 /j.issn.1004 -5856.2021.11.030.
+[14] 雒占福, 高旭, 张永锋, 等. 基于 POI 的城市影子教育机构空间格局及其影响因素: 以兰州市主城区为例. 人文地理, 2020, 35(6): 95-105. [Luo Zhanfu, Gao Xu, Zhang Yongfeng, et al. Research on the spatial pattern and influencing factors of urban shadow education institutions based on POI data: A case of Lanzhou. Human Geography, 2020, 35(6): 95105.] DOI: 10.13959/j.issn.1003-2398.2020.06.012.
+[15] 窦晨晨, 谌丽, 解扬洋, 等. 北京城市儿童教育辅导机构的空间集聚及影响因素. 地理研究, 2022, 41(4): 1170-1182. [Dou Chenchen, Chen Li, Xie Yangyang, et al. Analysis of the spatial agglomeration and influencing factors of children's education and tutoring institutions: A case study of Beijing, China. Geographical Research, 2022, 41(4): 11701182.] DOI: 10.11821/dlyj020210208.
+1478
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+[16] 叶珊珊, 骆培聪, 吴嘉丽, 等. 基于 POI 数据的福州市教育培训机构空间格局及其影响因素. 地域研究与开发, 2022, 41(4): 44-51. [Ye Shanshan, Luo Peicong, Wu Jiali, et al. Analysis of spatial pattern and influencing factors of education and training institutions in Fuzhou city based on POI data. Areal Research and Development, 2022, 41(4): 44-51.] DOI: 10.3969/j.issn.1003-2363.2022.04.008.
+[17] 梁晶晶. 西宁市主城区影子教育时空演变特征研究. 兰州: 西北师范大学硕士学位论文, 2023: 64-65. [Liang jingjing. The spatial and temporal evolution of shadow education in the main urban area of Xining city. Lanzhou: Master's thesis of Northwest Normal University, 2023: 64-65.]
+[18] 郭文, 黄震方. 基于场域理论的文化遗产旅游地多维空间生产研究: 以江南水乡周庄古镇为例. 人文地理, 2013, 28 (2): 117-124. [Guo Wen, Huang Zhenfang. A field theory to the production of multi-dimensional space of cultural heritage tourism destination. Human Geography, 2013, 28(2): 117-124.] DOI: 10.13959/j.issn.1003-2398.2013.02.019. [19] 陈晓亮, 蔡晓梅, 朱竑. 基于“地方场域”视角的中国旅游研究反思. 地理研究, 2019, 38(11): 2578-2594. [Chen Xiaoliang, Cai Xiaomei, Zhu Hong. Reflection on China's tourism study based on the perspective of field of place. Geographical Research, 2019, 38(11): 2578-2594.] DOI: 10.11821/dlyj020190317.
+[20] 郭岩, 杨昌鸣, 张雨洋. 场域视角下清代北京宣南雅文化核心区范围及空间关联特征. 地理研究, 2020, 39(4): 836852. [Guo Yan, Yang Changming, Zhang Yuyang. The scope and spatial correlation features of the core area of hierarchic culture of Beijing Xuannan in Qing dynasty from the field view. Geographical Research, 2020, 39(4): 836- 852] DOI: 10.11821/dlyj020190246.
+[21] 李纯, 李林海. 布迪厄思想理论应用于我国教育领域研究的回顾与展望. 继续教育研究, 2023, (4): 101-107. [Li Chun, Li Linhai. Retrospect and prospect of the application of bourdieu's theory in education in China. Continuing Education Research, 2023, (4): 101-107.] DOI: 10.11821/dlyj020180575. [22] 张文佳, 鲁大铭. 行为地理学的方法论与微观人地关系研究范式. 地理科学进展, 2022, 41(1): 27-39. [Zhang Wenjia, Lu Daming. The methodology of behavioral geography and its research paradigm of microscale human-environment relationships. Progress in Geography, 2022, 41(1): 27-39.] DOI: 10.18306/dlkxjz.2022.01.003.
+[23] 张中秋, 林卉, 劳燕玲, 等. 场域视角下产教融合命运共同体构建与实践探索: 以地理科学实践教学为例. 教育科学 探索, 2022, 40(1): 29-36. [Zhang Zhongqiu, Lin Hui, Lao Yanling, et al. Construction and practice of production: Education integrated development community from field perspective: Taking practice teaching of geography specialty as an example. The Scientific Exploration of Education, 2022, 40(1): 29-36.] DOI: 10.3969/j.issn.2095-5510.2022.01.004. [24] 蒋阳. 场域视角下创意人群-空间互动研究. 南京: 南京大学硕士学位论文, 2021. [Jiang Yang. Research on the interaction between creative crowd and space from the perspective of field: A case study of China internet writer village. Nanjing: Master's thesis of Nanjing University, 2021.] [25] 朱伟珏.“资本”的一种非经济学解读: 布迪厄“文化资本”概念. 社会科学, 2005, (6): 117-123. [Zhu Weiyu. A non-economic interpretation of“capital”: Bourdieu concept of“cultural capital”. Journal of Social Sciences, 2005, (6): 117123.] DOI: 10.3969/j.issn.0257-5833.2005.06.019. [26] Park Hyun, S Lee, et al. Growth mechanism of private tutoring industries and the spatial impacts on the educational environment in the metropolitan Seoul area : Focused on the interactions among private tutoring industries, educational demand and government policies for education. Korea Social Policy Review, 2015, 22(2): 249- 281. DOI: 10.17000/ kspr.22.2.201506.249. [27] 盛冰. 论教育中的社会资本. 教育科学, 2005, (3): 1-5. [Sheng Bing. On social capital in education. Education Science, 2005, (3): 1-5.] DOI: 10.3969/j.issn.1002-8064.2005.03.001. [28] 李琳, 曾伟平. 中国城市公共健康水平的时空演化及其影响因素. 地理研究, 2022, 41(10): 2760-2776. [Lilin, Zeng Weiping. Spatio- temporal evolution and influencing factors of urban public health level in China. Geographical Research, 2022, 41(10): 2760-277.] DOI: 10.11821/dlyj020210440. [29] 王静, 杨小唤, 石瑞香. 山东省人口空间分布格局的多尺度分析. 地理科学进展, 2012, 31(2): 176-182. [Wang Jing, Yang Xiaohuan, Shi Ruixiang. Spatial distribution of the population in Shandong province at multi-scales. Progress in Geography, 2012, 31(2): 176-182.] DOI: DLKJ.0.2012-02-007.
+[30] 武田艳, 夏清涛, 陈震. 基于改进潜能模型的养老机构空间可达性: 以上海市奉贤区为例. 华东师范大学学报: 自然 科 学 版, 2022, (1): 85- 96. [Wu Tianyan, Xia Qingtao, Chen Zhen. Spatial accessibility of elderly healthcare facilities based on an improved potential model: A case study on Fengxian District in Shanghai. Journal of East China Normal University: Natural Science, 2022, (1): 85-96.] DOI: 10.3969/j.issn.1000-5641.2022.01.011. [31] 陈志方. 中国货币政策的有效性评估: 基于皮尔森相关系数的分析. 中国商论, 2020, (6): 48-49. [Chen Zhifang. Evaluation of the effectiveness of China's monetary policy: An analysis based on Pearson's correlation coefficient. China Journal of Commerce, 2020, (6): 48-49.] DOI: 10.19699/j.cnki.issn2096-0298.2020.06.048. [32] 陈友华, 苗国. 升学锦标赛、教育内卷化与学区分层. 江苏行政学院学报, 2021, (3): 55-63. [Chen Youhua, Miao Guo. Enrollment tournament, educational involution and stratification of school district. The Journal of Jiangsu Administration Institute, 2021, (3): 55-63.] DOI: 10.3969/j.issn.1009-8860.2021.03.008.
+1479
+
+
+地 理 研 究 43 卷
+[33] 吴菲. 影子教育的获得与结果的群体性差异. 南京: 南京师范大学硕士学位论文, 2019: 50-52. [Wu Fei. Group differences in access to shadow education and outcomes: An analysis based on“CEPS”panel data. Nanjing: Master's Thesis of Nanjing Normal University, 2019: 50-52.] [34] 曹云鹤, 陈友华. 社会变迁与内卷的阶层传递机制研究. 青年探索, 2023, (4): 55-64. [Cao Yunhe, Chen Youhua. Research on the mechanism of class transmission of social change and involution. Youth Exploration, 2023, (4): 55- 64.] DOI: 10.13583/j.cnki.issn1004-3780.2023.04.005.
+[35] 侯佳静, 潘莉. 教育“内卷化”的表征、成因及去内卷化策略探析: 基于知乎平台教育“内卷化”文本的内容分析. 北京 城市学院学报, 2023, (3): 73-81. [Hou Jiajing, Pan Li. Analysis on the representation, attribution and coping strategies of educational involution: Content analysis based on text of educational involution on Zhihu Platform. Journal of Beijing City University, 2023, (3): 73-81.] DOI: 10.16132/j.cnki.cn11-5388/z.2023.03.013. [36] 朱媛媛, 甘依霖, 李星明, 等. 中国文化消费水平的地域分异及影响因素. 经济地理, 2020, 40(3): 110-118. [Zhu Yuanyuan, Gan Yilin, Li Xingming, et al. Ruilinstudy on the regional differentiation and influencing factors of cultural consumption level in Chinese provinces. Economic Geography, 2020, 40(3): 110- 118.] DOI: 10.15957/j.cnki.jjdl.2020.03.013. [37] 李艳燕. 基于文化消费的社会分层结构及影响机制研究. 文化产业研究, 2022, (2): 96-115. [Li Yanyan. Research on social stratification structure and influence mechanism based on cultural consumption. Cultural Industry Research, 2022, (2): 96-115.] [38] 吴彦彤. 影子教育的消费社会建构. 教育理论与实践, 2021, 41(1): 3-7. [Wu Yantong. Constructing the consumer society of shadow education. Theory and Practice of Education, 2021, 41(1): 3-7.] [39] 林晓珊.“购买希望”: 城镇家庭中的儿童教育消费. 社会学研究, 2018, 33(4): 163-190, 245. [Lin Xiaoshan.“Purchasing Hope”: The consumption of children education in urban China. Sociological Studies, 2018, 33(4): 163- 190, 245.] DOI: 10.19934/j.cnki.shxyj.2018.04.007.
+[40] 贾宙玮. 基于地理探测器的酒店业空间布局及影响因素研究. 西安: 西安外国语大学硕士学位论文, 2020: 50. [Jia Zhuwei. Research on the spatial layout and influencing factors of hotel industry based on geographical detector: Illustrated by the case of Xi'an. Xi'an: Master's Thesis of Xi'an University of Foreign Chinese, 2020: 50.]
+[41] 王盼盼. 西安市餐饮业空间格局及影响因素研究. 西安: 陕西师范大学硕士学位论文, 2018: 55. [Wang Panpan. Research on the spatial pattern and influencing factors of catering industry in Xi'an. Xi'an: Master's Thesis of Shaanxi Normal University, 2018: 55.]
+[42] 程欢. 西安市文化产业空间异质性多尺度研究. 西安: 陕西师范大学硕士学位论文, 2016: 56-57. [Cheng Huan. Multi-scale study on spatial heterogeneity of cultural industry in Xi'an. Xi'an: Master's Thesis of Shaanxi Normal University, 2016: 56-57.]
+[43] 张文. 西安市公共服务设施对社会阶层空间分化的影响效应研究. 西安: 西安建筑科技大学硕士学位论文, 2019: 49-50. [Zhang Wen. The study on the influence of urban public service on the spatial differentiation of social class in Xi'an. Xi'an: Master's Thesis of Xi'an University of Architecture and Technology, 2019: 49-50. ]
+[44] 钟堃. 公共资源配置对多类型住宅价格空间分异的影响. 西安: 陕西师范大学硕士学位论文, 2020:53-54. [Zhong Kun. The influence of public resource allocation on the spatial differentiation of prices of multiple types of housing. Xi'an: Master's Thesis of Shaanxi Normal University, 2020: 53-54. ]
+[45] 吴琪. 城市公共服务设施可达性对住房价格分异的影响效应研究. 西安: 西安建筑科技大学硕士学位论文, 2019: 55-58. [Wu Qi. Research on the effect of urban public service facilities accessibility on the spatial differentiation of housing price: A case study of Xi'an. Xi'an: Master's Thesis of Xi'an University of Architecture and Technology, 2019: 55-58.] [46] 冯文昕. 城市轨道交通沿线二手房价格空间分异研究. 西安: 长安大学硕士学位论文, 2019: 79. [Feng Wenxin. Research on spatial differentiation of second-hand housing prices along urban rail trans. Xi'an: Master's Thesis of Chang'an University, 2019: 79.]
+[47] 胡琬莹. 西安市住宅价格时空分异特征及影响因素研究. 西安:陕西师范大学硕士学位论文, 2020: 75. [Hu Wanying. Study on the characteristics and influencing factors of spatiotemporal differentiation of residential prices in Xi'an. Xi'an: Master's Thesis of Shaanxi Normal University, 2020: 75.]
+[48] 王蕾. 学校神话视角下教育消费空间的生产: 以浙江 Z 民办学校为例. 教育研究与实验, 2020, (6): 32-36. [Wang Lei. The production of educational consumption space from the perspective of school mythology: A case study of Zhejiang Z private school. Educational Research and Experiment, 2020, (6): 32-36.]
+[49] 张晓倩. 西安市培训机构空间特征及资源附着性研究. 西安: 陕西师范大学硕士学位论文, 2021: 79-81. [Zhang Xiaoqian. Research on the spatial characteristics and resource attachment of training institutions in Xi'an city. Xi'an: Master's Thesis of Shaanxi Normal University, 2021: 79-81.] [50] 薛冰, 赵冰玉, 李京忠. 地理大数据中 POI 数据质量的评估与提升方法. 地理学报, 2023, 78(5): 1290-1303. [Xuebin, Zhao Bingyu, Li Jingzhong. Evaluation and enhancement methods of POI data quality in the context of geographic big data. Acta Geographica Sinica, 2023, 78(5): 1290-1303.] DOI: 10.11821/dlxb202305014.
+1480
+
+
+6 期 雒占福 等:场域视角下城市影子教育的空间分异研究
+Spatial differentiation of urban shadow education from a field perspective: Taking the main urban area of Xi'an as an example
+LUO Zhanfu, BAI Xue
+(College of Geography and Environmental Science, Northwest Normal University, Lanzhou 730070, China)
+Abstract: The proliferating phenomenon of shadow education, characterized by its rapid expansion, poses significant socio- economic challenges, notably augmenting academic pressures on students and escalating financial burdens on families. Furthermore, it exacerbates educational inequity through pronounced spatial differentiation. This investigation, focusing on shadow education institutions within principal districts of Xi'an, employs Pierre Bourdieu's field theory to articulate a shadow education field model. Through the deployment of Geographic Information Systems (GIS) spatial analysis techniques, it endeavors to quantitatively dissect the multidimensional and multiscale attributes of spatial differentiation inherent within the shadow education field, along with elucidating the underlying mechanisms of such differentiation. The outcomes of this research delineate that: (1) The fitting effect of the shadow education field model based on geographical spatial feature representation is good, and the higher the shadow education field strength value, the better the spatial fitting effect. (2) The shadow education field strength in the main urban area of Xi'an presents the circled differentiation characteristics of core area-core edge area-peripheral area on the urban scale, that is, the core area with high field strength is formed around the ancient city of Xi'an and the Second Ring Road, and the core edge area is formed between the second and the third ring roads, and the shadow education field strength shows a decreasing trend in the outward direction in the following order. (3) At the district scale, there is a multi- core hierarchical differentiation, and the economic capital, cultural capital and social capital characterising the field are significantly differentiated at the district level, with the three types of capital in the core districts of Beilin, Xincheng and Lianhu being the most prominent in terms of field strength, while the economic and cultural capital in the three external districts are relatively low. (4) At the street scale, there are multiple types of functional differentiation, forming three major field types: single-function, compound-function and weak-function. (5) The spatial differentiation of the shadow education field is the result of the comprehensive effects of socio-economic and spatial factors such as the integration of supply and demand entities in education, cultural consumption, functional differences in urban dynamic expansion, uneven spatial resource differences in urban facilities, and consumption differences in class differentiation. Keywords: field; spatial differentiation; social space; geographic space; differentiation mechanism; Xi'an city
+1481

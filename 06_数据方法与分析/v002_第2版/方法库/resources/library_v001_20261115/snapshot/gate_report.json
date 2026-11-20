@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "errors": [],
+  "verified_references": 44,
+  "required_methods": [
+    "BINARY_LOGIT",
+    "CLUSTERING",
+    "DID",
+    "HURDLE",
+    "LCA",
+    "MEDIATION",
+    "MODERATION",
+    "MULTILEVEL",
+    "MULTINOMIAL_LOGIT",
+    "MULTIPLE_IMPUTATION",
+    "NEGATIVE_BINOMIAL",
+    "NESTED_REGRESSION",
+    "OLS",
+    "ORDERED_LOGIT",
+    "PANEL_FE",
+    "POISSON",
+    "PSM",
+    "SEM",
+    "STAGGERED_DID",
+    "SURVEY_ESTIMATION",
+    "ZINB",
+    "ZIP"
+  ]
+}

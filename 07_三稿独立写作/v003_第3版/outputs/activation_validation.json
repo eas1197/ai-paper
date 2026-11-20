@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-14T20:32:35.355368+08:00",
+  "passed": true,
+  "problems": [],
+  "framework_validation": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "budgets_checked": [
+    12000,
+    15000,
+    18000,
+    400
+  ],
+  "binding_hashes_checked": true,
+  "empirical_resource_status": "needs_review",
+  "research_gates_passed": false,
+  "scope": "writing norm completeness, budget arithmetic, configuration paths/hashes, existing framework and routing"
+}

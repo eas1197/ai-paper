@@ -1,0 +1,30 @@
+{
+  "module_id": "06",
+  "name": "数据方法与分析",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "05",
+    "10"
+  ],
+  "expected_artifacts": [
+    "method_catalog.csv",
+    "method_references.csv",
+    "variable_dictionary.csv",
+    "sample_flow.csv",
+    "analysis_plan.json",
+    "results.csv"
+  ],
+  "folders": [
+    "方法库/templates",
+    "方法库/文献",
+    "数据适配器",
+    "分析管线",
+    "templates",
+    "outputs"
+  ]
+}
+

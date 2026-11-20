@@ -1,0 +1,9 @@
+<|im_start|>system
+Respond in JSON.<|im_end|>
+<|im_start|>user
+Why is the sky blue?<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

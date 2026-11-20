@@ -1,0 +1,33 @@
+[
+  {
+    "source_url": "https://lib.zjyc.edu.cn/__local/4/25/EF/0BC3C22796EF3A3BB0AA036B7DA_483BD9BA_7BBAD6.pdf",
+    "retrieved_at": "2026-11-16T14:46:59.697016+08:00",
+    "tls_verification": true,
+    "role": "institutional_mirror_or_transcription; primary authenticity requires review",
+    "status": "downloaded",
+    "path": "cssci_2025_2026_original_mirror.pdf",
+    "sha256": "05a549a1542d44807ea2e019519e536f909b7f296176d5e2d6eb62e96ce78fd4",
+    "page_count": 18,
+    "preview": ""
+  },
+  {
+    "source_url": "https://tsgdag.jhun.edu.cn/_upload/article/files/c9/b6/69146849425d8445bb35e97b4546/fae0bc7d-bf19-4538-868f-f7606bfe4f33.pdf",
+    "retrieved_at": "2026-11-16T14:48:12.778356+08:00",
+    "tls_verification": true,
+    "role": "institutional_mirror_or_transcription; primary authenticity requires review",
+    "status": "downloaded",
+    "path": "cssci_2025_2026_institutional_compilation.pdf",
+    "sha256": "84654b28495240b6ecb25f76ac41fddf8a9a89852cabdda9a0f691a44120ca9e",
+    "page_count": 35,
+    "preview": "CSSCI 来源期刊 2025-2026 年版\n中文社会科学引文索引数据库（Chinese Social Sciences\nCitation Index，简称 CSSCI）是由南京大学投资建设、南京大学中\n国社会科学研究评价中心开发研制的人文社会科学引文数据库，用来\n检索中文人文社会科学领域的论文收录和被引用情况。CSSCI 遵循文\n献计量学规律，采取定量与定性相结合的方法从全国 2700 余种中文\n人文社会科学学术性期刊中精选出学术性强、编辑规范的期刊作为来\n源期刊。 CSSCI 来源期刊收录包括法学、管理学、经济学、历史学、\n政治学、教育学等在内的 28 个大类共有 500 多种学术期刊，CSSCI\n扩展版来源期刊有 200 多种学术期刊。\n2025 年 8 月，“中文社会科学引文索引（CSSCI）”建设专家咨\n询会召开，会议审定了 CSSCI（2025-2026）来源期刊、扩展版来源\n期刊以及来源集刊目录。CSSCI（2025-2026）674 本，相比 CSSCI\n（2023-2024），有 36 本新入选，22 本落选，综合新增 14 本。\n序\n期刊名称 学科名称\n号\n1 比"
+  },
+  {
+    "source_url": "https://www.wifa.edu.cn/upload/20240923/d4b8a60dc932f2593f8fb7322a2aa0b2.pdf",
+    "retrieved_at": "2026-11-16T14:48:20.163298+08:00",
+    "tls_verification": true,
+    "role": "institutional_mirror_or_transcription; primary authenticity requires review",
+    "status": "failed",
+    "error_type": "ConnectionError",
+    "reason": "HTTPSConnectionPool(host='www.wifa.edu.cn', port=443): Read timed out."
+  }
+]

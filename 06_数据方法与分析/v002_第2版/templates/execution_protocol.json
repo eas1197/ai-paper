@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "template": true,
+  "engine": "statsmodels",
+  "analysis_mode": "confirmatory",
+  "seed": 20261114,
+  "datasets": [],
+  "primary_dataset": null,
+  "variables": [],
+  "joins": [],
+  "sample_filters": [],
+  "common_sample": true,
+  "missing_policy": "complete_case",
+  "survey_design": {
+    "weights": {"status": "unknown", "rationale": null},
+    "strata": {"status": "unknown", "rationale": null},
+    "psu": {"status": "unknown", "rationale": null}
+  },
+  "models": [],
+  "method_library": null,
+  "diagnostics_plan": null,
+  "robustness_plan": null,
+  "multiple_testing_policy": null,
+  "precision_plan": null,
+  "deviations": []
+}

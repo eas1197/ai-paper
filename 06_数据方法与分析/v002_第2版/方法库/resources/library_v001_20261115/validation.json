@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-11-15T19:50:28.175573+08:00",
+  "status": "passed",
+  "scope": "方法资源内容自查与技术完整性；非具体研究G6",
+  "independent_human_review": false,
+  "method_count": 22,
+  "method_paper_records": 44,
+  "distinct_fulltexts": 31,
+  "archived_pdf_count": 31,
+  "archive_bytes": 34523364,
+  "local_zotero_fulltexts": 11,
+  "open_source_fulltexts": 20,
+  "evidence_locators": 66,
+  "methods": {
+    "OLS": 2,
+    "BINARY_LOGIT": 2,
+    "ORDERED_LOGIT": 2,
+    "MULTINOMIAL_LOGIT": 2,
+    "POISSON": 2,
+    "NEGATIVE_BINOMIAL": 2,
+    "ZIP": 2,
+    "ZINB": 2,
+    "HURDLE": 2,
+    "NESTED_REGRESSION": 2,
+    "MULTILEVEL": 2,
+    "PANEL_FE": 2,
+    "MEDIATION": 2,
+    "MODERATION": 2,
+    "PSM": 2,
+    "DID": 2,
+    "STAGGERED_DID": 2,
+    "CLUSTERING": 2,
+    "LCA": 2,
+    "SEM": 2,
+    "SURVEY_ESTIMATION": 2,
+    "MULTIPLE_IMPUTATION": 2
+  },
+  "source_readonly_checks": [
+    {
+      "paper_id": "ZOT_CXDS55VR",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_EWPR5ZCU",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_KCCVUD8B",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_IB3UDL2N",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_ZH8E2LXI",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_68HLELIY",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_U4UBR5II",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_ANJUDU3G",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_ZUJTDV7Q",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_HYACST6Q",
+      "unchanged": true
+    },
+    {
+      "paper_id": "ZOT_88RC49EA",
+      "unchanged": true
+    }
+  ],
+  "checks": [
+    "正式load_library验证全部22类",
+    "归档PDF哈希/有效页/精确短摘",
+    "快照所有output_files哈希",
+    "内容审查绑定归档记录哈希",
+    "每法两篇不同PDF/身份/角色",
+    "11篇原Zotero附件与初始筛选哈希一致",
+    "22张结构化卡与目录一致"
+  ],
+  "errors": []
+}

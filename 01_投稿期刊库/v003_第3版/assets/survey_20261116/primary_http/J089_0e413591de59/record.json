@@ -1,0 +1,18 @@
+{
+  "journal_id": "J089",
+  "source_url": "https://skxb.hust.edu.cn/",
+  "retrieved_at": "2026-11-16T15:04:18.608404+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://skxb.hust.edu.cn/",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J089_0e413591de59/text.txt",
+  "sha256": "28567073d190588b07ec422022226aed7234a7f3bcf3ff0a724622865cb292b8",
+  "original_path": "primary_http/J089_0e413591de59/response.html",
+  "original_sha256": "fdf9e6f4f14c2c8756821b80ffd12607c7baae69861abcff9877b343babad3b9",
+  "line_count": 74,
+  "title": "华中科技大学学报-社会科学版",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

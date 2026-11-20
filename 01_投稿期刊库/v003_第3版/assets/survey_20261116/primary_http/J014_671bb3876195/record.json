@@ -1,0 +1,20 @@
+{
+  "journal_id": "J014",
+  "source_url": "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/index",
+  "retrieved_at": "2026-11-16T15:02:33.129542+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/index",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J014_671bb3876195/text.txt",
+  "sha256": "a23363a0ac33db5b39571257fc266fd67b67ec70dfa2f7570491ec903f32a35c",
+  "original_path": "primary_http/J014_671bb3876195/response.html",
+  "original_sha256": "d8b4320b0a6282d213e3614929a37206b3cfc7f4a024869cb4e4c952a0ab12ca",
+  "line_count": 701,
+  "title": "社会保障评论",
+  "guideline_links": [
+    "https://sbpl.cbpt.cnki.net/portal/journal/portal/client/news/sbpl_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

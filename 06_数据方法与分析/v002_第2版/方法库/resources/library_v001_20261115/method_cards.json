@@ -1,0 +1,354 @@
+[
+  {
+    "method_id": "OLS",
+    "name": "线性回归",
+    "paper_ids": [
+      "Zeileis2004",
+      "ZOT_CXDS55VR"
+    ],
+    "model": "Y=Xβ+ε；最小二乘，先明确因变量的连续尺度；选择普通、异方差稳健或设计型协方差。",
+    "assumptions": "条件均值/函数形式适当；误差依赖结构与推断相容；因果解释还需额外识别条件。",
+    "diagnostics": "残差-拟合图、非线性、异方差、高杠杆/影响点；检查共线性和聚类层级。",
+    "reporting_rules": "先尺度/编码，再系数及95%区间、N、拟合与标准误类型；稳健SE不修复均值误设或混杂。",
+    "applicability": "CGSS公平感/幸福感范例可学表式；有序量表作连续值必须论证并与有序模型比较。",
+    "table_structure": "表3(PDF13)：两个公平感结局分栏，行列变量及参考组，系数与括号误差，N和F；表4另见15–16页。",
+    "limitations": "原文表4的模型N不一致，不宜直接用系数缩减证明中介；表3标准误设计细节未核实。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "BINARY_LOGIT",
+    "name": "二元逻辑回归",
+    "paper_ids": [
+      "Yee2010",
+      "ZOT_EWPR5ZCU"
+    ],
+    "model": "log[p/(1-p)]=Xβ；Y∈{0,1}；OR=exp(β)。Yee多项模型在两类别时化为二元模型（此特例为系统推导）。",
+    "assumptions": "结局事件与参照明确；无完全分离；连续变量在logit尺度的形式适当；依赖与抽样设计另处理。",
+    "diagnostics": "事件数/稀疏单元、分离、函数形式、校准、预测概率及其区间；检查优化收敛。",
+    "reporting_rules": "明确事件=1、参考组、β或OR及95%CI，另报预测概率/平均边际效应；OR不是概率比。",
+    "applicability": "大学生精英高校获得的二元结局，适合学习中国教育分层表式；在校样本不能代表所有同龄人。",
+    "table_structure": "表4(PDF14–15)：模型1/2各分系数和发生比列；参照宽容型；控制、N、LL、伪R²；括号含义按原注保留。",
+    "limitations": "原文把1−OR表述为概率减少不严谨；不能照抄。Yee为一般分类模型论文，并非二元logit专论。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "ORDERED_LOGIT",
+    "name": "有序逻辑回归",
+    "paper_ids": [
+      "Yee2010",
+      "ZOT_KCCVUD8B"
+    ],
+    "model": "累积logit：logit P(Y≤j)=αj−Xβ（符号随软件）；类别有序，比例优势限制共同斜率。",
+    "assumptions": "类别次序合理；共同斜率/比例优势可辩护；阈值有序、各类别有足够观察。",
+    "diagnostics": "比例优势检验结合实质差异与预测；必要时部分比例优势/广义有序模型；检查稀疏和收敛。",
+    "reporting_rules": "结局方向、阈值、系数或共同OR、CI；用类别概率展示大小，注明检验与替代模型。",
+    "applicability": "大学生婚恋五级态度与CGSS有序态度在测量形式可比；人群和年份不能直接外推。",
+    "table_structure": "表2(PDF12–13)：模型1、3、4、5为定序结局；模型2是多分类择偶结局，须分开；括号SE，N、年份、伪R²。",
+    "limitations": "原文换probit/OLS/二分logit不能代替比例优势诊断；未定位到正式比例优势检验，记未知。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "MULTINOMIAL_LOGIT",
+    "name": "多项逻辑回归",
+    "paper_ids": [
+      "Yee2010",
+      "ZOT_IB3UDL2N"
+    ],
+    "model": "log[P(Y=j)/P(Y=base)]=Xβj；各非参照类别一组系数。",
+    "assumptions": "类别互斥且无序；参照选择有意义；IIA是否合适取决于选择过程，不能机械以单个检验决定。",
+    "diagnostics": "类别频数与分离、收敛；IIA的实质合理性和嵌套/多项probit等替代设计；概率和为1。",
+    "reporting_rules": "写清结局参照及自变量参照，分对照报告β或RRR及CI，再给类别预测概率。",
+    "applicability": "家庭迁移策略三分类，适合CFPS家庭就业/迁移无序状态；家庭与个体分析单位不可混用。",
+    "table_structure": "表3(PDF16及续页)：家庭无外出经历为结局参照；外出/回流两对照，每个含b、SE、exp(b)，底部样本与拟合。",
+    "limitations": "模型说明同时有个人三分类；本卡只绑定家庭表3，不能把个人参照套到家庭表。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "POISSON",
+    "name": "泊松与计数回归",
+    "paper_ids": [
+      "Zeileis2008",
+      "ZOT_ZH8E2LXI"
+    ],
+    "model": "log E(Y|X)=Xβ+log(exposure)；非负整数；offset仅在有明确暴露时间/人口分母时使用。",
+    "assumptions": "均值模型正确；完整Poisson似然另要求条件方差等于均值；稳健推断须符合依赖结构。",
+    "diagnostics": "条件离散度、预测零和尾部、残差、暴露量、聚类；无条件均值方差不能代替条件诊断。",
+    "reporting_rules": "β或IRR及CI、offset单位、SE类型、N；若仅准似然均值模型，不误报似然比较。",
+    "applicability": "夫妻匹配与子女数范例；生育尚未完成者有右删失/风险暴露差异，不能仅靠计数模型解决。",
+    "table_structure": "表2(PDF15)：总样本与出生队列分栏，教育匹配参照、系数括号误差，地区/队列控制和N、LL。",
+    "limitations": "原文称做过离散检验，具体统计量未在审读页定位；本卡不据此认证等离散成立。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "NEGATIVE_BINOMIAL",
+    "name": "负二项回归",
+    "paper_ids": [
+      "Zeileis2008",
+      "Rootograms2016"
+    ],
+    "model": "NB2：log μ=Xβ+offset，Var(Y|X)=μ+μ²/θ；与NB1线性方差区分。",
+    "assumptions": "离散过程有依据；均值设定、依赖和暴露量合理；过度离散本身不证明结构零。",
+    "diagnostics": "离散参数区间、rootogram/预测零与尾、残差；同样本与Poisson及有理论依据替代模型比较。",
+    "reporting_rules": "IRR或β及CI、θ/α参数化、拟合、N；比较模型须注明目标与似然是否可比。",
+    "applicability": "NMES老年人就诊次数，为健康服务利用计数范例；复杂调查设计须在新研究中另行处理。",
+    "table_structure": "附录表2(PDF16)：单NB与两成分混合模型分栏，系数括号SE、log θ、N、LL、AIC/BIC；PDF15解释数据和误拟合。",
+    "limitations": "混合NB不是ZINB；不能把表中混合成分当作结构零，也不能只因AIC优就宣称机制正确。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "ZIP",
+    "name": "零膨胀泊松",
+    "paper_ids": [
+      "Zeileis2008",
+      "Li2020"
+    ],
+    "model": "P(Y=0)=π+(1−π)e^(−μ)；正值概率=(1−π)Poisson(y;μ)；logitπ=Zγ，logμ=Xβ+offset。",
+    "assumptions": "结构零与抽样零两来源有实质理由；暴露量正确；空间/时间依赖按设计建模。",
+    "diagnostics": "两个分量识别/收敛、预测零/尾、敏感性；贝叶斯应用另报链、Rhat、后验预测。",
+    "reporting_rules": "计数与零分量分别标尺度/符号，报告总均值(1−π)μ和CI；不把γ解释为零总概率。",
+    "applicability": "中国县域孕产妇死亡与活产暴露量，提供中国稀有计数和时空ZIP范例；生态单位与CFPS个人不同。",
+    "table_structure": "表1(PDF10)：由ZIP时空风险后验归类的县数/比例；表2(PDF12)为另一个生态决定因素模型，不是ZIP双分量系数表。",
+    "limitations": "原文无完整ZIP双分量系数表，本卡明示报告缺口，并给补全模板；不得把表2冒称ZIP参数。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "ZINB",
+    "name": "零膨胀负二项",
+    "paper_ids": [
+      "Brooks2017",
+      "Zeileis2008"
+    ],
+    "model": "零点质量π与NB2计数混合；Var计数=μ+μ²/θ；总体均值=(1−π)μ。",
+    "assumptions": "结构零和计数过度离散分别有依据；两个分量的协变量依因果位置和生成机制事前选择。",
+    "diagnostics": "Hessian/边界参数/收敛，预测零及正值尾，NB与hurdle比较；不对不收敛模型排序。",
+    "reporting_rules": "计数β/IRR、结构零γ/OR、离散参数、CI、N、似然与预测；明确零分量事件。",
+    "applicability": "NMES1988办公室就诊计数；可学双分量卫生服务利用表式，不直接继承调查权重处理。",
+    "table_structure": "表2(PDF17)ZINB列：上半计数、下半zero inflation，括号SE；参数数、LL、AIC/BIC、预测零总数。",
+    "limitations": "零分量logit与hurdle跨越门槛的logit符号含义不同；不可按同名zero直接比较方向。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "HURDLE",
+    "name": "门槛计数模型",
+    "paper_ids": [
+      "Brooks2017",
+      "Zeileis2008"
+    ],
+    "model": "P(Y>0)=q；正值服从零截断Poisson/NB；所有零来自门槛过程，不同于零膨胀。",
+    "assumptions": "发生与发生后的强度可分；正值计数分布和截断设定正确，结局零编码真实。",
+    "diagnostics": "门槛与正值两部分收敛；正值尾/离散度；联合预测及与其他计数模型的机制比较。",
+    "reporting_rules": "分别报告是否发生和截断计数参数/CI，总体预测均值另算；注明软件零部件事件方向。",
+    "applicability": "医疗利用可区分就诊与就诊后次数；不为所有零值较多的量表机械采用hurdle。",
+    "table_structure": "表2(PDF17)Hurdle-NB列：计数区块+zero区块，误差、参数数、拟合和预测零；方法见PDF6。",
+    "limitations": "此范例zero区块对应正值/跨门槛概率；不能解释为结构零概率。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "NESTED_REGRESSION",
+    "name": "逐步嵌套回归",
+    "paper_ids": [
+      "NISS1997",
+      "ZOT_68HLELIY"
+    ],
+    "model": "同一结局按理论块逐次加入变量；这是模型比较，不是多层嵌套结构。",
+    "assumptions": "共同样本、同一尺度/估计目标；连续近似模型的系数差解释有条件，非线性另有重标度问题。",
+    "diagnostics": "比较样本、共同估计参数协方差、系数差区间；适当联合Wald/LR，ML/REML比较条件须满足。",
+    "reporting_rules": "列明每块理由、N、变动变量、系数/区间/拟合；效应缩减本身不能认证中介。",
+    "applicability": "CEPS多层模型按学校变量组扩展，表3五列同N=18979；原理来源为技术研究报告，非期刊奠基定理。",
+    "table_structure": "表3(PDF16–17)：模型1–5加变量块，系数括号SE；续页ICC、N、LL；同N仅是可比条件之一。",
+    "limitations": "NISS报告针对近似连续结局和无交互情境；不能机械推广到logit系数缩减或因果机制。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "MULTILEVEL",
+    "name": "多层或混合模型",
+    "paper_ids": [
+      "Bates2015",
+      "ZOT_68HLELIY"
+    ],
+    "model": "Yij=Xijβ+Zijuj+εij；学生嵌套学校；随机截距/斜率依设计，不机械全加。",
+    "assumptions": "组内依赖与随机部分合理；组数和组内样本支持估计；随机效应与解释变量关系须论证。",
+    "diagnostics": "ICC、组数/大小、奇异拟合、收敛、随机效应/残差；中心化和跨层变量含义。",
+    "reporting_rules": "固定效应CI、随机方差、ICC、层级N与组数；ML/REML及比较条件，跨层效应另画图。",
+    "applicability": "CEPS学生—学校二层结构高度适合教育研究；CFPS个人—家庭需按实际ID核对。",
+    "table_structure": "表3(PDF16–17)五模型固定项、括号SE、ICC和N、LL；方法PDF13随机截距形式。",
+    "limitations": "范例并未要求每个模型都有随机斜率；多层不自动解决学校选择与未观测混杂。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "PANEL_FE",
+    "name": "面板固定效应",
+    "paper_ids": [
+      "CroissantMillo2008",
+      "SunAbraham2020"
+    ],
+    "model": "Yit=αi+λt+Xitβ+εit；单位内变换识别时间变化协变量。",
+    "assumptions": "单位内有足够变异；严格外生性或明确动态假设；时间变化混杂不会被单位FE自动消除。",
+    "diagnostics": "单位/时间ID唯一与缺口、within变异、序列相关/聚类；动态/异质处理效应不能套普通TWFE。",
+    "reporting_rules": "单位FE和时期FE分列、聚类单位、单位数/观察数、样本窗口；事件效应注明估计目标。",
+    "applicability": "HRS同个人跨期住院事件，是真正个人和波次固定效应；可比CFPS追踪设计，不是行业FE。",
+    "table_structure": "表3(PDF35)：住院相对波次为行，FE/IW/队列效应为列，医疗支出和劳动收入两面板，个人聚类SE。",
+    "limitations": "普通FE列仅为对照；处理异质性下应结合IW/组时方法，不能仅因有FE就认定因果。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "MEDIATION",
+    "name": "中介分析",
+    "paper_ids": [
+      "Tingley2014",
+      "ZOT_U4UBR5II"
+    ],
+    "model": "先定义处理X、中介M和结局Y及时间；潜在结局ACME/ADE；非线性分解须处理尺度。",
+    "assumptions": "处理—结局/中介和中介—结局混杂假设；无处理后中介—结局混杂；不可由显著路径检验保证。",
+    "diagnostics": "时间顺序、共同支持、混杂敏感性；估计器尺度和Bootstrap/其他推断相容；相反路径与替代解释。",
+    "reporting_rules": "总/直接/间接效应和CI、方法/尺度、假设与敏感性；中介比例在总效应接近0或符号相反时谨慎。",
+    "applicability": "JSNET2014政治信任KHB+Bootstrap提供中文表格；横截面关联机制只能提出解释线索。",
+    "table_structure": "表5(PDF6)：效应为行，系数、SE、95%CI、比例为列；注y*标准化和Bootstrap次数。",
+    "limitations": "原表总中介效应数值/区间与叙述存在不一致；只学表式，不移植数值。不同检验不能择显著者支持假设；KHB不等于因果识别。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "MODERATION",
+    "name": "调节与交互",
+    "paper_ids": [
+      "Brambor2006",
+      "ZOT_68HLELIY"
+    ],
+    "model": "Y=β0+β1X+β2Z+β3XZ+…；dE(Y)/dX=β1+β3Z；非线性模型交互须在目标尺度计算。",
+    "assumptions": "保留构成项，函数形式合理；解释处有共同数据支持；分组不是随机处理。",
+    "diagnostics": "边际效应区间含协方差；画Z分布/支持域；跨组差异直接检验；考虑多重比较。",
+    "reporting_rules": "交互项与构成项、效应图/CI、样本密度；不能用一组显著另一组不显著推出组间差异。",
+    "applicability": "CEPS学校阶层与个体能力跨层交互；连续能力二分会损失信息，应预先说明。",
+    "table_structure": "表5(PDF20–21)：4列交互模型，系数括号SE、ICC、同N与LL；图2另见PDF22。",
+    "limitations": "原文图未提供完整边际效应CI，本库要求补上；跨层交互仍需合适随机部分和相关误差处理。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "PSM",
+    "name": "倾向得分匹配",
+    "paper_ids": [
+      "Sekhon2011",
+      "ZOT_ANJUDU3G"
+    ],
+    "model": "e(X)=P(T=1|X)；仅用处理前协变量匹配，事前指定ATT或ATE及目标总体。",
+    "assumptions": "可观测条件可忽略性和positivity；匹配不消除未观测混杂。",
+    "diagnostics": "重叠、匹配前后标准化差异/分布、有效样本与流失、敏感性；推断与具体匹配估计器相容。",
+    "reporting_rules": "处理/对照定义、协变量因果理由、共同支持/卡尺/替换、平衡和ATT/ATE CI、样本流。",
+    "applicability": "CHIP2002户籍与流动人口收入，适合学习中国选择问题的匹配比较；户籍并非随机。",
+    "table_structure": "表3(PDF11)：最近邻/核/分层/半径为行，处理/对照数、ATT、SE和t；原注Bootstrap100次。",
+    "limitations": "普通Bootstrap并非对所有最近邻匹配均有效，不能机械复用；对数收入差不是直接百分比，依尺度变换。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "DID",
+    "name": "双重差分",
+    "paper_ids": [
+      "Callaway2020",
+      "SunAbraham2020"
+    ],
+    "model": "2×2 DID=(处理后−处理前)−(对照后−对照前)；多期需定义ATT(g,t)及对照。",
+    "assumptions": "平行趋势（条件/无条件写清）、无预期、无干扰与样本构成稳定；时间事件不等于外生冲击。",
+    "diagnostics": "事前趋势图/联合区间、预期和溢出、安慰剂与构成；不显著的pretrend不证明平行趋势。",
+    "reporting_rules": "处理时点/对照、窗口、基准期、估计目标、聚类与CI；保留全部预定事件期。",
+    "applicability": "HRS首次住院示范个体事件DID；健康冲击选择与失访仍需讨论，中国政策需另找可比处理。",
+    "table_structure": "表3(PDF35)：按相对波次和两项结局报告动态效应，比较FE和IW，基准−1，个人聚类SE。",
+    "limitations": "不是纯2×2应用，须明确属于多期推广；方法卡不能把事件图当作外生性证明。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "STAGGERED_DID",
+    "name": "分期实施DID",
+    "paper_ids": [
+      "Callaway2020",
+      "SunAbraham2020"
+    ],
+    "model": "ATT(g,t)按首次处理队列与日历时点估计；选择从未/尚未处理组，再按明确权重聚合。",
+    "assumptions": "队列特定平行趋势、无预期、可比对照；避免已处理单位在异质效应下被当作干净对照。",
+    "diagnostics": "队列支持与样本构成、动态效应污染、聚合权重、同时区间；没有可用对照的时期不外推。",
+    "reporting_rules": "队列/事件/日历时间分清，ATT(g,t)与动态聚合、权重、对照、基准、聚类/同时CI。",
+    "applicability": "HRS队列住院IW范例；Callaway组时ATT与Sun–Abraham IW不是同一估计器，按设计选择。",
+    "table_structure": "表3(PDF35)：FE、IW和各队列CATTe,l；方法PDF34限制队列与可用波次，晚住院队列作对照。",
+    "limitations": "两文估计器不能混用名称；本地PDF为2020作者稿，期刊发表年为2021，证据页对应作者稿。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "CLUSTERING",
+    "name": "聚类分析",
+    "paper_ids": [
+      "LeischGruen2006",
+      "ZOT_ZUJTDV7Q"
+    ],
+    "model": "K-means最小化组内平方欧氏距离；K和变量尺度定义探索性分组。",
+    "assumptions": "指标尺度/距离能代表研究相似性；K-means偏好近球形簇；约束仅在真实存在组约束时加入。",
+    "diagnostics": "标准化和异常值、多次初值、K敏感性/轮廓或稳定性、外部验证；固定随机种子。",
+    "reporting_rules": "变量构造与尺度、距离、K依据、初值次数/种子、各类n/比例/中心与稳定性；标签为解释。",
+    "applicability": "上海AI态度四维聚类，适合CGSS态度画像但不直接代表全国。",
+    "table_structure": "表2(PDF8)：四类名称、人数比例及四维均值/SD；PDF7以肘部和理论选K=4。",
+    "limitations": "原文指标含5/7级尺度，未核实标准化和多初值；不能当作已经诊断通过。原理文献为会议方法研究。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "LCA",
+    "name": "潜在类别分析",
+    "paper_ids": [
+      "LinzerLewis2011",
+      "ZOT_HYACST6Q"
+    ],
+    "model": "P(y)=Σc πc∏j P(yj|c)；离散指标在类别内局部独立；类别为潜变量。",
+    "assumptions": "局部独立、可识别、足够单元/样本；类别数并非仅由最小BIC决定。",
+    "diagnostics": "多随机起点/局部极值、BIC/AIC和残差关联、小类、后验分类不确定性；外部验证。",
+    "reporting_rules": "比较类数表、类比例和条件概率、拟合及不确定性；后续回归考虑分类误差。",
+    "applicability": "中国城市劳动力市场六个二元指标，适合劳动市场类型探索；不是连续K-means。",
+    "table_structure": "表2(PDF14)类数/参数数/df/L²/p/BIC/AIC；表3同页为类比例与指标条件概率。",
+    "limitations": "原文把L²检验p=.001称不显著不成立；BIC选择不能替代绝对拟合。随机起点/分类误差未确认。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "SEM",
+    "name": "结构方程模型",
+    "paper_ids": [
+      "Rosseel2012",
+      "ZOT_88RC49EA"
+    ],
+    "model": "测量模型连接指标与潜变量，结构模型连接潜/观察变量；先识别与测量，再解释路径。",
+    "assumptions": "测量有效/模型识别；估计器适合连续或有序数据；因果路径另需时间与混杂假设。",
+    "diagnostics": "载荷/残差/Heywood、拟合与替代模型、跨组测量不变性、间接效应区间；不凭拟合调整到显著。",
+    "reporting_rules": "测量载荷和区间、拟合/df及估计器、结构路径与CI、R²、缺失/抽样处理。",
+    "applicability": "CFPS2010家庭背景与学业，直接提供CFPS测量+结构范例；并不认证当前各波题目一致。",
+    "table_structure": "表4(PDF14)分组拟合，表5(PDF15)测量载荷/误差/R²，表6(PDF16)路径系数括号SE和R²。",
+    "limitations": "个别测量载荷较弱；横截面路径不能自动证明家庭作用机制；跨组路径比较先核对测量不变性。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "SURVEY_ESTIMATION",
+    "name": "复杂抽样推断",
+    "paper_ids": [
+      "Lumley2004",
+      "Oberski2014"
+    ],
+    "model": "按pweight、分层、PSU建立抽样设计；Taylor或适当复制权重估计方差；不等于普通频数加权。",
+    "assumptions": "权重对应目标总体/波次，PSU/strata含义真实；域分析和孤立PSU规则明确；设计自由度有效。",
+    "diagnostics": "权重分布/极端值、设计效应/自由度、分层PSU计数、有限总体修正适用性及亚总体方法。",
+    "reporting_rules": "加权估计/设计型CI，未加权N/总体目标，PSU/分层、方差法、权重/域定义和软件。",
+    "applicability": "ESS2008英国福利态度CFA展示复杂抽样对误差影响；可迁移设计原则至CGSS，不能套用其权重。",
+    "table_structure": "表3(PDF16)：naive/Taylor/jackknife/WLS/Y-B为行，因子方差/协方差为列，各含估计、SE、相对效率。",
+    "limitations": "表明忽略设计可能改变误差；SEM模型失拟和WLS不稳定由原文承认，不把任何一行直接当最优。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  },
+  {
+    "method_id": "MULTIPLE_IMPUTATION",
+    "name": "多重插补",
+    "paper_ids": [
+      "VanBuuren2011",
+      "ZOT_EWPR5ZCU"
+    ],
+    "model": "产生m组插补数据，各自估计Qk,Uk，Rubin合并Q̄和总方差T=Ū+(1+1/m)B。",
+    "assumptions": "MAR须以合理预测变量为条件且模型相容；MNAR需敏感性；保留结局/交互/层级和抽样信息。",
+    "diagnostics": "缺失模式、迭代轨迹/收敛、观察与插补分布、Monte Carlo误差、不可行值、MNAR敏感性。",
+    "reporting_rules": "缺失比例/机制假设、插补变量/算法/次数/迭代/种子、合并规则及CI、完整案例和敏感性。",
+    "applicability": "大学生调查排除缺失结局并对协变量做20次插补；可学中文缺失披露与插补后表式。",
+    "table_structure": "方法PDF8说明20次插补；表4(PDF14–15)报告保留样本的Logistic结果，非插补算法比较表。",
+    "limitations": "原文未明确MICE算法、MAR论证、迭代收敛或Rubin合并细节，均记未知；不能声称其已完成这些诊断。",
+    "evidence_classification": "模型/表格的页码短摘见references；诊断与新报告模板为跨文献综合/系统建议，不声称范例原文均已实施。"
+  }
+]

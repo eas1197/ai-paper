@@ -1,0 +1,20 @@
+{
+  "journal_id": "J053",
+  "source_url": "https://njsh.cbpt.cnki.net/EditorGN/Index.aspx",
+  "retrieved_at": "2026-11-16T15:04:04.039870+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://njsh.cbpt.cnki.net/EditorGN/Index.aspx",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J053_953076d92b0f/text.txt",
+  "sha256": "59e3723bbc434fab07304be093458b100b59031dd3fcbe7cf16d9c52a7a5957d",
+  "original_path": "primary_http/J053_953076d92b0f/response.html",
+  "original_sha256": "0f236c949af877ab715cea9c4ff684cffdfc646310aa57db51f496929161b712",
+  "line_count": 48,
+  "title": "\r\n\t\r\n        期刊协同采编系统\r\n",
+  "guideline_links": [
+    "https://njsh.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?t=v&c=1"
+  ],
+  "review_status": "awaiting_source_readback"
+}

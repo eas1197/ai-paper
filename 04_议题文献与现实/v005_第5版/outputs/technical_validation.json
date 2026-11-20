@@ -1,0 +1,203 @@
+{
+  "validated_at": "2026-11-15T19:42:15.187113+08:00",
+  "technical_passed": true,
+  "checks": [
+    {
+      "name": "joint_tests",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v005_第5版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 26,
+      "log": "joint_tests.log"
+    },
+    {
+      "name": "acquisition_tests",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\11_文献采集适配\\v002_第2版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 16,
+      "log": "acquisition_tests.log"
+    },
+    {
+      "name": "stage06_compatibility",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v005_第5版\\tools\\verify_stage06_compatibility.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 17,
+      "log": "stage06_compatibility.log"
+    },
+    {
+      "name": "framework_regression",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 9,
+      "log": "framework_regression.log"
+    },
+    {
+      "name": "framework_validation",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tools\\project.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": null,
+      "log": "framework_validation.log"
+    },
+    {
+      "name": "skill_validation",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "C:/Users/hou/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v005_第5版\\skills\\research-evidence-hypotheses"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": null,
+      "log": "skill_validation.log"
+    },
+    {
+      "name": "empty_cli_smoke",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v005_第5版\\tools\\research.py",
+        "run",
+        "--input",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v005_第5版\\templates\\workflow_input.json",
+        "--run-id",
+        "TEST_code_smoke_20261115_194214",
+        "--stage",
+        "both"
+      ],
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "log": "empty_cli_smoke.log",
+      "run_id": "TEST_code_smoke_20261115_194214",
+      "meaning": "empty evidence must not pass; no selected real research topic"
+    }
+  ],
+  "research_completed": false,
+  "business_gates_certified": false,
+  "real_abstracts_claimed": 0,
+  "real_core_fulltexts_claimed": 0,
+  "test_materials": "TEST fixtures in temporary directories only; no survey microdata",
+  "network_or_external_messages": false,
+  "live_cnki_download_verified": false,
+  "stage06_compatibility_note": "06实现及断言未改；通过适配器将其硬编码旧04 TEST夹具指向当前04夹具，补齐新05必需研究连接字段。原旧夹具缺字段会被新关卡拒绝。",
+  "code_files": [
+    {
+      "path": "04_议题文献与现实/v005_第5版/tests/test_pipeline.py",
+      "sha256": "714a673fae85db6a39aad8c0f29dc3fb31bf551b13dff6b1d89220a6eddd7edd"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tests/test_workflow.py",
+      "sha256": "aa23116791fbaa9b81c689895b6ee49de08d3f3d869e385d686ae44cdb1f13f5"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/knowledge.py",
+      "sha256": "d87e9270d14f11cba990a7381855f2ca0457dfb8ec2a8cc244cab9f06e2d8db2"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/pipeline04.py",
+      "sha256": "d0f6b67d3a78ec738765292ae5214b0dccab58891396036589f17312874018e6"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/providers.py",
+      "sha256": "113f085f5fac9fc2ced2f84ebecdb7c19ba3d747cf55c803f37315d48f04eae9"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/research.py",
+      "sha256": "22642ec65b22de926d79402de06382c2bbcd524c8a01f40f272aef4e81913eb3"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/runtime.py",
+      "sha256": "c0adfbd0f15e3b06d2af58a26428412725b5ed73b11cf60cc5a96a4811c793d4"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/stage04.py",
+      "sha256": "fad7529a5d4ef62c315a49fd79fab80ecde460e5726a9896b8bee3a929c3d04a"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/verify_release.py",
+      "sha256": "8672a9be56bdb8a66aac62edd77156d3d9c5fd6331692479842edfa6ba45ccf8"
+    },
+    {
+      "path": "04_议题文献与现实/v005_第5版/tools/verify_stage06_compatibility.py",
+      "sha256": "1c76ef0b28a297c115d0cd2f38ed9198215b825a930990952cc1f8b53d5fa867"
+    },
+    {
+      "path": "05_研究问题与假设/v004_第4版/tools/stage05.py",
+      "sha256": "c29119736e8ef9caa43d6b0e18de2af659627ec995e898a63760b0234fd7a646"
+    },
+    {
+      "path": "11_文献采集适配/v002_第2版/tools/acquisition.py",
+      "sha256": "80f1c4efcaa7414a59e30151c5d7657492ffd7f94916848eace22e62df525416"
+    },
+    {
+      "path": "11_文献采集适配/v002_第2版/tools/cnki.py",
+      "sha256": "90d3d8ec35a64eb6282bfe885a2830bcdfb2a33c20dc896faf55be31920dff99"
+    },
+    {
+      "path": "11_文献采集适配/v002_第2版/tools/collect.py",
+      "sha256": "c7512e7868ec272981cd4d95a35fdc45af11e4323ef42facbdc9da00ec93c09a"
+    },
+    {
+      "path": "11_文献采集适配/v002_第2版/tools/collect_common.py",
+      "sha256": "8c752845fe96c60ebc7309fa618433dbabe306e05c617d922e346aacf63b0645"
+    },
+    {
+      "path": "11_文献采集适配/v002_第2版/tools/context_web.py",
+      "sha256": "98e5285465b99f92a193e81394008794b71f4f3a007cebafc00ed0d6c9ecbce2"
+    }
+  ]
+}

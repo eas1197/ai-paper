@@ -1,0 +1,20 @@
+{
+  "journal_id": "J067",
+  "source_url": "https://jhlz.cbpt.cnki.net/portal/journal/portal/client/news/jhlz_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:04:12.648816+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jhlz.cbpt.cnki.net/portal/journal/portal/client/news/jhlz_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J067_a8b9131b7dc9/text.txt",
+  "sha256": "86e3529608a1b5fc896c1ff488643d4587fc39e0346562d9fbf91f4f43bc8364",
+  "original_path": "primary_http/J067_a8b9131b7dc9/response.html",
+  "original_sha256": "ce1caa0d1b5af4e29bb2982a544e441300e1747dd66f90fa13c7a7fa6198c636",
+  "line_count": 74,
+  "title": "江淮论坛",
+  "guideline_links": [
+    "https://jhlz.cbpt.cnki.net/portal/journal/portal/client/news/jhlz_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "module_id": "03",
+  "module_version": 4,
+  "resource_version": 2,
+  "resource_snapshot_id": "language_style_r2_corpus20_v004",
+  "lifecycle": "build_once_reuse_many",
+  "status": "needs_review",
+  "style_study_deliverable_available": true,
+  "resource_available_for_formal_writing": false,
+  "files": [
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/activation_record.json",
+      "sha256": "9fa8f8550adf3fc9a0f39f91dd8e76ec83aca730e84d74dbfe073380726a38a7"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/gate_report.json",
+      "sha256": "9997545fef3084efbc74cd5833cc8858a4fc50788f265ccd561842c5ff3dde10"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/language_audit.csv",
+      "sha256": "c770c1b15b4c77e3bc589a334ea9cd30fe0d7b2b2519a192c46a6ae225f19372"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/language_rules.csv",
+      "sha256": "fc6c53aa8f3d0e0a0e1d9bbb39ff41ed05608758bb09f7331933814d9263a92e"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/original_examples.md",
+      "sha256": "cd4ab5306c3a230a0d50ae49996be48f0962d5e7608ba17ec7360ac98ce0218b"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/style_evidence.jsonl",
+      "sha256": "5bc4dd60409f7f6cdc163cf4dd700c1a93b3a88f21755c24be55ac9374c68d02"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/style_profile.json",
+      "sha256": "ab7a41f4acc51bceb2baf28d45f1b5e595a0b0df44541b1fc123787ed3359cd9"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/语言风格学习.md",
+      "sha256": "b68954dd411bba35283727eb2ca5a0863c77355e47d4ccbca543718ac3482b3f"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/逐篇风格观察.md",
+      "sha256": "437e84fe6610016c2faf16992146630a9d1eed9386086f06e68d256216b3df7b"
+    }
+  ],
+  "business_gate_report": "03_学术语言学习/v004_第4版/outputs/gate_report.json",
+  "counts": {
+    "corpus_papers": 20,
+    "reviewed_passages": 40,
+    "style_patterns": 15,
+    "sentence_exercises": 15,
+    "paragraph_exercises": 5
+  },
+  "created_at": "2026-11-15T14:13:56.310479+08:00"
+}

@@ -1,0 +1,8 @@
+{
+  "validated_at": "2026-11-15T19:42:15.187113+08:00",
+  "technical_passed": true,
+  "joint_report": "04_议题文献与现实/v005_第5版/outputs/technical_validation.json",
+  "joint_report_sha256": "2ced4065f6b35b0dcf6fbe54326f3e6b6d114e9afdf81e03b76224519ecaa2ba",
+  "live_cnki_download_verified": false,
+  "test_materials": "synthetic fixtures only"
+}

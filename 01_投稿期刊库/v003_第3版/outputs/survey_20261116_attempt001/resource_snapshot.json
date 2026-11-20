@@ -1,0 +1,753 @@
+{
+  "schema_version": 2,
+  "module_id": "01",
+  "module_version": 3,
+  "resource_snapshot_id": "survey_20261116_attempt001",
+  "created_at": "2026-11-18T11:11:12.736544+08:00",
+  "status": "needs_review",
+  "as_of": "2026-11-16",
+  "business_gate_report": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/gate_report.json",
+  "input_files": [
+    {
+      "path": "01_投稿期刊库/v003_第3版/assets/survey_20261116/survey_bundle.json",
+      "sha256": "a9ec5baa1351396781c2aa436789c1656a7ad536002cb2a9968b32af4c2c2f64"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "path": "基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    }
+  ],
+  "code_files": [
+    {
+      "path": "01_投稿期刊库/v003_第3版/tools/assemble_survey.py",
+      "sha256": "b418822dee605ed23084025f1066afb0029e85b03357ed42f1f871a4d0e4b832"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/tools/download_catalogues.py",
+      "sha256": "acf277cc50aa531c6492076be932afcb9baa1aa511898b3c9ba8252facfadb44"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/tools/fetch_primary.py",
+      "sha256": "913e854b5a0a2eb6407ebe8824207112a20055dd23dcfd166372d74d10321188"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/tools/journal_common.py",
+      "sha256": "29971b5f35e5941157c623c316403379a27f99d64219ea9584302838ee51c01b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/tools/journals.py",
+      "sha256": "d96354cb6f882d98f083db7fecaa6dc2d65772fe18d1c501404fa6b786a47345"
+    }
+  ],
+  "config_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "seed": null,
+  "environment": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "files": [
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/gate_report.json",
+      "sha256": "c6bd6b910cf6834f318b69d53d577558c702bfa5b2bf3cf0db2514d1df29a68f"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/guidelines_checklist.csv",
+      "sha256": "1729e093144956c678ade24faeb5fca789c2141e1502766c970eb658f98aa824"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/journal_profiles.json",
+      "sha256": "5005332662e1ca5cc8d1eaa7ed5c489d7ec93e35502515e893eee17966009ad2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/journals.csv",
+      "sha256": "ba162c33a1e9f14c9bcf1d7ebd523a5e42388374fe703e3643acb95b2534ad82"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/journals.sqlite",
+      "sha256": "cc691db3ac86fe9b37d00aa47e5a13804e87a9fdeb9d4647525be77627f9863c"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/plan.json",
+      "sha256": "caefde5f28a9faf223045b864ac9371faa38ce5b8241ca559fa729f99a642a7c"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/CSSCI_SCAN.pdf",
+      "sha256": "05a549a1542d44807ea2e019519e536f909b7f296176d5e2d6eb62e96ce78fd4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_01_2.txt",
+      "sha256": "970d4ea6da42b93823b659dd073849bb48efaf2a71c66b344635169302ae5679"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_01_3.txt",
+      "sha256": "970d4ea6da42b93823b659dd073849bb48efaf2a71c66b344635169302ae5679"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_02_0.txt",
+      "sha256": "a34b596ca9264de63ff0e0ff23488a6f4b8a3441d3d05da09c77772ded5cbc25"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_02_1.txt",
+      "sha256": "a34b596ca9264de63ff0e0ff23488a6f4b8a3441d3d05da09c77772ded5cbc25"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_02_2.txt",
+      "sha256": "a34b596ca9264de63ff0e0ff23488a6f4b8a3441d3d05da09c77772ded5cbc25"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_02_3.txt",
+      "sha256": "a34b596ca9264de63ff0e0ff23488a6f4b8a3441d3d05da09c77772ded5cbc25"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_03_0.txt",
+      "sha256": "c281d1fe4aa8b9b5b6cf9c3b2ad4dab650fa254ff4d8765dfd25c5d00c6f3c85"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_03_1.txt",
+      "sha256": "c281d1fe4aa8b9b5b6cf9c3b2ad4dab650fa254ff4d8765dfd25c5d00c6f3c85"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_03_2.txt",
+      "sha256": "c281d1fe4aa8b9b5b6cf9c3b2ad4dab650fa254ff4d8765dfd25c5d00c6f3c85"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_03_3.txt",
+      "sha256": "c281d1fe4aa8b9b5b6cf9c3b2ad4dab650fa254ff4d8765dfd25c5d00c6f3c85"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_04_0.txt",
+      "sha256": "2822ad0ae3ab026de470aada22efe91d92fe3f187976fc9c62b951a9165b50f1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_04_1.txt",
+      "sha256": "2822ad0ae3ab026de470aada22efe91d92fe3f187976fc9c62b951a9165b50f1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_04_2.txt",
+      "sha256": "2822ad0ae3ab026de470aada22efe91d92fe3f187976fc9c62b951a9165b50f1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_04_3.txt",
+      "sha256": "2822ad0ae3ab026de470aada22efe91d92fe3f187976fc9c62b951a9165b50f1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_05_0.txt",
+      "sha256": "bf40da26fbba90a37a4453381563309cdf573729275d26f405727384ee608fef"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_05_1.txt",
+      "sha256": "bf40da26fbba90a37a4453381563309cdf573729275d26f405727384ee608fef"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_05_2.txt",
+      "sha256": "bf40da26fbba90a37a4453381563309cdf573729275d26f405727384ee608fef"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_06_0.txt",
+      "sha256": "686700208ca8a22d367076dcca04d7cdfbd92267aefde911dcbec2bd26b7b7c9"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_06_1.txt",
+      "sha256": "686700208ca8a22d367076dcca04d7cdfbd92267aefde911dcbec2bd26b7b7c9"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_06_2.txt",
+      "sha256": "686700208ca8a22d367076dcca04d7cdfbd92267aefde911dcbec2bd26b7b7c9"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_06_3.txt",
+      "sha256": "686700208ca8a22d367076dcca04d7cdfbd92267aefde911dcbec2bd26b7b7c9"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_07_0.txt",
+      "sha256": "9e0f20918291aa66c70d94256a4697baacaee2fbaea51761366e7217ebae5f40"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_07_1.txt",
+      "sha256": "9e0f20918291aa66c70d94256a4697baacaee2fbaea51761366e7217ebae5f40"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_07_2.txt",
+      "sha256": "9e0f20918291aa66c70d94256a4697baacaee2fbaea51761366e7217ebae5f40"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_07_3.txt",
+      "sha256": "9e0f20918291aa66c70d94256a4697baacaee2fbaea51761366e7217ebae5f40"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_08_0.txt",
+      "sha256": "9b3c8078704772a34ffe29d5f25a8e44fa847c02cdfc623d0c78b4c699b87288"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_08_1.txt",
+      "sha256": "9b3c8078704772a34ffe29d5f25a8e44fa847c02cdfc623d0c78b4c699b87288"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_08_2.txt",
+      "sha256": "9b3c8078704772a34ffe29d5f25a8e44fa847c02cdfc623d0c78b4c699b87288"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_08_3.txt",
+      "sha256": "9b3c8078704772a34ffe29d5f25a8e44fa847c02cdfc623d0c78b4c699b87288"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_09_1.txt",
+      "sha256": "a314fde00589c974ab37bd45788959264260eabbc8c66697ba35aff4f9fbfc94"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_09_2.txt",
+      "sha256": "a314fde00589c974ab37bd45788959264260eabbc8c66697ba35aff4f9fbfc94"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_09_3.txt",
+      "sha256": "a314fde00589c974ab37bd45788959264260eabbc8c66697ba35aff4f9fbfc94"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_10_0.txt",
+      "sha256": "43eba16d865710e01fa41e2be7f46086f3664c0770737bb38438e7f7afe8d2d7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_10_1.txt",
+      "sha256": "43eba16d865710e01fa41e2be7f46086f3664c0770737bb38438e7f7afe8d2d7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_10_2.txt",
+      "sha256": "43eba16d865710e01fa41e2be7f46086f3664c0770737bb38438e7f7afe8d2d7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_10_3.txt",
+      "sha256": "43eba16d865710e01fa41e2be7f46086f3664c0770737bb38438e7f7afe8d2d7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_11_0.txt",
+      "sha256": "2b187cce835b8498507e03c79fa976a4698079ab9f4b99665427d472d0fb5c14"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_11_1.txt",
+      "sha256": "2b187cce835b8498507e03c79fa976a4698079ab9f4b99665427d472d0fb5c14"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_11_2.txt",
+      "sha256": "2b187cce835b8498507e03c79fa976a4698079ab9f4b99665427d472d0fb5c14"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_batch_11_3.txt",
+      "sha256": "2b187cce835b8498507e03c79fa976a4698079ab9f4b99665427d472d0fb5c14"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J003_primary_0.txt",
+      "sha256": "bc278a4788369d8b038976d22f92af1538e4d615efa81f2ec9a30305a7aba0ec"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J005_primary_0.txt",
+      "sha256": "40dfc33a08a18521bff3fc74066d9bbea1e255585d6ea75e9c93fbe7951fbbf6"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J006_primary_0.txt",
+      "sha256": "c15d96c609143e52b6d4800856e2d8ae8c0af1415060db8d763bdfb0c0f19e18"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J007_primary_0.txt",
+      "sha256": "3d4c485ba03470e26aeae988666b8b944f69489f20c163dd86bd2e8cf673a449"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J010_primary_0.txt",
+      "sha256": "b97483303600ba847c6eafeb9bda925d800693930cd6e7b0289029ac28904054"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J015_primary_0.txt",
+      "sha256": "7dfd60c14fe1c58e0b16c5108fa38fdb1f86db193477dce0e47f72aa7859e47b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J017_primary_0.txt",
+      "sha256": "a032558926edc34d67aacbaf809a1b9e08d003e43495f1c13f7002beb280c668"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J019_final_0.txt",
+      "sha256": "07d0299efeaec4e9a2d978efbfa1dfee3892c5d780dd85d2b2e75338b810c1ad"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J020_final_0.txt",
+      "sha256": "ec4524c6ea2a6473d1cadd0f5b6b5c0052485f10a77ddd2d7951a0ebf88c36cf"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J024_primary_0.txt",
+      "sha256": "846d4a942415898580b311448d979bf4ed1194833e1d8ad271c3d5476f5ca2da"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J025_primary_0.txt",
+      "sha256": "bcd360c98ac69d349aff511388bc8d266df9a9224e0ea4ced84b4987bc2df35b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J026_primary_0.txt",
+      "sha256": "9c0f5941f3496f7ee2f4c2a0670eee83be2f8f08c091ec78bb3611f4b1a32b53"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J028_primary_0.txt",
+      "sha256": "134d5e54f80bf042df7358416ae4507f29053997b1f66074aa6145190d964650"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J035_primary_0.txt",
+      "sha256": "7c6cc2361e283edc624c30b24424094305b2044b78a9abe1e9b77ff7f653ee1e"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J037_primary_0.txt",
+      "sha256": "bb2f4943a9301048a02eb652a01242e7a88b97eb5de6120bdfbbdcf52dc405a1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J039_primary_0.txt",
+      "sha256": "f435f239ff6523bd546f022a6210937b58dc57cca90fb537f0a4bf1baf8c164b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J041_primary_0.txt",
+      "sha256": "a466692a3f7d21a2122305d7c1172a69bf3c5e18f4a08e4e6ad5c2340c1db31f"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J043_primary_0.txt",
+      "sha256": "77a1be1a8926a81865d0adf9a325d388e990c33e6243e77a50d26fb0e2242751"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J051_primary_0.txt",
+      "sha256": "67fd14f60a56bd5944a8bc275a19b95bcd2f98156a2a06e7abb98f86e8a7bd4d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J053_primary_0.txt",
+      "sha256": "9716e1bba0a249ffc18a0dd78e639fee918db44e95af475a4f9589483ebc78db"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J061_primary_0.txt",
+      "sha256": "0f5eef5148dfb7eae5da36fa3512e05a1788f6fd89dad913e732b856c92c7796"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J062_primary_0.txt",
+      "sha256": "170564f68801dfdafaa3476233c0d160ed719e0a5b1692476722e2c028663030"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J064_final_0.txt",
+      "sha256": "ee02aba7f2ca68fcf0e0c23a2af2dafb09fea5cba80f55ebe4dd9c252055ccf2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J065_primary_0.txt",
+      "sha256": "f673cc62f4e8caa4356970362b676722e605d6a4856755b909bc1dabc5278ac2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J066_final_0.txt",
+      "sha256": "5644ac3f95612e0b435df959df060a9777612f5b31f3b585d28bc08ad278707b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J070_final_0.txt",
+      "sha256": "7fd11435e85319ba007269275d52e6e1fcae078f0ad4bd38d02acb7fc0ff5d83"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J081_primary_0.txt",
+      "sha256": "e322900caeda6d36e87ecbebe7b013ec52959c616aefb8c73f6b7d04f6e3a0b1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J084_primary_0.txt",
+      "sha256": "dd44b38896c254710135a977d33658d3514a013fdc2d850657db489d0c72b699"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J087_primary_0.txt",
+      "sha256": "433e3d8ce3067e7c804c25a9e5c2e27c5fbca2cbb7f61f863b25dcb670029b86"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J089_primary_0.txt",
+      "sha256": "ae335caad5864e75fbe262590d0fa02613b36c639a92872094c89fc2b5c77406"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/E_J091_primary_0.txt",
+      "sha256": "13ac58ec6ff61f4c88caaeb3b2a33ee71d740a9d7c8dfbea1f6d11bb08002bd9"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J003_7d55f4fae001.txt",
+      "sha256": "3e7005b650739950f88b2f9aa2937ea96819026e7cd1e833d0fc2826b61135be"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J005_234ccdc18a9b.txt",
+      "sha256": "76ced0315c5cee3521da0dcaed7c0c91690379ae079cdd71f153791686923939"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J006_fe17e0723b83.txt",
+      "sha256": "b2d8aaf47954617fc9de81d57d0cb96302f2836d345984511bdf9c03578def25"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J007_e440d985c547.txt",
+      "sha256": "4b610e05df31440efeda7b8187f36dd0b20b37ea734aebdfa3c680c6b40c14cb"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J009_719bfe1011fe.txt",
+      "sha256": "21d574558b8e6bbaf5dd01d5ed1b28bc4d288b1d71faefa48df5e68725ada0ac"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J010_81bb0a2a2e7f.txt",
+      "sha256": "015b732f10d00bd14e58c57882f2008bd697712db32af2d4b26be37061e69d55"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J013_09b28fef21f5.txt",
+      "sha256": "30aa738fdb937ee8aed098a5b78a6c1bb1e5bf3c6ce6394edf7ee18a7af8a980"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J013_41c0105251a2.txt",
+      "sha256": "0f53f5be0aa0b93f30d3ae12407c924b761794745f5a7c36c9b2f996e2f6964d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J013_7d8c8d8a29da.txt",
+      "sha256": "bfd05898dc49314e1c4818167144f87a1f73da772ba9780ab885e891dd41a6c4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J014_671bb3876195.txt",
+      "sha256": "a23363a0ac33db5b39571257fc266fd67b67ec70dfa2f7570491ec903f32a35c"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J014_bb77deba5f61.txt",
+      "sha256": "7bc2fe924643db6a78555bb15055d01f0b151b6047420c31b141b29454795ff8"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J015_e9465f3e33cf.txt",
+      "sha256": "fd9d7819c3bcd9e9145effcb47fd9945b5f3dc8126c4998478c7a3436c2d1d35"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J016_5bf060a0d482.txt",
+      "sha256": "d78f21506963cf941fa82f148661d182c1ec2ffdc2b2d4a203aa4e69e9f1f9b1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J016_5db76b7ee35b.txt",
+      "sha256": "015d434ebc302ff920e7e1c8960392b3993b642f8c4b328627313dd1467bd0e5"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J017_5db76b7ee35b.txt",
+      "sha256": "015d434ebc302ff920e7e1c8960392b3993b642f8c4b328627313dd1467bd0e5"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J018_d973097b8e21.txt",
+      "sha256": "d1692026b62b072cfddb760c4cca0801329cc1b0367296eb9cc350eedda3457d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J019_31a24b4f954c.txt",
+      "sha256": "eb58c8f7682f912c62aeed9ba5148aa2ddd8449e78bdd69f088d2d6901350333"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J022_186a046e632a.txt",
+      "sha256": "eb53c76968bbff9ff7d55cdacd26a77c60c674b75ade52e939f6e21379ac39cd"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J024_de00ee03a445.txt",
+      "sha256": "3c22be5e96e517c39fbd700d8dcd7e663eada94c57dd1a9df12771413aeaf59a"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J025_e9a37e7dd8fb.txt",
+      "sha256": "5cbb5ad01fe248349f95c37e8c3c52953f9fcd076030543969274b4e9fd70e04"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J027_b03b8082fe40.txt",
+      "sha256": "2f1d63af69386062a0b7853df04f9228a81d2935d213a82e0ff260fe41f41fce"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J028_065361f75fff.txt",
+      "sha256": "c27e561310b07c56d89a6d252c5d9f6a0592a2ef4d23c65cc0c9be41a234b3fb"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J029_9aaf60bb2a2e.txt",
+      "sha256": "8fb88ed38a7f6c782a4f544555c101cfb647153c7bf2e55fae9f7416cc190c7e"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J031_6446e6ba1fe5.txt",
+      "sha256": "3a594dc0637e414a281a1c6acc0ee3ca37915fbaadc896438905404d35fc89d4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J031_aa7f4293e8ee.txt",
+      "sha256": "3a594dc0637e414a281a1c6acc0ee3ca37915fbaadc896438905404d35fc89d4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J032_4937c887b43b.txt",
+      "sha256": "28c7d9300f0ca76b14fb149cf06ad37e36c06f5d0ba16a282f1cc3b13ef10408"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J032_aece9b99ce93.txt",
+      "sha256": "cbabe21e72723eec24eab74917b4b766a1aaabadfc0c5796f8a504ec721c3364"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J033_1131438936ae.txt",
+      "sha256": "ff57a43e0a4359c7f58a23613183f6817280a16e99043eaf033d05e4a7d482d7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J033_b33def71cb49.txt",
+      "sha256": "442a7d1b01d7de7a7cc2125defa237a20a455574bb6f112c821415a3cf9de2c1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J034_754a1f0b3011.txt",
+      "sha256": "fd6d17c4e5fd0dbb4ed09b6ad26a4e058aa542130de563618501a9dd343a22b0"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J035_51abb0682716.txt",
+      "sha256": "56693cc54f8456df581781e85582b4fedfef0d8899ba2940df8b8da981dc9646"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J036_49992d55dcc9.txt",
+      "sha256": "807cbbf39b511383f32fe94ca6e1ab97f01c2a092b655f15b18ddbe43272ac99"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J036_cab1ea01e412.txt",
+      "sha256": "35e65db1bf627a92bf6b478275ec65dd0a49625f54b9c5e72fd0662674b17e2c"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J037_629ea8459b2e.txt",
+      "sha256": "2f6918b18acafc85111ad091c6a9778ea8efc7abbcfe5601620fbcb858668182"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J037_7bc183fbb6f4.txt",
+      "sha256": "6b1cddab300846364309e0318d8b01618476bc65e8894c7efcdfe4c6234be04e"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J038_ae5904f50a79.txt",
+      "sha256": "310d924264e5be0aca26e77b605d3f8a47a2e937eeea8aad6f0df93b01c33c2d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J039_6d882a090b49.txt",
+      "sha256": "6a3f7eb3baffe8f83b52e593ae944cb456a1c09b13f3ef3b0453072be0eb5759"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J039_e0e354731fc6.txt",
+      "sha256": "04a657cad79419c4b7eed21ec4c9abfaedda0b070f60fc7f32fc156183c4faf1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J041_9f3f973f401c.txt",
+      "sha256": "976928de49bf92b378119fd3e7d156549b323ea80b79d383d46b48008ec9d286"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J042_54707f66b82d.txt",
+      "sha256": "5c3088ca2c9abc759ab5e97718f1790c78b23b7d71929c567439465ce226b676"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J043_9beaedf114c2.txt",
+      "sha256": "119bd7f47a8a62ebb05b0036713c1ff9175bdb5cf3b9d0d94a97153fe33718a7"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J044_b145cd9726f3.txt",
+      "sha256": "53f4a11c8f3e224f67167e8dd0c92a7cf5bfd1e8d46f64db02cdd822a22d447a"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J046_38b00850724c.txt",
+      "sha256": "df44970247b325cc9fcb090de7f262b11f2d0d36d17cbd7f5fdf1d66710b47ec"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J047_37b4880bc4fa.txt",
+      "sha256": "bd171cd8e3486a4088d8c419d1427f93277bb5f355b90b1e1df265b5d0c32fae"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J047_46abb894870c.txt",
+      "sha256": "a9ddef1bd04bab3b60b23de8d5aaf3e13c5846d34027e95db212ed9f77795028"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J048_f063e5c0353c.txt",
+      "sha256": "60ed1b67c40507acdd0c56a2ce6656d07c9a1e1bbf9135aa5fe9424d780e09ae"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J050_4cf6502060db.txt",
+      "sha256": "e5014f6d599f5a488f07f3bedfd3dd06b5f30c1fee24264c79888d99cc19ac41"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J051_a4c775ab38f5.txt",
+      "sha256": "9ca54721760830622b73f5f9c9100989f281b742410150a144a6815788ca89c1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J052_8b45e4879209.txt",
+      "sha256": "673bd75a5e6b0ac50d603d91e42ac2a44d2d33448cc200f0f02acf6a87616a5a"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J053_6d6ff3f9beee.txt",
+      "sha256": "f80d27dfa064ef707144a865c3e6e539c040184c9ea2460380036fcf6cb17cf5"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J053_953076d92b0f.txt",
+      "sha256": "59e3723bbc434fab07304be093458b100b59031dd3fcbe7cf16d9c52a7a5957d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J054_8630073944b3.txt",
+      "sha256": "59a2bf6d4c3d10e40d0daba9aee06929edec1b510dcd47be539f43dad4769dc5"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J054_a8a03910f733.txt",
+      "sha256": "48e1ca08aee79171111a7fd4ef471037642e93c1c3d1db09b1fcdb4005c15090"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J054_c9de08f21524.txt",
+      "sha256": "0010b13a96c9296f880e21a4ad7d8b323eb63414f6a3c4848ba9474f01889cf1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J058_8e32926450f2.txt",
+      "sha256": "fc647f553c9fad77480e01e7dc333bbc32210e3c349324f2cf8c96d748634351"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J058_8f6ec52a21a5.txt",
+      "sha256": "9d5cd17ee6d18b6489ead15bf57deec16ee66d377617b7887daeb2bad424e7e3"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J060_05b3a7619ed0.txt",
+      "sha256": "bfaa5afbe1f9524ce2c1b80d53c8ec5cca0702588d977d3bb6508818827054d2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J061_a0b2eb7eb871.txt",
+      "sha256": "f3acc9a5fe637fa6bdc83d7e998cee9a7c0f040fb30d822dfedef8dec6efd087"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J062_ac21a8df7970.txt",
+      "sha256": "26cf34a456b481afb2f3ac93f413ba8860003436802a11237a28a7c797993971"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J063_6c1641618922.txt",
+      "sha256": "3ec032dde6bd777449001799b33ded30f8b9c5ecb954b96c1efb10596327eb09"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J063_fd8e907ec018.txt",
+      "sha256": "058d4fc26ee17e59294026dd41ac8679725375d2748d61de7d906605f71ab718"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J065_04df68c5888b.txt",
+      "sha256": "876d35112175e1fb3ce04453304ab7bc83ee14c8ff50186d5ce21f817da861e4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J065_2ca779fff2e8.txt",
+      "sha256": "7af5ff92675db5f53d9b92f086592e2782a3c9eb461db862d2bd6b0102ed875d"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J067_a8b9131b7dc9.txt",
+      "sha256": "86e3529608a1b5fc896c1ff488643d4587fc39e0346562d9fbf91f4f43bc8364"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J068_567eb5fa1be9.txt",
+      "sha256": "ce2dc84861b77654fe387cf5cd2368c8308dcb857c23bed1b907bd90386fe6df"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J071_416243fb8cc7.txt",
+      "sha256": "b47e73105629b8058ae4cc4fb79392741b686fb591f7726f607b60c22a0fafbc"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J072_24d26161985e.txt",
+      "sha256": "5c190759215216a3322cd821e0c1082202ba5e6b5aaec22ea906926542b984a1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J072_9a4a1cef08dc.txt",
+      "sha256": "5c190759215216a3322cd821e0c1082202ba5e6b5aaec22ea906926542b984a1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J078_808baa944561.txt",
+      "sha256": "883f914fea4d47521a3c1baedd2a560eb2b2ca49295c49d431e6e495045f7675"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J081_25027e9b01d3.txt",
+      "sha256": "fe4ad79a134c477f6e81e6b99ec14caee718619e3adb096c441978a0940c14b1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J081_5e01e06cfaeb.txt",
+      "sha256": "fe4ad79a134c477f6e81e6b99ec14caee718619e3adb096c441978a0940c14b1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J081_b7e93dae6eeb.txt",
+      "sha256": "b4266a34d7343a8c0965d019d9eb958e1449f754870f0097deb7124c86d63263"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J083_fdbed31c26b2.txt",
+      "sha256": "0bdd2642ee95e54b932514dd7ec6e40813a069cf6695281f9c9b620f16fb56d4"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J084_07b8edfdc5db.txt",
+      "sha256": "80a59c39c064acc18074dbefbe54344d3c52575efc0d1bac3b8afebed98d26cd"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J085_7aad947963e0.txt",
+      "sha256": "747e27976b5a72143265894bd6fc6a536d54a11656edc40e919d86934896c5e2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J085_b02906fb75e2.txt",
+      "sha256": "e7aa921b589e73cfd732a086b7b0a7e5b9efb9fa24f979f367ab2b7e18764322"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J086_edfa5239540a.txt",
+      "sha256": "a97100c2ad32115523d4abb2b5fc4a3af871475534cf4956866a7ebd6206c0d6"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J087_b145cd9726f3.txt",
+      "sha256": "53f4a11c8f3e224f67167e8dd0c92a7cf5bfd1e8d46f64db02cdd822a22d447a"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J088_957e16ee019c.txt",
+      "sha256": "4b7c4a52e83f831bf2e7d18ac8688040f92ed60d52b2fac402efc147637e9139"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J088_9c815cb574c7.txt",
+      "sha256": "fa328d1adbf83fcdf96ebc76914bdb7c7b00883ffaa24ad3f4ef49380fbd0cf2"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J089_0e413591de59.txt",
+      "sha256": "28567073d190588b07ec422022226aed7234a7f3bcf3ff0a724622865cb292b8"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J090_387a6698aa5b.txt",
+      "sha256": "20befd2fade36b849f5ddc45c790e53b011d43698ef9e796c9acae6cf77b2cbf"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J090_834b7147921d.txt",
+      "sha256": "b9e54560da5fce159c3f34d75118e1755ab3ada1ba6d324c6e89af3efb78eadf"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J091_23d3ea945d04.txt",
+      "sha256": "8a18727c1663ee9730a4f8d891f5c5389ab0b1b4d4610b1828850ed89c8d7415"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J091_8c53e2ade5cb.txt",
+      "sha256": "f67982c78d999800e92c25e78107a51a7a8765053b9b82e8b78b3e504f7f5f0c"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J092_abf427290e19.txt",
+      "sha256": "1f68b2a5b264a8460b4db18d58c28a410d571944ccf81534d6e7934b56c213a5"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J093_566a44f27a37.txt",
+      "sha256": "0ed23ce7dd8f4c77403f7b4d5f25c8a708766e45270d2e119f8d7b38ddd18640"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J093_e63cc4dcf924.txt",
+      "sha256": "cf2169d12f3ef75fb410c9daf68e1bd5c2dfe917584fccca20294788bc442405"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J094_c816631af80f.txt",
+      "sha256": "fd5c6de73821b4bbf1da2178b0bf7a1f8eb89d0ddc6de47e289ad5d1aaaf6b41"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J094_f787753fdad0.txt",
+      "sha256": "473ba2e831bb229d71afc6b2ff3f8a4bdea8ddf243cbc61488c3c44399a555b1"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J096_88f188ce0b77.txt",
+      "sha256": "e7f36ca50a8507471057d806b51853db697c9e3b0b933ebf13dd94c252b87428"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J096_be6ffad44ae7.txt",
+      "sha256": "e7f36ca50a8507471057d806b51853db697c9e3b0b933ebf13dd94c252b87428"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J097_8c405d360a11.txt",
+      "sha256": "0edc1bfc023784418d2bd7ac96b842c99551210b1ce9253aee167eaa7cdf48bf"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J097_ac094d58baef.txt",
+      "sha256": "0edc1bfc023784418d2bd7ac96b842c99551210b1ce9253aee167eaa7cdf48bf"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J098_3046fa5d2efe.txt",
+      "sha256": "e93b0bb45c445109d786db734f4d9d9fb6cc2b8ee548a5d37ab6763729d30e2b"
+    },
+    {
+      "path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/sources/HTTP_J099_14d526682eae.txt",
+      "sha256": "d1c13bf05c0f9aba60bb6522b59994898c7b0d0c9e933e11fe24257375f8f3f8"
+    }
+  ]
+}

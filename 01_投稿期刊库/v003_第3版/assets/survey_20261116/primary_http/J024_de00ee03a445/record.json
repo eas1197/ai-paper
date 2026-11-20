@@ -1,0 +1,20 @@
+{
+  "journal_id": "J024",
+  "source_url": "https://cswt.bass.org.cn/Journalx_cswt/authorLogOn.action",
+  "retrieved_at": "2026-11-16T15:03:45.483878+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://cswt.bass.org.cn/Journalx_cswt/authorLogOn.action",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J024_de00ee03a445/text.txt",
+  "sha256": "3c22be5e96e517c39fbd700d8dcd7e663eada94c57dd1a9df12771413aeaf59a",
+  "original_path": "primary_http/J024_de00ee03a445/response.html",
+  "original_sha256": "5ac4c7343cca64e4cda2714a104a29184e2f919f7658abb0ac5c470947cca6bc",
+  "line_count": 51,
+  "title": "作者中心",
+  "guideline_links": [
+    "https://cswt.bass.org.cn/Journalx_cswt/authorLogOn.action"
+  ],
+  "review_status": "awaiting_source_readback"
+}

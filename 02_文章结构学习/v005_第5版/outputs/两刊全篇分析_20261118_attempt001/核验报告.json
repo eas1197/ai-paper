@@ -1,0 +1,8090 @@
+{
+  "checked_at": "2026-11-19 Asia/Shanghai",
+  "status": "needs_review",
+  "journals": {
+    "社会学研究": 80,
+    "中国社会科学": 55
+  },
+  "totals": {
+    "physical_pages": 3013,
+    "text_pages": 2681,
+    "visual_pages": 5,
+    "groups": 624,
+    "flagged_groups": 276,
+    "body_paragraph_candidates": 11149,
+    "body_pages_without_paragraph_index": 3
+  },
+  "page_types": {
+    "正文候选页": 2609,
+    "含引文表起始的正文页": 80,
+    "引文表或附录摘要": 149,
+    "正文文字层不足，保留页面复查": 5,
+    "题录正文页范围之外": 170
+  },
+  "papers": [
+    {
+      "paper_id": "zotero_MK385948",
+      "title": "农村劳动力外出就业决策的多因素分析模型",
+      "journal": "社会学研究",
+      "physical_pages": 8,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visual_pages": [],
+      "groups": 2,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ab1e9ea0831b4eda2c6b7f174e19aefe064a1f2c5d11cfef0942173abe8b5700",
+      "pdf_sha256": "c62d5c3fbc45df595df86445287f5edd1983a5c6b327aa5b5d8a8fdf24ac9691"
+    },
+    {
+      "paper_id": "zotero_X88U69EU",
+      "title": "从生存理性到社会理性选择：当代中国农民外出就业动因的社会学分析",
+      "journal": "社会学研究",
+      "physical_pages": 12,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "262a6f5a16b3c64d17e1d3ad77348577a09d5838c35d1e19f2b93665a0ab2ecd",
+      "pdf_sha256": "d63579bf839f548d61e986e74713e30260aabf5e5c39f8bb1d8a9318fd867414"
+    },
+    {
+      "paper_id": "zotero_39ERQM27",
+      "title": "渐进转型与激进转型在初职进入和代内流动上的不同模式——市场转型分析模型应用于中国转型研究的修订",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [
+        17
+      ],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c75aad0e7e3e847253a79371943bc2069107529791a9ec1db8bfe2788f8ce69b",
+      "pdf_sha256": "f3567a150593c263bdab0b37182341ca70242032fcc679571458234d9d82564e"
+    },
+    {
+      "paper_id": "zotero_YWG2A85S",
+      "title": "对哈里森·怀特市场模型的讨论：解析、探源与改进",
+      "journal": "社会学研究",
+      "physical_pages": 47,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "visual_pages": [],
+      "groups": 9,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "0949212a7e8327e9aa98fabdc399dfa06ffab9e69beaa02d861509bccf2f9825",
+      "pdf_sha256": "a50bc9029b68b0ec561ce75a666d1d1b6b0e957e6d3c7339b26a2ecec89a570a"
+    },
+    {
+      "paper_id": "zotero_NUR2L8DP",
+      "title": "中国的户籍制度与代际职业流动",
+      "journal": "社会学研究",
+      "physical_pages": 30,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7a401c949bf5eb7f3e6f8e302528c433a3ea0e2669c6ce4ccd7f403d55cfa29f",
+      "pdf_sha256": "732ebf72bda52757137468b1babd7b43e6500cd481d4989561943fbf9787c7fa"
+    },
+    {
+      "paper_id": "zotero_GDCUCRWK",
+      "title": "生产的市场结构——基于中国市场田野调查和工业普查数据的经验研究",
+      "journal": "社会学研究",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [],
+      "no_paragraph_index": [
+        19
+      ],
+      "output_sha256": "aa5c335af398d6a3b6cd5d2560078f96792521663538adb2fecd4121cc751e39",
+      "pdf_sha256": "f44e053a005f2c77184a93af43779a46954108e968727680d547f8a292b15f89"
+    },
+    {
+      "paper_id": "zotero_BQNXF3W9",
+      "title": "“气”与中国乡土本色的社会行动——一项基于民间谚语与传统戏曲的社会学探索",
+      "journal": "社会学研究",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ecdf764603c71cc9395ff5aaa08ab1988e434ee98897174b8286b40b07a5cd28",
+      "pdf_sha256": "9a8347f04fa89e97844c9b718e0d45aebe9e923242ccf4d52ed5835c44eb9d9f"
+    },
+    {
+      "paper_id": "zotero_3G222LKC",
+      "title": "中国城市居民的分配公平感研究",
+      "journal": "社会学研究",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [
+        10
+      ],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [
+        13
+      ],
+      "output_sha256": "dc3cf9d18177a927b29f5eb69ca490b9ff77268aec22459d4c6d55c7264596ce",
+      "pdf_sha256": "5a12cc3e8f369e824c879d6a42a989582683816025a2cb0028e308a478e301a4"
+    },
+    {
+      "paper_id": "zotero_A7FV5ZC4",
+      "title": "中国城市家庭变迁的趋势和最新发现",
+      "journal": "社会学研究",
+      "physical_pages": 36,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "visual_pages": [],
+      "groups": 7,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "cb3b435639bd8144dcb4f389e38a1055403b30b0f1d66fdfa0999a6a18c3be8b",
+      "pdf_sha256": "43e00b9e981f0b3164dde639301ebf09aff9f6634a8241f830863c0482982348"
+    },
+    {
+      "paper_id": "zotero_NU3YY8ZA",
+      "title": "户籍制度改革对流动人口收入的影响研究",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "330fffba16f0f86881c665a751d505a0ae05139ce9c75db5cf73aa6baefe5d68",
+      "pdf_sha256": "3a550797bfe5b2418dcf3b33b270d1ac4f8a5a73278ffafa10a91062fb1082b8"
+    },
+    {
+      "paper_id": "zotero_ZFEESUUE",
+      "title": "动员效力与经济理性：农户参与新农保的行为逻辑研究——基于武汉市新洲区双柳街的调查",
+      "journal": "社会学研究",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7795dc71d07e8aabe3d9008544a9619e656874ae01f4cb99a252f8902ddd3a19",
+      "pdf_sha256": "bc2de63b8148e33053189a3f4efcb41746be95810504373c82fac72cadabf7e4"
+    },
+    {
+      "paper_id": "zotero_GUQJU4JA",
+      "title": "家庭禀赋、家庭决策与农村迁移劳动力回流",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "9d8958e738b7c23cfa54d7d0968325b488a8d3f7a72b776fe0f490272f264e99",
+      "pdf_sha256": "a9cabe0444bfff5f134562aef0bfa8574a3415cbf60a288c7c065950e640d35f"
+    },
+    {
+      "paper_id": "zotero_DD4I5QA4",
+      "title": "劳动力市场中的社会资本与市场化",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [
+        19
+      ],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            20,
+            21
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "3afc1484f92545688b21eea487da28c62aa19f6ed349fcfbe2d555e755b1f2cd",
+      "pdf_sha256": "0d0ebc416548ae6871db64d99948e82fc45f997259c5d8811f5eb9c9fb51feb9"
+    },
+    {
+      "paper_id": "zotero_YTPUAEYR",
+      "title": "农村市场化、社会资本与农民家庭收入机制",
+      "journal": "社会学研究",
+      "physical_pages": 27,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "718f7ded8c4e69db59b7b5ff46f8e070164664f12a00a4984ec927a1fe0ca1ce",
+      "pdf_sha256": "faac31823af24ea588f8036c342d7d21c537477af85468c7bd57e8ca5ca36ce2"
+    },
+    {
+      "paper_id": "zotero_MQLVJZ7T",
+      "title": "求职与收入获得的关系机制：理论模型与实证研究",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            20,
+            21
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4a7145a0fb616e323f090aeaf1b2ad97fb1dbf202371007b67a65b1504f07700",
+      "pdf_sha256": "1284684c298947078bdc98a97ef6a69c0115ffed723ea8d8f50e48301955e9e2"
+    },
+    {
+      "paper_id": "zotero_PV7WT73J",
+      "title": "社会心态：转型社会的社会心理研究",
+      "journal": "社会学研究",
+      "physical_pages": 22,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7ac42f6e42b5348e320d0590c789b6cca0c4c6339620d54b00614e48487189d8",
+      "pdf_sha256": "8f01df33c81171a7624ed2ec3b6e0402d0f4d3d02dc2ee63840c9858df51baeb"
+    },
+    {
+      "paper_id": "zotero_V2WBWBPS",
+      "title": "“为市场”的权利安排VS.“去市场化”的社会保护——也谈诺思和波兰尼之“争”",
+      "journal": "社会学研究",
+      "physical_pages": 28,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "visual_pages": [],
+      "groups": 8,
+      "flags": [
+        {
+          "pdf_pages": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            20,
+            21,
+            22
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "18f6c0a74915e3d7eb37a101b837a5fa6f4c66b3ef217a7853eda110bf867e50",
+      "pdf_sha256": "a33cce418404f99abb4049bb2c824cca7686da281b37e49f7a3be23dcfc153f3"
+    },
+    {
+      "paper_id": "zotero_HLMCFMEQ",
+      "title": "中国人的职场交往与收入——基于差分方法的社会资本分析",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "3362a73725de37e6224062afb4b4e9826865a872b0b313a7ac57030bc54cf939",
+      "pdf_sha256": "5421d8235b97e8f1dcedb9882ce769f6aa08c2c6db95741d814507003c25663d"
+    },
+    {
+      "paper_id": "zotero_IFYBIRP2",
+      "title": "市场竞争、集体消费与环境质量——城镇居民生活满意度及其影响因素分析",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "2c5fdcb93b42bc49a2a3c9dea2a2e585fba4215856314fb73188e0ab7d043e4c",
+      "pdf_sha256": "d3bef9641383a8ecdd4d677af0a2d16ba61e5afb89229ffcafbff9dfecffe28f"
+    },
+    {
+      "paper_id": "zotero_V3CA3AZW",
+      "title": "家庭背景如何影响儿童学业成就?——义务教育阶段家庭社会经济地位影响差异分析",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "visual_pages": [
+        20
+      ],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            21
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6c83689e404b21f0b9603591ee0a06d983fef9daed9038b38c8fbdd337115bbd",
+      "pdf_sha256": "531bf821c12b9b46d40632b6e06a91185c620b67520db03b36dca8c3f8edc1b7"
+    },
+    {
+      "paper_id": "zotero_GTUTSZDI",
+      "title": "外出还是留守?——农村夫妻外出安排的经验研究",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c38f059bf450fa099402faf5b1ba516915c04763475a17fad524b94477103cb4",
+      "pdf_sha256": "95bf479e4d6d08e66be5d8afdffc6a36b2299612a78c703981ac24ea908e93f2"
+    },
+    {
+      "paper_id": "zotero_NXSPSK4F",
+      "title": "爱情与姻缘：两种亲密关系的模式比较——关系向度上的理想型解释",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4a47edc4e330f8aa064f2e374d8d52bdd6ee20a7a13f444bae67a943613dce0c",
+      "pdf_sha256": "163c4cff2e7bd744676fa85ba034bbfd188c770267670ab7b444b9ffb65a6674"
+    },
+    {
+      "paper_id": "zotero_89UP6KH7",
+      "title": "文化再生产还是文化流动?——中国大学生的教育成就获得不平等研究",
+      "journal": "社会学研究",
+      "physical_pages": 28,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [
+        17
+      ],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            18,
+            19,
+            20,
+            21
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "abea98d373a698a48b07009eee97cd69192359204e98f9d873c440ec396a08dc",
+      "pdf_sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e"
+    },
+    {
+      "paper_id": "zotero_3QXYRZL3",
+      "title": "行动伦理与“关系社会”——社会学中国化的路径",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "1b7776b0955de72f566f79a55904862d363b5243b4a9ed10f2b0794966a45523",
+      "pdf_sha256": "8522667ebacd947d654478596dbfdade37ee425a0bd5a6cd389c1b8c6d32c79e"
+    },
+    {
+      "paper_id": "zotero_W2RYZ3GB",
+      "title": "“购买希望”:城镇家庭中的儿童教育消费",
+      "journal": "社会学研究",
+      "physical_pages": 29,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            26
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ed6e6c17f56695375d2af4a249441c1f65895a005c490d21b942246cb818ea58",
+      "pdf_sha256": "8b2905a6a4439eb128559673624c83902b731b2daec638cfc955561b445b71ce"
+    },
+    {
+      "paper_id": "zotero_Y7GKHT6V",
+      "title": "制度环境、工作模式与艺术生产——上海A电影厂的艺术兴衰史",
+      "journal": "社会学研究",
+      "physical_pages": 31,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b642494f39aa91dc988c9401439090e3d158bc3b9317bf68eff5698972b3447d",
+      "pdf_sha256": "c820aa4161f5257428d5b50619b932713e1dc8d278d28637eed65cc1f624e9d1"
+    },
+    {
+      "paper_id": "zotero_2DYVDBJB",
+      "title": "另一种娱乐至死?——体验、幻象与综艺娱乐节目制作过程中的劳动控制",
+      "journal": "社会学研究",
+      "physical_pages": 28,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "fc27b3f1970cc8874020a44b67621111644b96945d833f67164ed24b82b56457",
+      "pdf_sha256": "5bf42a0e6561a0582c2c2da089dea327b5c9c6ae458d09c31d7d48d52bb269d1"
+    },
+    {
+      "paper_id": "zotero_MYR6B89Z",
+      "title": "文化营造与宿舍共同体的生产——以恒源纱厂《人事科女工管理处记事》为核心的分析",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "99193a302e47686dd91e3318264cb2ae1df3417d9055472796f3ca190a7832d3",
+      "pdf_sha256": "5cc391704f636091bf20b889d654826307663ed3845873332a3ef96f67907460"
+    },
+    {
+      "paper_id": "zotero_8FXBVJYT",
+      "title": "“公共空间”的社会诗学——茶馆与川南的乡村生活",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c2b2fce416392fed166bdfbca03616ebe1726cc5e85b240df1b2a828b77fb152",
+      "pdf_sha256": "33f83fbbfb30448039159cd96fe690e9a4b55f531078e3b7d403091b84a410ff"
+    },
+    {
+      "paper_id": "zotero_8EAFSWWT",
+      "title": "灵活雇佣与学术资本主义——在美中国高技术移民的依附性困境研究",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "cef8c5e442293f834b0d1fc25f07d7449b783adbf1b1c69960dd0f89ae950617",
+      "pdf_sha256": "06e4b0ecdf5c55eeebf691d2bc3360eabfda09eccc8ca0a12b5b239732bb96b1"
+    },
+    {
+      "paper_id": "zotero_AI9XTDSR",
+      "title": "以自我为企业——过度市场化与研发员工的自我经营",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b3c31e897abf57aea3a317b5ea94d9eb6a904eeb185cfe25bd4697c088549ffb",
+      "pdf_sha256": "e28d3d1478cda128a8bf9552f34c224c370157bb7532ff7c781c12d5c200bec0"
+    },
+    {
+      "paper_id": "zotero_LLIZ22ZJ",
+      "title": "社会治理与公共生活：从连结到团结",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7a5779ea37aed6a9d565bcf17b65c6eec8dd09334392ed1ae1d75b625ea066e6",
+      "pdf_sha256": "bd5f10541978f3f067045704b4dc101f7be2bfac9c66f950ec5d86163b1edfd8"
+    },
+    {
+      "paper_id": "zotero_J6ZS9G36",
+      "title": "政策内容再生产的影响机制——基于涉农政策文本的研究",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "acfaa2625829e09c7bdb664b3b97831aecd672380ea96d50f7456a299c0e180a",
+      "pdf_sha256": "7262ad9c02420e34f52f46173fdb2836b0b39e7da61be390d237cadf97f11b4e"
+    },
+    {
+      "paper_id": "zotero_ZLZANUD2",
+      "title": "技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响",
+      "journal": "社会学研究",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "47e6bb4cfddbe662f34bed0b19fa08dc88d4e58339e07cd4c61e5b4d42ff04d2",
+      "pdf_sha256": "ebbed199cf68395555e3d0912d966aa7cbfbcd5b985af9dd279670e80ebb9cd9"
+    },
+    {
+      "paper_id": "zotero_NSES926F",
+      "title": "熟人社会、外部市场和乡村电商创业的模仿与创新",
+      "journal": "社会学研究",
+      "physical_pages": 28,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "616d0b8616b4af1b3be0ab6af5501117dde73f3ed2a0eea76a39508d407b5fcd",
+      "pdf_sha256": "20fedd72aae33e5001cb7fd0581a1cb7d54485727855cf4d86a81fcd63e094c0"
+    },
+    {
+      "paper_id": "zotero_BMH76YU8",
+      "title": "质性社会学研究的差异性发问和发问艺术",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "19e7e927544a1f590359a54d16c951f173b40cc8dada529ffb9520a2f692dad2",
+      "pdf_sha256": "43d2cd1e5ddbc3ad9036b3244654950d6d0b347ad1ecc600a8d75dbe05dcccc8"
+    },
+    {
+      "paper_id": "zotero_4AKCER5W",
+      "title": "从脱贫攻坚到乡村振兴：迈向“家国一体”的国家与农民关系",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "683cef9cd3f0bb8edc7aa4b30bf84b2d2df91ef188b7d1ca6ef9bc664f6f0ee4",
+      "pdf_sha256": "9ae829a9fc18df8c6f2b953ff69ce5418d5dce3032fb4204c84707bfacce22e1"
+    },
+    {
+      "paper_id": "zotero_9WUWPWN2",
+      "title": "乡村电商何以成功?——技术红利兑现机制的社会学分析",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "197b88fca63e77311d14a6ef4e686741f8b69ce840e187921f749cd2903886c9",
+      "pdf_sha256": "7f7b4acd6ac8322a4bf750f313f37d92e6622ece7af4fa18891f9810555ae33f"
+    },
+    {
+      "paper_id": "zotero_Y646MHY8",
+      "title": "平台治理场域与社会学参与",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6b1dffd1238676b0cf5249c262fc3df688d14e8d05ca0a7b1d2318b01a8564a4",
+      "pdf_sha256": "03b1097ec88f91348c40f4393653b19a3a9d7240a2cf826b35e653b89ae1c331"
+    },
+    {
+      "paper_id": "zotero_DQ2UYECZ",
+      "title": "养老还是养小：中国家庭照顾赤字下的代际分配",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "89bf3a84f7c44cab25cd35cfda0e1e426f838bbb81f63751c1b02c48875d7ed8",
+      "pdf_sha256": "9c409625c6ac749d3a40f6c52eb13509fc069e622d718fee872dc0c5ff945300"
+    },
+    {
+      "paper_id": "zotero_QIL2SNVK",
+      "title": "共同富裕愿景下的幸福感提升：双重公平论的视角",
+      "journal": "社会学研究",
+      "physical_pages": 22,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "53f49410b5c74f3ba2785846bd8f110d6aac0b151da023891defa222110e49d6",
+      "pdf_sha256": "1c495db20c441ded679a2051d742bb2f59d8229253c5415aa1345164e98a8ae3"
+    },
+    {
+      "paper_id": "zotero_UCJ6B4HJ",
+      "title": "数字社会学：国际视野下的源起、发展与展望",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "fa389201de7fd686cee4c8e2ddaaa91095c97f163dec2a428ca8616da52fb23a",
+      "pdf_sha256": "2237e3f8231761f35e277b3d171b8223fab059d68a8c76b8e10303e430b4e351"
+    },
+    {
+      "paper_id": "zotero_D99D3NG2",
+      "title": "透视算法黑箱：数字平台的算法规制与信息推送异质性",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ab2bd6d03a9df090e3ab82296da4b4b1830fc2bc76e8e96ef7a65569e94f5ca2",
+      "pdf_sha256": "95146fa2f2e3a9634a37b3a0a3556ec00270ddb3245a28d44f095371943c3a66"
+    },
+    {
+      "paper_id": "zotero_I2QM8FP8",
+      "title": "重大疫情下社会情绪的演变机制——基于Twitter和GDELT等大数据的分析",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [
+        23
+      ],
+      "output_sha256": "8109ae194cd1bde46c143dc77753dbb4c122644d46f277443eaaabaad80fb7ff",
+      "pdf_sha256": "b60dfc3273831f2d85d353af6702338d5c96eecaf20bd796e93d24ed38f58c54"
+    },
+    {
+      "paper_id": "zotero_A5BILU52",
+      "title": "学校何以层级化?——一个城区学校变动的案例研究",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "9af44e0e5391125ce1694f3be36fd479724881286b674eda269318616db701ed",
+      "pdf_sha256": "1072f315f7509429bedcea52d52ca1c3e5677a47e011eb06adbfbcd4b04be955"
+    },
+    {
+      "paper_id": "zotero_AVUPRP3F",
+      "title": "如何助子成龙?——家庭教养方式对优质高等教育获得的作用",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4968cece8d8441db68cfda007a326a297f589644339bb9cf65459395220c7016",
+      "pdf_sha256": "3b8df1020c8341be75a1a97246586b9584650ef14c1fc76e575eedbb22fc0836"
+    },
+    {
+      "paper_id": "zotero_VNT2Q3YL",
+      "title": "乡村振兴与中国式现代化：内生动力和路径选择",
+      "journal": "社会学研究",
+      "physical_pages": 18,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "255b5af07f23184ad254f7ebe86bf10c1b5dd77ace59a81746651c132c030ef5",
+      "pdf_sha256": "6cb1fbc44b84c7ad7350f167fc4835925065ca210b5d7276bb5233e64cb4ff7b"
+    },
+    {
+      "paper_id": "zotero_TZQEKJJH",
+      "title": "打造“渴望”:经纪人的工作自主性与劳动控制——以上海JH家政公司为例",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c81344f6da847dae2858b338c7996e62f39023a2dc0a92e85d014e6ce8d55e86",
+      "pdf_sha256": "3f4e64f851d20dcaa5b45020b0050071f9de0b10a5ac2167757cb87bd55734c7"
+    },
+    {
+      "paper_id": "zotero_GZPNSGHQ",
+      "title": "人工智能的决策替代与社会缓冲——以X智能电厂为例",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6242aa0ce8432217f540786abacb76a3a9c028222408e513db0e295beb095dff",
+      "pdf_sha256": "2a0e4998a7ebac52826f54981356ab6cc44cc4c6e09dbf0201a05cc6d19b1e18"
+    },
+    {
+      "paper_id": "zotero_BGXTF5GD",
+      "title": "复杂社会系统的涌现现象——以大数据分析结构与行动共同演化",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7ff1e1591373a26f9e5bc25d72c8f6daabeb27b9a7253144ba43896f44fa487e",
+      "pdf_sha256": "f77d877fd668367fa71b2e322a6d5397dc0a9c3af4eec3eb034acd62e03ff144"
+    },
+    {
+      "paper_id": "zotero_NLVHWHF6",
+      "title": "女性教育提升与生育行为变迁——基于夫妻匹配视角的研究",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "2ba378cd1890159d9dc78a546ba2e33f2740e9f1dca15f0c393840cc27250db5",
+      "pdf_sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2"
+    },
+    {
+      "paper_id": "zotero_V9MHHI8V",
+      "title": "民生保障视野下的中国式人权道路：概念、制度与范式",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4032e8ed422a977901801207a706be177cedf58fe9d34c3fc18b2dc394573de1",
+      "pdf_sha256": "19f7e47747eec44e1ac37532e18f9291790635b01271bda04826b1f9e91545cc"
+    },
+    {
+      "paper_id": "zotero_KYCYDCG4",
+      "title": "中国城市劳动力市场的双重二元分割——理论模型与实证检验",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "0f022bcffbf5d8277efe3dce3175c778133bc4f230e1a423ef838ba35a2b6dc4",
+      "pdf_sha256": "972e0e345f3228522d0de0110a6d6bf3eb95cf4cbc05e60b9a082a2d4fb9d59d"
+    },
+    {
+      "paper_id": "zotero_BKE6CYYI",
+      "title": "互联网平台劳动力组织形式的演变过程与机制——一个“动力—能力”的分析框架",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c8b41fbead988cd5ee3c09c74a6ac06cc27e4729da2ec0c332b4b2d9a3bca70a",
+      "pdf_sha256": "0cbf4dac59daf10453a54c44743b553b822b519c406e6ccd1530ae3617c578a1"
+    },
+    {
+      "paper_id": "zotero_UBVCHIB3",
+      "title": "互利共赢、社会关系与同级赊欠——以一个建材市场的实际运作为例",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "05e8617dee16eb05239a563f01af6d20e2c60021477a3249ef71a0582a76b245",
+      "pdf_sha256": "07d2756f2949477d1f8a44a55953972f5eb770567e40118c8522c63cadddf919"
+    },
+    {
+      "paper_id": "zotero_LCCLADR3",
+      "title": "智能体仿真模拟：推进行动与结构互构研究",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "11f74d0f39f8fa8dd9f8e8c0c7ca48272e061ee050db51f4f18c7c91a0f80b5c",
+      "pdf_sha256": "841acf05a4f892545ad8b9ff389f3d2c32fed34bc4044b621c112654b07cfb45"
+    },
+    {
+      "paper_id": "zotero_CJB64WZK",
+      "title": "从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "eb78bea3c1ffc0005334ba9b5c0db7ee39476df995e36ed164cdd6d9d0aff495",
+      "pdf_sha256": "a6c04485c67ae0dc7eccc6da981027986dcde9f202a9b8b4b9ada7774ea4f499"
+    },
+    {
+      "paper_id": "zotero_URG63LSG",
+      "title": "平台地方市场何以形成?——基于义乌市场转型的调查",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ce5797542f6336740452599ce1833ae1986d30ddb3aca36703090b33c3e1c2a9",
+      "pdf_sha256": "8b97c7f27b85938e69b4b132eb5808c3163095058bfcb02dbf47a483b155935f"
+    },
+    {
+      "paper_id": "zotero_58YW8VT2",
+      "title": "双重涌现与网约车的市场地位获得——基于平台型社会生产结构的分析",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "83e04126a10938f926bf41fc598f631260257670573e0fa545064f475694a59c",
+      "pdf_sha256": "0c8c0790f70e2ee4b7921a2c8eb2cb5ba527499a94057e7bc8909aa624f1849b"
+    },
+    {
+      "paper_id": "zotero_8GJ2ZET7",
+      "title": "观念流：一个分析数字时代信息扩散与观念演化的新视角",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7be88dd26aeaf2414124307a5e292f668ca43e7205739e5e2c96d38ac9deb4aa",
+      "pdf_sha256": "206e2e1c77969e63125f76aa21342706fe355e2f0134219326e896db3e058e0e"
+    },
+    {
+      "paper_id": "zotero_L9AJFJ5E",
+      "title": "保障凝聚认同?——社会保障建构国家认同的异质性研究",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "5701d809f7f91c1fca25325a2292914a2d8efe204d5778fe17bc10a2b1987638",
+      "pdf_sha256": "b18ec93dd10d4cf8c8a4559a1c084a0200da1188ab409ec0ab1c318d1704ed4f"
+    },
+    {
+      "paper_id": "zotero_KHCHS6EH",
+      "title": "灵活用工与资本劳动力经营职能的发展——基于弹性积累体制的分析",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "a5f93d3b445dfaf2d0a4c8189476fda53771b9ddb57d60743e6ab0cc36832bc2",
+      "pdf_sha256": "475ca8de85692d4293516a7943b50d80080f0533d1260161d4fc9420916f6ef6"
+    },
+    {
+      "paper_id": "zotero_9DCA4R3A",
+      "title": "形塑市场：城市回收业二元结构的动态转化及治理适配",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "1a932ba07c60beb545f03585c14126513aa5f87458323f2e5160e41ac8eb58e0",
+      "pdf_sha256": "0882a39fd5df13f006de36195546e62ac3fc96e44e886f2d50d951adbd88f046"
+    },
+    {
+      "paper_id": "zotero_FQ7RQ5NC",
+      "title": "低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析",
+      "journal": "社会学研究",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "fb47419ae1ad01367d675a685cb8797ef3dc1abe4ab99eaa7f41b037cc727a78",
+      "pdf_sha256": "a8fa2c99ce1edfc84f4d80dc0548e1f254e3e1ba177f9ffb91cde671edc64393"
+    },
+    {
+      "paper_id": "zotero_9R3CSV5I",
+      "title": "社会结构的文本大数据测量——以中国社会职业地位变迁为例(1940—2015)",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "0cdb272e6dcddec1e99c830987b98bfd2ad084c3524a58537c7269e870d3bbd8",
+      "pdf_sha256": "572ff74f0cb3e740a5e83f7e9794ffd6d78af75c7c43c26d09f7c349c85f1e83"
+    },
+    {
+      "paper_id": "zotero_Q4JTWAPD",
+      "title": "数字时代的中国青年文化变迁：趣味模式、社会区隔与平台化",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "a2541b536a0e97c258b8248e12d20d76f2c823072e97211eeaee966b3e3da7a7",
+      "pdf_sha256": "af0c9ab81aa47967da72f50c0b0a57c5c2655840a494b14520b0f5ee298cd074"
+    },
+    {
+      "paper_id": "zotero_CCLYXRPH",
+      "title": "家、亲密关系与创业——基于T家庭创业史的社会学分析",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "dbd6d839fc4457db3d80418a710a55e281d7ee5a7f0741b09e5139a4517a212f",
+      "pdf_sha256": "e7c19ce9cd6e143ace35244f10da29460e22fa716b3484e1747664e2a1b280b7"
+    },
+    {
+      "paper_id": "zotero_P6GLQAE6",
+      "title": "数字经济下网络货运企业的合法性获得机制——基于上市企业LG的社会学研究",
+      "journal": "社会学研究",
+      "physical_pages": 22,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "56f958372cfaed1633bd9f69017d88205f1a724d76a4e820dd4812c6acd001b9",
+      "pdf_sha256": "b2b965bfd821400c368e8011fcfab97f01c4437c770c8ef24e4bd89746f3fa54"
+    },
+    {
+      "paper_id": "zotero_8HHQEXPK",
+      "title": "数字平台文化生产者的魅力劳动与调节型劳动控制——以社交媒体的时尚与生活风格博主为例",
+      "journal": "社会学研究",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c0d6b6bd3bae6cd32ce680e8cea18a2d5ce8703cb3ef1912de2ca70505a0a873",
+      "pdf_sha256": "7707a78a8ba2cadde1e332c97411aa72f1e4b6e2af066e7e19aa10f4fab47dfa"
+    },
+    {
+      "paper_id": "zotero_S8C5JHYG",
+      "title": "数字时代多社会形态叠加与新公共性的再思索",
+      "journal": "社会学研究",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "45261d56b7adbfd51cc6a2c42cbea1a5a08d3179577e3cee7c61095bede09078",
+      "pdf_sha256": "d490c4a7f6f95902737b1759120423a46d773908da8964c010d63f72aeb5d2db"
+    },
+    {
+      "paper_id": "zotero_BWJM34YP",
+      "title": "数字生态：概念源流与建构",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "f6e513961a5919ad9d16399df76deacf19d2f55267f39ada11448ad9aad639d3",
+      "pdf_sha256": "b5e36a6422e8711be92736b1a5975faa7a73fe8050a9438aa318f7af5ffd1a2a"
+    },
+    {
+      "paper_id": "zotero_GHLFJX44",
+      "title": "部门的终结：技术替代与任务转型",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "effd510f5c4101a9d55a57a4726dfb2d6b3cd85c91ff4b5168651bc1659e6e19",
+      "pdf_sha256": "f495c27bd3aa44a0c0e9d311065bd41cec8f0c0024e41be88d48480ae25883bc"
+    },
+    {
+      "paper_id": "zotero_KULIE6WN",
+      "title": "红利差异与组织失序——“技术—组织”互构视角下的基层智慧司法",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "f72a15a44dd1cf4f5fac292095a69a2d7f259a46769e330ada7dd993ef8bb90e",
+      "pdf_sha256": "54bf4ad222be7f0dcbef2ea52af90c2246c2a337a903ef09fbbab9d4bbc8a06f"
+    },
+    {
+      "paper_id": "zotero_FEHRYT8W",
+      "title": "数字平台、生产网络与地方空间治理——广州服装村更新的比较研究",
+      "journal": "社会学研究",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "e1317ea28260a0a4c6bd4ce2b12deb3fa69b02afc07180043f2873666a40118c",
+      "pdf_sha256": "0da659c8ff76c7f76eeb6d1945f96588f741e744e275a5951696ac2ad3fc541a"
+    },
+    {
+      "paper_id": "zotero_TFQM38G2",
+      "title": "身份物：现代社会互动的进场与身份转译模式",
+      "journal": "社会学研究",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "1fc5cd0163e077db56ec7b9cd139524eb94e0e1c249112bce5e66688449ca570",
+      "pdf_sha256": "641228c41191d83e172ec26b1e4404f2248c6fa8c5b03bdcca42b2b3096ceaef"
+    },
+    {
+      "paper_id": "zotero_TK6L2YKU",
+      "title": "人工智能社会化：内容生成与符号重塑",
+      "journal": "社会学研究",
+      "physical_pages": 28,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "f0f4f3e9ffbe403ada63085db0934a88c4208f56b1dd14467b7665bef1211625",
+      "pdf_sha256": "412db3643fa8533d778d92987babe880a5d08fbf61956be4032e380786d89c32"
+    },
+    {
+      "paper_id": "zotero_9I8UXGLR",
+      "title": "发挥文化的“解释力”:对文化社会学强范式的反思",
+      "journal": "社会学研究",
+      "physical_pages": 29,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "d5cef94ddc11916bdde9bd3e6b7518bc1964f36590a10ac1214b88942e99e89c",
+      "pdf_sha256": "53c91399cfa25f370b646d869e22d338bf9d5c974aa20d24b7613818e59cec33"
+    },
+    {
+      "paper_id": "zotero_GZFRXXPL",
+      "title": "数字趣缘社群中的互动机制——基于关系事件模型的动态分析",
+      "journal": "社会学研究",
+      "physical_pages": 29,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "31115d64777bddbb9ead79ec833bc920b1499e3b4aa17f478bb21182b4bcd537",
+      "pdf_sha256": "0ffad7f3100d14a2d6516a8742eeee28d166783c5490e5d1182c41f70bf70d2b"
+    },
+    {
+      "paper_id": "zotero_2WAMWBIJ",
+      "title": "谈“钱”还是谈“感情”——多维交换结构中的关系成本与关系策略",
+      "journal": "社会学研究",
+      "physical_pages": 30,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4f30d7eb52d675c84ff6b348649332d56b023c8611a86a462ee6fba010726455",
+      "pdf_sha256": "d3a80f918d32e82c7f39c1b651f0a4ab3d3d353b9d31f3bf026128778773fe35"
+    },
+    {
+      "paper_id": "zotero_HE44WC7E",
+      "title": "“事在人为”与“成事在天”——中国社会的机会信念与代内流动",
+      "journal": "社会学研究",
+      "physical_pages": 30,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6f8dcee18a34a1f8674bcd4caf4f96719f689ed65ca8cb0bbd28fc8b1afd3e8c",
+      "pdf_sha256": "dee80f20c2ade6bdb30328b3a009ff1a648d5ee422dd9cb741488c7415f1b5a1"
+    },
+    {
+      "paper_id": "zotero_8B575M9S",
+      "title": "理性选择理论与法经济学的发展",
+      "journal": "中国社会科学",
+      "physical_pages": 13,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            4,
+            5,
+            6
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "9407f09fbfa957b5944892e660fa3e1cb9800397bc6d299afe6260a897c74625",
+      "pdf_sha256": "78dcd6525a4c0ce982fd407452f9a2703d00c76e7c4e014d55bcfa096a9a7f42"
+    },
+    {
+      "paper_id": "zotero_S823QAM2",
+      "title": "影响中国城乡流动人口的推力与拉力因素分析",
+      "journal": "中国社会科学",
+      "physical_pages": 13,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "fa5ba6667b4d8c23d81c75ef0dd5b9fe47cb0bbb443491dd142f67f6c60ee12e",
+      "pdf_sha256": "e7c1347c87fb4c66b0651086828e623382c20bd457ba5163f35cf606e253a831"
+    },
+    {
+      "paper_id": "zotero_2SKTAPLF",
+      "title": "农村劳动力二次流动的特点、问题与对策——对浙、闽、津三地外来务工者的调查",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            14,
+            15,
+            16
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "47ed8113a26038bd434929dc80c80ac24cdb51edc30a583d252f8c9501bf3c23",
+      "pdf_sha256": "ac5d803a593e9b168a8867b1fdefd86c4084a5ac00f630d8accb58cde8431eac"
+    },
+    {
+      "paper_id": "zotero_Y32DRMKW",
+      "title": "户口还起作用吗——户籍制度与社会分层和流动",
+      "journal": "中国社会科学",
+      "physical_pages": 16,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "512cd8af3700c20fe61788a9845e19838e3824e5c694dd01fb657f100020e384",
+      "pdf_sha256": "84b11621e936dfeb5c8f0df946b001c7e1b61c46a523970cf2e38bc5c0a95a88"
+    },
+    {
+      "paper_id": "zotero_GH5AUS65",
+      "title": "农业农村发展中的政府与市场、社会：一个分析框架",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "7bbf4a262b744cff10427bccc8484265848a5ddde81fde6fb6cd39d1b596a710",
+      "pdf_sha256": "c74084fe385d8fc0fe8fd28019217a731de70b8a1df84081e2ffa811d9b74fe0"
+    },
+    {
+      "paper_id": "zotero_ZCHRDIAX",
+      "title": "农民理性的扩张:“中国奇迹”的创造主体分析——对既有理论的挑战及新的分析进路的提出",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        },
+        {
+          "pdf_pages": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ae75209d2add46f3e89b454cafb8fce4d3675ba20086438b617be0f96672f6e2",
+      "pdf_sha256": "f626e9f8ef5e0e100e8a4796a8f1e4ade63a91fb0cb49406abbab6d281eb02ac"
+    },
+    {
+      "paper_id": "zotero_ZVEEAGSX",
+      "title": "近年来农民工的经济状况和社会态度",
+      "journal": "中国社会科学",
+      "physical_pages": 13,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "d599b1e628df60de5ecd153545ec961815f96326ff2f2fe4deb3bb2455aead97",
+      "pdf_sha256": "ee80a8c1ad5fabdf9c1a5a316a5f736d98cb8138a89df74477d3174b56416250"
+    },
+    {
+      "paper_id": "zotero_VF4H54SG",
+      "title": "公共政策视角下的中国人口老龄化",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "1a5f79326dee9a1d5b3749ef1bf274ebbd58197a69939ffe877c138e29a30642",
+      "pdf_sha256": "d181be9505379571117428b12f4b5026548c06c2403bcaf316689f9447f81ba7"
+    },
+    {
+      "paper_id": "zotero_MY99VSIF",
+      "title": "资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008)",
+      "journal": "中国社会科学",
+      "physical_pages": 19,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b9ef569ee16999ab64096440cf67aaebf513a284734dfcae36cb81bc82bfcc80",
+      "pdf_sha256": "03350a59af9155c576b77cd07b5486aeaa3a587f8f57032087986b0ab44a33da"
+    },
+    {
+      "paper_id": "zotero_J38BV4A5",
+      "title": "收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析",
+      "journal": "中国社会科学",
+      "physical_pages": 16,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "cc735efd325a0e59466c30f9b1e8ed6e7ba6e4233d951a1d31d9bb8efce62104",
+      "pdf_sha256": "245bbf45908382fc7e8d6348616d8f8fb6401b49a23eb4dba6a478fc29d48ab8"
+    },
+    {
+      "paper_id": "zotero_8DMURTFB",
+      "title": "中国养老保险缴费对消费和储蓄的影响",
+      "journal": "中国社会科学",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "e94d2eeb6f816ca05bfd2eff4d5a8fb24e8564458efc753826791f6eab3ddc04",
+      "pdf_sha256": "cfa78815dcc92e64569353bb4d883b482d8e24db6e3b3b5b22cd4df220b42588"
+    },
+    {
+      "paper_id": "zotero_2PRH25QY",
+      "title": "股票市场伦理环境与投资者模糊决策——理论与实验研究",
+      "journal": "中国社会科学",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "e6685ac3a792e3db8b7a936af9af83ba3f100e8d4348176c968ff5f349a24341",
+      "pdf_sha256": "9524d69d84053ab277bab5e30a84ee8c51686cbbdcc83e75bf708469ec08d6eb"
+    },
+    {
+      "paper_id": "zotero_SCBEKA84",
+      "title": "户籍改革、劳动力流动与城市层级体系优化",
+      "journal": "中国社会科学",
+      "physical_pages": 25,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b228f2f22f6f5709533e1719099ff43275031fd3dd07a2cf9412c94498588088",
+      "pdf_sha256": "72142329d21f0bc8da8b9293c3622524ce13db9468916de2083ad2b305dd82d6"
+    },
+    {
+      "paper_id": "zotero_F4PTY3QU",
+      "title": "“恋爱”之发生与现代文学观念变迁",
+      "journal": "中国社会科学",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "9e89e84358d8a3e56bb684c7e19c0e6972e1d1cfa0ac5f970cd0a39d7db503ba",
+      "pdf_sha256": "2b680ed90a1aa056a05564f3c6bbeea0b90240093ca0be12b26d4c30f46097c0"
+    },
+    {
+      "paper_id": "zotero_SCCKUUS9",
+      "title": "当代中国的代际流动模式及其变迁",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            4,
+            5,
+            6
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "980c8d559c9556a27931685fbf90a3dabb91fe7de108b5a1dcca59884104cdec",
+      "pdf_sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667"
+    },
+    {
+      "paper_id": "zotero_ETXRUCCP",
+      "title": "资本介入文化生产的耦合效应",
+      "journal": "中国社会科学",
+      "physical_pages": 18,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [],
+      "groups": 6,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            4,
+            5,
+            6
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            10,
+            11,
+            12
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c56272eaf6769bb6c93fd545ea2abdf53ef6e4e2db7d485622d30d331c0fea03",
+      "pdf_sha256": "49a991d00864a8e5167e15d60aa6e42c542e61662f83d9943ddcf737fbb92a77"
+    },
+    {
+      "paper_id": "zotero_7UXDWS84",
+      "title": "当代中国家庭变迁与家庭政策重构",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 9,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "a4a7d262514432b31fc2763b688053e5993e71bbdf88bc21ef29e8d65f9413d6",
+      "pdf_sha256": "ab4fd5190b6c8186daaaeb6c46a1f6b5de99dfdecb388e0ec5abc33478765f78"
+    },
+    {
+      "paper_id": "zotero_5U4B28WH",
+      "title": "“资本下乡”与村庄的再造",
+      "journal": "中国社会科学",
+      "physical_pages": 19,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6c685455f81486baf9f128a5967c9559faa5e607f6ab0185915b0c7a5f2adec9",
+      "pdf_sha256": "a8e5ae5a9045aa35679b2be305c27c57a4bc2feeb7e31b5954d6b22e14b0473d"
+    },
+    {
+      "paper_id": "zotero_Y8WNZ3AN",
+      "title": "基础教育中的学校阶层分割与学生教育期望",
+      "journal": "中国社会科学",
+      "physical_pages": 26,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "fbfa3302fd7c0056d4817779370d314d55b6cb03cce2d0d5a7e40d67823b177a",
+      "pdf_sha256": "206eb694b9b37da00cdb9d54cdf307076f068acadbcf1a759d46cabd900787e2"
+    },
+    {
+      "paper_id": "zotero_BNM39FUG",
+      "title": "中国当代家庭、家户和家的“分”与“合”",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "0187324cd6ca45fa2bdcca7f9f369865de7eb20f90d4f520f4b4eac5dfe31075",
+      "pdf_sha256": "968aab7095d76c81767a746fd916ef7d69a9e82cff10a5a5563ae44fb344e918"
+    },
+    {
+      "paper_id": "zotero_FMHR8BVR",
+      "title": "当代情感体制的社会学探析",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "419dbca71d06608aba504c6a7b82cb33171317e01bd371048174125c0fd2bc54",
+      "pdf_sha256": "2983c1b03869540155f72ae7197c69f2d19b22a816dd3bd8a49c5a4092d1740d"
+    },
+    {
+      "paper_id": "zotero_J5XDE43I",
+      "title": "教育扩张与教育的代际流动性",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c1fe738ebadb2b024fd50b7ecd728113f6838445cf22a44709991a831aba42bb",
+      "pdf_sha256": "1fa8c237d07962f1fa78dcc87d288dc0c00c0d7a1a2e3b55d6b1f7d6983b9d9e"
+    },
+    {
+      "paper_id": "zotero_4F8LIAPK",
+      "title": "政府补贴的收入再分配效应",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6f47e236b736b96fe776262ccadbd2a487b730ace972fb28745dd9f6becf71d1",
+      "pdf_sha256": "2804a66137ae5594bdbfe70d28c58bbaa0d667c77dd4f4a2dbe0b7b6a614667f"
+    },
+    {
+      "paper_id": "zotero_M739AK9Q",
+      "title": "群体传播时代：信息生产方式的变革与影响",
+      "journal": "中国社会科学",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b4d7a3b76f7ac14a11bf816e8086f5d3b69610082d303d4322f5f92275cc77a1",
+      "pdf_sha256": "e7031426ac91287e3a00dce4e6229f62d3a9e7ec8ad5f80508f643416b83d260"
+    },
+    {
+      "paper_id": "zotero_UE3BAWPD",
+      "title": "网络叙事的生成机制及其群体传播的互文性",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "3cebac0bab325947e43cd2a22373e362c22449032cd3b940698564a2175b1d5c",
+      "pdf_sha256": "f7c19557e5af3b2c779adbd739ab62b639d4a65c216d2b2d1bb13e25d07bb499"
+    },
+    {
+      "paper_id": "zotero_54PYRR8V",
+      "title": "乡村建设与全面小康社会的实践逻辑",
+      "journal": "中国社会科学",
+      "physical_pages": 24,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "bb4c3574b1e1594ff87ea944af3f78e948c13862f284d447e624268bf7497995",
+      "pdf_sha256": "e988353f0268cec180f4a704fbb5eab717869c9ffe0a5ac9f584b9b7a13e9ae2"
+    },
+    {
+      "paper_id": "zotero_5MVN2QLE",
+      "title": "生育转变的多重推动力：从亚洲看中国",
+      "journal": "中国社会科学",
+      "physical_pages": 22,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "a9405090f79742110aa72ebedb231fdd2966022282256f06317cfd59a701e415",
+      "pdf_sha256": "e1bf605ca1c376ef3265dd6a4b753e339497be448d77e9fcb7cf0301c9b60714"
+    },
+    {
+      "paper_id": "zotero_LS93R9SS",
+      "title": "数字时代的技术与文化",
+      "journal": "中国社会科学",
+      "physical_pages": 32,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "visual_pages": [],
+      "groups": 7,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "82f57e1f757c4e37ad874d915319b971c28a65627852e1df3bde2fb5db500b64",
+      "pdf_sha256": "25a4cc22ec9cffd13bb5b95cbbe00e291451c1cd19e5451456a6ddecc47e0f7d"
+    },
+    {
+      "paper_id": "zotero_JCC2JPZI",
+      "title": "电商技术变革与农户共同发展",
+      "journal": "中国社会科学",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "2e1ac825ad314390545d0073cb506807af4ace3a21c597788def6e198a0748a1",
+      "pdf_sha256": "a029db5ff57577553c233cb16ef61f2bbb9609e49739ce1650a5cbbeab16aae8"
+    },
+    {
+      "paper_id": "zotero_6V7LJIWN",
+      "title": "制度的力量——中国社会保障制度建设与收入分配公平感的演化",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "dc75c0e8536d8bc6146d280ee5b58f45c14bdfcc4d5d1d2d83eaa8a076f25005",
+      "pdf_sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc"
+    },
+    {
+      "paper_id": "zotero_FMVMG85L",
+      "title": "自然理性内化与心智因果起源的哲学探究",
+      "journal": "中国社会科学",
+      "physical_pages": 19,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "eabddcc835bb12bca61576aacfe0fe44b2adaf5b8013dd450890a71de2320f92",
+      "pdf_sha256": "e83450db065de2d92ab4e99b0ba796e91a24b58c9247566a755a0540b454c5b1"
+    },
+    {
+      "paper_id": "zotero_7YINUFQE",
+      "title": "用习近平文化思想指导文化载体研究——“融通”与“结合”视角下的现代汉语问题",
+      "journal": "中国社会科学",
+      "physical_pages": 10,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "visual_pages": [],
+      "groups": 2,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "8a38352aaf79db95bb45c0cb52d6e73285c9a85eb9c445b3d18b71335241172a",
+      "pdf_sha256": "f41c94f32ff854d78a4e08f6b167a628981824919908f3ee076ce9abfd0f3cf6"
+    },
+    {
+      "paper_id": "zotero_VTLX3U9G",
+      "title": "习近平文化思想的重大理论贡献",
+      "journal": "中国社会科学",
+      "physical_pages": 12,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "58e4f122f3ac3b8fccb79d411dd0114586823d0c29872e917cfe257b20b6aca4",
+      "pdf_sha256": "c1662178479305446c7b14c6e584dd54a1762286aee3608074b6694f47154112"
+    },
+    {
+      "paper_id": "zotero_TWLELHMQ",
+      "title": "习近平文化思想的深厚底蕴",
+      "journal": "中国社会科学",
+      "physical_pages": 13,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "6566abdbdf17df3708032684a5ca655fa203d9a41ab7056c6519c13e1eb6fe5d",
+      "pdf_sha256": "1853238131ddb4bde206b4a1c55eddcec70898a77bdd7e39b880c71e78d3409a"
+    },
+    {
+      "paper_id": "zotero_CX9UWVCX",
+      "title": "习近平文化思想的创新蕴涵与文明意义",
+      "journal": "中国社会科学",
+      "physical_pages": 12,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ce9de2d96adef14f920816e1cce177e158a417b2bbf51e7821c52778cc19f9dc",
+      "pdf_sha256": "ec43fd0bce5d5bc26485492e133808ab8977f45b9ed7db46db453a1413a64b33"
+    },
+    {
+      "paper_id": "zotero_7A7CYZHB",
+      "title": "文明创新发展的中国表达",
+      "journal": "中国社会科学",
+      "physical_pages": 12,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "e1a699bdb4c41e98530b3ae2ebd7f1dd16f9174786abb26c47c3a47885e67a0d",
+      "pdf_sha256": "59e7243cd2986f1e7e2ff0e1f8f2740fb00ddf2dc31d66f2b2f9565f2fa06d48"
+    },
+    {
+      "paper_id": "zotero_G5HIFZKQ",
+      "title": "文化建设与独立自主走自己的路",
+      "journal": "中国社会科学",
+      "physical_pages": 10,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "visual_pages": [],
+      "groups": 2,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "411c5870292fd43d727b5ea2ffa1e4e1a98449c427496a43d019295f15cfd183",
+      "pdf_sha256": "97f5d299e84e6b306f391c7da5b0cb73762cfbff12a00fe3e33a0170b5339dc1"
+    },
+    {
+      "paper_id": "zotero_I89YJHR3",
+      "title": "中西互释下的媒介认知建构——以十九世纪Newspaper译名变迁为视角",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "d55a8d67e13ad90626bd48e2a12dd9b2e0f8000a9cc08f0a9146a5285ae20d6e",
+      "pdf_sha256": "6a8c420d633852ae742dd8e520d81fe629cc0b5ac18dfcefcaa1f4e325f53897"
+    },
+    {
+      "paper_id": "zotero_DYHE6Y6S",
+      "title": "群聚传播中传播主体的文本化及文本间性",
+      "journal": "中国社会科学",
+      "physical_pages": 16,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "visual_pages": [],
+      "groups": 3,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "b8e95b1cb1ee79f507250c4209dff508a5db390e98dd928444d5f9be561a9082",
+      "pdf_sha256": "6ca7c2a97b14a786e2742473ad0b31ef430f5b47c90f8d653e1c82378cbcd664"
+    },
+    {
+      "paper_id": "zotero_XVT9ELUY",
+      "title": "以发展谋福祉：中国特色社会政策理念与实践路径",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "1e04475efcf1665e7678a5f18ae6b080cdacd39bbafdaa504e234aabaca02026",
+      "pdf_sha256": "e66446754e73405ce5ef45d5f5e0f2715ed8c2687a77561b29573cf479a60d53"
+    },
+    {
+      "paper_id": "zotero_92KQFMTM",
+      "title": "传统文化的社会化及其现实价值",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "d53d08dd9cc86344ed9368bd5a5efaac5c7e4fca1c8d9a41be6d5f52561f9fa0",
+      "pdf_sha256": "7220f621d2022fcde785e0df5de9ebb2e88b4083f74e8e811be85793f353929b"
+    },
+    {
+      "paper_id": "zotero_3NGT5FI8",
+      "title": "破域：数字时代的媒介论",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "08d64bb286fce3006c6f830c894d68ea6a8e6ae91f263bd78fe544cbd53b8688",
+      "pdf_sha256": "39724b5b3e4edb0904f7a937fd315cac6b257b3303623d09e3e7fd77cb90bea2"
+    },
+    {
+      "paper_id": "zotero_WPWDXCNN",
+      "title": "“第二个结合”与文化主体性重建",
+      "journal": "中国社会科学",
+      "physical_pages": 4,
+      "text_pages": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages": [],
+      "groups": 1,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "42888319f0271acc2afc3e3fcfc2ccec4800eaf052a913ac6d0870fb9a3685c6",
+      "pdf_sha256": "c22435952445822c5d73deaabb36539ab9658a72056078d938e960ff1fc7accc"
+    },
+    {
+      "paper_id": "zotero_HVGMWXVR",
+      "title": "数据、数据关系与数字时代的创新范式",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "a84285cee43a0327340ea62d58eb2f59e040906d7f3619448b59e6b9c9ab917a",
+      "pdf_sha256": "5009b539d41f147e9d1cd5359728d07ee35af11ecd230c09e54e0e209356271e"
+    },
+    {
+      "paper_id": "zotero_T4W3ZV7U",
+      "title": "文化视角下的中国消费密码",
+      "journal": "中国社会科学",
+      "physical_pages": 23,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "visual_pages": [],
+      "groups": 5,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "56c88b5bf995407e89d6e74142cc4f400130d7dfd67f1a29af885ea03070485e",
+      "pdf_sha256": "0f7ca163f306607711d4ac13430f22c2d456bf2d3d07f4a91c52b5c82448fd81"
+    },
+    {
+      "paper_id": "zotero_PWF8S8JJ",
+      "title": "智能时代的社会基本矛盾与社会发展动力",
+      "journal": "中国社会科学",
+      "physical_pages": 19,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "507f34003145b1bd2b3f6e4ccc27770c57a79ed3124ba3d6b351f28c0426401e",
+      "pdf_sha256": "a42f97dac7771348b76d0e962c8b43740250b665ee1f733fc76075bc958d8010"
+    },
+    {
+      "paper_id": "zotero_NHCSKDDH",
+      "title": "“推进文化自信自强”的出场逻辑与创新价值",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "c2cc67ff19b442a0554de2d4e6575294cc2f7673dd1c17ee78b10bca2b584ecc",
+      "pdf_sha256": "cda6abff592b6751625660298d2fdbe251ad068314a4d0001e5239331d633231"
+    },
+    {
+      "paper_id": "zotero_IJQN5C7W",
+      "title": "中华民族文化主体性在新时代的创新逻辑",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "37c3c362ef325f0d41633ead4146c0cfe2e9b475e7c990d563ac7a28b3e22547",
+      "pdf_sha256": "57908e6c2b4eecc9beea6c8e7df7d1772cda9dc90494dd0b24ce771ad7b21556"
+    },
+    {
+      "paper_id": "zotero_WLY82J4Z",
+      "title": "认知的流形模式与跨学科统一",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "1f50e4270a675561eca7cfe5d8dc816a6cbec0802c4de66a85b5f386cefcbe44",
+      "pdf_sha256": "a18ac4d09eaeb18ee7e4e20c1b8d3e459043dd0022511c048247c2fc3fcffe90"
+    },
+    {
+      "paper_id": "zotero_BKFZB8L3",
+      "title": "机器意识与因果自我模型",
+      "journal": "中国社会科学",
+      "physical_pages": 22,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "ce58c9aab7c890beab71833ffffaab14f8369976d92d11492f868164d1d059d7",
+      "pdf_sha256": "205dadd530dfd4478dec4ea2915c16af77dfbabafd9cce7bf63dd2fc7bd7e6f9"
+    },
+    {
+      "paper_id": "zotero_A957WGGX",
+      "title": "人工智能连续论反思与存在论探析",
+      "journal": "中国社会科学",
+      "physical_pages": 17,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            16
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "8538d5ec9c797ec59e923796b4bc2c514287ee3c463fcb01a2a32a82309d978f",
+      "pdf_sha256": "d69c95a0d280f1cce206d74a622ceb6dee969241a17009e199789544ba34ece8"
+    },
+    {
+      "paper_id": "zotero_7J3YM4I3",
+      "title": "家庭本位与城乡融合——农村流动人口的社会学研究",
+      "journal": "中国社会科学",
+      "physical_pages": 20,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [],
+      "no_paragraph_index": [],
+      "output_sha256": "cd4a6ea92378ae9394e2822f0e0b02c21270606fbfda31064ec62b298a0b0cc6",
+      "pdf_sha256": "9b8a503b0c638adf94ecd764156a172d5869a7489dea0583b7e5c0d75a42c3e5"
+    },
+    {
+      "paper_id": "zotero_UIIDHQM6",
+      "title": "引入技术外溢视角的中国创新政策",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 4,
+      "flags": [
+        {
+          "pdf_pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "4cd825bc3ac8b9b1a33e9ff42ece3cde5d2b721818745a6644cde9913f6fdb4f",
+      "pdf_sha256": "2b2c581b9f2726b4c057475a55177befb169af73d4ed36d757b905da391b1ea0"
+    },
+    {
+      "paper_id": "zotero_Q4SW7T4Q",
+      "title": "人格权的类型化解析与体系构建",
+      "journal": "中国社会科学",
+      "physical_pages": 21,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visual_pages": [],
+      "groups": 10,
+      "flags": [
+        {
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "issues": [
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            5,
+            6
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "复述指令",
+            "可能截断"
+          ]
+        },
+        {
+          "pdf_pages": [
+            15,
+            16
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "a3d9ab7d29243a2264a51a5a0da4a697f5879ea7eda92fb77ec1aac8528b3df0",
+      "pdf_sha256": "3bc6d460a526f046ccb582c51e87e77f917f7c98f9c1d76ef44dc10e848bffbd"
+    },
+    {
+      "paper_id": "zotero_YA5NETQ4",
+      "title": "分配不平等视角下的全球治理困境及其破解",
+      "journal": "中国社会科学",
+      "physical_pages": 19,
+      "text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visual_pages": [],
+      "groups": 9,
+      "flags": [
+        {
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "issues": [
+            "复述指令"
+          ]
+        },
+        {
+          "pdf_pages": [
+            17,
+            18
+          ],
+          "issues": [
+            "字段缺失、顺序错误或重复",
+            "可能截断"
+          ]
+        }
+      ],
+      "no_paragraph_index": [],
+      "output_sha256": "90b09aeccaac56f576971f5b0759d0179fd3fe6780ac93c0026aea0715288807",
+      "pdf_sha256": "010fd3db032b0ff3382b2e46ebc674e76f4398becddc326a070ada1f28223c45"
+    }
+  ],
+  "coverage_verified": true,
+  "semantic_fulltext_review_passed": false,
+  "settings": {
+    "batch": 7,
+    "max_input_tokens_per_group": 4600,
+    "max_generated_tokens": 145,
+    "decoding": "greedy",
+    "inference_local": true,
+    "reading_script_sha256": "2ac6020cd0456a092b5f26238351e949ed6a86b7cd09ef79864f9e7546640555",
+    "checks_script_sha256": "521862ac0c8e09b32909d6530953bf01d248af5fce987d214b5cb5fc650a0398",
+    "model_files_manifest_sha256": "36b93de9dec3f18db9b03adab426a3f15178fc8012acafa8874168f6eaa913be"
+  }
+}

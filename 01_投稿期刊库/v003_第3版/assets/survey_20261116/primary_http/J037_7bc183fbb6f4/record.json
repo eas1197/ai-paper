@@ -1,0 +1,20 @@
+{
+  "journal_id": "J037",
+  "source_url": "https://zgtsjy.cnaes.edu.cn/post/1",
+  "retrieved_at": "2026-11-16T15:03:55.378396+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zgtsjy.cnaes.edu.cn/post/1",
+  "content_type": "text/html; charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J037_7bc183fbb6f4/text.txt",
+  "sha256": "6b1cddab300846364309e0318d8b01618476bc65e8894c7efcdfe4c6234be04e",
+  "original_path": "primary_http/J037_7bc183fbb6f4/response.html",
+  "original_sha256": "a88e1b9cc3a8d4658e86569d3087e1a39cf7decd423433c610b7a41faf3f15a9",
+  "line_count": 52,
+  "title": "《中国特殊教育》 - 中国教育科学研究院-中国特殊教育",
+  "guideline_links": [
+    "https://zgtsjy.cnaes.edu.cn/post/62"
+  ],
+  "review_status": "awaiting_source_readback"
+}

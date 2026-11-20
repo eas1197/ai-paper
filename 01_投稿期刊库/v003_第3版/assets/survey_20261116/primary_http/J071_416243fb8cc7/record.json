@@ -1,0 +1,18 @@
+{
+  "journal_id": "J071",
+  "source_url": "https://www.hnass.cn/qs/?v=pc",
+  "retrieved_at": "2026-11-16T15:03:07.065051+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.hnass.cn/qs/?v=pc",
+  "content_type": "text/html;charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J071_416243fb8cc7/text.txt",
+  "sha256": "b47e73105629b8058ae4cc4fb79392741b686fb591f7726f607b60c22a0fafbc",
+  "original_path": "primary_http/J071_416243fb8cc7/response.html",
+  "original_sha256": "f35a81a2b794527fb2a6af76238597f25e30fbc75366c1e547fef68a3403d740",
+  "line_count": 134,
+  "title": "《求索》_湖南省社会科学院(湖南省人民政府发展研究中心)",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

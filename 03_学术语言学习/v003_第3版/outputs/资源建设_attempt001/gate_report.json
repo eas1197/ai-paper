@@ -1,0 +1,47 @@
+{
+  "gate": "G3",
+  "status": "needs_review",
+  "passed": false,
+  "checked_at": "2026-11-14T22:48:58.316334+08:00",
+  "artifact_review_status": "agent_reviewed_language_candidate_built",
+  "counts": {
+    "corpus_pdfs": 20,
+    "journals": {
+      "中国社会科学": 7,
+      "社会学研究": 13
+    },
+    "candidates_read_in_context": 181,
+    "selected_evidence": 113,
+    "unselected_candidates": 68,
+    "rules": 27,
+    "original_examples": 27,
+    "counterexamples": 27,
+    "source_wording_cautions": 3,
+    "fulltext_read_complete_certified_by_this_attempt": 0
+  },
+  "checks": {
+    "same_20_paper_input": true,
+    "both_journals_present": true,
+    "rules_have_located_evidence": true,
+    "original_and_source_text_separate": true,
+    "all_actions_have_conditions_examples_counterexamples": true,
+    "null_and_causal_wording_rules_present": true,
+    "source_risks_not_promoted_to_templates": true,
+    "G2_passed": false,
+    "G2_paragraph_precision_certified": false
+  },
+  "upstream": {
+    "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+    "sha256": "3a871e5aa6ac4923f0988242d396047d3d97b2bc693aaa1d56fa1b6db66e6799",
+    "status": "needs_review"
+  },
+  "remaining": [
+    "02的20篇连续全文精读与逐段精校须完成G2验收。",
+    "之后在新attempt中对本语言候选的上下文、段界和适用性作受影响复核，才可发布passed快照。"
+  ],
+  "not_done": [
+    "未执行04—07实质研究、统计分析或正式稿句子审查",
+    "未发送任何外部消息或投稿"
+  ],
+  "release_rule": "Do not allow formal downstream writing on this candidate snapshot."
+}

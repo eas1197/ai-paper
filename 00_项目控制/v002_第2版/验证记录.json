@@ -1,0 +1,136 @@
+{
+  "framework_version": 2,
+  "checked_on": "2026-11-14",
+  "validation": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "tests_passed": 7,
+  "tests_failed": 0,
+  "v001_originals_preserved": true,
+  "default_mode": "single",
+  "modes": {
+    "single": [
+      {
+        "id": "01",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "10",
+          "11"
+        ]
+      },
+      {
+        "id": "02",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "10",
+          "11"
+        ]
+      },
+      {
+        "id": "03",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "02",
+          "10"
+        ]
+      },
+      {
+        "id": "07",
+        "action": "plan_stage",
+        "enabled": true,
+        "depends_on": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ]
+      },
+      {
+        "id": "08",
+        "action": "skip",
+        "enabled": false,
+        "depends_on": [
+          "07"
+        ]
+      },
+      {
+        "id": "09",
+        "action": "skip",
+        "enabled": false,
+        "depends_on": [
+          "01",
+          "07"
+        ]
+      }
+    ],
+    "three_plus_review": [
+      {
+        "id": "01",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "10",
+          "11"
+        ]
+      },
+      {
+        "id": "02",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "10",
+          "11"
+        ]
+      },
+      {
+        "id": "03",
+        "action": "bind_existing_snapshot",
+        "enabled": true,
+        "depends_on": [
+          "02",
+          "10"
+        ]
+      },
+      {
+        "id": "07",
+        "action": "plan_stage",
+        "enabled": true,
+        "depends_on": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ]
+      },
+      {
+        "id": "08",
+        "action": "plan_stage",
+        "enabled": true,
+        "depends_on": [
+          "07"
+        ]
+      },
+      {
+        "id": "09",
+        "action": "skip",
+        "enabled": false,
+        "depends_on": [
+          "01",
+          "07",
+          "08"
+        ]
+      }
+    ]
+  },
+  "business_execution": "not_implemented",
+  "submission_enabled": false
+}

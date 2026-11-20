@@ -1,0 +1,20 @@
+{
+  "journal_id": "J022",
+  "source_url": "https://zgrz.cbpt.cnki.net/portal/journal/portal/client/news/zgrz_ce7f2772-5fbd-4cbd-b39e-4b714cac9ad7",
+  "retrieved_at": "2026-11-16T15:02:40.485942+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zgrz.cbpt.cnki.net/portal/journal/portal/client/news/zgrz_ce7f2772-5fbd-4cbd-b39e-4b714cac9ad7",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J022_186a046e632a/text.txt",
+  "sha256": "eb53c76968bbff9ff7d55cdacd26a77c60c674b75ade52e939f6e21379ac39cd",
+  "original_path": "primary_http/J022_186a046e632a/response.html",
+  "original_sha256": "f3cf1be330ff59685dec8485115b61e263f1d13ff81ccbb4b3037156bb97bb29",
+  "line_count": 122,
+  "title": "中国人口·资源与环境",
+  "guideline_links": [
+    "https://zgrz.cbpt.cnki.net/portal/journal/portal/client/news/zgrz_ce7f2772-5fbd-4cbd-b39e-4b714cac9ad7"
+  ],
+  "review_status": "awaiting_source_readback"
+}

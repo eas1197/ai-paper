@@ -1,0 +1,38 @@
+{
+  "module_id": "02",
+  "name": "文章结构学习",
+  "version": 5,
+  "version_label": "第5版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "needs_review",
+  "depends_on": [
+    "10",
+    "11"
+  ],
+  "expected_artifacts": [
+    "corpus20.csv",
+    "structure_moves.csv",
+    "abstract_sentences.csv",
+    "structure_handbook.md",
+    "writing_profile.json",
+    "定量社会学论文写作架构.md",
+    "写作计划.md"
+  ],
+  "folders": [
+    "assets/corpus",
+    "assets/写作架构",
+    "templates",
+    "outputs",
+    "tools"
+  ],
+  "execution_scope": "shared_resource",
+  "writing_architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "2.1",
+    "profile_path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+    "profile_sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05",
+    "guide_path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "topic_scope": {
+    "theme": null,
+    "issue_candidates": [],
+    "selected_topic_id": null,
+    "question_is_frozen": false
+  },
+  "paper_reviews": {},
+  "documents": [],
+  "evidence": [],
+  "relations": [],
+  "views": [],
+  "view_links": [],
+  "core_selection": [],
+  "selection_balance": {},
+  "dialogue": [],
+  "contexts": [],
+  "searches": [],
+  "journal_aliases": [],
+  "abstract_gap": null,
+  "path_count_reason": null
+}

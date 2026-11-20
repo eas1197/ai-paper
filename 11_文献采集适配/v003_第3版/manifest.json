@@ -1,0 +1,26 @@
+{
+  "name": "文献采集适配",
+  "folders": [
+    "tools",
+    "tests",
+    "templates",
+    "outputs"
+  ],
+  "module_id": "11",
+  "version": 3,
+  "version_label": "第3版",
+  "schema_version": 1,
+  "depends_on": [
+    "10"
+  ],
+  "framework_status": "ready",
+  "implementation_status": "implemented",
+  "business_status": "planned",
+  "expected_artifacts": [
+    "checkpoint.json",
+    "collection_report.json",
+    "literature/metadata/papers.json",
+    "downloads.json",
+    "context_candidates.json"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J013",
+  "source_url": "https://cssrac.nju.edu.cn/xscb/lyqk/20200524/i82856.html",
+  "retrieved_at": "2026-11-16T15:03:43.047112+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://cssrac.nju.edu.cn/xscb/lyqk/20200524/i82856.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J013_41c0105251a2/text.txt",
+  "sha256": "0f53f5be0aa0b93f30d3ae12407c924b761794745f5a7c36c9b2f996e2f6964d",
+  "original_path": "primary_http/J013_41c0105251a2/response.html",
+  "original_sha256": "2f8bf04b4ae043894297b3fc7f7b71a4bdb408a6b8f7db4300cfad2b1979d9e2",
+  "line_count": 42,
+  "title": "社会保障研究Social Security Studies",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

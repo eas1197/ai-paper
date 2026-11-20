@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "module_id": "03",
+  "module_version": 2,
+  "resource_snapshot_id": null,
+  "lifecycle": "build_once_reuse_many",
+  "status": "not_built",
+  "files": [],
+  "business_gate_report": null,
+  "note": "框架占位；正式一次性建设与验收尚未完成。"
+}

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J076",
+  "source_url": "https://dylc.cbpt.cnki.net/",
+  "retrieved_at": "2026-11-16T15:03:08.970430+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://dylc.cbpt.cnki.net/EditorIN/Quit.aspx",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J076_c9dbf6986f57/text.txt",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original_path": "primary_http/J076_c9dbf6986f57/response.html",
+  "original_sha256": "d6222c792ceafba363d63c1b152be8f4ea4e6db51f905e394c427f90098e98f0",
+  "line_count": 0,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

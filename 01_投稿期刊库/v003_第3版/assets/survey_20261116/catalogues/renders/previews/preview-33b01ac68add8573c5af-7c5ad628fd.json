@@ -1,0 +1,32 @@
+{
+  "action": "create_preview",
+  "purpose": "analysis",
+  "budget_applies": true,
+  "source_path": "E:\\文章\\ai论文\\01_投稿期刊库\\v003_第3版\\assets\\survey_20261116\\catalogues\\renders\\cssci-08.png",
+  "source_bytes": 329577,
+  "source_dimensions": [
+    1075,
+    1521
+  ],
+  "source_sha256": "335698c6253208d11b41f00402de328c9e6596a280f8a5ade37df97adaab64d9",
+  "preview_path": "E:\\文章\\ai论文\\01_投稿期刊库\\v003_第3版\\assets\\survey_20261116\\catalogues\\renders\\previews\\preview-33b01ac68add8573c5af.png",
+  "preview_bytes": 329057,
+  "preview_dimensions": [
+    1075,
+    1521
+  ],
+  "preview_sha256": "6daefdce192745f75533be4dac9bf341204ecc66e1ada07ce1d5677c267bdb3d",
+  "within_budget": true,
+  "budget_bytes": 524288,
+  "format": "PNG",
+  "alpha_preserved": false,
+  "options": {
+    "version": 2,
+    "purpose": "analysis",
+    "kind": "document",
+    "max_edge": 1920,
+    "max_bytes": 524288,
+    "crop": null
+  },
+  "note": "Verify small text against the original; preview is not research evidence."
+}

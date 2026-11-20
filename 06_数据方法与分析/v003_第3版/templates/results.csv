@@ -1,0 +1,1 @@
+result_id,run_id,model_id,hypothesis_id,sample_version,outcome,term,estimate,scale,std_error,ci_low,ci_high,ci_level,p_value,n_obs,n_clusters,weight_spec,engine,engine_version,code_sha256,output_path,actual_run_at,status,analysis_role

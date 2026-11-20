@@ -1,0 +1,25 @@
+{
+  "module_id": "02",
+  "name": "文章结构学习",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "10",
+    "11"
+  ],
+  "expected_artifacts": [
+    "corpus20.csv",
+    "structure_moves.csv",
+    "abstract_sentences.csv",
+    "structure_handbook.md"
+  ],
+  "folders": [
+    "assets/corpus",
+    "templates",
+    "outputs"
+  ]
+}
+

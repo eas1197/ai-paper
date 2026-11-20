@@ -1,0 +1,13 @@
+{
+  "verified_on": "2026-11-18",
+  "framework_valid": true,
+  "tests": {"04_v006": 27, "06_v003": 18, "07_v007": 4, "status": "passed"},
+  "regressions": [
+    "指定刊物之外的题录不能计入100摘要或者25核心全文",
+    "在通过冻结检查的测试协议中，缺逐模型方法库应用则停止预检，不读个案",
+    "用户指出的旧稿句式触发语言检查，直接报告数据和组间差异的改写不触发"
+  ],
+  "old_run_recheck": {"run_id":"cgss23_digital_ties_20261118", "metadata":10, "designated_source_records":0, "effective_abstracts":0, "core_fulltexts_read":0, "language_findings":5, "separate_analysis_used_registered_examples":false},
+  "formal_research_gate_pass_claimed": false,
+  "submission_enabled": false
+}

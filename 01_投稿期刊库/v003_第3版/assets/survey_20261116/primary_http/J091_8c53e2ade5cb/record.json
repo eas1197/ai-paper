@@ -1,0 +1,20 @@
+{
+  "journal_id": "J091",
+  "source_url": "https://xb.szu.edu.cn/CN/column/column107.shtml",
+  "retrieved_at": "2026-11-16T15:05:20.876500+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://xb.szu.edu.cn/CN/column/column107.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J091_8c53e2ade5cb/text.txt",
+  "sha256": "f67982c78d999800e92c25e78107a51a7a8765053b9b82e8b78b3e504f7f5f0c",
+  "original_path": "primary_http/J091_8c53e2ade5cb/response.html",
+  "original_sha256": "4c281aaf94357aa9568631a52905267520767cb49db39b6bf2354ab17a344dbb",
+  "line_count": 231,
+  "title": "《深圳大学学报》（人文社科版）",
+  "guideline_links": [
+    "https://xb.szu.edu.cn/CN/column/column107.shtml"
+  ],
+  "review_status": "awaiting_source_readback"
+}

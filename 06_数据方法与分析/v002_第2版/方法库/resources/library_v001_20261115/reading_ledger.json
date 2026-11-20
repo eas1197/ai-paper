@@ -1,0 +1,459 @@
+[
+  {
+    "paper_id": "Zeileis2004",
+    "pdf_sha256": "194d6fc4b1e58f6312bcd0eaff136e12ffc9d272165413af6e5316e99931c053",
+    "pdf_total_pages": 17,
+    "method_or_result_pages_reviewed": [
+      3,
+      4
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Yee2010",
+    "pdf_sha256": "f475ae375de85769fbb21a8f7ca025245d20d370368ad8dba0d6d1ba769af237",
+    "pdf_total_pages": 34,
+    "method_or_result_pages_reviewed": [
+      2,
+      6,
+      7,
+      10
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Zeileis2008",
+    "pdf_sha256": "aa45797db17f912c87852259135c6eaa85841da366732b7ae7ce83b3f1f4341a",
+    "pdf_total_pages": 25,
+    "method_or_result_pages_reviewed": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      15,
+      16,
+      17,
+      19
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Bates2015",
+    "pdf_sha256": "a9ae8934fbe46ac4c3a6d333a75c2c815f9d2ed7725d7613ddce1d5a5244bbff",
+    "pdf_total_pages": 48,
+    "method_or_result_pages_reviewed": [
+      2,
+      6
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "CroissantMillo2008",
+    "pdf_sha256": "be459ab2b2ebf6c76aed3b2df281d7124ff7ac51848b69a3156b174b07d2c5c8",
+    "pdf_total_pages": 43,
+    "method_or_result_pages_reviewed": [
+      2,
+      3,
+      7
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Tingley2014",
+    "pdf_sha256": "73855032ec6fbb3ecab1375e906acc1b889578ed5ccad4db60b01f7ab7bddaac",
+    "pdf_total_pages": 38,
+    "method_or_result_pages_reviewed": [
+      3,
+      4,
+      5
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Sekhon2011",
+    "pdf_sha256": "b71ecbb969dfb6fc4ca719df35a40c1dfd5ffd3c74002a99a4aa96ee464fe6fa",
+    "pdf_total_pages": 52,
+    "method_or_result_pages_reviewed": [
+      3,
+      4
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "LinzerLewis2011",
+    "pdf_sha256": "0b042cbc0b7a926b1c881fe3d246cabc361240b103247f0c8aa2b658fcc7a6e8",
+    "pdf_total_pages": 29,
+    "method_or_result_pages_reviewed": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Rosseel2012",
+    "pdf_sha256": "0a6ece4882425073a048814a340b1569064f0e616d5118112d8d7180c237d6d8",
+    "pdf_total_pages": 36,
+    "method_or_result_pages_reviewed": [
+      3,
+      4,
+      8,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Lumley2004",
+    "pdf_sha256": "9ad8e83a56830607ff338de5b2076c3bd25c67670d49fd663b17998eb257991a",
+    "pdf_total_pages": 19,
+    "method_or_result_pages_reviewed": [
+      2,
+      3
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "VanBuuren2011",
+    "pdf_sha256": "8d58efc30674ce6eff41574a5f67d36d14a19e9e08edcaa964d57ef1a05e70ad",
+    "pdf_total_pages": 67,
+    "method_or_result_pages_reviewed": [
+      15,
+      37,
+      47,
+      48
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Callaway2020",
+    "pdf_sha256": "4fdd1e24abbe6aad85f7c3120c178ba378ff1c1ae7f12bc7c90b75473d903feb",
+    "pdf_total_pages": 45,
+    "method_or_result_pages_reviewed": [
+      7,
+      8
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Rootograms2016",
+    "pdf_sha256": "bc8c83169f4896773f93614c5d490244b08679802f21ee65a916c77f9c15fed3",
+    "pdf_total_pages": 19,
+    "method_or_result_pages_reviewed": [
+      15,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Brambor2006",
+    "pdf_sha256": "67de6aed25a17cf7d5cb2b50b8b80f47b9a85d576be1da47e401b6eb807cbd10",
+    "pdf_total_pages": 20,
+    "method_or_result_pages_reviewed": [
+      9,
+      11,
+      12
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "SunAbraham2020",
+    "pdf_sha256": "9cb6eb28ffaae608faddb57f84ea3131076cb0530a34d9a3e964dbbcc283ea23",
+    "pdf_total_pages": 53,
+    "method_or_result_pages_reviewed": [
+      28,
+      31,
+      34,
+      35
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "NISS1997",
+    "pdf_sha256": "673f95ff22f74bb42ab26d502120bfe6de12939955614b066f2738e55a01bef9",
+    "pdf_total_pages": 21,
+    "method_or_result_pages_reviewed": [
+      3,
+      5,
+      6,
+      21
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "LeischGruen2006",
+    "pdf_sha256": "39c1c42503a7edd4216310b8486e177b679c8b166cfd01f81f9fcbddb97154bc",
+    "pdf_total_pages": 8,
+    "method_or_result_pages_reviewed": [
+      2,
+      3,
+      4
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Brooks2017",
+    "pdf_sha256": "7708f39ef6548c89fa0012e2d2e527bd7e5a14dc331ec2a3584ef00697b5d681",
+    "pdf_total_pages": 23,
+    "method_or_result_pages_reviewed": [
+      3,
+      4,
+      12,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Li2020",
+    "pdf_sha256": "6b972288257419c55e30f89e2c130fc420e6782d3d5f996fccaf67e296e48da2",
+    "pdf_total_pages": 19,
+    "method_or_result_pages_reviewed": [
+      5,
+      6,
+      7,
+      10,
+      12
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "Oberski2014",
+    "pdf_sha256": "69b1f23683fa3dcdbc5fe93b361f94ac93c721609d9ecb0b7bc31656122ab26f",
+    "pdf_total_pages": 27,
+    "method_or_result_pages_reviewed": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_CXDS55VR",
+    "pdf_sha256": "1c495db20c441ded679a2051d742bb2f59d8229253c5415aa1345164e98a8ae3",
+    "pdf_total_pages": 22,
+    "method_or_result_pages_reviewed": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_EWPR5ZCU",
+    "pdf_sha256": "3b8df1020c8341be75a1a97246586b9584650ef14c1fc76e575eedbb22fc0836",
+    "pdf_total_pages": 25,
+    "method_or_result_pages_reviewed": [
+      8,
+      13,
+      14,
+      15
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_KCCVUD8B",
+    "pdf_sha256": "5eaf4abd71fca39ad0510ffdd8ef37ff082c8311d0918b3a51f1f3c4c0b33522",
+    "pdf_total_pages": 19,
+    "method_or_result_pages_reviewed": [
+      8,
+      12,
+      13
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_IB3UDL2N",
+    "pdf_sha256": "a9cabe0444bfff5f134562aef0bfa8574a3415cbf60a288c7c065950e640d35f",
+    "pdf_total_pages": 26,
+    "method_or_result_pages_reviewed": [
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_68HLELIY",
+    "pdf_sha256": "206eb694b9b37da00cdb9d54cdf307076f068acadbcf1a759d46cabd900787e2",
+    "pdf_total_pages": 26,
+    "method_or_result_pages_reviewed": [
+      13,
+      16,
+      17,
+      20,
+      21
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_88RC49EA",
+    "pdf_sha256": "531bf821c12b9b46d40632b6e06a91185c620b67520db03b36dca8c3f8edc1b7",
+    "pdf_total_pages": 26,
+    "method_or_result_pages_reviewed": [
+      9,
+      14,
+      15,
+      16
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_HYACST6Q",
+    "pdf_sha256": "972e0e345f3228522d0de0110a6d6bf3eb95cf4cbc05e60b9a082a2d4fb9d59d",
+    "pdf_total_pages": 25,
+    "method_or_result_pages_reviewed": [
+      13,
+      14
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_ANJUDU3G",
+    "pdf_sha256": "3a550797bfe5b2418dcf3b33b270d1ac4f8a5a73278ffafa10a91062fb1082b8",
+    "pdf_total_pages": 23,
+    "method_or_result_pages_reviewed": [
+      9,
+      10,
+      11
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_U4UBR5II",
+    "pdf_sha256": "dd46e236993c834d6dcc262e518600fab533e1ac5f440e519711e205a034a348",
+    "pdf_total_pages": 11,
+    "method_or_result_pages_reviewed": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_ZH8E2LXI",
+    "pdf_sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2",
+    "pdf_total_pages": 25,
+    "method_or_result_pages_reviewed": [
+      9,
+      11,
+      13,
+      15
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  },
+  {
+    "paper_id": "ZOT_ZUJTDV7Q",
+    "pdf_sha256": "d6f5f5920fd599b7dd8bd4dd72bda1617375c08cc81fb9cb243c20e480b83a6f",
+    "pdf_total_pages": 13,
+    "method_or_result_pages_reviewed": [
+      7,
+      8
+    ],
+    "title_identity_checked": true,
+    "scope": "AI方法定向全文审读，重点页如列；非逐段校勘所有内容/证明；未复现原数据",
+    "reader": "Codex（AI，方法定向全文审读）",
+    "read_at": "2026-11-15T19:45:23.959852+08:00"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-14T19:37:22.553475+08:00",
+  "technical_checks_passed": true,
+  "problems": [],
+  "unique_source_pdfs": 20,
+  "original_pdf_hashes_recalculated": true,
+  "section_units": 117,
+  "abstract_sentences": 96,
+  "evidence_records": 2303,
+  "markdown_local_links_checked": 88,
+  "all_body_pdf_pages_in_section_ranges": true,
+  "abstract_sentence_alignment_checked": true,
+  "visual_checks": [
+    "P02/P04/P05/P07 first pages",
+    "P13 PDF19 rotated table",
+    "P15 PDF1 and PDF17: two abstract/body inconsistencies"
+  ],
+  "research_gate_status": "needs_review",
+  "limitation": "Source hash, page-range coverage and link checks do not establish paragraph semantics or full-text reading completion."
+}

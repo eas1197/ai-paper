@@ -1,0 +1,635 @@
+收入不平等与公平分配:
+对转型时期中国城镇居民
+公平观的一项实证分析
+李 骏 吴晓刚
+摘 要:通过分析2005年中 国 城 镇 居 民 的 调 查 数 据 发 现, 教 育 的 启 蒙 性 质 能
+够使人超越狭隘的利己主义,从而对不平等持更加批判的态度;国有部门就业者和
+老年人所认可的不平等程度较低,体现了平均主义价值观的影响;地区实际的不平
+等程度越大,人们对不平等的认可程度越低。本研究既指出人们在减少收入不平等
+程度方面的普遍共识,又分析了人们认可的收入不平等程度的差异模式,从而有助
+于进一步理解民众如何感知和评价当前中国社会面临的日益严峻的收入不平等问题。
+关键词:收入分配 平等 公平 社会分层 主观感受
+作者李骏,香港科技大学社会科学部博士候选人、上海社会科学院社会学研究
+所助理研究员 (上海 200020); 吴 晓 刚, 香 港 科 技 大 学 应 用 社 会 经 济 研 究 中 心 主
+任、社会科学部教授。
+一、问题的提出
+改 革 开 放 30 年 来 , 中 国 实 现 了 持 续 和 高 速 的 经 济 增 长 , 但 同 时 也 面 临 着 日 益 严
+峻的收入不平等问题。急剧扩大的收入不平等与传统社会主义制度下的平均主义分
+配模式形成鲜明的对照,由此引发的普遍社会不满已引起研究者和决策者的关注。
+许多学者担忧,中国日益扩大的贫富差距将会危及社会稳定。为解决日益尖锐的收
+入分配问题,近年来政府的政策导向已从效率优先、兼顾公平向更加注重社会公平
+转变,旨在构建一个 “民 主 法 治、公 平 正 义、诚 信 友 爱、充 满 活 力、 安 定 有 序、 人
+·
+114
+·
+ 本文所使用的数据来自 “中国综合社会调查 (CGSS2005)”项目,该 项 目 由 中 国 人 民 大
+学社会学系与香港科技大学社会科学部联合执行。感谢香港研究资助局优配基金对吴
+晓刚的资助 (项目编号:644208) 和匿名审稿人所提的宝贵意见。文责自负。
+
+
+与自然和谐相处”的 和 谐 社 会。1 这 就 引 发 一 个 问 题,即 究 竟 何 种 程 度 的 不 平 等 才
+会危及社会稳定?
+对这个问题的深入讨论实际上涉及公平分配这一基础性的社会价值观问题。笔者
+认为,虽然平等 (equality)和公平 (equity)都是人类社会长期以来所追求的重要价
+值目标,但这两个概念存在差别;平等与否是对实际收入分配状况的测量;公平则是
+关于收入应当如何分配的主观判断。如果一个社会中,无论其社会成员工作绩效和社
+会贡献如何,都得到相同的收入,那么,对那些努力工作的人来说是不公平的。资源
+分配的不平等和社会分层固然是有效的激励机制,但是,人与人之间的这种差别同时
+又必须是 “合法化”的,即谁应得到更多以及谁应得到很少,必须得到社会主流价值
+的认可。因此,对社会稳定具有实质影响的是公平问题,而不是平等问题。
+社会公平历来是哲学思辨、政治纷争和价值讨论的一个中心议题。近年来,随
+着各国内部收入差距的日益扩大,对不平等的价值层面即公平分配的学术讨论日趋
+受到瞩目,并出现了一批自 成 一 脉 的 实 证 研 究 文 献。2 但 在 中 国, 这 类 研 究 最 近 几
+年 才 开 始 出 现 , 缺 乏 系 统 的 分 析 。3
+二、文献回顾与述评
+以往的研究发现,社会群体不管处在何种社会位置,通常都会接受一种结构性
+的不平等,并将其视为正当的、合理的。4 根据克兰格和史密斯对英美两国学术界一
+系列 “分层信念”(stratificationbeliefs)研究所作的综述,人们对公平分配存在两点社
+会共识:第一,每个社会成员都应该有权获得一定程度的最低收入;第二,很少有人
+·
+115
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+1
+2
+3
+4
+胡 锦 涛 : 《在 省 部 级 主 要 领 导 干 部 提 高 构 建 社 会 主 义 和 谐 社 会 能 力 专 题 研 讨 班 上 的 讲 话
+(2005年2月19日)》,2005年 6 月 26 日,http://news.xinhuanet.com/newscenter/
+2005-06/26/content_3138887.htm,2011 年 12 月 8 日 。
+参 见 Jonathan Kelley and M. D. R. Evans,The Legitimation of Inequality:
+OccupationalEarningsinNineNations,"AmericanJournalofSociology,vol.99,no.
+1,1993,pp.75-125.
+张海东:《城市居民对社会不平等现象的态度研究———以长春市调查为例》, 《社会学研
+究》2004年第6期;怀默霆: 《中国民众如何看待当前的社会不平等》, 《社会 学 研 究》
+2009年第1期;孙明: 《市场转型与民众的分配公平观》, 《社会学研究》2009年第3期;
+Xiaogang Wu,IncomeInequalityand DistributiveJustice:A Comparative Analysisof
+MainlandChinaand Hong Kong,"TheChinaQuarterly,vol.200,2009,pp.1033
+1052.
+JohnF.Stolte,TheLegitimationofStructuralInequality:ReformulationandTestof
+theSelf-EvaluationArgument,"AmericanSociologicalReview ,vol.48,no.3,1983,
+pp.331-442.
+
+
+会赞同收入分配上的完全平等,相反,多数人认为在保证每个社会成员都有权获得最
+低收入的前提下,剩余的社会财富应按个人贡献来分配。1 后来的研究也发现,人们
+一致同意低端职业应该有一定程度的合理收入,也普遍认为高端职业应有较高的收
+入,但是,对于多大程度的收 入 不 平 等 才 是 公 平 的, 意 见 分 歧 却 很 大。2 吴 忠 民 在
+《社会公正论》 一书中也提出,社会分层中的公正原则之一就是 “各个阶层应当得到
+有所差别的并且是恰如其分的回报”。3 基于此,本文关注人们在认可的收入不平等
+程度上的差异模式。以下分别从结构、文化和变迁三种分析视角来回顾相关的实证
+研究文献。
+(一) 社会分层与利己主义理论
+最简单和最直接的利己主义理论认为,人们的立场和观点取决于他们的自我利
+益,那些占据优势地位的社会群体出于对其既得利益受损的担心会倾向于维护现有
+的分配状况,相反,弱势社会群体则希望通过平等化或再分配政策来获得更多的社
+会资源。4 职业作为社会地位分 层 的 一 个 关 键 变 量, 经 常 被 用 来 预 测 对 收 入 不 平 等
+的利己主义态度。但是,由于这一变量的操作化有时过于随意,其预期效应在实证
+研究中并非总是能够得到验证。有趣的是,如果进一步将职业纳入阶级分析视角,
+许多分析结果都会支持利己主义理论。还有学者在比较研究了八个西方国家中人们
+对再分配的态度后指出,阶级结构似乎在每一个社会中都导致了对于再分配的十分
+相 似 的 态 度 模 式 。5
+除职业或阶级外,收入和教育的影响也被用来证实利己主义理论。由于这些变
+量的作用通常都与利己主义理论的预期相一致,在理解公众对于不平等的评判时,
+利己主义态度已成为一个基本假设,直到最近学者们才开始重新审视并检验其正确
+性。事实上,关于教育如何影响人们对不平等的态度,还有另一种截然相反的理论
+·
+116
+·
+中国社会科学 2012年第3期
+1
+2
+3
+4
+5
+JamesR.KluegelandEliotR.Smith,BeliefsaboutStratification,"AnnualReview
+ofSociology,vol.7,1981,pp.29-56.
+参见JonathanKelleyandKrzysztofZagorski,EconomicChangeandtheLegitimation
+ofInequality:The Transition from Socialism to the Free Marketin Central-East
+Europe,"ResearchinSocialStratificationandMobility,vol.22,2004,pp.319-364.
+吴 忠 民 : 《社 会 公 正 论 》, 济 南 : 山 东 人 民 出 版 社 ,2004 年 , 第 246 页 。
+JamesR.KluegelandEliotR.Smith,BeliefsaboutInequality:AmericansViewsof
+WhatIsandWhatOughttoBe,New York:AldinedeGruyter,1986;AdamSzirmai,
+InequalityObserved:A Studyof AttitudestowardIncomeInequality,Aldershot,
+Hants,England:Avebury,1988.
+StefanSvallfors,WorldsofWelfareandAttitudestoRedistribution:A Comparisonof
+EightWestern Nations,"EuropeanSociologicalReview ,vol.13,no.3,1997,pp.
+283-304.
+
+
+假设,即 “启蒙主 义” (theprincipleofenlightenment)。该 理 论 认 为 教 育 的 启 蒙 性
+质向人们传递一种同情贫困和弱势群体的价值观,因而教育水平和平等倾向之间具
+有一种正向关系。1 遗憾的 是,这 一 论 述 很 少 引 起 重 视。 结 果, 教 育 长 期 以 来 就 被
+“理所当然” 地认为反映的是普遍存在的利己主义态度。
+(二) 文化与公平价值观的影响
+与结构论有所不同,文化论通常强调人们对分层的态度受社会主流价值观以及
+其他特定信念的 影 响。2 在 个 体 层 次 上,学 者 们 区 分 了 四 种 公 平 价 值 观。3 先 赋 论
+者将既定的资源分配情形看作是自然形成且不证自明的;平均主义者主张资源的分
+配应该确保实现最大程度的社会平等;个体主义者相信存在自由和公平的竞争体制,
+且认同 “胜者为王” 的道理;宿命论者则将 其 不 幸 遭 遇 归 咎 为 社 会 制 度 的 不 公。 实
+证研究表明,持有不同公平价值观的群体之间对于公平收入差距的主观认识存在显
+著 的 差 异 。4
+另一种研究策略是将不同国家公众所认可的收入不平等程度的差异作为公平价
+值观的测量。这种跨国研究最初只是比较某些特定的国家,后来,研究者开始不断
+检验一个更为一般化的 “福利制度假设” (welfareregimehypothesis),5 并 发 现 公
+众对于再分配的态度确实与福利制度类型相关。虽然这种相关性的具体模式因研究
+设计的不同而有所差别,但总体而言,社会主义与资本主义两种制度下的民众具有
+·
+117
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+1
+2
+3
+4
+5
+Robert V.Robinson and Wendell Bell,Equality,Success,and SocialJusticein
+EnglandandtheUnitedStates,"AmericanSociologicalReview ,vol.43,no.2,1978,
+pp.125-143.
+参见 NicholasAbercrombieandBryanS.Turner,TheDominantIdeology Thesis,"
+BritishJournalofSociology,vol.29,no.2,1978,pp.149-170.
+Bernd Wegenerand Stefan Liebig,Hierarchicaland SocialClosure Conceptionsof
+DistributiveSocialJustice:A ComparisonofEastand WestGermany,"inJamesR.
+Kluegel,David S. Mason and Bernd Wegener,eds.,SocialJusticeand Political
+Change:PublicOpinioninCapitalistandPost-CommunistStates,New York:Aldine
+deGruyter,1995,pp.263-284.
+Roland Verwiebeand Bernd Wegener,SocialInequalityandthe PerceivedIncome
+JusticeGap,"SocialJusticeResearch,vol.13,no.2,2000,pp.123-149.
+StefanSvallfors,DimensionsofInequality:A ComparisonofAttitudesinSwedenand
+Britain,"EuropeanSociologicalReview ,vol.9,no.3,1993,pp.267-287;WilArts
+andJohnGelissen,WelfareStates,SolidarityandJusticePrinciples:Doesthe Type
+Really Matter?"ActaSociologica,vol.44,no.4,2001,pp.283-299;MadsM.Jger,
+Welfare Regimes and Attitudes toward Redistribution: The Regime Hypothesis
+Revisited,"EuropeanSociologicalReview ,vol.22,no.2,2006,pp.157-170.
+
+
+明显的差别:前者更加偏好较低程度的收入不平等。
+无论是从个体层次还是国家层次探讨公平价值观对公众不平等态度的影响,都
+存在一个有待解决的问题,即在一个社会内部是否存在公平价值观的分歧?这个问
+题对中国这样的转 型 国 家 来 说 尤 其 重 要。 正 如 一 些 研 究 者 在 1980 年 代 所 论 述 的 那
+样,1 公有和私有部门的区分,可 能 是 构 成 公 平 价 值 观 冲 突 的 一 个 重 要 基 础。 世 代
+(cohort) (或 年 龄) 差 异 也 可 能 成 为 价 值 观 分 歧 的 一 个 重 要 原 因,其 对 不 平 等 态 度
+的影响在市场经济和再分配经济两种不同体制下的异同,也只是在最近才受到关注。
+(三) 经济转型过程中的价值观变迁
+早 在 20 世 纪 六 七 十 年 代 , 研 究 者 就 已 注 意 到 , 平 等 主 义 开 始 成 为 西 方 世 界 一 股
+新 的 思 潮 , 年 轻 人 比 老 年 人 更 倾 向 于 追 求 平 等 。 后来,几乎所有使用横截面数据的分
+析都发现,年龄越大的人对不平等的态度越宽容。直到最近,才有研究者向人们展示了
+一种截然相反的世代效应:在转型后的爱沙尼亚,相比于年轻一代,老一代对收入不平
+等持更加批评性的意见。不同世代所经历的社会化环境差异是理解这一结果的关键。2
+社会主义国家向市场经济的转型是会强化还是会削弱公众对收入不平等的支持程
+度?关于社会经济变迁对不平等态度的影响,学者们提出了两种相互对立的理论:适
+应理论 (adaptationtheory)认为,人们会慢慢习惯不平等程度的上升并会相应地调整
+其对不平等的容忍程度;抗拒理论 (reactionhypothesis) 则认为,如果经济社会变迁
+与人们最初的价值观不相符,他们就会对收入不平等表示出强烈的不满和抗拒。3 实
+证研究发现,在匈牙利和波兰等国的转型过程中,公众对不平等的容忍程度随时间
+的推移而上升。4 这似乎支持 了 适 应 理 论。 但 遗 憾 的 是, 它 们 并 没 有 直 接 检 验 社 会
+实际的不平等程度与公众认可的不平等程度之间的关系。据我们所知,有两项研究
+·
+118
+·
+中国社会科学 2012年第3期
+1
+2
+3
+4
+如 PatrickDunleavy,ThePoliticalImplicationsofSectoralCleavagesandtheGrowth
+ofStateEmployment:Part2,CleavageStructuresandPoliticalAlignment,"Political
+Studies,vol.28,no.4,1980,pp.527-549.
+ElluSaar,Different Cohorts and Evaluation ofIncome Differencesin Estonia,"
+InternationalSociology,vol.23,no.3,2008,pp.417-445.
+参见 Ola Listhaugand TorilAalberg,ComparativePublic Opinionon Distributive
+Justice:AStudyofEquityIdealsandAttitudestowardCurrentPolicies,"International
+JournalofComparativeSociology,vol.40,no.1,1999,pp.117-140.
+SiobhanAusten,AnInternationalComparisonof AttitudestoInequality,"International
+JournalofSocialEconomics,vol.29,no.3,2002,pp.218-237;MéroveGijsberts,The
+LegitimationofIncomeInequalityinState-SocialistandMarketSocieties,"ActaSociologica,
+vol.45,no.4,2002,pp.269-285;Jonathan KelleyandKrzysztofZagorski,Economic
+ChangeandtheLegitimationofInequality:TheTransitionfrom SocialismtotheFree
+MarketinCentral-EastEurope."
+
+
+试图考察这一关系,但结果 并 不 一 致。1 因 此, 关 于 不 平 等 的 价 值 观 到 底 如 何 随 着
+社会经济的转型 (尤其是不平等状况的变化) 而变迁,仍然缺乏一个明确的答案。
+三、研究问题与假设
+综上,本文提出三个问题:1.教育对不平等态度的影响到底是一种利己主义 的
+还是一种具有启蒙主义性质的?2.公平价值观对不平等态 度 的 影 响 是 否 存 在?3.实
+际的不平等程度与认可的不平等程度之间究竟是一种什么关系?以下将分别给出研
+究假设及其背后的关系机制。
+(一) 教育的双重效应
+如前所述,我们可以就教育对不平等态度的影响提出两个竞争性的假设:
+假 设 1a: 教 育 程 度 较 高 的 人 会 认 可 较 高 的 不 平 等 。
+假 设 1b: 教 育 程 度 较 高 的 人 会 认 可 较 低 的 不 平 等 。
+为了理解教育对不平等 态 度 可 能 存 在 的 启 蒙 作 用 (即 假 设 1b), 可 以 参 考 对 教
+育与自由主义态度之间的 相 关 性 研 究 所 提 供 的 两 种 解 释。2 传 统 的 观 点 认 为, 教 育
+通过知识积累和认知发展从根本上改变了人们对于多样性的容忍,进而使人们更倾
+向于自由主义。社会化理论则认为,自由主义价值观的形成并非知识和认知发展的
+一个自然而然的结果,而是学生从教育体系习得并加以内化的。尽管认知发展理论
+和社会化理论在解释教育与自由主义态度之间的相关性时是相互对立的,但在中国
+社会的特定背景下,两者却具有同样的理论预期,即教育程度更高的人会更加关注
+社会的两极分化现象,进而会对不平等持更加批判的态度。理由具体阐述如下。
+虽 然 中 国 自 1990 年 代 以 来 收 入 分 配 不 平 等 迅 速 扩 大 , 但 这 种 不 平 等 主 要 来 自 城
+乡之间、地区之间、部门或行业之间、单位之间的差异,收入分配在集团内部则是
+·
+119
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+1
+2
+Markus Hadler,Why Do People Accept DifferentIncome Ratios?A Multi-Level
+ComparisonofThirty Countries,"ActaSociologica,vol.48,no.2,2005,pp.131
+154; Michelle L. Dion and Vicki Birchfield,Economic Development,Income
+InequalityandPreferencesforRedistribution,"InternationalStudiesQuarterly,vol.
+54,no.2,2010,pp.315-334.
+JoPhelan,Bruce G.Link,Ann Stueveand RobertE.Moore,Education,Social
+Liberalism, and Economic Conservatism: Attitudes toward Homeless People,"
+AmericanSociologicalReview ,vol.60,no.1,1995,pp.126-140;PaulW.Kingston,
+Ryan Hubbard,Brent Lapp,Paul Schroeder and Julia Wilson,Why Education
+Matters,"SociologyofEducation,vol.76,no.1,2003,pp.53-70.
+
+
+较为平均化的。1 造成的结果是,教 育 程 度 较 低 的 人 因 为 理 解 他 人 生 活 境 遇 的 能 力
+有限,会低估社会不平等的真实水平;相反,教育程度较高的人由于知识积累和认
+知能力,更有可能了解社会不平等的真实情况。而且,更多的受教育经历还会使人
+们养成批判性的阅读和分析 习 惯,从 而 使 其 能 够 更 多 地 了 解 社 会 不 平 等 的 现 状,进
+而认可较低程度的不平等。
+另外,中国的教育体系所传递的核心价值观是集体主义和社会主义,这也可能
+使得教育程度更高的人会更加同情穷人的生活困境,更会关注社会发展的整体状况。
+中国读书人传统上就有一 种 超 越 于 个 人 境 遇 的 “先 天 下 之 忧 而 忧” 的 情 怀。 因 此,
+根据社会化的理论,我们也会预期教育程度较高的人会认可较低的不平等。
+(二) 社会主义国家内部的公平价值观分歧
+改革开放以来,中国采取了渐进改革策略,通过逐步培育和发展体制外的新兴市
+场部门来推动国有部门的改革和转型。而计划经济时期所形成的平均主义价值观可能
+仍然存留于国有部门,并与市场经济所崇尚的自由竞争的价值理念相抗衡。虽然国有
+部门也实行了一系列的改革,但这并不一定会彻底消除根深蒂固的平均主义价值观的
+影响。如对1980年代中国城镇社会的分层研究发现,在国有企业内部,作为越来越重
+要 的 工 资 组 成 部 分 ——— 奖 金 , 虽 然 在 名 义 上 是 用 来 激 励 员 工 、 提 高 生 产 力 的 , 但 其 分
+配却是平均化的,与员工的个人特征没有太大关系。2 据此,提出以下假设:
+假 设 2a: 人 们 认 可 的 不 平 等 程 度 在 国 有 部 门 比 在 市 场 部 门 低 。
+如果平均主义价值观的影响确实存在,它还可能会在老一代人身上体现出来,
+因为他们经历过计划经济时期的平均主义政策。年轻一代则很少受到这种价值观的
+熏 陶 , 因 为 消 除 平 均 主 义 分 配 模 式 是 中 国 经 济 改 革 初 期 的 一 个 主 要 目 标 。 这 一 年 龄/
+世代效应与前面提及的在爱沙尼亚发生的情况类似,但却与西方社会的典型情形截
+·
+120
+·
+中国社会科学 2012年第3期
+1
+2
+王天夫、王丰:《中国城市收入分配中的集团因素:1986—1995》, 《社会学研究》2005年
+第3期;谢宇: 《认识中国的不平等》, 《社会》2010年第 3 期;WangFeng,Boundaries
+andCategories:RisingInequalityin Post-SocialistUrbanChina,Stanford,California:
+Stanford University Press,2008;Yu Xieand Xiaogang Wu,DanweiProfitability and
+EarningsInequalityinUrbanChina,"TheChinaQuarterly,vol.195,2008,pp.558-581.
+Andrew G. Walder,Economic Reform andIncome Distributionin Tianjin:1976
+1986,"in Deborah Davisand Ezra F.Vogel,eds.,ChineseSocietyontheEveof
+Tiananmen:TheImpactof Reform, Cambridge (Massachusetts )and London:
+HarvardUniversityPress,1990,pp.135-156;YuXieandEmily Hannum ,Regional
+Variationin EarningsInequalityin Reform-Era Urban China,"AmericanJournalof
+Sociology,vol.101,no.4,1996,pp.950-992;Xiaogang Wu,Work Unitsand
+IncomeInequality:TheEffectof MarketTransitionin UrbanChina,"SocialForces,
+vol.80,no.3,2002,pp.1069-1099.
+
+
+然相反。因此,提出另一个假设:
+假 设 2b: 年 龄 更 大 的 人 认 可 更 低 的 不 平 等 。
+(三) 实际的与认可的不平等
+要考察实际的不平等对认可的不平等的真实影响,必须排除感知的不平等在态
+度形成过程中所起的潜在调节作用。以往的实证分析或许是由于数据的局限性,很
+少做到这一点。本研究通过分别测量这三种不平等来填补这一空白。在个体层次,
+我们用同样的方式来同时测量感知的不平等与认可的不平等。此外,鉴于中国地区
+间经济社会发展的差异性,我们测量了不同地区实际的收入不平等程度,进而考察
+其如何影响人们对收入不平等的感知和认可程度。通常认为,实际的收入不平等程
+度越高,对再分配政策的呼声 也 越 高。1 费 尔 维 贝 和 韦 格 纳 在 探 讨 国 家 的 转 型 方 式
+对个人公平观的影响时,得出的分析结果也支持了人们会对过多的不平等产生不满
+情绪这一说法:与其他转型国家相比,俄罗斯和保加利亚这两个国家的转型都不算
+成功,存在严重的不平等和其他种种社会问题,因此其公众更倾向于认为收入差距
+过高。2 由此提出第三个研究假设:
+假 设 3: 社 会 实 际 的 不 平 等 程 度 越 大 , 人 们 对 不 平 等 的 认 可 程 度 越 低 。
+四、数据与研究设计
+本文 分 析 使 用 的 数 据 来 自 2005 年 的 中 国 综 合 社 会 调 查 (CGSS2005)。
+CGSS2005的样本对全国 城 镇 和 农 村 地 区 (除 西 藏) 的 18 岁 以 上 人 口 具 有 代 表 性,
+采 用 的 是 多 阶 段 分 层 随 机 抽 样 方 法 , 其 中 城 镇 样 本 约 有 6000 人 。 本 研 究 的 分 析 对 象
+只 限 于 城 镇 样 本 中 的 20—69 岁 受 访 者 。
+测量人们对收入不平等或再分配态度的传统方法是直接询问受访者对相关说法
+(例如 “我们国家的收入差距非常大”、“政府应该在穷人身上少花一些钱” 等) 的同
+意/不 同 意 程 度 。 然 而 , 这 种 测 量 经 常 被 批 评 存 在 方 法 论 上 的 问 题 , 如 它 可 能 会 使 受
+访者在表达 自 己 的 态 度 时 刻 意 遵 循 某 种 社 会 期 望。3 因 此, 国 际 社 会 调 查 项 目
+(InternationalSocialSurveyProgram,简称ISSP) 的不平等研究专题率先采用了 一
+·
+121
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+1
+2
+3
+Karl O. Moene and Michael Wallerstein,Inequality, Social Insurance, and
+Redistribution,"AmericanPoliticalScienceReview ,vol.95,no.4,2001,pp.859
+874.
+Roland Verwiebeand Bernd Wegener,SocialInequalityandthe PerceivedIncome
+JusticeGap."
+CharlesF.TurnerandElizabeth Martin,eds.,SurveyingSubjectivePhenomena,vol.
+2,New York:RussellSageFoundation,1984.
+
+
+种间接测量方式,即指定一组职业,让受访者估计每个职业的从业者的 “实际收入”
+和 “应得收入”。
+这种测量方法有几个优 势。其 一,受 访 者 对 某 个 特 定 职 业 “应 得 收 入” 的 评 价
+是以他/她对该职业 “实际收入” 的感知为基础的,因此受访者对实际情况的估计误
+差直接被他/她自己所控制了;其二, “实 际 收 入” 和 “应 得 收 入” 问 题 还 清 楚 地 将
+信息锁定为特定职业之间的报酬差别,避免了家庭规模、收入来源、税收比率、福
+利补贴等混杂因素对收入不平等问题的影响;其三,这种测量方法有利于实现理论
+上对两个维度的主观不 平 等———感 知 的 不 平 等 和 认 可 的 不 平 等———的 区 分。 我 们 采
+用奥斯伯格和史密丁的方法,计算 每 位 受 访 者 所 估 计 的 各 个 职 业 的 “应 得 收 入” 的
+基尼系数,以反映 “认可 的 不 平 等” 程 度。1 同 理, 还 可 以 计 算 每 位 受 访 者 所 估 计
+的各个职业的 “实际收入” 的基尼系数, 以 反 映 “感 知 的 不 平 等” 程 度。 这 两 个 主
+观基尼系数的计算方法与根据洛伦兹曲线计算基尼系数的典型方法并没有什么差别,
+只是这里隐含地假定各个职业代表了社会总体以及每个职业所占的人口比重相同。
+假设1关注的是教育的作用,用受教育年限来测量。要估计教育的净效应,需
+要排除收入和职业的作用。我们在模型中同时引入受访者的个人月收入及其平方项,
+以 观 察 是 否 存 在 非 线 性 效 应。 职 业 是 用 国 际 社 会 经 济 地 位 指 数 (International
+SocioeconomicIndexofOccupationalStatus,简称ISEI) 来测量。在假设2中,就业
+部门和年龄/世代的效应可以 反 映 平 均 主 义 价 值 观 的 影 响。受 访 者 被 询 问 他/她 目 前
+或最后一份工作所在机构的所有制性质, 据 此 将 其 划 分 为 两 大 部 门: 国 有 部 门 (包
+括党政机关、国有企业和国 有 事 业 事 位) 与 市 场 部 门 (其 他 所 有 制 性 质)。 至 于 世
+代,本研究用受访者的年龄作代理变量。分析中还会控制其他一些个体层次的变量,
+包括政治面貌、户籍和性别,它们都是虚拟变量, “1” 分 别 表 示 “党 员”、 “城 镇 户
+口” 和 “男性”。
+假设3关注的是社会实际的不平等状况的影响,对它的测量是在地级市这一地
+区层 次 上 进 行 的。根 据 2005 年 全 国 1% 人 口 抽 样 调 查 微 观 数 据 中 的 个 人 收 入 信 息,
+我们对居住在同一个地级市行政辖区内的受访者可以计算出一个基尼系数,从而得
+到地区 层 次 上 “实 际 的 不 平 等” 程 度 测 量。 这 些 地 区 基 尼 系 数 的 取 值 从 0.296 到
+0.581 不 等 , 表 明 地 区 之 间 在 收 入 不 平 等 程 度 上 确 实 存 在 显 著 的 差 异 。
+我 们 将 分 析 对 象 限 定 为 20—69 岁 的 城 镇 居 民 并 与 地 区 层 次 的 实 际 不 平 等 数 据 进
+行 匹 配 之 后 , 得 到 了 5231 人 的 样 本 ; 排 除 感 知 或 认 可 的 不 平 等 程 度 这 两 个 变 量 的 缺
+失值之后,得到4648人 的 样 本;再 排 除 其 它 自 变 量 的 缺 失 值 之 后, 最 终 得 到 4011
+·
+122
+·
+中国社会科学 2012年第3期
+1 LarsOsbergandTimothySmeeding,FairInequality?AttitudestowardPayDifferentials:The
+UnitedStatesinComparativePerspective,"AmericanSociologicalReview ,vol.71,no.3,
+2006,pp.450-473.
+
+
+人的有效样本。为检验研究结果的稳健性,我们在多元回归分析部分两次使用多重
+填补法 (multipleimputation),分别将样 本 数 提 升 至 4648 人 和 5231 人, 并 与 有 效
+样本的结果进行比较。在所有的多元回归分析中,我们对数据作了加权处理,并调
+整了样本在社区 (村委会或居委会) 层次上的聚集效应,以得到稳健标准误。
+五、结果与分析
+(一) 描述性分析
+表1左栏展示了有效样本的描述性统计特征。比较两个主观基尼系数的平均值
+(0.463和0.401) 可知,中国城镇居 民 所 认 可 的 不 平 等 程 度 要 低 于 他 们 所 感 知 到 的
+不平等程度。两个主观基尼系数的相关系数达到 0.8,且密度曲线的形状十分相近,
+看似只存在水平方向上的位移 (见图1)。表1右栏中,即 使 我 们 根 据 教 育 程 度、年
+龄、部门、月收入、职业地位和党员身份将样本进行分组,无论考察哪一个社会群
+体,其所认可的不平等程度都低于所感知到的不平等程度。这表明,中国城镇居民
+普遍感觉目前的收入不平等高于他们可以接受的程度。
+表1 有效样本的描述性统计特征及感知的与认可的不平等程度分组比较 (N=4011)
+变量名称 均值
+(标准差) 样本分组 感知的不平等
+(基 尼 系 数 )
+认可的不平等 (基 尼 系 数 )
+主观层次变量 教育程度
+感知的不平等 (基尼系数) 0.463 小学及以下 0.430 0.376
+(0.171) 初 中 0.450 0.388
+认可的不平等 (基尼系数) 0.401 高中/中专 0.467 0.401
+(0.170) 大专及以上 0.495 0.433
+个体层次变量 年 龄
+受教育年限 10.828 20—29岁 0.469 0.425
+(3.524) 30—39岁 0.461 0.399
+年 龄 42.602 40—49岁 0.464 0.396
+(12.566) 50—59岁 0.464 0.396
+国有部门 0.538 60—69岁 0.454 0.387
+(0.499) 部 门
+月收入 (元) 1173.201 国有部门 0.468 0.398
+(1391.579) 市场部门 0.457 0.404
+职业地位 (ISEI) 41.721 月收入
+(13.248) 低 0.438 0.375
+党 员 0.144 中 0.462 0.396
+(0.351) 高 0.488 0.429
+城镇户口 0.919 职业地位
+(0.273) 低 0.455 0.389
+·
+123
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+
+
+续表1
+变量名称 均值
+(标准差) 样本分组 感知的不平等
+(基 尼 系 数 )
+认可的不平等 (基 尼 系 数 )
+男 性 0.496 中 0.460 0.395
+(0.500) 高 0.469 0.412
+地区层次变量 党员身份
+实际的不平等 (基尼系数) 0.399 党 员 0.474 0.410
+(0.049) 非党员 0.461 0.399
+图1 有效样本中个体感知的不平等与认可的不平等 (基尼系数) 分布:Kernel密度曲线估计
+除了比较受访者感知的和认可的不平等程度这两个概括性的测量指标外,我们
+还可以分别考察他们对给定的六个职业 (农民、农民工、工厂一般工人、大学教授、
+政府省部级以上官员、大型企业董事长/总经理) 的收入估计与评价,以进一步探寻
+人们如何评价当前的收入分配状况。表2 中 A 栏表示受访者估计的各个职业 “实际
+收入” 的平均值,薪酬最高的职业与薪酬最低的职业相比在收入上相差约55倍 (≈
+29457/539)。B栏中报告的是受访者对每个职业 “应得收入”的评价,薪酬最高的职
+业与薪酬最低的职业之间的收入倍数比降至约30 (≈25102/828)。我们还可以计算每
+一个职业的 “实际收入”与 “应得收入”之比,比值接近1表明该职业的收入是公平
+的,大于1表明 “多付”,小于1则表明 “少付”,结果见 C 栏。可见,一方面,人们
+认为农民、农民工和工厂的普通工人被少付了;另一方面,政府省部级以上官员和大
+型 企 业 董 事 长/总 经 理 被 认 为 多 付 了 ; 而 大 学 教 授 基 本 上 被 认 为 获 得 了 他 们 应 得 的 收
+入 (比值为0.94,接近1)。因此,中国城镇居民对当前收入分配的态度具有共识:应
+该提高低薪酬职业的收入,同时降低高薪酬职业的收入,最终缩小收入差距。
+·
+124
+·
+中国社会科学 2012年第3期
+
+
+表2 有效样本对给定职业的 “实际收入” 与 “应得收入” 的估计 (单位:元/每月)
+A:“实际收入” B:“应得收入” C:A/B
+农 民 539 828 0.65
+农民工 837 1155 0.72
+工厂一般工人 1025 1453 0.71
+大学教授 4826 5140 0.94
+政府省部级以上官员 7054 4809 1.47
+大型企业董事长/总经理 29457 25102 1.17
+(二) 多元回归分析
+中国城镇居民在收入分配态度上的共识引人注意,但本文的重点是要解释不同
+群体在可接受的不平等程度上的 差 异 性。 因 此 我 们 转 入 对 “认 可 的 不 平 等 (基 尼 系
+数)”的多元回归分析。在表3中,我们依次给出5个模型:模型1至模型3分析
+的是有效样本,模型4和模型5是两次使用多重填补法解决了缺失值问题之后的分
+析结果,以检验缺失值问题是否会造成偏误。
+表3 对 “认可的不平等 (基尼系数)” 的多元线性回归分析
+模型1 模型2 模型3 模型4 模型5
+感知的不平等
+受教育年限
+年 龄/10
+国有部门
+实际的不平等
+月 收 入/1000
+月 收 入/10002
+职业地位 (ISEI/10)
+党员
+城镇户口
+男性
+常数项
+0.813*** 0.813*** 0.813*** 0.822*** 0.819***
+(0.016) (0.016) (0.016) (0.015) (0.014)
+— -0.001 -0.001* -0.002* -0.002*
+(0.001) (0.001) (0.001) (0.001)
+— -0.005* -0.005** -0.005** -0.005**
+(0.002) (0.002) (0.002) (0.002)
+— -0.013** -0.013** -0.013** -0.013**
+(0.005) (0.005) (0.004) (0.004)
+— — -0.133* -0.131* -0.120*
+(0.067) (0.063) (0.056)
+0.009*** 0.008*** 0.008*** 0.007** 0.006** (0.002) (0.002) (0.002) (0.002) (0.002)
+-0.0002** -0.0002** -0.0002** -0.0002** -0.0002* (0.0001) (0.0001) (0.0001) (0.0001) (0.0001)
+0.003 0.005* 0.005* 0.005** 0.005** (0.002) (0.002) (0.002) (0.002) (0.002)
+-0.007 0.002 0.002 0.003 0.002 (0.006) (0.006) (0.006) (0.006) (0.007)
+-0.017* -0.006 -0.007 -0.007 -0.007 (0.007) (0.007) (0.007) (0.006) (0.006)
+0.006 0.007 0.007 0.005 0.005 (0.004) (0.004) (0.004) (0.004) (0.004)
+0.020 0.043** 0.098** 0.097** 0.093*** (0.012) (0.015) (0.032) (0.030) (0.027)
+·
+125
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+
+
+续表3
+模型1 模型2 模型3 模型4 模型5
+F
+R2
+N
+468.34*** 346.90*** 321.10*** - 
+0.665 0.668 0.669 - 
+4011 4011 4011 4648 5231
+注:括号中的数 字 是 调 整 了 社 区 层 次 聚 集 效 应 后 的 稳 健 标 准 误 ; 数 据 经 过 加 权 处 理 。p<0.1,*p<
+0.05,** p<0.01,*** p<0.001 (双 尾 检 验)。
+既然 “认可的不平等” 与 “感知的不平 等” 存 在 高 度 相 依 性, 最 好 是 在 控 制 了
+这种相依性后研究各个自变量的影响。模型1在此基础上加入其他控制变量,包括
+月收入及其平方项、职业地位、党员、城镇户口和性别,它构成基准模型。模型2
+继续加入三个个体层次上的关键自变量:受教育年限、年龄和国有部门。模型3继
+续加入地区层次上的关键 自 变 量———实 际 的 不 平 等。在 所 有 3 个 模 型 中,收 入 变 量
+都始终存在一个正向的非线性效应,即随着收入的增加,认可的不平等程度也会相
+应上升,但当收入到达某个值之后,这种正向效应会逆转。职业地位变量在模型2
+和模型3中也均有显著的正向效应。总体上,这两个变量的正向效应意味着社会经
+济地位较高的人认可更多的不平等,这可以被视为支持利己主义理论的一个证据。
+在表1右栏的描述性统计分析中,教育似乎也表现出了这种利己主义效应:教
+育程度越高的人,认可的不平等程度也越高。但是,由于教育程度更高的人所感知
+的不平等程度也更高,所以简单的分析并不能排除认可的不平等程度随感知的不平
+等程度上升而上升这种效应的影响。因此,必须在控制了两个主观不平等维度的相
+依性并排除其他社会经济地位变量 (收 入 和 职 业 地 位) 的 影 响 后 才 能 估 计 出 教 育 对
+不平等态度的净效应。如模型2所示,受教育年限变量对认可的不平等程度的影响
+方向为负。虽然该回归系数并没有通过统计检验,但负的回归系数仍然显示,在其他
+条件都相同的情况下,如果教育程度较低的人和教育程度较高的人所感知到的不平等
+程度也相同,则后者会赞同更少的不平等。当模型3同时纳入了感知的和实际的不平
+等以对认可的不平等进行估计时,我们发现,教育程度较高的人与教育程度较低的人
+相比确实赞同更少的不平等 (p<0.05)。因此,这一发现支持了假设1b而非假设1a。
+需要注意的是,教育的启蒙效应只有在同时考虑到社会的实际不平等状况和个体对不
+平等的感知后才能够通过统计显著性检验。如果教育程度较高的人对不平等的态度超
+越了狭隘的一己私利,那么必然要考虑到他们对社会实际的不平等状况的了解。
+假设2a和2b也得到了数据 的 支 持。模 型 2 和 模 型 3 显 示,国 有 部 门 的 受 访 者
+所认可的不平等程度比市场部门要低 (p<0.01)。 这 可 以 解 释 为 与 新 中 国 前 三 十 年
+间实行的社会主义平均分配的制度遗产有关。世代和认可的不平等程度之间的相关
+模式也符合价值观影响假设的预期,年龄较大的人认可较少的不平等 (在模型2中,
+p<0.05; 在 模 型3 中 ,p<0.01)。 换 言 之 , 受 平 均 主 义 价 值 观 的 影 响 时 间 越 长 , 认
+可的不平等程度就越低。
+·
+126
+·
+中国社会科学 2012年第3期
+
+
+模型3还显示,在地区层次上测量的实际的不平等状况与在个体层次上测量的
+认可的不平等程度之间确实存在负相关 (p<0.5),这就支持了假设 3,即社会实际
+的不平等程度越大,人们对不平等的认可程度越低。更重要的是,实际的不平等程
+度和感知的不平等程度对认可的不平等程度的作用同时存在且作用方向相反。尽管
+人们对不平等的态度在很大程度上取决于他们对不平等的感知,但过多的不平等仍
+然会激发公众的不满。这说明,以往研究中 所 隐 含 的 “实 际 的 不 平 等 越 多, 感 知 的
+也越多,认可的也就越多”的说法未必成立。
+由于数据缺失的问题,我们使用多重填补法,对模型3进行重新估计。模型4
+和模型5表明,对全部样本的分析结果与对有效样本的分析结果基本相同。因此,
+本文的经验分析和实质结论是相当稳健的。
+既然认可的不平等与感知的不 平 等 是 高 度 相 关 的 (见 图 1), 或 许 有 人 会 提 出,
+人们在对不平等的感知上所具有的系统性差异更重要;换言之,表3所揭示的关于
+公平分配的态度差异模式,可能只是人们感知差异模式的一个自然结果。为了检验
+这种观点是否成立,我们可将感知的不平等作为因变量来作类似的回归分析,但是
+发现,人们对不平等的感知并不像他们对不平等的态度那样可以由重要的个体人口
+与社会经济特征来作系统性的解释,即便可以解释,两者的决定模式也存在着明显
+差异。因此,公众对于不平等的态度模式是一种具有实质意义的独立存在。
+六、总结与讨论
+中国社会迅速扩大的收入不平等近年已引起广泛关注和争论。尽管许多研究分
+析了不平等的发展趋势及其背后的社会经济原因,但探讨人们对于不平等的主观感
+知 和 评 价 的 实 证 研 究 仍 然 很 少 。 本 文 对 2005 年 中 国 社 会 综 合 调 查 城 镇 居 民 的 分 析 正
+是这样一种尝试,因为该数据的独特优 势 是 采 用 了 与 国 际 社 会 调 查 项 目 (ISSP) 同
+样的方法来测量个人对收入不平等的态度。在批判性地回顾了已有的实证研究文献
+后,我们试图回答在理论层面上相当重要但在经验层面上尚未解决的三个问题。
+对不平等态度的最简单直观的解释是利己主义理论,该理论认为社会分层体系
+中占据优势地位的群体会对不平等持更为宽容的态度。正如在其他工业化国家所发
+现的一样,该理论确实可以用来大致概括中国城镇居民对收入不平等的态度分歧。
+但是,本文更重要的发现是,教育对不平等态度的影响具有利己主义和启蒙主义的
+双重性质。过去的研究之所以没有揭示出教育对不平等态度的双重作用,是因为它
+们没有考虑感知在态度形成过程中所起的调节作用;而且,个人生活于其中的具体
+社会环境特征是使教育表现出启蒙效应的关键因素。因此,要理解教育在不平等的
+合法化过程中所起的作用,就要充分认识到个人对不平等的感知以及社会实际的不
+平等状况在这一过程中的中介角色。
+·
+127
+·
+收入不平等与公平分配:对转型时期中国城镇居民公平观的一项实证分析
+
+
+人们对收入不平等的态度不仅取决于他们的自我利益,也受相关价值观的影响和
+塑造。部门与世代两个变量被用来测量是否受到平均主义价值观的影响。结果表明,
+老一代人和国有部门就业人员赞同较少程度的不平等,这与其深受平均主义分配政策
+的影响有关。当然,本文并没有考虑部门间的流动情况,所分析的截面数据也无法严
+格区分年龄、时期和世代的各自效应。这些局限性期待将来的研究能够加以解决。
+至于宏观社会变迁对个体态度的影响,适应理论认为人们会慢慢习惯和认可不平
+等程度的上升。对中欧和东欧转型国家的研究发现,公众对不平等的容忍程度随着时
+间的推移而上升,似乎支持了适应理论。但这种论断的经验证据并不充分。在将地区
+不平等程度这一变量明确纳入分析模型后,我们发现,尽管人们认可的不平等程度与
+他们感知的不平等程度呈正相关,但它却与社会实际的不平等程度呈负相关。
+关于中国不平等问题的日趋严重可能会威胁到政治和社会稳定的观点,近来受
+到一些研究者质疑。怀默霆发现,中国民众将当前的不平等更多地归因为个人绩效
+因素而非外部因素 (如机会不平等);与其他国家相比,中国民众对不平等的态度更
+加 正 面 和 积 极 ; 中 国 最 弱 势 的 群 体 ——— 农 民 ——— 反 而 更 倾 向 于 接 受 当 前 的 不 平 等 。1
+谢宇认为,中国的不平等在很大程度上是通过集体的中介性因素体现出来的,因而
+不平等程度在日常生活中得以淡 化; 中 国 的 传 统 文 化 实 际 上 是 接 受 不 平 等 的 (虽 然
+这 是 有 条 件 的 ), 因 而 许 多 中 国 民 众 目 前 还 是 能 够 容 忍 不 平 等 现 状 的 ; 目 前 很 多 中 国
+人认为不平等是经济发展的一种不可避免的后果,所以一些对不平等不满的人也能
+被动和勉强地接受现在的不平等。因此,社会 不 平 等 问 题 本 身 “在 当 今 中 国 不 太 可
+能 造 成 政 治 和 社 会 的 不 稳 定 ”。2
+不平等与社会不稳定之间要发生联系还涉及一个重要的环节,即民众如何感知
+和评价客观的不平等状况。本文的研究结果表明,不平等问题仍然是中国政府亟待
+重视并需要重点解决的问题。一方面,人们对当前的收入分配状况具有某种社会共
+识:提高低薪酬职业的收入,同时降低高薪酬职业的收入,最终缩小收入差距或不
+平等;另一方面,实际的不平等与认可的不平等之间具有显著的负相关,即不平等
+程度的上升确实会引起人们的不满。因此,政府应顺应民意,采取各种有效措施将
+不平等降到人们可以接受的范围之内。当然,一个社会内部不同的群体之间在认可
+的不平等程度方面是存有差异的。社会群体之间在不平等态度上的分化模式,既构
+成 “整体性不平等不一定会 导 致 整 体 性 不 稳 定” 观 点 的 另 外 一 个 重 要 诠 释, 也 对 维
+护社会稳定的一系列政策设计及其执行具有参考意义。
+〔责任编辑:刘亚秋 责任编审:冯小双〕
+·
+128
+·
+中国社会科学 2012年第3期
+1
+2
+怀 默 霆 : 《中 国 民 众 如 何 看 待 当 前 的 社 会 不 平 等 》, 《社 会 学 研 究 》2009 年 第 1 期 。
+谢 宇 : 《认 识 中 国 的 不 平 等 》, 《社 会 》2010 年 第 3 期 。
+
+
+emissions.Aonepercentagepointdecreaseinenergyintensitywillcauseanaverage reductionof33 Mtin carbon emissions.Ourcoal-dominatedenergystructure has resultedinacontinuinghighlevelofcarbonemissionintensity.Changesinenergystructure havenothadasignificanteffectoncarbonemissions.Nevertheless,decreaseddensityof overallcarbonemissionsisapositivesignal,indicatingthatChinasenergystructureis optimizing.Consequently,only through industrial structure adjustment and energy structure optimization, application of energy-saving technologies, and new industrialization,willlow-carbondevelopmentbetrulyrealizedinChina.
+(5)LegalReshapingofCarbonFinance TuYongqian·95·
+Carbonfinanceisaninnovativefinancialmodelfor meetingthechallengeofglobal climatechange.Theemergenceofcarbonfinanceanditsinternationallegalframework representsasuccessforlegalcivilizationaswellasbeinganoutcomeofmankindsselfpreservationinthefaceofenvironmentaldestruction.Theemergenceanddevelopmentof carbonfinancehasalwaysproceededwithinalegalframework.Existinglegalframeworks atthelevelofinternationallaw determinethecomplex processofdevelopingcarbon finance:theabsence ofa mandatory safeguards mechanism and an effective dispute settlementmechanismaswellasmarketimperfectionshaverestrictedthedevelopmentof carbonfinanceandindirectlyimpededtheimprovementofthehumanlivingenvironment. Whatiscrucialtocarbonfinancedevelopmentattheinternationallevelisthereshapingof internationalconventionsrelatingtocarbonfinance,theestablishmentofaninternational carbonfinanceorganization withexecutivepower,andtheimprovementofthecarbon finance market. The development of Chinas carbon finance has shown initial standardization;whatisneededfromnowonistofurtheradvanceandperfectinstitutionbuildingandresourceallocationinthecarbon market,sothatChinacanattaindiscourse powercorrespondingtoitsstatusintheinternationalcarbonfinancemarket.
+(6)IncomeInequality and DistributiveJustice:An Empirical Analysisof Urban ResidentsViewofEquityinTransitionalChina
+LiJunandWuXiaogang·114·
+Basedonanalysisofnationalrepresentativedatafrom urbanChinain2005,we show thateducation enlightens peopleto go beyondtheir narrow self-interests, makingthem morecriticalofinequality.Duetotheinfluenceofegalitarianideology, workersinthestatesectortendtohaverelativelylowleveloftoleranceofinequality thantheircounterpartsinthe privatesectorand old peopletendto acceptless inequalitythanyoungpeople.Thegreatertheactualincomegapisinaregion,the lesstolerantofinequality peopleare.Ourfindingssuggestnotonlythegeneral consensusaboutreducingtheincomeinequalitybutalsothedifferentialpatternin legitimateinequality,therebycontributingtoabetterunderstandingofhowordinary peoplefeelaboutandassesstherisingincomeinequalityincontemporaryChina.
+(7)TheAestheticConnotationandArtisticSpiritofShenyun"Usedby WangYuyang JiangYin·129·
+Havingclarifiedthesourceofshenyun" (romanticcharm )andtheprocessby
+·
+207
+·
+ABSTRACTS

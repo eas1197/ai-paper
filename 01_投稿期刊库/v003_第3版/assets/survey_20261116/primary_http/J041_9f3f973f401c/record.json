@@ -1,0 +1,18 @@
+{
+  "journal_id": "J041",
+  "source_url": "https://gdsz.cbpt.cnki.net/EditorH2N/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:03:59.440389+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://gdsz.cbpt.cnki.net/EditorH2N/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J041_9f3f973f401c/text.txt",
+  "sha256": "976928de49bf92b378119fd3e7d156549b323ea80b79d383d46b48008ec9d286",
+  "original_path": "primary_http/J041_9f3f973f401c/response.html",
+  "original_sha256": "3b3fd0c72047e20cf4479d92d47a2f4b5959ad140931b9337c1c4c63afbc7424",
+  "line_count": 65,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

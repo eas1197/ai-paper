@@ -1,0 +1,3484 @@
+[
+  {
+    "paper_id": "zotero_23JT2TLW",
+    "question": "平台的流量和交易技术进入义乌后，经营者怎样把原有地方市场组织成新型平台地方市场？",
+    "significance": "问平台嵌入如何改写地方空间和市场组织；线上扩张与实体集群持续并存，不能用简单替代论解释。",
+    "answer": "访谈与街区观察展示地方经营者从货找人实践到流散和空间再组织，形成开放流空间。",
+    "lesson": "看技术进入已有市场后，谁改变了生产要素和流通空间的组合。",
+    "locator": "PDF 1–3、12、17–19",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "平台地方市场何以形成?——基于义乌市场转型的调查",
+    "authors": [
+      "熊万胜",
+      "严子泳"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_26R32WLR",
+    "question": "社会转型引发的群体性心理变化如何形成，社会心态研究如何跨越个人和社会两个层级？",
+    "significance": "将阶层、需求和社会变化接入心理研究，为理解改革期间的公众态度提供概念框架。",
+    "answer": "梳理社会学的社会心理学和中国转型研究，提出社会心态研究的方向；综合讨论而非单一检验。",
+    "lesson": "避免用个人态度平均值直接代表社会结构，先说明两层之间怎样桥接。",
+    "locator": "PDF 2–3、8、16",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "社会心态：转型社会的社会心理研究",
+    "authors": [
+      "王俊秀"
+    ],
+    "journal": "社会学研究",
+    "year": "2014",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2014.01.007"
+  },
+  {
+    "paper_id": "zotero_2DIIQY3U",
+    "question": "地方政府转发中央涉农政策时，为什么增加、改写或细化的程度不同？采纳速度和内容变化有何关系？",
+    "significance": "光看发文早晚辨不出实质执行。政策扩散研究应分别测量传达节奏和文本重构，便于理解执行能力和选择。",
+    "answer": "用词向量和文本距离量化涉农文件再生产，比较地方能力、动力和外部压力；文本变化仍不是实际落实。",
+    "lesson": "对行政动作拆出速度、内容和行为结果，先明确目前数据能贯通哪两步。",
+    "locator": "PDF 1–3、6、9、13–20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "政策内容再生产的影响机制——基于涉农政策文本的研究",
+    "authors": [
+      "刘河庆",
+      "梁玉成"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_2I3PSEZJ",
+    "question": "在城市公立学校学生中，公共教育资源与课外学业补习怎样共同关联认知能力？",
+    "significance": "教育公平取决于公共资源与家庭购买资源如何配合。只问补习的平均回报会漏掉学校质量和学生表现条件。",
+    "answer": "区分学校资源、补习和学习表现并比较交互；样本限城市户籍、公立学校，观察性关系。",
+    "lesson": "把竞争性资源配置制度放进同一设计，比较各自和组合的收益。",
+    "locator": "PDF 1–3、4–6",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "市场化教育与公共教育对教育不平等的作用机制",
+    "authors": [
+      "侯慧丽"
+    ],
+    "journal": "中国青年研究",
+    "year": "2020",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2020.0186"
+  },
+  {
+    "paper_id": "zotero_2PZNHN43",
+    "question": "不同人工智能媒介在什么情境相对偏冷或偏热？",
+    "significance": "信息清晰度与用户参与度可以在同一技术应用里变化。重考媒介概念的比较维度有利于理解AI为何形成不同的人机互动。",
+    "answer": "用参与和信息完满两个维度比较多种AI场景，突出AI的异质性。论证以概念辨析和示例为主。",
+    "lesson": "把‘AI是什么’缩小为具体功能、任务条件和相对位置。",
+    "locator": "PDF 1–5",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "冷媒介，还是热媒介——人工智能媒介属性的麦克卢汉之问",
+    "authors": [
+      "曾军"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_2QAIVCT4",
+    "question": "同一公共事件如何在相互引用、重述和转发中形成网络叙事？",
+    "significance": "网络叙事影响群体态度和情绪，单篇文本难以解释意义怎样沿传播链变化。",
+    "answer": "以事件关联体、文本集合和具体文本搭建互文模型，讨论多向意义建构。",
+    "lesson": "为一个事件划定文本集合和传播时窗，追踪语境变化。",
+    "locator": "PDF 1及互文机制各节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "网络叙事的生成机制及其群体传播的互文性",
+    "authors": [
+      "隋岩",
+      "唐忠敏"
+    ],
+    "journal": "中国社会科学",
+    "year": "2020",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_37JITBXH",
+    "question": "非遗政策名录和开发保护为什么可能引来与保护相背的机会主义？",
+    "significance": "制度给项目身份与资源的同时也改造了利益结构。对实际传承人及地方研究，需评估项目纳入之后是否支持活态延续。",
+    "answer": "根据多个佛山非遗项目传承人访谈及行业反思，讨论保护话语、中介和开发激励；文章未做普遍绩效估计。",
+    "lesson": "把政策达标和政策实际目标分开，追问激励改变后谁进入、谁获益。",
+    "locator": "PDF 2–5",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "非物质文化遗产保护中的机会主义批判",
+    "authors": [
+      "谢中元"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2014",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_3KUGZQ2E",
+    "question": "即时连接、可记录的互动与参与行动的算法，如何从个体连接重塑社会结构？",
+    "significance": "经典连接与差序理论进入可持久记录且受平台介入的环境，‘联系更多’与‘关系如何形成’需要分开解释。",
+    "answer": "回顾分隔实验、差序格局和数字记录等案例，提出同时调整对象、测量和分析框架。以理论综合为主。",
+    "lesson": "比较旧条件和新条件下的同一关系机制，明确哪一条理论前提失效。",
+    "locator": "PDF 1、4、7–10",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字时代的社会连接：从个体到社会结构",
+    "authors": [
+      "王天夫",
+      "孙百承"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_3NP7TJAC",
+    "question": "乡土社会中的克制与冲突何以并存，‘气’怎样组织礼遇、尊严、报复与行动？",
+    "significance": "回应无讼、礼治等把和平表征理解过于单一的看法。乡土冲突也可能有本土社会规则。",
+    "answer": "通过谚语和戏曲归纳克制、立场和反应；文化材料给出意义结构，不能测量冲突发生率。",
+    "lesson": "把人人都知道的本土词拆成可辨别的行动条件和后果，再找经验反例。",
+    "locator": "PDF 2、5、8、10–11",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“气”与中国乡土本色的社会行动——一项基于民间谚语与传统戏曲的社会学探索",
+    "authors": [
+      "应星"
+    ],
+    "journal": "社会学研究",
+    "year": "2010",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2010.05.005"
+  },
+  {
+    "paper_id": "zotero_3RPQPNPH",
+    "question": "面向市场的白洋淀塑料加工户怎样核算成本、决定继续或调整经营？",
+    "significance": "解释家庭生产何以在工业化中存在。完全市场化的成本假定会把家人劳动、家庭财产和代际处境的作用漏掉。",
+    "answer": "加工户在不完备的要素市场里动用家庭劳动与财产；成本核算既随要素来源和家庭阶段而变，也受收益如何分配约束。基于村庄田野。",
+    "lesson": "从表面上应当通用的计价规则，追问一种组织在何处采用另一套规则。",
+    "locator": "PDF 1、4、12–14、23、26",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家庭经营的成本核算与经营决策 以白洋淀塑料加工户为例",
+    "authors": [
+      "刘玉照"
+    ],
+    "journal": "社会",
+    "year": "2009",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2009.02.011"
+  },
+  {
+    "paper_id": "zotero_3TRYUA3B",
+    "question": "独居青年遭遇的相对剥夺或支持不足，可能如何表现为线上集群行动？",
+    "significance": "将流行的空巢标签连接到具体情绪和网络动员逻辑，为讨论怎样支持青年和理解线上表达提供路径。",
+    "answer": "综合既有研究和典型现象提出情绪感染、群体认同等机制，尚未追踪独居青年从心态到行动。",
+    "lesson": "先把标签拆成生活处境、心理过程和行为结局，再找可观察转变。",
+    "locator": "PDF 1–4、7–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从“空巢”心态到“集群”行为:“空巢青年”现象透视与网络映射",
+    "authors": [
+      "胡玉宁",
+      "祁彬斌",
+      "朱学芳"
+    ],
+    "journal": "中国青年研究",
+    "year": "2017",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2017.08.005"
+  },
+  {
+    "paper_id": "zotero_43Z2ZUBC",
+    "question": "政府为何引导工商资本进入村庄，土地流转后谁掌握了村庄治理资源？",
+    "significance": "补足只估计经济效果的研究，说明村民在居住、土地和公共治理中的位置可能同时改变。",
+    "answer": "结合土地政策和地方材料，分析政企合作以及公司成为治理基础的机制。",
+    "lesson": "从变化后的资源控制关系反推制度安排，区分投资到场与治理结果。",
+    "locator": "PDF 1–2、6及案例",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“资本下乡”与村庄的再造",
+    "authors": [
+      "焦长权",
+      "周飞舟"
+    ],
+    "journal": "中国社会科学",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_48T7TT3A",
+    "question": "王婆说媒为何成为青年相亲事件，平台流量与线下景区如何共同成形？",
+    "significance": "说明相亲热度、实际配对和持续关系可能是三个不同结果，为婚恋服务提供评价边界。",
+    "answer": "以案例分析串联IP演绎、平台传播、空间塑造及青年参与；热点能否解决持久关系需求仍无直接证据。",
+    "lesson": "围绕具体服务，把注意力、参与和需求满足分成相连的过程。",
+    "locator": "PDF 1–3、7–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“王婆说媒”的文化透视：青年新型相亲实践的流变特征、形成机制与引导路向",
+    "authors": [
+      "王安琪",
+      "俞佳奇"
+    ],
+    "journal": "中国青年研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2024.0140"
+  },
+  {
+    "paper_id": "zotero_4BDWZG7L",
+    "question": "数字革命怎样在中国具体语境中多面展开，技术能力与社会反作用如何同时出现？",
+    "significance": "避免把数字化看成单一路径，媒介与组织实践共同形塑发生的变化。",
+    "answer": "通过媒介史及政治传播例子讨论技术多变性与中国场景，属于解释性议论。",
+    "lesson": "用可对照场景查明哪种后果来自工具能力，哪种依赖使用制度。",
+    "locator": "PDF 1–2、6–8",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“千手观音”:数字革命与中国场景",
+    "authors": [
+      "黄旦"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_4FHCYF52",
+    "question": "工作、消费和交往领域如何分别规范情感及表达，当代情感困境怎样产生？",
+    "significance": "为看似个人的感受找出可观察规范和社会后果，允许同一人跨场域采取不同表达。",
+    "answer": "概念分析归纳工作整饰、消费体验和交往表演，辨析三者张力与共性。",
+    "lesson": "同类行为若跨场域意义不同，分别记录各场域的表达规则。",
+    "locator": "PDF 1、5、10及分领域讨论",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "当代情感体制的社会学探析",
+    "authors": [
+      "成伯清"
+    ],
+    "journal": "中国社会科学",
+    "year": "2017",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_4INKL4GG",
+    "question": "社会保险为何长期由不同机构分头征缴，征缴主体变化怎样关联覆盖与基金收入？",
+    "significance": "征缴权牵涉人事和资金配置，机构改革需同时考虑部门为何争取权力及不同安排的实际结果。",
+    "answer": "1999–2008省级面板和过程材料比较税务及经办机构征缴；范围是历史制度。",
+    "lesson": "把部门为什么有动力和改由谁执行后结果如何分成两问。",
+    "locator": "PDF 1–2、17",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008)",
+    "authors": [
+      "刘军强"
+    ],
+    "journal": "中国社会科学",
+    "year": "2011",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_4KQ9RE2Q",
+    "question": "市场违规如何改变投资者在概率不明情境下判断和交易，对其他公司有无溢出？",
+    "significance": "针对单家公司问责若不能修复全市场信任，政策评价需考虑风险是否外溢。",
+    "answer": "理论和实验组比较市场伦理环境、模糊态度和交易选择，现场外推有边界。",
+    "lesson": "区别个别行为后果与共享信息环境的后果，设计溢出比较。",
+    "locator": "PDF 1、10、15及结果",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "股票市场伦理环境与投资者模糊决策——理论与实验研究",
+    "authors": [
+      "王擎",
+      "周伟"
+    ],
+    "journal": "中国社会科学",
+    "year": "2013",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_4M8XA5I3",
+    "question": "城镇居民认为什么程度的收入差距可接受，教育、部门经验和实际不平等怎样关联认可？",
+    "significance": "区分实际差距与公平判断，能解释公众对再分配的需要为何不同。",
+    "answer": "2005城镇调查发现认可尺度随教育、国有部门、年龄和地区不平等而变。",
+    "lesson": "把笼统公平满意度改成可接受分配范围，再对照实际情境。",
+    "locator": "PDF 1、3、15",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析",
+    "authors": [
+      "李骏",
+      "吴晓刚"
+    ],
+    "journal": "中国社会科学",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_53JZV2H6",
+    "question": "青年伴侣沟通时发生负面情绪的原因是什么，情绪如何改变冲突表达和调节？",
+    "significance": "识别干预环节，伴侣沟通辅导可以分别应对预期落差、环境冲突和调节策略。",
+    "answer": "深度访谈呈现情绪触发和后续协商路径；滚雪球样本适于框架建构。",
+    "lesson": "从整体满意度推进到冲突发生、表达、调节的顺序。",
+    "locator": "PDF 1–3、4–5、7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "情绪冲突视角下青年亲密关系沟通模式探究",
+    "authors": [
+      "赵云泽",
+      "陈科宇"
+    ],
+    "journal": "中国青年研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2024.0035"
+  },
+  {
+    "paper_id": "zotero_56PU3EGL",
+    "question": "相信自己的行动更能改变机会的人是否更容易向上流动，这种关系在农业和非农阶层为何可能不同？",
+    "significance": "区分促进能动性的信念与社会结构实际提供的控制空间，避免用勤奋话语解释全部流动。",
+    "answer": "比较农民与非农人群建模，提出可控性感知是可能解释；机会信念的测量依赖社会环境。",
+    "lesson": "给同一个态度变量指定实际可行的行动资源，再选边界群体。",
+    "locator": "PDF 1–4、10–14、23–25",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“事在人为”与“成事在天”——中国社会的机会信念与代内流动",
+    "authors": [
+      "干一卿",
+      "王鹏"
+    ],
+    "journal": "社会学研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5CPV2KF3",
+    "question": "数字基础条件不占优势的乡村何以兑现电商红利，并带动地方产业？",
+    "significance": "解释技术接入为何不同于兑现收益；推广项目可以针对当地产业与经营者掌握的信息和协作条件。",
+    "answer": "菏泽多地田野与理论模型分析差异性需求、信息和本地生产组织的作用，推论有情境条件。",
+    "lesson": "选反直觉成功案例时写清原本不具备的条件，追查中间哪些资源补上它。",
+    "locator": "PDF 1–4、7、17、19–21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "乡村电商何以成功?——技术红利兑现机制的社会学分析",
+    "authors": [
+      "张樹沁",
+      "邱泽奇"
+    ],
+    "journal": "社会学研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5FJC5SEJ",
+    "question": "城市改造时怎样让历史文脉延续，并让市民保有共同记忆和认同？",
+    "significance": "历史街区保护牵涉居民生活和文化权利。商业化、景观仿造和原地有机更新需要以不同标准评价。",
+    "answer": "以多座城市空间改造为例提出比较和价值判断；短论提供研究动机，未检验更新策略效果。",
+    "lesson": "把保护拆成实体保存、活态使用、居民认同三个可能不同步的结果。",
+    "locator": "PDF 1–2",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "城市空间中历史文脉传承与信仰重建",
+    "authors": [
+      "阎江"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2013",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5J7MIA9Z",
+    "question": "中国社会政策二十多年的支出和制度变化，体现出怎样的发展与福祉关系？",
+    "significance": "从福利模式类型转向政策组合及演变，区分保障、投资、积极就业和劳动规制的功能。",
+    "answer": "2003年以来支出和文件分析四类社会政策，提出以发展谋福祉的解释。",
+    "lesson": "政策比较先拆工具与功能，再看同一理念如何跨工具落实。",
+    "locator": "PDF 1–2、12及政策分类",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "以发展谋福祉：中国特色社会政策理念与实践路径",
+    "authors": [
+      "房莉杰",
+      "潘桐"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5PFF3ZR8",
+    "question": "在怨恨郁积之后何以出现佛系人格，为什么低冲突表象仍引发社会紧张？",
+    "significance": "区分针对他人的否定与参与意愿的淡化，才能解释看似温和的青年心态为何也触发忧虑。",
+    "answer": "用符号现象学重议怨恨和派生情绪，再对照佛系人格的情感结构及其社会解释；理论论证为主。",
+    "lesson": "多个情绪标签放到相同情境，问它们由什么触发、带来什么不同后果。",
+    "locator": "PDF 1–3、6–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“怨恨”的符号现象学与“佛系人格”的情感淡化",
+    "authors": [
+      "谭光辉"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5SKXGHQM",
+    "question": "为什么电商变革由曹县这座村庄的半边缘或边缘农户首先启动，并经他们扩散？",
+    "significance": "检验边缘革命的机制含义。村干部与能人优先的推广预设可能漏掉更愿试错的技术发起者。",
+    "answer": "访谈、家户网络和模拟把先进入的行动门槛和后续扩散分开。边缘农户的结构位置使它们成为特定条件下的发起者。",
+    "lesson": "把意外发起者和技术扩散的反馈分开，追问每一步需要什么位置和条件。",
+    "locator": "PDF 4、7、22、26–30",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "边缘农户触发的电商村形成",
+    "authors": [
+      "乔天宇1邱泽奇2",
+      "1"
+    ],
+    "journal": "社会",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2026.02.009"
+  },
+  {
+    "paper_id": "zotero_5T2D75XY",
+    "question": "脱贫攻坚向乡村振兴转变时，国家动员怎样与农户内生动力共同形成家国关系？",
+    "significance": "政策既要有支持能力也要保有农户主体性；国家与社会二分不足以刻画入户帮扶与家庭实践。",
+    "answer": "借扶贫与帮扶案例讨论国家深入家庭与家主体性的相互生成，提出家国一体解释。",
+    "lesson": "比较政策主体与实际行事的人，观察支持在哪一步强化或替代其行动。",
+    "locator": "PDF 1、4–7、16–20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从脱贫攻坚到乡村振兴：迈向“家国一体”的国家与农民关系",
+    "authors": [
+      "周飞舟"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_5TQ3EADW",
+    "question": "以不同点击组合进入同一信息平台，算法会怎样改变不同用户接收到的信息及其差异？",
+    "significance": "以可比较输出辨认平台规制和兴趣迎合，区分推荐内容分化与完全封闭的信息茧房。",
+    "answer": "平台账户实验持续追踪主题和语义推送；偏好产生分化，同时仍有非偏好信息，结论受单平台与粗分类限制。",
+    "lesson": "同一规则只改动输入行为，再持续观察不同用户的实际机会。",
+    "locator": "PDF 1–3、6、14、19–21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "透视算法黑箱：数字平台的算法规制与信息推送异质性",
+    "authors": [
+      "刘河庆",
+      "梁玉成"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_653YZ3MB",
+    "question": "行动者行为产生社会结构，结构又反过来改变行为，如何用智能体模型搭出并检验这种对应？",
+    "significance": "跨越微观行动与宏观结果的解释断点，使相同结果背后的多种过程可以模拟对照。",
+    "answer": "用建模步骤和应用案例展示规则设定、情境及涌现结果；模型反事实取决于假设和校准。",
+    "lesson": "把‘结构影响行动’改写成可编码的规则及可用于排除机制的反事实。",
+    "locator": "PDF 2、4–7、14、18–21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "智能体仿真模拟：推进行动与结构互构研究",
+    "authors": [
+      "吕鹏"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_68HLELIY",
+    "question": "初中学校的阶层构成有多分割，学校平均地位和异质性对谁的教育期望关联更强？",
+    "significance": "择校和资源集中影响的不只是入学机会，还涉及弱势学生的未来期望。",
+    "answer": "CEPS基线区分地区、学校和学生层，发现社会经济地位和构成异质性与期望有异质关联。",
+    "lesson": "将准入和入学后同伴环境拆开考察。",
+    "locator": "PDF 1、3、22",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "基础教育中的学校阶层分割与学生教育期望",
+    "authors": [
+      "吴愈晓",
+      "黄超"
+    ],
+    "journal": "中国社会科学",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_6LS4H3BB",
+    "question": "网络社群为何圈地自萌，圈内认同怎样和全社会共识困难同时出现？",
+    "significance": "圈层边界既给予成员安全和趣味互动，也可能减少跨群商议机会。治理应明确干预的是哪种失灵。",
+    "answer": "用数据库消费视角分析圈层聚集和圈内反馈闭环，提出共识治理线索；未独立检验普遍机制。",
+    "lesson": "同一过程既有微观收益也有宏观代价时，要把两个层级都列为结果。",
+    "locator": "PDF 1–4、7–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "网络文化中的“圈地自萌”现象与治理难题",
+    "authors": [
+      "赵菁"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_6SWMSBKF",
+    "question": "上海西郊农民画记录了城市化过程中什么样的伦理记忆，非遗保护应保存什么？",
+    "significance": "传承价值涉及共同生活和地方认同，可以把保护评价从保存作品扩展到作品承载的历史关系。",
+    "answer": "以农民画选材、风格与代际解释为材料阐明地方记忆，属于解释性例证。",
+    "lesson": "问物质对象承载什么实践与关系，有哪些证据可独立检验。",
+    "locator": "PDF 1–3、5–6",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "非遗保护的伦理性记忆价值——以作为城镇化记忆样本的上海西郊农民画为例",
+    "authors": [
+      "李明洁"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2017",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_6Z5UHQQG",
+    "question": "教养方式差异是否进一步因同一种教养对城乡和阶层学生效用不同而扩大教育不平等？",
+    "significance": "区分教养类型的分布差异与收益差异，决定重点是扩大有利资源可及性还是理解条件差异。",
+    "answer": "两期CEPS比较不同教养的分布、学业、心理与行为结果，将家庭地位和城乡放进匹配的比较；样本是受访学生。",
+    "lesson": "让异质性直接检验一个可反驳的累积优势命题。",
+    "locator": "PDF 1–3、4–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "养育差异还是养育陷阱？——家庭教养方式对学生发展的异质性影响研究",
+    "authors": [
+      "李佳丽",
+      "赵楷",
+      "梁会青"
+    ],
+    "journal": "中国青年研究",
+    "year": "2020",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2020.0135"
+  },
+  {
+    "paper_id": "zotero_749F2ETX",
+    "question": "弹性生产网络和平台经济里，资本为何能按需求不断调配劳动，灵活用工如何改变组织职能？",
+    "significance": "将成本效率的解释拓展到控制劳动供给与市场风险的安排，提示第三方用工改变权利与责任的分配位置。",
+    "answer": "理论分析通过生产模块化、分包和劳动力外包比较弹性积累的组织机制；具体部门差异仍待田野。",
+    "lesson": "在用工‘灵活’背后具体问哪一方掌握调配权，保障和风险归谁。",
+    "locator": "PDF 2–4、9、17–20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "灵活用工与资本劳动力经营职能的发展——基于弹性积累体制的分析",
+    "authors": [
+      "汪建华"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_7YMEBL52",
+    "question": "为何几位前景较好的年轻白领女性在婚姻早期主动提出离婚？",
+    "significance": "从最预期稳定的关系中观察职业发展、两性角色与亲密关系的张力。个案作为反常线索可以提醒后续研究寻找真实比较组。",
+    "answer": "文章以作者接触的个案提出疑问和解释线索。材料不足以估计白领女性离婚率，也不能判断职业地位的净作用。",
+    "lesson": "把对少数生活案例的惊讶变成限定对象和有对照的经验问题。",
+    "locator": "PDF 1–2",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "失衡的爱巢——白领丽人离婚现象",
+    "authors": [
+      "唐和平"
+    ],
+    "journal": "社会",
+    "year": "2000",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2000.09.014"
+  },
+  {
+    "paper_id": "zotero_84YD2G38",
+    "question": "产业化、非物质经济和信息技术如何改变资本与文化生产的相互作用？",
+    "significance": "识别资本帮助文化传播同时改变人文生产标准的具体机制，可区分产业支持和公共文化目标。",
+    "answer": "理论分析梳理资本介入的双面价值与精神生产的条件。",
+    "lesson": "分开融资、生产、传播及评价环节，定位哪一环节发生冲突。",
+    "locator": "PDF 1、12及结论",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "资本介入文化生产的耦合效应",
+    "authors": [
+      "胡潇"
+    ],
+    "journal": "中国社会科学",
+    "year": "2015",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_88RC49EA",
+    "question": "家庭社会经济地位通过哪些机会和家庭参与过程影响儿童成绩，阶段与城乡不同在哪里？",
+    "significance": "将最终教育获得推回到学业差距形成时，帮助判断家庭支持和学校机会应从何处介入。",
+    "answer": "CFPS2010基线和结构模型比较家庭背景到教育机会与学业的路径，保留城乡与年龄段差异；横截面路径非因果。",
+    "lesson": "选择问题发生的阶段，不把累积结局直接当成机制。",
+    "locator": "PDF 1–6、8、14、18–23",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家庭背景如何影响儿童学业成就?——义务教育阶段家庭社会经济地位影响差异分析",
+    "authors": [
+      "李忠路",
+      "邱泽奇"
+    ],
+    "journal": "社会学研究",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2016.04.006"
+  },
+  {
+    "paper_id": "zotero_8SIYY9SN",
+    "question": "为什么马克思主义与中华优秀传统文化相结合会成为理解中国文化主体性重建的途径？",
+    "significance": "从思想史回应长期古今中西争论，说明文化主体性具体如何形成，而非把它当既定属性。",
+    "answer": "通过历史和思想文本阐释文化结合与重建过程，属于理论解释。",
+    "lesson": "用具体思想史争论界定概念，再问理论路径怎样回应它。",
+    "locator": "PDF 1–2及思想史论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“第二个结合”与文化主体性重建",
+    "authors": [
+      "李文堂"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_9AFZNVZ4",
+    "question": "改革早期的竞争性嫉妒怎样可能转为阶层固化背景下的泛化怨恨？",
+    "significance": "比较情绪指向、行动可能和受伤害处境，能将社会怨恨从道德评价转向流动机会与结构约束。",
+    "answer": "文献与现实观察讨论嫉妒、怨恨和伤害的关系，未建立跨时期人口测量。",
+    "lesson": "区分情绪对象和释放渠道，再问何种资源与流动条件推动转变。",
+    "locator": "PDF 1–4",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从嫉妒到怨恨——论中国社会情绪氛围的一个侧面",
+    "authors": [
+      "成伯清"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2009",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_9QPV8F52",
+    "question": "数字社会学是一个分支还是社会学整体转型，现有中西研究有哪些议题与路径？",
+    "significance": "数字事实、数字研究方法与数字基础设施正在同时变化，明确讨论的是对象还是方法才能具备可比性。",
+    "answer": "述评梳理六个研究领域及中西比较，提出后续方向；引用的各研究保留原样本边界。",
+    "lesson": "当学科新名词被泛用时先拆对象、研究问题、数据与方法，再看哪一维确有新增。",
+    "locator": "PDF 1–3、7–13、16",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字社会学：国际视野下的源起、发展与展望",
+    "authors": [
+      "赵一璋",
+      "王明玉"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_9QYVECHA",
+    "question": "中国生育率为何后来下降更快，发展与政策干预在不同阶段各有什么作用？",
+    "significance": "有助区别低生育的形成机制和应对措施，防止把历史某阶段的原因套到当前。",
+    "answer": "跨国地区和历史对照认为发展与政策共同作用，并注意终身子女数与规定目标的差异。",
+    "lesson": "用共同条件下的时点与速度差异检验解释，再写清特殊阶段。",
+    "locator": "PDF 1、15及亚洲比较",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "生育转变的多重推动力：从亚洲看中国",
+    "authors": [
+      "郑真真"
+    ],
+    "journal": "中国社会科学",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_9UA3GFTB",
+    "question": "扩大参保覆盖与提高缴费负担，为什么可能对家庭消费产生相反影响？",
+    "significance": "评估养老筹资不能以覆盖或缴费一项代表全部效果，现金约束与未来收益预期有不同政策含义。",
+    "answer": "用九省市城镇住户及城市缴费变化构造工具变量，分别估计覆盖与边际缴费关联，识别取决于工具假设。",
+    "lesson": "把同一政策的广度和强度拆成会作用于不同环节的处理。",
+    "locator": "PDF 1、24及识别节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国养老保险缴费对消费和储蓄的影响",
+    "authors": [
+      "白重恩",
+      "吴斌珍",
+      "金烨"
+    ],
+    "journal": "中国社会科学",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_A2PM6EIR",
+    "question": "为何同一种外购ERP进入不同制造企业会变成不同系统，并产生不同的组织重组结果？",
+    "significance": "解释企业技术投资失败或适配。单向决定论难以解释供应方与企业怎样协商技术的约束和可修改部分。",
+    "answer": "从制造企业的应用观察与ERP方案追踪技术提供者和使用者怎样双向定制，提出双方均有刚性和弹性。机制来自案例及实践比较。",
+    "lesson": "比较表面相同的工具，先区分技术层级、来源与定制，再观察结果是在双方交涉的哪一步产生。",
+    "locator": "官网PDF 刊页32–34、39–44、47–52、53–54；https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2015-08-24/Issue/fqb40pmm.pdf",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "技术与组织的互构——以信息技术在制造企业的应用为例",
+    "authors": [
+      "邱泽奇"
+    ],
+    "journal": "社会学研究",
+    "year": "2005",
+    "origin": "journal_site_full_text",
+    "doi": "10.19934/j.cnki.shxyj.2005.02.002"
+  },
+  {
+    "paper_id": "zotero_A9W54JR3",
+    "question": "时尚与生活博主怎样把个性魅力变成持续劳动，平台和商业方如何维持控制？",
+    "significance": "解释表面自由的创意劳动何以持续受商业约束，也把平台劳动保障的关注点从直接命令移向数据和行业合作。",
+    "answer": "访谈、生命史和网络民族志发现魅力商品化形成商业圈和层级，参与者持续自我调节。",
+    "lesson": "把没有稳定雇主或明示命令的劳动放到可观察的控制关系中。",
+    "locator": "PDF 1、19、21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字平台文化生产者的魅力劳动与调节型劳动控制——以社交媒体的时尚与生活风格博主为例",
+    "authors": [
+      "申超",
+      "秦扬光"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_ACNFQD3N",
+    "question": "表面类似的网络青年亚文化为何产生不同冲突与传播轨迹？",
+    "significance": "同一治理做法可能把表达诉求、商业传播和群体对立混为一谈；治理需先识别起因和社群异质性。",
+    "answer": "以现象和文献说明宏观压力、亚文化资本、模因和圈层技术共同塑造传播；未检验治理因果效果。",
+    "lesson": "先区分外在表现相似的类型，再比较实际生成路径。",
+    "locator": "PDF 2–5、6–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "网络青年亚文化的社会冲突、传播及治理",
+    "authors": [
+      "平章起",
+      "魏晓冉"
+    ],
+    "journal": "中国青年研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2018.0174"
+  },
+  {
+    "paper_id": "zotero_AE7HBG8H",
+    "question": "为什么异地恋青年有时通过文字更亲密，相聚时却在语言和身体互动上出现落差？",
+    "significance": "具体解释媒介何时跨越距离、何时形成新的沟通约束，对异地伴侣的沟通选择有参考价值。",
+    "answer": "访谈呈现文字表达的亲密性和转入线下互动的摩擦，提炼感性交往特征。",
+    "lesson": "比较同一对行动者切换媒介前后的行为与体验。",
+    "locator": "PDF 1–4、5–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "感性交往：网络时代异地恋青年的网络交往过程的质性研究",
+    "authors": [
+      "张娜",
+      "陈寒寒"
+    ],
+    "journal": "中国青年研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2022.0008"
+  },
+  {
+    "paper_id": "zotero_AIKPILZK",
+    "question": "城市回收业的正规组织与非正规从业者为何从分化转向新的组合？",
+    "significance": "回收治理与谋生机会和市场空间同时相关，只确认合法地位不足以解释市场实际运转。",
+    "answer": "案例发现城市公共利益、社会力量及空间争取共同重组市场边界，治理随市场转化调整。",
+    "lesson": "以市场边界变化为结果，问哪些行动者争夺其定义权。",
+    "locator": "PDF 1–2、21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "形塑市场：城市回收业二元结构的动态转化及治理适配",
+    "authors": [
+      "黄晓星",
+      "滑哲"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_ANJUDU3G",
+    "question": "流动人口若能获得本地户籍待遇，收入差异会怎样变化，对不同人和部门有何不同？",
+    "significance": "户籍分类会影响职业机会，工资均值差可能混入选择；识别实际受限制的人群比报告总差距更可用。",
+    "answer": "CHIP倾向匹配及收入比较发现 组别与市场化条件差异；匹配依赖可观测选择，因果须有限定。",
+    "lesson": "现实分组的收入差距应对照选择机制与待遇可比性。",
+    "locator": "PDF 1–2、14",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "户籍制度改革对流动人口收入的影响研究",
+    "authors": [
+      "魏万青"
+    ],
+    "journal": "社会学研究",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2012.01.007"
+  },
+  {
+    "paper_id": "zotero_AZN57YT6",
+    "question": "情侣如何让有价格的赠礼承载亲密关系，礼物的含义如何随关系发展变化？",
+    "significance": "市场交换与情感关怀可以叠在同一实践。区分从商品取得礼物与伴侣重新赋予意义的过程。",
+    "answer": "伴侣叙事访谈表明礼物可被重新赋义，给礼也含维系自我等动机；样本主要在南京。",
+    "lesson": "选择同时满足两个解释线索的行为，比较参与者如何判断其意义。",
+    "locator": "PDF 1–3、6、8",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "超越商品逻辑：浪漫关系中的礼物实践",
+    "authors": [
+      "邵文君",
+      "张钒"
+    ],
+    "journal": "中国青年研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2024.0024"
+  },
+  {
+    "paper_id": "zotero_B43K3DAB",
+    "question": "职业自动化替代风险越高，劳动者是否越偏好政府承担养老责任？",
+    "significance": "把技术风险连接到福利需求来源，关心的是未来风险预期怎样改变家庭与政府的责任边界。",
+    "answer": "以职业自动化风险匹配养老偏好，分析风险预期及群体差异；态度不是政策行为。",
+    "lesson": "从技术可能损失什么权益出发，测量它是否改变人们对责任承担者的选择。",
+    "locator": "PDF 1–3、17",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响",
+    "authors": [
+      "范梓腾",
+      "宁晶"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_B6WPIYZ9",
+    "question": "法经济学怎样利用理性选择分析法，又怎样因制度、互动和行为证据而修改这一基础？",
+    "significance": "用经验反例约束理论把法律行为简化为单一收益选择，明确模型在何种情境可以解释。",
+    "answer": "综述理论沿革和对理性假设的修正，讨论博弈、制度及行为经济学。",
+    "lesson": "把理论预测和适用范围一起写出，找改变选择的外部条件。",
+    "locator": "PDF 1、9及理论讨论",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "理性选择理论与法经济学的发展",
+    "authors": [
+      "魏建"
+    ],
+    "journal": "中国社会科学",
+    "year": "2002",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_BILI3BW2",
+    "question": "青年怎样在AI情感陪伴中控制自我呈现，并从功能性使用进入或退出关系？",
+    "significance": "比起只给人机情感贴风险标签，观察使用者自己的边界设定和关系劳动可具体定位自我探索与依赖风险。",
+    "answer": "小样本线上招募访谈呈现青年主动设定、修订和使用人机关系的过程；适合提出机制，不能测量普及率。",
+    "lesson": "从使用者处理矛盾的策略起步，比较工具用途转为关系用途的条件。",
+    "locator": "PDF 1–3、5–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "AI情感陪伴中青年自我呈现与关系生成的主体性策略",
+    "authors": [
+      "张燕",
+      "邓蕊",
+      "乐晶"
+    ],
+    "journal": "中国青年研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2026.0106"
+  },
+  {
+    "paper_id": "zotero_BMH6QESB",
+    "question": "传统文化怎样从被表述转为被认同和实践，海外与本地社会化有何不同？",
+    "significance": "传播和内化可能不同步，文化项目可用不同目标解释会说、遵守和自觉践行之间的差异。",
+    "answer": "通过思、言、行与双元认知构造四分类，用濡化与涵化实例说明。",
+    "lesson": "把广泛传播、反思性认同、稳定实践分别测量。",
+    "locator": "PDF 1、14及实例",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "传统文化的社会化及其现实价值",
+    "authors": [
+      "胡安宁"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_C247WRCK",
+    "question": "乡村振兴内生动力在不同改革阶段怎样释放，又在什么制度条件下变弱？",
+    "significance": "在提倡内生发展的同时，明确城乡要素与公共资源支持有哪些具体约束，解释不同历史路径何以出现。",
+    "answer": "回顾承包、乡镇企业、务工和城乡融合等路径，提出内生培育与外部支持并行的制度议题。",
+    "lesson": "把一个政策口号拆成在不同时期有效的机制和触发条件。",
+    "locator": "PDF 1、4及结论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "乡村振兴与中国式现代化：内生动力和路径选择",
+    "authors": [
+      "李培林"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_C39EF39G",
+    "question": "同一家庭同时需要育儿和养老时，照顾时间如何在三代间分配，社会资源能否填补欠缺？",
+    "significance": "养老与育儿看似两项政策，实际上在同一家庭争用时间与劳动。谁被挤出决定服务为什么应当优先保障。",
+    "answer": "混合研究发现儿童优先和老年危机式照顾，社会照顾难补缺口；原研究主要讨论城镇家庭。",
+    "lesson": "一类资源在不同对象之间有限时，从两项需求同场出发提出可观察的取舍。",
+    "locator": "PDF 1、17及结论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "养老还是养小：中国家庭照顾赤字下的代际分配",
+    "authors": [
+      "钟晓慧",
+      "彭铭刚"
+    ],
+    "journal": "社会学研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_C7JDI8UA",
+    "question": "当机器开始执行认知活动，如何解释个体主体性、职业结构和组织权力的变化？",
+    "significance": "将人工智能与旧数字工具区分，提出智力物替以研究任务、能力与技术占有的联动。",
+    "answer": "在物质—能动—结构关系中构建理论框架，以工作、职业和基础设施举例说明；概念需要独立操作化。",
+    "lesson": "按被替代或重组的任务而非按流行技术标签定义新的社会关系。",
+    "locator": "PDF 2–5、9–13、15–17",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "AI时代的智力物替、主体重塑与结构转型——一个人工智能社会学的分析框架",
+    "authors": [
+      "王宁"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_CJD3G4XI",
+    "question": "上海电影厂在制度转轨前后为何产生不同水平的创新与集体创作？",
+    "significance": "有力国家控制下反而出现艺术创新，需要区分制度约束与稳定资源对共同创作的条件作用。",
+    "answer": "历史个案将艺术惯例、资源保障和团队工作变化关联到创新兴衰。",
+    "lesson": "反常对照可以从同一组织不同时期找，先问工作方式哪些改变。",
+    "locator": "PDF 1及艺术共同体、改革转型各节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "制度环境、工作模式与艺术生产——上海A电影厂的艺术兴衰史",
+    "authors": [
+      "严俊",
+      "乐鹏举"
+    ],
+    "journal": "社会学研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2018.06.006"
+  },
+  {
+    "paper_id": "zotero_CPAIM3Q3",
+    "question": "家庭文化资本在什么考核方式和资源条件下更有利于大学生取得不同成就？",
+    "significance": "以不同教育结果对照文化再生产与文化流动，给家庭出身效应加上可证伪的评价制度边界。",
+    "answer": "首都大学生追踪资料显示干部、英语、成绩等结果方向有别，标准化考核与其他家庭资源有条件作用。",
+    "lesson": "让竞争解释面对同一群体中的多个理论上会分化的结果。",
+    "locator": "PDF 1、23及实证节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "文化再生产还是文化流动?——中国大学生的教育成就获得不平等研究",
+    "authors": [
+      "朱斌"
+    ],
+    "journal": "社会学研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2018.01.007"
+  },
+  {
+    "paper_id": "zotero_CXDS55VR",
+    "question": "个人应得的微观公平与全社会分配的宏观公平，怎样分别关联幸福感？",
+    "significance": "共同富裕讨论涉及奖励个人努力和降低社会不确定性，测量区分有助辨认可能兼得的政策目标。",
+    "answer": "CGSS2010回归发现两类公平对应不同规则认知，并与幸福感分别关联；横截面。",
+    "lesson": "当概念包含不同规范时，预先写清每类预测和它应该关联什么。",
+    "locator": "PDF 1–2、18",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "共同富裕愿景下的幸福感提升：双重公平论的视角",
+    "authors": [
+      "刘欣",
+      "胡安宁"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_D8FVKPC2",
+    "question": "企业引入可替代决策的AI时，组织成员为何会改写、弃用或改变系统原定的替代安排？",
+    "significance": "部署技术并不能直接推出劳动权力实际转移。了解社会缓冲可以帮助识别组织怎样调整决策责任。",
+    "answer": "电厂案例追踪算法重写、策略性弃用和替代转换等实践。",
+    "lesson": "区分工具做得到、组织装上和实际由谁做决策，寻找中间环节。",
+    "locator": "PDF 1–2、6及案例节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "人工智能的决策替代与社会缓冲——以X智能电厂为例",
+    "authors": [
+      "陈氚",
+      "李晓曼"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_DEGS7BD3",
+    "question": "同一村哪些农户会让成员外出，以及家庭选谁出去，为什么？",
+    "significance": "外出就业涉及劳动力配置的两层决策，村级信息、家庭资源和个人特征各适用于不同结果。",
+    "answer": "1994年四川调查分家庭和个人建模，外部就业预期、家庭劳动力数量及个人特征分别突出。",
+    "lesson": "先区分家庭有没有行动和成员中由谁行动。",
+    "locator": "PDF 1–2、8",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "农村劳动力外出就业决策的多因素分析模型",
+    "authors": [
+      "“中国农村劳动力流动”课题组"
+    ],
+    "journal": "社会学研究",
+    "year": "1997",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.1997.01.003"
+  },
+  {
+    "paper_id": "zotero_DY4QFHVM",
+    "question": "流形概念怎样贯通机器学习、神经活动和意识哲学，各层结构如何衔接？",
+    "significance": "为不同学科在共用形式时保留各自对象和意义来源，并提出可解释性问题。",
+    "answer": "理论梳理意向、神经与形式流形，不报告统一模型的经验验证。",
+    "lesson": "跨学科迁移先对照概念层级，说明桥接机制和可检验边界。",
+    "locator": "PDF 1、4、18",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "认知的流形模式与跨学科统一",
+    "authors": [
+      "马迎辉"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_ELJT5JX7",
+    "question": "怀特的生产市场模型如何构建，哪些理论假设和数理形式会限制可解释的市场？",
+    "significance": "将经典模型拆开到可调整的假设和预测，避免经验拟合不佳时否定整个社会结构视角。",
+    "answer": "探源并修正模型，用模型区域变化展示有些被判定不稳定的市场在新设定下可成立。",
+    "lesson": "让理论批评落在一个具体假设及它所改变的推论上。",
+    "locator": "PDF 1、9、38",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "对哈里森·怀特市场模型的讨论：解析、探源与改进",
+    "authors": [
+      "王晓路"
+    ],
+    "journal": "社会学研究",
+    "year": "2007",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2007.01.009"
+  },
+  {
+    "paper_id": "zotero_ELSKYPM5",
+    "question": "在发展水平和收入之外，公共消费和环境质量怎样关联城镇居民生活满意度？",
+    "significance": "发展绩效涉及公共资源、环境和主观福利，收入或GDP不足以给出政策排序。",
+    "answer": "CSS2013分析市场、国家、环境与个体渠道；公共服务、社会公平和主观环境也有关联。",
+    "lesson": "并列政策可作用的不同渠道，使用各自可测指标避免笼统地问增长是否幸福。",
+    "locator": "PDF 1、4、20及讨论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "市场竞争、集体消费与环境质量——城镇居民生活满意度及其影响因素分析",
+    "authors": [
+      "朱迪"
+    ],
+    "journal": "社会学研究",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2016.03.009"
+  },
+  {
+    "paper_id": "zotero_ENT3BVXK",
+    "question": "生产者如何观察同行并形成市场结构，不同行业资料能否印证怀特模型？",
+    "significance": "用案例发现实际生成过程，再用市场数据检验结果，给抽象的市场理论增添可观察条件。",
+    "answer": "箱包市场田野与工业普查计量结合，讨论如何把理论变量映射到复合产出和生产组织。",
+    "lesson": "把机制证据和结构结果分拆，再用两类资料连接。",
+    "locator": "PDF 1、11及计量节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "生产的市场结构——基于中国市场田野调查和工业普查数据的经验研究",
+    "authors": [
+      "李凝紫"
+    ],
+    "journal": "社会学研究",
+    "year": "2010",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2010.03.002"
+  },
+  {
+    "paper_id": "zotero_EQNMAT5K",
+    "question": "市场交换的基本单位是物本身，还是围绕物的行动权利？怎样据此比较诺思与波兰尼？",
+    "significance": "如果分析单位含糊，嵌入与保护等命题难以准确解释交易制度；厘清权利后就能问具体可交换什么。",
+    "answer": "用文本比较提出基本单位与市场概念上的修正；属于理论论证。",
+    "lesson": "理论争论先查两方是否在谈同一分析单位。",
+    "locator": "PDF 1、3、14",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“为市场”的权利安排VS.“去市场化”的社会保护——也谈诺思和波兰尼之“争”",
+    "authors": [
+      "王水雄"
+    ],
+    "journal": "社会学研究",
+    "year": "2015",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2015.02.003"
+  },
+  {
+    "paper_id": "zotero_ES2VS8PZ",
+    "question": "人情、信息和混合求职资源怎样影响入职收入，招聘门槛和竞争性如何改变各渠道？",
+    "significance": "关系是否有效取决于招聘方与环境，把简单找关系的观念推进到降低搜索成本、交换和互信的机制比较。",
+    "answer": "构建求职双边模型，以数据考察不同环境下资源选用及收入关联；招聘约束对人情资源的制约更明显。",
+    "lesson": "把关系形式替换成关系能提供的具体资源，再指定会限制该资源的制度条件。",
+    "locator": "PDF 1–2、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "求职与收入获得的关系机制：理论模型与实证研究",
+    "authors": [
+      "张顺",
+      "郝雨霏"
+    ],
+    "journal": "社会学研究",
+    "year": "2013",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2013.05.005"
+  },
+  {
+    "paper_id": "zotero_EW4UMRD9",
+    "question": "农业农村发展中，政府、市场、社会组织各在哪些条件下应当履行什么责任？",
+    "significance": "从政府是否介入转向介入次序与边界，有利于区分公共服务兜底、纠正失灵和市场配置。",
+    "answer": "提出制度建构、纠偏和培育主体的分析框架，并讨论政策调整。",
+    "lesson": "对同一个结果比较不同责任主体与适用情境。",
+    "locator": "PDF 1、12及政策框架",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "农业农村发展中的政府与市场、社会：一个分析框架",
+    "authors": [
+      "郁建兴",
+      "高翔"
+    ],
+    "journal": "中国社会科学",
+    "year": "2009",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_EWPR5ZCU",
+    "question": "家庭教养方式能否改变子女获优质高校机会，它是家庭地位的渠道还是另有独立作用？",
+    "significance": "既回应家长可改变什么，也检验教养究竟是累积优势还是有一定自主空间。",
+    "answer": "以大学生调查比较家庭地位和教养；自报与进入高校后的样本选择限制因果。",
+    "lesson": "将资源存量和家庭行动分开，并比较独立作用和传递渠道。",
+    "locator": "PDF 1–2、17",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "如何助子成龙?——家庭教养方式对优质高等教育获得的作用",
+    "authors": [
+      "许丹红",
+      "桂勇"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_F3L3KAVQ",
+    "question": "沟通渠道增加后不同观念为何更易对立，什么条件能使接触转成理解或接受？",
+    "significance": "接触频率增加并不会保证理解。社区与平台治理可检验制度化换位体认是否改善观念冲突。",
+    "answer": "提出体认距离框架，区分媒介接触、生活处境和视角互换；干预效果尚需经验比较。",
+    "lesson": "具体标出中间关口，把可见、理解、接受三个步骤分开。",
+    "locator": "PDF 3、6、12–15",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "换位体认：数字时代的观念冲突与社会治理",
+    "authors": [
+      "王宁"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_F7K7L2DN",
+    "question": "人机融合改变知识生产中的素材、方法和理论关系，何时足以称为范式重构？",
+    "significance": "为判断新工具只是提高效率还是重组发现过程提供标准，帮助不同学科找到确实改变的研究环节。",
+    "answer": "回顾研究范式与人机互生的历史案例，比较计算模拟、数据与AI的作用；不构成对具体模型科研效能的因果检验。",
+    "lesson": "明确‘新范式’有何必要条件，并逐一排除工具升级即可解释的变化。",
+    "locator": "PDF 1–4、6–9、11–12",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "人机互生：范式革命与知识生产重构",
+    "authors": [
+      "邱泽奇"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_FC6Z7KAI",
+    "question": "新农保试点中动员何时提高加入，何时难以提高农户缴费水平？",
+    "significance": "参保广度与深度对应不同机制，政策宣传和缴费激励不能只用一项参与率评价。",
+    "answer": "单地问卷发现动员有助取得信息和参保，但缴费深度受经济利益约束；效应随信息条件变化。",
+    "lesson": "把加入与实际投入拆成有不同成本的两道门槛。",
+    "locator": "PDF 1、3–4及分析节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "动员效力与经济理性：农户参与新农保的行为逻辑研究——基于武汉市新洲区双柳街的调查",
+    "authors": [
+      "钟涨宝",
+      "李飞"
+    ],
+    "journal": "社会学研究",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2012.03.007"
+  },
+  {
+    "paper_id": "zotero_FDQ38UIR",
+    "question": "技术决定论、技术结构化理论和互构论各能解释技术与组织关系的什么问题，同一技术为什么会触发不同结构变迁？",
+    "significance": "能解释一般组织多样性、能描述变迁过程和能解释情境差异是不同标准。辨清既有理论处理的结果与机制，才能使新理论推进明确。",
+    "answer": "回顾传统组织理论、CT技术的应用和ERP等实践，提出应用环境和提供者、使用者互动有助理解差异；述评没有普遍预测模型。",
+    "lesson": "面对多套理论先对齐它们的因变量、范围和对照，再找同一解释无法处理的条件。",
+    "locator": "官网PDF 刊页200–213；https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2015-06-30/Issue/zzpbaa4k.pdf",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "技术与组织关系的三个视角",
+    "authors": [
+      "张燕1邱泽奇2"
+    ],
+    "journal": "社会学研究",
+    "year": "2009",
+    "origin": "journal_site_full_text",
+    "doi": "10.19934/j.cnki.shxyj.2009.02.010"
+  },
+  {
+    "paper_id": "zotero_FGYS4AEA",
+    "question": "小型创业如何借助家庭亲密关系启动，创业利益又如何反过来重塑家庭？",
+    "significance": "识别家庭合伙中的共识、风险承担与情感劳动，个人化理论难以概括家庭在商业决策里的持续作用。",
+    "answer": "T家庭创业史追踪家计、情感和处理风险的共同知识，也记录利益张力下的再选择。",
+    "lesson": "在预期家庭退出的市场活动中，区分家庭实际提供的不同支持。",
+    "locator": "PDF 1、19及创业史",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家、亲密关系与创业——基于T家庭创业史的社会学分析",
+    "authors": [
+      "梁波",
+      "艾莉桦"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_FJ33KQQ6",
+    "question": "市场化究竟认可还是替代了社会资本，动员关系的概率和收益是否同向？",
+    "significance": "将求职动用关系与关系实际值多少钱分开，能解释关于市场化强化或削弱关系的争论。",
+    "answer": "八城市问卷比较三种市场化测量，得到认可度与动员回报可分化；个别回报估计依口径。",
+    "lesson": "同一理论的相反结果可能来自测量或不同阶段，先逐一对齐。",
+    "locator": "PDF 1、18及结论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "劳动力市场中的社会资本与市场化",
+    "authors": [
+      "张文宏",
+      "张莉"
+    ],
+    "journal": "社会学研究",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2012.05.001"
+  },
+  {
+    "paper_id": "zotero_G5GEDNDG",
+    "question": "被视为保守的农业社会为何产生快速工商业发展，农民理性进入新环境时怎样改变作用？",
+    "significance": "用传统与现代结合的机制解释没被简单现代化预期解释的经验，突出行动者和条件组合。",
+    "answer": "从生存理性和工业机会叠加提出解释；宏观理论分析需另作条件检验。",
+    "lesson": "相同行为理性在不同机会结构中可能产生相反后果，选有对照的情境。",
+    "locator": "PDF 1及理论展开",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "农民理性的扩张:“中国奇迹”的创造主体分析——对既有理论的挑战及新的分析进路的提出",
+    "authors": [
+      "徐勇"
+    ],
+    "journal": "中国社会科学",
+    "year": "2010",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_GIZG8MSL",
+    "question": "哪些激励让社会行动者彼此转嫁损失，怎样形成互利而非互害的稳定秩序？",
+    "significance": "将单次违法与跨主体的制度性互害分开，为治理从道德劝诫转向权益与合作激励提供解释。",
+    "answer": "以概念辨析、博弈比喻和制度事例讨论互害循环与制度性应对；为规范性提议。",
+    "lesson": "把参与者各自理性的做法如何累积成共同困境写成具体的相互依赖机制。",
+    "locator": "PDF 1–2、5、7–11",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从互害型社会走向互利型社会——中国社会主要矛盾的转化及应对",
+    "authors": [
+      "张善根"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_GPVBJHXA",
+    "question": "个人怎样凭某种物质证明取得互动资格，不同身份物如何筛选进入者？",
+    "significance": "互动研究多从相识之后开始，证件、认证等前置条件会制造准入差异和认物不认人的困境。",
+    "answer": "概念分析区分制度性和文化性等身份物，提出身份转译环节。类型尚待系统经验检验。",
+    "lesson": "从互动机会被授予之前找守门机制。",
+    "locator": "PDF 1–2、15",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "身份物：现代社会互动的进场与身份转译模式",
+    "authors": [
+      "黄心烨",
+      "郑作彧"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_GQZ4KXMQ",
+    "question": "外部事件、平台推送与用户偏好如何让情绪、集体观与偏见形成不同流动轨迹？",
+    "significance": "孤立的传播规模或平均值会漏掉短期同频波动和内容差别，可改善对平台信息环境的评估。",
+    "answer": "连续平台推送及模型文本测量区分不同速率和同频共振；单平台与观念提取有效性限制外推。",
+    "lesson": "将时间轨迹和用户之间的间距同时作为可观察结果。",
+    "locator": "PDF 1–2、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "观念流：一个分析数字时代信息扩散与观念演化的新视角",
+    "authors": [
+      "刘河庆"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_GRGX8UCK",
+    "question": "中国社会里的亲缘与关系怎样从父子伦理外推为共同体秩序？",
+    "significance": "回应把关系仅解释为私利和社会落后的解释；为以家庭伦理为出发点的中国社会结构构建理论词汇。",
+    "answer": "从经学与家礼讨论一本和一体的垂直生命连续性与伦理扩展。属理论阐释。",
+    "lesson": "当流行解释只看到关系的排他后果时，回查何种关系结构可能扩展责任。",
+    "locator": "PDF 2–7、18–19、26",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "一本与一体：中国社会理论的基础",
+    "authors": [
+      "周飞舟"
+    ],
+    "journal": "社会",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2021.04.001"
+  },
+  {
+    "paper_id": "zotero_GTNHMFDX",
+    "question": "在生存压力之外，中国农民为何从长期留在农业转向外出就业？",
+    "significance": "把迁移看成社会结构与集体选择变化，单以贫困解释不了在同样压力下时点和人群差异。",
+    "answer": "讨论由生存理性到社会理性选择的条件与动因；属于宏观解释，未估单一因素净作用。",
+    "lesson": "从既有动因长期存在但行为在后来才普及的时间反差起步。",
+    "locator": "PDF 1、3及讨论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从生存理性到社会理性选择：当代中国农民外出就业动因的社会学分析",
+    "authors": [
+      "文军"
+    ],
+    "journal": "社会学研究",
+    "year": "2001",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2001.06.002"
+  },
+  {
+    "paper_id": "zotero_GUXVYVSM",
+    "question": "农村市场化怎样改变家庭和社区社会资本对非农经营、外出及在地工资的作用？",
+    "significance": "将社区公共网络与家庭私人关系分开，避免用同一个市场化系数解释东西部和不同收入来源。",
+    "answer": "调查分析显示社会资本关联主要在非农部门，地区和村内市场化的方向可能有别。",
+    "lesson": "对齐解释层级、农民取得的收入类型和实际市场机会。",
+    "locator": "PDF 1–2、16",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "农村市场化、社会资本与农民家庭收入机制",
+    "authors": [
+      "王晶"
+    ],
+    "journal": "社会学研究",
+    "year": "2013",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2013.03.007"
+  },
+  {
+    "paper_id": "zotero_GVML7D6U",
+    "question": "关系建立、维持和解除时，社交媒介如何分别改变信息交换、情感维持和伴侣权力？",
+    "significance": "同一工具在不同关系阶段可能便利连接也可能成为监控和博弈的资源。阶段划分能具体解释这些相反用途。",
+    "answer": "访谈识别不同媒介的功能性与情感性作用，比较媒介丰富性、组合及质量。样本适于说明过程。",
+    "lesson": "把技术影响定位到使用者实际经历的阶段和行为。",
+    "locator": "PDF 1–4、6、8–10",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "信息渗透与权力博弈：社交媒介在青年亲密关系中的作用研究——基于关系发展的阶段理论",
+    "authors": [
+      "李华伟",
+      "徐开彬"
+    ],
+    "journal": "中国青年研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2022.0088"
+  },
+  {
+    "paper_id": "zotero_GVP2PXNJ",
+    "question": "传播者被转化成可复制和重新拼接的文本后，群聚传播的互动及责任怎样变化？",
+    "significance": "理解线上影响力与责任归属不再直接对应具身作者，为数字传播治理提供分析单位。",
+    "answer": "概念讨论主体文本化、语境脱嵌、记忆重联与算法的作用。",
+    "lesson": "若同一个人、账号和内容不能互换，先确定实际传播单元。",
+    "locator": "PDF 1–2、7",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "群聚传播中传播主体的文本化及文本间性",
+    "authors": [
+      "隋岩",
+      "杨超"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_H3QGPTVB",
+    "question": "城市家庭转型中婚姻、性别关系和亲属网络怎样变化，传统形态和现代制度如何叠合？",
+    "significance": "识别单一路径现代化理论的边界，不应从核心家庭增加推断亲属网络弱化。",
+    "answer": "五城市调查比较资源、婚姻、夫妻关系与亲属网络，发现不同地区路径及传统与现代因素的组合。",
+    "lesson": "把有可能异步变化的家庭维度分别追踪。",
+    "locator": "PDF 1、22及多维分析",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国城市家庭变迁的趋势和最新发现",
+    "authors": [
+      "马春华",
+      "石金群",
+      "李银河",
+      "王震宇",
+      "唐灿"
+    ],
+    "journal": "社会学研究",
+    "year": "2011",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2011.02.008"
+  },
+  {
+    "paper_id": "zotero_H546DQ5J",
+    "question": "软件媒介打通人机边界后，人类主体、机器与环境组成怎样的系统？",
+    "significance": "说明媒介改变的不只是传递速度，也可能是决策主体和可获得的信息，因此需要重新界定研究单位。",
+    "answer": "以破域媒介论讨论代码、人机互嵌与数据化；主要是哲学论证。",
+    "lesson": "将新技术具体化为对行动能力和人机决策边界的改变。",
+    "locator": "PDF 1、3、14",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "破域：数字时代的媒介论",
+    "authors": [
+      "孙玮"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HANRCBBX",
+    "question": "以爱情和缘分为起点的亲密关系理想型，其形成与持续靠哪些不同机制？",
+    "significance": "区分基于个体吸引和基于外在关系安排的承诺，便于解释相似婚姻制度中的不同义务和稳定性。",
+    "answer": "比较两种理想型并提出增加与削减期待的解释；并未检验总体离婚率。",
+    "lesson": "把同一个制度的不同关系逻辑具体化为可比较阶段。",
+    "locator": "PDF 1、11、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "爱情与姻缘：两种亲密关系的模式比较——关系向度上的理想型解释",
+    "authors": [
+      "翟学伟"
+    ],
+    "journal": "社会学研究",
+    "year": "2017",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2017.02.006"
+  },
+  {
+    "paper_id": "zotero_HGAWES6P",
+    "question": "数字平台同时是被治理者和治理参与者时，企业与国家、市场及社会的关系如何分析？",
+    "significance": "区分平台内部、外部及共同治理，使监管与平台自律的目标和责任可以分别评价。",
+    "answer": "构建三亚场域框架，讨论国家治理外部压力和企业的内生变革；属机制和行动框架。",
+    "lesson": "同一行为主体有多重身份时，从各场域对应的权责边界提问。",
+    "locator": "PDF 1、12及分场域讨论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "平台治理场域与社会学参与",
+    "authors": [
+      "吕鹏",
+      "周旅军",
+      "范晓光"
+    ],
+    "journal": "社会学研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HISXLIWE",
+    "question": "数字技术怎样改变文化生产、传播与消费，效率提升能否与文化内涵和原创性同向？",
+    "significance": "将行业增长、传播性能和文化价值分开，有助评价数字文化项目不同目标。",
+    "answer": "阶段梳理和业态比较呈现消费者、创意者及传播等变化，并讨论技术表现与内容的争议。",
+    "lesson": "技术加速时同时比较效率与内容营造，给价值判断指定证据。",
+    "locator": "PDF 1、4、18及结构分析",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字时代的技术与文化",
+    "authors": [
+      "江小涓"
+    ],
+    "journal": "中国社会科学",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HMEQEXRX",
+    "question": "媒介连通方式、速度和范围的升级怎样改写人与技术、人与人的关系？",
+    "significance": "讨论5G的社会含义时可以观察互动组织与参与机会改变了什么，而非仅谈传输速度。",
+    "answer": "从连通属性演化提出连通性分析思路；短论提供概念假设。",
+    "lesson": "先明确新技术变化的是哪一维连接，再选对应社会后果。",
+    "locator": "PDF 1–3",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "连通性：5G时代的社会变迁",
+    "authors": [
+      "邱泽奇"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2019",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HQR2NHJ8",
+    "question": "为何 nineteenth-century newspaper 在中文里最终被译作报，译名怎样改变中国人对新媒介的理解？",
+    "significance": "将翻译还原为在历史传播体系中安置新事物，说明跨文化传播如何重塑本土分类。",
+    "answer": "媒体史、词汇史资料追踪京报、新闻纸、新报和报的变化及中西互释。",
+    "lesson": "用多个历史命名节点比较概念如何借助旧分类又改变旧分类。",
+    "locator": "PDF 1–2、11及译名分析",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中西互释下的媒介认知建构——以十九世纪Newspaper译名变迁为视角",
+    "authors": [
+      "操瑞青"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HVZ2P5MN",
+    "question": "智能生产力改变任务和生产后，旧劳动关系和制度在哪些方面跟不上？",
+    "significance": "区分技术增长与制度适应，具体定位劳动过程加速、风险和利益安排等问题。",
+    "answer": "政治经济学论证将生产力、生产关系和上层建筑放进同一解释，未报告因果估计。",
+    "lesson": "问技术改变了哪项生产条件，以及哪个旧制度仍按旧条件运行。",
+    "locator": "PDF 1、15及论证",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "智能时代的社会基本矛盾与社会发展动力",
+    "authors": [
+      "孙伟平"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_HYACST6Q",
+    "question": "城市劳动力市场如何同时受体制与市场分割，不同部门之间升降与跨界障碍方向有何不同？",
+    "significance": "检验统一劳动力市场建设面临的是体制壁垒、市场壁垒或两者叠加，部门流动比静态收入差更直接。",
+    "answer": "2019特大城市数据以潜类别和流动表检验双重分割与方向性壁垒，范围受场域限制。",
+    "lesson": "用转移方向来判断进入障碍，不把分类或工资均值当作流动证据。",
+    "locator": "PDF 1–2、22",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国城市劳动力市场的双重二元分割——理论模型与实证检验",
+    "authors": [
+      "张海东",
+      "袁博"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_I345GTWA",
+    "question": "社会保障在什么供给主体、分配方式和待遇水平下与国家认同关系更强？",
+    "significance": "从只看纳入与否推进到制度设计，检验福利通过什么交换产生认同及其作用范围。",
+    "answer": "CSS比较多种保障类型及待遇，结果随供给主体和水平而变，普惠与选择的比较未显示明确差别。",
+    "lesson": "把制度标签拆成可以指向不同理论预测的设计维度。",
+    "locator": "PDF 1、3、19",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "保障凝聚认同?——社会保障建构国家认同的异质性研究",
+    "authors": [
+      "黄种滨"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_I4DWNBQY",
+    "question": "习近平文化思想的理论经验从何而来，它与马克思主义文化观和中国文化建设经验怎样连接？",
+    "significance": "阐明理论来源与当下文化建设如何衔接，为理解新时代文化方针提供概念背景。",
+    "answer": "材料围绕党的文化思想沿革、文化规律和文化使命展开，属于思想文本阐释。",
+    "lesson": "将一个当代理论概念追溯到此前回应过的具体问题。",
+    "locator": "PDF 1、3及后续分节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "习近平文化思想的深厚底蕴",
+    "authors": [
+      "李国强"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_I4LCBY4P",
+    "question": "外来务工者首次迁移之后为何再次迁移或换企，地方和企业条件如何关联？",
+    "significance": "关注到达后的不稳定、权益保障与留居意愿，政策不能只看首次流动数量。",
+    "answer": "浙闽津调查区分收入、发展、工作机会和政府关心等因素，观察性关联。",
+    "lesson": "在同一政策链条中将进入和能否留住分作不同时点的结果。",
+    "locator": "PDF 1、13、15",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "农村劳动力二次流动的特点、问题与对策——对浙、闽、津三地外来务工者的调查",
+    "authors": [
+      "梁雄军",
+      "林云",
+      "邵丹萍"
+    ],
+    "journal": "中国社会科学",
+    "year": "2007",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_I5WMM2B9",
+    "question": "平台化过程中，中国青年文化趣味呈现怎样的区隔与变迁，青年实践和平台技术各做了什么？",
+    "significance": "承接文化社会学的品味分层，同时解释亚文化走入主流需要平台及商业条件，不能只看青年年龄。",
+    "answer": "用单平台数字痕迹的计算扎根比较趣味和阶段；不能代表全部青年。",
+    "lesson": "让文化分类和平台阶段互相对照，并写清数字样本边界。",
+    "locator": "PDF 1、18–19",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字时代的中国青年文化变迁：趣味模式、社会区隔与平台化",
+    "authors": [
+      "刘太石"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_I62J6VRS",
+    "question": "中国城市看似较弱的职业代际再生产，是否与户籍转换的制度选择有关？",
+    "significance": "社会开放性的估计会因排除不能进城者而偏离更广的人口；结果可改变对不平等和流动的解释。",
+    "answer": "1996生活史资料比较城乡与户籍转换，指出仅城市样本的选择问题。",
+    "lesson": "对一个看起来突出的统计现象先追问谁被排除在观察入口之外。",
+    "locator": "PDF 1–2、23",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国的户籍制度与代际职业流动",
+    "authors": [
+      "吴晓刚"
+    ],
+    "journal": "社会学研究",
+    "year": "2007",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2007.06.003"
+  },
+  {
+    "paper_id": "zotero_IB3UDL2N",
+    "question": "城乡收入仍有落差时，哪些家庭资源把劳动力推向外出，哪些又使他们选择回流？",
+    "significance": "单用收入差难解释外出和回流并存，地方就业和返乡服务应辨认家庭资源能否在本地兑现。",
+    "answer": "湖北河南农户调查比较外出、留乡和回流，并发现家庭人力、社会、经济禀赋的非线性或双向联系。",
+    "lesson": "用两个相反行为共同检验同一种资源的竞争机制。",
+    "locator": "PDF 1、9、22",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家庭禀赋、家庭决策与农村迁移劳动力回流",
+    "authors": [
+      "石智雷",
+      "杨云彦"
+    ],
+    "journal": "社会学研究",
+    "year": "2012",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2012.03.008"
+  },
+  {
+    "paper_id": "zotero_IIWXKK9Z",
+    "question": "全面小康目标如何在乡村落实，制度机会与村民主体性怎样相互作用？",
+    "significance": "评价乡村建设应考虑公共机会、生活追求和参与，超越经济总量。",
+    "answer": "实践与理论分析从现代化价值、制度及农民主体性三面提出条件。",
+    "lesson": "把项目推进目标和接受者自己想改变的生活条件同时纳入。",
+    "locator": "PDF 1、19–20",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "乡村建设与全面小康社会的实践逻辑",
+    "authors": [
+      "王春光"
+    ],
+    "journal": "中国社会科学",
+    "year": "2020",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_IMWG6QTY",
+    "question": "《红与黑》中瑞那夫人与玛蒂尔德的爱情为何展现两种不同的现代自我？",
+    "significance": "把两种情爱经验置于革命后的秩序转型，借文学揭示个体自主、身份抱负与情感依附之间的矛盾。",
+    "answer": "通过小说人物比较及文本阐释，区分心灵之爱和头脑之爱的不同欲望与行动方式。",
+    "lesson": "比较发生在同一历史情境中的不同意义结构，另找现实证据检验其外延。",
+    "locator": "PDF 1、11、14、21、23–24",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "自我、革命与爱情：《红与黑》中的“心灵之爱”与“头脑之爱”",
+    "authors": [
+      "潘丹"
+    ],
+    "journal": "社会",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2021.04.006"
+  },
+  {
+    "paper_id": "zotero_IRWGFC9H",
+    "question": "数据的互动、共享和规模怎样改变创新来源、创新组织及平台角色？",
+    "significance": "区分数据量、数据关系和理论洞察，评价开放创新及平台资源，避免将有数据直接当作创新。",
+    "answer": "比较历时创新范式并讨论数据与理论耦合、开源合作及伦理影响。",
+    "lesson": "找出新生产要素如何改变创新链条哪一步，而非称所有变化一场革命。",
+    "locator": "PDF 1、3、6及范式论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数据、数据关系与数字时代的创新范式",
+    "authors": [
+      "江小涓",
+      "宫建霞",
+      "李秋甫"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_IRYRMQK4",
+    "question": "群体传播如何使普通人获得信息生产权，并改变注意力和资源分配？",
+    "significance": "把发表机会与实际被看见、取得资源分开，才能评价话语权是否真正分散。",
+    "answer": "通过媒介变迁与例证分析从线性传者到链接结构、公众情绪及传播权力。",
+    "lesson": "传播研究沿发布、扩散、被响应和取得资源四步确定结局。",
+    "locator": "PDF 1、16及典型例证",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "群体传播时代：信息生产方式的变革与影响",
+    "authors": [
+      "隋岩"
+    ],
+    "journal": "中国社会科学",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_J7L9RU78",
+    "question": "匿名青年为何用共享身份隐去现实身份，却在社交平台重新表达个性并被算法识别？",
+    "significance": "匿名服务需要区分免于熟人识别、个体化表达和平台画像；同一功能对三者可能有不同作用。",
+    "answer": "网络民族志观察momo社群，呈现共享标志与个性装扮并行，以及平台推荐与用户隐匿的矛盾。",
+    "lesson": "把隐私或匿名按不同观察者拆开，分别核对谁能知道什么。",
+    "locator": "PDF 1–5、8–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "隐匿即显露：青年匿名社交的平台、动因及展演",
+    "authors": [
+      "张戌",
+      "汤沺甜"
+    ],
+    "journal": "中国青年研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2024.0053"
+  },
+  {
+    "paper_id": "zotero_J9NU8LXQ",
+    "question": "中华文明如何在历史延续中形成现代文明，中国经验如何表达这种守正创新？",
+    "significance": "明确传统延续的内容和现代转变的方式，为文化建设的人文根据提供历史框架。",
+    "answer": "历史与思想分析讨论创造性转化、创新性发展和传统现代互动。",
+    "lesson": "将延续的对象、发生改变的内容和推动条件分开。",
+    "locator": "PDF 1、3及历史论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "文明创新发展的中国表达",
+    "authors": [
+      "秦龙"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_JBBJMJCK",
+    "question": "投资网络的集群和企业中的集体智能，如何由微观行动与结构共演涌现？",
+    "significance": "将宏观结构回扣到可观察的反馈，能区分一次性选择与长期网络塑造。",
+    "answer": "风险投资网络与科技企业案例展示反馈和系统转型前后的关系条件，方法依赖数字记录。",
+    "lesson": "选择可观测多个时点的过程，用反馈预测辨别机制。",
+    "locator": "PDF 1、16及两个案例",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "复杂社会系统的涌现现象——以大数据分析结构与行动共同演化",
+    "authors": [
+      "罗家德",
+      "万怡",
+      "高馨"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_JJUDAV9B",
+    "question": "不同住的亲缘家庭如何分工、支持和维系联系，从家庭、家户到家应如何划边界？",
+    "significance": "仅基于住户看不出异地照料和经济互助。家庭政策的受益者和负担者可能在多户分布。",
+    "answer": "辨析同住户与亲缘网络，提出直系组家庭及家内与家际并置的分析。",
+    "lesson": "先为识别对象设边界，再用跨单元联系检验实际功能。",
+    "locator": "PDF 1、3、9",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国当代家庭、家户和家的“分”与“合”",
+    "authors": [
+      "王跃生"
+    ],
+    "journal": "中国社会科学",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_JUY8WBGE",
+    "question": "从小镇进入精英高校的学生，入学后在哪些学习、社交与职业准备过程中继续遭遇阶层差距？",
+    "significance": "高等教育政策若只数入学机会会漏掉实际参与和转化机会。辅导与资源配置可瞄准在校过程。",
+    "answer": "网络民族志与线上访谈记录融入、信息和行动资源差异以及互助应对；自选线上群体不是所有小镇学生。",
+    "lesson": "追踪政策目标的下一道门槛，区分取得资格和兑现资格。",
+    "locator": "PDF 1–3、4–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "不平等的“贵子”：基于网络民族志的“小镇做题家”就读体验研究",
+    "authors": [
+      "张茜",
+      "刘庆帅"
+    ],
+    "journal": "中国青年研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2021.0088"
+  },
+  {
+    "paper_id": "zotero_KI7CJHJN",
+    "question": "现代汉语作为文化载体如何回应传统、外来和现代资源的融通？",
+    "significance": "语言研究的单位和评价会影响对文化主体性及现代交流规范的理解。",
+    "answer": "以文化思想和现代汉语的历史形成与现实问题作理论阐释。",
+    "lesson": "先指出语言现象中具体资源怎么融合，再讨论文化意义。",
+    "locator": "PDF 1及现代汉语论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "用习近平文化思想指导文化载体研究——“融通”与“结合”视角下的现代汉语问题",
+    "authors": [
+      "张伯江"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_KN3WGGZB",
+    "question": "神经事件的物理因果与具有信念、欲望和意志的行动理由，如何在同一解释中成立？",
+    "significance": "对齐不同层次的因果主张，避免将行动意义简化为神经关联。",
+    "answer": "借能动推理和最小自由能与行动哲学对话，提出目的因果内化的理论路线。",
+    "lesson": "机制跨层时写出每层承担的解释工作以及可区分证据。",
+    "locator": "PDF 1、10及理论论证",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "自然理性内化与心智因果起源的哲学探究",
+    "authors": [
+      "刘闯"
+    ],
+    "journal": "中国社会科学",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_KQAZJUNX",
+    "question": "面对相似制度限制，农村务工家庭为什么有不同的长期居城、返乡与代际往返安排？",
+    "significance": "定居与落户不能混为一谈，异地家庭服务需匹配生命周期中的照料与责任。",
+    "answer": "分析家庭本位及生命周期引起稳定性流动，说明父母随子女婚育往返的情境。",
+    "lesson": "先从家庭事件和阶段提出迁移组合，再与制度门槛相连。",
+    "locator": "PDF 1、3、16",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家庭本位与城乡融合——农村流动人口的社会学研究",
+    "authors": [
+      "范新光",
+      "周飞舟"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_KZEV49KG",
+    "question": "人格权应怎样分类，才能应对心理、个人信息和数字身份等新挑战？",
+    "significance": "确定法律适用中应保护的具体人格利益，减少全部依赖一般人格权的难以预期。",
+    "answer": "建立生物、理性、社会三维体系，并划分身体、心理、表征、评价等权益。",
+    "lesson": "概念创新应明确能解决什么分类困难并给出边界案例。",
+    "locator": "PDF 1、16及类型化部分",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "人格权的类型化解析与体系构建",
+    "authors": [
+      "刘银良"
+    ],
+    "journal": "中国社会科学",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_L26HWFBR",
+    "question": "青年男性为何购买约会培训，公司如何将亲密互动组织为可出售、可重复的脚本？",
+    "significance": "把亲密关系市场化落到有组织的供需上，说明焦虑怎样成为经营资源，也暴露标准化脚本与双方主体性的冲突。",
+    "answer": "深圳付费学员、导师访谈和线上线下观察呈现培训的标准化及适用情境；样本限案例公司。",
+    "lesson": "看到私人选择背后的市场供给者，具体问他们怎样制造可交易的解决方案。",
+    "locator": "PDF 2–5、7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "亲密关系商品化和约会程式化——以深圳PUA公司的调研为例",
+    "authors": [
+      "刘海平"
+    ],
+    "journal": "中国青年研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2021.0086"
+  },
+  {
+    "paper_id": "zotero_L5TVBY4M",
+    "question": "社保制度建设怎样关联居民的分配公平判断，2005与2015比较有何变化？",
+    "significance": "除收入差距外测量制度经验与态度，关心公共制度是否具有价值引导功能。",
+    "answer": "用两期CGSS比较政府社保满意度和公平判断，并观察省级投入变化；关联可受同期因素影响。",
+    "lesson": "从制度提供了什么推进到民众评价如何变化，分个体和省域验证。",
+    "locator": "PDF 1、5、19",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "制度的力量——中国社会保障制度建设与收入分配公平感的演化",
+    "authors": [
+      "黄健",
+      "邓燕华"
+    ],
+    "journal": "中国社会科学",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_L66UGTED",
+    "question": "网络社会向平台社会转变是断裂还是延续，连接去中心化与传播权力再集中为何并存？",
+    "significance": "节点数量和权力结构是不同指标。区分两者有利于判断平台在公共传播中的组织权力及治理对象。",
+    "answer": "历史与理论比较将技术连接和资本推动的平台秩序并置，提出在分散与集中交替中理解传播结构。",
+    "lesson": "面对过程变化，同时测量个体可连接性和机会分配权的集中程度。",
+    "locator": "PDF 1–3、5–10",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从网络社会到平台社会——传播结构的去中心化到再中心化",
+    "authors": [
+      "沈国麟",
+      "易若彤"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_L6BXZQIS",
+    "question": "高学历求职者的学历高出岗位需要时，雇主为何仍可能优先考虑，什么组织最容易这样做？",
+    "significance": "补足个人供给侧解释；学历失配的形成还涉及雇主怎样分配就业机会。效率与合法性对趋同和分化的预测可在有条件的比较中区分。",
+    "answer": "从组织聘用反馈识别高配偏好及其差异；样本专业、线上招聘和实验情境限制外推。",
+    "lesson": "找到结果的实际分配者及其选人环节，区别观察到的匹配结果和匹配过程。",
+    "locator": "PDF 2–4、14–19、28–33",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "趋同与分化：雇主决策视角下高学历者的教育失配研究",
+    "authors": [
+      "李晓光"
+    ],
+    "journal": "社会",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2024.06.006"
+  },
+  {
+    "paper_id": "zotero_LFQA8WHR",
+    "question": "在区位与发展背景相近的乡村，何以有的电商创业不断模仿创新而有的没有？",
+    "significance": "比较成败能辨认技术推广中可迁移的实际条件，避免从成功村反推只需网购平台。",
+    "answer": "菏泽多点田野与模拟提出熟人社会、线上市场及能人触发的组合条件；模拟不能证明所有地方的必要性。",
+    "lesson": "找相似背景下结果不同的地方，用组合条件解释。",
+    "locator": "PDF 1、4、22",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "熟人社会、外部市场和乡村电商创业的模仿与创新",
+    "authors": [
+      "邱泽奇",
+      "黄诗曼"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_LG2Z4QMT",
+    "question": "不同阶层家庭教育时间与经济投入如何分配，社会资本、文化资本和补习怎样关联成绩？",
+    "significance": "家庭资源不能以择校或支出一项概括，渠道比较有助于理解家庭差距，并把家庭支持与市场购买分开。",
+    "answer": "CEPS追踪与分解比较三类资源贡献，亲子交流等内部社会资本对样本成绩差异解释较多；分解并非因果效应。",
+    "lesson": "把常被合并的投入拆开，比较具体渠道与能测到的结果。",
+    "locator": "PDF 1–5、7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "家庭教育时间投入、经济投入和青少年发展：社会资本、文化资本和影子教育阐释",
+    "authors": [
+      "李佳丽",
+      "何瑞珠"
+    ],
+    "journal": "中国青年研究",
+    "year": "2019",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2019.0131"
+  },
+  {
+    "paper_id": "zotero_LG45A65F",
+    "question": "数字平台进入两类广州服装村后，为什么对生产网络和空间改造产生不同结果？",
+    "significance": "更新不仅改变土地，也可能改变非正规就业和本地产业能否存续，治理须关注受益和失去机会的群体。",
+    "answer": "对比村落改造，显示数字治理中介与土地资本、地方权力和分层生产网络相互作用。",
+    "lesson": "比较同一治理工具在不同组织基础上的分化结果。",
+    "locator": "PDF 1–2及比较分析",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字平台、生产网络与地方空间治理——广州服装村更新的比较研究",
+    "authors": [
+      "匡爱平",
+      "汪明峰"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_LJDB33UU",
+    "question": "广州流动人口管理部门为何经历产生、常规化到撤并，任务与技术变化各做了什么？",
+    "significance": "将机构改革从决定撤谁推进到服务怎样完成，关心跨部门办事能力和拆并后的实际责任。",
+    "answer": "纵向案例显示管理转服务和交互式信息系统共同推动跨部门平台化。",
+    "lesson": "先追踪实际任务转变，再看哪些组织边界失去功能。",
+    "locator": "PDF 1–4及历史过程",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "部门的终结：技术替代与任务转型",
+    "authors": [
+      "管兵",
+      "李思函"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_LKAX3BQE",
+    "question": "缺货时同行为何低于市价调货并允许延迟结款，同级赊欠怎样稳定？",
+    "significance": "竞争主体之间既能合作又保留自利动机，单靠纵向市场权力解释不了同行间的交易。",
+    "answer": "建材市场田野发现互利、关系和约定的结算时间维持协作，未显示逐级赊欠中的权力机制。",
+    "lesson": "比较相似交易发生在平级还是纵向关系，检验原机制是否仍适用。",
+    "locator": "PDF 1、20及田野过程",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "互利共赢、社会关系与同级赊欠——以一个建材市场的实际运作为例",
+    "authors": [
+      "王茂福",
+      "史丰源"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_LRB6WF8X",
+    "question": "城市居民判断收入公平更依据地位资源，还是与他人及过去生活的比较？",
+    "significance": "客观不平等与感知可能不同步，政策评估若只看收入排序就难解释分配认同。",
+    "answer": "CGSS2005比较两组理论假设，局部比较获得更多支持，收入关联非线性；PDF若干页只提取到表头，未引用表内精确数值。",
+    "lesson": "给两个解释设计同一个结局和彼此不同的预测。",
+    "locator": "PDF 1–5、12、14–17",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国城市居民的分配公平感研究",
+    "authors": [
+      "马磊",
+      "刘欣"
+    ],
+    "journal": "社会学研究",
+    "year": "2010",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2010.05.002"
+  },
+  {
+    "paper_id": "zotero_LZ6JRDNS",
+    "question": "中国代际阶层继承与流动怎样随时期变化，控制结构变动后机会是否更开放？",
+    "significance": "总流动上升仍可能伴随强继承。辨别体制和市场排斥为研判机会固化提供依据。",
+    "answer": "用三期CGSS区分总体流动、相对开放性与阶层继承及其时期变化。",
+    "lesson": "总体变化与相对机会拆开报告，再检验哪些门槛从体制移到市场。",
+    "locator": "PDF 1、4、18",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "当代中国的代际流动模式及其变迁",
+    "authors": [
+      "李路路",
+      "朱斌"
+    ],
+    "journal": "中国社会科学",
+    "year": "2015",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_M67V7JPB",
+    "question": "缺少准入授权的网约车为何先兴起，后来又获得正式市场地位？",
+    "significance": "现有规制通常把授权当作市场形成前提，此例将市场建构与监管承认的顺序倒过来。",
+    "answer": "平台开放交易生成市场规模，用户与服务者又形成支持网络，二者改变监管回应。",
+    "lesson": "把许可、实际参与及合法性获认分开追踪。",
+    "locator": "PDF 1、6、21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "双重涌现与网约车的市场地位获得——基于平台型社会生产结构的分析",
+    "authors": [
+      "张兆曙",
+      "王朝阳"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_M8ZF9IFG",
+    "question": "文化传承和认同如何支持中国在现代文化建设中走自主道路？",
+    "significance": "从历史延续和理论创新解释文化建设路径的形成，明确何处继承、何处选择。",
+    "answer": "使用历史对照和思想文献讨论文化认同、文化道路及理论发展。",
+    "lesson": "比较组织或制度消失后，实际维系集体连续性的机制是什么。",
+    "locator": "PDF 1、5、9",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "文化建设与独立自主走自己的路",
+    "authors": [
+      "夏春涛"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_MBRG79FK",
+    "question": "电商出现时数字弱势农户被排除，还是在具体条件下也能取得发展机会？",
+    "significance": "技术扩张可能扩大也可能缩小机会差，辨明何种社会支持帮弱势者跨过初始门槛。",
+    "answer": "村庄比较用弱势农户机会识别数字门槛与地方社会条件的共同作用。",
+    "lesson": "以最不容易获益的人为检验对象，找有独立证据的包容条件。",
+    "locator": "PDF 1、4、22及村庄比较",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "电商技术变革与农户共同发展",
+    "authors": [
+      "邱泽奇",
+      "乔天宇"
+    ],
+    "journal": "中国社会科学",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_MDYI6LFN",
+    "question": "渐进转型下的部门差异如何改变初职进入和代内流动，以激进转型为基准的模型为何会失准？",
+    "significance": "使市场转型理论对国家制度和世代边界敏感，避免把不同部门的变化合成一个趋势。",
+    "answer": "CGSS2003模型纳入所有制部门及其与年龄的交互后，支持修订原比较模型。",
+    "lesson": "找出跨环境理论缺了哪个关键分组，以及在哪种模型结论改变。",
+    "locator": "PDF 1、15",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "渐进转型与激进转型在初职进入和代内流动上的不同模式——市场转型分析模型应用于中国转型研究的修订",
+    "authors": [
+      "梁玉成"
+    ],
+    "journal": "社会学研究",
+    "year": "2006",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2006.04.003"
+  },
+  {
+    "paper_id": "zotero_MEDKAQMK",
+    "question": "工厂女工宿舍怎样从管理制度变成工人生活的共同体？",
+    "significance": "识别正式制度中不同人能协商出的非正式安排，为理解劳动生活和以人为本城市建设提供机制。",
+    "answer": "史料对读显示国家、工厂和女工因不同目的重新定义宿舍实践。",
+    "lesson": "同一制度的实际产物可能和设计目的不同，从各行动者如何使用它入手。",
+    "locator": "PDF 1、8及档案分析",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "文化营造与宿舍共同体的生产——以恒源纱厂《人事科女工管理处记事》为核心的分析",
+    "authors": [
+      "司文晶",
+      "宣朝庆"
+    ],
+    "journal": "社会学研究",
+    "year": "2019",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2019.03.004"
+  },
+  {
+    "paper_id": "zotero_MJQZQSDY",
+    "question": "多种社会形态在数字时代叠加时，何种公共性还能支撑社会整合？",
+    "significance": "对高速变化与制度叠加的中国情境提出理论解释，明确团结取决于哪些主体关系。",
+    "answer": "理论论证提出新公共性和从实求知的路径，并未直接测量公共性变化。",
+    "lesson": "把时代叙事还原为共时存在的机制，以及它们在何处产生张力。",
+    "locator": "PDF 1、3、18",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字时代多社会形态叠加与新公共性的再思索",
+    "authors": [
+      "李友梅"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_MYYMWDH7",
+    "question": "为何股东导向型治理在中国企业改革期扩散，关键推动者与美国有何不同？",
+    "significance": "避免把同样制度形式理解成相同扩散机制；可据本土政治与监管行动者解释中国公司治理制度的选择。",
+    "answer": "上市企业数据和业界访谈指向政府在制度传播中的关键作用，跨国金融与本土组织也进入扩散过程。",
+    "lesson": "同一制度在不同国家落地，比较推动者、传播渠道与制度采纳时间。",
+    "locator": "PDF 1、5、15、25、29、33",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "金融全球化与“股东导向型”公司治理制度的跨国传播 对中国公司治理改革的社会学分析",
+    "authors": [
+      "杨典"
+    ],
+    "journal": "社会",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2018.02.002"
+  },
+  {
+    "paper_id": "zotero_N3P8USD3",
+    "question": "数字生态究竟指哪些要素、主体、依存关系和演化机制？",
+    "significance": "去除泛化的生态隐喻，为研究多平台竞争、合作及治理提供可以检查的边界。",
+    "answer": "梳理术语后构建多层动态系统概念，强调非线性变化与相对独立性。",
+    "lesson": "对新概念要求明确元素、交互与什么现象不属于它。",
+    "locator": "PDF 1、10、15",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字生态：概念源流与建构",
+    "authors": [
+      "邱泽奇",
+      "乔天宇",
+      "宋洁",
+      "张平文"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_N69J9FWK",
+    "question": "依赖实践、情境和身体技能的默会知识，在数字条件下如何生成、传递和更新？",
+    "significance": "研究常偏向可文本化的知识，明确隐性技能的重要性才能解释线上资料增加却不一定带来实践能力。",
+    "answer": "分类讨论默会知识的内容、存在基础与生产模式，以时间和能动性区分生成路径。理论分类需要独立测量检验。",
+    "lesson": "补足被忽略的结果类型，问不同类型在同一变化中是否表现一致。",
+    "locator": "PDF 1–4、6–13、15–17",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字时代的默会知识何以生产",
+    "authors": [
+      "杨太文"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_N8KVBVY3",
+    "question": "习近平文化思想对马克思主义文化理论、文明发展和新时代文化建设提出了哪些新的命题？",
+    "significance": "辨清新命题回答的是社会主义文化发展、文明主体性还是党的文化实践，便于进行思想史比较。",
+    "answer": "以政策和理论文本讨论文化的社会作用、建设关系及文明传承，属于理论阐释。",
+    "lesson": "评价理论贡献时找它改变了哪一个既有判断、如何落实到具体议题。",
+    "locator": "PDF 1及理论贡献分节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "习近平文化思想的重大理论贡献",
+    "authors": [
+      "汪信砚"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_NDFVWRZL",
+    "question": "国家内部与国家间分配不平等如何共同塑造国际合作、竞争和全球治理的选择？",
+    "significance": "将对外冲突与内部利益分配相接，给同时改善国内分配和外部合作的政策讨论提供机制。",
+    "answer": "历史比较和框架论证说明两层分配相互牵动，提出改革组合。",
+    "lesson": "把两个层级的利益分配分开，并为跨层影响写出可观察中介。",
+    "locator": "PDF 1、6、8",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "分配不平等视角下的全球治理困境及其破解",
+    "authors": [
+      "郑宇"
+    ],
+    "journal": "中国社会科学",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_NRU2MJFT",
+    "question": "农村人口外流和流入地选择在中国户籍制度下受哪些推力和拉力，远期生活预期怎样参与？",
+    "significance": "解释有工资差还不足以预测谁动、去哪或会否继续留，公共服务障碍需要具体定位。",
+    "answer": "结合调查与个案提出中国情境下的模型，引入生活期望、目标及心理定位。",
+    "lesson": "拆分启动、目的地与长期去留的决定。",
+    "locator": "PDF 1、12及模型分析",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "影响中国城乡流动人口的推力与拉力因素分析",
+    "authors": [
+      "李强"
+    ],
+    "journal": "中国社会科学",
+    "year": "2003",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_NUCFC9KJ",
+    "question": "川南茶馆的公共性究竟表现为公共议政，还是在表演、游戏和谈话中生成？",
+    "significance": "检验西方公共空间范式能否覆盖普通乡村社交，指明公共生活价值并不等于政治参与。",
+    "answer": "集镇民族志将茶馆解释为社会诗性空间，揭示交往活动的具体形式和地方边界。",
+    "lesson": "先观察实际活动，再决定采用哪种公共性指标。",
+    "locator": "PDF 1–2、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“公共空间”的社会诗学——茶馆与川南的乡村生活",
+    "authors": [
+      "宋靖野"
+    ],
+    "journal": "社会学研究",
+    "year": "2019",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2019.03.005"
+  },
+  {
+    "paper_id": "zotero_NW8GFQ9N",
+    "question": "机器从因果推断走到自我意识，需要哪种将自身行动与环境反馈纳入的因果模型？",
+    "significance": "给意识主张提出可讨论的结构条件，区分通常的问题解答能力与主体内部反事实能力。",
+    "answer": "借结构因果模型与意识理论提出自我模型，并未证实现有系统已有意识。",
+    "lesson": "对能力术语给出必要条件和能够排除的边界。",
+    "locator": "PDF 1–2、14",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "机器意识与因果自我模型",
+    "authors": [
+      "吴小安"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_NY2MVXSQ",
+    "question": "自动化与生成式AI分别在哪些技能和职业上带来潜在替代与控制？",
+    "significance": "帮助把劳动风险预判落实到任务，不把学历高低或技术接触本身当作冲击。",
+    "answer": "比较技能组、产业及人口群体的技术暴露与控制，接触风险与实际失业有边界。",
+    "lesson": "区分风险类型和可能承受风险的任务，而非笼统问技术是否好。",
+    "locator": "PDF 1、20及比较节",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究",
+    "authors": [
+      "张咏雪"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_NYVXYIMI",
+    "question": "职业前景与家人团聚、子女教育、住房等家庭完整性约束，怎样关联农民工落户意愿？",
+    "significance": "稳定城市化的决策涉及全家能否在城生活。把注意力从就业改善推进到公共服务和实际定居条件。",
+    "answer": "2010年长三角珠三角调查显示职业发展与家庭条件均有关联，具体模式因地区而异；意愿不是落户行为。",
+    "lesson": "把个人决策背后的家庭约束拆成可分别观察的条件。",
+    "locator": "PDF 2–6、8、20–21",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "从职业发展到家庭完整性：基于稳定城市化分析视角的农民工入户意愿研究",
+    "authors": [
+      "魏万青"
+    ],
+    "journal": "社会",
+    "year": "2015",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2015.05.009"
+  },
+  {
+    "paper_id": "zotero_P4AG5UEJ",
+    "question": "农民工收入及保障改善时，为什么安全、公平和未来感受仍可能恶化？",
+    "significance": "政策仅看收入与参保可能忽略失业风险及生活压力，两个结局应分别测量。",
+    "answer": "CSS2006和2008比较金融危机背景下的经济处境与社会态度，考察保障差别。",
+    "lesson": "现实推进不同步，是比泛泛研究满意度更有用的经验问题。",
+    "locator": "PDF 1、13及两期比较",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "近年来农民工的经济状况和社会态度",
+    "authors": [
+      "李培林",
+      "李炜"
+    ],
+    "journal": "中国社会科学",
+    "year": "2010",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_P6JJQTUP",
+    "question": "大众生活中被排除在传统认识论之外的经验何以经由传播和合法化被当作知识？",
+    "significance": "区分认知证成与符号合法性，有利于讨论平台经验内容能够解决什么问题以及何时需要不同验证标准。",
+    "answer": "思想史与概念分析梳理知识合法化路径，并论证非知识在部分世俗场合的符号地位。",
+    "lesson": "把一个名称的合法化和对象满足原有判定标准区分，追问它如何被承认。",
+    "locator": "PDF 1–5、8–9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“非知识”的知识化：“知识”概念、合法化及价值功能的再思考",
+    "authors": [
+      "于经纬"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_PEX2DD5E",
+    "question": "经济交易与亲密关系叠加时，行动者为何选择维护/重新协调关系，有时却退出？",
+    "significance": "把关系带来的资源和同时要付出的协调成本并列，能解释不同关系策略。",
+    "answer": "提出多维交换中的角色冲突和利益分歧类型，用案例解释成本、策略及退出。",
+    "lesson": "当关系既能帮忙也带来负担，明确在哪两个维度需要协调。",
+    "locator": "PDF 1–2、24",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "谈“钱”还是谈“感情”——多维交换结构中的关系成本与关系策略",
+    "authors": [
+      "刘梦岳"
+    ],
+    "journal": "社会学研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_PGDNBZ2W",
+    "question": "不同居住与流动安排的家庭，在哪些金钱、服务和时间维度更能满足育儿需求？",
+    "significance": "家庭成员同住不必然意味着支持充分。住房、照料安排和代际协作要围绕具体功能评价。",
+    "answer": "紧密式家庭（凝聚式或灵活式）的育儿功能较强，经济和服务维度最突出，关联随家庭情境而变。",
+    "lesson": "用家庭实际供需匹配衡量功能，不以户籍或是否同住单独做代理。",
+    "locator": "PDF 1、20及分析",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析",
+    "authors": [
+      "宋健",
+      "陈文琪"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_PM6G8CD3",
+    "question": "专题中多篇文章分别问智能媒介如何改写人的延伸、媒介概念如何面对文字历史与感知经验等。",
+    "significance": "同一次理论重访有不同证据单位。数字工具、语言文字制度和艺术实践对旧命题的挑战各有边界。",
+    "answer": "附件为论坛合辑，分篇使用媒介史、概念辨析和应用示例；不将各作者观点合成单一实证发现。Zotero年份与卷面显示不同，正式引用需按各篇核。",
+    "lesson": "专题阅读先拆子问题和作者，提炼共同问题时保留有意义的分歧。",
+    "locator": "PDF 1–6、16–20、23–29、33–42",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字沟通时代的媒介研究——六十年后再思《理解媒介》",
+    "authors": [
+      "黄旦",
+      "孙玮",
+      "叶祝弟",
+      "曾军",
+      "马建标",
+      "胡翼青",
+      "孙藜",
+      "吴予敏",
+      "单小曦",
+      "范昀",
+      "吴红雨",
+      "吴冠军",
+      "唐宏峰"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_PUHQSNJ9",
+    "question": "线上趣缘群如何在异步情境维持对话，回应逻辑和线下关系的互惠有什么不同？",
+    "significance": "关系可以靠时序习惯维持，不能看到互动密集便判断强情感联结。",
+    "answer": "关系事件模型发现即时互惠及路径依赖，嵌入互惠方向不同。来源限平台社群。",
+    "lesson": "把发一条、谁回应和是否反复回应放在事件序列里比较。",
+    "locator": "PDF 1、3、24",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字趣缘社群中的互动机制——基于关系事件模型的动态分析",
+    "authors": [
+      "宋庆宇"
+    ],
+    "journal": "社会学研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_Q998TV4G",
+    "question": "基层法院上线智慧司法后，部分部门提效为何反而伴随整体协作失序？",
+    "significance": "组织平均效能提高可能掩盖部门间困难和质量代价。改革评估需要看业务及绩效约束。",
+    "answer": "执行部门受业务性质和科层位置制约，技术红利分配不均叠加案多人少，形成提速与质量风险。",
+    "lesson": "研究技术收益在组织内部怎样分账，再看整个流程有无新的瓶颈。",
+    "locator": "PDF 1、4及部门机制分析",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "红利差异与组织失序——“技术—组织”互构视角下的基层智慧司法",
+    "authors": [
+      "张琪琛"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_QDVAF2KC",
+    "question": "线上为何较容易形成线下未必发生的集体攻击，哪些情境松动了冲突的制约？",
+    "significance": "网络治理可以从单次道德指责转向平台互动条件，通过分类区分认知、情绪和价值机制。",
+    "answer": "以已有调研和热点案例讨论冲突性紧张在线上的消弭和社会心态过程；现有材料主要阐释机制。",
+    "lesson": "以类似行为的线上线下差异为入口追问门槛。",
+    "locator": "PDF 1–3、4–8、9–10",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "条件与机制：网络暴力的社会心态透视",
+    "authors": [
+      "王俊秀",
+      "云庆"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_QTLJU8MH",
+    "question": "缺少历史调查时，能否用书籍中的财富、权力、文化和声望语言测量职业地位变迁？",
+    "significance": "使以前不可连续观察的结构问题能比较，但须区分话语表征与客观地位。",
+    "answer": "对1940至2015书籍语料进行自然语言处理，展示多维职业地位变迁。",
+    "lesson": "数据缺口有时值得单独成为研究问题，先明确代理测量能验证到哪。",
+    "locator": "PDF 1–2、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "社会结构的文本大数据测量——以中国社会职业地位变迁为例(1940—2015)",
+    "authors": [
+      "陈茁"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_QWMA2E38",
+    "question": "企业研发决策没有内部化哪些跨地区和行业收益，创新政策怎样减少网络错配？",
+    "significance": "资金流向有创新的企业与资金流向能扩散知识的环节可能不同，政策选择有明确取舍。",
+    "answer": "以区域和行业网络估计技术外溢与研发错配，模型显示2010年后配置效率上升，创新政策发挥了作用。",
+    "lesson": "测量某个行动者看不到的受益者，确定溢出路径。",
+    "locator": "PDF 1、18及网络模型",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "引入技术外溢视角的中国创新政策",
+    "authors": [
+      "陈斌开",
+      "吴楠",
+      "戴若尘"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_R6FP8HJQ",
+    "question": "一个值得解释的组间或历时差异，怎样成为有信息量且不含错误前提的问题？",
+    "significance": "直接提供选题质量的诊断方法。比较应能发现机制并排除不成立的假设，案例在经验或理论上有份量。",
+    "answer": "借质性案例阐释六项判准与提问反例。转进定量仍须核对测量与识别。",
+    "lesson": "首先验证差异存在，再写出竞争解释和反向证据。",
+    "locator": "PDF 1–4、20",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "质性社会学研究的差异性发问和发问艺术",
+    "authors": [
+      "赵鼎新"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_RLSULDT9",
+    "question": "推进文化自信自强是在什么历史与实践条件下提出，它在文化建设中要实现什么？",
+    "significance": "用形成背景和实践目标理解文化主体性、文化强国与现代化之间的联系。",
+    "answer": "从政策文本及现代化实践阐释文化自信、自强和文化目标。",
+    "lesson": "解释政策表述时区分提出背景、机制主张、实施结果。",
+    "locator": "PDF 1、6及其余论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“推进文化自信自强”的出场逻辑与创新价值",
+    "authors": [
+      "李凤亮"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_S3592BHS",
+    "question": "语言模型模拟社会角色答题时会强化哪些刻板印象？生成答案和已有平台回答的语义分布有何差别？",
+    "significance": "把模型能力与文化同质化分开评价，关心平台答案多样性和偏见如何形成。",
+    "answer": "模拟回答强化性别和年龄等角色刻板印象，语义更集中并趋向中立或高赞人类回答。样本为模拟产出与已有回答。",
+    "lesson": "在相同任务与提示下比较技术输出，再区分出现、传播和被使用。",
+    "locator": "PDF 1、8、23–24",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "人工智能社会化：内容生成与符号重塑",
+    "authors": [
+      "刘河庆"
+    ],
+    "journal": "社会学研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_S64EMKIE",
+    "question": "为何中国式现代化的实践与理论创新从外部挑战下的回应转向主动生成，并怎样巩固文化主体性？",
+    "significance": "解释文化主体性来自怎样的实践及理论构造，明确中国现代化路径的内生选择。",
+    "answer": "历史与理论论证从生成、性质、实践与哲学等层面分析现代化和文化主体性的关系。",
+    "lesson": "对自主性主张同时询问实际行动和供其成立的理论根据。",
+    "locator": "PDF 1、11、13",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中华民族文化主体性在新时代的创新逻辑",
+    "authors": [
+      "韩庆祥"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_S77TX3SE",
+    "question": "年龄结构变化为何使当前社会经济制度不再配合，需要怎样跨部门调整？",
+    "significance": "强调全生命周期与社会整合，老龄化政策不能只面向当期老年人或单一机构。",
+    "answer": "政策分析讨论人口、健康、保障和参与的统筹，并提出常态协调机制。",
+    "lesson": "将人口趋势与制度承载能力错位作为解释对象。",
+    "locator": "PDF 1、8及政策框架",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "公共政策视角下的中国人口老龄化",
+    "authors": [
+      "彭希哲",
+      "胡湛"
+    ],
+    "journal": "中国社会科学",
+    "year": "2011",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_SRX53GG8",
+    "question": "饭圈动员怎样把日常喜好和艺人竞争变成持续的群体极化？",
+    "significance": "在高度策略化、重复发生的线上行动里检验经典群体极化解释，治理对象可转向动员结构而非仅治理单次冲突。",
+    "answer": "经验材料展示策略化传播和边界强化，挑战完全用群体无意识解释的做法；不能推出治理措施效果。",
+    "lesson": "找出把普通参与导向集体冲突的重复机制。",
+    "locator": "PDF 1、3–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "饭圈的日常极化：表现形式、发生机理与演化效应",
+    "authors": [
+      "崔志梅"
+    ],
+    "journal": "中国青年研究",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2022.0138"
+  },
+  {
+    "paper_id": "zotero_T3VDS6L4",
+    "question": "优质均衡的目标下，城区学校为何仍形成层级，校内教学与校外资源如何互相强化？",
+    "significance": "教育公平从名校建设转向不同居民的入学和所学机会，解释同一政策目标面对的资源分割。",
+    "answer": "新区案例追踪居住、生源和统一评价下的教学分化，给出双过程解释。",
+    "lesson": "把政策目标与执行取舍同时写入发问，分别观察学校内外的机制。",
+    "locator": "PDF 1、4、15",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "学校何以层级化?——一个城区学校变动的案例研究",
+    "authors": [
+      "沈洪成"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_THTTFWSX",
+    "question": "技术对平等参与和理性讨论的承诺，为何在平台资本逻辑下伴随新的公共讨论失灵？",
+    "significance": "将技术开放与实质可见、公民判断和平台把关区分，围绕具体病理讨论不同治理责任。",
+    "answer": "规范理论与平台批判提出公共功能重塑路径，包括公民与把关体系；未对政策实施做效果识别。",
+    "lesson": "用规范目标对照实际分配过程，并分别定义参与、可见和讨论质量。",
+    "locator": "PDF 1–2、4–8、9–10",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "跳出“平等和理性的双重狡计”——“数字公共领域”的病理逻辑与功能重塑",
+    "authors": [
+      "孙榆慧",
+      "孙国东"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_TJ4AL5Z9",
+    "question": "第一波与后续疫情中的恐慌、焦虑和抑郁为何波动不同，风险沟通和社会支持怎样改变轨迹？",
+    "significance": "为应急管理区分需要缓解威胁感知与需要恢复社会支持的场景。",
+    "answer": "用Twitter、GDELT及风险治理指标比较时间与国别，对不同情绪提出不同解释；数字足迹有代表性边界。",
+    "lesson": "同一冲击下拆开多种结果及各自的时间窗。",
+    "locator": "PDF 1、22及数据方法",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "重大疫情下社会情绪的演变机制——基于Twitter和GDELT等大数据的分析",
+    "authors": [
+      "龚为纲",
+      "朱萌",
+      "陈浩"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_TJ9HUEP2",
+    "question": "不同媒介为何都能重组人理解和参与历史的方式，媒介作用怎样嵌入社会环境？",
+    "significance": "媒介研究可以从内容单向传递扩展到感知、组织和生活实践，能具体判断媒介技术在中国场景的作用。",
+    "answer": "从报刊等媒介的经验与历史材料讨论媒介和社会的相互制约；文章主要是解释与理论展开。",
+    "lesson": "用社会实践的改变检验媒介何以重要，保持历史范围与比较对象清晰。",
+    "locator": "PDF 1–3、5–8",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "理解媒介的威力——重识媒介与历史",
+    "authors": [
+      "黄旦"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2022",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_TSVM4QCW",
+    "question": "三所精英高校自主招生破格录取者来自怎样的家庭，他们入学后的表现能否支持选才效率主张？",
+    "significance": "同一招生工具兼有公平和有效选才目标，需要分别检验额外名额分配给谁，以及取得机会是否对应更多可观察的人才表现。",
+    "answer": "高校追踪调查中破格录取者出身更占优；所比较的发展结果未显示明确优势。样本仅含特定高校在校生。",
+    "lesson": "把制度争论拆成受益群体和绩效两项检验，允许结论不同。",
+    "locator": "PDF 2–4、8、10–11、14、23–24",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国高等教育中的自主招生与人才选拔:来自北大、清华和人大的发现",
+    "authors": [
+      "吴晓刚",
+      "李忠路"
+    ],
+    "journal": "社会",
+    "year": "2017",
+    "origin": "zotero_pdf",
+    "doi": "10.15992/j.cnki.31-1123/c.2017.05.006"
+  },
+  {
+    "paper_id": "zotero_TTRSU28K",
+    "question": "居美中国高技术移民为什么在灵活雇佣下更依赖雇主，高技能何时不等于职场议价能力？",
+    "significance": "区分劳动者技能与法律身份给出的行动空间，将表面职业优势和失业风险解释到制度层面。",
+    "answer": "科学家和工程师访谈追踪身份与雇佣条件限制择业。",
+    "lesson": "在看似有资源的群体里查找哪些外部条件让资源不能兑现。",
+    "locator": "PDF 1–2、22",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "灵活雇佣与学术资本主义——在美中国高技术移民的依附性困境研究",
+    "authors": [
+      "张洪"
+    ],
+    "journal": "社会学研究",
+    "year": "2019",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2019.06.004"
+  },
+  {
+    "paper_id": "zotero_UDPHMFKL",
+    "question": "中国家庭为何居住单位变小但支持仍网络化，应如何重构家庭政策？",
+    "significance": "户结构简化不等于家庭功能消失，养老和育儿政策要识别跨户照料、支持与新型家庭。",
+    "answer": "1982–2010普查与家庭文献区分形与功能，分析去家庭化和再家庭化取向。",
+    "lesson": "可观察结构与实际功能应独立定义和测量。",
+    "locator": "PDF 1、10及政策分析",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "当代中国家庭变迁与家庭政策重构",
+    "authors": [
+      "彭希哲",
+      "胡湛"
+    ],
+    "journal": "中国社会科学",
+    "year": "2015",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_UJTG4PUK",
+    "question": "教育扩张提升了谁的代际上升机会，基础和高等教育不同阶段的受益是否集中？",
+    "significance": "区分教育规模与机会分配，明确基础教育均等和高校弱势资助分别针对何种差距。",
+    "answer": "2013住户数据比较父代教育、城乡和出生组，扩张收益的家庭分布随阶段而异。",
+    "lesson": "问‘谁得到新增机会’比只问‘扩张有没有用’更能产生政策含义。",
+    "locator": "PDF 1、4、19",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "教育扩张与教育的代际流动性",
+    "authors": [
+      "罗楚亮",
+      "刘晓霞"
+    ],
+    "journal": "中国社会科学",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_UNUBRMCD",
+    "question": "恋爱一词的传播如何重塑情感叙述、当事人自决及五四文学观念？",
+    "significance": "相同含义的假定会抹去语言、伦理与文化冲突，追踪概念让变迁可具体对照。",
+    "answer": "以晚清到五四文学、译词和新伦理论争说明命名的接受、污名与规范重建。",
+    "lesson": "从同一词的历史语境变化追问行为何时获得公开承认。",
+    "locator": "PDF 1、6及文学史分析",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“恋爱”之发生与现代文学观念变迁",
+    "authors": [
+      "杨联芬"
+    ],
+    "journal": "中国社会科学",
+    "year": "2014",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_UWLWPBL5",
+    "question": "自由平等的个体如何形成共同善，共同体如何维持共同发展而容纳差异？",
+    "significance": "个人自主与集体约束的张力可用制度安排具体化，涉及自由、公民身份与全球共同治理。",
+    "answer": "重构共同体思想，强调持续互动中平等个体的共同发展；规范论证不是行为数据。",
+    "lesson": "将对立的价值具体化为能否同时满足的制度条件。",
+    "locator": "PDF 1–3、5–8",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "自由与共同善如何兼容——一种共同体理论的重构及其当代启示",
+    "authors": [
+      "柏松子",
+      "卞绍斌"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_V3I8PM35",
+    "question": "社会连结在什么条件下形成公共团结，治理如何同时维持活力与秩序？",
+    "significance": "参与增加和公共合作是不同结果，有利于判断基层治理与较高层级制度协调的工作目标。",
+    "answer": "概念和历史论证辨析社会性、公共性，提出小治理和大治理衔接。",
+    "lesson": "将过于宏大的治理理念具体化为由谁连结、为何合作的关系。",
+    "locator": "PDF 1、15及结论",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "社会治理与公共生活：从连结到团结",
+    "authors": [
+      "冯仕政"
+    ],
+    "journal": "社会学研究",
+    "year": "2021",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_V458LHYG",
+    "question": "家政经纪人为什么在劳动强度高、短期回报与长期期待相距甚远时仍主动加倍投入？",
+    "significance": "把创收激励和对未来的身份期待联系起来，解释自主表象下的劳动控制及其成本。",
+    "answer": "上海一家公司的访谈和观察追踪提成、体验与表彰让员工把现实期待转向中产愿景的过程。",
+    "lesson": "先找经营安排如何改变员工判断，不把投入直接等同于满意。",
+    "locator": "PDF 1–2、20",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "打造“渴望”:经纪人的工作自主性与劳动控制——以上海JH家政公司为例",
+    "authors": [
+      "苏熠慧",
+      "施瑶"
+    ],
+    "journal": "社会学研究",
+    "year": "2023",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_V4HKWDP3",
+    "question": "网约车平台为什么要把分散劳动者组织得更科层化，又靠什么资源做到？",
+    "significance": "监管压力能解释动机，控制关键资源才解释平台的能力。把两者分开有助定位治理责任。",
+    "answer": "平台田野比较演变过程，提出绩效任务、政府压力和外部资源依赖组成动力与能力。",
+    "lesson": "追问行动为什么发生和为什么能实现，两者各自需要证据。",
+    "locator": "PDF 1、18",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "互联网平台劳动力组织形式的演变过程与机制——一个“动力—能力”的分析框架",
+    "authors": [
+      "赵磊",
+      "杨伟国",
+      "陈龙"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_VDZN3C97",
+    "question": "政府补贴给谁、给多少才减少收入差距，规模扩大后再分配效率为何可能下降？",
+    "significance": "总基尼下降与补贴瞄准效率是两回事，有助区分加大投入与改变对象。",
+    "answer": "用基尼路径和最小基尼参照比较补贴反事实，结论受收入和分配假设约束。",
+    "lesson": "给比较提供明确可行的配置基准，分开政策规模与落点。",
+    "locator": "PDF 1、4、18",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "政府补贴的收入再分配效应",
+    "authors": [
+      "徐静",
+      "蔡萌",
+      "岳希明"
+    ],
+    "journal": "中国社会科学",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_VPDKCI4P",
+    "question": "青年为何偏好低负担的轻社交，这种转型如何改变都市关系形态？",
+    "significance": "把轻社交看成社会化经历、风险与生活安排下的选择，关系质量及公共生活的变化比社交次数更值得研究。",
+    "answer": "访谈和田野解释社交需求及能力变化，提出浅缘社会；尚无总体发生率或世代方式的因果区分。",
+    "lesson": "从平台使用延伸到同一群体的整体生活处境、需求和能力。",
+    "locator": "PDF 1–2、5–7、9",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "轻社交与浅缘社会：新生代青年的社交转型及其社会后果",
+    "authors": [
+      "王德福"
+    ],
+    "journal": "中国青年研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2024.0063"
+  },
+  {
+    "paper_id": "zotero_VS44I6GH",
+    "question": "如何从民生保障解释中国人权制度与实践中的权利层次及相互关系？",
+    "significance": "概念比较让抽象权利与制度覆盖、资源和落实条件相联系，帮助明确跨社会比较对象。",
+    "answer": "理论分析按概念、制度和实践展开，对个人/集体、普遍/特殊等权利关系提出判断。",
+    "lesson": "把价值命题拆成可比较的制度安排与实现条件。",
+    "locator": "PDF 1、7、20",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "民生保障视野下的中国式人权道路：概念、制度与范式",
+    "authors": [
+      "景天魁",
+      "刁鹏飞"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_VSPDS3FP",
+    "question": "文化的自主性在经验分析中究竟解释了什么，怎样防止把行动者意义当成任意阐释？",
+    "significance": "回应文化强范式因果主张和实证能力的落差，让公共文化、个人图式与制度条件进入可复查的解释。",
+    "answer": "评估强范式并提出以行动者和文化图式为基础的类型化路径。",
+    "lesson": "先定位待解释的谜题，再检查独立测量能否区分文化与结构条件。",
+    "locator": "PDF 1、8、23",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "发挥文化的“解释力”:对文化社会学强范式的反思",
+    "authors": [
+      "胡安宁"
+    ],
+    "journal": "社会学研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_WHP496XZ",
+    "question": "市场转型后户口及户籍等级仍怎样影响社会机会，哪类体制内外流动最受约束？",
+    "significance": "转型增加机会不等于消除原制度，找仍粘附在公共资源入口的户籍差异。",
+    "answer": "调查检验城乡和城市等级、户口迁移与代际流动的关系。",
+    "lesson": "不要问旧制度是否整体失效，逐一检查其影响留在哪个通道。",
+    "locator": "PDF 1、3、12",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "户口还起作用吗——户籍制度与社会分层和流动",
+    "authors": [
+      "陆益龙"
+    ],
+    "journal": "中国社会科学",
+    "year": "2008",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_WN348NVM",
+    "question": "中国社会学如何用行动伦理理解关系社会，并与传统研究资源开展实质对话？",
+    "significance": "区别借用概念与解释具体社会行动，确立本土概念应接受怎样的经验检验。",
+    "answer": "梳理接轨与自觉阶段，从当代关系中的行动伦理讨论与传统学术的连接。",
+    "lesson": "研究中国经验时先说明已有理论解释不了的具体行动规则。",
+    "locator": "PDF 1、10、19",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "行动伦理与“关系社会”——社会学中国化的路径",
+    "authors": [
+      "周飞舟"
+    ],
+    "journal": "社会学研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2018.01.003"
+  },
+  {
+    "paper_id": "zotero_WQVELBCJ",
+    "question": "附着于岗位的内外职场交往各怎样关联工资，两类部门的回报是否不同？",
+    "significance": "把岗位带来的接触机会从私人社交网络中分开，有助解释什么时候组织能提供有收入价值的关系。",
+    "answer": "八城市职业经历调查以初职到现职差分做比较，外部交往及部门表现有差别，时变混杂仍是限制。",
+    "lesson": "在同个人的不同工作经历中比较组织给的接触机会。",
+    "locator": "PDF 1–2、14及估计节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "中国人的职场交往与收入——基于差分方法的社会资本分析",
+    "authors": [
+      "刘伟峰",
+      "陈云松",
+      "边燕杰"
+    ],
+    "journal": "社会学研究",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2016.02.003"
+  },
+  {
+    "paper_id": "zotero_X5GM6Z7G",
+    "question": "缺少经济和内部晋升激励时，综艺节目制作团队为何仍投入高强度劳动？",
+    "significance": "抓住传统劳动控制解释的例外，理解创意劳动中体验、热爱和非经济激励怎样承担控制功能。",
+    "answer": "行业经验材料分析管理者的关系、情感和情怀工作，解释娱乐体验与高强度劳动并存。",
+    "lesson": "先明确旧机制应存在却缺失的条件，再追查替代机制。",
+    "locator": "PDF 1、7、18",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "另一种娱乐至死?——体验、幻象与综艺娱乐节目制作过程中的劳动控制",
+    "authors": [
+      "贾文娟",
+      "钟恺鸥"
+    ],
+    "journal": "社会学研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2018.06.007"
+  },
+  {
+    "paper_id": "zotero_XBKDFANE",
+    "question": "高技术企业研发员工的自主管理什么时候会转化为自我控制？",
+    "significance": "自主性和劳动风险可共存，这关系到雇用制度与生活成本怎样影响劳动者选择。",
+    "answer": "企业个案将市场化雇用和生活再生产压力联系到被迫同意及个人经营。",
+    "lesson": "比较看似主动的选择背后可行替代项是否真实存在。",
+    "locator": "PDF 1、3、21",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "以自我为企业——过度市场化与研发员工的自我经营",
+    "authors": [
+      "严霞"
+    ],
+    "journal": "社会学研究",
+    "year": "2020",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2020.06.007"
+  },
+  {
+    "paper_id": "zotero_Y28WBZUE",
+    "question": "为何家庭为住房、婚育等项目性消费增加劳动，却在日常消费上保持节制？",
+    "significance": "消费促进不能只看收入可支配额，还要区分奋斗目标、支出用途和文化规范。",
+    "answer": "提出儒家二元消费伦理，讨论勤俭及数字示范的文化机制，需另验证竞争解释。",
+    "lesson": "把同一人的两类看似相反行为并置，寻找共享目标。",
+    "locator": "PDF 1、21及理论节",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "文化视角下的中国消费密码",
+    "authors": [
+      "王宁"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_YG5EIDZ6",
+    "question": "流动门槛怎样改变劳动力选址和不同规模城市的人口分布？",
+    "significance": "让户籍与城镇化政策同时面对劳动力流向和城市体系目标，在不同地方检查模拟前提。",
+    "answer": "依据等级–规模和空间模型模拟户籍限制及房租的配置后果，非直接改革评估。",
+    "lesson": "用明确反事实将个人选址约束连接到体系结果。",
+    "locator": "PDF 1、19、24",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "户籍改革、劳动力流动与城市层级体系优化",
+    "authors": [
+      "梁琦",
+      "陈强远",
+      "王如玉"
+    ],
+    "journal": "中国社会科学",
+    "year": "2013",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_YL9FHT48",
+    "question": "用拼音字母经验解释文明变迁时，汉字的字形、声音和制度史会怎样挑战麦克卢汉的推论？",
+    "significance": "检验理论的经验范围，避免把特定文字媒介的历史效应当成所有文字体系的规律。",
+    "answer": "对读媒介文明史和汉语制度材料，指出不能将汉字与语音、组织制度的关系静态化。",
+    "lesson": "找一个理论默认不显眼的适用边界，再寻找有独立史料的反例。",
+    "locator": "PDF 1–5",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "附身汉字的“字母幽灵”——重思麦克卢汉的媒介文明史观",
+    "authors": [
+      "孙藜"
+    ],
+    "journal": "探索与争鸣",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_YT4M3TW8",
+    "question": "家长为何购买不同种类的校外教育，家长关系、性别和家庭阶层怎样分别影响机会？",
+    "significance": "将儿童消费同时视为教育投资与亲情表达，可解释相同收入为何兑换成不同校外机会。",
+    "answer": "CEPS比较课程辅导和兴趣班，家庭陪伴、同住与阶层化偏好具有不同关联。",
+    "lesson": "同一类支出分拆成用途，并区分经济条件和家庭意义。",
+    "locator": "PDF 1、3、22",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "“购买希望”:城镇家庭中的儿童教育消费",
+    "authors": [
+      "林晓珊"
+    ],
+    "journal": "社会学研究",
+    "year": "2018",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2018.04.007"
+  },
+  {
+    "paper_id": "zotero_YXBV5RNH",
+    "question": "虚拟情感交往可满足何种需求，又如何改变青年形成自身主体性的条件？",
+    "significance": "用交往理论追问虚拟互动提供的承认和互惠能否支撑社会发展；为区分支持性功能和依赖风险给出理论标准。",
+    "answer": "概念性论证讨论数智技术、情感补偿与他者性边界。行为发生率和干预效果需要另作经验研究。",
+    "lesson": "用一项既有理论对新现象提出机制性标准，并列明确可检验的反面。",
+    "locator": "PDF 1–2、4–7",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "Z世代虚拟情感交往的生成逻辑、潜在风险与优化路径——基于马克思交往理论的审视",
+    "authors": [
+      "冯刚",
+      "李晓静"
+    ],
+    "journal": "中国青年研究",
+    "year": "2026",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2026.0024"
+  },
+  {
+    "paper_id": "zotero_Z2AR5XLV",
+    "question": "网络货运企业怎样由不被承认走向分别获得监管、交易与认知合法性？",
+    "significance": "区分拿到许可、合作方愿意参与和被行业承认为典型，能解释企业如何经过不同门槛。",
+    "answer": "案例追踪缓冲、让渡及政治关联策略，三类合法性可相互转化。",
+    "lesson": "将抽象合法性改写成由哪个行动者承认、认可何事。",
+    "locator": "PDF 1–2、10",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "数字经济下网络货运企业的合法性获得机制——基于上市企业LG的社会学研究",
+    "authors": [
+      "韩继翔",
+      "沈垚"
+    ],
+    "journal": "社会学研究",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_Z9QEYNL3",
+    "question": "从农村家庭出发，丈夫或妻子单独、同地或异地外出怎样组合，哪些家庭条件关联不同安排？",
+    "significance": "流入地样本容易漏掉留守者与未迁成员，改变对家庭结合、儿童照料和迁移政策的判断。",
+    "answer": "用CFPS界定家庭及不同类型的夫妻安排，分决策情境比较关联。",
+    "lesson": "抽样单位先覆盖问题可能发生的全部成员，再定义结果。",
+    "locator": "PDF 1、4及研究设计",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "外出还是留守?——农村夫妻外出安排的经验研究",
+    "authors": [
+      "李代",
+      "张春泥"
+    ],
+    "journal": "社会学研究",
+    "year": "2016",
+    "origin": "zotero_pdf",
+    "doi": "10.19934/j.cnki.shxyj.2016.05.008"
+  },
+  {
+    "paper_id": "zotero_ZBEUMV5I",
+    "question": "高校学生在恋爱动机、择偶、责任和性价值上有哪些传统与现代因素并存，群体差异怎样？",
+    "significance": "把笼统的价值观变迁落实到多个可以产生不同方向变化的维度，便于解释青年的实际选择。",
+    "answer": "北京三校问卷显示个体自主倾向与重视父母意见等并存，呈现性别、年级等比较。适用范围为调查样本。",
+    "lesson": "把整体的价值变迁拆成行为标准、实际态度和情境选择。",
+    "locator": "PDF 1–3、4–6",
+    "reviewed_at": "2026-11-18",
+    "review_status": "substantive_sections_reviewed",
+    "title": "当代大学生的婚恋价值观研究",
+    "authors": [
+      "《青少年价值观测评指标体系模型研究》课题组",
+      "王东"
+    ],
+    "journal": "中国青年研究",
+    "year": "2011",
+    "origin": "zotero_pdf",
+    "doi": "10.19633/j.cnki.11-2579/d.2011.05.011"
+  },
+  {
+    "paper_id": "zotero_ZH8E2LXI",
+    "question": "女性教育上升后夫妻教育匹配如何改变，不同匹配的二孩生育差异如何随队列变化？",
+    "significance": "把女性个人教育扩展到夫妻相对位置和性别分工，指导对婚配结构变化下生育支持对象的研究。",
+    "answer": "CFPS分析高学历同质婚及女性教育超过丈夫等变化，并跟踪不同组合的生育差异，观察性。",
+    "lesson": "区分女性资源总量、配偶相对位置及两者随队列的改变。",
+    "locator": "PDF 1、3、20",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "女性教育提升与生育行为变迁——基于夫妻匹配视角的研究",
+    "authors": [
+      "卿石松"
+    ],
+    "journal": "社会学研究",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_ZHAN6EV7",
+    "question": "习近平文化思想在哪些方面推进文化建设和现代文明的理论，如何组织自信、开放与创新？",
+    "significance": "将思想的创新分解为可比较的理论命题和文明发展含义，便于梳理选择及其依据。",
+    "answer": "以两个结合及文化思想文本讨论文化主体性、话语和发展路径，属于规范与理论论述。",
+    "lesson": "区分理论判断、政策愿景和后续可检验的落实问题。",
+    "locator": "PDF 1及五项理论论述",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "习近平文化思想的创新蕴涵与文明意义",
+    "authors": [
+      "冯鹏志"
+    ],
+    "journal": "中国社会科学",
+    "year": "2024",
+    "origin": "zotero_pdf",
+    "doi": ""
+  },
+  {
+    "paper_id": "zotero_ZWQPLKUS",
+    "question": "从狭义AI到通用和超级智能，是否可以当作量变，哪些性质转变构成断裂？",
+    "significance": "提出判断工具变为主体等变化所需的标准，让技术分类和伦理讨论有明确边界。",
+    "answer": "从工具、主体、知识和存在侧面辨析技术与哲学断裂，使用概念论证与思想实验。",
+    "lesson": "当连续进步是默认前提时，写明什么证据或性质会构成类别变化。",
+    "locator": "PDF 1–2、15",
+    "reviewed_at": "2026-11-19",
+    "review_status": "substantive_sections_reviewed",
+    "title": "人工智能连续论反思与存在论探析",
+    "authors": [
+      "杨庆峰"
+    ],
+    "journal": "中国社会科学",
+    "year": "2025",
+    "origin": "zotero_pdf",
+    "doi": ""
+  }
+]

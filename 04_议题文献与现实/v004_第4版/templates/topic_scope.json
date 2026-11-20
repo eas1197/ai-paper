@@ -1,0 +1,20 @@
+{
+  "template": true,
+  "theme": null,
+  "issue": null,
+  "question_candidates": [],
+  "search_scope": null,
+  "journal_aliases_review_status": "pending",
+  "status": "not_selected",
+  "issue_candidates": [],
+  "issue_generation_stage": "04",
+  "issue_status": "to_be_generated",
+  "issue_is_frozen": false,
+  "selection_bases": [
+    "reality_context",
+    "theoretical_opportunity",
+    "policy_relevance",
+    "researchability"
+  ],
+  "revision_log": []
+}

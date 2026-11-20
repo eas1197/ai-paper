@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "module_id": "02",
+  "module_version": 5,
+  "resource_version": 4,
+  "resource_snapshot_id": "structure_candidate_r4_architecture_2_1",
+  "lifecycle": "build_once_reuse_many",
+  "status": "needs_review",
+  "files": [
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+      "sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/templates/写作计划.md",
+      "sha256": "afc19b2a2dd780da6b8046a0ade9380da8fa35b8821461fddc571f1d9ba75d43"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/00_研究怎样产生.md",
+      "sha256": "73fb799abfd652b2794bfb7797aa2a7bf49ffd9a1e29d38d0e482d3184753a76"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/04_摘要.md",
+      "sha256": "18ded4f8a3b77981420da588a56214f80fce8a0c4883ade0769948176f955943"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/05_引言.md",
+      "sha256": "2fa9010028faed8c632ffb3955b5ad7707647e76add92160d9852d08be68269b"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/06_文献回顾.md",
+      "sha256": "49a68605f270b1ca4157683c814616901914b6402241fba1a1748357da41ba73"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/07_理论与假设.md",
+      "sha256": "65806baedca854fc850caa7fd836aa6b8bbc1f8a13bae7d9dbe34b04c8218001"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/章节规范/08_研究设计.md",
+      "sha256": "9fa6989372df0ca03bb034da9a9ab594a46316e7fe45c70092b5fb28be859005"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/引言专项对比.md",
+      "sha256": "71f50829c6fe3e5692777526b4053fd3ef64496005e90dda45512bb174b3b5c1"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/intro_comparison_evidence.json",
+      "sha256": "2c54b4e7c26a9dfb3e4d919bbf58f596e6a012f17f2f62413a38530db0f18e12"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/corpus20.csv",
+      "sha256": "515c9825026e063c92281b57f15246f08a30bff39b1146b1ccdca47f0b1eddd4"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_moves.csv",
+      "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/abstract_sentences.csv",
+      "sha256": "cbe750ae4a56f064e41ee2397a016339e775eec18fa563346f151a4682a9b5ce"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_handbook.md",
+      "sha256": "b1e9aad521197da084e12bc6f7fae1ae393efe8c55825b1f86ca8e18e9cb3c4f"
+    }
+  ],
+  "business_gate_report": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+  "writing_norm_available": true,
+  "note": "架构2.1规范可用；8篇引言专项回查不替代20篇逐段精校与G2验收。"
+}

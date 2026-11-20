@@ -1,0 +1,40 @@
+{
+  "verified_at": "2026-11-18",
+  "workflow_tests": {
+    "passed": 19
+  },
+  "framework_tests": {
+    "passed": 9,
+    "structure_valid": true
+  },
+  "resource": {
+    "journal_items": 195,
+    "unique_articles": 187,
+    "pdf_hashes_verified": 185,
+    "abstract_only": 2,
+    "case_reviews": 21,
+    "question_patterns": 9,
+    "zotero_read_method": "stable_db_and_wal_copy",
+    "matched_input_sha256": "679a9f970f34d958740925599fceed26e567f590c7fd03eaecf2cfdfe5adfe38",
+    "snapshot_sha256": "ba21fcf2b9708cbb33342ec6fd8059897dbf7990045339fcdc6bc64285d542ea",
+    "inventory_sha256": "b71c3a2aa74886d9024b7f4ca7fb5ab3b71493ba94dfe832038a0c35e716ad25"
+  },
+  "exploratory_trial": {
+    "run_id": "topic_review_edu_20261118",
+    "stage": "05",
+    "attempt": 1,
+    "status": "needs_review",
+    "gate_report_sha256": "a95d1852ea190139e0804073a3f1e8e030d93e9641cd6284c6c89973fc2ba174",
+    "audit_counts": {
+      "pass": 0,
+      "revise": 0,
+      "reject": 1,
+      "missing": 0
+    },
+    "recalled_reviewed_examples": 6,
+    "recalled_opening_candidates": 4,
+    "analysis_frozen": false,
+    "external_model_called": false
+  },
+  "formal_research_approved": false
+}

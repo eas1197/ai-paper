@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "pack_id": null,
+  "run_id": null,
+  "created_at": null,
+  "question_design_sha256": null,
+  "files": [],
+  "upstream_gate_reports": [],
+  "required_contents": [
+    "core25_and_evidence",
+    "structure_language_rules",
+    "method_examples",
+    "dictionary_sample_flow",
+    "analysis_code_environment",
+    "actual_tables_figures",
+    "facts_citations_ledger"
+  ],
+  "status": "not_frozen",
+  "writing_mode": "single"
+}

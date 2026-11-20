@@ -1,0 +1,9 @@
+{
+  "journal_id": "J035",
+  "source_url": "https://zzs.ujs.edu.cn/gxjygl/CN/column/column14.shtml",
+  "retrieved_at": "2026-11-16T15:04:57.238628+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "ReadTimeout",
+  "reason": "HTTPSConnectionPool(host='zzs.ujs.edu.cn', port=443): Read timed out. (read timeout=8)"
+}

@@ -1,0 +1,17 @@
+{
+  "module_id": "03",
+  "name": "学术语言学习",
+  "version": 3,
+  "version_label": "第3版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "needs_review",
+  "depends_on": ["02", "10"],
+  "expected_artifacts": ["language_rules.csv", "original_examples.md", "language_audit.csv"],
+  "folders": ["assets", "templates", "tools", "outputs"],
+  "execution_scope": "shared_resource",
+  "resource_version": 1,
+  "current_attempt": "outputs/资源建设_attempt001",
+  "formal_release": false,
+  "note": "语言定向审读候选已构建，G2未通过，不认证连续全文精读或G3放行。"
+}

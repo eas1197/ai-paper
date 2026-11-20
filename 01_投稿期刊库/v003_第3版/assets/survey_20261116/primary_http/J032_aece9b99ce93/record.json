@@ -1,0 +1,20 @@
+{
+  "journal_id": "J032",
+  "source_url": "https://zggjyj.cahe.edu.cn/CN/news/news10003.shtml",
+  "retrieved_at": "2026-11-16T15:03:53.060085+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zggjyj.cahe.edu.cn/CN/news/news10003.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J032_aece9b99ce93/text.txt",
+  "sha256": "cbabe21e72723eec24eab74917b4b766a1aaabadfc0c5796f8a504ec721c3364",
+  "original_path": "primary_http/J032_aece9b99ce93/response.html",
+  "original_sha256": "d914f5604c9441d07dbd8cce38efacdb15fd37bb114fc6d768b193731ff41b3a",
+  "line_count": 82,
+  "title": "中国高教研究",
+  "guideline_links": [
+    "https://zggjyj.cahe.edu.cn/CN/item/downloadFile.do?id=10003"
+  ],
+  "review_status": "awaiting_source_readback"
+}

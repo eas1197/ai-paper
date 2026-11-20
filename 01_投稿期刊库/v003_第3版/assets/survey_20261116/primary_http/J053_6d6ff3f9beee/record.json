@@ -1,0 +1,18 @@
+{
+  "journal_id": "J053",
+  "source_url": "https://njsh.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?t=v&c=1",
+  "retrieved_at": "2026-11-16T15:05:03.356845+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://njsh.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?t=v&c=1",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J053_6d6ff3f9beee/text.txt",
+  "sha256": "f80d27dfa064ef707144a865c3e6e539c040184c9ea2460380036fcf6cb17cf5",
+  "original_path": "primary_http/J053_6d6ff3f9beee/response.html",
+  "original_sha256": "5373b1fe83f5f065f54ff4cc7f6482f32eec85a5b0a43d3deb5f705c79f7627b",
+  "line_count": 57,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

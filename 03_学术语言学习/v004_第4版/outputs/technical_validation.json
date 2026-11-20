@@ -1,0 +1,22 @@
+{
+  "technical_status": "passed",
+  "errors": [],
+  "style_focus": [
+    "词语选择",
+    "句法",
+    "句子节奏",
+    "衔接",
+    "作者声音"
+  ],
+  "counts": {
+    "corpus_papers": 20,
+    "reviewed_passages": 40,
+    "style_patterns": 15,
+    "sentence_exercises": 15,
+    "paragraph_exercises": 5
+  },
+  "business_gate_status": "needs_review",
+  "G3_passed": false,
+  "checked_at": "2026-11-15T14:14:13.415556+08:00",
+  "note": "技术核验不是对学习效果的独立评分，也不认证全文精读。"
+}

@@ -1,0 +1,237 @@
+{
+  "validated_at": "2026-11-15T16:31:50.275600+08:00",
+  "technical_passed": true,
+  "checks": [
+    {
+      "name": "stage06_tests",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\06_数据方法与分析\\v002_第2版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 17,
+      "log": "stage06_tests.log"
+    },
+    {
+      "name": "stage04_05_regression",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\04_议题文献与现实\\v004_第4版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 22,
+      "log": "stage04_05_regression.log"
+    },
+    {
+      "name": "control_regression",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": 9,
+      "log": "control_regression.log"
+    },
+    {
+      "name": "framework_validation",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\00_项目控制\\v003_第3版\\tools\\project.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "test_count": null,
+      "log": "framework_validation.log"
+    },
+    {
+      "name": "empty_cli_smoke",
+      "command": [
+        "F:\\python\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\文章\\ai论文\\06_数据方法与分析\\v002_第2版\\tools\\stage06.py",
+        "run",
+        "--input",
+        "E:\\文章\\ai论文\\06_数据方法与分析\\v002_第2版\\templates\\workflow_input.json",
+        "--run-id",
+        "TEST_stage06_empty_20261115_163149"
+      ],
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "run_id": "TEST_stage06_empty_20261115_163149",
+      "log": "empty_cli_smoke.log"
+    },
+    {
+      "name": "registered_version",
+      "passed": true
+    }
+  ],
+  "environment": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "pandas": "2.3.3",
+    "numpy": "1.24.3",
+    "scipy": "1.15.3",
+    "statsmodels": "0.14.4",
+    "pyreadstat": "not_installed"
+  },
+  "business_gates_certified": false,
+  "real_study_completed": false,
+  "real_method_fulltexts_claimed": 0,
+  "real_survey_cases_read": 0,
+  "network_or_external_messages": false,
+  "test_materials": "temporary TEST synthetic fixtures only",
+  "files": [
+    {
+      "path": "06_数据方法与分析/v002_第2版/CHANGELOG.md",
+      "sha256": "7583685da3f3b57e6d6ac466abac6e797c1ec3f253de78f3572e36055ae7da85"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/manifest.json",
+      "sha256": "b5f29233d7390aa29504c9d9e1e51443ab904d858db220ede6c887aba8544ddb"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/descriptive.csv",
+      "sha256": "9f8636fc25cb1e4fc6d5ab7c5ba7d58cf6109ca4c8c3e212ffbed5711c2dcedd"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/execution_protocol.json",
+      "sha256": "25360e061a170de619f8470aa6762a8cfe53e21ef68f11a0f8b0cf6b542f6cc5"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/method_library_input.json",
+      "sha256": "48ec70ba3b0c121831d112c13d0ebf2dbd0ebba21ee363937da3ad83c8b6c88b"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/method_reference_fields.json",
+      "sha256": "2bf8164773024d481c3fd7e8d9f3c7f4e84adc54012e1e2852acd6b522f921d8"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/method_references.csv",
+      "sha256": "904f29111a861cbfe13df491a20baa6fdfa4b9bcc4d4c05ee2c547054d67b5ce"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/protocol_fields.json",
+      "sha256": "4b18df14d4465b7432522a16e9132b2cc9c0d32d0e5d270317e8a5428502f3f7"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/quality_review.json",
+      "sha256": "b234b5e897c9a5ce684f743cf1a3c4d617d3667c4dd262c967effa983cea79ec"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/README.md",
+      "sha256": "5101347e6d357f21ecf84a8d08de844493388bccac759e86efbb20c33f2effad"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/results.csv",
+      "sha256": "7040d5d300687b02159a835fa66945209600f5efdcfe4b4556ae66fa4c28e1e2"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/sample_flow.csv",
+      "sha256": "d840b441a7b6ac6faec41f870b8ba3aba37602467a322dd0735ea0ed8aa578dd"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/variable_dictionary.csv",
+      "sha256": "8882cff0e956b39a7ecc3e963d122c6e7995e6da7709a855cf70f369e88c093e"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/templates/workflow_input.json",
+      "sha256": "7a5900336c1990b4f4202787f4790496e36295b20bbe35de01262ad591a687a8"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tests/README.md",
+      "sha256": "3fdbc82eee8ae14ba7f53931f482222589727a68fb654afdd7f01b632f193643"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tests/test_stage06.py",
+      "sha256": "ae9df0d68bd4a96c64aa068b32049799b67ac771b972bd93589e9112261b6f1e"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/common06.py",
+      "sha256": "24cde7fc9e3515738dba6289ddb6500eca0bd8466022bde1ed8cde5fd2a719e5"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/data_adapters.py",
+      "sha256": "b71fc5d159bdc5dac9e04df9cbc3711cbab67b2d32acda3547e73e208bffa57b"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/engines.py",
+      "sha256": "88a5fec4a35c21e91e6d2a44555283fe571b33fd9b8fd37d106b272b4efd693e"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/knowledge06.py",
+      "sha256": "1b11997ffa8b2f54ae98d96ab8e6fc541cc7fdfd5e0db500f70b5e5845a06d25"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/methods06.py",
+      "sha256": "7b0255b631ca0741890d5bb36706bb3f9ca21cc382937ebfe703d55a94579b8b"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/pipeline06.py",
+      "sha256": "f6384e2d41067330ac8c100d167d65bd8e6cc4f1ddf66a05755a011944d5b27b"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/stage06.py",
+      "sha256": "425f2cf7a2b7fd818a5758837e9778d3e96da840f49d8c57d8a912f38cdfb5bd"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/tools/verify_release.py",
+      "sha256": "4419b28edc1d2da2a3f3afd3a178b64fb0ddcb69d23fec8a4e6aaad3985f963b"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/使用说明.md",
+      "sha256": "01740af803ee924fa46427dde67fc1eb1c0867f7ae1d73249eeb7cadedb47eba"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/技术依据.md",
+      "sha256": "9ffdf88455fcea6463f4eecaee020153cc827d16b6421d66f43c05a538036cbb"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/数据契约.md",
+      "sha256": "6f7a3d6ac4d7b0acac079d0b9f551e6d9d3d592eb9df2b41d1b66a70a5b07722"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/方法库/method_catalog.csv",
+      "sha256": "b438925516e6054df7371122a4ccb095eba93de6c6b0ec308afb2ebbfe19ffa7"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/方法库/建设规则.md",
+      "sha256": "6231928a9ed8da116cffd8b5517f6bf3f7f91382ed6dbb94f9e55b98923765a2"
+    },
+    {
+      "path": "06_数据方法与分析/v002_第2版/模块说明.md",
+      "sha256": "fdb41e1699416ec181fa7772c76c4917389c54726c18a2a624adf6cf674cc8b1"
+    }
+  ]
+}

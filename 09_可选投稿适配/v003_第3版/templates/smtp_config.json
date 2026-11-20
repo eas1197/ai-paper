@@ -1,0 +1,6 @@
+{
+  "host": null,
+  "port": 465,
+  "username_env": "JOURNAL_SMTP_USERNAME",
+  "password_env": "JOURNAL_SMTP_PASSWORD"
+}

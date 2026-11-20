@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-11-19",
+  "status": "passed",
+  "command": "python -m unittest discover -s 04_议题文献与现实/v008_第8版/tests -q",
+  "tests_passed": 28,
+  "default_collection_verified_pdfs": 0,
+  "explicit_core_verified_fixture_pdfs": 25,
+  "live_cnki_download_executed": false,
+  "formal_G4_certified": false
+}

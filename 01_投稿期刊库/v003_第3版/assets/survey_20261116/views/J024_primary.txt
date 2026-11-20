@@ -1,0 +1,46 @@
+作者中心 (https://cswt.bass.org.cn/Journalx_cswt/authorLogOn.action)
+citeturn129view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"https://cswt.bass.org.cn/Journalx_cswt/authorLogOn.action","lineno":null}); Total lines: 43
+L0: _{【0†Image】} 您的Firefox浏览器版本过低，请尽快升级到4.0或以上，如果不进行升级，则在进入系统后，部分页面将会显示不正常或报错  | [Input]
+L1: Journal X™
+L2: 【1†Image】 城市问题
+L3:  ISSN:    1002-2031
+L4:     CN:    11-1119/C
+L5:     Tel:    010-64870894;64874817
+L6: Email:  bjb2003@vip.163.com
+L7:   【2†投稿须知】 | 【2†版权协议】 | 【2†论文模板】 | 【3†系统要求†www.magtech.com.cn】 | 【4†使用帮助†www.magtech.com.cn】  | 【5†期刊首页†tg.bass.org.cn】
+L8:   在作者中心登录后，您可以：
+L9: 1. 向本刊投稿，或继续完成您未完成的投稿。
+L10: 2. 跟踪查询您的稿件处理流程记录和目前的状态。
+L11: 3. 根据编辑部的要求，阅读修改意见并上传修改稿。
+L12: 4. 下载、修订和上传您的清样文件。
+L13: 5. 查询文章费用缴纳情况。
+L14: 6. 修改您的个人信息。
+L15: 请注意：
+L16: 1. 如果您是新作者(即第一次投稿)，请先注册，并记住您的用户名和口令，同时本系统还将把您设置的用户名通过您注册的E-mail发送给您。
+L17: 2. 如果您已经拥有用户名和密码，直接登录即可。请不要重复注册，否则可能导致您信息查询不完整。
+L18: 3. 本系统的用户名和密码区别大小写。
+L19: 
+L20: 建议使用IE9/10/11、Firefox、Chrome浏览器登录系统。
+L21: 如果使用其他浏览器遇到问题，请查看使用帮助。
+L22: 作者登录 [Input] [Input]
+L23: [Input] [Input] [Input]
+L24: 
+L25:    如果您已经注册，请直接登录。
+L26: 用户名：  [Input]
+L27: 密码：  [Input] [Input]
+L28: [Input] [Input]
+L29: [Input] [Input] 保存密码  [Input]
+L30: * * *
+L31: 
+L32:   如果您还没有注册，请在投稿之前先 [Input].
+L33: 如果您忘记密码请点击 【6†重置密码】
+L34: 
+L35: 
+L36: 
+L37: 
+L38: 本系统由北京玛格泰克科技发展有限公司设计开发[软著登字第 112626 号], 并提供技术支持
+L39: All Rights Reserved.
+L40: Journal X™ 是北京玛格泰克科技发展有限公司注册商标
+L41: 
+L42: [Input]
+

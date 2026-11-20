@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "module_id": "03",
+  "module_version": 3,
+  "attempt": "attempt001",
+  "source_corpus": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/corpus20.csv",
+  "upstream_resource_snapshot": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+  "expected_paper_count": 20,
+  "required_journals": ["中国社会科学", "社会学研究"],
+  "reading_method": "targeted_body_passages_with_context",
+  "continuous_fulltext_read_certified": false,
+  "paragraph_precision_certified": false,
+  "quote_anchor_max_chars": 12,
+  "frequency_basis": "distinct_selected_supporting_papers_not_population_prevalence",
+  "seed": 20261114,
+  "random_sampling": false,
+  "source_directories_read_only": true,
+  "public_export_original_fulltext": false,
+  "downstream_requires_G2_and_G3_passed": true
+}

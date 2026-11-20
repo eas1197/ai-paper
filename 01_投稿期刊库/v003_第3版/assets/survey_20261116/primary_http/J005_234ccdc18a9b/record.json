@@ -1,0 +1,18 @@
+{
+  "journal_id": "J005",
+  "source_url": "https://rkyjj.cueb.edu.cn/",
+  "retrieved_at": "2026-11-16T15:03:34.679355+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://rkyjj.cueb.edu.cn/",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J005_234ccdc18a9b/text.txt",
+  "sha256": "76ced0315c5cee3521da0dcaed7c0c91690379ae079cdd71f153791686923939",
+  "original_path": "primary_http/J005_234ccdc18a9b/response.html",
+  "original_sha256": "21ac7f9e0ad6984193e62d13607600332f9f4f88b89d7fd2858d833801e698b1",
+  "line_count": 15,
+  "title": "人口与经济",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

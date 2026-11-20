@@ -1,0 +1,20 @@
+{
+  "journal_id": "J039",
+  "source_url": "https://jykx.lnnu.edu.cn/CN/news/news43.shtml",
+  "retrieved_at": "2026-11-16T15:03:58.833114+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jykx.lnnu.edu.cn/CN/news/news43.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J039_6d882a090b49/text.txt",
+  "sha256": "6a3f7eb3baffe8f83b52e593ae944cb456a1c09b13f3ef3b0453072be0eb5759",
+  "original_path": "primary_http/J039_6d882a090b49/response.html",
+  "original_sha256": "03f1d5d7022d6c0120ec4ff8a797cf77bbefa25bb1cca019bc9d8aec612e5a06",
+  "line_count": 53,
+  "title": "教育科学",
+  "guideline_links": [
+    "https://jykx.lnnu.edu.cn/CN/column/column9.shtml"
+  ],
+  "review_status": "awaiting_source_readback"
+}

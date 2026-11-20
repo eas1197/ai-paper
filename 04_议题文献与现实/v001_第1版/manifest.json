@@ -1,0 +1,29 @@
+{
+  "module_id": "04",
+  "name": "议题文献与现实",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "10",
+    "11"
+  ],
+  "expected_artifacts": [
+    "search_log.csv",
+    "abstract100.csv",
+    "relations.csv",
+    "core25.csv",
+    "context.csv",
+    "dialogue_matrix.csv"
+  ],
+  "folders": [
+    "templates",
+    "assets/literature",
+    "assets/policies",
+    "assets/news",
+    "outputs"
+  ]
+}
+

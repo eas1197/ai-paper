@@ -1,0 +1,18 @@
+{
+  "journal_id": "J030",
+  "source_url": "https://gjta.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=GJTA",
+  "retrieved_at": "2026-11-16T15:04:22.689031+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://gjta.cbpt.cnki.net/wkh2/WebPublication/index.aspx?mid=GJTA",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J030_eb0f2b94187c/text.txt",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original_path": "primary_http/J030_eb0f2b94187c/response.html",
+  "original_sha256": "11fc3c5aca61ef5f14a0357ecf723e7fea3e6eef6094780516fb21247cceecf8",
+  "line_count": 0,
+  "title": "",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "status": "pilot",
+  "split": {
+    "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/split.json",
+    "sha256": "37aef25876d07e5e7cfdfdbf7f9c968f36135d72a206b747614b4b56cdeafdab"
+  },
+  "annotation": {
+    "path": "03_学术语言学习/v004_第4版/outputs/论证语料试验_20261118_attempt001/段落标注.tsv",
+    "sha256": "b80d500c104af270083fef5d995952b09a2dd439d95bd19c831370e719fb0951"
+  },
+  "papers": {
+    "zotero_6V7LJIWN": {
+      "title": "制度的力量——中国社会保障制度建设与收入分配公平感的演化",
+      "journal": "中国社会科学",
+      "sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc",
+      "design": "repeated_cross_section"
+    },
+    "zotero_SCCKUUS9": {
+      "title": "当代中国的代际流动模式及其变迁",
+      "journal": "中国社会科学",
+      "sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667",
+      "design": "pooled_cross_section"
+    },
+    "zotero_J38BV4A5": {
+      "title": "收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析",
+      "journal": "中国社会科学",
+      "sha256": "245bbf45908382fc7e8d6348616d8f8fb6401b49a23eb4dba6a478fc29d48ab8",
+      "design": "cross_section"
+    },
+    "zotero_89UP6KH7": {
+      "title": "文化再生产还是文化流动?——中国大学生的教育成就获得不平等研究",
+      "journal": "社会学研究",
+      "sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e",
+      "design": "panel"
+    },
+    "zotero_DD4I5QA4": {
+      "title": "劳动力市场中的社会资本与市场化",
+      "journal": "社会学研究",
+      "sha256": "0d0ebc416548ae6871db64d99948e82fc45f997259c5d8811f5eb9c9fb51feb9",
+      "design": "cross_section"
+    },
+    "zotero_NLVHWHF6": {
+      "title": "女性教育提升与生育行为变迁——基于夫妻匹配视角的研究",
+      "journal": "社会学研究",
+      "sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2",
+      "design": "couple_cohort"
+    }
+  },
+  "held_out_paper_ids": [
+    "zotero_KYCYDCG4",
+    "zotero_L9AJFJ5E",
+    "zotero_Y8WNZ3AN",
+    "zotero_ZVEEAGSX"
+  ],
+  "examples": [
+    {
+      "example_id": "6V7LJIWN-question-2",
+      "paper_id": "zotero_6V7LJIWN",
+      "move": "question",
+      "pdf_page": 2,
+      "source_anchor": "本文结合中国社会保障制度的建设实践",
+      "section": "引言",
+      "topic": "CGSS社会保障制度收入分配公平感政策制度比较",
+      "subtasks": [],
+      "before": "前文说明分配公平感的公共意义与既有研究的关切",
+      "advance": "以社会保障改革中的制度变化缩小解释范围，提出用发展视角考察价值的形成",
+      "after": "继而交代理论归属与制度问题，再进入既有解释",
+      "style": "句首落到具体制度及实践，紧接两个清楚的研究动词",
+      "conditions": "题目确实涉及制度演变，且全文能够提供历时材料"
+    },
+    {
+      "example_id": "6V7LJIWN-hypothesis-6",
+      "paper_id": "zotero_6V7LJIWN",
+      "move": "hypothesis",
+      "pdf_page": 6,
+      "source_anchor": "民众对政府的社会保障职能的满意度会提高他们的收入分配公平感",
+      "section": "一、既有解释范式",
+      "topic": "CGSS社会保障制度满意度收入分配公平感假设",
+      "subtasks": [
+        "单项关联"
+      ],
+      "before": "此前已说明分配判断既涉及利益也涉及价值",
+      "advance": "把平等和需求的规范取向接到居民对社保调节职能的评价，据此推出满意度与公平感的方向",
+      "after": "转入解释制度为何能改变价值，以及该联系如何随时间变化",
+      "style": "先把抽象规范落到受访者的具体评价，再写方向句",
+      "conditions": "用与识别相符的关联措辞重述；范文的制度条件需要本研究证据"
+    },
+    {
+      "example_id": "6V7LJIWN-results-14",
+      "paper_id": "zotero_6V7LJIWN",
+      "move": "results",
+      "pdf_page": 14,
+      "source_anchor": "这三个社会保障职能上的表现都感到满意的人群认可收入分配公平的概率",
+      "section": "四、回归结果",
+      "topic": "CGSS横截面回归概率差百分点社会保障公平感条件比较",
+      "subtasks": [
+        "单位转译",
+        "并列估计"
+      ],
+      "before": "前文汇报较早一期模型，同页先列2015年多项估计",
+      "advance": "把表中的系数合成明确的人群比较，并用概率差解释",
+      "after": "随后给出相应表格，再跨年份比较",
+      "style": "用受到比较的两类人作主语，量级附着在具体结局上",
+      "conditions": "只有估计模型允许相加时才合并系数；给出当前研究估计及其区间"
+    },
+    {
+      "example_id": "6V7LJIWN-literature-6",
+      "paper_id": "zotero_6V7LJIWN",
+      "move": "literature",
+      "pdf_page": 6,
+      "source_anchor": "静态的比较分析并不适用于考察制度变迁",
+      "section": "二、制度的引塑效应",
+      "topic": "CGSS社会保障制度文化社会公平理论解释",
+      "subtasks": [],
+      "before": "既有解释已经提出价值嵌入制度",
+      "advance": "指出静态比较适合回答的层面，并由历时关系引入发展视角",
+      "after": "转入遵从、价值内化与制度演进的论证",
+      "style": "以解释任务组织述评，具体交代旧设计能回答和仍待回答的地方",
+      "conditions": "先确认综述原文的比较设计与论证范围"
+    },
+    {
+      "example_id": "SCCKUUS9-question-2",
+      "paper_id": "zotero_SCCKUUS9",
+      "move": "question",
+      "pdf_page": 2,
+      "source_anchor": "机会不平等的状况",
+      "section": "一、问题的提出",
+      "topic": "CGSS社会机会代际流动社会结构",
+      "subtasks": [],
+      "before": "此前将不平等中的机会问题与结果问题区分",
+      "advance": "把社会争议落到代际关系与长期机会结构的研究对象",
+      "after": "下一节对照现代化逻辑和社会政治逻辑",
+      "style": "从现象切到概念后立即落到可以分析的对象",
+      "conditions": "前文已经指出为何现实问题需要该理论区分"
+    },
+    {
+      "example_id": "SCCKUUS9-hypothesis-8",
+      "paper_id": "zotero_SCCKUUS9",
+      "move": "hypothesis",
+      "pdf_page": 8,
+      "source_anchor": "市场排斥主导下的代际流动机会相对更大",
+      "section": "三、理论与假设",
+      "topic": "CGSS阶层代际流动制度变迁机会结构",
+      "subtasks": [
+        "分项比较"
+      ],
+      "before": "前文比较体制排斥和市场排斥的形成方式、实施对象和传递条件",
+      "advance": "用排斥标准的变化导出跨历史时期可区分的预期",
+      "after": "随后的模型节将排斥类别转换为流动表的参数限制",
+      "style": "用具体区别连接两种预期，少用宽泛评价",
+      "conditions": "只有理论差异能落到分组或模型限制时才采用"
+    },
+    {
+      "example_id": "SCCKUUS9-results-16",
+      "paper_id": "zotero_SCCKUUS9",
+      "move": "results",
+      "pdf_page": 16,
+      "source_anchor": "总流动率涵盖了结构流动率与相对流动率",
+      "section": "六、结果解释",
+      "topic": "CGSS代际流动结构变迁结果指标比较",
+      "subtasks": [
+        "直接比较"
+      ],
+      "before": "先呈现总流动率的时期变化，并解释结构变化也会改变总流动",
+      "advance": "把总量和结构调整后的相对机会分开，指向能回答开放性问题的专门指标",
+      "after": "后文据关联系数讨论社会开放性怎样变化",
+      "style": "同一对象用两个明确指标对照，转折处直接说出比较依据",
+      "conditions": "两种指标确实对应不同推断，正文报告与核心问题相匹配的统计量"
+    },
+    {
+      "example_id": "SCCKUUS9-discussion-16",
+      "paper_id": "zotero_SCCKUUS9",
+      "move": "discussion",
+      "pdf_page": 16,
+      "source_anchor": "它体现了不同阶层子代流动到特定阶层的相对机会",
+      "section": "六、结果解释",
+      "topic": "CGSS社会流动机会平等开放性",
+      "subtasks": [],
+      "before": "总流动率包含结构改变和相对流动的贡献",
+      "advance": "将相对流动这一指标解释为开篇关心的机会平等问题",
+      "after": "接着解释如何用关联系数读社会开放性",
+      "style": "回扣概念时保留估计量连接，不把结论写成空泛拔高",
+      "conditions": "明示该指标回答哪一部分问题；此段在结果解释中承担讨论功能"
+    },
+    {
+      "example_id": "J38BV4A5-question-2",
+      "paper_id": "zotero_J38BV4A5",
+      "move": "question",
+      "pdf_page": 2,
+      "source_anchor": "平等与否是对实际收入分配状况的测量",
+      "section": "一、问题的提出",
+      "topic": "CGSS收入分配不平等城镇主观公平观",
+      "subtasks": [],
+      "before": "前文提出何种不平等会危及稳定的问题",
+      "advance": "区别实际分布与分配评价，将宽泛争议缩到人们认可的分配状况",
+      "after": "文献回顾从人们认为什么分配正当展开",
+      "style": "两个概念紧挨着定义，比较维度保持一致",
+      "conditions": "概念区分会改变研究对象或操作化时使用"
+    },
+    {
+      "example_id": "J38BV4A5-hypothesis-7",
+      "paper_id": "zotero_J38BV4A5",
+      "move": "hypothesis",
+      "pdf_page": 7,
+      "source_anchor": "人们认可的不平等程度在国有部门比在市场部门低",
+      "section": "三、研究问题与假设",
+      "topic": "CGSS市场部门国有部门收入分配价值观",
+      "subtasks": [
+        "分项比较"
+      ],
+      "before": "前文交代转型中的国有部门和市场部门及其公平价值差别",
+      "advance": "用部门经历与规范差异推出同一指标的组间排序",
+      "after": "继而问相似的价值差别是否也对应代际经历",
+      "style": "把参照组和结果变量写进同一句",
+      "conditions": "比较有可观察的统一量尺；保留可替代解释供研究设计核查"
+    },
+    {
+      "example_id": "J38BV4A5-results-11",
+      "paper_id": "zotero_J38BV4A5",
+      "move": "results",
+      "pdf_page": 11,
+      "source_anchor": "进一步探寻人们如何评价当前的收入分配状况",
+      "section": "五、结果与分析",
+      "topic": "CGSS横截面分配公平感城镇收入评价对照比较",
+      "subtasks": [
+        "并列估计",
+        "直接比较"
+      ],
+      "before": "先报告感知和认可的不平等的总体分布",
+      "advance": "通过同一组职业的估计收入与应得收入拆解总体差距，读出谁被认为多付或少付",
+      "after": "从具体职业的大小差异归纳分配评价的共同方向",
+      "style": "先说明表中各列承担的比较任务，正文择取支撑判断的数字",
+      "conditions": "分项指标可比较，综合概括有分项的方向与量级支持"
+    },
+    {
+      "example_id": "89UP6KH7-question-3",
+      "paper_id": "zotero_89UP6KH7",
+      "move": "question",
+      "pdf_page": 3,
+      "source_anchor": "本文将通过分析大学生教育成就的阶层差异来给予检验",
+      "section": "一、研究问题",
+      "topic": "追踪调查大学生文化资本教育成就家庭阶层",
+      "subtasks": [],
+      "before": "前文提出教育不平等趋势与社会结构变化的张力",
+      "advance": "把宏观趋势转化为在校成就的阶层差异及其形成过程",
+      "after": "由此转入文化再生产、抵制、流动的解释比较",
+      "style": "用一个可观察对象承接前文问题，并点明既有解释具体省略了什么",
+      "conditions": "小问题能够承接理论争议，避免许诺解释宏观趋势的全部原因"
+    },
+    {
+      "example_id": "89UP6KH7-hypothesis-8",
+      "paper_id": "zotero_89UP6KH7",
+      "move": "hypothesis",
+      "pdf_page": 8,
+      "source_anchor": "考核和评价方式决定了教育成就的影响因素",
+      "section": "三、研究假设",
+      "topic": "追踪调查文化资本学业学生干部英语教育考核",
+      "subtasks": [
+        "分项比较"
+      ],
+      "before": "前一假设讨论家庭阶层与努力，已有文献提出三类教育成就",
+      "advance": "从不同评价方式给主观判断留下的空间推导文化资本在不同结局上的预期",
+      "after": "随后以学生干部等结局与标准化学业考核对照",
+      "style": "用三类具体成就组织理论，判断后立刻交代理由",
+      "conditions": "分项结局的制度或测量特点有依据；机制表述须符合实际设计"
+    },
+    {
+      "example_id": "89UP6KH7-results-16",
+      "paper_id": "zotero_89UP6KH7",
+      "move": "results",
+      "pdf_page": 16,
+      "source_anchor": "加入了大学生的家庭经济资本和文化资本",
+      "section": "五、结果分析",
+      "topic": "追踪调查大学教育成就家庭资本回归模型",
+      "subtasks": [
+        "并列估计"
+      ],
+      "before": "基础模型已给出不同家庭阶层的成绩比较",
+      "advance": "顺着模型新增变量说明结果方向和原差异怎样变化",
+      "after": "继续加入努力指标，再移到学生干部这一结局",
+      "style": "模型变化与实质变量合并叙述，一句写清差异来自哪个比较",
+      "conditions": "模型口径和样本可比；系数变化只支持与研究设计匹配的解释"
+    },
+    {
+      "example_id": "DD4I5QA4-question-6",
+      "paper_id": "zotero_DD4I5QA4",
+      "move": "question",
+      "pdf_page": 6,
+      "source_anchor": "既考察社会资本的动用空间",
+      "section": "二、劳动力市场领域的经验发现",
+      "topic": "CGSS以外社会网络关系资源劳动力调查联系动员及回报",
+      "subtasks": [],
+      "before": "经验文献在社会资本减弱还是转形上有分歧",
+      "advance": "在经验综述中把关系动用空间和资源效果放进同一研究视野",
+      "after": "研究设计分别提出动员频率和收入回报的假设",
+      "style": "将含混的效应争论拆成并列可观察的侧面",
+      "conditions": "只保留有实际指标的侧面；来自述评向研究问题过渡"
+    },
+    {
+      "example_id": "DD4I5QA4-hypothesis-8",
+      "paper_id": "zotero_DD4I5QA4",
+      "move": "hypothesis",
+      "pdf_page": 8,
+      "source_anchor": "劳动力市场中社会资本的动员回报",
+      "section": "三、研究设计",
+      "topic": "社会网络关系社会联系信息资源劳动力调查动员频率回报",
+      "subtasks": [
+        "单项关联",
+        "分项比较"
+      ],
+      "before": "前文分别说明社会资本作为市场内部力量或外部力量的逻辑",
+      "advance": "对动员频率和动员回报分别给出方向相反的预期，并说明各自对应哪种解释",
+      "after": "紧接着交代对不同结局采用的分析方法",
+      "style": "保持两组假设主语、条件和比较尺度平行",
+      "conditions": "两种预期都有理论依据；用可以被当前数据区分的观测结果"
+    },
+    {
+      "example_id": "DD4I5QA4-results-14",
+      "paper_id": "zotero_DD4I5QA4",
+      "move": "results",
+      "pdf_page": 14,
+      "source_anchor": "市场化与社会资本动员频率的关系是否也体现在社会资本动员回报中呢",
+      "section": "四、研究发现和讨论",
+      "topic": "社会网络关系资源社会联系劳动力调查回归频率回报",
+      "subtasks": [
+        "直接比较"
+      ],
+      "before": "已报告总样本和分部门、分城市的动员频率差别",
+      "advance": "以上一个结果为已知，问它是否同样出现在另一个结局上",
+      "after": "接着交代第二个结局的回归布置",
+      "style": "复用上段概念完成转换，句中只增加一个新比较问题",
+      "conditions": "两个结局回答的是可区分的实证问题；若要比较估计量大小需要共同量尺"
+    },
+    {
+      "example_id": "DD4I5QA4-design-8",
+      "paper_id": "zotero_DD4I5QA4",
+      "move": "design",
+      "pdf_page": 8,
+      "source_anchor": "本文主要采用多元回归来分析市场化与社会资本动员的回报",
+      "section": "三、研究设计",
+      "topic": "社会网络社会资本调查收入回归频率",
+      "subtasks": [],
+      "before": "此前对市场化与关系动员的两类结局分别提出假设",
+      "advance": "分别说明何种分析对应频率和回报，并给出回报对应的模型变量",
+      "after": "后续将市场化的几种测量逐一纳入比较",
+      "style": "研究设计的句首直接写模型服务的研究问题",
+      "conditions": "各模型与各自结局、分析单位一一对应"
+    },
+    {
+      "example_id": "NLVHWHF6-question-3",
+      "paper_id": "zotero_NLVHWHF6",
+      "move": "question",
+      "pdf_page": 3,
+      "source_anchor": "针对某一特定国家进行纵向比较同样具有重要意义",
+      "section": "一、问题的提出",
+      "topic": "CFPS夫妻家庭教育婚配生育队列",
+      "subtasks": [],
+      "before": "前文对照分工和资源集聚两种理论，列不同国家的研究发现",
+      "advance": "从证据分歧提出情境与时期条件，将研究问题落到中国队列比较",
+      "after": "随后给出使用CFPS及夫妻匹配分析的任务",
+      "style": "范围缩小与问题的理由写在一起，点名将比较的分析单位",
+      "conditions": "资料确实能观察相关时间维度；队列对照的推断需注明设计范围"
+    },
+    {
+      "example_id": "NLVHWHF6-hypothesis-3",
+      "paper_id": "zotero_NLVHWHF6",
+      "move": "hypothesis",
+      "pdf_page": 3,
+      "source_anchor": "妻子受教育程度提升能够增加家庭可支配",
+      "section": "一、问题的提出",
+      "topic": "CFPS夫妻家庭教育生育理论资源与机会成本",
+      "subtasks": [
+        "单项关联",
+        "分项比较"
+      ],
+      "before": "前文给出分工视角中机会成本的解释",
+      "advance": "用双薪和可支配资源推出方向不同的预期，明确为何值得比较",
+      "after": "随后检查欧洲经验证据及其适用条件",
+      "style": "将资源渠道和行为预期相连，解释链落到具体家庭决策",
+      "conditions": "用作竞争预期的组织示例；本篇该处未给编号假设"
+    },
+    {
+      "example_id": "NLVHWHF6-results-14",
+      "paper_id": "zotero_NLVHWHF6",
+      "move": "results",
+      "pdf_page": 14,
+      "source_anchor": "在所有教育匹配模式中高学历夫妻的子女数量最少",
+      "section": "五、回归分析与讨论",
+      "topic": "CFPS家庭生育教育匹配回归队列比较",
+      "subtasks": [
+        "并列估计"
+      ],
+      "before": "前节描述数据中的分布差异；本节明确参照组和估计方式",
+      "advance": "先报告总样本中有实质意义的对照，再接到其他组合及出生队列",
+      "after": "用表中的队列子样本辨别总体差异如何变化",
+      "style": "提前交代参照组，避免靠模型编号传达比较对象",
+      "conditions": "有同一参照组且比较量的单位明确；子组变化不能仅凭显著性判断"
+    }
+  ]
+}

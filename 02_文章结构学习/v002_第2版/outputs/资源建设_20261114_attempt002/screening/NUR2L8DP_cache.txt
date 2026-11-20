@@ -1,0 +1,501 @@
+∗ 本文原稿为英文。作者感谢香港研究资助局对本研究项目的支持 以及美国洛杉矶加 州大学(UCLA)社会学系特雷曼(Donald J.Treiman)教授对本文提出的建议 同时感谢哈 佛大学社会学系博士研究生郭茂灿为翻译本文所做的工作。
+中国的户籍制度与代际职业流动∗
+吴晓刚
+提要:本文通过分析1996年“ 当代中国生活史和社会变迁” 的全国性抽 样调查数据 研究当代中国家庭背景对职业流动的作用 并对城乡间的制度 分割给予特别的关注。研究发现 农民的代际流动率相当高 城市中的社会 流动也具有相当的“ 开放” 性。本文 认 为 这 种 模 式 是 由 中 国 独 特 的 户 籍 制 度 造成的。这一制度使得农村中从事非农职业、没有改变户口性质的农民子女 还要继续务农;只允许农村中受过很高教育的人获得城市户口。这种状况使 以往仅限于城市人口的社会流动研究产生严重的样本选择性偏误。本文的 分析对理解社会主义国家在社会流动过程中的作用、不平等和社会流动之间 的关系问题 提供了一个新的视角。 关键词:不平等 户籍制度 社会流动
+代际间的职业流动是评价一个社会的机会结构开放程度的重要指 标(Featherman et al.1975;Ganzeboom et al 1989;Erikson & Goldthorpe 1992)。许多研究者认为 中国作为一个社会主义国家 机会结构具有 相当的开放性(如 Parish 1981;Blau & Ruan 1990)。在消灭私有制以 后 国家在教育和职业分配方面实施了一系列有利于工农子弟的平等 主义政策 这 种 政 策 在 “ 文 革” 中 表 现 得 更 为 明 显 (Deng & Treiman 1997)。由此造成的结果是 父代和子代职业地位之间的继承性被削 弱 产生了相当高的代际社会流动率。 来自中国的经验数据部分地支持了上述论点。白威廉 (Parish 1981)分析了20世纪70年代中期从大陆去香港的移民那里搜集到的 数据 报告说父母的地位对子女教育和职业获得的影响 虽然同其他国 家一样也是正向的 但这一作用1966年以后由于“文革”的发生而显著 降低了。布劳和阮丹青(Blau & Ruan 1990)通过对1986年天津的一项 调查数据的分析 发现职业地位代际传承的程度比美国城市还要低。
+38
+DOI :10.19934/j.cnki.shxyj.2007.06.003
+
+
+特别是子代职业地位的获得与父代职业地位在统计上不显著相关。林 南和边燕杰(Lin & Bian 1991)、林南和谢文(Lin & Xie 1988)都有类似 发现。许多学者由此推论 毛泽东时代旨在提升社会平等程度的“去分 层化”(de-stratification)政策是成功的(如 Parish 1981)。
+对中国如此高的代际流动率 另外的一种解释是强调城市中工作 单位在降低代际职业传承方面的关键性作用。1996年以前的中国城 市中 住 房、教 育、医 疗、保 险 等 各 种 资 源 都 是 通 过 单 位 来 分 配 的 (Walder 1992)。林南和边燕杰(Lin & Bian 1991;Bian 1994)认为 在中 国城市中 工作单位而非职业才是一个人社会经济位置的主要决定因 素。因此 地位获得的首要目标是进入一个好的工作单位 而不是得到 一份好职业。他们对1985年天津调查的分析表明 虽然父子职业地位 之间的关系很弱且统计上不显著 但是父代工作单位对子代工作单位 的获得却具有直接而显著的影响。因此 他们认为 国家社会主义制度 下仍然存在着地位的代际传承 只不过形式上与资本主义制度下不一 样 即 传承是通过工作单位而不是职业进行的。 工作单位在城市分层过程中的独特作用与所谓的“ 中国特殊主义” (Chinese exceptionalism)的说法遥相呼应。然而 为什么中国会显著缺 乏职业的代际再生产 仍是一个令人困惑的问题。特别是 几乎在所有 国家 父子职业地位之间都有一定的且并不微弱的关 系 (Grusky & Hauser 1984;Ganzeboom et al. 1989;Treiman & Yip 1989;Erikson & Goldthorpe 1992) 为什么惟独在中国 父亲的职业对儿子的职业地位获 得没有作用呢?尽管相关研究已指出了工作单位的重要性 但是对于 这一问题我们仍难以清楚地给予解释。如果真像林南和边燕杰(Lin & Bian 1991;Bian 1994)所说的那样 父亲和儿子的工作单位类型(work unit type)之间有着很强的关联 同时父亲和儿子各自的工作单位类型和 职业之间又都具有很强的关联 那么 父亲职业地位和儿子职业地位之 间应该具有正相关关系。作为代际社会再生产的主要方面 职业的代际 传承和代际流动不应该被如此轻忽掉 而是需要更多更细致的研究。 此外还有其他理由让我们觉得有关中国职业代际流动率的研究结 果值得进一步商榷。首先 上述研究所用的数据 有的不是全国性的随 机样本;有的更仅限于一个城市 使得基于这些数据所发现的结果很难 推论到全国。其次 只限于城市人口的分析实际上是有问题的 因为从 农村到城市的流动是一个具有高度选择性的社会过程 在很大程度上
+39
+论 文 中国的户籍制度与代际职业流动
+
+
+依赖于教育获得 并会导致个人生活机会的显著改变(Wu & Treiman 2004)。仅限于对城市人口进行分析 忽略了城乡人口在制度和空间上 的割离 同时也忽略了那些有能力通过自己的努力改变户口性质、从农 村出来的群体的正向选择(positive selection)过程。
+与其他家庭背景特征一样 户口可以被认为是一种先赋性特征 因 为孩子的户口性质取决于母亲的户口性质。母亲是农村户口的孩子只 能通过非常有限的渠道获得城市户口。自50年代户籍制度实施之后 从农村到城市户籍性质的转变就非常困难。一方面 为了控制城市人 口的增长 国家对户籍性质的转变实施了严格的名额限制 每年的变动 率约在1.5-2.0‰之间 即使在改革开放年代也是如此(陆益龙 2003: 144-146);另一方面 被中专或大专以上学校录取的学生可以转为城 市户口 而这些名额并不算在国家的配额之内(国务院 1986/1958)。 因此 具有农村户口的初中毕业生可以通过教育来“ 跳农门”:其一 被 一所中专学校录取 一旦录取 就获得了城市户口;其二 被一所高中录 取 并继续上大专或本科院校。被大专或本科院校录取不仅能保证户 口随转 而且毕业之后还能得到一个更好的工作 但风险是 农村户口 的学生如果没能通过高考 就必须回到农村当农民。吴晓刚和特雷曼 (Wu &Treiman 2004:367)报告说 只有11%的原来是农村户口的受访 者成功地获得了城市户口 其中通过教育这一途径的约占所有“ 农转 非” 人口的一半。 “农转非”非常不易 而且 这一过程非常具有选择性---通常只有 农村中最聪明的人才有机会。户籍制度不仅为从农业到非农职业的流 动设置了一个很高的门槛 而且削弱了我们在城市中所观察到的代际 间职业地位的关系。中国具有城市户口的人由两个部分组成:(1)那些 原来出生在城市的人 其流动模式是典型的城市人的流动模式;(2)那 些基于自己的教育程度或其他方面的成就而成功地从农村户口转变为 城市户口的人(Wu &Treiman 2004) 他们经历了一个长距离的向上流 动过程。由于这一原因 仅基于城市样本的研究很可能会产生严重的 选择性偏差(selection bias)(Winship & Mare 1992)。要正确地刻画中国 社会的流动模式和过程 需要分析全国性的 包括了农村和城市人口的 抽样数据;而且 要将户籍制度在其中所起的作用考虑进去。 据我们所知 成原和戴建中(Cheng & Dai 1995)的研究是目前为止 惟一一项考虑到中国城乡二元分割对社会流动带来影响的研究。通过
+40
+社会学研究 2007.6
+
+
+分析来自6个省的城乡数据 他们发现 中国人具有很高的代际继承率 (inter-generational immobility)。这一发现对关于“ 社会主义制度之下的 中国是一个开放社会” 的观点提出了挑战。尽管他们的研究同时包括 了农村和城市人口 但他们的数据来源于特定省份。他们的研究也没 有考虑到户籍制度---这一制度直接影响农村到城市的迁移和职业流 动。他们将从数据中观察到的很高的向农业的代际向下流动率1 归 结为针对城市青年和知识分子的“ 上山下乡政策” (Cheng & Dai 1995: 28)。我们认为这一结论值得推敲。因为 在“文革” 时代大部分“ 上山 下乡”的城市青年和知识分子 在1988年(Cheng &Dai 数据收集的那一 年)前就已经回到城市 并恢复了城市户口(Zhou & Hou 1999)。我们 认为 农村人口很高的代际向下流动率应归因于户籍制度:正是这一制 度 阻碍了大部分农村人口向上流动到非农职业。总体而言 农民的孩 子前途渺茫 哪怕他们的父亲从事非农职业。 本文将分析一个同时包括了农村人口和城市人口的全国性样本 展示对户籍制度作用的关注将如何有助于我们理解由其他学者观察到 的流动模式---它们曾被错误地理解为是由社会主义的平等主义意识 形态和激进的平等化政策所造成的。我们从估计地位获得模型开始 (Blau & Duncan 1967) 然后进行流动表分析。本文的核心部分是采用 同时具 有 地 位 获 得 模 型 和 对 数 线 性 流 动 模 型 优 点 的 “ 多 类 别 条 件
+Logistic 回归模型” (multinomial conditional logistic regression model) 来研 究不同的变量怎样影响了职业的代际间流动。我们还特别分析了向农 业职业的代际向下流动。
+一、数据和变量
+(一)数据
+本文的数据来源于1996年“ 当代中国生活史和社会变迁” 调查
+(Treiman & Walder 1996)。该调查使用多阶段分层抽样的方法 在中国
+41
+论 文 中国的户籍制度与代际职业流动
+1 比如 在父亲是专业技术人员的受访者中 28%的男性和23%的女性是农业职业;在父亲 是管理者的受访者之中 38%的男性和26%的女性是农业职业(Cheng & Dai 1995:表3、 表4)。
+
+
+所有区域(除西藏外)20-69岁的人口中 随机抽取了6096个个案(抽 样方法详见 Treiman 1998)。在这一抽样设计下 受访者从具有不同成 年人人数的户中抽出;而且 城市和农村样本是依照不同的抽样比例抽 出的。因此 为了使我们的数据能代表全国的成年人口 我们在进行描 述性统计和模型估计的时候都进行了相应的加权。调查问卷包括了一 系列关于受访者及其家庭的广泛信息。
+(二)变量
+本文分析中最重要的变量是职业 包括受访者的职业及其14岁时 父亲的职业。测量职业地位有两种不同的方式。我们首先将职业作为 连续 变 量 用 基 于 1968 年 的 国 际 社 会 经 济 指 数 ( International
+Socioeconomic Index [ISEI ] 见 Ganzeboom et al.1992)来测量它。但是
+为了 有 助 于 分 析 流 动 部 门 界 限 ( 见 Featherman & Hauser 1978; Goldthorpe 1987)和“子承父业” 的倾向 我们也采用了一个6类职业的 EGP 编 码 (Erikson et al.1979;Ganzeboom et al.1992;Ganzeboom &
+Treiman 1996)。艾里克森等(Erikson et al.1979)提出的10类职业的 EGP 编码和6类职业的 EGP 编码间关系如下:
+10类职业的分类 新的6类分类 I.大资本家、高级专业技术人员和经理人 6 II.低级专业技术人员和经理人 6 III.常规非体力劳动者 5 IVa.有雇员的小业主 4 IVb.没有雇员的小业主 4 V.低级技术人员和体力管理者 3 VI.熟练体力工人 3 VIIa.无技术/半熟练的体力工人 2 IVc:自雇佣的农场主 1 VIIb.(无技术的)农业劳动者 1
+我们对受访者的现职及受访者14岁时父亲的职业都采用了定量 和定类两种测量方式。户口性质是我们分析中的一个核心变量。本文 的数据收集了受访者在3个时点的户口性质:出生时、14岁时和当前 的(1996年)。依照地位获得和流动研究中的通常做法 将受访者小时
+42
+社会学研究 2007.6
+
+
+候的家庭背景作为影响受访者生活机会的最佳指标 我们用受访者14 岁时的户口性质来测量其家庭出身。 由于户籍制度于1955年开始实施 那些1941年之前以及部分 1941年出生的人在他们14岁时并不存在户口的概念。我们的分析样 本仅限于1996年20-55岁的受访者。14岁时的户口是一个虚拟变量 (农村户口=1)。另外 我们还包括了一个虚拟变量 以显示从农村到 城市户口性质的变化。我们并没有考虑从城市户口到农村户口的转 变 因为这在中国很少发生。当前的居住地点 即受访者被调查时的居 住地点 也是一个虚拟变量(农村=1)。 众所周知 教育既是职业获得的主要决定因素 也是代际地位传承 的重要机制。我们用所受的教育年限来测量受访者的教育程度和受访 者14岁时父亲的教育程度。另外 党员身份是社会主义制度下社会分 层的一个重要指标(Walder et al.2000)。对于这几个变量 我们在分析 向农业的代际向下流动时将予以考虑。
+二、统计描述
+表1报告了所有连续变量和虚拟变量的描述性统计。第二列报告 了全国总样本(男性)中各变量的分布 而第三和第四列则分别报告了 1996年农村和城市居民在这些变量上的分布。在总样本中 83%的男 性14岁时是农村户口 但在1996年这一比例下降为74%(表2的第二 组)。大约40%当前住在城市的男性以前是农村户口 这不仅包括那 些通过自己的努力而获得城市户口、并进一步获得高地位城市工作的 人 还包括那些改革时期从农村来的民工 他们改变了居住地点 但没 有改变户口的性质。在本文的数据中 66%(=0.259/0.395)的从农村 迁到城市居住的人为“农转非” 人口 剩下的34%则是所谓的“ 流动人 口” 。 表1的数据也显示了城乡居民之间存在着巨大的差异。城市男性 (及他们的父亲)平均而言受过更好的教育 有着更高的职业地位 并更 可能是党员。这些差异再次突出地显示了 只关注农村居民或只关注 城市居民 将使我们对中国代际职业流动和地位获得过程的理解误入 歧途。
+43
+论 文 中国的户籍制度与代际职业流动
+
+
+表1 地位获得与社会流动模型中变量的描述性统计
+(中国1996年20-55岁的男性1 依照1996年的居住地点分类)
+全国总样本 农村样本 城市样本
+连续变量:均值 括号里是标准差
+受访者当前的职业地位(ISEI) 29.1 23.5 45.2
+(17.2) (14.1) (15.3)
+受访者的受教育年限 7.92 7.15 10.15
+(3.40) (3.21) (2.90)
+受访者14岁时父亲的职业(ISEI) 24.3 20.1 36.7
+(15.9) (11.7) (19.5)
+父亲的受教育年限 3.49 2.75 5.66
+(3.84) (3.19) (4.66)
+出生年(后两位数) 59.6 59.4 60.2
+(9.79) (10.0) (9.12) 类别变量:比例
+14岁时的户口:农村 ∙831 ∙980 ∙395
+1996年的户口:农村 ∙744 ∙951 ∙141
+农村到城市户口的转变 ∙093 ∙035 ∙259 当前的居住地点:农村 ∙743 - 
+党员 ∙118 ∙083 ∙218
+14岁时父亲是党员 ∙150 ∙105 ∙292
+加权后的 N 2133 1586 547
+未加权的 N 2133 1133 1000
+注:1样本仅限于14岁时存在户口概念的男性。由于户籍制度是在1955年开始实施的 只有一部分1941年出生 即在1996年55岁的人 在14岁时存在户口概念。我们将 21位1941年出生、同时报告说在户口制度实施之前即已达到14岁的男性 以及9位 1941年之后出生、但是没有报告户口性质的男性剔除出样本。
+(一)城乡二元制度分割 地位获得和职业流动
+让我们尝试用一个简单的定量分析来显示户籍制度在理解中国地 位获得和职业流动方面的关键作用。我们首先用中国的数据(农村样 本和城市样本)部分地重复了布劳和邓肯(Blau & Duncan 1967:170)经 典的地位获得模型 即用受访者的受教育年限、父亲的职业地位及其受 教育年限来预测受访者当前职业地位。然后 我们加入一个虚拟变量 来单独显示父亲职业为农民对儿子职业获得的影响(Blau & Duncan 1967:Chapter8)。最后 我们将农村样本和城市样本放在一起 对中国 人的地位获得模型进行估计 并特别关注那些14岁时是农村户口的
+44
+社会学研究 2007.6
+
+
+人。结果见表2。
+表2 地位获得模型的系数
+(中国1996年20-55岁的男性)1
+城市样本 农村样本 全国总样本
+模型1a 模型1b 模型2a 模型2b 模型3a 模型3b
+父亲的受教育年限 -∙362 -∙371 -∙1053 -∙1014 -∙0615 -∙1076
+(∙110) (∙112) (∙126) (∙127) (∙103) (∙098)
+父亲的 ISEI ∙0557 ∙169 ∙157 ∙0398 ∙121 ∙121
+(∙037) (∙044) (∙042) (∙058) (∙041) (∙039)
+受教育年限 2∙648 2∙602 1∙162 1∙152 1∙156 1∙826
+(∙186) (∙170) (∙167) (∙168) (∙141) (∙145)
+父亲职业为农民2 - 6∙842 - -5∙046 -6∙483 -3∙0249
+(2∙064) (2∙066) (1∙416) (1∙510)
+14岁时农村户口 - - - - - -7∙709
+(1∙376)
+常数项 18∙41 12∙62 12∙40 19∙16 15∙82 20∙71
+(1∙731) (2∙449) (1∙183) (3∙236) (2∙167) (2∙302)
+R2 ∙244 ∙267 ∙095 ∙100 ∙279 ∙296
+注:1 这里的标准误通过 Stata 的抽样估计程序(survey estimation procedures)获得 该程序 可以校正由整群抽样和分层抽样带来的误差 (Stata Corp 2003)。见文中关于抽样设 计的说明。在这里 村和居委会而不是县 被作为基本抽样单位(PSU)。因为 村和 居委会的同质性要比县大得多。2 受访者14岁时父亲从事农业工作。3 所有的 p
+值 除非明确标明 都小于0∙05。这里的 p 值为 0∙413。4 p 值为0∙435。5 p 值为
+0∙558。6 p 值为0∙282。7 p 值为0∙151。8 p 值为0∙507。9 p 值为0∙051。
+首先看城市居民样本。模型 la 重复了我们开始所引用的研究(即 Blau & Ruan 1990;Lin & Bian 1991)的分析策略。受访者的教育程度 对当前的职业地位有显著的正向作用 但父亲的职业地位并没有显著 的作用---该结果曾被错误地理解为是社会主义社会开放程度较高的 证据。而且 父亲的受教育年限对儿子的职业地位获得具有显著的负 向作用。如果不理解从农村到城市“ 农转非” 的高度选择性 这一结果 就难以理解。在那些1996年有城市户口的人中 14岁时是农业户口的 占36∙2%。这些人中的大部分都是基于自己的教育而获得城市户口 的。同样也是因为教育的原因 他们职业地位平均来说也比那些一出
+45
+论 文 中国的户籍制度与代际职业流动
+
+
+生就有城市户口的人要高得多。由于总体上这些人的父亲受教育程度 都不高 即一般都是农民 现有城市居民中的较大比例是由“农转非”而 来 部分解释了父亲教育水平和儿子职业地位之间的负向关系。 为了更清晰地显示这一点 模型1b 用一个虚拟变量来反映受访者 14岁时父亲的职业是否是农民。不出所料 在当前的城市居民中 父 亲是农民的比那些父亲不是农民的人在职业地位获得方面还更具优 势 平均大约高出了7个单位的 ISEI 值。而且 控制了父亲职业是否 为农民之后 父亲职业地位对儿子职业地位的影响大大增加 在统计上 也变得显著了。这一结果表明 模型1a 中所报告的父子职业 ISEI 之间 微弱且不显著的关系 反映了在城市样本中包括了那些出身于农村但 后来改变户口性质的人对整体流动模式造成的影响。 模型2a 对农村样本的分析结果表明 个人的职业地位依赖于个人 自身的教育水平和父亲的职业地位 并不依赖于父亲的教育水平。但 是 这一结果完全是由于在农村样本中 包括了那些父亲在农村但从事 非农职业的人 虽然这部分人所占的比例相对较小 (85% 的父亲和 70%的儿子都有一个相同的 ISEI 值:16 “种庄稼的农民”)。当用一个 虚拟变量来区分父亲职业是否是农民时(模型2b) 我们发现 首先 出 身农民的男性比非农民出身的男性 在职业地位上平均低了5个单位 的 ISEI 值;其次 对非农出身的男性而言 父子职业间实质上并不相关 (系数统计上不显著)。我们将在表3和表4中进一步讨论为什么农村 男性无法将自己的职业成就传承给下一代。 将城市和农村样本放在一起 估计一个全国性的地位获得模型。 模型3a 显示 农民出身的男性在地位获得方面显著不利。与具有相同 教育程度和相似家庭背景(比如 父亲是非技术工人或服务业人员)的 非农民出身的男性相比 他们的职业地位平均要低6分多。如前文指 出 户籍制度可能为那些农民出身的人设置了一个制度上的门槛。为 了验证这一观点 我们在模型中加入了一个虚拟变量---14岁时的户 口性质。在控制了教育、父亲的职业地位和父亲职业是否为农民等变 量之后 14岁时有农村户口的人比14岁时有城市户口的人低了近8个 单位的 ISEI 值。 户口性质对职业机会的影响 可以进一步通过另一个描述性的分 析看到。基于上述6类的 EGP 职业分类 表3的 A 组报告了所有14岁 时是农村户口的男性的流出流动表(out-flow mobility table)。
+46
+社会学研究 2007.6
+
+
+表3 中国1996年20-55岁男性的流出流动表(6类别的 EGP 分类)
+受访者的职业 父亲的职业
+I II III IVa/IVb V VI VIIa IVc/VIIb Total
+A 组:所有男性
+专 业 技 术 人 员/管 理 人 员
+(I II) 41.8 13.4 20.8 15.2 10.9 9.7 14.1
+常规非体力工人 (III) 6.9 12.5 0.0 3.7 14.5 1.2 2.9
+小业主 (IVa IVb) 11.6 24.2 46.3 12.4 19.8 10.4 12.3
+工头 技术工人(V VI) 16.5 14.2 3.9 28.2 22.6 7.3 10.9
+半技术/无技术工人 (VIIa) 8.6 15.9 8.5 15.9 18.1 5.4 7.5
+农民(IVc VIIb) 14.7 19.8 20.6 24.5 14.2 66.0 52.4
+总计 100.1 100.0 100.1 99.9 100.1 100.0 100.1
+加权后的 N (234) (28) (56) (179) (110) (1519) (2126)
+未加权的 N (335) (46) (66) (220) (152) (1307) (2126)
+B 组:城市户口出身的男性
+专 业 技 术 人 员/管 理 人 员
+(I II) 48.3 16.7 43.7 22.5 14.0 29.4 31.5
+常规非体力工人 (III) 8.5 17.9 0.0 5.5 17.5 6.7 9.4
+小业主 (IVa IVb) 6.6 31.0 50.3 11.0 19.7 3.9 12.5
+工头 技术工人(V VI) 22.0 13.1 0.0 39.9 27.8 10.0 24.9
+半技术/无技术工人 (VIIa) 11.4 21.4 6.0 21.2 21.1 5.1 15.2
+农民(IVc VIIb) 3.2 0.0 0.0 0.0 0.0 44.8 6.4
+总计 100.0 100.1 100.0 100.1 100.1 99.9 99.9
+加权后的 N (130) (19) (12) (89) (66) (42) (358)
+未加权的 N (207) (35) (21) (145) (108) (53) (569)
+C 组:农村户口出身的男性
+专 业 技 术 人 员/管 理 人 员
+(I II)... 33.5 5.6 14.9 8.1 6.1 9.2 10.5
+常规非体力工人 (III) 4.8 0.0 0.0 2.0 10.1 1.1 1.6
+小业主 (IVa IVb) 18.0 8.4 45.3 13.9 20.0 10.5 12.2
+工头 技术工人(V VI) 9.6 16.8 4.9 16.8 15.0 7.2 8.0
+半技术/无技术工人 (VIIa) 5.0 2.8 9.1 10.7 14.6 5.4 6.0
+农民(IVc VIIb) 29.2 66.4 25.9 48.5 35.3 66.6 61.8
+总计 100.1 100.0 101.1 100.0 100.1 100.0 100.1
+加权后的 N (104) (8) (45) (90) (44) (1477) (1768)
+未加权的 N (128) (11) (45) (75) (44) (1254) (1557)
+47
+论 文 中国的户籍制度与代际职业流动
+
+
+表4 14岁时是农村户口的中国男性的流出流动表
+(依照1996年的户口进行分类 6类别的 EGP 分类)
+受访者的职业 父亲的职业
+I II III IVa/IVb V VI VIIa IVc/VIIb Total
+A 组:1996年城市户口
+专 业 技 术 人 员/管 理 人 员
+(I II) 48.4 20.0 29.3 17.6 4.2 52.6 46.0
+常规非体力工人 (III) 7.5 0.0 0.0 17.0 10.6 5.4 6.6
+小业主 (IVa IVb) 18.6 20.0 34.0 4.4 4.2 7.6 10.7
+工头 技术工人(V VI) 15.4 60.0 18.9 39.0 33.3 15.7 18.5
+半技术/无技术工人 (VIIa) 6.4 0.0 17.9 22.0 47.8 12.5 13.6
+农民(IVc VIIb) 3.8 0.0 0.0 0.0 0.0 6.2 4.7
+总计 100.1 100.0 100.1 100.0 100.1 100.0 100.1
+加权后的 N (38) (2) (5) (9) (10) (109) (174)
+未加权的 N (73) (4) (8) (16) (16) (200) (317)
+B 组:1996年农村户口
+专 业 技 术 人 员/管 理 人 员
+(I II) 22.7 0.0 12.6 6.9 6.8 5.2 6.1
+常规非体力工人 (III) 2.8 0.0 0.0 0.0 9.9 0.7 0.9
+小业主 (IVa IVb) 17.6 3.9 47.1 15.1 25.2 10.8 12.4
+工头 技术工人(V VI) 5.4 0.0 2.6 13.9 8.9 6.5 6.7
+半技术/无技术工人 (VIIa) 4.0 3.9 7.7 9.2 2.3 4.8 5.0
+农民(IVc VIIb) 47.6 92.2 30.0 54.9 46.9 72.1 68.8
+总计 100.1 100.0 100.0 100.0 100.0 100.1 99.9
+加权后的 N (53) (5) (34) (70) (29) (1192) (1383)
+未加权的 N (55) (7) (37) (59) (28) (1054) (1240)
+这一流出流动表最反常的特征就是向农业职业的高流入率(粗体 的那一行):14∙7%的父亲是专业技术人员和管理人员的人最终的职业 是农民;对于父亲是常规非体力工人和小业主的人 这一比例分别为 19∙8%和20∙6%。这一模式在其他社会主义国家和大部分发展中国家 中都没有发现。 怎样解释奇怪的代际职业流动模式呢?基于一个不同的职业分 类 成原和戴建中(Cheng & Dai 1995)也报告了类似的模式。他们的解
+48
+社会学研究 2007.6
+
+
+释是 “上山下乡”政策导致了向农业的大规模代际流动 特别是“文革” 期间。正如本文开头所指出的 这一解释值得商榷。我们认为向农业 的高代际流入率是由户籍制度造成的 因为它阻碍了农村大部分人的 职业机会。那些具有农村户口(即14岁时拥有农村户口)的人 只有很 少的机会转变为城市户口 主要途径是受中专或大专以上的教育 还有 一部分人是通过入党或参军(Wu &Treiman 2004)。当然 极小一部分 人从事非农职业但保留农村户口的人的儿子 可以利用他们父亲的社 会关系自己去获得非农工作。总之 农民的儿子仍然是农民 即使他们 的父亲已经不再从事农业劳动。 为了验证这一点 我们在表3B、C 两组中按不同的户口性质分别 作流出流动表。B 组报告了出身于城市户口的男性流动表 而 C 组报 告的是出身于农村户口的男性流动表。从 B 组可以看到 除了那些从 事农业(可能在国营农场中)的少数人(他们中有一半人的儿子还从事 农业) 出身为城市户口的人几乎没有人在1996年时从事农业生产。 这是“上山下乡” 政策并没有增加向农业的代际流动的又一证据。而 且 出身城市户口的人的这一模式 与大部分发达国家所观察到的模式 是一致的。明显与此不同的是 那些出身为农村户口的人有很高的向 农业的代际流入率 不管他们父亲的职业是什么(C 组)。 表4进一步按照出身为农村户口的男性的当前户口性质来细分流 出流动表。在 A 组一小部分成功改变户口性质的人中 只有极少数人 经历了向农业的代际向下流动 52∙6%的农村家庭出身的男性最后成 为了专业技术人员和管理人员。另一方面 当我们将那些从农村户口 转为城市户口的人排除后 那些出身为农村户口的人向农业的向下流 动率将变得更为显著。在 B 组中 那些仍是农民的人(即继续保留了 农村户口的)中 30%的小业主的儿子 以及至少46%的从事其他非农 业职业的人(所有其他职业类别)的儿子 都为农民。很显然 中国分层 体系的最显著特征是 具有农村户口的人和具有非农村户口的人之间 的区别。即使是“农民工” (即从事非农工作的人)在身份上仍然是农 民 并且他们的机会也受到国家户籍政策的限制(Chan 1994;Wu & Treiman 2004) 他们下一代的流动机会也是如此。
+(二)对地位获得研究和社会流动分析的综合
+上述分析显示了户籍制度在理解中国地位获得过程以及职业流动
+49
+论 文 中国的户籍制度与代际职业流动
+
+
+方面的重要性。所使用的有关地位获得的线性模型的好处是 很多解 释变量很容易被放在一起讨论。然而 这一方法本身具有局限性 其中 最重要的是 它 不 能 刻 画 男 性 在 各 个 职 业 类 别 里 的 继 承 性 ( 即 子 承 父 业) 以及不能将流动的部门限制(sectoral barriers)考虑在模型中 而这 两方面在中国恰恰非常重要。正如我们在地位获得模型中通过加入 “父亲职业是否为农民”以及“14岁时是否为农村户口” 这两个变量所 揭示的那样 户口对那些农村出身的人而言已经成了一个制度性的门 槛。当然 我们可以用对数线性模型去分析方形流动表以揭示流动表 中变量之间关系的模式 但这一方法又很难将父亲职业之外的其他变 量放入模型之中。 我们的解决方法是利用“多类别条件 Logistic 回归模型” (DiPrete 1990;Hendrickx 2000) 对不同职业类别之间流动机会进行多变量分 析。这一类模型特别适合我们当前的研究 因为它们在对上述6×6流 动表进行分析的同时 还可以包括一些其他的定量或定类变量(关于这 一模型的其他应用 见 Hendrickx & Ganzeboom 1998)。具体而言 我们
+采用 SOR (Stereotype Ordered Regression)模型(DiPrete 1990)对职业类别 估计出 一 个 序 列 矩 阵 并 已 考 虑 到 个 人 层 面 变 量 的 作 用。与 定 序 Logistic 回归模型(ordinal logistic regression)不同 SOR 模型假设职业类 别之间没有特定的序列;相反 职业类别之间的等级(scaling)是通过数 据分析出来的结果。SOR 模型可以用公式具体描述如下:
+log P(Y = j)
+P(Y = j′) = log it πj
+πj′ = αj - aj′+ (●j -●j′)∑
+K
+k=1βkXk (1)
+其中 Y 是儿子的职业( j=1-6) αj 是限定的截矩参数 ●j 表示因 变量(职业 j)的序列矩阵 Xk 表示变量 βk 是这些变量的作用参数。 因此 Xk 一个单位的变化对在特定的职业 i 而不在另一个职业 j 的对 数可能性( log odds)的作用 可以用(●j -●j′)βk 表示 而不是像在标准
+的多类别 logit 模型(multinomial logit model)中用 βk 表示。为了确定这 一模型 我们需要对 ●j 做一些限制:
+∑●j =0and∑●2
+j =1
+在 SOR 模型框架下 古德曼(Goodman 1979)的行和列模型II(Row
+&Column Model II)可以被写成:
+log it πj
+πj′ = αj -αj′+ (●j -●j′)μσi (2)
+50
+社会学研究 2007.6
+
+
+父亲的职业在 SOR 模型中被当做一个变量 但是它也需要用 σi 来 重新排序。父亲职业对儿子职业的作用可以用一个单独的参数 μ 像 (1)中的 βk 那样来表示。同样 为确定这一模型 对 σi 也需要有同样 的限制:
+∑●j = ∑σi =0 and ∑●2
+j = ∑σ2
+i =1
+这种模型可以包括那些在父子职业关系之间起中介作用的变量 也可以允许关系参数 μ依照这些变量中的一个或多个发生变化:
+log it πj
+πj′ = αj -αj′+ (●j -●j′)(μ0 + ∑
+T
+t=1 μtXt )σi + (●j -j′)∑
+K
+k=1βk Xk
+(3) 其中 μ0 是基本的关系参数 μt 表示变量 Xt 对关系的作用。所有 上述模型都可以用 Stata 软件中的模块程序来进行迭代估计。1 我们可以对等式3做一些限制以获得更简洁的模型。比如 我们 可以对父亲和儿子的职业确定同样的矩阵 ● 从而节省了(J-2)个自 由度。我们还可以单独挑出对角线的格子 对每个职业类别 i 分别将 非流动作用(immobility effects)引入模型。
+log it πj
+πj′ = αj -αj′+ ∑
+6
+i=1γidi + (●j -●j′)(μ0 + ∑
+T
+t=1 μtXt )σi
++ (●j -j′)∑
+K
+k=1βkXk (4)
+其中 如果 i= j 则 di =1;否则 di =0。 我们对方程4中的三套参数特别有兴趣:(1)继承参数(inheritance parameter)γ测量非流动率(父亲和儿子在同一职业类别 即 i= j 的情 况);(2)关系参数(association parameter)μ测量非对角线关系的程度; (3)每个变量 β对进入职业类别 i 而不是 j 的可能性的影响参数。总体 而言 我们期望得到正向的继承参数 γ和非对角线关系参数μ。一个 大的关系参数 μ意味着在估计程序所确定的职业序列之下 对那些已 经发生了职业流动的人而言 父子职业间有较强的关系。 在对所有中国男性估计的“多类别条件 Logistic 回归模型”(表4的 A 组)中 除了父亲的职业 我们首先加入两个变量:出生时的户口性质
+51
+论 文 中国的户籍制度与代际职业流动
+1 参见 Stata 中的 mclge-和 mclest-命令。这些命令及详细的说明可从以下链接下载:http:// www .xs4all .nl/- jhckx/mcl/stata/
+
+
+(虚拟变量 农村=1) 以及户口变化(虚拟变量 如果14岁时的户口性 质和当前的户口性质发生了改变则为1 否则为0)。我们对每个职业 类别 i 都确定非流动参数 并允许这些关系参数依照出生时的户口发 生变化。接着我们令父代和子代的职业序列矩阵相等 且令除农业之 外的其他职业类别的继承参数都相等。这个模型对数据的拟合优度最 佳。因此 我们将它作为分析的基准模型。 表5首先报告了基准模型的估计参数 然后加入了一个重要的变 量---受教育年限。我们对每个模型都报告了4套估计参数:(1)6类 职业类别的序列分 数;(2) 非 流 动 率;(3) 父 子 职 业 之 间 的 总 体 关 系 参 数;(4)各个变量对职业流动的作用参数(见表5)。 按照 EGP 分类的编码方式(专业技术人员/管理人员为6 农业为 1) ●j 分数越高 职业地位就越高;两类职业类别之间序列分数的差异 越大 变量对进入这两类职业中较高地位的职业的对数可能性(log odds)的作用就越大。表5 A 组中的系数显示 农业职业的地位最低 (-0.827) 任何一种职业与农业职业之间的差距 比其他任何两种职 业之间的差距实质上都要大得多。但是 与通常所观察到的情况不同 “专业技术人员/管理人员”并不是最高地位的职业 即出身农民获得这 一职业并不是最难的 最难的是变成“ 常规非体力工人”。我们怀疑造 成这一结果的原因是户籍制度:正如我们之前所注意到的 那些占据好 职业的人中 有相当一部分是通过教育获得成功的农民的孩子。那些 通过接受大专或以上教育来改变他们户口性质的人 通常会在毕业之 后变成管理者和专业技术人员。这一比例对那些具有同等学历 但是 出身是农村户口、且父亲职业是农民的人而言更高(91%)。 表中另一反常之处是“ 小业主” 这一职业的位置。在西方发达国 家 这一职业类别的地位处于“ 工头和技术工人” 与“ 常规非体力工人” 之间(Ganzeboom et al∙1989)。然而 如其他社会主义社会一样(Gerber & Hout 2004) 私有制在中国一直被压制 直到最近才有所改变。从事 个体与私营经济长期以来并不是人们所偏好的 从而使得“ 小业主” 的 职业地位在中国仅仅高过农民。 模型1允许非对角线的父代-子代职业关系参数 依照出生时的 户口性质而发生变化。出身于城市户口的父子职业地位之间有显著的 正向关系(1∙317) 但是对出身于农村户口的人而言 这一关系实际上 是负的(-1∙232=1∙317-2∙549)。如果社会主义国家旨在提升社会流
+52
+社会学研究 2007.6
+
+
+表5 关于职业流动的多类别条件 Logistic 回归估计模型的参数 (中国1996年20-55岁的男性 依照户口出身分类)
+模型1 模型2
+A 组:父代-子代职业类别的序列分数矩阵相等 (●)1
+专业技术人员/管理人员 (I II) ∙310 ∙454
+常规非体力工人 (III) ∙375 ∙332
+小业主 (IVa IVb) -∙173 -∙199
+工头 技术工人(V VI) ∙178 ∙131
+半技术/无技术工人 (VIIa) ∙136 ∙069
+农民(IVc VIIb) -∙827 -∙788
+B 组:非流动参数 (μ)
+非农业职业 ∙703 ∙671
+(∙096) (∙100)
+农业 (IVa VIIb) 1∙979 2∙039
+(∙332) (∙257)
+C 组:父代-子代代际职业关系参数 (β)
+总体关系参数 1∙317 ∙3542
+(∙439) (∙387)
+关系参数∗ 户口出身 -2∙549 -1∙819
+(∙440) (∙411)
+D 组:变量的 stereotype ordered effects (β)
+农村到城市的户口变化 3∙981 3∙418
+(∙291) (∙251)
+14岁时农村户口 -3∙554 -2∙826
+(∙282) (∙236)
+受教育年限 - ∙250
+(∙022)
+E 组:模型拟合统计量
+N 12930 12930
+Log Likelihood -2590∙1 -2519∙3
+LR χ2 2800∙6 2942∙2
+自由度 11 12
+注:1 为了节省篇幅 对截矩的估计没有报告。序列分数没有标准误。2 除了该系数的
+p 值之外(p=0.360) 其他所有的 p 值都小于0.05。
+53
+论 文 中国的户籍制度与代际职业流动
+
+
+动的平等主义政策有效的话 我们应该看到 出身于城市(户口)的关系 参数会低得多 因为城市地区要比农村地区更加广泛地实施了国家干 预政策 提供各种社会福利来降低家庭背景对社会经济获得的限制。 出身于农村(户口)男性的这一看似反常的负向关系参数 与我们关于 户口作用的观点一致 即在户籍制度下 那些成功地转为城市户口的人 发生了极度的向上流动(extreme upward mobility) 同时那些已经脱离农 业的农民工人 因为身份依旧为农民 如果不改变户口性质 很难将他 们的职业成就传递给下一代。值得注意的是 关系参数只对那些发生 职业流动的人适用。大部分出身为农村(户口)的人是农民的儿子 并 且自己也是农民。另外 有相当部分的父亲从事非农职业的人 也成为 了农民(表4的 C 组)。由于所有其他职业类别的估计分数都高于农业 职业 从非农职业向农业的流动属于向下流动。这一向下流动和那些 成功转变了户口性质的人的极度向上流动 解释了出身农村的人代际 流动的负向关系参数。 为了进一步研究户口在职业流动中的作用 我们在 SOR 模型中包 括了“ 出生时户口性质” 和“ 户口变化” 两个变量。出身于农村户口这一 变量系数是负的(-3∙554) 而且绝对数值很大 表明相较于出身于城 市户口的人而言 他们向上流动的可能性在很大程度上受到了限制。 另一方面 那些由农村户口转变为城市户口的人 系数为正而且数值很 大(3∙981) 说明他们比出身于城市的男性更可能获得高地位的职业。 在中国 教育是户口流动(Wu &Treiman 2004)和社会流动(Walder et al∙2000)的主要决定因素。模型2中我们将“受教育年限”加入自变 量中。一旦控制了教育获得 除了前述讨论的小业主的情况之外 职业 类别分数的序列变得与通常观察到的结果一致了。控制其他因素后 教育有助于向上流动---该变量系数为正且统计上显著(0∙250)。举 例说明 高中毕业的人成为专业技术人员/管理人员而不是半技术/无 技术 工 人 的 可 能 性 大 约 是 初 中 毕 业 的 人 的 1∙33 倍 (1∙33=
+e(∙454-∙069)(∙250)(12-9)) 。
+理解户口出身和户口变动作用最简单的方法就是确定这两个变量 对获得某一个职业而不是另一个职业的相对可能性(relative likelihood) 的影响。对那些是农村户口的人而言 表6分别列出了出身于城市户 口的人 那些成功转为城市户口的人 以及那些继续保留农村户口的 人 在进入每两组职业间的相对可能性。这个数字可以在控制了模型
+54
+社会学研究 2007.6
+
+
+中其他因素之后 通过使用表5模型2中所报告的估计分数 以及“14 岁时是农村户口”和“从农村到城市户口变化”这两个变量的系数 用等 式4中第三项的对数计算出来。
+表6 城市户口出身、农村户口出身但成功地转为城市户口、以及农村户口 出身但继续保持农村户口的人的流动机会的相对比
+(中国1996年20-55岁的男性)
+I II III IVa/IVb V/VI VIIa IVa/VIIb
+A 组:城市户口出身 vs.继续保持农村户口的人 (对角线以上为前者)
+专业技术人员/管理人员 (I II) 1.41 6.33 2.49 2.97 33.44
+常规非体力工人 (III) .71 4.48 1.76 2.10 23.69
+小业主 (IVa IVb) .16 .22 .39 .47 5.28
+工头 技术工人(V VI) .40 .57 2.54 1.19 13.42
+半技术/无技术工人 (VIIa) .34 .48 2.13 .84 11.27
+农民(IVc VIIb) .03 .04 .19 .07 .09
+B 组:城市户口出身 vs.农村到城市的户口转变者 (对角线以上为前者)
+专业技术人员/管理人员 (I II) .93 .68 .83 .80 .48
+常规非体力工人 (III) 1.07 .73 .89 .86 .52
+小业主 (IVa IVb) 1.47 1.37 1.22 1.17 .71
+工头 技术工人(V VI) 1.21 1.13 .82 .96 .58
+半技术/无技术工人( VIIa) 1.26 1.17 .85 1.04 .60
+农民(IVc VIIb) 2.09 1.94 1.42 1.72 1.66
+C 组:农村到城市的户口转变者 vs.继续保持农村户口的人(对角线以上为前者)
+专业技术人员/管理人员 (I II) 1.52 9.32 3.02 3.73 69.77
+常规非体力工人 (III) .66 6.14 1.99 2.46 45.98
+小业主 (IVa IVb) .11 .16 .32 .40 7.49
+工头 技术工人(V VI) .33 .50 3.09 1.24 23.13
+半技术/无技术工人 (VIIa) .27 .41 2.50 .81 18.71
+农民(IVc VIIb) .01 .02 .13 .04 .05
+我们首先看那些出身城市户口的人以及那些出身农村并继续留在 农村的人 他们在成为专业技术人员而不是常规非体力工人方面的相 对可能性(表6第一行的第一个系数)。根据我们关于出身为农村户口
+55
+论 文 中国的户籍制度与代际职业流动
+
+
+(=1)和户口变化(=1)这两个变量的编码方式 可以定义所有关于出
+身为城市户口的男性的比率为1 即1= e(∙454-∙332)(3∙418∗0+(-2∙826)∗0) 。对
+那 些 仍 然 为 农 村 户 口 的 人 相 应 的 比 率 为 0∙71 ( =
+e(∙454-∙332)(3∙418∗0+(-2∙826)∗1) )。这样 相对的可能性就是1/0∙71=1∙41。表
+6的对角线之下也给出了倒数---那些出身为城市户口以及那些继续 保留农村户口的人 成为常规非体力工人而不是专业技术人员/管理人 员的相对可能性;换种说法就是 继续保留农村户口的人和出身城市户 口的人成为专业技术人员或管理人员而不是常规非体力工人的相对可 能性。 我们在表6中发现 控制了教育及父亲职业等因素之后 继续留在 农村的人与那些出身城市户口的人相比 向上职业流动的机会有限。 流动机会的差别 在成为专业技术人员或管理人员而不是农民的相对 可能性方面最为显著:出身城市户口的男性比具有相同教育水平的出 身农村户口的男性在成为专业技术人员的可能性方面高33倍。这一 结果显然反映了我们之前所看到的模式:出身城市户口的男性几乎很 少从事农业工作。但是 即使我们将其他职业类别作为参照组 城市出 身的男性相对而言仍具有非常高的机会获得较好的职业。在控制了教 育和父亲职业后 出身城市户口的男性成为专业技术人员而不是半技 术/无技术劳动力的可能性 是继续保留农村户口人的3倍 在成为常 规非体力工人方面则是2倍。 与此相较 表6第二组的结果表明 那些成功地转变为城市户口的 人的流动机会实际上比出身城市户口的人还要大。比如 成功户口转 变者成为常规非体力工人而不是小业主的可能性只是那些出身城市户 口的人的一半 在成为专业技术人员或管理人员而不是农民的可能性 方面则是其2倍。 这些模式显示 户口性质的转变将显著地提升流动机会。除了小 业主这一职业类别之外 表6第三组中所有的似然比都要远大于1。 这告诉我们 成功转变户口的人发生代际向上流动的机会比那些保留 农村户口的人要大得多 哪怕他们具有同等的教育水平 父亲也从事同 样的职业。当然 所有其他职业与农业相比的可能性都很大 因为那些 成功改变户口性质的人几乎不会从事农业生产。又比如 成功的户口 性质转变者比那些仍保留农村户口的人 在成为专业技术人员或管理 人员而不是小业主的可能性方面高出了9倍。
+56
+社会学研究 2007.6
+
+
+总之 表6的系数表明 出身于农村户口的人要付出很大的代价 对一小部分成功地改变户口性质的人而言 转变户口性质将成为他们 克服农村出生所带来的劣势的一个机制。
+(三)一个补充分析:解释向农业的代际向下流动
+本文分析的最后部分回到表5B 组中所观察到的看似反常的结 果 即持农村户口的人有很高的向农业职业的流入率。在过去相当长 的时期内 中国政府很大程度上依赖户籍制度来分配物质利益和生活 机会。户籍制度的主要功能是控制地域和职业流动。当那些少数出身 于农村但成功获得城市户口的人经历了长距离的向上流动 甚至比出 身城市户口的普通人更具优势时 其他绝大部分农民的儿子却有着不 同的命运。他们留在农业生产部门 如他们的父亲那样;甚至当他们的 父亲已经脱离农业生产了 他们仍然很容易发生向下的代际流动。吴 晓刚和特雷曼 (Wu & Treiman 2004) 详细报告了前一个过程 (“ 农转 非”)。这里 我们研究那些出身为农村户口、但父亲已经获得非农职业 的人向农业的代际向下流动的决定因素。换句话说 在何种条件下 那 些脱离了农业的农村男性能够将他们职业地位优势传递给他们的儿子。 我们通过估计非连续性时间风险模型(discrete-time hazard model) 将分析样本限制于那些出身为农村户口、同时14岁时父亲的工作是非 农职业的男性。风险年开始于他们进入劳动力市场的年份。非连续性 时间风险模型的分析单位是风险事件而不是个人。在我们的分析中 那些出身农村户口但父亲又不是农民的人 被认为从他们进入劳动力 市场的那一年开始 每年具有发生“ 向农业流动” 这一事件的风险。我 们只对首次发生的事件建立模型 尽管该风险事件很有可能“ 重复发 生”(即在农业和非农业职业之间相互转移职业)。那些到1996年或他 们离 开 劳 动 力 市 场 的 那 一 年 仍 未 进 入 农 业 的 人 被 右 删 截 (rightcensored)。对数据的重新整理 产生了2370人/年个案。我们可以对此 通过使用估计两分变量 logit 模型(binary logit model)进行分析(Allison
+1982) 见表7。
+表7报告了所估计的参数。自变量包括父亲职业、教育和党员身 份 以及受访者的教育、党员身份、风险年之前的工龄和户口性质改变 等变量。父亲职业用前面提到的6类 EGP 职业类别来测量 父亲教育 程度用受教育年限来测量 父亲党员身份是个虚拟变量(是=1)。由于
+57
+论 文 中国的户籍制度与代际职业流动
+
+
+表7 向农业的代际向下流动的非连续时间风险模型
+(中国农村户口出身但父亲在非农职业工作的男性) (N=2370)1 模型1 模型2 模型3 模型4 父亲的 职 业:( 专 业 技 术 人 员/管 理 人 员 ( I II)为参照类)
+常规非体力工人 (III) ∙806 ∙347 ∙711 ∙218 (∙701) (∙801) (∙706) (∙736) 小业主 (IVa IVb) -∙059 -∙727 -∙921 -∙927 (∙433) (∙460) (∙488) (∙484) 工头 技术工人(V VI) ∙509 ∙024 -∙145 -∙137 (∙366) (∙411) (∙442) (∙437) 半技术/无技术工人 (VIIa) ∙746 ∙678 ∙655 ∙656 (∙423) (∙415) (∙439) (∙447) 父亲的教育 -∙069 -∙070 -∙0844 -∙080 (∙041) (∙037) (∙039) (∙041) 父亲党员 ∙418 ∙280 ∙250 ∙223 (∙364) (∙364) (∙374) (∙376) 受访者的教育 (≤小学为参照类)
+初中 - -∙777 -∙646 -∙556 (∙408) (∙438) (∙459) 高中 - -1∙8333 -1∙4594 -1∙1265 (∙469) (∙450) (∙488) 中专 - -2∙0203 -1∙5165 -1∙4405 (∙563) (∙586) (∙725) 大专及以上2 
+受访者党员 - -1∙343 -∙827 -∙706 (1∙107) (1∙070) (1∙098) 工龄 -∙2793 -∙2783 -∙2753 (∙045) (∙045) (∙045) 农村到城市的户口变化 - - -1∙1713 ∙125 (∙343) (∙981) 交互项
+初中 ∗ 户口变化 - - - -1∙288 (1∙084) 高中 ∗ 户口变化 - - - -2∙4085 (1∙151) 中专 ∗ 户口变化 - - - -1∙264 (1∙425) 常数项 -2∙8433 -∙037 ∙268 ∙205 (∙721) (∙706) (∙736) (∙720)
+注:1 这里括号里的标准误通过 Stata 的抽样估计程序(survey estimation procedures)获得 该程序可以校正由整群抽样带来的抽样误差。数据被加权。2 所有大专或以上教 育的人都没有发生向农业的代际向下流动。3 所有的 p 值 除非明确标明 都小于 0.05。这里的 p 值为0.001。4 p 值小于0.01。5 p 值小于0.05。
+58
+社会学研究 2007.6
+
+
+以前的研究表明 教育对户籍性质改变的可能性的作用是非线性的 其 分界点在中专教育及大专或以上教育水平(Wu & Treiman 2004) 这里 受访者的教育作为一个时变变量 被处理为一套类别变量:分为小学及 以下、初中、高中(技校)、中专、大专及以上五类。受访者的党员身份是 指受访者在每个风险年的政治身份(是=1)。户口变化是指受访者在 14岁以后是否改变过户口性质 即受访者出身农村户口 但在调查时 有城市户口(是=1)。风险年之前的工龄是一个连续变量 用风险年和 受访者进入劳动力市场的年份的差值来测量。 表7的模型1只包括父亲背景方面的变量 即父亲的职业、教育及 党员身份。有趣的是 所有因素都对向农业的代际流动没有显著的作 用。换句话说 对那些出身农村的人而言 他们的父亲在教育、政治身 份和职业获得方面的优势 并不能使他们自己避免向农业的代际向下 流动。表7的系数还清晰地表明 男性只能通过自己的努力来避免向 农业的向下流动。模型2加入了受访者的教育程度(以类别来测量)、 党员身份以及工龄。与那些家庭背景特征不同 受访者的受教育程度 对发生向农业的代际向下流动有很强的负向作用。与小学及以下的男 性相比 具有初中教育水平的男性向农业流动的可能性只有 46% (=e-0∙777) 高中教育水平只有16% (=e-1∙833) 而中专水平只有13% (=e-2∙020)。所有的大专及以上水平的人 都没有发生向农业的向下流 动。此外 党员身份并不能显著使人避免向农业的向下流动。最后 随 着工龄的增长 进入农业的可能性迅速地降低。每增加一年非农职业 的工 作 经 验 将 净 减 少 向 农 业 的 向 下 流 动 的 可 能 性 的 24% (=e-0∙279-1)。
+教育 特别是大专及以上的教育水平有助于人们发生从农村到城 市的向上的户籍流动(Wu &Treiman 2004)。中专及大学教育水平的人 比小学或初中教育水平的人有优势 可能仅仅是因为样本中有一小部 分人发生了户口性质的改变。为了检验这一可能性 模型3引入了“户 口性质变化”这一变量。与我们前面的发现一致 出身为农村户口的男 性的户口变化 不仅有利于他们向上流动 而且可以防止他们向农业的 向下流动。对那些从农村户口变为城市户口的人而言 在控制其他变 量后 流入农业的可能性只是那些仍保留农村户口的人的31% (= e-1∙171)。模型3还表明 控制了户口性质变化之后 教育仍对向农业的 向下流动有显著的负向作用。
+59
+论 文 中国的户籍制度与代际职业流动
+
+
+模型4加入了教育水平和户口性质变化的交互项。结果显示 高 中教育和中专教育有助于避免向农业的向下流动(在表7的分析中 所 有具有大专及以上教育水平的人 都成功地获得了城市户口)。户口变 化对高中教育水平的人特别有用:与那些没有发生户口转变的高中教 育水平的人相较 户口变化可以净降低向农业的向下流动的可能性的 91%(=e-2∙408-1)。
+总之 在中国农村 那些父亲已经从事非农职业的男性从他们父亲 的教育和党员身份中得到的好处很少(相对于他们自己的教育水平而 言)。他们也不能利用其父亲在非农部门的职业优势来使自己免于向 农业的流动。与此相对 他们自己的教育程度 特别是他们自己的教育 和户口转变的结合 是他们避免向农业的向下流动的有效方法。
+三、总结和讨论
+本文分析了家庭背景对当代中国职业地位获得和社会流动的作 用 并特别关注城乡间的制度分割。研究显示 男性职业地位的获得在 农村比在城市更依赖于他们父亲的职业。在城市 家庭背景对受访者 的职业地位只有微弱且不显著的作用。然而 不能据此推论说 国家社 会主义的平等主义政策在中国城市得到了成功的实施 因为 这一说法 没有考虑到农村出身的人很高的代际非流动率 以及那些最聪明的人 向城市流动的正向选择过程。他们上中专或大学后进入到城市 并在 那里找到 了 很 好 的 工 作。这 一 从 农 村 向 城 市 流 动 的 高 度 选 择 性 (extreme selectivity)正是户籍制度所带来的结果:户籍制度将全国人口 分成农村和城市两部分 并严格地控制了城乡间的户口转变。正是城 市样本中一部分出身农村户口但经历了极度向上流动的人 才造成了 中国城市居民中父子职业地位之间的微弱且不显著的关系。 为了正确地描述中国地位获得和社会流动的过程及模式 我们分 析了一个20-55岁的男性全国随机抽样样本(包括农村和城市两个部 分)。对代际流动表的分析表明 相比其他国家而言 中国人有相当高 的向农业的代际向下流动。进一步分析发现 这一事实仅适用于一部 分出身为农村户口的人;出身为城市户口的实际上几乎没有向农业的 代际向下流动。
+60
+社会学研究 2007.6
+
+
+为了进一步研究户籍制度是怎样影响职业流动的 我们利用“多类 别条件 Logistic 回归模型计算职业继承性(immobility) 以及那些发生了 流动的人的代际职业关系系数 还估计了其他变量(教育及户口性质变 化)对流动率的作用。结果显示 教育增加了向上代际流动的可能性。 但是户口性质变化的作用要强得多。虽然总体上出身农村户口的人在 获得高地位职业方面具有显著的劣势 但是那些成功转变户口性质的 人不仅弥补了由于农村户口带来的劣势 甚至还获得些微优势。最后 控制了教育和户口性质变化之后 父代和子代职业之间的关系 对出身 城市户口的人而言是正的 但对于出身农村户口的人而言却是负的。 我们认为不能将在中国(农村)观察到的社会流动的模式归结于由 国家实行的社会主义平等政策。如果这些政策可以达到它们希望达到 的效果 我们将发现 出身城市户口的人的社会流动比出身农村户口的 要高 因为国家干预在城市比农村有更大的影响力。然而 数据分析所 揭示的恰恰相反。我们用中国独特的户籍制度来解释这一流动模式。 从20世纪50年代户籍制度开始实施起 户籍制度就被中国政府 当作限制农村人口向城市迁移和分配各种资源及生活机会的主要工 具。在这一制度之下 母亲是城市户口的人 在出生时就自动地获得了 城市户口 并由此享有由社会主义国家所赋予的福利---可以得到高 质量的教育、医疗保险和体面的工作。户籍制度保护了那些出生在城 市的人 使他们免于向农业的向下流动。与此相较 出身于农村的人将 不得不通过竞争城市户口来获得更多机会。他们中只有一小部分人可 以在这一具有高度选择性的过程中获得成功。由于这些人的教育水平 较高 他们最后一般都会有较好的工作。正是由于城市样本中包括了 这一极度向上流动的群体 父代和子代职业地位之间的关系才会在城 市中显得很弱;当我们的计算仅基于出身为城市户口的人而不是当前 城市户口的人时 代际职业地位之间的关系参数一下子就高了很多。 一些农村出身的人的极度向上流动 以及另外一些出身为农村户口、但 父亲从事非农职业的人向农业的向下流动 导致了农村出身的人而非 城市出身的人 有着不同的代际流动模式:父代和子代职业“地位”之间 的关系是负的。 为了进一步研究向农业的向下流动模式 我们用非连续性时间风 险模型来分析那些出身为农村户口、但父亲从事非农职业的人发生向 农业的代际向下流动的决定因素。结果显示 父亲的非农职业 以及父
+61
+论 文 中国的户籍制度与代际职业流动
+
+
+亲的受教育程度和党员身份都不能使人免于向下流动。相反 个人的 受教育程度才是避免向农业流动的重要因素。另一个避免向农业的向 下流动的因素是14岁之后的户口性质变化。总而言之 农村户口不仅 阻碍了大部分农民的后代向上流动 而且使得从事非农职业的农民的 儿子很容易发生向下流动。 我们的发现显示以往关于社会主义国家在制造社会平等及不平等 方面的作用需要重新审视。由于户籍制度及其选择性过程 虽然一小 部分农村人有能力获得高地位的职业 但是许多人并不能利用他们父 亲的职业成就所带来的优势。因此 中国社会的“ 开放” 性事实上是由 于国家施行的造成农村-城市制度性分割的户籍制度。“ 开放” 是由于 国家的制度安排 对大部分的农村人口实施了不平等的待遇 同时也为 一小部分被选中的农村人提供了向精英流动的渠道;它并不是由国家 实施的平等主义政策带来的。 本文的分析揭示了中国城市社会中产生社会流动的一个独特机 制:即国家将农村中最聪明的人 也就是那些可以通过教育或其他机制 获得城市户口的人纳入城市。尽管只有一小部分农村人可以做到这一 点 但是由于农村人口基数比城市大得多 他们仍然构成了城市人口中 的相当比例 从而使得中国城市具有很大程度的开放性。因此 毫无疑 问 在中国 国家在社会流动中扮演了一个很强的角色 不过并不是学 者们以前所想象的那种方式 (Parish 1981;Blau & Ruan 1990;Lin & Bian 1991)。相反 中国职业机会的相对开放程度来源于政府为了处 理在分配资源和生活机会方面的人口压力 从而在城乡之间制造出来 的结构性不平等。尽管城乡结构性不平等对社会流动设置了一定的门 槛 但是它提升了竞争中的风险 并促使个人有向上爬的方向和动力。 结果 我们看到 一方面 农村(户口)出身的人有很高的代际职业继承 性;另一方面 那些有能力克服结构性门槛向上流动的人 又导致中国 城市很高的代际流动率。 中国社会的职业流动模式为从事比较研究的学者深入思考不平等 和流动之间的联系以及社会流动的源泉提供了一个典范性的例子。不 平等和流动之间并没有必定的联系。较高的不平等可能并不会压制流 动机会 较开放的机会结构也不一定会降低不平等。在这一意义上 即 使当不同的国家都有着类似的社会流动的模式(Featherman et al 1975;
+Erikson & Goldthorpe 1992) 这一模式可能基于各个国家不同的不平等
+62
+社会学研究 2007.6
+
+
+结构 也可能来源于不同的社会过程。因此 理解这一普遍的代际流动 的模式背后的形成机制 需要我们详细地研究一个国家独特的社会结 构和制度背景。
+参考文献: 国务院 1986/1958 《户口登记条例》 《中国人口年鉴(1985)》北京:中国社会科学出版社。 陆益龙 2003 《户籍制度:控制与社会差别》北京:商务印书馆。
+Allison Paul D.1982 “ Discrete-Time Methods for the Analysis of Event Histories.” in Sociological
+Methodology (ed.) by Samuel Leinhardt.San Francisco:Jossey-Bass.
+Bian Yanjie1994 Work and Inequality in Urban China.New York:SUNY Press.
+---2002 “Chinese Social Stratification and Social Mobility.” Annual Review of Sociology 28.
+Blau Peter M.& Otis Dudley Duncan 1967 The American Occupational Structure.New York:Free
+Press.
+Blau Peter M.& Danqing Ruan 1990 “ Inequality of Opportunity in Urban China and America.”
+Research in Social Stratification and Mobility 9.
+Chan Kam Wing 1994 Cities with Invisible Walls:Reinterpreting Urbanization in Post-1949 China.
+Hong Kong:Oxford University Press.
+Cheng Yuan & Jianzhong Dai 1995 “ Inter-generational Mobility in Modern China.” European
+Sociological Review 11.
+Deng Zhong & Donald J.Treiman 1997 “ The Impact of the Cultural Revolution on Trends in
+Educational Attainment in the People’s Republic of China.” American Journal of Sociology 103.
+Dessens Jos A.G. Wim Jansen Harry B.G.Ganzeboom & Peter G.M.van der Heijden 2003
+“Patterns and Trends in Occupational Attainment of First Jobs in the Netherlands 1930-1995:
+Ordinary Least Squares Regression Versus Conditional Multinomial Logistic Regression.” Journal of
+the Royal Statistical Society:Series A ( Statistics in Society) 166.
+DiPrete Thomas A.1990 “ Adding Covariates to Loglinear Models for the Study of Social Mobility.”
+American Sociological Review 55.
+Duncan Otis Dudley 1961 “ A Socioeconomic Index for All Occupations.” in Albert J.Reiss Jr.
+Occupations and Social Status.New York:Free Press of Glencoe.
+Erikson Robert &John H.Goldthorpe1992 The Constant Flux:A Study of Class Mobility in Industrial
+Societies.Oxford:Clarendon.
+Erikson Robert John H.Goldthorpe &Lucienne Portocarero1979 “Intergenerational Class Mobility in
+Three Western European Countries.” British Journal of Sociology 30.
+Featherman David L.& Robert M.Hauser 1978 Opportunity and Change.New York:Academic
+Press.
+Featherman David L. F.Lancaster Jones & Robert M.Hauser1975 “Assumptions of Social Mobility
+Research in the United States:The Case of Occupational Status.” Social Science Research4.
+Ganzeboom Harry B.G.& Donald J.Treiman 1996 “ Internationally Comparable Measures of
+63
+论 文 中国的户籍制度与代际职业流动
+
+
+Occupational Status for the 1988 International Standard Classification of Occupations.” Social
+Science Research25.
+Ganzeboom Harry.B.G. Paul de Graaf & Donald.J.Treiman 1992 “ An International Scale of
+Occupational Status.” Social Science Research21.
+Ganzeboom Harry B.G. Ruud Liujkx & Donald J.Treiman 1989 “International Class Mobility in
+Comparative Perspective.” Research in Social Stratification and Mobility 8.
+Gerber Theodore P.& Michael Hout 2004 “Tightening Up:Declining Class Mobility during Russia’s
+Market Transition.” American Sociological Review 69. Goldthorpe John1987 Social Mobility and Class Structure in Modern Britain.Second (ed.) Oxford: Oxford University Press.
+Goodman Leo A.1979 “Simple Models for the Analysis of Occupational Cross-Classifications Having
+Ordered Categories.” Journal of the American Statistical Association74.
+Grusky David B.& Robert M.Hauser 1984 “ Comparative Social Mobility Revisited:Models of
+Convergence and Divergence in16Countries.” American Sociology Review 49.
+Hauser Robert M. David L.Featherman & Dennis Hogan1977 “Sex in the Structure of Occupational
+Mobility in the United States 1962.” in The Process of Stratification (eds.) by Robert M.Hauser
+& David L.Featherman.New York:Academic.
+Hendrickx John 2000 “ Special Restrictions in Multinomial Logistic Regression.” Stata Technical
+Bulletin 56.
+Hendrickx John & Harry B.G.Ganzeboom1998 “Occupational Status Attainment in the Netherlands
+1920-1990:A Multinomial Logistic Analysis.” European Sociological Review 14.
+Hout Michael 1988 “ More Universalism Less Structural Mobility:The American Occupational
+Structure in the1980s.” American Journal of Sociology 93.
+Hout Michael & Robert M. Hauser 1992 “ Symmetry and Hierarchy in Social Mobility: A
+Methodological Analysis of the CASMIN Model of Class Mobility.” European Sociological Review 8.
+Liang Zai &Zhongdong Ma2004 “Chinese Floating Population:New Evidence from the2000Census.”
+Population and Development Review 30.
+Layte Richard & Christopher T.Whelan 2004 “Class Transformation and Trends in Social Fluidity in
+the Republic of Ireland 1973-94.” in Social Mobility in Europe (ed.) by Richard Breen.
+Oxford:Oxford University Press.
+Lin Nan & Yanjie Bian1991 “Getting Ahead in Urban China.” American Journal of Sociology 97.
+Lin Nan & Wen Xie1988 “Occupational Prestige in Urban China.” American Journal of Sociology93.
+Lipset Seymour Martin & Reinhard Bendix 1959 Social Mobility in Industrial Society.Berkeley:
+University of California Press.
+Nakao Keiko &Judith Treas1994 “Updating Occupational Prestige and Socioeconomic Scores:How the
+New Measures Measure Up.” Sociological Methodology 24.
+Parish William L.1981 “Egalitarianism in Chinese Society.” Problems of Communism 29.
+Shavit Yossi & Hans-Peter Blossfeld ( eds.) 1993 Persistent Inequality: Changing Educational
+Attainment in Thirteen Countries.Boulder CO:Westview Press.
+64
+社会学研究 2007.6
+
+
+Shavit Yossi & Walter Müller (eds.)1998 From School to Work:A Comparative Study of Educational Qualifications and Occupational Destinations.Oxford:Clarendon Press. Szelényi Szonja 1998 Equality by Design: The Grand Experiment in Destratification in Socialist Hungary.Palo Alto CA:Stanford University Press.
+Treiman Donald J.1977 Occupational Prestige in Comparative Perspective.New York:Academic Press.
+--- 1998 Life Histories and Social Change in Contemporary China: Provisional Codebook.Los Angeles:UCLA Institute for Social Science Research.
+Treiman Donald.J.& Andrew.G.Walder 1996 Life Histories and Social Change in Contemporary China.Distributed by the UCLA Social Science Data Archive [ http://www.sscnet.ucla.edu/issr/
+da/] .
+Treiman Donald J.& Kam-Bor Yip1989 “Educational and Occupational Attainment in21Countries.”
+in Cross-National Research in Sociology American Sociological Association Presidential Series
+(ed.) by Melvin L.Kohn.Newbury Park CA:Sage.
+Walder Andrew G.1992 “Property Rights and Stratification in Socialist Redistributive Economies.”
+American Sociological Review 57.
+---2002 “ Markets and Income Inequality in Rural China:Political Advantages in an Expanding
+Economy.” American Sociological Review 67.
+Walder Andrew G. Bobai Li & Donald J.Treiman2000 “Politics and Life Chances in a State Socialist
+Regime:Dual Career Paths into the Urban Chinese Elite 1949-1996.” American Sociological
+Review 65.
+Winship Christopher & Robert D.Mare1992 “Models for Sample Selection Bias.” Annual Review of
+Sociology 18.
+Wu Xiaogang & Donald J.Treiman2004 “The Household Registration System and Social Stratification
+in China1955-1996.” Demography 41.
+Zhou Xueguang &Liren Hou1999 “Children of the Cultural Revolution:The State and the Life Course
+in the People’s Republic of China.” American Sociological Review 64.
+Zhou Xueguang Nancy Brandon Tuma & Phyllis Moen 1997 “ Institutional Change and Job-Shift
+Patterns in Urban China 1949to 1994.” American Sociological Review 62.
+作者单位:香港科技大学社会科学部 责任编辑:张志敏
+65
+论 文 中国的户籍制度与代际职业流动
+
+
+SOCIOLOGICAL STUDIES
+(Bimonthly)
+2007
+6
+Vol.22 November 2007
+PAPER
+Class Structure and the Middle Class Location in Urban China
+Liu Xin 1
+............
+..................................................................
+Abstract:In this paper the author attempts to develop a scheme of class sortation in urban China and locate the middle class within this framework.The author argues that the dynamic basis and mechanism of social stratification in socialist China are different from those in the capitalist market economies.Public power control rights over assets (public and private) and human capital (professional assets) constitute the dynamic basis for class differentiation in contemporary China.Based on these dynamics 17 class positions and5 classes can be identified in urban China.The five classes are the top classes (command class) upper middle classes lower middle classes skilled workers and nonskilled workers.Statistical findings from a national sampling survey data from urban China (CGSS 2003) suggest that the proposed class framework can significantly reduce variances of variables such as income and housing subjective class identification and perception of happiness.These research results show the validity of the proposed class scheme in contemporary urban China.
+“Different Ways to Different Types”:Typological analysis about the middle
+class in present China’s towns ..................... Li Lulu &Li Sheng 15
+Abstract:This article analyzes social functions of China’s middle class against the background of institution transformation. Using the dual analytic framework of “reallocation to market” and logic of “social structure-class experience-class identityclass character” the writer makes typological differentiation between present China’s middle classes and defines this kind of differentiation as “ endogenous vs.exogenous”. Also based on the data of CGSS2003 the writer discusses different characters and social functions of these two different types from three aspects i.e. generational continuity political consciousness and consumption consciousness providing a typological mode for analyzing the differentiation of present China’s middle class.
+The Chinese Household Registration and Intergenerational Social Mobility
+......................................................... Wu Xiaogang 38
+242
+
+
+Abstract:Using data from a1996national probability sample of Chinese men this paper analyzes the effect of family background on occupational mobility in contemporary China. The author has paid particular attention to the rural-urban institutional divide.China has an unusually high degree of mobility into agriculture and also apparently unusual “openness” in the urban population.Both patterns are explained by China’s distinctive population registration system which simultaneously fails to protect peasants from downward mobility and permits only the best educated rural men to attain urban residential status resulting in severe sample selection bias in previous studies restricted to the de jure urban population.In this article new lights are shed on the relationships between the socialist egalitarian policies and social fluidity and between inequality and mobility.
+On “Living a Life of Fortune” .................................... Wu Fei 66
+Abstract:This is a theoretical reflection of the author’s field study of suicide during which the author found that suicide in China is significantly different from those described by Western suicidologists.The reason for this difference is that the western suicidological paradigms are based on the ideas about human nature and life of the Western culture.In order to find a theoretical framework to interpret suicide in China the author applies an idiom in spoken Chinese:“living a life of fortune”(guo rizi).According to this idea life is a process from birth to death and each step of it happens in the family.Hence the family is not merely a social organization but constitutes one’s existential living condition.One’s happiness depends on the balance of family life and the fundamental elements of family life are persons property and rituals.Suicide usually happens when an imbalance of power in family life leads to injustice.
+A Study on Migrant Workers’Permanent Migration Intentions
+Cai He &Wang Jin 86
+...............
+...................................................
+Abstract:Based on research of the household registration system this article discusses what factors might affect migrant workers’decisions to choose city household registration and migrate to city permanently.We found that among different groups with different migration intentions individual inclinations to move and institutional pressures work in different ways.If using willingness to give up land as the indicator for behavioral permanent migration intentions then the main factors affecting migrant workers’intentions are individual inclinations to move which mainly include individuals’human capitals and their inclination towards urban life style so the choice is mainly based on economic rationality.If we use the willingness to change one’s household registration to the city where they are working as the indicator then the main factors are mostly about localities and institutional pressures which point to the social rationality underlying the migrant workers’pursuit for institutional protections to improve their living conditions in the cities.
+243

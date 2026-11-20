@@ -1,0 +1,28 @@
+{
+  "stage": "02",
+  "module_version": 2,
+  "attempt": 2,
+  "resource_candidate_version": 1,
+  "authorized_source_root": "C:/Users/hou/Zotero/storage",
+  "source_access": "read_only",
+  "target_journals": [
+    "中国社会科学",
+    "社会学研究"
+  ],
+  "target_count": 20,
+  "selection": "purposeful; both journals, quantitative empirical design, complete source PDFs",
+  "paragraph_status": "automatic_candidates_not_semantically_reviewed",
+  "abstraction": "sections and abstract sentences coded individually in current Codex conversation",
+  "sentence_boundary": "Chinese full stop/question/exclamation or ASCII question mark; semicolons retained within sentence",
+  "external_network_used": false,
+  "originals_modified": false,
+  "random_seed": null,
+  "model": {
+    "provider": "Codex desktop current conversation",
+    "exact_model_version": "not_exposed_in_runtime",
+    "separate_api_calls": false
+  },
+  "prompt_version": "user_request_20261114_and_explicit_storage_expansion",
+  "status": "needs_review",
+  "published": false
+}

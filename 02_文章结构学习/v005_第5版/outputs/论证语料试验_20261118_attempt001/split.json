@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "scope": "pilot",
+  "selection": "purposive_stratified",
+  "seed": 20261118,
+  "date": "2026-11-18",
+  "legacy_corpus": {
+    "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/corpus20.csv",
+    "sha256": "515c9825026e063c92281b57f15246f08a30bff39b1146b1ccdca47f0b1eddd4"
+  },
+  "train": [
+    {
+      "title": "制度的力量——中国社会保障制度建设与收入分配公平感的演化",
+      "date": "2021-00-00 2021",
+      "issue": "11",
+      "pages": "54-73",
+      "doi": null,
+      "item_key": "L5TVBY4M",
+      "paper_id": "zotero_6V7LJIWN",
+      "journal": "中国社会科学",
+      "pdf_path": "C:/Users/hou/Zotero/storage/6V7LJIWN/黄健和邓燕华 - 2021 - 制度的力量——中国社会保障制度建设与收入分配公平感的演化.pdf",
+      "sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc",
+      "present_in_legacy_corpus": true
+    },
+    {
+      "title": "当代中国的代际流动模式及其变迁",
+      "date": "2015-00-00 2015",
+      "issue": "5",
+      "pages": "40-58",
+      "doi": null,
+      "item_key": "LZ6JRDNS",
+      "paper_id": "zotero_SCCKUUS9",
+      "journal": "中国社会科学",
+      "pdf_path": "C:/Users/hou/Zotero/storage/SCCKUUS9/李路路和朱斌 - 2015 - 当代中国的代际流动模式及其变迁.pdf",
+      "sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667",
+      "present_in_legacy_corpus": true
+    },
+    {
+      "title": "收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析",
+      "date": "2012-00-00 2012",
+      "issue": "3",
+      "pages": "114-128",
+      "doi": null,
+      "item_key": "4M8XA5I3",
+      "paper_id": "zotero_J38BV4A5",
+      "journal": "中国社会科学",
+      "pdf_path": "C:/Users/hou/Zotero/storage/J38BV4A5/李骏和吴晓刚 - 2012 - 收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析.pdf",
+      "sha256": "245bbf45908382fc7e8d6348616d8f8fb6401b49a23eb4dba6a478fc29d48ab8",
+      "present_in_legacy_corpus": true
+    },
+    {
+      "title": "文化再生产还是文化流动?——中国大学生的教育成就获得不平等研究",
+      "date": "2018-00-00 2018",
+      "issue": "1",
+      "pages": "142-168",
+      "doi": "10.19934/j.cnki.shxyj.2018.01.007",
+      "item_key": "CPAIM3Q3",
+      "paper_id": "zotero_89UP6KH7",
+      "journal": "社会学研究",
+      "pdf_path": "C:/Users/hou/Zotero/storage/89UP6KH7/朱斌 - 2018 - 文化再生产还是文化流动——中国大学生的教育成就获得不平等研究.pdf",
+      "sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e",
+      "present_in_legacy_corpus": true
+    },
+    {
+      "title": "劳动力市场中的社会资本与市场化",
+      "date": "2012-00-00 2012",
+      "issue": "5",
+      "pages": "1-24",
+      "doi": "10.19934/j.cnki.shxyj.2012.05.001",
+      "item_key": "FJ33KQQ6",
+      "paper_id": "zotero_DD4I5QA4",
+      "journal": "社会学研究",
+      "pdf_path": "C:/Users/hou/Zotero/storage/DD4I5QA4/张文宏和张莉 - 2012 - 劳动力市场中的社会资本与市场化.pdf",
+      "sha256": "0d0ebc416548ae6871db64d99948e82fc45f997259c5d8811f5eb9c9fb51feb9",
+      "present_in_legacy_corpus": true
+    },
+    {
+      "title": "女性教育提升与生育行为变迁——基于夫妻匹配视角的研究",
+      "date": "2024-00-00 2024",
+      "issue": "2",
+      "pages": "179-202",
+      "doi": null,
+      "item_key": "ZH8E2LXI",
+      "paper_id": "zotero_NLVHWHF6",
+      "journal": "社会学研究",
+      "pdf_path": "C:/Users/hou/Zotero/storage/NLVHWHF6/卿石松 - 2024 - 女性教育提升与生育行为变迁——基于夫妻匹配视角的研究.pdf",
+      "sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2",
+      "present_in_legacy_corpus": true
+    }
+  ],
+  "holdout": [
+    {
+      "title": "基础教育中的学校阶层分割与学生教育期望",
+      "date": "2016-00-00 2016",
+      "issue": "4",
+      "pages": "111-134",
+      "doi": null,
+      "item_key": "68HLELIY",
+      "paper_id": "zotero_Y8WNZ3AN",
+      "journal": "中国社会科学",
+      "pdf_path": "C:/Users/hou/Zotero/storage/Y8WNZ3AN/吴愈晓和黄超 - 2016 - 基础教育中的学校阶层分割与学生教育期望.pdf",
+      "sha256": "206eb694b9b37da00cdb9d54cdf307076f068acadbcf1a759d46cabd900787e2",
+      "present_in_legacy_corpus": false
+    },
+    {
+      "title": "近年来农民工的经济状况和社会态度",
+      "date": "2010-00-00 2010",
+      "issue": "1",
+      "pages": "119-131",
+      "doi": null,
+      "item_key": "P4AG5UEJ",
+      "paper_id": "zotero_ZVEEAGSX",
+      "journal": "中国社会科学",
+      "pdf_path": "C:/Users/hou/Zotero/storage/ZVEEAGSX/李培林和李炜 - 2010 - 近年来农民工的经济状况和社会态度.pdf",
+      "sha256": "ee80a8c1ad5fabdf9c1a5a316a5f736d98cb8138a89df74477d3174b56416250",
+      "present_in_legacy_corpus": false
+    },
+    {
+      "title": "保障凝聚认同?——社会保障建构国家认同的异质性研究",
+      "date": "2025-00-00 2025",
+      "issue": "1",
+      "pages": "181-202",
+      "doi": null,
+      "item_key": "I345GTWA",
+      "paper_id": "zotero_L9AJFJ5E",
+      "journal": "社会学研究",
+      "pdf_path": "C:/Users/hou/Zotero/storage/L9AJFJ5E/黄种滨 - 2025 - 保障凝聚认同——社会保障建构国家认同的异质性研究.pdf",
+      "sha256": "b18ec93dd10d4cf8c8a4559a1c084a0200da1188ab409ec0ab1c318d1704ed4f",
+      "present_in_legacy_corpus": false
+    },
+    {
+      "title": "中国城市劳动力市场的双重二元分割——理论模型与实证检验",
+      "date": "2024-00-00 2024",
+      "issue": "3",
+      "pages": "158-181",
+      "doi": null,
+      "item_key": "HYACST6Q",
+      "paper_id": "zotero_KYCYDCG4",
+      "journal": "社会学研究",
+      "pdf_path": "C:/Users/hou/Zotero/storage/KYCYDCG4/张海东和袁博 - 2024 - 中国城市劳动力市场的双重二元分割——理论模型与实证检验.pdf",
+      "sha256": "972e0e345f3228522d0de0110a6d6bf3eb95cf4cbc05e60b9a082a2d4fb9d59d",
+      "present_in_legacy_corpus": false
+    }
+  ]
+}

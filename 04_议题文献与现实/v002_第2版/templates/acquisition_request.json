@@ -1,0 +1,30 @@
+{
+  "template": true,
+  "status": "planned",
+  "theme": null,
+  "issue": null,
+  "abstract_target": 100,
+  "core_fulltext_target": 25,
+  "source_labels": [
+    "社会",
+    "社会学研究",
+    "中国社会科学",
+    "管理世界",
+    "经济学研究",
+    "探索与证明"
+  ],
+  "proposed_aliases": {
+    "经济学研究": "经济研究",
+    "探索与证明": "探索与争鸣"
+  },
+  "alias_confirmation": "required_before_formal_search",
+  "reading_phases": [
+    "archive_available_sources",
+    "read_abstracts",
+    "select_and_read_core25"
+  ],
+  "legacy_reference_root": "E:/文章/cnki爬虫",
+  "legacy_access": "read_only",
+  "destination": "current_run/literature",
+  "adapter_implementation": "not_implemented_in_this_revision"
+}

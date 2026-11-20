@@ -1,0 +1,51 @@
+{
+  "config": {
+    "abstract_target": 100,
+    "core_target": 25,
+    "seed": 20261114,
+    "model_call_limit": 12
+  },
+  "04": {
+    "theme": null,
+    "literature": [],
+    "annotations": null,
+    "quality_review": null
+  },
+  "05": {
+    "upstream": null,
+    "annotations": null,
+    "quality_review": null
+  },
+  "collection": {
+    "phase": "scan",
+    "theme": null,
+    "issue": null,
+    "queries": [],
+    "journals": [
+      "中国社会科学",
+      "社会学研究",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界"
+    ],
+    "journal_aliases": {},
+    "access_basis": null,
+    "abstract_target": 100,
+    "core_target": 25,
+    "scan_limit": 20,
+    "max_pages_per_query": 30,
+    "max_records": 250,
+    "download_scope": "none",
+    "relevance_terms": [],
+    "browser": {
+      "driver_path": null,
+      "browser_binary": null,
+      "headless": false,
+      "min_interval_seconds": 3,
+      "page_timeout_seconds": 30,
+      "element_timeout_seconds": 15,
+      "download_timeout_seconds": 45
+    }
+  }
+}

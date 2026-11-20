@@ -1,0 +1,434 @@
+{
+  "scope": "pilot",
+  "status": "needs_review",
+  "split": {
+    "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/split.json",
+    "sha256": "37aef25876d07e5e7cfdfdbf7f9c968f36135d72a206b747614b4b56cdeafdab"
+  },
+  "previous_section_annotations": {
+    "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_moves.csv",
+    "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d"
+  },
+  "papers": [
+    {
+      "paper_id": "zotero_6V7LJIWN",
+      "title": "制度的力量——中国社会保障制度建设与收入分配公平感的演化",
+      "journal": "中国社会科学",
+      "pdf_sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc",
+      "pdf_pages": 21,
+      "text_pages": 21,
+      "chapter_routes": [
+        {
+          "section_title": "未编号引言",
+          "page_start": "1",
+          "page_end": "2",
+          "first_says": "由社会保障的现实意义开场",
+          "next_says": "限定为制度建设与分配公平感的关系→预告发展视角和价值引塑解释",
+          "ends_with": "指出市场发展与公平共识如何协调",
+          "relationship": "先交代为何研究，再把政策议题转成理论问题。"
+        },
+        {
+          "section_title": "一、既有解释范式",
+          "page_start": "2",
+          "page_end": "6",
+          "first_says": "先区分应得、需求、平等三类分配原则",
+          "next_says": "说明结构地位解释及其经验反例→说明相对剥夺的比较机制及中国情境下的不足→转入制度文化论→指出其静态跨国比较局限",
+          "ends_with": "提出社保职能满意度与公平感的假设1",
+          "relationship": "由竞争解释的不足，推导本文需要的制度视角，而非只罗列研究。"
+        },
+        {
+          "section_title": "二、制度的引塑效应：理论阐释和现实解读",
+          "page_start": "6",
+          "page_end": "10",
+          "first_says": "先把静态制度文化论改写为动态过程问题",
+          "next_says": "用制度遵从解释价值内化→展开意识形态、目标、规范、实施机制的衔接→说明国家力量及制度资源条件→回顾中国社保从效率优先到普惠共享的变化",
+          "ends_with": "推出跨时期、投入增速及作用增强的假设2—4",
+          "relationship": "抽象机制先行，制度历史随后提供可观察的时间和地区差异。"
+        },
+        {
+          "section_title": "三、数据和变量",
+          "page_start": "11",
+          "page_end": "13",
+          "first_says": "先解释为何2005与2015两轮CGSS可比较",
+          "next_says": "定义收入分配公平感→列结构地位和纵向获得感→操作化医疗、养老、救贫职能满意度",
+          "ends_with": "交代控制、年龄范围和加权描述",
+          "relationship": "把前节每个理论角色变成有出处的测量，再引出回归。"
+        },
+        {
+          "section_title": "四、回归结果",
+          "page_start": "13",
+          "page_end": "19",
+          "first_says": "先用2005年基准与完整模型检验",
+          "next_says": "以同样组织分析2015年→合并解释满意度关联为何增强→加入省级社保投入增速与年份交互→按投入增长分组检验作用增强",
+          "ends_with": "汇总四个假设",
+          "relationship": "结果顺序沿着个体关联→时期差别→地区制度推进→差别中的机制增强展开。"
+        },
+        {
+          "section_title": "结论（未编号）",
+          "page_start": "19",
+          "page_end": "20",
+          "first_says": "先回答制度如何引塑公平感",
+          "next_says": "回扣制度文化论的动态拓展→解释中国改革过程中的价值变化→讨论市场与社会共识协调",
+          "ends_with": "明确投入代理、机制论证和内生制度变化三项局限",
+          "relationship": "从估计结果返回理论，再给实践含义，最后约束结论范围。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 4,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/6V7LJIWN/pages.json",
+        "sha256": "1988016fcb9720d4338a3273703baeae871404ab63b930441bce83976c8f5815"
+      }
+    },
+    {
+      "paper_id": "zotero_SCCKUUS9",
+      "title": "当代中国的代际流动模式及其变迁",
+      "journal": "中国社会科学",
+      "pdf_sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667",
+      "pdf_pages": 20,
+      "text_pages": 20,
+      "chapter_routes": [
+        {
+          "section_title": "一、问题的提出",
+          "page_start": "1",
+          "page_end": "2",
+          "first_says": "先提出转型时期社会不平等问题",
+          "next_says": "区别既有结果不平等研究与本文的机会结构问题→说明代际流动为何适合观察长期开放性",
+          "ends_with": "连接现实争议与国际研究",
+          "relationship": "从大问题逐步缩至可研究的父代—子代阶层关系。"
+        },
+        {
+          "section_title": "二、社会流动研究的两种逻辑",
+          "page_start": "2",
+          "page_end": "5",
+          "first_says": "先对照现代化逻辑和社会政治逻辑",
+          "next_says": "沿流动模式讨论FJH等研究→沿流动机制指出制度结构的重要性→辨析个人地位获得和阶层间关系",
+          "ends_with": "提出中国长期流动模式与结构机制两个问题",
+          "relationship": "不是按作者顺序综述，而是按模式与机制两条问题线整理。"
+        },
+        {
+          "section_title": "三、理论与假设",
+          "page_start": "5",
+          "page_end": "9",
+          "first_says": "先比较等级论与阶级论并建立权力资源基础的阶层分类",
+          "next_says": "定义社会封闭和社会排斥→区分群体身份式与个体能力式排斥→对应为体制排斥和市场排斥",
+          "ends_with": "建立历史分期与转型预期",
+          "relationship": "把上节制度视角压缩成两个概念及其相反变化趋势。"
+        },
+        {
+          "section_title": "四、研究模型",
+          "page_start": "9",
+          "page_end": "12",
+          "first_says": "先解释拓扑模型怎样把流动表分成共享参数的格子",
+          "next_says": "构造体制排斥矩阵→构造市场排斥矩阵→构造阶层继承矩阵及备选限制",
+          "ends_with": "给出各参数的预期方向",
+          "relationship": "理论并未停在文字假设，而是直接进入矩阵单元的设计。"
+        },
+        {
+          "section_title": "五、分析方法",
+          "page_start": "12",
+          "page_end": "15",
+          "first_says": "先交代三轮CGSS和父职、初职信息",
+          "next_says": "说明同期群划分与样本处理→列条件独立基准→叠加理论矩阵→用层面效应表达时期强度",
+          "ends_with": "比较模型拟合并确定解释模型",
+          "relationship": "先解释测量来源，再解释为什么所选模型能对应理论。"
+        },
+        {
+          "section_title": "六、结果解释",
+          "page_start": "15",
+          "page_end": "17",
+          "first_says": "先按体制排斥、市场排斥和继承效应解释相对流动机会",
+          "next_says": "比较时期强弱及阶层差别→再比较总流动率和开放性",
+          "ends_with": "解释两者为何不会同向单调变化",
+          "relationship": "结果按机制逐项解释，随后整合为历史图景。"
+        },
+        {
+          "section_title": "七、结论与讨论",
+          "page_start": "17",
+          "page_end": "19",
+          "first_says": "先概括总体流动上升",
+          "next_says": "限定社会开放性呈波动→说明继承仍主导但流动形态变化→回到FJH及社会政治逻辑",
+          "ends_with": "讨论市场排斥下可能的再生产与固化风险",
+          "relationship": "既回应开头问题，也说明“更开放”和“仍有封闭”可以并存。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 4,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/SCCKUUS9/pages.json",
+        "sha256": "11dad8c315cf1a3e8507333c32d5665c545d3f44a41e3c4e2fe74e5b0d6e463c"
+      }
+    },
+    {
+      "paper_id": "zotero_J38BV4A5",
+      "title": "收入不平等与公平分配：对转型时期中国城镇居民公平观的一项实证分析",
+      "journal": "中国社会科学",
+      "pdf_sha256": "245bbf45908382fc7e8d6348616d8f8fb6401b49a23eb4dba6a478fc29d48ab8",
+      "pdf_pages": 16,
+      "text_pages": 16,
+      "chapter_routes": [
+        {
+          "section_title": "一、问题的提出",
+          "page_start": "1",
+          "page_end": "2",
+          "first_says": "先提出收入差距与稳定之间的争论",
+          "next_says": "问何种不平等会威胁稳定→区分实际平等和主观公平→把问题改写为人们认可怎样的分配",
+          "ends_with": "指出中国系统经验研究不足",
+          "relationship": "先做概念澄清，再建立经验研究对象。"
+        },
+        {
+          "section_title": "二、文献回顾与述评",
+          "page_start": "2",
+          "page_end": "6",
+          "first_says": "先讲地位利益与利己主义",
+          "next_says": "引入教育启蒙的反向预期→再讲福利制度及文化价值",
+          "ends_with": "最后讨论转型中的分配价值变化",
+          "relationship": "三类文献分别通向下一节三组问题。"
+        },
+        {
+          "section_title": "三、研究问题与假设",
+          "page_start": "6",
+          "page_end": "8",
+          "first_says": "先列教育的利己与启蒙两种竞争假设",
+          "next_says": "由部门和年龄推导社会主义价值观差异",
+          "ends_with": "再推导实际收入差距与认可差距的关系",
+          "relationship": "把文献中的分歧写成可以被数据区分的预期。"
+        },
+        {
+          "section_title": "四、数据与研究设计",
+          "page_start": "8",
+          "page_end": "10",
+          "first_says": "先交代城镇样本和年龄范围",
+          "next_says": "解释传统态度问法的局限→由各职业实际、应得收入构造两种主观基尼→匹配地区实际基尼",
+          "ends_with": "交代缺失、权重与聚集标准误",
+          "relationship": "测量设计紧接概念区分，避免用一个题目混淆三个层面。"
+        },
+        {
+          "section_title": "五、结果与分析",
+          "page_start": "10",
+          "page_end": "14",
+          "first_says": "先比较感知与认可差距的总体分布",
+          "next_says": "逐职业比较实际与应得收入判断→回归检验教育、部门、年龄及地区差距→多重填补检查稳健性",
+          "ends_with": "排除态度差异只是感知差异的替代解释",
+          "relationship": "先说明存在什么共识，再解释共识中的系统性差异。"
+        },
+        {
+          "section_title": "六、总结与讨论",
+          "page_start": "14",
+          "page_end": "15",
+          "first_says": "先按三个问题回收结果",
+          "next_says": "说明教育双重效应→解释平均主义价值的部门与世代痕迹→回应不平等与稳定的争论",
+          "ends_with": "指出横截面无法拆分年龄、时期和世代",
+          "relationship": "结论重新组织理论含义，而非照抄回归表。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 3,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/J38BV4A5/pages.json",
+        "sha256": "c0a5b6c3c5d872e8da166a78efa88273b3d5e8e516075aea4695b0ef672f9904"
+      }
+    },
+    {
+      "paper_id": "zotero_89UP6KH7",
+      "title": "文化再生产还是文化流动?——中国大学生的教育成就获得不平等研究",
+      "journal": "社会学研究",
+      "pdf_sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e",
+      "pdf_pages": 28,
+      "text_pages": 28,
+      "chapter_routes": [
+        {
+          "section_title": "一、研究问题",
+          "page_start": "1",
+          "page_end": "4",
+          "first_says": "先回顾教育扩张与MMI、EMI",
+          "next_says": "指出社会结构不平等扩大而教育机会差异未同步扩大之谜→将观察移入大学在校成就",
+          "ends_with": "提出家庭文化资本如何起作用",
+          "relationship": "从宏观机会稳定之谜转到大学过程中的差异机制。"
+        },
+        {
+          "section_title": "二、理论比较：文化再生产、文化抵制与文化流动",
+          "page_start": "4",
+          "page_end": "7",
+          "first_says": "先重构文化再生产的家庭继承与学校偏好",
+          "next_says": "引入文化抵制对能动性的批评→引入文化流动的后天习得和资源替代→比较三者共同假设",
+          "ends_with": "质疑教师总能主观决定评价的前提",
+          "relationship": "比较的是理论链条与适用条件，而非三个理论的并列简介。"
+        },
+        {
+          "section_title": "三、研究假设",
+          "page_start": "7",
+          "page_end": "10",
+          "first_says": "先推导工农子女努力程度",
+          "next_says": "比较学业、干部和英语评价的不同特性→推导文化资本在各结果上的条件性",
+          "ends_with": "再推导资本作用的阶层差异",
+          "relationship": "把评价制度作为解释不同结果的连接环节。"
+        },
+        {
+          "section_title": "四、研究方法",
+          "page_start": "10",
+          "page_end": "14",
+          "first_says": "先交代追踪数据",
+          "next_says": "分别操作化三类在校成就→说明家庭阶层、文化资本和个人努力→交代学校、专业与年级等控制",
+          "ends_with": "按变量类型选择序次Logit或OLS",
+          "relationship": "每种教育成就单独测量，模型服务于其尺度。"
+        },
+        {
+          "section_title": "五、结果分析",
+          "page_start": "14",
+          "page_end": "22",
+          "first_says": "先比较阶层间文化资本与努力",
+          "next_says": "依次检验学业排名、学生干部和英语四级→解释工农子女成绩优势与精英子女另两项优势",
+          "ends_with": "最后检验文化资本作用的阶层差异",
+          "relationship": "先看解释变量的分布，再看不同结果，最后看资源协同。"
+        },
+        {
+          "section_title": "六、结论与讨论",
+          "page_start": "22",
+          "page_end": "24",
+          "first_says": "先并列三个不同方向的结果",
+          "next_says": "逐一回扣三种文化理论→强调标准化、客观化评价限制文化资本作用→说明文化资本与其他资源可能互补",
+          "ends_with": "讨论中小学外推边界",
+          "relationship": "贡献在于修正理论条件，不能只归纳成某种理论获胜。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 3,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/89UP6KH7/pages.json",
+        "sha256": "617672cb0ec40bd557c6ef765c8b76ecace936d7d8400524ff1530ed2c05ae2d"
+      }
+    },
+    {
+      "paper_id": "zotero_DD4I5QA4",
+      "title": "劳动力市场中的社会资本与市场化",
+      "journal": "社会学研究",
+      "pdf_sha256": "0d0ebc416548ae6871db64d99948e82fc45f997259c5d8811f5eb9c9fb51feb9",
+      "pdf_pages": 25,
+      "text_pages": 24,
+      "chapter_routes": [
+        {
+          "section_title": "未编号引入",
+          "page_start": "1",
+          "page_end": "1",
+          "first_says": "先提出市场化中社会资本增强还是减弱",
+          "next_says": "说明理论与政策意义",
+          "ends_with": "提出在既有分歧上继续求解",
+          "relationship": "直接以理论难题开篇，无须另造政策背景。"
+        },
+        {
+          "section_title": "一、社会资本与中国市场化关系的理论实质",
+          "page_start": "1",
+          "page_end": "3",
+          "first_says": "先将争论概括为市场外力与市场内力",
+          "next_says": "分别梳理随制度完善而减弱和随市场变化而转形的观点",
+          "ends_with": "指出两种解释关注点不同",
+          "relationship": "把纷杂结论整理为两条可比较的逻辑。"
+        },
+        {
+          "section_title": "二、劳动力市场领域的经验发现",
+          "page_start": "3",
+          "page_end": "7",
+          "first_says": "先回顾社会资本减弱的证据",
+          "next_says": "再看不同阶段所供资源变化→提出同时考察动用空间和资源回报",
+          "ends_with": "由单一效应问题转向两个结果维度",
+          "relationship": "不是继续堆文献，而是从证据冲突中重定义检验对象。"
+        },
+        {
+          "section_title": "三、研究设计",
+          "page_start": "7",
+          "page_end": "14",
+          "first_says": "先交代八城市调查",
+          "next_says": "分别对动员频率和动员回报提出竞争假设→说明交互分析与多元回归→定义社会资本动用、收入及控制→用三种指标刻画市场化",
+          "ends_with": "展示相关描述",
+          "relationship": "多口径测量是研究问题的一部分，不只是附加稳健性。"
+        },
+        {
+          "section_title": "四、研究发现和讨论",
+          "page_start": "14",
+          "page_end": "22",
+          "first_says": "先比较市场化与社会资本动员频率",
+          "next_says": "再比较动员回报及城市差别→对照三种市场化测量→概括认可度升、含金量降",
+          "ends_with": "最后讨论社会资本概念整合",
+          "relationship": "结果和结论合在同一大节；讨论由双维结果化解增强与减弱的表面矛盾。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 4,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/DD4I5QA4/pages.json",
+        "sha256": "33e0d327b97869873d488df2f21a6dac734687fe34c05e416a518e0c12998442"
+      }
+    },
+    {
+      "paper_id": "zotero_NLVHWHF6",
+      "title": "女性教育提升与生育行为变迁——基于夫妻匹配视角的研究",
+      "journal": "社会学研究",
+      "pdf_sha256": "3e702c8c3749540d7d69fc875bc765611641e7bc29790e13648dfc3bce4fbaa2",
+      "pdf_pages": 25,
+      "text_pages": 25,
+      "chapter_routes": [
+        {
+          "section_title": "一、问题的提出",
+          "page_start": "1",
+          "page_end": "4",
+          "first_says": "先展示教育性别差距逆转",
+          "next_says": "说明女性教育影响婚姻市场及家庭分工→对照机会成本与资源集聚的相反预测→提出夫妻匹配与队列变动问题",
+          "ends_with": "列研究推进方向",
+          "relationship": "从女性个体教育转到夫妻关系，是本文的分析单位转换。"
+        },
+        {
+          "section_title": "二、理论基础与文献述评",
+          "page_start": "4",
+          "page_end": "7",
+          "first_says": "先比较新古典分工与双薪资源集聚",
+          "next_says": "纳入性别平等及家庭协商→回顾教育婚配与生育的混合发现",
+          "ends_with": "指出缺少夫妻互动和时间维度",
+          "relationship": "理论冲突与经验不一致共同支撑队列比较。"
+        },
+        {
+          "section_title": "三、数据、变量测量与方法",
+          "page_start": "7",
+          "page_end": "9",
+          "first_says": "先交代CFPS夫妻配对与样本筛选",
+          "next_says": "说明子女数、二孩事件及教育组合→列控制和队列→对计数结果用泊松",
+          "ends_with": "对二孩过程用Cox并处理删截",
+          "relationship": "两个模型对应两个时间尺度的结果，不能相互替代。"
+        },
+        {
+          "section_title": "四、描述性分析",
+          "page_start": "9",
+          "page_end": "14",
+          "first_says": "先描述教育匹配模式及出生队列变化",
+          "next_says": "比较同质、向上、向下婚→再看不同组合的生育水平",
+          "ends_with": "提示年轻组未婚与未完成生育带来的解释条件",
+          "relationship": "先建立变化事实，再进入控制后的关系。"
+        },
+        {
+          "section_title": "五、回归分析与讨论",
+          "page_start": "14",
+          "page_end": "20",
+          "first_says": "先比较子女数量模型及队列差异",
+          "next_says": "再检验二孩风险和间隔→对照两种模型的一致与变化→解释女性向下婚劣势减弱",
+          "ends_with": "结合家务、育儿和公共支持讨论尚未反转的原因",
+          "relationship": "控制分析之后紧接理论讨论，而非把全部解释留到结尾。"
+        },
+        {
+          "section_title": "六、结论与启示",
+          "page_start": "20",
+          "page_end": "22",
+          "first_says": "先归纳婚配结构和生育关系",
+          "next_says": "判断传统分工与资源集聚各自的解释范围→讨论性别分工、家庭政策",
+          "ends_with": "提出进一步分解教育扩张与婚育转型的方向",
+          "relationship": "回扣冲突理论，并明确趋势减弱不等于关系已反转。"
+        }
+      ],
+      "stage": "chapter_routes_and_selected_paragraphs",
+      "paragraphs_coded_this_pilot": 3,
+      "source_text": {
+        "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/NLVHWHF6/pages.json",
+        "sha256": "bf6043128537ba99305e703dc1aa47b730dbc9a3396b24b19e551433a5f3b2f9"
+      }
+    }
+  ]
+}

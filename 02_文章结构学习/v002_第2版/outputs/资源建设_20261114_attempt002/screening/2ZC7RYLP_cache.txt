@@ -1,0 +1,792 @@
+生成式人工智能
+与哲学社会科学新范式的涌现∗
+政光景 吕 鹏
+··
+摘 要: 生成式人工智能( GAI) 对哲学社会科学的学术体系、学科体系和话语体系的影响虽刚刚开始,但已引
+发了诸多的关注和讨论,未来将更加热烈。 从对学术体系的影响来看,在理论上,GAI 推动了机器心理学、行为学
+和伦理学发展,推动智能社会科学进入新阶段;在方法上,GAI 成为重要的数据分析工具;在数据上,GAI 不仅能
+进行数据采集,其生成内容也能成为研究数据。 从对学科体系的影响来看,在学术评价上,研究数据可得性更高,
+开展验证性研究更具可能;在人才培养上,研究者更为技术均等化、知识普及化和学习自主化,也要求其更具创新
+精神、智能思维。 从对话语体系的影响来看,在公众话语上,学术权威部分被消解;在国家话语上,哲学社会科学
+不断推进知识创新、理论创新、方法创新的使命更加重大;在国际话语上,哲学社会科学引领全球的机遇显现。
+关键词: 生成式人工智能 哲学社会科学 研究范式 新文科
+受新一轮技术革命的影响,近年来哲学社会
+科学呈现许多新的发展方向与热点,如计算社会
+科学、智能社会科学、数字人文等。 这些研究密切
+关注科技革命和时代变革的最新趋势,正在成为
+新的学术增长 点 和 创 新 点。1 生 成 式 人 工 智 能
+( Generative Artificial Intelligence, GAI) 是 当 前 人
+工智能技术发展的热点,是通用人工智能( Artifi⁃
+cial General Intelligence, AGI) 的 初 期 版 本, 也 是
+AI 奇点临近的标志性技术。2 OpenAI 发布的最新
+版本 的 大 型 语 言 模 型 ( Large Language Model,
+LLM)———生成式预训练模型 4.0( Generative Pre
+trained Transformer-4,GPT-4) 就是典型的生成式
+人工智能,其具有多模态数据处理能力,在总结、
+抽象、推理等多种能力上达到或超过人类水平。3
+大语言模型的更新换代发展速度被总结为人工智
+能发展的“ 新摩尔定律”,越来越多的人开始将人
+工智能生成的内容(Artificial Intelligence Generated
+Content,AIGC) 运用于社会生产生活各 个 领 域,对
+各行各业产生了不可忽视的直接或间接冲击。
+科学研究领域也不例外。 受生成式人工智能
+技术迅猛发展的影响,科学技术部与国家自然科
+学基金委员会已于 2023 年 3 月 27 日启动“ 人工
+智能驱动的科学研究” 专项部署;其既推动了自
+然科学的发展,也推动了社会科学的变革,4甚至
+有人声称 AI 驱动的科学研究将成为科学研究的
+132
+∗
+1
+2
+3
+4
+本文系中国社会科学院学科建设“ 登峰战略” 资助计划新兴学科与交叉学科“ 科技与数字社会” 的阶段性成果。 高翔:《 按照习近平总书记和党中央要求办好中国社会科学院》 ,《 党建》2023 年第 5 期。
+Sébastien Bubeck, et al., “ Sparks of Artificial General Intelligence: Early Experiments with GPT - 4” , arXiv preprint arXiv: 2303.12712, 2023. OpenAI, “ GPT-4 Technical Report” , arXiv preprint arXiv: 2303.08774, 2023. Wang, Hanchen, et al., “ Scientific Discovery in the Age of Artificial Intelligence” , Nature, Vol.620, No.7972, 2023, pp.47- 60; Gross⁃ mann, Igor, et al., “ AI and the Transformation of Social Science Research” , Science, Vol.380, No.6650, 2023, pp.1108-1109.
+
+
+第五范式。1
+生成式人工智能的发展也必然给哲学社会科
+学带来新的机遇和挑战。 这主要体现在学术体
+系、学科体系和话语体系三个方面。 总的来看,学
+术体系受到的影响最为直接,尤其是基础理论、研
+究方法、研究数据三个方面都已经受到了直接的
+冲击;而后两者受到的影响虽然也开始显现,但相
+对间接,更具冲击力的效应是否和如何产生,还需
+要更多的时间积累。 虽然目前的很多影响和冲击
+还是单点的,甚至看似细微,但这些影响和冲击在
+相互作用之后,不排除产生具有极大意义的现象,
+即在哲学社会科学领域“ 涌现” ( emergence) 出一
+种新范式的可能。
+基础理论的新问题和新方向
+生成式人工智能的发展,首先使得人工智能
+技术本身成为重要的社会科学研究对象。 由于生
+成式人工智能对社会的影响越来越大,研究和评
+估其行为和伦理也变得越来越重要,这就是“ 机
+器心理学”“机器行为学” 和“ 机器伦理学”,其旨
+在通过将人工智能作为社会科学研究的对象来识
+别其能 力、 行 为、 决 策 和 推 理 机 制 以 及 伦 理 道
+德。2 这一方向的研究思路是“ 技术建构论” 的,
+强调生成式人工智能特征应该符合人类社会的基
+本伦理和价值。 其次,生成式人工智能对社会产
+生了重要影响,使得社会科学研究面对新的社会
+形态,从而助推了“ 智能社会科学” 的产生。 这一
+方向的研究思路是“技术决定论” 的,强调生成式
+人工智能作为技术基础,会对各种社会现象产
+生影响。
+( 一) 生成式人工智能的机器心理学、行为学
+与伦理学研究
+生成式人工智能的发展是弱人工智能走向强
+人工智能的重要节点,至此人工智能开始有了接
+近和超越人类的能力,主要表现为其具备推理能
+力、自我改进与创造能力以及个性、智力、社交属
+性等能力和特征。 (1)在关于生成式人工智能的
+推理能力的研究上,Wu 等人认为 ChatGPT 具有
+良好的推理能力,尤其是在回答科学问题、知识相
+关问题和复杂逻辑问题方面。3 ( 2) 在自我改进
+与创造能力的研究上,Huang 等人证明了 LLM 也
+能够仅使用未标记的数据集进行自我改进,并且
+根据人类反馈进行微调能使语言模型与人类意图
+保持一致。4 (3)在个性的研究上,若干研究评估
+了大型语言模型的个性。 Ayers 等人认为,AI 聊
+天机器人在回答问题的专业性和人性化两个方
+面,都完 胜 临 床 医 生, 其 具 备 更 高 的 同 理 心。5
+( 4) 在智力 研 究 方 面, 多 项 研 究 验 证 了 大 型 语 言
+模型的心智能力。6 (5) 在社交属性的研究方面,
+大型语言模型驱动的聊天机器人能够表现出社交
+属性。7
+生成式人工智能还具有价值与道德,其可能
+存在各类伦理问题。 (1) 生成式人工智能存在各
+类价值偏差。 LLM 可能会延续社会中现有的偏
+见,并通过 快 速 和 低 成 本 的 应 用 加 剧 这 些 偏 见。
+Luo 等人发现,ChatGPT 具有语言偏见,它主要基
+于英语数据训练,将英美视角作为规范性观点;8
+133
+生成式人工智能与哲学社会科学新范式的涌现
+1
+2
+3
+4
+5
+6
+7
+8
+王飞跃、缪青海:《 人工智能驱动的科学研究新范式:从 AI4S 到智能科学》 ,《 中国科学院院刊》 2023 年第 4 期。 Rahwan, I., et al.,“ Machine Behaviour” , Nature, Vol.568, No.7753, 2019, pp.477-486. T. Y. Wu, et al., “ A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development” , IEEE / CAA Journal of Auto⁃ matica Sinica, Vol.10, No.5, 2023, pp.1122-1136. Huang J., et al., “ Large Language Models Can Self-improve” , arXiv preprint arXiv: 2210.11610, 2022. Ayers J. W., et al., “ Comparing Physician and Artificial Intelligence Chatbot Responses to Patient Questions Posted to a Public Social Media Forum” , JAMA Intern Med, Vol.183, No.6, 2023, pp.589-596. Ullman, T., “ Large Language Models Fail on Trivial Alterations to Theory-of-Mind Tasks” , arXiv preprint arXiv: 2302.08399, 2023. Q. Vera Liao, et al., “ All Work and No Play? Conversations with a Question-and-Answer Chatbot in the Wild” , in Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems, 2018, pp.1-13.
+Queenie Luo, Michael J. Puett, Michael D. Smith, “ A Perspectival Mirror of the Elephant: Investigating Language Bias on Google, C hatGPT, Wikipedia, and YouTube” , arXiv preprint arXiv: 2303.16281, 2023.
+
+
+ChatGPT 也被发现有宗教偏见、政治偏见和意识
+形态偏见。1 (2) 生成式人工智能可能导致隐私
+泄露。 它能从 LLM 中提取个人身份信息和其他
+敏感信息,这增加了在模型中使用大量数据集
+可能导致隐私信息泄露的可能性;2用户使用 C
+hatGPT时,可能会在无意中泄露自己的信息,如个
+人喜好、聊天记录等。 ( 3) 生成式人工智能会导
+致公平 性 问 题。 一 是 计 算 复 杂 性 会 限 制 某 些
+LLM 的可扩展性,使资源有限的研究人员无法访
+问它们,并加剧社会不平等。3 二是 ChatGPT 收
+费将加剧国际学术领域的不平等,因为低收入和
+中等收入国家的教育机构可能负担不起费用,从
+而扩大知识传 播 和 学 术 出 版 方 面 的 差 距。4 此
+外,生成式人工智能还存在复杂性和不确定性、不
+透明和“ 随机鹦鹉” 现象、事实错误、认知错误、恶
+意使用、环境成本等问题。
+( 二) 智能社会科学研究
+近几十年来,人类社会先后经历了网络社会、
+数字社会、算法社会、智能社会等阶段。 从趋势上
+看,机器人世已经出现,一些人认为走向强人工智
+能时代成为必然。 生成式人工智能技术模糊了虚
+实世界的位格关系,将导致符号世界、心理世界、
+物理世界从三界同构走向三界异构。5 生成式人
+工智能未来将不断与其他机器人技术集成,彻底
+改变人类与技术的互动方式。6 在 智 能 社 会,个
+体和社会的存在形式与运作逻辑都发生了重大
+变迁。
+从个体层次看,个体既具有真实世界的个体,
+也具有虚拟世界的个体,即“ 数据主体” ( data sub⁃
+ject) 或者“ 算法身份” ( algorithmic identity) 。7 数
+字化的人类也将包括智能辅助人、生理增强人以
+及非整数维度的数字人。 人与机器将走上双向影
+响、边界消融、互为尺度的未来。8 个体的社会行
+动发生显著变化,表现为信息行动或数字行动,即
+社会行动以信息流的形式展开。9
+从社会层次看,智能社会的基本形态与运行
+模式发生了深刻变化。 社会区分为实在社会与虚
+拟社会两种基本形态;算法成为智能社会的重要
+运作规则;􀃊􀁉􀁒社会组织结构加速转型为扁平化、原
+子化、多样化和网络化的社会结构;物理世界、人
+类社会和虚拟社会高度集成,人与人、人与物、物
+与物以及 社 会 事 件 与 社 会 行 动 紧 密 链 接;􀃊􀁉􀁓 社 会
+关系包括人与人工智能、普通人与掌握运用人工
+智能的人、人工智能与人工智能等构成的多元社
+会关系。􀃊􀁉􀁔 由此,实在时空与虚拟时空中的人、人
+工智能和社会综合构成一个新型 “ 生态体系”。
+从对智能社会的反思来看,算法权力、数字资本主
+义、数字全景敞视主义、人的单体化等议题将成为
+社会科学家们反思的重点。
+134
+2023.4
+1
+2
+3
+4
+5
+6
+7
+8
+9
+􀃊􀁉􀁒
+􀃊􀁉􀁓
+􀃊􀁉􀁔
+Jochen Hartmann, Jasper Schwenzow, Maximilian Witte, “ The Political Ideology of Conversational AI: Converging Evidence on ChatGPT’ s Pro-environmental, Left-libertarian Orientation” , arXiv preprint arXiv: 2301.01768, 2023. Carlini, N., et al., “ Extracting Training Data from Large Language Models” , in 30th USENIX Security Symposium ( USENIX Security 21) , 2021, pp.2633-2650. Queenie Luo, Michael J. Puett, Michael D. Smith, “ A Perspectival Mirror of the Elephant: Investigating Language Bias on Google, C hatGPT, Wikipedia, and YouTube” , arXiv preprint arXiv: 2303.16281, 2023. Michael Liebrenz, et al., “ Generating Scholarly Content with ChatGPT: E thical Challenges for Medical Publishing” , The Lancet Digital Health, Vol.5, No.3, 2023, pp.105-106.
+桑基韬、于剑:《 从 ChatGPT 看 AI 未来趋势和挑战》 ,《 计算机研究与发展》2023 年第 6 期。
+Aljanabi Mohammad, “ ChatGPT: Future Directions and Open Possibilities” , Mesopotamian Journal of Cybersecurity, Vol. 2023, 2023, p p.16 - 17. Cheney-Lippold, John, “ A New Algorithmic Identity:Soft Biopolitics and the Modulation of Control” , Theory, Culture & Society, Vol.28, No.6, 2011, pp.164-181.
+姜泽玮:《 功能局限、关系嬗变与本体反思:人机传播视域下 ChatGPT 的应用探讨》 ,《 新疆社会科学》2023 年第 4 期。 陈氚:《 信息行动理论———数字社会时代的社会行动理论探讨》 ,《 社会学评论》2021 年第 5 期。 梁玉成、政光景:《 算法社会模型探析》 ,《 社会发展研究》2021 年第 3 期。 杨述明:《 人类社会的前进方向:智能社会》 ,《 江汉论坛》2020 年第 6 期。 刘嘉琪、杨斌艳:《 我国人工智能与社会科学耦合发展的热点与趋势研究———基于 CiteSpace 的文献计量分析》 ,《 数据与计算发展前 沿》2022 年第 6 期。
+
+
+研究方法的新功能与新助手
+在当今生成式人工智能迅速发展的背景下,
+文本、声音、图像、视频等多模态大数据被迅速生
+产出来,成为哲学社会科学研究的重要素材。 除
+此之外,生成式人工智能还能作为哲学社会科学
+重要的研究工具,推动哲学社会科学研究加速进
+入智能科研时代。 一方面,其能作为强有力的数
+据分析工具,对多模态数据进行数据处理、信息提
+取与建模分析等;另一方面,其还能在具体的研究
+全过程扮演得力的科研助手角色。
+( 一) 多模态数据分析功能
+在数据分析上,大型语言模型已被应用于分
+析社交媒体发帖、调查数据和新闻文章上,促进了
+社会学、经济学、政治学、新闻传播学、人文学科等
+研究领域的数据驱动研究。 大型语言模型能与外
+部信息源、工具、感官数据、图像、物理对象等进行
+交互,这使得其具有强大的多模态数据分析能力。
+在数据处理上,生成式人工智能能进行数据
+标注任务, 并且其性能超过了训练有 素 的 标 注
+者;1Elmas 等使用 ChatGPT 对代表选举前的投票
+意图和动机进行大规模注释,其能够以 97% 的准
+确率预测首选候选人;2ChatGPT 可以解码 Fed⁃
+speak( 美联储在货币政策决策中使用的语言) ;3
+ChatGPT 有助于跨资产类别进行选择;4ChatGPT
+能对可信的新闻媒体进行确认。5
+在信息提取上,大型语言模型能进行意见提
+取,如 ChatGPT 能从一个大型互联网文本数据集
+中学习其语言模式和风格,使其能够提取社区中
+的常见意见、想法和语言模式。6 其还能进行关
+系提取、文本摘要、命名实体识别、事件提取等信
+息提取 任 务。 Wei 等 利 用 ChatGPT 进 行 关 系 提
+取、命名实体和事件提取,其在两种语言、六个数
+据集的经验研究上实现了极佳效果。7
+在建模分析上,大型语言模型展示了强大的
+对经验进行观察并据此进行推理的能力。 首先,
+其能进行高性能分类任务。 在对推特内容的政治
+属性进行分类的文本分析任务中,GPT-4 的准确
+性、可靠性比人类更高。8 其次,其能作为情感分
+析的工具。 Lopez - Lira 和 Tang 利用 ChatGPT 和
+其他大型语言模型根据新闻标题进行情绪分析,
+进而据此预测股市收益。9 最后,其还能进行多
+模态数据推理和因果判断任务。 Zhang 等人提出
+Multimodal-CoT( 多模态-思维链) ,其推理准确率
+达到了 91􀆰 68%, 性能超过了人类水平。􀃊􀁉􀁒 Jin 等
+人提出 了 一 种 道 德 思 想 链 ( MORELOT) 提 示 策
+略,能准确预测人类的道德判断。􀃊􀁉􀁓 大语言模型
+还能进行各种图形数据推理任务。􀃊􀁉􀁔 基于 GPT-4
+135
+生成式人工智能与哲学社会科学新范式的涌现
+1
+2
+3
+4
+5
+6
+7
+8
+9
+􀃊􀁉􀁒
+􀃊􀁉􀁓
+􀃊􀁉􀁔
+Gilardi, F., Alizadeh, M., Kubli, M., “ ChatGPT Outperforms Crowd - Workers for Text - Annotation Tasks” , arXiv preprint arXiv: 2303. 15056, 2023.
+Tuˇgrulcan Elmas, ̇Ilker Gül, “ Opinion Mining from YouTube Captions Using ChatGPT: A Case Study of Street Interviews Polling the 2023 Turkish Elections” , arXiv preprint arXiv: 2304.03434, 2023. Anne Lundgaard Hansen, Sophia Kazinnik,“ Can ChatGPT Decipher Fedspeak?” , Available at SSRN 4399406, 2023. Hyungjin Ko, Jaewook Lee, “ Can Chatgpt Improve Investment Decision? From a Portfolio Management Perspective” , Available at SSRN 4390529, 2023.
+Kai-Cheng Yang, Filippo Menczer, “ Large Language Models Can Rate News Outlet Credibility” , arXiv preprint arXiv: 2304.00228, 2023. Nuno Crokidakis, Marcio Argollo de Menezes, Daniel O. Cajueiro, “ Questions of Science: Chatting with ChatGPT about Complex Systems” , arXiv preprint arXiv: 2303.16870, 2023.
+Xiang Wei, et al., “ Zero-Shot Information Extraction via Chatting with ChatGPT” , arXiv preprint arXiv: 2302.10205, 2023. Petter Törnberg, “ ChatGPT-4 Outperforms Experts and Crowd Workers in Annotating Political Twitter Messages with Zero-Shot Learning” , arXiv preprint arXiv: 2304.06588, 2023.
+Alejandro Lopez-Lira, Yuehua Tang, “ Can ChatGPT Forecast Stock Price Movements? Return Predictability and Large Language Models” , arXiv preprint arXiv: 2304.07619, 2023.
+Zhuosheng Zhang, et al., “ Multimodal Chain-of-Thought Reasoning in Language Models” , arXiv preprint arXiv: 2302.00923, 2023. Zhijing Jin, et al., “ When to Make Exceptions: Exploring Language Models as Accounts of Human Moral Judgment” , Advances in Neural In⁃ formation Processing Systems, 35, 2022, pp.28458-28473.
+Jiawei Zhang, “ Graph-ToolFormer: To Empower LLMs with Graph Reasoning Ability via Prompt Augmented by ChatGPT” , arXiv preprint arXiv: 2304.11116, 2023.
+
+
+的算法在成对因果发现任务( 准确率 97%) 、反事
+实推理任务( 准确率 92%) 和实际因果关系( 准确
+率 86%) 方面表现优异。1
+( 二) 科研助手的功能
+生成式人工智能不仅可以直接作为哲学社会
+科学研究的数据分析方法与工具,还能在哲学社
+会科 学 研 究 的 全 过 程 发 挥 科 研 助 手 功 能。 C
+hatGPT已在学术研究与写作领域产生了重大影响,
+许多现有的研究已经测试了 ChatGPT 如何应用于
+科学研究和写作,包括头脑风暴、文献综述、代码生
+成、内容生成、语法检查以及学术评述等功能。
+ChatGPT 在头脑风暴中可以发挥多种作用,
+包括激发 创 造 力、 产 生 新 想 法 和 扩 展 现 有 想 法。
+ChatGPT 具有多角度“ 思考” 的能力,可以帮助用
+户进行发散性思维和创造性思维,打破思维僵局。
+Liu 等人的研究结果表明,ChatGPT 与人类思维不
+同,其具有不同于人类的独特视角,其建议是高度
+可理解和相关的,具有重要的科学研究价值。2
+ChatGPT 能完成数据分析和可视化等任务。
+Macdonald 利用 ChatGPT 完成了对 10 万个样本的
+模拟数据集的数据分析任务,大大加快了研究进
+程。3 通过 GPT-4 代码解释器,用户可以直接通
+过自然语言对数据集进行数据分析和可视化,并
+直接给出相应的编程代码。
+在文献综述、辅助阅读、内容生成、语法纠正
+和评述上,ChatGPT 均可以发挥重要作用。 当前
+许多 研 究 已 经 尝 试 使 用 ChatGPT 生 成 内 容。
+ChatGPT 还被用于生成特定领域 的 综 述 文 章。4
+ChatGPT 可以作为一个人工智能驱动的研究性阅
+读工具, 帮助科研人员进行文献梳理 和 搜 集 工
+作。5 在辅助阅读方面,利用 ChatGPT 对相关研
+究文章进行解读具有很好的效果。6 ChatGPT 还
+能对语法和拼写进行纠正,提高写作质量。 此外,
+其还可以辅助进行观点评述与讨论。
+数据采集和来源的转变
+生成式人工智能的发展将使得哲学社会科学
+研究的数据来源发生革命性转变。 一方面,生成
+式人工智能可以扮演研究者的角色,发挥数据采
+集功能。 在这种情况下,生成式人工智能是在研
+究者干预和控制下的数据收集主体,向不同研究
+对象(可以是人或人工智能) 采集数据。 另一方
+面,人工智能生成内容( AIGC) 本身也可以作为哲
+学社会科学研究的重要数据来源。 在这种情况
+下,研究者是数据收集主体,生成式人工智能本身
+构成数据来源。 这两种基于生成式人工智能的数
+据采集方式都将使得哲学社会科学传统的定性和
+定量的数据采集方式发生重大转变,具体包括传
+统的质性访谈、问卷调查、实验数据采集、大数据
+采集等。
+( 一) 生成式 AI 作为数据采集工具
+因当前生成式人工智能已经具备很强的逻辑
+与共情能力,因此,其能在研究者一系列的引导和
+提示下,轻松自如地扮演人类研究者的角色,与被
+研究对象自然地交谈,以获取研究所需数据。7
+大量的研究探索了使用聊天机器人来代替传
+统的基于问卷的调查进行数据收集。 Xiao 等人构
+建了一个聊天机器人,以开放式问题进行访谈,并
+136
+2023.4
+1
+2
+3
+4
+5
+6
+7
+Emre Kıcıman, et al., “ Causal Reasoning and Large Language Models: Opening a New Frontier for Causality” , arXiv preprint arXiv: 2305. 00050, 2023. Siru Liu, et al., “ Assessing the Value of ChatGPT for Clinical Decision Support Optimization” , MedRxiv, 2023. Calum Macdonald, et al., “ Can ChatGPT Draft a Research Article? An Example of Population-level Vaccine Effectiveness Analysis” , Journal of Global Health, 13, 2023.
+Ömer Aydın, Enis Karaarslan, “ OpenAI ChatGPT Generated Literature Review: Digital Twin in Healthcare” , Available at SSRN 4308687, 2022.
+骆飞、马雨璇:《 人工智能生成内容对学术生态的影响与应对———基于 ChatGPT 的讨论与分析》 ,《 现代教育技术》2023 年第 6 期。
+Ömer Aydın, Enis Karaarslan, “ OpenAI ChatGPT Generated Literature Review: Digital Twin in Healthcare” , Available at SSRN 4308687, 2022. Wei J., et al., “ Leveraging Large Language Models to Power Chatbots for Collecting User Self-Reported Data” , arXiv preprint arXiv: 2301. 05843, 2023.
+
+
+得到了比人类访问员更高质量的回答。1 另外,
+在聊天机器人中注入更多人性化的特征,如较为
+随意的谈话风格、自我介绍等,这不仅可以提高被
+访者的参与度和满意度,还会使他们更多地自我
+披露。 Bemmann 等人将聊天机器人与抽样方法
+相结合,发现个性化的聊天机器人具有收集敏感
+或隐私数据的潜力。2
+除了利用生成式人工智能对人类特征、行为、
+情感数据进行收集外,还能利用其对 AI 间的互动
+数据进行采集。 Li 等人构建了一个用于角色扮
+演的新型沟通行动者框架,以促进 AI 之间的自主
+合作,并深入了解他们的“ 认知” 过程。3 这个研
+究展示了如何使用 AI 来进行角色扮演以生成会
+话数据,以便基于此来研究 AI 的行为和能力。
+( 二) AI 生成内容作为研究数据来源
+正因为生成式人工智能是一个能够适应不同
+社会角色 的 模 型,4 其 能 对 各 类 哲 学 社 会 科 学 研
+究数据进行生成或模拟,人工智能生成内容因此
+将成为哲学社会科学重要的研究数据来源。 首
+先,其生成的多模态大数据能被应用于各类社会
+场景中,其直接或间接地成为重要的大数据来源。
+其次,其还能模拟调查数据,在经过校正后成为有
+代表性的数据集。 再次,其还能模仿人类个体,成
+为各类哲学社会科学的实验对象,因此能成为重
+要的实验数据来源。 最后,通过模仿特定情境下
+具有特定特质的个体( 如稀有人群、历史人物、文
+学人物、哲学 家 等 ) , 研 究 者 能 与 其 对 话, 开 展 质
+性访谈,使其成为重要的质性研究数据来源。
+从生成式人工智能作为哲学社会科学研究的
+大数据来源看,其主要在两种场景、两个方法、两
+类空间上体现其研究价值。 从场景看,第一种研
+究场景是指生成式人工智能直接作为数据来源,
+构成研究的对象。 如 Bubeck 等人通过一系列预
+设好的提示使 ChatGPT 生成相应的内容,并根据
+相应内容研究其内含的偏见。5 第二种研究场景
+是指 AIGC 在不同的社会生产生活应用场景中成
+为研究对象。 在这种情况下,AIGC 实际反映的是
+人类的行为与意图,因为 AIGC 都是根据使用者
+的提示来生成各类多模态数据。6 在研究方法层
+面,第一种情况是指 AIGC 能成为量化研究的数
+据来源。 大规模的多模态数据能构成计算社会科
+学研究的数据来源,如大量的 AI 生成文本就能成
+为文本分析的数据来源。 第二种情况是指 AIGC
+能成为质性研究的数据来源。 如在网络和虚拟空
+间中,大量的 AIGC 内容能成为网络民族志和虚
+拟民族志的重要研究数据。 在存在空间上,随着
+AIGC 不断与机器人或传感设备技术融合发展,
+AIGC 过往主要产生于虚拟空间的情况将发生改
+变,其也将同时在实体空间中大量存在( 如顾客
+与服务机 器 人 在 各 类 消 费 场 景 下 的 互 动 数 据 ) 。
+这也将使得 AIGC 大数据具有更丰富 的 社 会 情
+境,为哲学社会科学研究提供更为多样化的大数
+据来源。
+生成式人工智能能够通过扩展样本和替代样
+本两种方式形成对问卷调查数据的补充和替换。
+通过传统问卷调查进行数据收集的各方面成本较
+高,时间跨度较长,而生成式人工智能在数据采集
+成本、效率、议题扩展性等方面的优势将远远超越
+传统的问卷调查数据采集方式。 从扩展样本的方
+式上看,在复杂、低资源和稀有类的调查中,通过
+生成式人工智能可以有效扩充稀有类数据集,弥
+补调查数据中特殊类属的稀缺性。 Møller 等人的
+137
+生成式人工智能与哲学社会科学新范式的涌现
+1
+2
+3
+4
+5
+6
+Ziang Xiao, et al., “ Tell Me about Yourself: Using an AI-powered Chatbot to Conduct Conversational Surveys with Open-ended Questions” , ACM Transactions on Computer-Human Interaction, Vol.27, No.3, 2020, pp.1-37.
+Florian Bemmann, et al., “ Chatbots for Experience Sampling-Initial Opportunities and Challenges” , CEUR Workshop Proceedings, Vol.2903, 2021. Guohao Li, et al., “ CAMEL: Communicative Agents for ‘ Mind’ Exploration of Large Scale Language Model Society” , arXiv preprint arXiv: 2303.17760, 2023. Argyle, Lisa P., et al., “ Out of One, Many: Using Language Models to Simulate Human Samples” , Political Analysis, Vol.31, No.3, 2023, pp.337 - 351. Bubeck, S., et al., “ Sparks of Artificial General Intelligence: Early experiments with GPT-4” , arXiv preprint arXiv: 2303.12712, 2023. T. Y. Wu, et al., “ A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development” , IEEE / CAA Journal of Auto⁃ matica Sinica, Vol.10, No.5, 2023, pp.1122-1136.
+
+
+样本扩展实验发现,GPT - 4 和 GPT - 3􀆰 5 在所有
+任务中都有很强的零样本性能,用扩展样本增强
+的数据具有较好的数据质量。1 从替代样本的方
+式看,其能对调查数据进行取代。 Argyle 等人探
+索了语言模型可以作为社会科学研究中特定样本
+有效替代的可能性,其根据数千个真实的人类的
+社会人口背景变量来调整模型,从而创建了一个
+替代性的“ 硅样本” ( Silicon Sample) ,并比较了其
+与人类样本的差异,证明了通过具有高算法保真
+度( Algorithmic Fidelity) 的大型语言模型,并通过
+硅采样( Silicon Sampling) 的方式,可以有效模拟
+人类社会的调查样本。2
+从人工智能生成内容作为实验数据来源看,
+当前已有一些研究通过不同的大型语言模型再现
+了经典的经济学、 心理语言学和社会 心 理 学 实
+验。3 长期以来,对人类的研究是通过基于语言
+的工具“ 访问” 人类心理,由此产生了大量的方
+法,而现在通过基于大型语言模型的方法不仅可
+以用来研究人 类, 还 可 以 用 来 研 究 人 工 智 能。4
+通过对大型语言模型注入特定的禀赋、特征、偏好
+等,可以使其模拟各种不同的人类行动者,以进行
+各种类型的实验研究。 Horton 的研究以 GPT - 3
+人工智能为实验对象,可以定性地再现基于人类
+实验的结果。 相比于招聘人类进行实验,它的成
+本非常低,因此可以尝试多种不同的措辞、提示、
+回答顺序,并且样本可以任意大,还能不受实验伦
+理的限制。5
+人工智能生成内容作为定性研究数据有其独
+特优势。 在许多人文性较强的人文社会学科中,
+细致精确地把握行动者和社会的心理、情感、价值
+与意义等无法有效量化的因素占据着方法论的核
+心位置。 虽然当前生成式人工智能仍处在初级阶
+段,但已 经 具 备 了 一 定 的 个 性、 心 智 与 情 感 能
+力。6 因此,将 AIGC 作为质性研究材料已经具备
+了可行性。 此外,从文学、历史、哲学等人文学科
+来看,过往通过文学作品、原著、史料等较为零乱、
+分散的资料来进行研究往往失去了“ 远读” 的宏
+大视野,7而通过生成式人工智能模拟文学家、文
+学人物、历史人物、哲学家等,能够较为全面且细
+致地反映出其观点与特征。 在对当代社会稀有人
+群、稀有事件的质性研究中,生成式人工智能也能
+进行较低成本的模拟访谈,以对特殊稀有人群、现
+象进行探索性研究。
+学科体系的评价与人才成长
+生成式人工智能已经给哲学社会科学学术生
+态带来了一定的冲击,也必将在未来持续带来更
+大的影响。 这一影响主要体现在对哲学社会科学
+学科体系中的评价体系和人才培养制度的改变
+上,这一改变既有机遇也有挑战。 当前,哲学社会
+科学学科组织制度整体上还表现为传统模式,但
+未来为了适应生成式人工智能等通用人工智能的
+发展,其必将发生变革。 当前在自然科学领域,受
+生成式人 工 智 能 的 影 响, 针 对 产 品 开 发 的 DAO
+( 分布式开放自主组织) 和针对基础研究的 DeSci
+(分布式开放科学运动) 正蓬勃兴起。8 这也是哲
+学社会科学可以借鉴的学科组织方式。 ( 一) 对学术评价的影响
+从生成式人工智能带给学术评价的机遇来看,
+一方面,AIGC 作为研究数据具有广泛的可及性,从
+而缓解了以往调查数据发布滞后、计算社会科学研
+138
+2023.4
+1
+2
+3
+4
+5
+6
+7
+8
+Anders Giovanni Møller, et al., “ Is a Prompt and a Few Samples All You Need? Using GPT-4 for Data Augmentation in Low-resource Classi⁃ fication Tasks” , arXiv preprint arXiv: 2304.13861, 2023. Argyle, Lisa P., et al., “ Out of One, Many: Using Language Models to Simulate Human Samples” , Political Analysis, Vol.31, No.3, 2023, pp.337 - 351. Aher G., Arriaga R. I., Kalai A. T., “ Using Large Language Models to Simulate Multiple Humans” , arXiv preprint arXiv: 2208.10264, 2022. Aher G., Arriaga R. I., Kalai A. T., “ Using Large Language Models to Simulate Multiple Humans” , arXiv preprint arXiv: 2208.10264, 2022. Horton J. J., “ Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?” , National Bureau of Eco⁃ nomic Research, No.W31122, 2023. Miotto, M., Rossberg, N., Kleinberg, B., “ Who Is GPT-3? An Exploration of Personality” , arXiv preprint arXiv: 2209.14338, 2022. 梁玉成、马昱堃:《 对青年的计算文本“ 远读” ———数字时代基于降维的整体认识论》 ,《 青年探索》2022 年第 3 期。 王飞跃、缪青海:《 人工智能驱动的科学研究新范式:从 AI4S 到智能科学》 ,《 中国科学院院刊》2023 年第 4 期。
+
+
+究中的大数据难以取得的数据不平等问题,并将进
+一步推动同行评议的可能性,推动人文社会科学研
+究的科学性。1 过往的基于不公开的或较高成本
+获得的调查数据或大数据可及性较低,因此根据其
+发表的研究很难被同行验证。 而 AIGC 的发展则
+正好解决了这一问题,一来使得学术生态更为平
+等,二来使 得 学 术 研 究 能 很 容 易 地 被 同 行 验 证。
+这将进一步提升哲学社会科学学术研究的科学性
+和客观性水平。 另一方面,生成式人工智能可以
+作为学术评价的助手,提升评审效率。 生成式人
+工智能因具有总结和评价能力,因此其能成为学
+术评价的得力助手,提升学术评价效率。2 同样,
+在学术期刊的审稿工作中,其也能帮助编辑进行
+审稿和评审,提高学术出版效率。3 从对哲学社
+会科学的学术评价的挑战来看,学术评价还面临
+研究者与 AI 的贡献和著作权属问题、抄袭和造假
+问题、评价的标准问题、评价的隐私问题等。4
+( 二) 对人才培养的影响
+从生成式人工智能对哲学社会科学人才培养
+的积极影响来看,其总体上使得人文社科研究者
+更为技术均等化、知识普及化和学习自主化。 从
+研究技术的应用来看,过往的统计计量技术、计算
+社会科学的各类分析技术具有较高的技术门槛,
+而生成式人工智能技术在大部分情况下只需要研
+究者采用自然语言或较为简洁的编程代码即可进
+行操作,大大降低了文科学者使用人工智能技术
+的门槛,使得人文社科内部应用智能分析技术进
+行学术研究走向均等化。 从哲学社会科学各学科
+的知识交叉与应用来看,在针对具体社会现象的
+研究中往往需要用到多学科的知识共同解决一个
+问题。 过往的跨学科交叉模式主要依靠不同学科
+的研究者组成研究团队,以提供不同领域的视野
+与知识。 但在生成式人工智能出现以后,其可以
+扮演不同学科的专家角色,为研究者提供不同学
+科的理论与知识。 从哲学社会科学人才教育的视
+角来看,生成式人工智能可以成为一位优秀的入
+门导师。 以生成式人工智能为内核的各类自主学
+习工具均能为人文社会科学学者与学生所运用来
+进行自主学习。
+正因为生成式人工智能给哲学社会科学人才
+培养提供了有利条件,这就更进一步对现有的人
+才培养体系提出了新的要求,主要包括对创新与
+批判思维的培养,对挖掘人工智能表现较弱的情
+感、价值、文化要素能力的培养,对智能研究思维
+的培养,对人工智能的干预与改造能力的培养等。
+从创新与批判思维的培养来看,当生成式人工智
+能为哲学社会科学研究者提供基础的分析、总结、
+提炼等工具后,研究者体现在研究中的价值主要
+是核心观点的创新,这就对研究者的创新能力与
+批判能力提出了更高的要求。 尤其是在 AIGC 还
+可能存在事实错误与认知错误的情况下,研究者
+自身的批判 能 力 就 显 得 更 为 重 要。5 从 挖 掘 情
+感、价值、文化要素能力的培养来看,当前人工智
+能虽然已初步具备了个性、情感能力,但其在分辨
+和挖掘人类深层次情感、价值与文化性要素时显
+得不足,因此,研究者应该进一步提升这方面的能
+力,以弥补人工智能的不足。 从智能研究思维的
+培养来看,未来哲学社会科学面对的是智能社会,
+不得不使用智能工具。 因此,培养人文社科学者
+的智能思维是智能时代发展的应有之义。 智能研
+究思维不仅仅是一种方法性、技术性和工具性的
+思维,也是一种理论思维,更是一种人文社会科学
+与智能科学的交叉思维。 从对人工智能的干预与
+改造能力的培养来看,在人工智能作为重要的基
+139
+生成式人工智能与哲学社会科学新范式的涌现
+1
+2
+3
+4
+5
+范晓光、刘金龙:《 计算社会学的基础问题及未来挑战》 ,《 西安交通大学学报( 社会科学版) 》2022 年第 1 期。 金雪涛、许志敏:《 区块链与学术评价体系变革:应用场域及可能贡献》 ,《 重庆大学学报( 社会科学版) 》2022 年第 1 期。 骆飞、马雨璇:《 人工智能生成内容( AIGC) 对学术生态的影响与应对———基于 ChatGPT 的讨论与分析》,《现代教育技术》2023 年第 6 期。 沈锡宾、王立磊、刘红霞:《 人工智能生成内容时代学术期刊出版的机遇与挑战》 ,《 数字出版研究》2023 年第 2 期。
+T. Y. Wu, et al., “ A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development” , IEEE / CAA Journal of Auto⁃ matica Sinica, Vol.10, No.5, 2023, pp.1122-1136.
+
+
+础设施、人工智能风险无处不在的时代背景下,通
+过人文社科学者的干预, 使得人工智能 “ 向善”
+“为善” 至关重要。1 因此,人文社科学者不仅应
+具备理论研究能力,也应具备“ 社计师” 的能力,
+即同时具备人文社会科学与计算科学家素养的社
+会设计人才,从人工智能的源头治理、内容治理、
+共同治理等环节推动其“ 向善为善” 。2
+话语体系的国内外机遇和挑战
+哲学社会科学的话语体系是其社会效用和影
+响的具体体现,主要表现为对社会公众的话语、对
+国家治理的话语和对国际社会的话语。 总体来
+看,生成式人工智能对话语体系的影响既有弱化
+的方面,也有强化的方面,同时也提供了智能时代
+的新机遇。
+( 一) 面向公众的话语:学术权威面临消解
+哲学社会科学话语一直以来都是社会公众的
+一种知识权威,依据福柯的知识—权力理论,权力
+和知识相互表明了对方的存在,权力关系和知识
+构造同时出现。 人工智能已经对社会公众的情感
+和心态产生了直接的影响。3 未来,生成式人工
+智能的发展一方面虽然给哲学社会科学赋能,但
+另一方面其也能成为社会公众的知识库和全能
+“ 导师” ,这使得社会公众在面对人文社会科学学
+者提供的知识时,更有条件采用一种审视与批判
+的态度。 此外,有学者认为 AIGC 可能产生学术
+的造假,而这可能挑战公众对学者的信任。4
+除了社会公众外,各类市场主体也需要哲学
+社会科学提供理论支持,尤其是管理学、法学等应
+用性较强的社会科学学科。 但当前生成式人工智
+能在各个专业领域的能力发展,使得市场主体对
+专家的需求降低。 ChatGPT 在几乎所有类型的信
+息咨询和专业知识的领域( 医学、司法和金融) 均
+可以取得 良 好 的 效 果,5 其 在 很 多 领 域 的 表 现 要
+远优于人类。 此外,随着各垂类大模型的迅猛发
+展,其专业性势必进一步增强,各专业领域的知识
+生成、应用和传播方式将受到极大冲击,知识专家
+扮演的角色也将发生重要转变。 如金融领域的
+BloombergGPT、孤 独 症 垂 类 大 型 语 言 模 型 Star⁃
+light、财经头条大型语言模型、教育领域的“ 子日”
+模型、零售领域的 ChatJD 等正在蓬勃发展。6
+( 二) 面向国家的话语:治理效用日渐凸显
+生成式人工智能技术的发展远不只是工程技
+术问题,更是重要的社会问题,是国家治理中面临
+的新问题,也是哲学社会科学研究的新任务。 这
+就要求把哲学社会科学研究同解决新时代坚持和
+发展中国特色社会主义的实际问题紧密结合起
+来,努力对时代问题作出积极回应。 哲学社会科
+学研究人员要“关注‘国之大者’,超越‘ 置四海之
+困穷不言,而终日讲危微精一之说’ 的独白式研
+究,更加自觉地围绕具有引领时代变革、社会发展
+和文明进步意义的重大问题开展深入研究......以
+更加积极的历史担当和创造精神,不断推进知识
+创新、理论创新、方法创新,推出一批代表我国哲
+学社会科学最高水平的精品力作,为加快构建中
+国特色哲学社会科学作出新的贡献” 。7
+智能时代哲学社会科学话语在国家治理中的
+效用主要体现在三个方面:一是利用哲学社会科
+学对生成式人工智能技术与行业进行治理。 因为
+生成式人工智能能对社会经济发展产生全面而深
+远的影响, 其 本 身 的 伦 理 道 德 就 显 得 尤 为 关 键。
+尤其是生成式人工智能具有一定的不确定性、不
+可控性和复杂性,通过哲学社会科学的话语使其
+向善、为善意义重大。 二是生成式人工智能赋能
+哲学社会科学为国家治理作贡献。 生成式人工智
+能赋能哲学社会科学,能更科学、高效、准确地把
+握社会态势,发现社会规律,以更有效地为国家治
+140
+2023.4
+1
+2
+3
+4
+5
+6
+7
+周旅军、吕鹏:《 “ 向善” 且“ 为善” :人工智能时代的算法治理与社会科学的源头参与》 ,《 求索》2022 年第 1 期。 吕鹏、周旅军、范晓光:《 平台治理场域与社会学参与》 ,《 社会学研究》2022 年第 3 期。 吕鹏、龚顺、梅笑、刘金龙:《 智能社会的崛起与人工智能的社会影响》 ,《 智能社会研究》2022 年第 1 期。 骆飞、马雨璇:《 人工智能生成内容( AIGC) 对学术生态的影响与应对———基于 ChatGPT 的讨论与分析》,《现代教育技术》2023 年第 6 期。 T. Y. Wu, et al., “ A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development” , IEEE / CAA Journal of Auto⁃ matica Sinica, Vol.10, No.5, 2023, pp.1122-1136. Wu S., et al., “ BloombergGPT: A Large Language Model for Finance” , arXiv preprint arXiv: 2303.17564, 2023. 高翔:《 按照习近平总书记和党中央要求办好中国社会科学院》 ,《 党建》2023 年第 5 期。
+
+
+理建言献策。1 三是哲学社会科学结合生成式人
+工智能推进经济社会发展。 哲学社会科学可以与
+人工智能技术相结合,服务国家重要的战略布局,
+推动社会经济全面可持续发展,如服务“ 数字中
+国”“智慧社会”“ 智能制造” 等科技驱动战略、新
+产业新业态新模式等。2
+( 三) 面向国际的话语:学术引领机遇显现
+长期以来,中国的哲学社会科学研究与西方
+国家相比处于边缘地位,在全球范围内学术影响
+力较低,学术话语权不高。3 而生成式人工智能的
+发展给中国的哲学社会科学的学术研究与话语传
+播带来了新的机遇。 虽然人工智能最先进的技术
+仍然被美国等西方发达国家掌握,在相关法律法
+规、伦理道德的研究上也占据领先地位,但因该领
+域发展尚处于起步阶段,中国的智能社会科学和人
+工智能行为学、伦理学研究仍然有机会通过多领域
+互动打破西方的技术和学术壁垒。4 从生成式人
+工智能带给中国哲学社会科学发展机遇的视角看,
+中国存在推动哲学社会科学走向全球学术话语引
+领地位的战略机遇,主要是因为存在四个方面的有
+利条件:一是中国有发展智能经济的独特优势,给
+智能社会科学发展提供了天然的社会研究范本。5
+二是生成式人工智能的开发与应用受语言的限制
+较小,这使得全球范围内以英语为核心的哲学社会
+科学研究优势相对削弱,而使中文世界哲学社会科
+学研究获得了走向全球的机遇。 三是中国拥有悠
+久的历史和丰富的文化资源,具有中国特色社会主
+义的制度优势,国家近年来也在持续推进文化走出
+去战略。 四是中国有通过数字经济、智能经济推动
+社会经济发展的强烈的国家意志。
+结论与讨论
+2023 年 4 月 28 日,中央政治局会议提出“ 要
+重视通用人工智能发展,营造创新生态,重视防范
+风险”。 这是政治局会议首提“ 通用人工智能”。
+总的来看,生成式人工智能当前的发展虽然尚处
+于初期阶段,但已经对哲学社会科学的学术体系、
+学科体系和话语体系产生了全面的影响,未来的
+影响还将继续扩大。
+生成式人工智能对学术体系的影响已经深入
+到理论、方法与数据等各个层次,其分别影响了哲
+学社会科学的本体论、方法论和认识论。 具体来
+看,生成式人工智能的发展在理论上推动了机器
+心理学、行为学和伦理学发展,并使得智能社会科
+学的发展进入到一个崭新阶段,个体和社会的存
+在形式、行动方式、构成逻辑和运作模式都将发生
+根本性改变;在方法上,生成式人工智能成为多模
+态数据的重要分析工具,其能发挥处理数据、提取
+信息和建模分析的作用;在数据上,生成式人工智
+能不仅能扮演研究者角色,进行数据采集工作,其
+生成内容本身也能成为研究的数据。 AIGC 作为
+研究数据主要体现为其可作为多模态大数据、调
+查数据、实验数据和访谈数据四种形式。
+因学科体系和话语体系具有很强的组织性和
+制度性,其发展与变革相对滞后,所以生成式人工
+智能对学科体系和话语体系的影响还未完全展
+现。 当前哲学社会科学学科组织制度整体上还处
+于传统模式,但其将在学术评价上使得数据可得
+性更高,可验证性研究更多,评价效率更高,这有
+助于提升研究的科学性,当然也带来了版权归属、
+抄袭作假等学术评价难题。 从人才培养来看,其
+使得人文社科研究者更为技术均等化、知识普及化
+和学习自主化,对人才的创新精神、智能思维、底层
+情感价值挖掘能力等的培养,尤其是亲身参与人工
+智能的治理和干预能力提出了更高的要求。
+从生成式人工智能对哲学社会科学话语体系
+的影响来看,哲学社会科学在面对社会公众和市
+141
+生成式人工智能与哲学社会科学新范式的涌现
+1
+2
+3
+4
+5
+Haluza Daniela, David Jungwirth, “ Artificial Intelligence and Ten Societal Megatrends: An Exploratory Study Using GPT-3” , Systems, Vol. 11, No.3, 2023, p.120.
+严宇、方鹿敏、孟天广:《 重访计算社会科学:从范式创新到交叉学科》 ,《 新文科理论与实践》2022 年第 1 期。 郑杭生:《 学术话语权与中国社会学发展》 ,《 中国社会科学》2011 年第 2 期。 高奇琦:《 人工智能的学科化:从智能科学到智能社会科学》 ,《 探索与争鸣》2018 年第 9 期。 王天夫:《 数字时代的社会变迁与社会研究》 ,《 中国社会科学》2021 年第 12 期。
+
+
+场主体时的学术权威将部分被生成式人工智能所
+取代和消解。 哲学社会科学对国家治理的作用日
+益凸显,不仅能发挥对人工智能技术和行业治理
+的作用,还 能 对 国 家 治 理 和 社 会 经 济 建 设 赋 能。
+哲学社会科学引领全球的机遇也因此显现,中国
+具有独特的经济、社会和制度优势,且能与中国传
+统文化结合以贡献全球治理的中国智慧。
+生成式人工智能的发展遵循着 “ 新 摩 尔 定
+律” ,智能技术快速迭代 将成为新常态,通用人工
+智能的实现就在不远的未来。 届时,人类社会将
+面临颠覆性的变革,哲学社会科学将面对全新的
+挑战。 正因为新的人工智能技术发展速度快,对
+社会影响深入广泛,因此哲学社会科学应在学术
+体系、学科体系、话语体系等方面及时转型、提前
+谋划、提早布局,以应对未来技术快速剧烈转型带
+来的冲击。 生成式人工智能发展给中国哲学社会
+科学发展带来挑战的同时,也为其提供了重要的
+战略机遇。 当前中国的人工智能技术在全球处于
+前列,也具有一定的文化、制度与经济优势,这给
+智能时代的中国哲学社会科学实现“ 弯道超车”
+提供了历史机遇。 中国的哲学社会科学应站在智
+能时代的浪潮之巅,抓住中华民族伟大复兴的战
+略全局和世界百年未有之大变局的历史契机,为
+推进国家和民族的道路自信、理论自信、制度自信
+和文化自信服务。
+作者简介:政光景,中国社会科学院社会学研
+究所助理研究员;吕鹏,中国社会科学院大学社会
+与民族学院、数字中国研究院教授。
+〔 责任编辑:丁惠平〕
+􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜􀤜
+方苞早年生平新证
+潘宏
+方苞早年作品存世较少,据苏惇元辑 《 文目编年》
+( 《 方苞集》 附录卷二,上海古籍出版社 2008 年版,第 893
+页,下引本书版本同) ,其 30 岁以前文章有 28 篇存世,又
+身经“ 《 南山集》 案” ,且无自编年谱,致其早年生平多有阙
+略。 近见方苞佚文《 石氏六修族谱序》 ( 1944 年安徽宿松
+六顺堂十二修《 石氏族谱》 卷七,中国人民大学张全海先
+生藏) 涉及方苞早年交游诸多史实,可资考订发覆。
+《 石氏六修族谱序》 开篇论述家谱的史鉴之用,后曰:
+今岁春,石 子 殿 华 以 选 拔 入 北 雍, 谒 余 于 直 庐。
+余叹曰:“ 斐章、 星 岩, 同 余 受 知 于 赵 学 使 者 也; 名 宿
+云亭,同余见 赏 于 李 文 衡 者 也; 六 涵 为 年 家 侄, 入 成
+均,决科北闱,又素晤予于都下,往往绸缪者也。 石
+氏与予为文章声气交,盖已久矣。”
+已而,殿华出谱一帙就正于余,且请序焉。 予受
+而读之,见良公之诰敕,炳炳烺烺。 犹忆四十年前,余
+访太史朱子字绿,与之游杜溪,寻芳选胜。 道经元帅
+墓,余高其义,瞻拜之,于是拨丰草,拂苔痕,朗诵碑文
+一通,即此敕也。 其功高遇主,如此其隆也。 ......
+这篇佚文印证了方苞康熙三十五年( 1696) 的“ 宿松
+之游”。 方苞《朱字绿文稿序》 自叙曾赴宿松拜访朱书一
+事,云:“ 丙子,闻字绿定居于杜溪而往就焉。” ( 《 方苞集》 ,
+第 622 页) 这次“ 宿松之游” 不见载于各种《 方苞年谱》 ,且
+由于康熙三十五年方苞主要行踪都在北京,一直被学者
+质疑。 新见佚文中“ 犹忆四十年前,余访太史朱子字绿,
+与之游杜溪,寻芳选胜。 道经元帅( 指明初武将石良) 墓,
+余高其义,瞻拜之” 一段话为此说提供了明确的证据。
+另外,佚文提及了两位扶掖方苞的江南学政。 方苞
+曾受到学政高裔、姜橚、张榕端等人的提携,已为学界所
+习见。 新见佚文则提到了另外两位扶掖方苞的江南学
+政。 一位是山东赵崙。 佚文中说:“ 斐章、星岩,同余受知
+于赵学使者也。” 斐章、星岩,即 宿松 石 文 焜、石 质,据 二 人
+生卒年推知这位赵姓官员提督江南学政的时间不应早于
+顺治十二年( 1655) ,且不晚于康熙二十七年( 1688) 。 考
+乾隆朝《 江南通 志》 ,此 期 曾 提 督 江 南 学 政 的 赵 姓 官 员 只
+有山东莱阳人赵崙( 《 江南通志》 卷一〇五《 职官志·文职
+第七》 ,华文书局 1967 年版,第 1719 页) ,赵崙当即文中所
+称的“赵学使”。 另一位是江西李振裕。 佚文云“ 名宿云
+亭,同余见赏于李文衡者也” 。 康熙二十三年(1684) 十二
+月,李振裕奉诏提督江南学政(《 清实录》 卷一一八,中华
+书局 1985 年版,总第 5 册,第 241 页) 。 李振裕在任上注
+重文行,使士风一变。 李振裕任户部尚书时还曾为方苞时
+文集作序( 李振裕:《 白石山房集》 卷一五有《 方灵皋制义
+序》,《 四库全书存目丛书》,齐鲁书社 1997 年版,集部第
+243 册,第 704 页)。 这为考察方苞生平提供了新线索。
+( 作者单位:安徽师范大学中国诗学研究中心)
+142
+2023.4
+
+
+(6) Generative Artificial Intelligence and the Emergence of New Paradigms in Philosophy and Social Sciences Zheng Guangjing Lv Peng ·132· Generative Artificial Intelligence ( GAI) has just begun to impact the academic, disciplinary, and discur⁃ sive systems of philosophy and social sciences. Yet, it has already garnered much attention and promises to at⁃ tract more in the future. Regarding the impact on academic systems, GAI has theoretically propelled related re⁃ search development and advanced intelligent social sciences to a new stage. Methodologically, it has become a crucial data analysis tool. In terms of data, it can gather data, and its generated content can also serve as re⁃ search data. For the impact on disciplinary systems, in academic evaluation, the accessibility of research data is higher, making confirmatory research more feasible. For talent cultivation, researchers are becoming more technically equalized, knowledge-democratized, and autonomous in learning. Concerning the impact on dis⁃ cursive systems, the authority of academia is partially dissolved in public discourse. In national and interna⁃ tional discourse, the mission of the philosophy and social sciences of advancing knowledge, theory, and meth⁃ od innovation continuously becomes more significant, and its opportunity to lead globally is also emerging.
+(7) Evolution and Reconstruction of Female Subjectivity from the Perspective of Foucault’ s Late The⁃ ory of Governmentality Dai Xuehong ·155· Neoliberalism constructs the individual as the subject of human capital. Its subjectivity provides favorable conditions for women’ s self-liberation and empowerment but further strengthens the logic of capital exploita⁃ tion and structural oppression of the vast majority of women, resulting in the disappearance of women’ s au⁃ thentic subjectivity and agency. Foucault’ s late theory of governmentality explains the integration of discipline, governmentality and life politics in neoliberal society, which provides a profound insight for contemporary Western feminists to transcend the dichotomy of oppression / resistance and deconstruct the rational hegemony of Neoliberalism. Studying the tense relationship between governmentality and female subjectivity opens the re⁃ search direction for exploring the dual path of surpassing the logical domination of capital and promoting the development of female subjectivity.
+(8) Construction of International Communication Matrix for Local Governments’ Overseas Social Net⁃ works Jin Miao ·163· As Overseas social networks have unique electronic, mediated, digital, and networked operating mecha⁃ nisms, local governments should break the new media construction thinking of winning by quantity, and in⁃ tegrate into the key interfaces of overseas social networks, such as interactive order, participation goal, and di⁃ alogue production. On the specific construction of overseas social network communication matrix, we should ex⁃ plore the construction strategy of matrix center, network, platform and model based on the actual international communication, make all-round efforts in the dimensions such as social network layout, social relations exten⁃ sion, and social technology identification, shape the regional image of China, enhance the international com⁃ munication efficiency of local governments, and boost the development of China’ s international communication capacity.
+(9) From the Students to Teachers: Reflections on the Study of “ Xueheng” Qu Jun ·211· In the research of “ Xueheng” , the intricate relationship between the generations of teachers and students constitutes a foundational question worthy of exploration, yet it remains insufficiently elucidated. The inception of this study involves extricating “ Xueheng” research from the dichotomous paradigm of the new cultural main⁃ stream versus cultural conservatism, and instead shifting towards an exploration of multifaceted interactions. Within these dynamic interactions, the affiliations between individuals associated with “ Xueheng” and their students come under scrutiny. The emphasis rests on two critical issues: the gradual estrangement between the teacher and student generations over time caused by the “ information discrepancy” and the concurrent meta⁃ morphosis of both the student and teacher generations within the pervasive revolutionary era. (10) Formation of the Historical Space in Western Europe’ s Universal Chronicles
+Wang Lihong ·219· Four Empires or Translatio imperii is one of the most important heritages of medieval political thought in Latin Christendom, constructing the earliest historical spaces with a universal quality. From Herodotus, Polybi⁃ us, Orosius to Otto of Freising, through the integration of history and geography, theological intervention, co⁃ existence of universalism and nationalism, the Four Empires created a significant and complete historical space, and also revealed a totally different way of understanding the relationship between the world and one’ s own nation.
+256
+2023.4

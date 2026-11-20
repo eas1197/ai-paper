@@ -1,0 +1,172 @@
+{
+  "run_id": "中国社会科学_20261118_attempt002",
+  "stage_id": "02",
+  "module_version": 5,
+  "attempt": 2,
+  "schema_version": 1,
+  "status": "needs_review",
+  "checked_at": "2026-11-18T14:59:10+08:00",
+  "previous_snapshot": {
+    "path": "../中国社会科学_20261118_attempt001/run_manifest.json",
+    "sha256": "ffea98d712fa19b59bb9f7fae37bbf5fb0c2d59d7a4a0e5e783a79cbe712ed47"
+  },
+  "sources": {
+    "6V7LJIWN": {
+      "pdf": "C:\\Users\\hou\\Zotero\\storage\\6V7LJIWN\\黄健和邓燕华 - 2021 - 制度的力量——中国社会保障制度建设与收入分配公平感的演化.pdf",
+      "sha256": "a9a3087e54c8020df81e14953cb0067501bfcea5abb933d9c9909823e95f8ccc"
+    },
+    "SCCKUUS9": {
+      "pdf": "C:\\Users\\hou\\Zotero\\storage\\SCCKUUS9\\李路路和朱斌 - 2015 - 当代中国的代际流动模式及其变迁.pdf",
+      "sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667"
+    }
+  },
+  "config": {
+    "reuse_inventory": true,
+    "split_by_printed_paragraphs": true,
+    "count_subheads_tables_and_notes_as_prose": false,
+    "random_seed": null
+  },
+  "new_coverage": {
+    "articles_completed": 1,
+    "articles_started": 1,
+    "chinese_paragraphs": 54,
+    "chinese_sentences": 269,
+    "english_abstracts": 1,
+    "english_sentences": 6
+  },
+  "corpus_coverage": {
+    "articles": 55,
+    "full": 2,
+    "partial": 1,
+    "section_overview_only": 52,
+    "chinese_paragraphs": 78,
+    "chinese_sentences": 384
+  },
+  "readback": {
+    "6V7LJIWN": {
+      "note": "逐篇解析/02_制度的力量_第二至四节及结论.md",
+      "chinese_pdf_pages": [
+        6,
+        20
+      ],
+      "english_pdf_page": 21,
+      "chinese_body_paragraphs_added": 30,
+      "chinese_body_sentences_added": 175,
+      "non_body_blocks_in_prior_index": [
+        19,
+        27,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        75,
+        76,
+        77,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85
+      ],
+      "non_body_tails_in_prior_index": [
+        "P026S07",
+        "P033S07",
+        "P047S06",
+        "P059S06",
+        "P074S05",
+        "P081S05"
+      ],
+      "status": "full"
+    },
+    "SCCKUUS9": {
+      "note": "逐篇解析/03_当代中国的代际流动模式及其变迁_摘要至第三节.md",
+      "chinese_pdf_pages": [
+        1,
+        8
+      ],
+      "paragraphs": 24,
+      "sentences": 94,
+      "sentence_counts_by_printed_paragraph": {
+        "A": [
+          4
+        ],
+        "I": [
+          5,
+          3
+        ],
+        "II": [
+          1,
+          3,
+          5,
+          4,
+          5,
+          2,
+          4,
+          4,
+          1
+        ],
+        "III": [
+          3,
+          4,
+          4,
+          7,
+          2,
+          2,
+          3,
+          8,
+          6,
+          8,
+          4,
+          2
+        ]
+      },
+      "status": "partial",
+      "next_pdf_page": 9,
+      "next_journal_page": 48,
+      "next_section": "四、研究模型"
+    }
+  },
+  "output_sha256": {
+    "阅读总目录.md": "e48b7fe331e3fb0cf0e7129e1dea1a8c1e5be917692dbe459da9e21fd4d7eaae",
+    "逐篇解析/02_制度的力量_第二至四节及结论.md": "c29e3f7d25964f08c29b7c89066153e8323edd2cfd5539b3ff9ab41d48839490",
+    "逐篇解析/03_当代中国的代际流动模式及其变迁_摘要至第三节.md": "90690b935a242163a2351a60f1dcee4afd5343ed4e8eb8cb7ba9d9ca3b3054a2"
+  },
+  "code_sha256": "e029c256794cc7f3c5244e42a668ee664c3665c144e084f044470abc875b7a10",
+  "root_requirements_sha256": {
+    "AGENTS.md": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd",
+    "基础要求.md": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b",
+    "项目架构.md": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+  },
+  "config_sha256": "99d1728729364559932fafabede1453c350d719729f224cff8079e89cdf498ef"
+}

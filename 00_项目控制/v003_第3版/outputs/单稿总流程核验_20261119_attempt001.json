@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-19T15:39:23+08:00",
+  "framework": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "central_research_executor": "not_implemented",
+  "mode": "single",
+  "enabled_drafts": [
+    "A"
+  ],
+  "skipped_stages": [
+    "08",
+    "09"
+  ],
+  "ready_real_runs": [],
+  "representative_current_run": "cgss23_edu_internet_20261118",
+  "preflights": {
+    "ambiguity_20261118": {
+      "preflight": {
+        "exit_code": 3,
+        "result": {
+          "run_id": "ambiguity_20261118",
+          "stage_id": "07",
+          "status": "needs_review",
+          "errors": [
+            "本运行锁定第7步旧版本，未迁移；第11版用于新初始化运行",
+            "G2 运行锁定资源状态 needs_review",
+            "G3 运行锁定资源状态 needs_review",
+            "G4 当前状态 needs_review",
+            "G5 当前状态 needs_review",
+            "G6 当前状态 planned"
+          ],
+          "pack_id": null,
+          "inputs": {
+            "run_id": "ambiguity_20261118",
+            "input": null
+          },
+          "writing_mode": "single",
+          "draft_labels": [
+            "A"
+          ],
+          "submission_enabled": false
+        }
+      },
+      "manifest_path": "00_项目控制/v002_第2版/runs/ambiguity_20261118/run_manifest.json",
+      "stages": {
+        "04": {
+          "status": "needs_review",
+          "attempt": 2,
+          "module_version": 5
+        },
+        "05": {
+          "status": "needs_review",
+          "attempt": 2,
+          "module_version": 4
+        },
+        "06": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "07": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 5
+        },
+        "08": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "09": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 3
+        }
+      }
+    },
+    "cfps_edu_gap_20261118": {
+      "preflight": {
+        "exit_code": 3,
+        "result": {
+          "run_id": "cfps_edu_gap_20261118",
+          "stage_id": "07",
+          "status": "needs_review",
+          "errors": [
+            "本运行锁定第7步旧版本，未迁移；第11版用于新初始化运行",
+            "G2 运行锁定资源状态 needs_review",
+            "G3 运行锁定资源状态 needs_review",
+            "G4 当前状态 planned",
+            "G5 当前状态 planned",
+            "G6 当前状态 planned"
+          ],
+          "pack_id": null,
+          "inputs": {
+            "run_id": "cfps_edu_gap_20261118",
+            "input": null
+          },
+          "writing_mode": "single",
+          "draft_labels": [
+            "A"
+          ],
+          "submission_enabled": false
+        }
+      },
+      "manifest_path": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/run_manifest.json",
+      "stages": {
+        "04": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 5
+        },
+        "05": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 4
+        },
+        "06": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "07": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 6
+        },
+        "08": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "09": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 3
+        }
+      }
+    },
+    "cgss2023_edu_gap_20261118": {
+      "preflight": {
+        "exit_code": 3,
+        "result": {
+          "run_id": "cgss2023_edu_gap_20261118",
+          "stage_id": "07",
+          "status": "needs_review",
+          "errors": [
+            "本运行锁定第7步旧版本，未迁移；第11版用于新初始化运行",
+            "G2 运行锁定资源状态 needs_review",
+            "G3 运行锁定资源状态 needs_review",
+            "G4 当前状态 needs_review",
+            "G5 当前状态 needs_review",
+            "G6 当前状态 needs_review"
+          ],
+          "pack_id": null,
+          "inputs": {
+            "run_id": "cgss2023_edu_gap_20261118",
+            "input": null
+          },
+          "writing_mode": "single",
+          "draft_labels": [
+            "A"
+          ],
+          "submission_enabled": false
+        }
+      },
+      "manifest_path": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/run_manifest.json",
+      "stages": {
+        "04": {
+          "status": "needs_review",
+          "attempt": 3,
+          "module_version": 5
+        },
+        "05": {
+          "status": "needs_review",
+          "attempt": 3,
+          "module_version": 4
+        },
+        "06": {
+          "status": "needs_review",
+          "attempt": 2,
+          "module_version": 2
+        },
+        "07": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 6
+        },
+        "08": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "09": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 3
+        }
+      }
+    },
+    "cgss23_digital_ties_20261118": {
+      "preflight": {
+        "exit_code": 3,
+        "result": {
+          "run_id": "cgss23_digital_ties_20261118",
+          "stage_id": "07",
+          "status": "needs_review",
+          "errors": [
+            "本运行锁定第7步旧版本，未迁移；第11版用于新初始化运行",
+            "G2 运行锁定资源状态 needs_review",
+            "G3 运行锁定资源状态 needs_review",
+            "G4 当前状态 needs_review",
+            "G5 当前状态 needs_review",
+            "G6 当前状态 needs_review"
+          ],
+          "pack_id": null,
+          "inputs": {
+            "run_id": "cgss23_digital_ties_20261118",
+            "input": null
+          },
+          "writing_mode": "single",
+          "draft_labels": [
+            "A"
+          ],
+          "submission_enabled": false
+        }
+      },
+      "manifest_path": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/run_manifest.json",
+      "stages": {
+        "04": {
+          "status": "needs_review",
+          "attempt": 3,
+          "module_version": 5
+        },
+        "05": {
+          "status": "needs_review",
+          "attempt": 3,
+          "module_version": 4
+        },
+        "06": {
+          "status": "needs_review",
+          "attempt": 3,
+          "module_version": 2
+        },
+        "07": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 6
+        },
+        "08": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "09": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 3
+        }
+      }
+    },
+    "cgss23_edu_internet_20261118": {
+      "preflight": {
+        "exit_code": 3,
+        "result": {
+          "run_id": "cgss23_edu_internet_20261118",
+          "stage_id": "07",
+          "status": "needs_review",
+          "errors": [
+            "G2 运行锁定资源状态 needs_review",
+            "G3 运行锁定资源状态 needs_review",
+            "G4 当前状态 needs_review",
+            "G5 当前状态 needs_review",
+            "G6 当前状态 stale"
+          ],
+          "pack_id": null,
+          "inputs": {
+            "run_id": "cgss23_edu_internet_20261118",
+            "input": null
+          },
+          "writing_mode": "single",
+          "draft_labels": [
+            "A"
+          ],
+          "submission_enabled": false
+        }
+      },
+      "manifest_path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/run_manifest.json",
+      "stages": {
+        "04": {
+          "status": "needs_review",
+          "attempt": 7,
+          "module_version": 6
+        },
+        "05": {
+          "status": "needs_review",
+          "attempt": 7,
+          "module_version": 4
+        },
+        "06": {
+          "status": "stale",
+          "attempt": 2,
+          "module_version": 3
+        },
+        "07": {
+          "status": "planned",
+          "attempt": 0,
+          "module_version": 11
+        },
+        "08": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 2
+        },
+        "09": {
+          "status": "skipped",
+          "attempt": 0,
+          "module_version": 3
+        }
+      }
+    }
+  },
+  "representative_evidence": {
+    "G4": {
+      "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_04/attempt_007/gate_report.json",
+      "status_at_attempt": "needs_review",
+      "counts": {
+        "metadata": 1,
+        "source_eligible": 1,
+        "abstracts_read": 1,
+        "core_selected": 0,
+        "core_read": 0,
+        "views": 0
+      },
+      "first_issues": [
+        "议题尚未经过候选比较并暂定",
+        "有效摘要1/100；缺口必须保留，说明不自动豁免目标",
+        "议题入选文献0/25",
+        "核心选择多样性:classic: 缺少 assessment"
+      ]
+    },
+    "G5": {
+      "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_05/attempt_007/gate_report.json",
+      "status_at_attempt": "needs_review",
+      "counts": {
+        "candidates": 0,
+        "accepted_hypotheses_or_RQ": 0,
+        "measurements": 0
+      },
+      "first_issues": [
+        "G4未通过或不是当前attempt；05仅可探索，不能放行",
+        "尚未形成候选问题",
+        "四路推进缺少审查: reality_theory_tension",
+        "reality_theory_tension: 必须是非空ID列表"
+      ]
+    },
+    "G6": {
+      "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_06/attempt_002/gate_report.json",
+      "status_at_attempt": "needs_review",
+      "counts": {
+        "models": 0,
+        "results": 0
+      },
+      "first_issues": [
+        "G5未通过或不是当前版本",
+        "第五步设计未事前冻结",
+        "执行协议: 缺少 datasets",
+        "执行协议: 缺少 primary_dataset"
+      ]
+    }
+  },
+  "resource_status": {
+    "02": {
+      "path": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+      "status": "needs_review",
+      "business_gate_report": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json"
+    },
+    "03": {
+      "path": "03_学术语言学习/v005_第5版/outputs/resource_snapshot.json",
+      "status": "needs_review",
+      "business_gate_report": "03_学术语言学习/v005_第5版/outputs/gate_report.json"
+    }
+  },
+  "manuscript_generated": false,
+  "trial_writing_guide": {
+    "path": "07_三稿独立写作/v011_第11版/outputs/历版规则综合_20261119_attempt002/定量社会学论文逐段写作与语言规则.md",
+    "sha256": "2ccfff09e7e905c2443eab61599e4fb0f6d7d37788c20fbfb694533f60d7cfaf",
+    "checked_units": 52,
+    "global_tone_added": true
+  }
+}

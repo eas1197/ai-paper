@@ -1,0 +1,18 @@
+{
+  "journal_id": "J084",
+  "source_url": "https://hnsh.cbpt.cnki.net/EditorH2N/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:04:15.029495+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://hnsh.cbpt.cnki.net/EditorH2N/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J084_07b8edfdc5db/text.txt",
+  "sha256": "80a59c39c064acc18074dbefbe54344d3c52575efc0d1bac3b8afebed98d26cd",
+  "original_path": "primary_http/J084_07b8edfdc5db/response.html",
+  "original_sha256": "26d6fe3592cae985d6245b4bc7ec02c658e34fc99b6c21cd1d688509cb24a933",
+  "line_count": 15,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

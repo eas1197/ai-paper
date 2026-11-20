@@ -1,0 +1,18 @@
+{
+  "journal_id": "J048",
+  "source_url": "https://jpa.sysu.edu.cn/zjxw/5141.htm",
+  "retrieved_at": "2026-11-16T15:04:01.373078+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jpa.sysu.edu.cn/zjxw/5141.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J048_f063e5c0353c/text.txt",
+  "sha256": "60ed1b67c40507acdd0c56a2ce6656d07c9a1e1bbf9135aa5fe9424d780e09ae",
+  "original_path": "primary_http/J048_f063e5c0353c/response.html",
+  "original_sha256": "ef1900a27749a5c78b1bcbed619b5a8b00ffe57aa238fad348fb990d6f31407a",
+  "line_count": 73,
+  "title": "《公共行政评论》",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

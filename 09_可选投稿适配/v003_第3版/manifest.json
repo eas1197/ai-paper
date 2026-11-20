@@ -1,0 +1,18 @@
+{
+  "module_id": "09",
+  "name": "可选投稿适配",
+  "version": 3,
+  "version_label": "第3版",
+  "schema_version": 2,
+  "framework_status": "implemented",
+  "business_status": "disabled",
+  "depends_on": ["01", "07"],
+  "conditional_dependencies": {"three_plus_review": ["08"]},
+  "expected_artifacts": ["candidates.csv", "pool_snapshot.json", "submission_ledger.csv", "gate_report.json", "stage_manifest.json"],
+  "folders": ["templates", "tools", "tests", "outputs"],
+  "entrypoint": "tools/submission.py",
+  "interfaces": ["plan", "execute", "validate", "export"],
+  "execution_scope": "research",
+  "external_actions_this_round": false,
+  "transports": {"email": "SMTP_SSL", "system": "official_portal_handoff"}
+}

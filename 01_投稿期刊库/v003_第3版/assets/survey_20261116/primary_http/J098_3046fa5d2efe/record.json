@@ -1,0 +1,20 @@
+{
+  "journal_id": "J098",
+  "source_url": "https://bjlb.cbpt.cnki.net/portal/journal/portal/client/news/bjlb_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:03:28.188788+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://bjlb.cbpt.cnki.net/portal/journal/portal/client/news/bjlb_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J098_3046fa5d2efe/text.txt",
+  "sha256": "e93b0bb45c445109d786db734f4d9d9fb6cc2b8ee548a5d37ab6763729d30e2b",
+  "original_path": "primary_http/J098_3046fa5d2efe/response.html",
+  "original_sha256": "749cc8922f6b70c34f44ecc570bc1974a5ff14d320a186ae556c3f53f5ebde2d",
+  "line_count": 73,
+  "title": "北京联合大学学报(人文社会科学版)",
+  "guideline_links": [
+    "https://bjlb.cbpt.cnki.net/portal/journal/portal/client/news/bjlb_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "enabled": false,
+  "run_id": null,
+  "family_id": null,
+  "writing_mode": "single",
+  "as_of": "2026-11-16",
+  "seed": 20261116,
+  "stage07_manifest": null,
+  "stage08_manifest": null,
+  "selection_file": null,
+  "resource": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001",
+  "manuscript": null,
+  "output": null,
+  "sender": null,
+  "author_confirmations": {"real_identity": false, "all_authors_consent": false, "original_work": false, "exclusive_submission": false, "ai_disclosure_accurate": false},
+  "eligibility": {},
+  "target_rechecks": {},
+  "adaptations": {},
+  "note": "模板默认关闭。资格、材料和目标刊复核的记录结构见数据契约.md。"
+}

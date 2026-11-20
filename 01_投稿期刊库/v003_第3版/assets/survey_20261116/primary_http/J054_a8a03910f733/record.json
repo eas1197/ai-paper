@@ -1,0 +1,22 @@
+{
+  "journal_id": "J054",
+  "source_url": "https://www.zjskw.gov.cn/col/col1229536590/index.html",
+  "retrieved_at": "2026-11-16T15:02:58.664183+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.zjskw.gov.cn/col/col1229536590/index.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J054_a8a03910f733/text.txt",
+  "sha256": "48e1ca08aee79171111a7fd4ef471037642e93c1c3d1db09b1fcdb4005c15090",
+  "original_path": "primary_http/J054_a8a03910f733/response.html",
+  "original_sha256": "a077e7b019d179001078024c1d371aebd8cf4a82e48c44076a4ad01359ad6bd4",
+  "line_count": 177,
+  "title": "浙江社会科学",
+  "guideline_links": [
+    "https://www.zjskw.gov.cn/art/2024/10/10/art_1229819897_61002.html",
+    "https://www.zjskw.gov.cn/art/2024/10/23/art_1229824658_61222.html",
+    "https://www.zjskw.gov.cn/col/col1229536590/index.html#tabs4-1"
+  ],
+  "review_status": "awaiting_source_readback"
+}

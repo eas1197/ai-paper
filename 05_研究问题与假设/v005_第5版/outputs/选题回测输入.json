@@ -1,0 +1,26 @@
+{
+  "config": {
+    "as_of": "2026-11-18",
+    "abstract_target": 100,
+    "core_target": 25,
+    "archive_all_fulltexts": true
+  },
+  "04": {
+    "theme": "数字社会与社会分层",
+    "literature": [
+      {
+        "source_id": "S_SHXYJ_WEBSITE",
+        "path": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\联网六刊_20261118_attempt002\\联网题录.json",
+        "format": "json",
+        "origin": "online_search",
+        "access_basis": "期刊网站公开PDF",
+        "share_scope": "local_only",
+        "retrieved_at": "2026-11-18"
+      }
+    ],
+    "annotations": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\联网六刊_20261118_attempt002\\摘要复核.json"
+  },
+  "05": {
+    "annotations": "选题回测审查.json"
+  }
+}

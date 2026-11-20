@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "stage_id": "05",
+  "run_id": "cgss23_edu_internet_20261118",
+  "inputs": {
+    "upstream": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\stage_04\\attempt_008\\stage_manifest.json",
+    "annotations": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\单稿全流程_20261119_attempt001\\05标注.json",
+    "run_id": "cgss23_edu_internet_20261118",
+    "base_dir": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\单稿全流程_20261119_attempt001"
+  },
+  "config": {
+    "as_of": "2026-11-19"
+  },
+  "seed": 20261114,
+  "created_at": "2026-11-19T20:29:58.226079+08:00",
+  "input_files": [
+    {
+      "path": "E:\\文章\\ai论文\\AGENTS.md",
+      "sha256": "4c73d2a503bf67b196265826dbf85bb1cf765f7573dbad470f542715d2ce39dc"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\基础要求.md",
+      "sha256": "9960955348104b804e6d5af8d2df536b99632bd9bd20200564736f5d22d3c9a7"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\项目架构.md",
+      "sha256": "085123d8ca4c22c32d080eefb5b99aa4bae57247cc6582afc25946d99261d20c"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v004_第4版\\module_registry.json",
+      "sha256": "235a284d7ff2898af7a8241659254dfcd2d162e7004f16c035796d95f2b7bd36"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v004_第4版\\project_config.json",
+      "sha256": "c26717cc9a1efcdfdaed7a9e65e26aac33b46ac1f6ab85e056dcfdc69419c444"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\manifest.json",
+      "sha256": "01c9258e2835384162f68008f5ba0e14fd272434113c9b49f11d7eaac4dfaa38"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\模块说明.md",
+      "sha256": "c8e8df7adb2035a2563ba3a60d6c203a3795542cc0644d35eaaaefa6f486a9f6"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\knowledge.py",
+      "sha256": "d87e9270d14f11cba990a7381855f2ca0457dfb8ec2a8cc244cab9f06e2d8db2"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\literature_sources.py",
+      "sha256": "590b92466d2b35243affc3cdaebdb33b66159f6fa5b449e35eeb2f889d8c2a4d"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\pipeline04.py",
+      "sha256": "ff03845ff71d6e5e34b928277bfb5a93d742a128e7b404175bb51b853e113faf"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\providers.py",
+      "sha256": "b6eacfc8eb7763577ddafab1fe4411932896d693b85e666892d1e00cc473213f"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\research.py",
+      "sha256": "22642ec65b22de926d79402de06382c2bbcd524c8a01f40f272aef4e81913eb3"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\runtime.py",
+      "sha256": "1f732edf56f4fd5d14332f393ea15563dec05eed63db187d4bc27f93d0115a67"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\stage04.py",
+      "sha256": "9ed7654619993802cca81538393ae988ef512fc42172235da7ac16928dd3b9f4"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\verify_release.py",
+      "sha256": "8672a9be56bdb8a66aac62edd77156d3d9c5fd6331692479842edfa6ba45ccf8"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\tools\\verify_stage06_compatibility.py",
+      "sha256": "1c76ef0b28a297c115d0cd2f38ed9198215b825a930990952cc1f8b53d5fa867"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\abstract100.csv",
+      "sha256": "10d23c3ef7753ba34a034d6c716b0a2dde7ac691b5d122cfa38bc51578722524"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\acquisition_request.json",
+      "sha256": "42cb0d21264efdc1647798e8d7a12cefdd0480c5d4ca573d1bf77facd48e4dbf"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\annotations04.json",
+      "sha256": "c76788fd7c0b3dd58cfe2d8f9c94a5bf2313b2b8893b3f45f59ee767d3c0e978"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\context.csv",
+      "sha256": "f4aae6ba75f2c4e8a5da8ef7b55edc4574d4fbe2fe000116d6bbc52904950006"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\core25.csv",
+      "sha256": "a058824ca32b07dda955fc27ccd26f72806c719280839db20989ca410b5f067c"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\dialogue_matrix.csv",
+      "sha256": "455e7506b992b1429c63119d057c7c13b570eae46c3daee439385e880b4e3fab"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\network_workflow_input.json",
+      "sha256": "631e90b5c3b0d575f030732a034e5657901bee6e49c3687545809e8e26dfe8cb"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\README.md",
+      "sha256": "9bb61ac73c87f765007041d1a6d1ada72b9b508bca6d5d43addb6e29a42b6664"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\relations.csv",
+      "sha256": "93d45ec02cfaaa3533e3e32a4aed0e6940c8e641a73442b2569ffeab58e65c87"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\search_log.csv",
+      "sha256": "71921db8116482dd3d4daba12b36eaeb10f33884a8f6c9e72de1d13a2a0fc895"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\topic_scope.json",
+      "sha256": "568b6082215af47000cbd7d8e6633968addfd8dbf71f2ce717f40e4d19765f07"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\view_links.csv",
+      "sha256": "f9033fbfe127ac239e4993869b86421359be47c69dcf13e4fbc7e1ea26c52d57"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\views.csv",
+      "sha256": "d503379b7a0923b7d8e57367a8abca73dae8e2ab35bbd1c171cff26de5eb3a0b"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\templates\\workflow_input.json",
+      "sha256": "67bdcb239ca89209fb3b915a2481834ae60117b887893d685575180d28bff982"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\04_议题文献与现实\\v008_第8版\\skills\\research-evidence-hypotheses\\SKILL.md",
+      "sha256": "3f61b6ebee8a6b184a41f838c1d034f96dc1888e9024f763075dba8bcfa26ebe"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\manifest.json",
+      "sha256": "575ed6d7605ba654777475d3cacf64385a6e49a92c83cbc37ce35c95f4e18903"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\模块说明.md",
+      "sha256": "b59721cab8591426382668223b8a8bf6f365d55dbab9c12350f2bb4e815f306b"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\check_cfps_contract_measures.py",
+      "sha256": "a00a7333c4fde755e99b841253433c696151cdb97a92e2666b1bae0fc90abce0"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\check_reading_coverage.py",
+      "sha256": "768af563760e44a583d10d24b389dd7df8aace9859517757e3cd4ddb2793c52a"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\control_plan05.py",
+      "sha256": "e6b79c26829209dcef7a1deaf5b66d1fc6e4a23667ae9033c4a558a21f23d83f"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\fulltext_reading.py",
+      "sha256": "d733cd3196f1020ed3dd5a5d2ee1ea96857ff5cf00642be4c683c19af744b6ee"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\question_library.py",
+      "sha256": "86cf0f414021eccf5826addc6a40473253c8881c3963d680b4e9f3654014e117"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\question_review.py",
+      "sha256": "6400da8a54fe589d803d875a8a68c25d396edcf981eadd98fda48ea3c2d22e32"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\read_with_local_model.py",
+      "sha256": "076dfc1dbc766200b197d143a09fc21d3aea6b65ff052c2f5224b73fb5e39ddd"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\stage05.py",
+      "sha256": "dcb28b84fa1a9996a92ec6caa8a7329c93bf50f0717207167b38ceacb4edfd60"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\tools\\topic_cards.py",
+      "sha256": "cc96f7e9e26572f2e822acb8ddccaf673395ad9373f55817b088cbd96cf06ed8"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\analysis_design.json",
+      "sha256": "f8a5f32887b7b1548b2e3acc2a224028f7c87ea12da75f90483fc8cbf4a4f6fc"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\annotations05.json",
+      "sha256": "2c2240156ea433a6edb689d4feb2504c3ed89e5fc44e6a8536ca87ad991ce8aa"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\control_plan.json",
+      "sha256": "fc2add3010b5b823013876998d1dc5fcd926ab046aba56b7f6943429ecf9a3f6"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\gap_cards.csv",
+      "sha256": "b40e162d27007cde358d474cbd79584f20018c5401ba66d7f19edb01d0d4b44a"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\hypotheses.json",
+      "sha256": "eb60d88a073c3ee3a1535dbe0dccd278b8e7dc9aa6e99dd2abb6609fae82ece8"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\literature_dialogue.csv",
+      "sha256": "459982abadbdaa38f62f2e70329c2945b173f381a831c37e09b5b79092d2ee43"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\README.md",
+      "sha256": "9bb61ac73c87f765007041d1a6d1ada72b9b508bca6d5d43addb6e29a42b6664"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\same_level_review.csv",
+      "sha256": "086c1b90e79d3b001850eb0a39cae3bc6311b7cb829fae31bf52e8617f794d87"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\significance_review.json",
+      "sha256": "f14483156fb743fa1b765ac92646c5fe63f34cf782444b5fe158d390dfb33867"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\templates\\研究问题卡.md",
+      "sha256": "145b482d76bd66e9a6952e7b20ce9383d0d09e73d39fd5441c4a4e7dcc5ba5f3"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\skills\\social-science-topic-selection\\SKILL.md",
+      "sha256": "31bba5913510a1392c0492cecc2a10c3ff86ba0eaade355fb2ef8a035fa23fae"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v002_第2版\\manifest.json",
+      "sha256": "a49b513d0396ef766ce821e426d0721ab56478138a7baf518c01de5509bafcd6"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v002_第2版\\模块说明.md",
+      "sha256": "1ebed522e8634ace0ad650401a30a9ff0fa2895a0d143007812ab81e45e5685f"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v002_第2版\\templates\\README.md",
+      "sha256": "7402369535c6466c05dbc463b754f2b1761d63d93d7b02b933a6ea694de6c765"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v002_第2版\\knowledge.sql",
+      "sha256": "086aac97529717a0bcf12be9abf1c56bfa6e5ff548a2a4e662f5fd093f95c94b"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\10_共享证据与契约\\v002_第2版\\schemas\\records.schema.json",
+      "sha256": "21edffb72f046e3fa1304426a3e7b23960675893db0fa9af41dd1a04df025dde"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\manifest.json",
+      "sha256": "ec8961eec6ebcaee2a5bcc6ec7269b49ed7eebdaeb4ead4b4473f15d74a17ec9"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\模块说明.md",
+      "sha256": "31276ed5f72ab5b5b8a0e908f7bf8463f9ae80b8e258c792e8e60a9ed83afcd6"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\tools\\acquisition.py",
+      "sha256": "4e55d1245a1a4e74fec1140e91f3ff27f7d78dc55da07d46ec54b2998e4e5321"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\tools\\cnki.py",
+      "sha256": "90d3d8ec35a64eb6282bfe885a2830bcdfb2a33c20dc896faf55be31920dff99"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\tools\\collect.py",
+      "sha256": "c7512e7868ec272981cd4d95a35fdc45af11e4323ef42facbdc9da00ec93c09a"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\tools\\collect_common.py",
+      "sha256": "8c752845fe96c60ebc7309fa618433dbabe306e05c617d922e346aacf63b0645"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\11_文献采集适配\\v003_第3版\\tools\\context_web.py",
+      "sha256": "98e5285465b99f92a193e81394008794b71f4f3a007cebafc00ed0d6c9ecbce2"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\单稿全流程_20261119_attempt001\\05标注.json",
+      "sha256": "8f99b400eb1a6789bd3de97ce0e411f9cf82f17a3e2469abc52f5806971923bb"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\00_项目控制\\v002_第2版\\runs\\cgss23_edu_internet_20261118\\stage_04\\attempt_008\\stage_manifest.json",
+      "sha256": "b1e05b74d8133f1b319cf382f4560b855f97846207ca96254f8a103d73399a6f"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\question_library.json",
+      "sha256": "ba21fcf2b9708cbb33342ec6fd8059897dbf7990045339fcdc6bc64285d542ea"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\inventory.json",
+      "sha256": "b71c3a2aa74886d9024b7f4ca7fb5ab3b71493ba94dfe832038a0c35e716ad25"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\scan_manifest.json",
+      "sha256": "370e4fd8382a09f6ee9e162fd66a94bf9b3151a4d9cd20084c566e7923c1bac8"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\范例审读.json",
+      "sha256": "ef4925c5a7de889248112e71d8ce05b3d76753b7babd3c1555f06fd79b41aaae"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\逐篇卡来源锁.json",
+      "sha256": "130eae2e8c9da073e2dce24a8b306116b0d1ece6f10d1ac8f9173ba296049ae1"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\全量来源.json",
+      "sha256": "1ecb6f2aaeaf84be9d23f36a0c5b8bbbe4dafd2b66b6f8f59701182f85dbfd53"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\01_社会.json",
+      "sha256": "c2afe65f36360b781778e3ef3182ee198b94e452a9a99371c3365f70c60f339e"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\02_中国青年研究_01.json",
+      "sha256": "7ecbbdf9cf9b920178e63a9ab6280de78d92b76e490be2ba24f25ac93b59cc25"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\03_中国青年研究_02.json",
+      "sha256": "0c9460468a3dd74c8ccc9116f1524c84740f936b05c8c3befc9042dc79fe43a7"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\04_社会学研究_官网补齐.json",
+      "sha256": "d3325bb1f943a578d6eff2fd2df8ce2c5f98510df2ba0b9c5bfbd6d906eb47fb"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\05_探索与争鸣_01.json",
+      "sha256": "6cc0eaeda08f1ecf1bf03ed483d3e79b55ae8daa2c05429fbd21abd12ece5d4b"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\06_探索与争鸣_02.json",
+      "sha256": "fe18dfe01b9f24ba4f4b667aa9896d4062c10785d89d2c40ac01a046ddfa9b89"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\07_社会学研究_01.json",
+      "sha256": "d24bc83e5bddf0ac0f8d775fba593a095b2bac92980b0f5a67a99c469d0bd25b"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\08_社会学研究_02.json",
+      "sha256": "0af7fd442d2bdf997f97b8a234631e4d7ca690cdccf38e202f140f6b77e18dce"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\09_社会学研究_03.json",
+      "sha256": "3470a024fe6987e4fae210f452583306038960113a884466548c81badd58d282"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\10_社会学研究_04.json",
+      "sha256": "a5902c8ea383f8f2bda21e81d860745b0bd73091eb98368b69903e1a8a6433dc"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\11_社会学研究_05.json",
+      "sha256": "e3a8cf1e4002b560db6e2b92a0335740bd3fa82adf9d9e20bc055e4d11f3a8c5"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\12_中国社会科学_01.json",
+      "sha256": "498f5c11d3247980d49b224bb8ba7137ec1d956431b107515e6aed9a7a013639"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\13_中国社会科学_02.json",
+      "sha256": "986caa3ff080b556e17523a60c896d3b86111b2e6869b9c41437ad19371bace1"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\审读笔记\\14_中国社会科学_03.json",
+      "sha256": "c07e735157695300caaa78e4dbead59b85206876b8a1cb82ccd72ef413e6f537"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\逐篇选题卡.json",
+      "sha256": "1a03a2bc139e9abf08adb1bec34d88bbda2432ef117f1756c44cd3aacf486df2"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\skills\\social-science-topic-selection\\SKILL.md",
+      "sha256": "31bba5913510a1392c0492cecc2a10c3ff86ba0eaade355fb2ef8a035fa23fae"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\skills\\social-science-topic-selection\\references\\发问与意义.md",
+      "sha256": "3e5716409d78fa297321d9b7b591c750b0b2e22d33127183370cb75465090a18"
+    }
+  ],
+  "operations": [
+    "import_and_archive",
+    "reasoning_tasks",
+    "compile_reviewed_records",
+    "validate",
+    "export"
+  ],
+  "question_library": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v005_第5版\\outputs\\五刊提问资源_20261118_attempt002\\question_library.json",
+    "sha256": "ba21fcf2b9708cbb33342ec6fd8059897dbf7990045339fcdc6bc64285d542ea"
+  },
+  "topic_cards": {
+    "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v006_第6版\\outputs\\五刊逐篇审读_20261118_attempt001\\逐篇选题卡.json",
+    "sha256": "1a03a2bc139e9abf08adb1bec34d88bbda2432ef117f1756c44cd3aacf486df2"
+  },
+  "topic_skill": [
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\skills\\social-science-topic-selection\\SKILL.md",
+      "sha256": "31bba5913510a1392c0492cecc2a10c3ff86ba0eaade355fb2ef8a035fa23fae"
+    },
+    {
+      "path": "E:\\文章\\ai论文\\05_研究问题与假设\\v007_第7版\\skills\\social-science-topic-selection\\references\\发问与意义.md",
+      "sha256": "3e5716409d78fa297321d9b7b591c750b0b2e22d33127183370cb75465090a18"
+    }
+  ]
+}

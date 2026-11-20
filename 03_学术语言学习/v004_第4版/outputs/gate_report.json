@@ -1,0 +1,19 @@
+{
+  "gate": "G3",
+  "status": "needs_review",
+  "passed": false,
+  "checked_at": "2026-11-15T14:13:56.310479+08:00",
+  "style_study_status": "source_based_style_observations_and_original_practice_built",
+  "counts": {
+    "corpus_papers": 20,
+    "reviewed_passages": 40,
+    "style_patterns": 15,
+    "sentence_exercises": 15,
+    "paragraph_exercises": 5
+  },
+  "upstream_gate": {
+    "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+    "sha256": "3a871e5aa6ac4923f0988242d396047d3d97b2bc693aaa1d56fa1b6db66e6799"
+  },
+  "note": "用户澄清已落实为表达风格学习；不将定向复读计为20篇连续全文精读认证。"
+}

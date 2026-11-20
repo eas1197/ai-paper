@@ -1,0 +1,9 @@
+{
+  "journal_id": "J080",
+  "source_url": "https://www.reform.net.cn/web/article/1538862773490913280/web/content_1538862773490913280.html",
+  "retrieved_at": "2026-11-16T15:03:11.796274+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "ConnectionError",
+  "reason": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+}

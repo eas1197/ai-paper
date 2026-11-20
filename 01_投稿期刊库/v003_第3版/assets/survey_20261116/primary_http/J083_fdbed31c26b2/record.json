@@ -1,0 +1,18 @@
+{
+  "journal_id": "J083",
+  "source_url": "https://sky.zj.gov.cn/tsqk_show?id=18565",
+  "retrieved_at": "2026-11-16T15:03:12.399862+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://sky.zj.gov.cn/tsqk_show?id=18565",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J083_fdbed31c26b2/text.txt",
+  "sha256": "0bdd2642ee95e54b932514dd7ec6e40813a069cf6695281f9c9b620f16fb56d4",
+  "original_path": "primary_http/J083_fdbed31c26b2/response.html",
+  "original_sha256": "814289ef1714483e7ec404c3be2be9db44e267916153b408b3ade77f21d7cea5",
+  "line_count": 201,
+  "title": "《浙江学刊》征稿启事",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

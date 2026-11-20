@@ -1,0 +1,38 @@
+{
+  "QUESTION-1": {
+    "task": "question",
+    "condition": "topic"
+  },
+  "QUESTION-2": {
+    "task": "question",
+    "condition": "manual"
+  },
+  "QUESTION-3": {
+    "task": "question",
+    "condition": "function"
+  },
+  "HYPOTHESIS-1": {
+    "task": "hypothesis",
+    "condition": "function"
+  },
+  "HYPOTHESIS-2": {
+    "task": "hypothesis",
+    "condition": "manual"
+  },
+  "HYPOTHESIS-3": {
+    "task": "hypothesis",
+    "condition": "topic"
+  },
+  "RESULTS-1": {
+    "task": "results",
+    "condition": "topic"
+  },
+  "RESULTS-2": {
+    "task": "results",
+    "condition": "function"
+  },
+  "RESULTS-3": {
+    "task": "results",
+    "condition": "manual"
+  }
+}

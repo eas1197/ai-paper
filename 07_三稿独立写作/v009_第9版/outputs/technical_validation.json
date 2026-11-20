@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "scope": "technical_only",
+  "checks": {
+    "module_unittest": {
+      "tests": 5,
+      "status": "passed"
+    },
+    "framework_unittest": {
+      "tests": 9,
+      "status": "passed"
+    },
+    "framework_validator": {
+      "status": "passed",
+      "database_tables": 33
+    },
+    "pilot_rebuild": {
+      "status": "passed",
+      "articles": 6,
+      "heldout": 4,
+      "examples": 21
+    },
+    "paragraph_numeric_and_overlap": {
+      "status": "passed",
+      "paragraphs": 9
+    },
+    "existing_research_gate": {
+      "run_id": "cgss23_digital_ties_20261118",
+      "status": "needs_review",
+      "pack_id": null
+    }
+  },
+  "formal_gate_approval": false
+}

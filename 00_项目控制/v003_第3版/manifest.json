@@ -1,0 +1,22 @@
+{
+  "module_id": "00",
+  "name": "项目控制",
+  "version": 3,
+  "version_label": "第3版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [],
+  "expected_artifacts": [
+    "run_manifest.json",
+    "gate_report.json"
+  ],
+  "folders": [
+    "tools",
+    "tests",
+    "runs",
+    "规范历史",
+    "outputs"
+  ],
+  "execution_scope": "support"
+}

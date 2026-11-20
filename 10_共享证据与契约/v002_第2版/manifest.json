@@ -1,0 +1,24 @@
+{
+  "module_id": "10",
+  "name": "共享证据与契约",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [],
+  "expected_artifacts": [
+    "knowledge.sql",
+    "records.schema.json",
+    "数据契约.md",
+    "migrations/v1_to_v2.sql"
+  ],
+  "folders": [
+    "schemas",
+    "templates",
+    "evidence_store",
+    "migrations",
+    "outputs"
+  ],
+  "storage_schema_version": 2
+}

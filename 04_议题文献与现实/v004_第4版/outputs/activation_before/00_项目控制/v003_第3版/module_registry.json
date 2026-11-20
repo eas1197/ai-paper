@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-11-14",
+  "modules": [
+    {
+      "module_id": "00",
+      "path": "00_项目控制/v003_第3版",
+      "version": 3,
+      "depends_on": [],
+      "optional": false,
+      "execution_scope": "support"
+    },
+    {
+      "module_id": "01",
+      "path": "01_投稿期刊库/v002_第2版",
+      "version": 2,
+      "depends_on": [
+        "10",
+        "11"
+      ],
+      "optional": false,
+      "execution_scope": "shared_resource"
+    },
+    {
+      "module_id": "02",
+      "path": "02_文章结构学习/v005_第5版",
+      "version": 5,
+      "depends_on": [
+        "10",
+        "11"
+      ],
+      "optional": false,
+      "execution_scope": "shared_resource"
+    },
+    {
+      "module_id": "03",
+      "path": "03_学术语言学习/v004_第4版",
+      "version": 4,
+      "depends_on": [
+        "02",
+        "10"
+      ],
+      "optional": false,
+      "execution_scope": "shared_resource"
+    },
+    {
+      "module_id": "04",
+      "path": "04_议题文献与现实/v003_第3版",
+      "version": 3,
+      "depends_on": [
+        "10",
+        "11"
+      ],
+      "optional": false,
+      "execution_scope": "research"
+    },
+    {
+      "module_id": "05",
+      "path": "05_研究问题与假设/v002_第2版",
+      "version": 2,
+      "depends_on": [
+        "04"
+      ],
+      "optional": false,
+      "execution_scope": "research"
+    },
+    {
+      "module_id": "06",
+      "path": "06_数据方法与分析/v001_第1版",
+      "version": 1,
+      "depends_on": [
+        "05",
+        "10"
+      ],
+      "optional": false,
+      "execution_scope": "research"
+    },
+    {
+      "module_id": "07",
+      "path": "07_三稿独立写作/v005_第5版",
+      "version": 5,
+      "depends_on": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "optional": false,
+      "execution_scope": "research"
+    },
+    {
+      "module_id": "08",
+      "path": "08_检查评审与筛选/v002_第2版",
+      "version": 2,
+      "depends_on": [
+        "07"
+      ],
+      "optional": true,
+      "execution_scope": "research",
+      "enabled_when": {
+        "writing.mode": "three_plus_review"
+      }
+    },
+    {
+      "module_id": "09",
+      "path": "09_可选投稿适配/v002_第2版",
+      "version": 2,
+      "depends_on": [
+        "01",
+        "07"
+      ],
+      "optional": true,
+      "execution_scope": "research",
+      "conditional_dependencies": {
+        "three_plus_review": [
+          "08"
+        ]
+      }
+    },
+    {
+      "module_id": "10",
+      "path": "10_共享证据与契约/v002_第2版",
+      "version": 2,
+      "depends_on": [],
+      "optional": false,
+      "execution_scope": "support"
+    },
+    {
+      "module_id": "11",
+      "path": "11_文献采集适配/v001_第1版",
+      "version": 1,
+      "depends_on": [
+        "10"
+      ],
+      "optional": false,
+      "execution_scope": "support"
+    },
+    {
+      "module_id": "12",
+      "path": "12_参考项目与迁移/v002_第2版",
+      "version": 2,
+      "depends_on": [],
+      "optional": false,
+      "execution_scope": "support"
+    }
+  ],
+  "framework_version": 2
+}

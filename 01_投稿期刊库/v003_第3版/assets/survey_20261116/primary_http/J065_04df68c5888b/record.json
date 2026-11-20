@@ -1,0 +1,20 @@
+{
+  "journal_id": "J065",
+  "source_url": "https://xxys.cbpt.cnki.net/portal/journal/portal/client/news/xxys_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:05:09.495242+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://xxys.cbpt.cnki.net/portal/journal/portal/client/news/xxys_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J065_04df68c5888b/text.txt",
+  "sha256": "876d35112175e1fb3ce04453304ab7bc83ee14c8ff50186d5ce21f817da861e4",
+  "original_path": "primary_http/J065_04df68c5888b/response.html",
+  "original_sha256": "13ebec4a5953b5d5cfbec28eea4c2bbae8e23f2b07d8525618aa4db83a4bd587",
+  "line_count": 45,
+  "title": "学习与实践",
+  "guideline_links": [
+    "https://xxys.cbpt.cnki.net/portal/journal/portal/client/news/xxys_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

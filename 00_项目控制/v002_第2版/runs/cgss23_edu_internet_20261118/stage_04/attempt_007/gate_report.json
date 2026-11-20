@@ -1,0 +1,39 @@
+{
+  "gate": "G4",
+  "status": "needs_review",
+  "errors": [
+    "议题尚未经过候选比较并暂定",
+    "有效摘要1/100；缺口必须保留，说明不自动豁免目标",
+    "议题入选文献0/25",
+    "核心选择多样性:classic: 缺少 assessment",
+    "核心选择多样性:classic: 缺少 search_scope",
+    "核心选择多样性:recent: 缺少 assessment",
+    "核心选择多样性:recent: 缺少 search_scope",
+    "核心选择多样性:counterevidence: 缺少 assessment",
+    "核心选择多样性:counterevidence: 缺少 search_scope",
+    "zotero_9WUWPWN2: 缺少关系抽取或明确不可抽取原因",
+    "主要路径须2—4条；合理偏离需说明",
+    "国家政策/近三年新闻材料尚不齐全",
+    "需要研究复核：quality_review须绑定content_sha256，填写审查人、日期和判断依据"
+  ],
+  "warnings": [],
+  "content_sha256": "0494821cbaff61b78bc6482a6e686653ddd60d70b0b04b0f77817b902f34c61b",
+  "business_quality_automatic": false,
+  "counts": {
+    "metadata": 1,
+    "source_eligible": 1,
+    "abstracts_read": 1,
+    "core_selected": 0,
+    "core_read": 0,
+    "views": 0
+  },
+  "source_eligible_paper_ids": [
+    "zotero_9WUWPWN2"
+  ],
+  "targets": {
+    "abstracts": 100,
+    "core": 25
+  },
+  "missing_core_fulltexts": [],
+  "valid_fulltext_ids": []
+}

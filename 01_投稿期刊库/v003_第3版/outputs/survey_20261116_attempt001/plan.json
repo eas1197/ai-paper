@@ -1,0 +1,22 @@
+{
+  "stage_id": "01",
+  "module_version": 3,
+  "inputs": {
+    "bundle": "01_投稿期刊库/v003_第3版/assets/survey_20261116/survey_bundle.json",
+    "output": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001",
+    "as_of": "2026-11-16"
+  },
+  "config": {},
+  "operations": [
+    "archive_sources",
+    "field_evidence_check",
+    "deduplicate",
+    "quota_check",
+    "publish_if_passed"
+  ],
+  "required_editions": {
+    "CSSCI": "2025-2026",
+    "PKU": "2023"
+  },
+  "as_of": "2026-11-16"
+}

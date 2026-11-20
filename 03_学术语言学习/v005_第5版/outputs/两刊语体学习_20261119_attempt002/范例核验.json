@@ -1,0 +1,108 @@
+{
+  "checked_at": "2026-11-19",
+  "readable_index": true,
+  "formal_gate": "needs_review",
+  "original_pdf_hashes": 20,
+  "original_anchors": 33,
+  "counts": {
+    "question": 3,
+    "literature": 3,
+    "hypothesis": 3,
+    "design": 9,
+    "results": 9,
+    "discussion": 6
+  },
+  "sources": {
+    "zotero_V3CA3AZW": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_V3CA3AZW.json",
+      "sha256": "ec5dbd2ed73c4a9fa8ceb77294dc58f18ca1fa487c84ed314d50cec6f505a5ae"
+    },
+    "zotero_3G222LKC": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_3G222LKC.json",
+      "sha256": "ca5fc2a850daf442e26bc1b95b1095bf9d9316e8ab5f42e0ba551afbab323036"
+    },
+    "zotero_SCCKUUS9": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_SCCKUUS9.json",
+      "sha256": "a056e1bf5e168e7974da6ff1498f769c4bc7d09f8a02d3a5eb27b604276aa4bb"
+    },
+    "zotero_MK385948": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_MK385948.json",
+      "sha256": "994757ff1a41e0af4d5d1012e9afce1cc7f707199755192c36340dc222004758"
+    },
+    "zotero_89UP6KH7": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_89UP6KH7.json",
+      "sha256": "600286182e31c15687106c2e2bd30ae437eb59b7af7175b3c42e6c85c3d6eadc"
+    },
+    "zotero_Y8WNZ3AN": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_Y8WNZ3AN.json",
+      "sha256": "c06f069542aa49dbc934d70d36a16e0c54937f73061c988fc896fcaa2b60497f"
+    },
+    "zotero_FQ7RQ5NC": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_FQ7RQ5NC.json",
+      "sha256": "da6e2a4039ee8dcf251827fcc80c0354749b433d069e97706ef606f3d6fbc9b5"
+    },
+    "zotero_6V7LJIWN": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_6V7LJIWN.json",
+      "sha256": "0a62cab20f9bf1827c1ebf669f7366a9eaa2f040cc8cc424921d30cc3100e4bd"
+    },
+    "zotero_NU3YY8ZA": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_NU3YY8ZA.json",
+      "sha256": "c8197c59fa0b8cdddfbf7ef4c2b475dd0f1615399bf0646369cfd2d449333ebd"
+    },
+    "zotero_HLMCFMEQ": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_HLMCFMEQ.json",
+      "sha256": "2d538c618e724e181c421a130386bf4b3c7824192ebfbf737140ed2e0946bd03"
+    },
+    "zotero_39ERQM27": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_39ERQM27.json",
+      "sha256": "8c427ad8b2818d48f6e9b9480912b8ad3f4bad8a47f83b82fa344463f1219f89"
+    },
+    "zotero_2SKTAPLF": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_2SKTAPLF.json",
+      "sha256": "5723f3e675fd4b18879332bc250ef907fc92be3fdcb17f92ea07300927738d95"
+    },
+    "zotero_J38BV4A5": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_J38BV4A5.json",
+      "sha256": "f7f3e5f15b90a4a0862329df81d0a0c3b25fc63e1570a5cdf6b3763e608b2211"
+    },
+    "zotero_J5XDE43I": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_J5XDE43I.json",
+      "sha256": "9932f6ff8299d478228c00a532dfff47f684d12e1701f12ee9854ceefd06394d"
+    },
+    "zotero_Y32DRMKW": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_Y32DRMKW.json",
+      "sha256": "fb76a5f82192984416d34a09dd9a19c724f1f5ef2bae66a00bd19e0e9cc81623"
+    },
+    "zotero_ZVEEAGSX": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_ZVEEAGSX.json",
+      "sha256": "a5038d58ef0f19951482d242673c99fec2d0d075cecd364ec8bc1c1ce4338f52"
+    },
+    "zotero_DD4I5QA4": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_DD4I5QA4.json",
+      "sha256": "ed4875d0992d3625218ed47e598cec8be7099d0d01a1f95f8f04e329eaf2889b"
+    },
+    "zotero_GUQJU4JA": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_GUQJU4JA.json",
+      "sha256": "955b4c557266710dc337cba06bf27bc13a2c5db0bd3afd9df58dd91f5c772a00"
+    },
+    "zotero_IFYBIRP2": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_IFYBIRP2.json",
+      "sha256": "4fa52b31579615b4760046ba2a99c65b5faac6b122ba7a08a308a91fd3e15545"
+    },
+    "zotero_NUR2L8DP": {
+      "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261118_attempt001/work/阅读输入/zotero_NUR2L8DP.json",
+      "sha256": "a635723f8e6bcad9aef9d6c5a42c2c8879a38d6cd078c94b6bf891ca971e66ce"
+    }
+  },
+  "authored_source": {
+    "path": "原文定位范例.tsv",
+    "sha256": "275e52f92331de61e7e15452574281836e390a67e935685411a17ebbbad4912a"
+  },
+  "router_trials": 6,
+  "preferred_example_first": {
+    "design": "E18",
+    "results": "E08",
+    "discussion": "E10"
+  },
+  "formal_entry_rejects_pilot": true
+}

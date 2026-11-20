@@ -1,0 +1,57 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "RQ_EDU_FREQUENCY",
+      "question": "城乡成年人中，教育程度是否与更频繁上网有关？",
+      "status": "rejected"
+    }
+  ],
+  "significance_reviews": [
+    {
+      "candidate_id": "RQ_EDU_FREQUENCY",
+      "decision": "reject",
+      "reviewer": "Codex",
+      "reviewed_at": "2026-11-18",
+      "reason": "结局将多种用途混在同一频率指标，无法定位机会差异发生在接入、任务能力还是求助环节。不同答案缺少可区分理论和明确决策。",
+      "dimensions": {
+        "reality": {
+          "status": "insufficient",
+          "assessment": "有频率差异也不能说明哪些人遇到了什么具体困难，需要同类实际任务和明确人群。"
+        },
+        "theory": {
+          "status": "insufficient",
+          "assessment": "资源门槛、技能积累和用途需求可以同时产生相同的教育梯度，单一频率结果不足以区分。"
+        },
+        "practice": {
+          "status": "insufficient",
+          "assessment": "服务机构无法仅据频率决定优先改善接入、引导独立办理还是保留线下协助。"
+        },
+        "policy": {
+          "status": "insufficient",
+          "assessment": "当前题干无具体公共服务环节，需另核目标政策、负责机构和行动选项。"
+        }
+      },
+      "answer_use": {
+        "simpler_question": "各学历组的上网频率分布怎样？",
+        "added_information": "现有调整关联增加对样本构成的描述，未指出哪项任务或制度安排发生差异。",
+        "expected_answer": "高学历组更频繁上网",
+        "if_expected": "记录梯度，不能直接选择干预环节。",
+        "competing_answer": "梯度方向相反",
+        "if_competing": "核对年龄结构和用途构成，当前指标仍不足以决定行动。",
+        "if_negligible": "若区间排除有实务意义的频率差异，可停止将学历梯度作为这一频率结果的切入点。",
+        "if_inconclusive": "若区间仍覆盖重要差异，先定位测量和精度缺口，暂缓解释。",
+        "evidence_needed": "同一具体任务的接入条件、独立完成、求助、失败或放弃，以及可比较的人群和情境。"
+      },
+      "example_transfers": [
+        {
+          "paper_id": "zotero_L6BXZQIS",
+          "borrowed_move": "把泛化的个人差异移到直接分配机会的环节。",
+          "adaptation": "进一步查服务环节是否有能区分接入、操作和协助的指标，并核对机构可改变的条件。",
+          "scope_limit": "劳动力招聘范例只用于学习怎么找决策点，研究对象、数据与实证结论须独立核实。"
+        }
+      ]
+    }
+  ],
+  "analysis_phase": "pre_analysis",
+  "freeze_requested": false
+}

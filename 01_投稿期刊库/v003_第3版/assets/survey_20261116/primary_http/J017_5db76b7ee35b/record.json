@@ -1,0 +1,20 @@
+{
+  "journal_id": "J017",
+  "source_url": "https://iaecn.cbpt.cnki.net/portal/journal/portal/client/news/a18ca4953bf914fa0eb5efe4ef56743f",
+  "retrieved_at": "2026-11-16T15:03:44.825558+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://iaecn.cbpt.cnki.net/portal/journal/portal/client/news/a18ca4953bf914fa0eb5efe4ef56743f",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J017_5db76b7ee35b/text.txt",
+  "sha256": "015d434ebc302ff920e7e1c8960392b3993b642f8c4b328627313dd1467bd0e5",
+  "original_path": "primary_http/J017_5db76b7ee35b/response.html",
+  "original_sha256": "96e5e1f0e8ace703a25b8ac8111e5948cd2285c25a5f40c522f2ee58126c51bd",
+  "line_count": 104,
+  "title": "农业经济问题杂志社",
+  "guideline_links": [
+    "https://iaecn.cbpt.cnki.net/portal/journal/portal/client/news/a18ca4953bf914fa0eb5efe4ef56743f"
+  ],
+  "review_status": "awaiting_source_readback"
+}

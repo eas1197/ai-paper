@@ -1,0 +1,21 @@
+{
+  "drafts": {
+    "A": {
+      "pack_id": null,
+      "manuscript": "A.md",
+      "authorship": null,
+      "context_id": null,
+      "model": null,
+      "prompt_version": null,
+      "other_drafts_accessed": false,
+      "length_profile": "standard",
+      "structure": [],
+      "references": [],
+      "claims": [],
+      "checks": {},
+      "review": null,
+      "paragraph_plan_id": null,
+      "paragraph_review": {}
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "verified_on": "2026-11-19",
+  "framework": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过表示框架校验有效，研究关卡以对应报告为准。"
+  },
+  "active_module_versions": {
+    "00": 4,
+    "01": 3,
+    "02": 5,
+    "03": 5,
+    "04": 7,
+    "05": 6,
+    "06": 3,
+    "07": 11,
+    "08": 2,
+    "09": 3,
+    "10": 2,
+    "11": 3,
+    "12": 2
+  },
+  "requirements_checked": 21,
+  "management_links_checked": 79,
+  "framework_tests_passed": 10,
+  "prior_business_config_and_registry_match": true,
+  "resource_checkpoints": [
+    {
+      "module_id": "01",
+      "snapshot_manifest_path": "01_投稿期刊库/v003_第3版/outputs/survey_20261116_attempt001/resource_snapshot.json",
+      "resource_snapshot_id": "survey_20261116_attempt001",
+      "status": "needs_review",
+      "manifest_sha256": "c5f10c9e831b8151fc5954a2d29fbef7e1cecabfbb5f60353288e2322b300d93"
+    },
+    {
+      "module_id": "02",
+      "snapshot_manifest_path": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+      "resource_snapshot_id": "structure_candidate_r4_architecture_2_1",
+      "status": "needs_review",
+      "manifest_sha256": "01cd55a152243ea462bfd05351580e240bb2733230e05daf609e8a644a8b922e"
+    },
+    {
+      "module_id": "03",
+      "snapshot_manifest_path": "03_学术语言学习/v005_第5版/outputs/resource_snapshot.json",
+      "resource_snapshot_id": "language_style_r3_paragraph_units_candidate",
+      "status": "needs_review",
+      "manifest_sha256": "e45b3ea7c3fb40ead3686fd4e03ca2f5eafd165102f5ba2dda906e5709f02483"
+    }
+  ],
+  "existing_run_checkpoints": [
+    {
+      "run_id": "ambiguity_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/ambiguity_20261118/run_manifest.json",
+      "manifest_sha256": "9fb02645ab325381f085619b623965f3beec6f965628afd8bb21af47311bec7a",
+      "recorded_run_status": "planned",
+      "writing_mode": "single",
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_04/attempt_002",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_04/attempt_002/gate_report.json",
+          "gate_sha256": "216249e2def591629f7de4cc8ada6e8f8271e3fcdcf0dcd8d27ebabf3d9f846d",
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_05/attempt_002",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_05/attempt_002/gate_report.json",
+          "gate_sha256": "dd7e51e9643cdefcaa81e5f1327c1c31488a438846e1a11d3cc9efad53689a23",
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "06",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_06/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "07",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/ambiguity_20261118/stage_07/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        }
+      ]
+    },
+    {
+      "run_id": "cfps_edu_gap_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/run_manifest.json",
+      "manifest_sha256": "8e2990e5639dad77b581b4fbc1e6658463b2f1b74dbd57c061d0b87f3a706cc3",
+      "recorded_run_status": "planned",
+      "writing_mode": "single",
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/stage_04/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/stage_05/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "06",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/stage_06/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "07",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cfps_edu_gap_20261118/stage_07/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        }
+      ]
+    },
+    {
+      "run_id": "cgss2023_edu_gap_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/run_manifest.json",
+      "manifest_sha256": "031b02d63e44e545d81e05389ce72a05af37d9eee5e1869e69a7326ebd58a977",
+      "recorded_run_status": "planned",
+      "writing_mode": "single",
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_04/attempt_003",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_04/attempt_003/gate_report.json",
+          "gate_sha256": "e5594780caff4ef41a287993ba0d73e70e090ffdbe3a3b78852c05827c2ed21d",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_04/attempt_002/gate_report.json"
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_05/attempt_003",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_05/attempt_003/gate_report.json",
+          "gate_sha256": "345b2872feafa631ce43d9893d75669c2c0af7720808ea622e7e396e60364be8",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_05/attempt_002/gate_report.json"
+        },
+        {
+          "stage_id": "06",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_06/attempt_002",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_06/attempt_002/gate_report.json",
+          "gate_sha256": "c2468eec4d0d5ae87ec708d311ff89abf5f17d01266ce8ec94cd246f48b2c798",
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "07",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss2023_edu_gap_20261118/stage_07/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        }
+      ]
+    },
+    {
+      "run_id": "cgss23_digital_ties_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/run_manifest.json",
+      "manifest_sha256": "4e67be93d94141d5fe469251dae11ce822546940f4378e2f5c27c0db127fa71c",
+      "recorded_run_status": "planned",
+      "writing_mode": "single",
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_04/attempt_003",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_04/attempt_003/gate_report.json",
+          "gate_sha256": "f367229668474bfb262acb4fe243c5d2f930e64cf20fe4a1df317d659dc5cf77",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_04/attempt_002/gate_report.json"
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_05/attempt_003",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_05/attempt_003/gate_report.json",
+          "gate_sha256": "ca0b1270242427c2588d93a5bcbcfd10c3002784078a60db04e0269aba786e3a",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_05/attempt_002/gate_report.json"
+        },
+        {
+          "stage_id": "06",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_06/attempt_003",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_06/attempt_003/gate_report.json",
+          "gate_sha256": "5ae757813a80210b493ef650273fa4e679d4e0e8d8be7ac66a8224a1294ec851",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_06/attempt_002/gate_report.json"
+        },
+        {
+          "stage_id": "07",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/stage_07/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        }
+      ]
+    },
+    {
+      "run_id": "cgss23_edu_internet_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/run_manifest.json",
+      "manifest_sha256": "a18f9b06c7ee6817825d459d053fa5020d482e5053ae48b5f6f118b01d0a60e8",
+      "recorded_run_status": "planned",
+      "writing_mode": "single",
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_04/attempt_007",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_04/attempt_007/gate_report.json",
+          "gate_sha256": "58cfa384d7c0948bfb208275c8682ba6e67a7becc47cb56f986b39d0639f5f2a",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_04/attempt_006/gate_report.json"
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_05/attempt_007",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_05/attempt_007/gate_report.json",
+          "gate_sha256": "863412085b33be4f3f14595d57c96503483a49e399e039fa0123b2e1b2dd9620",
+          "previous_gate_report": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_05/attempt_006/gate_report.json"
+        },
+        {
+          "stage_id": "06",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_06/attempt_002",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_06/attempt_002/gate_report.json",
+          "gate_sha256": "5b7ff56ddb21404bdacd245a8c08e4fe490835a04477bc7b3adc9e35788c548e",
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "07",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_07/attempt_001",
+          "recorded_gate_status": null,
+          "gate_report": null,
+          "gate_sha256": null,
+          "previous_gate_report": null
+        }
+      ]
+    },
+    {
+      "run_id": "topic_review_edu_20261118",
+      "manifest": "00_项目控制/v002_第2版/runs/topic_review_edu_20261118/run_manifest.json",
+      "manifest_sha256": "5d352043cd7c97b011a45deb547d6962b0e98f8b1365c807bc7e405e4045715c",
+      "recorded_run_status": null,
+      "writing_mode": null,
+      "stages": [
+        {
+          "stage_id": "04",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/topic_review_edu_20261118/stage_04/attempt_001",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/topic_review_edu_20261118/stage_04/attempt_001/gate_report.json",
+          "gate_sha256": "f3c6f7c31ef5d02ad8350fe07f2fbf34d4f9fcaa6b113e2345a66d593e46175a",
+          "previous_gate_report": null
+        },
+        {
+          "stage_id": "05",
+          "latest_attempt": "00_项目控制/v002_第2版/runs/topic_review_edu_20261118/stage_05/attempt_001",
+          "recorded_gate_status": "needs_review",
+          "gate_report": "00_项目控制/v002_第2版/runs/topic_review_edu_20261118/stage_05/attempt_001/gate_report.json",
+          "gate_sha256": "a95d1852ea190139e0804073a3f1e8e030d93e9641cd6284c6c89973fc2ba174",
+          "previous_gate_report": null
+        }
+      ]
+    }
+  ],
+  "project_quota_recording_enabled": false
+}

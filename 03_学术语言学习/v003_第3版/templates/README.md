@@ -1,0 +1,5 @@
+# 模板与兼容
+
+CSV保留第2版模板字段，新增字段放在原字段之后。实际资源位于outputs/资源建设_attempt001；模板空表不能计业务完成。
+
+language_audit.csv用于后续稿件逐句审查。实际使用时每个事实句须有claim_id，每个数字有result_id，draft_id必须指向真实稿件；本版输出审查表的LANGUAGE_DEMO_NOT_RESEARCH_DRAFT仅是原创示例演示。

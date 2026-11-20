@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "run_id": null,
+  "question": null,
+  "hypothesis_ids": [],
+  "unit": null,
+  "estimand": null,
+  "evidence_requirements": null,
+  "primary_outcomes": [],
+  "primary_models": [],
+  "primary_method_rationale": null,
+  "dag": null,
+  "control_rationale": [],
+  "sample_rules": [],
+  "exclusions": [],
+  "missing_policy": null,
+  "survey_design": {
+    "weights": null,
+    "strata": null,
+    "psu": null
+  },
+  "timing": null,
+  "diagnostics": [],
+  "robustness": [],
+  "multiple_testing_policy": null,
+  "power_and_precision": null,
+  "seed": 20261114,
+  "frozen": false,
+  "review_status": "pending",
+  "deviations": []
+}

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J018",
+  "source_url": "https://qks.hzau.edu.cn/qkdh/xbskb.htm",
+  "retrieved_at": "2026-11-16T15:02:39.456415+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://qks.hzau.edu.cn/qkdh/xbskb.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J018_d973097b8e21/text.txt",
+  "sha256": "d1692026b62b072cfddb760c4cca0801329cc1b0367296eb9cc350eedda3457d",
+  "original_path": "primary_http/J018_d973097b8e21/response.html",
+  "original_sha256": "16e1a33e5c72edcc4f7738c1c1561f8c43f25b45b086932cd0e033be846699c8",
+  "line_count": 111,
+  "title": "学报社科版-科发院期刊中心",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

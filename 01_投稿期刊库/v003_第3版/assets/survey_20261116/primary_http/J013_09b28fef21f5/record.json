@@ -1,0 +1,21 @@
+{
+  "journal_id": "J013",
+  "source_url": "https://csss.whu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1461",
+  "retrieved_at": "2026-11-16T15:04:52.911329+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://csss.whu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1461",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J013_09b28fef21f5/text.txt",
+  "sha256": "30aa738fdb937ee8aed098a5b78a6c1bb1e5bf3c6ce6394edf7ee18a7af8a980",
+  "original_path": "primary_http/J013_09b28fef21f5/response.html",
+  "original_sha256": "593e667611dd8167d4b9d79f0f2967612c4b0cb3d912a46b584f47bd2b06dc88",
+  "line_count": 96,
+  "title": "《社会保障研究》征稿启事-武汉大学社会保障研究中心",
+  "guideline_links": [
+    "https://csss.whu.edu.cn/info/1461/2191.htm",
+    "https://csss.whu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1461"
+  ],
+  "review_status": "awaiting_source_readback"
+}

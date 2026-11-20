@@ -1,0 +1,17 @@
+requirement_id,user_requirement,module,acceptance,current_status
+R01,一模块一文件夹并逐版保留,00,注册表加版本目录,framework_ready
+R02,全项目基础要求与架构,00,根规范及架构,framework_ready
+R03,50CSSCI加50北核及逐刊完整信息,01,100个不同期刊逐项核验,planned
+R04,至少20篇两刊完整定量论文结构学习,02,全文逐节逐段摘要逐句,planned
+R05,从同一语料学习语言并给原创例句,03,规则加定位加例句加前提,planned
+R06,约100摘要逻辑关系与适用范围,04,去重摘要阅读及关系图谱,planned
+R07,25权威核心全文对话引用,04,全文实读及对话矩阵,planned
+R08,热点与国家政策引入,04,事件与政策原始证据,planned
+R09,四路问题生成且同层级,05,文献对话和反证,planned
+R10,CFPS和CGSS可扩展实证,06,数据适配字典与复现分析,planned
+R11,常见方法每种2篇长期范例,06,目录全部补齐代表全文与报告规则,planned
+R12,隔离三稿共享前置结果,07,同一冻结包三份写作记录,planned
+R13,检查筛选并保留其他稿,08,硬门槛评分与全部稿件,planned
+R14,第九步可选5C5北核随机且逐刊版本,09,候选十刊顺序队列默认关闭,disabled
+R15,修改知网爬虫适配本项目,11,迁移方案与标准接口,design_ready
+R16,GitHub相关项目与改进建议,12,原始项目链接与模块映射,survey_completed

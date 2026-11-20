@@ -1,0 +1,18 @@
+{
+  "journal_id": "J006",
+  "source_url": "https://hssra.jlu.edu.cn/xsqk/rkxk.htm",
+  "retrieved_at": "2026-11-16T15:03:36.026344+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://hssra.jlu.edu.cn/xsqk/rkxk.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J006_fe17e0723b83/text.txt",
+  "sha256": "b2d8aaf47954617fc9de81d57d0cb96302f2836d345984511bdf9c03578def25",
+  "original_path": "primary_http/J006_fe17e0723b83/response.html",
+  "original_sha256": "50f7c773ebc7be074a1595bfafc6fe7d6c5fe45266b4fc5575dfef301afec407",
+  "line_count": 154,
+  "title": "人口学刊-吉林大学社会科学研究院",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

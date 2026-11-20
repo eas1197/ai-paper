@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-15T19:30:16.605619+08:00",
+  "url": "https://kns.cnki.net/kns8s/defaultresult/index",
+  "tls_validation_enabled": true,
+  "authenticated_session_used": false,
+  "real_downloads_verified": 0,
+  "chrome_version_observed": "157.0.8103.51",
+  "legacy_driver_version_observed": "143.0.7499.169",
+  "legacy_driver_used": false,
+  "status": "network_probe_failed",
+  "error_type": "SSLError",
+  "error": "HTTPSConnectionPool(host='kns.cnki.net', port=443): Max retries exceeded with url: /kns8s/defaultresult/index (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'kns.cnki.net'. (_ssl.c:1007)\")))",
+  "note": "未关闭TLS验证，未重试绕过；真实知网端到端未验收"
+}

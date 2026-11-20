@@ -1,0 +1,30 @@
+{
+  "module_id": "07",
+  "name": "三稿独立写作",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "expected_artifacts": [
+    "frozen_manifest.json",
+    "draft_manifest.json",
+    "claims.csv",
+    "manuscript.md"
+  ],
+  "folders": [
+    "templates",
+    "A稿",
+    "B稿",
+    "C稿",
+    "outputs"
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "journal_id": "J060",
+  "source_url": "https://gssh.cbpt.cnki.net/portal/journal/portal/client/news/GSSH_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:02:59.809841+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://gssh.cbpt.cnki.net/portal/journal/portal/client/news/GSSH_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J060_05b3a7619ed0/text.txt",
+  "sha256": "bfaa5afbe1f9524ce2c1b80d53c8ec5cca0702588d977d3bb6508818827054d2",
+  "original_path": "primary_http/J060_05b3a7619ed0/response.html",
+  "original_sha256": "d5b58959f955335ace3ae4ead12ed178b19597187b060b743c604aadd65770d1",
+  "line_count": 382,
+  "title": "甘肃社会科学",
+  "guideline_links": [
+    "https://gssh.cbpt.cnki.net/portal/journal/portal/client/news/GSSH_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

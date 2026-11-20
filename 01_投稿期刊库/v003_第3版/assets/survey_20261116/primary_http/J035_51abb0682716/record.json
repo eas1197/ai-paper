@@ -1,0 +1,20 @@
+{
+  "journal_id": "J035",
+  "source_url": "https://zzs.ujs.edu.cn/gxjygl/CN/column/item300.shtml",
+  "retrieved_at": "2026-11-16T15:03:54.720036+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://zzs.ujs.edu.cn/gxjygl/CN/column/item300.shtml",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J035_51abb0682716/text.txt",
+  "sha256": "56693cc54f8456df581781e85582b4fedfef0d8899ba2940df8b8da981dc9646",
+  "original_path": "primary_http/J035_51abb0682716/response.html",
+  "original_sha256": "12e6fda4e9b42994ef4e3f18955a7549d6886a209399ca7f5c87ae765c88b643",
+  "line_count": 172,
+  "title": "高校教育管理 | 征稿启事",
+  "guideline_links": [
+    "https://zzs.ujs.edu.cn/gxjygl/CN/column/column14.shtml"
+  ],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,18 @@
+{
+  "journal_id": "J054",
+  "source_url": "https://www.zjskw.gov.cn/art/2024/10/23/art_1229824658_61222.html",
+  "retrieved_at": "2026-11-16T15:05:05.637082+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.zjskw.gov.cn/art/2024/10/23/art_1229824658_61222.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J054_8630073944b3/text.txt",
+  "sha256": "59a2bf6d4c3d10e40d0daba9aee06929edec1b510dcd47be539f43dad4769dc5",
+  "original_path": "primary_http/J054_8630073944b3/response.html",
+  "original_sha256": "a09bd6f4b45a445c273d503f201447f63bd6d04f8e435d15ca585f4cb4112398",
+  "line_count": 32,
+  "title": "“中国式现代化进程中的社会学研究”征稿启事",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

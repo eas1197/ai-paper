@@ -1,0 +1,19 @@
+{
+  "CFPS2022汇总问卷.pdf": {
+    "url": "https://www.isss.pku.edu.cn/cfps/docs/20241029184355813174.pdf",
+    "archived": false,
+    "error": "SSLError"
+  },
+  "劳务派遣暂行规定.pdf": {
+    "url": "https://www.mohrss.gov.cn/xxgk2020/gzk/gz/202112/P020211229555505969637.pdf",
+    "status": 567,
+    "archived": false
+  },
+  "天津劳务派遣参保政策_中国就业网.html": {
+    "url": "https://chinajob.mohrss.gov.cn/c/2024-01-05/394427.shtml",
+    "status": 200,
+    "archived": true,
+    "name": "天津劳务派遣参保政策_中国就业网.html",
+    "sha256": "e55bc9d8e749ae207a54e6c160a8c460de65c2c63a3145eb45e60436b9aa5b27"
+  }
+}

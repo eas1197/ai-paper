@@ -1,0 +1,13 @@
+﻿preferred_term,concept_key,avoid_equating_with,usage_boundary,rule_ids
+理论假设,hypothesis,未冻结探索判断,事先可反驳预期,05冻结后保留版本
+相关/关联,association,因果效应,按实际设计使用,L08;L19
+发生比,odds_ratio,概率差或百分点,优势之比，概率差另算,L18
+百分点,percentage_point,百分比相对变化,概率或比例的绝对差,L18
+暴露率,exposure,已发生损害或替代,潜在受影响程度,L17
+生育行为,observed_fertility,生育意愿,由事件或子女数定义,L17
+家庭,analysis_field_or_unit,与资本维度直接并列,说明是场域或分析单位,L02;L05
+调节,moderation,一组显著另一组不显著,直接检验组间差异,L16
+中介,mediation,必然的因果机制,理论路径与识别另审,L08
+稳健,specified_sensitivity,普遍有效或没有内生性,仅就已实施替代检验而言,L22
+未获支持,not_supported,证明零效应,保留估计与区间,L14
+代理变量,proxy,概念被完全测量,写明覆盖与遗漏,L10;L23

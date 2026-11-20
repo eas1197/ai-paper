@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "draft_id": null,
+  "run_id": null,
+  "pack_id": null,
+  "pack_manifest_sha256": null,
+  "context_id": null,
+  "read_files": [],
+  "other_drafts_accessed": false,
+  "model": null,
+  "prompt_version": null,
+  "output_files": [],
+  "status": "planned",
+  "writing_mode": "single"
+}

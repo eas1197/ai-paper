@@ -1,0 +1,18 @@
+{
+  "journal_id": "J078",
+  "source_url": "https://llts.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:03:10.078326+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://llts.cbpt.cnki.net/EditorGN/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J078_808baa944561/text.txt",
+  "sha256": "883f914fea4d47521a3c1baedd2a560eb2b2ca49295c49d431e6e495045f7675",
+  "original_path": "primary_http/J078_808baa944561/response.html",
+  "original_sha256": "f57a8a3c8e6fe5453d511fb545af5327ead2ebb3f53b724876a098412aef329b",
+  "line_count": 52,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

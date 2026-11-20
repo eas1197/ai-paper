@@ -1,0 +1,26 @@
+{
+  "candidate_id": "",
+  "decision": "",
+  "reason": "",
+  "reviewer": "",
+  "reviewed_at": "",
+  "next_step": "",
+  "dimensions": {
+    "reality": {"status": "", "assessment": "", "population": "", "observation": "", "baseline": "", "scope": "", "evidence_ids": []},
+    "theory": {"status": "", "assessment": "", "existing_explanation": "", "unresolved_prediction": "", "contribution": "", "evidence_ids": []},
+    "practice": {"status": "", "assessment": "", "user": "", "decision": "", "consequence": "", "evidence_ids": []},
+    "policy": {"status": "", "assessment": "", "policy_objective": "", "implementation_problem": "", "decision": "", "boundary": "", "evidence_ids": []}
+  },
+  "answer_use": {
+    "simpler_question": "",
+    "added_information": "",
+    "evidence_needed": "",
+    "expected_answer": "",
+    "if_expected": "",
+    "competing_answer": "",
+    "if_competing": "",
+    "if_negligible": "",
+    "if_inconclusive": ""
+  },
+  "example_transfers": [{"paper_id": "", "borrowed_move": "", "adaptation": "", "scope_limit": ""}]
+}

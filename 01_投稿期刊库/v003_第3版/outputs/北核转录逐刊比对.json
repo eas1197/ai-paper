@@ -1,0 +1,339 @@
+{
+  "edition": "2023",
+  "retrieved": "2026-11-16",
+  "source_url": "https://lib.njmu.edu.cn/info/1178/2815.htm",
+  "source_sha256": "efe8b95a0004426e311ba7b1e0dc3236ced647b5ed5247e2e3ee2de73949c01e",
+  "role": "高校图书馆转录，第一编精确刊名匹配；未命中不能据此排除其他分编",
+  "matches": [
+    {
+      "journal_id": "J001",
+      "journal_name": "社会学评论",
+      "quota_group": "CSSCI",
+      "line": "246"
+    },
+    {
+      "journal_id": "J003",
+      "journal_name": "社会发展研究",
+      "quota_group": "CSSCI",
+      "line": "248"
+    },
+    {
+      "journal_id": "J004",
+      "journal_name": "人口研究",
+      "quota_group": "CSSCI",
+      "line": "252"
+    },
+    {
+      "journal_id": "J005",
+      "journal_name": "人口与经济",
+      "quota_group": "CSSCI",
+      "line": "255"
+    },
+    {
+      "journal_id": "J006",
+      "journal_name": "人口学刊",
+      "quota_group": "CSSCI",
+      "line": "254"
+    },
+    {
+      "journal_id": "J007",
+      "journal_name": "人口与发展",
+      "quota_group": "CSSCI",
+      "line": "256"
+    },
+    {
+      "journal_id": "J009",
+      "journal_name": "青年研究",
+      "quota_group": "CSSCI",
+      "line": "249"
+    },
+    {
+      "journal_id": "J010",
+      "journal_name": "中国青年研究",
+      "quota_group": "CSSCI",
+      "line": "318"
+    },
+    {
+      "journal_id": "J012",
+      "journal_name": "妇女研究论丛",
+      "quota_group": "CSSCI",
+      "line": "247"
+    },
+    {
+      "journal_id": "J013",
+      "journal_name": "社会保障研究",
+      "quota_group": "CSSCI",
+      "line": "250"
+    },
+    {
+      "journal_id": "J047",
+      "journal_name": "公共管理学报",
+      "quota_group": "CSSCI",
+      "line": "287"
+    },
+    {
+      "journal_id": "J048",
+      "journal_name": "公共行政评论",
+      "quota_group": "CSSCI",
+      "line": "294"
+    },
+    {
+      "journal_id": "J049",
+      "journal_name": "公共管理与政策评论",
+      "quota_group": "CSSCI",
+      "line": "298"
+    },
+    {
+      "journal_id": "J051",
+      "journal_name": "社会科学研究",
+      "quota_group": "PKU",
+      "line": "106"
+    },
+    {
+      "journal_id": "J052",
+      "journal_name": "江苏社会科学",
+      "quota_group": "PKU",
+      "line": "107"
+    },
+    {
+      "journal_id": "J053",
+      "journal_name": "南京社会科学",
+      "quota_group": "PKU",
+      "line": "95"
+    },
+    {
+      "journal_id": "J054",
+      "journal_name": "浙江社会科学",
+      "quota_group": "PKU",
+      "line": "103"
+    },
+    {
+      "journal_id": "J055",
+      "journal_name": "社会科学辑刊",
+      "quota_group": "PKU",
+      "line": "149"
+    },
+    {
+      "journal_id": "J056",
+      "journal_name": "社会科学战线",
+      "quota_group": "PKU",
+      "line": "101"
+    },
+    {
+      "journal_id": "J057",
+      "journal_name": "广东社会科学",
+      "quota_group": "PKU",
+      "line": "150"
+    },
+    {
+      "journal_id": "J058",
+      "journal_name": "江西社会科学",
+      "quota_group": "PKU",
+      "line": "161"
+    },
+    {
+      "journal_id": "J060",
+      "journal_name": "甘肃社会科学",
+      "quota_group": "PKU",
+      "line": "140"
+    },
+    {
+      "journal_id": "J061",
+      "journal_name": "云南社会科学",
+      "quota_group": "PKU",
+      "line": "168"
+    },
+    {
+      "journal_id": "J062",
+      "journal_name": "贵州社会科学",
+      "quota_group": "PKU",
+      "line": "137"
+    },
+    {
+      "journal_id": "J063",
+      "journal_name": "中州学刊",
+      "quota_group": "PKU",
+      "line": "114"
+    },
+    {
+      "journal_id": "J064",
+      "journal_name": "学术界",
+      "quota_group": "PKU",
+      "line": "154"
+    },
+    {
+      "journal_id": "J065",
+      "journal_name": "学习与实践",
+      "quota_group": "PKU",
+      "line": "147"
+    },
+    {
+      "journal_id": "J066",
+      "journal_name": "江汉论坛",
+      "quota_group": "PKU",
+      "line": "151"
+    },
+    {
+      "journal_id": "J067",
+      "journal_name": "江淮论坛",
+      "quota_group": "PKU",
+      "line": "164"
+    },
+    {
+      "journal_id": "J068",
+      "journal_name": "学术论坛",
+      "quota_group": "PKU",
+      "line": "178"
+    },
+    {
+      "journal_id": "J070",
+      "journal_name": "求实",
+      "quota_group": "PKU",
+      "line": "304"
+    },
+    {
+      "journal_id": "J071",
+      "journal_name": "求索",
+      "quota_group": "PKU",
+      "line": "190"
+    },
+    {
+      "journal_id": "J072",
+      "journal_name": "湖北社会科学",
+      "quota_group": "PKU",
+      "line": "200"
+    },
+    {
+      "journal_id": "J073",
+      "journal_name": "湖南社会科学",
+      "quota_group": "PKU",
+      "line": "204"
+    },
+    {
+      "journal_id": "J075",
+      "journal_name": "山东社会科学",
+      "quota_group": "PKU",
+      "line": "128"
+    },
+    {
+      "journal_id": "J076",
+      "journal_name": "东岳论丛",
+      "quota_group": "PKU",
+      "line": "145"
+    },
+    {
+      "journal_id": "J077",
+      "journal_name": "理论月刊",
+      "quota_group": "PKU",
+      "line": "195"
+    },
+    {
+      "journal_id": "J078",
+      "journal_name": "理论探索",
+      "quota_group": "PKU",
+      "line": "308"
+    },
+    {
+      "journal_id": "J081",
+      "journal_name": "天津社会科学",
+      "quota_group": "PKU",
+      "line": "126"
+    },
+    {
+      "journal_id": "J082",
+      "journal_name": "学习与探索",
+      "quota_group": "PKU",
+      "line": "112"
+    },
+    {
+      "journal_id": "J083",
+      "journal_name": "浙江学刊",
+      "quota_group": "PKU",
+      "line": "141"
+    },
+    {
+      "journal_id": "J084",
+      "journal_name": "河南社会科学",
+      "quota_group": "PKU",
+      "line": "184"
+    },
+    {
+      "journal_id": "J085",
+      "journal_name": "河南师范大学学报(哲学社会科学版)",
+      "quota_group": "PKU",
+      "line": "186"
+    },
+    {
+      "journal_id": "J086",
+      "journal_name": "湖南科技大学学报(社会科学版)",
+      "quota_group": "PKU",
+      "line": "193"
+    },
+    {
+      "journal_id": "J087",
+      "journal_name": "湖南师范大学社会科学学报",
+      "quota_group": "PKU",
+      "line": "133"
+    },
+    {
+      "journal_id": "J088",
+      "journal_name": "华中师范大学学报(人文社会科学版)",
+      "quota_group": "PKU",
+      "line": "102"
+    },
+    {
+      "journal_id": "J089",
+      "journal_name": "华中科技大学学报(社会科学版)",
+      "quota_group": "PKU",
+      "line": "146"
+    },
+    {
+      "journal_id": "J090",
+      "journal_name": "华南师范大学学报(社会科学版)",
+      "quota_group": "PKU",
+      "line": "138"
+    },
+    {
+      "journal_id": "J091",
+      "journal_name": "深圳大学学报(人文社会科学版)",
+      "quota_group": "PKU",
+      "line": "148"
+    },
+    {
+      "journal_id": "J093",
+      "journal_name": "暨南学报(哲学社会科学版)",
+      "quota_group": "PKU",
+      "line": "166"
+    },
+    {
+      "journal_id": "J094",
+      "journal_name": "山东大学学报(哲学社会科学版)",
+      "quota_group": "PKU",
+      "line": "118"
+    },
+    {
+      "journal_id": "J095",
+      "journal_name": "山东师范大学学报(社会科学版)",
+      "quota_group": "PKU",
+      "line": "201"
+    },
+    {
+      "journal_id": "J097",
+      "journal_name": "北京工业大学学报(社会科学版)",
+      "quota_group": "PKU",
+      "line": "153"
+    },
+    {
+      "journal_id": "J099",
+      "journal_name": "上海师范大学学报(哲学社会科学版)",
+      "quota_group": "PKU",
+      "line": "158"
+    },
+    {
+      "journal_id": "J100",
+      "journal_name": "苏州大学学报(哲学社会科学版)",
+      "quota_group": "PKU",
+      "line": "156"
+    }
+  ]
+}

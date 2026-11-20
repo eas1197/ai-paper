@@ -1,0 +1,25 @@
+{
+  "stage": "02",
+  "gate": "G2",
+  "status": "needs_review",
+  "eligible_pdf_n": 20,
+  "journals": {
+    "中国社会科学": 7,
+    "社会学研究": 13
+  },
+  "section_units_coded": 117,
+  "abstract_sentences_coded": 96,
+  "paragraph_candidates": 2090,
+  "fulltext_read_complete_certified_n": 0,
+  "paragraph_manual_review_complete_n": 0,
+  "passed": false,
+  "gaps": [
+    "20篇逐段精校与连续全文精读认证尚未完成",
+    "可靠章节字数与占比分布待段界精校后计算"
+  ],
+  "notes": [
+    "已完成章节层面与摘要逐句的第一轮编码",
+    "不将自动分段、目录存在或代码校验等同业务验收"
+  ],
+  "checked_at": "2026-11-14T19:33:10.359141+08:00"
+}

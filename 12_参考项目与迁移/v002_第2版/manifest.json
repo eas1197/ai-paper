@@ -1,0 +1,20 @@
+{
+  "module_id": "12",
+  "name": "参考项目与迁移",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [],
+  "expected_artifacts": [
+    "GitHub调研与改进建议.md",
+    "本地资产清单.json",
+    "需求来源说明.md"
+  ],
+  "folders": [
+    "sources",
+    "outputs"
+  ],
+  "execution_scope": "support"
+}

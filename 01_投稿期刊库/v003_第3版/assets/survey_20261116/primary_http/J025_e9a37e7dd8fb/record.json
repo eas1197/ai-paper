@@ -1,0 +1,20 @@
+{
+  "journal_id": "J025",
+  "source_url": "https://jyji.cbpt.cnki.net/portal/journal/portal/client/news/jyji_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:03:46.035629+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://jyji.cbpt.cnki.net/portal/journal/portal/client/news/jyji_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J025_e9a37e7dd8fb/text.txt",
+  "sha256": "5cbb5ad01fe248349f95c37e8c3c52953f9fcd076030543969274b4e9fd70e04",
+  "original_path": "primary_http/J025_e9a37e7dd8fb/response.html",
+  "original_sha256": "a4cc481b4d03332bfc9c3099ad9b16bd2b4a4e29548e554b0a3c264c02374156",
+  "line_count": 72,
+  "title": "教育与经济",
+  "guideline_links": [
+    "https://jyji.cbpt.cnki.net/portal/journal/portal/client/news/jyji_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

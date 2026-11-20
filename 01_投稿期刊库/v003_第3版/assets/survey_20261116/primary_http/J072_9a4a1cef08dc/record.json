@@ -1,0 +1,20 @@
+{
+  "journal_id": "J072",
+  "source_url": "https://fbsf.cbpt.cnki.net/journal/portal/fbsf/client/news/FBSF_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:03:07.693702+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://fbsf.cbpt.cnki.net/journal/portal/fbsf/client/news/FBSF_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J072_9a4a1cef08dc/text.txt",
+  "sha256": "5c190759215216a3322cd821e0c1082202ba5e6b5aaec22ea906926542b984a1",
+  "original_path": "primary_http/J072_9a4a1cef08dc/response.html",
+  "original_sha256": "bbf26e7e09064c56f442724896e2b5e308778717565a72e1e1a7d9b7b503c836",
+  "line_count": 68,
+  "title": "湖北社会科学",
+  "guideline_links": [
+    "https://fbsf.cbpt.cnki.net/portal/journal/portal/client/news/FBSF_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

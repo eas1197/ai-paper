@@ -1,0 +1,24 @@
+{
+  "module_id": "00",
+  "name": "项目控制",
+  "version": 5,
+  "version_label": "第5版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [],
+  "expected_artifacts": [
+    "run_manifest.json",
+    "gate_report.json",
+    "需求追踪矩阵.csv",
+    "outputs/当前状态.md"
+  ],
+  "folders": [
+    "tools",
+    "tests",
+    "规范历史",
+    "outputs",
+    "templates"
+  ],
+  "execution_scope": "support"
+}

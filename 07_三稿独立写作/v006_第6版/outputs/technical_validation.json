@@ -1,0 +1,25 @@
+{
+  "verified_on": "2026-11-18",
+  "module_version": 6,
+  "framework_validation": {"status": "passed", "sqlite_tables": 33},
+  "framework_tests": {"status": "passed", "count": 9},
+  "writing_tests": {
+    "status": "passed",
+    "count": 3,
+    "coverage": [
+      "原暧昧期短论缺标准论文结构，不能进入正式交付",
+      "统计数值、四舍五入、正负号",
+      "合成夹具的单稿证据冻结、复核绑定、导出及输出改动后拒绝交付"
+    ]
+  },
+  "actual_run": {
+    "run_id": "ambiguity_20261118",
+    "preflight": "needs_review",
+    "exit_code": 3,
+    "resource_status": {"G2": "needs_review", "G3": "needs_review"},
+    "research_status": {"G4": "needs_review", "G5": "needs_review", "G6": "planned"},
+    "new_pack_created": false,
+    "submission_enabled": false
+  },
+  "business_gate_pass_claimed": false
+}

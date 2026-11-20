@@ -1,0 +1,23 @@
+{
+  "module_id": "09",
+  "name": "可选投稿适配",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "disabled",
+  "depends_on": [
+    "01",
+    "08"
+  ],
+  "expected_artifacts": [
+    "candidates.csv",
+    "journal_adaptation.csv",
+    "submission_ledger.csv"
+  ],
+  "folders": [
+    "templates",
+    "outputs"
+  ]
+}
+

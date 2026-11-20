@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "run_id": null,
+  "pack_id": null,
+  "winner": null,
+  "status": "not_reviewed",
+  "minimum_score": 80,
+  "hard_gates_required": true,
+  "ranking": [],
+  "reason": null,
+  "other_drafts_retained": true
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "paper_id": "zotero_DD4I5QA4",
+    "move": "discussion",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_DD4I5QA4",
+    "move": "discussion",
+    "mode": "topic",
+    "examples": [
+      "zotero_YTPUAEYR_results",
+      "zotero_KYCYDCG4_design"
+    ],
+    "right_function": 0,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_DD4I5QA4",
+    "move": "discussion",
+    "mode": "function",
+    "examples": [
+      "zotero_HE44WC7E_discussion",
+      "zotero_89UP6KH7_discussion"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_GTUTSZDI",
+    "move": "design",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_GTUTSZDI",
+    "move": "design",
+    "mode": "topic",
+    "examples": [
+      "zotero_GDCUCRWK_design",
+      "zotero_MK385948_design"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_GTUTSZDI",
+    "move": "design",
+    "mode": "function",
+    "examples": [
+      "zotero_MK385948_design",
+      "zotero_NU3YY8ZA_design"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_FQ7RQ5NC",
+    "move": "design",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_FQ7RQ5NC",
+    "move": "design",
+    "mode": "topic",
+    "examples": [
+      "zotero_NLVHWHF6_literature_P006",
+      "zotero_BGXTF5GD_results"
+    ],
+    "right_function": 0,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_FQ7RQ5NC",
+    "move": "design",
+    "mode": "function",
+    "examples": [
+      "zotero_HLMCFMEQ_design",
+      "zotero_9R3CSV5I_design"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_GZFRXXPL",
+    "move": "results",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_GZFRXXPL",
+    "move": "results",
+    "mode": "topic",
+    "examples": [
+      "zotero_MQLVJZ7T_hypothesis",
+      "zotero_I2QM8FP8_hypothesis"
+    ],
+    "right_function": 0,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_GZFRXXPL",
+    "move": "results",
+    "mode": "function",
+    "examples": [
+      "zotero_8GJ2ZET7_results",
+      "zotero_YTPUAEYR_results"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_2SKTAPLF",
+    "move": "results",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_2SKTAPLF",
+    "move": "results",
+    "mode": "topic",
+    "examples": [
+      "zotero_MK385948_design",
+      "zotero_GUQJU4JA_hypothesis"
+    ],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_2SKTAPLF",
+    "move": "results",
+    "mode": "function",
+    "examples": [
+      "zotero_J5XDE43I_results",
+      "zotero_ZVEEAGSX_results"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_J38BV4A5",
+    "move": "literature",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_J38BV4A5",
+    "move": "literature",
+    "mode": "topic",
+    "examples": [
+      "zotero_3G222LKC_hypothesis",
+      "zotero_39ERQM27_literature"
+    ],
+    "right_function": 1,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_J38BV4A5",
+    "move": "literature",
+    "mode": "function",
+    "examples": [
+      "zotero_8DMURTFB_literature_P009",
+      "zotero_Y32DRMKW_literature_P006"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  },
+  {
+    "paper_id": "zotero_Y8WNZ3AN",
+    "move": "discussion",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_Y8WNZ3AN",
+    "move": "discussion",
+    "mode": "topic",
+    "examples": [
+      "zotero_J5XDE43I_question_P006",
+      "zotero_W2RYZ3GB_literature"
+    ],
+    "right_function": 0,
+    "same_journal": 1
+  },
+  {
+    "paper_id": "zotero_Y8WNZ3AN",
+    "move": "discussion",
+    "mode": "function",
+    "examples": [
+      "zotero_89UP6KH7_discussion",
+      "zotero_HE44WC7E_discussion"
+    ],
+    "right_function": 2,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_6V7LJIWN",
+    "move": "literature",
+    "mode": "manual",
+    "examples": [],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_6V7LJIWN",
+    "move": "literature",
+    "mode": "topic",
+    "examples": [
+      "zotero_3G222LKC_hypothesis",
+      "zotero_HLMCFMEQ_design"
+    ],
+    "right_function": 0,
+    "same_journal": 0
+  },
+  {
+    "paper_id": "zotero_6V7LJIWN",
+    "move": "literature",
+    "mode": "function",
+    "examples": [
+      "zotero_Y32DRMKW_literature_P006",
+      "zotero_8DMURTFB_literature_P009"
+    ],
+    "right_function": 2,
+    "same_journal": 2
+  }
+]

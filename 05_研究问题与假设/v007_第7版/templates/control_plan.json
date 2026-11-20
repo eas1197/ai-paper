@@ -1,0 +1,87 @@
+{
+  "unit": null,
+  "unit_rationale": null,
+  "literature_models": [
+    {
+      "paper_id": null,
+      "evidence_id": null,
+      "table_or_section": null,
+      "comparability": null,
+      "controls": []
+    }
+  ],
+  "decisions": [
+    {
+      "concept": "age",
+      "label": "年龄",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "sex",
+      "label": "性别",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "education",
+      "label": "教育",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "marital_status",
+      "label": "婚姻",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "residence",
+      "label": "居住地或城乡",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "hukou",
+      "label": "户籍",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "employment",
+      "label": "就业",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    },
+    {
+      "concept": "economic_resources",
+      "label": "经济资源",
+      "decision": null,
+      "causal_position": null,
+      "reason": null,
+      "variable_id": null,
+      "baseline_exception": null
+    }
+  ]
+}

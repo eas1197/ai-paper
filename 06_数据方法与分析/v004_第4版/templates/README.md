@@ -1,0 +1,5 @@
+# 模板说明
+
+workflow_input.json是缺材料初始化入口，预期needs_review；execution_protocol.json是空协议。protocol_fields.json和method_reference_fields.json只解释字段，不是真实数据或论文。quality_review.json必须由具名实质复核填写，程序不自签。
+
+results、sample_flow、descriptive、variable_dictionary、method_references为空表头契约，不计完成。运行产物放在控制配置run_store_root的同run/stage_06/attempt_NNN，不覆盖模板。

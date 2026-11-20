@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "module_id": "02",
+  "module_version": 4,
+  "resource_version": 3,
+  "resource_snapshot_id": "structure_candidate_r3_architecture_2_0",
+  "lifecycle": "build_once_reuse_many",
+  "status": "needs_review",
+  "files": [
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "387a880296e81132f7495efb100583f9c40d6aa85d1687bfacf784d43902d931"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/templates/writing_profile.json",
+      "sha256": "2de9b0492d64066ffd7095a97ecd7ffa30b923196eb52e2c755880a0010b1e3d"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/templates/写作计划.md",
+      "sha256": "f806c87617904507b4200b79f916790cd7e69beee04e6a3ec24aaaaa86c919c5"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/章节规范/00_研究怎样产生.md",
+      "sha256": "fc95dbc95be5ed88e2509d5e5a0eabb8617c79f5f2ac8996011e362d524d7ebe"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/章节规范/04_摘要.md",
+      "sha256": "18ded4f8a3b77981420da588a56214f80fce8a0c4883ade0769948176f955943"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/章节规范/05_引言.md",
+      "sha256": "1611c084e5861099d4f1bfc59a114d2e6ed77e2e886d536ad56ec6e8925a70d9"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/章节规范/06_文献回顾.md",
+      "sha256": "49a68605f270b1ca4157683c814616901914b6402241fba1a1748357da41ba73"
+    },
+    {
+      "path": "02_文章结构学习/v004_第4版/assets/写作架构/章节规范/07_理论与假设.md",
+      "sha256": "65806baedca854fc850caa7fd836aa6b8bbc1f8a13bae7d9dbe34b04c8218001"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/corpus20.csv",
+      "sha256": "515c9825026e063c92281b57f15246f08a30bff39b1146b1ccdca47f0b1eddd4"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_moves.csv",
+      "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/abstract_sentences.csv",
+      "sha256": "cbe750ae4a56f064e41ee2397a016339e775eec18fa563346f151a4682a9b5ce"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_handbook.md",
+      "sha256": "b1e9aad521197da084e12bc6f7fae1ae393efe8c55825b1f86ca8e18e9cb3c4f"
+    }
+  ],
+  "business_gate_report": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+  "writing_norm_available": true,
+  "note": "架构2.0规范可用；20篇逐段精校与G2仍待验收，不将其改为passed。"
+}

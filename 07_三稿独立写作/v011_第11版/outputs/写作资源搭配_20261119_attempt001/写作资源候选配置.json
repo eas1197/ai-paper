@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "pilot",
+  "date": "2026-11-19",
+  "stage07_version": 11,
+  "architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "2.1",
+    "profile_path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+    "profile_sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05",
+    "guide_path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+  },
+  "language": {
+    "style_rules": {
+      "profile": {
+        "path": "03_学术语言学习/v005_第5版/outputs/style_profile.json",
+        "sha256": "4f867c6669633b1a49950416aabaab87cfe8c8a02ae992ddb204b91c088f618d"
+      },
+      "guide": {
+        "path": "03_学术语言学习/v004_第4版/outputs/语言风格学习.md",
+        "sha256": "b68954dd411bba35283727eb2ca5a0863c77355e47d4ccbca543718ac3482b3f"
+      },
+      "examples": {
+        "path": "03_学术语言学习/v004_第4版/outputs/original_examples.md",
+        "sha256": "cd4ab5306c3a230a0d50ae49996be48f0962d5e7608ba17ec7360ac98ce0218b"
+      },
+      "mapping": {
+        "path": "03_学术语言学习/v005_第5版/assets/paragraph_style.json",
+        "sha256": "0f0c4563ebd2eb94aef0463789c7dbf1694fe5f0e11fc986df820ce0d245b19a"
+      },
+      "rules": {
+        "path": "03_学术语言学习/v004_第4版/assets/style_patterns.json",
+        "sha256": "9bf47303c0c2d5fcaf54476f636b5c69b8b6fad7c2cd4282c12d60d1b74252bf"
+      },
+      "application": {
+        "path": "03_学术语言学习/v004_第4版/templates/后续写作风格约定.md",
+        "sha256": "a3cb8b8fc2ea0ad2d98e4b9169c0c2c7e460baa0e838175dae9ea6dc0bcef637"
+      }
+    },
+    "paragraph_examples": {
+      "index": {
+        "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/writing_exemplars.json",
+        "sha256": "2e3f7be2bccf368254c37b4a0a95907bb2899e962b4f1cf31bb39f8a94644dfc"
+      },
+      "guide": {
+        "path": "03_学术语言学习/v005_第5版/outputs/两刊语体学习_20261119_attempt002/语言范例手册.md",
+        "sha256": "818b3e240b99a8383872271a21acacb0ae1dc052cbd61c42e219cc2c44d7bdb6"
+      },
+      "choose_by": [
+        "paragraph_function",
+        "comparison_type",
+        "method",
+        "topic"
+      ]
+    }
+  },
+  "structure_reference": {
+    "path": "02_文章结构学习/v005_第5版/outputs/两刊全篇分析_20261119_attempt002/结构手册.md",
+    "sha256": "af3bf002f1431ad1554f3a524ab0c0fff8409e7af611532af38cf495e601e94b"
+  },
+  "final_wording_requirements": {
+    "path": "07_三稿独立写作/v011_第11版/templates/文字要求.md",
+    "sha256": "4fcacd0d28e1a666a694dacf17f5343a8ac8c50c7d96522931a4e6927706ef8c"
+  },
+  "sequence": [
+    "plan_with_architecture",
+    "draft_with_matching_examples_and_current_evidence",
+    "review_against_style_rules",
+    "apply_current_wording_requirements"
+  ],
+  "release_gates": {
+    "G2": "needs_review",
+    "G3": "needs_review"
+  },
+  "verified_pilot": {
+    "paragraph_unit": "R4",
+    "style_ids": [
+      "ST03",
+      "ST07",
+      "ST13"
+    ],
+    "exemplar_ids": [
+      "E08",
+      "E21"
+    ]
+  }
+}

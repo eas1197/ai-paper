@@ -1,0 +1,11 @@
+{
+  "module_id": "02",
+  "module_version": 2,
+  "resource_version": 1,
+  "attempt": 2,
+  "status": "needs_review",
+  "published": false,
+  "entrypoint": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\阅读入口.md",
+  "gate_report": "E:\\文章\\ai论文\\02_文章结构学习\\v002_第2版\\outputs\\资源建设_20261114_attempt002\\gate_report.json",
+  "note": "未替换已注册的not_built快照；本次为首次建设候选产物。"
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "run_id": "论证范例试验_20261118_attempt001",
+  "date": "2026-11-18",
+  "scope": "exploratory_writing_pilot",
+  "status": "needs_review",
+  "module_versions": {
+    "02": 5,
+    "03": 4,
+    "07": 9
+  },
+  "seed": 20261118,
+  "runtime": "3.10.11",
+  "model": "当前Codex会话，同一模型",
+  "exact_model_id": null,
+  "independent_review_status": "pending",
+  "article_counts": {
+    "training": 6,
+    "holdout": 4,
+    "full_paragraph_review_scope": "21 targeted excerpts; whole-article chapter maps reused"
+  },
+  "retrieval_counts": {
+    "manual": {
+      "drafts": 3,
+      "retrieved": 0,
+      "matching_move": 0
+    },
+    "topic": {
+      "drafts": 3,
+      "retrieved": 6,
+      "matching_move": 2
+    },
+    "function": {
+      "drafts": 3,
+      "retrieved": 6,
+      "matching_move": 6
+    }
+  },
+  "source_visual_check": {
+    "paper_id": "zotero_SCCKUUS9",
+    "pdf_pages": [
+      8,
+      16
+    ],
+    "purpose": "review text and table reading order"
+  },
+  "inputs": [
+    {
+      "path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/语言风格学习.md",
+      "sha256": "b68954dd411bba35283727eb2ca5a0863c77355e47d4ccbca543718ac3482b3f"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/templates/文字要求.md",
+      "sha256": "9d43f37120fdf73bd924e4820c7341e3c929a868d9a10c08ed82bcdc06c55f71"
+    },
+    {
+      "path": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/分析前方案.md",
+      "sha256": "f85ea946324363251ccda50a75728cffdee9c15e89c5d2c37d8f124e03c3325e"
+    },
+    {
+      "path": "00_项目控制/v002_第2版/runs/cgss23_digital_ties_20261118/exploratory_analysis/results.csv",
+      "sha256": "97f7dba5ea838246605bbfe450bdfa9cf4286e3f9e4afe13d81d56a2e14798bc"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/论证语料试验_20261118_attempt001/writing_exemplars.json",
+      "sha256": "43318500af277b65cf9089709c549cb5297ee78f7ca206d5078c998c4e7a356a"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/tools/pilot07.py",
+      "sha256": "706d1d929894edb955999f0018c985dc065462233e0b46e3895c71261ca68341"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/tools/exemplars07.py",
+      "sha256": "17bad4124fad1a5ff524f92229f98d735ce3537bda616bda987eef3c45824751"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/论证语料试验_20261118_attempt001/段落标注.tsv",
+      "sha256": "b80d500c104af270083fef5d995952b09a2dd439d95bd19c831370e719fb0951"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/split.json",
+      "sha256": "37aef25876d07e5e7cfdfdbf7f9c968f36135d72a206b747614b4b56cdeafdab"
+    },
+    {
+      "path": "基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/tools/build_pilot_index.py",
+      "sha256": "2fc50cf2bf29dbb0e2ab949065b3d2511f0ffb82257b4007f4615bf7d0d37a4a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "00_项目控制/v003_第3版/module_registry.json",
+      "sha256": "0cc4a6a0431a8ecdf3a2f04ca96e07dc31da31279746cd57739be42686e397d5"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/split.json",
+      "sha256": "37aef25876d07e5e7cfdfdbf7f9c968f36135d72a206b747614b4b56cdeafdab"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/章节推进.json",
+      "sha256": "a988e1c4bdb49e35f0be0f131ad5ca2bededf80c340ef2bd16bf41d9b6249ae4"
+    },
+    {
+      "path": "02_文章结构学习/v005_第5版/outputs/论证语料试验_20261118_attempt001/阅读与验收.md",
+      "sha256": "40fa29369a45197ff942706261d3f43d4206be1bc282a9ba67a7fad838de434a"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/论证语料试验_20261118_attempt001/writing_exemplars.json",
+      "sha256": "43318500af277b65cf9089709c549cb5297ee78f7ca206d5078c998c4e7a356a"
+    },
+    {
+      "path": "03_学术语言学习/v004_第4版/outputs/论证语料试验_20261118_attempt001/段落标注.tsv",
+      "sha256": "b80d500c104af270083fef5d995952b09a2dd439d95bd19c831370e719fb0951"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/manifest.json",
+      "sha256": "6a12fca176879b1fa3b3f996bb309da2b5f735ab3c169cc5207d60fe560df981"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/technical_validation.json",
+      "sha256": "f70ba84b6b51fe96679e345c4d399f09b40fc4aa1cddc98c62895a2c4ba409a2"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/同证据写作任务.json",
+      "sha256": "a74915be8432e76c9d8a6c36aba2a8d53cc307a9a88bb8ec7e47f6fba38052ca"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/段落实写.json",
+      "sha256": "042a81de8ddd1b1b8afcefc1fcd6675398660d1c50c05d0e0fc98e08d1835895"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/留出文章对照.md",
+      "sha256": "71fff3e47af4f43066a4cb85db5736e08600d55c18501f1f47ba111aebc39bc9"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/盲评揭盲键.json",
+      "sha256": "56c6034a513aa847b2121a75c441fdb1d6cd186bf75e50d70d0606ae204dd642"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/盲评材料.md",
+      "sha256": "27d817910d3b65cfdc8ec038a9015fae2eacdb34dd04ec07f6eb09c21461e832"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/自动核对.json",
+      "sha256": "0d25dda8cb3d68ae94ac6027bb58d15cad18ddc8f3bcdce6946a12242bc3d00f"
+    },
+    {
+      "path": "07_三稿独立写作/v009_第9版/outputs/论证范例试验_20261118_attempt001/试验报告.md",
+      "sha256": "234fbfbc53a536fbc425ded5001b96fdb2e67af892cc14479f01e32ea94e7ed5"
+    }
+  ],
+  "formal_gate_status": {
+    "G2": "needs_review",
+    "G3": "needs_review",
+    "G7": "not_evaluated"
+  }
+}

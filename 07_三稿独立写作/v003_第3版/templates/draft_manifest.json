@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "draft_id": null,
+  "run_id": null,
+  "pack_id": null,
+  "pack_manifest_sha256": null,
+  "context_id": null,
+  "read_files": [],
+  "other_drafts_accessed": false,
+  "model": null,
+  "prompt_version": null,
+  "output_files": [],
+  "status": "planned",
+  "writing_mode": "single",
+  "writing_architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "1.0",
+    "profile_path": "02_文章结构学习/v003_第3版/templates/writing_profile.json",
+    "profile_sha256": "2b5f9c95dd1de0c60fc0067e1bae827edaf11b65495d38b2e2502513a73294ac",
+    "guide_path": "02_文章结构学习/v003_第3版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "5e578c591c7fda1f23754825b1b9334e016e9abd100d1f73b27101210df3c37d"
+  },
+  "architecture_deviations": []
+}

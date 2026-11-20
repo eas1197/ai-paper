@@ -1,0 +1,18 @@
+{
+  "journal_id": "J043",
+  "source_url": "https://tje.ioe.tsinghua.edu.cn/Corp/10.aspx",
+  "retrieved_at": "2026-11-16T15:04:01.330060+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://tje.ioe.tsinghua.edu.cn/Corp/10.aspx",
+  "content_type": "text/html; charset=gb2312",
+  "status": "archived",
+  "snapshot_path": "primary_http/J043_9beaedf114c2/text.txt",
+  "sha256": "119bd7f47a8a62ebb05b0036713c1ff9175bdb5cf3b9d0d94a97153fe33718a7",
+  "original_path": "primary_http/J043_9beaedf114c2/response.html",
+  "original_sha256": "1d5a0013426612b3a5e4753011fe28386a50865cb1baea871106a7f1edd59b39",
+  "line_count": 84,
+  "title": "\r\n        \r\n    期刊简介\r\n    -\r\n        清华大学教育研究",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

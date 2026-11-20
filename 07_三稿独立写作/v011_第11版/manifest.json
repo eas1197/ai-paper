@@ -1,0 +1,51 @@
+{
+  "module_id": "07",
+  "name": "论文写作（单稿或三稿）",
+  "version": 11,
+  "version_label": "第11版",
+  "entrypoint": "tools/stage07.py",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "expected_artifacts": [
+    "frozen_manifest.json",
+    "draft_manifest.json",
+    "claims.csv",
+    "manuscript.md",
+    "self_check.csv",
+    "写作计划.md",
+    "architecture_self_check.csv",
+    "language_review.json",
+    "writing_task.json",
+    "paragraph_plan.json"
+  ],
+  "folders": [
+    "templates",
+    "A稿",
+    "B稿",
+    "C稿",
+    "outputs",
+    "tools",
+    "tests"
+  ],
+  "execution_scope": "research",
+  "writing_modes": [
+    "single",
+    "three_plus_review"
+  ],
+  "writing_architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "2.1",
+    "profile_path": "02_文章结构学习/v005_第5版/templates/writing_profile.json",
+    "profile_sha256": "749ff1dc4b59cf043d022c4b57e3c95d6972986ee629529eaaa00cf0c07baa05",
+    "guide_path": "02_文章结构学习/v005_第5版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "66ab223398091bdcab8bf90ab353cf823b30610b13d9fb8b6865502f786855e6"
+  }
+}

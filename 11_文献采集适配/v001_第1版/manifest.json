@@ -1,0 +1,23 @@
+{
+  "module_id": "11",
+  "name": "文献采集适配",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "10"
+  ],
+  "expected_artifacts": [
+    "provider_contract.md",
+    "migration_plan.md",
+    "downloads.csv"
+  ],
+  "folders": [
+    "templates",
+    "adapters",
+    "outputs"
+  ]
+}
+

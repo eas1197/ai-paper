@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "run_id": null,
+  "research_question": null,
+  "hypotheses": [],
+  "gap_types": [
+    "reality_theory_tension",
+    "same_level_gap",
+    "scope_change",
+    "relation_revision"
+  ],
+  "required_per_hypothesis": [
+    "hypothesis_id",
+    "baseline_paper_ids",
+    "evidence_ids",
+    "same_level_checks",
+    "X",
+    "Y",
+    "mechanism",
+    "scope",
+    "expected_pattern",
+    "falsification",
+    "competing_explanations",
+    "dataset_feasibility",
+    "causal_claim_level",
+    "review_status"
+  ],
+  "status": "planned"
+}

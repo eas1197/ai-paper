@@ -1,0 +1,21 @@
+{
+  "module_id": "10",
+  "name": "共享证据与契约",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [],
+  "expected_artifacts": [
+    "knowledge.sql",
+    "records.schema.json",
+    "数据契约.md"
+  ],
+  "folders": [
+    "schemas",
+    "templates",
+    "evidence_store"
+  ]
+}
+

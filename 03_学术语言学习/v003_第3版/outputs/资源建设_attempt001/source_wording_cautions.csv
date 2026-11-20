@@ -1,0 +1,4 @@
+﻿evidence_id,paper_id,pdf_page,rule_ids,risk,status,checked_at
+E_LANG_P09_result,zotero_AVUPRP3F,16,L18,抽取文本同段出现发生比与概率百分点的转换式表述，列为量纲风险；不把此处数字移入示例，不认证为标准表达。,local_wording_risk_not_whole_article_quality_judgment,2026-11-14T22:48:58.316334+08:00
+E_LANG_P11_result,zotero_NLVHWHF6,20,L17,综述句把观察生育行为表述为意愿，作为测量对象漂移风险；是否存在独立意愿测量须回查完整设计，不能据该句补造。,local_wording_risk_not_whole_article_quality_judgment,2026-11-14T22:48:58.316334+08:00
+E_LANG_P20_result,zotero_GUQJU4JA,18,L14;L25,从不显著关联直接推到基础设施不能吸引返乡的表述存在强度跃迁，列为政策推论风险。,local_wording_risk_not_whole_article_quality_judgment,2026-11-14T22:48:58.316334+08:00

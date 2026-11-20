@@ -1,0 +1,9 @@
+{
+  "journal_id": "J020",
+  "source_url": "https://www.cau.edu.cn/xkky/xsky/xxzb/d78bac8648044f5aafb010db84ac2bf4.htm",
+  "retrieved_at": "2026-11-16T15:04:22.686031+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "SSLError",
+  "reason": "HTTPSConnectionPool(host='www.cau.edu.cn', port=443): Max retries exceeded with url: /xkky/xsky/xxzb/d78bac8648044f5aafb010db84ac2bf4.htm (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)')))"
+}

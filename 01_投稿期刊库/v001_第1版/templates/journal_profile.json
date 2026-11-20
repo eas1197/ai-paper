@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "journal_id": null,
+  "identity": {
+    "name": null,
+    "issn": null,
+    "cn": null
+  },
+  "scope": {
+    "directions": [],
+    "columns": [],
+    "quantitative_fit": null
+  },
+  "indexing": [],
+  "metrics": [],
+  "fees": [],
+  "accessibility": {
+    "assessment": null,
+    "criteria": [],
+    "uncertainty": null,
+    "official_acceptance_rate": null
+  },
+  "undergraduate": {
+    "policy": "unknown",
+    "evidence_ids": []
+  },
+  "submission": {
+    "channel": null,
+    "url": null,
+    "email": null,
+    "registration_required": null
+  },
+  "guideline": {
+    "document_id": null,
+    "full_snapshot_path": null,
+    "sha256": null,
+    "checklist_path": null
+  },
+  "requirements": {
+    "length": null,
+    "title_abstract_keywords": null,
+    "structure": null,
+    "reference_style": null,
+    "tables_figures": null,
+    "anonymization": null,
+    "author_funding": null,
+    "attachments": [],
+    "ethics": null,
+    "ai_disclosure": null,
+    "copyright": null,
+    "exclusive_review": null
+  },
+  "as_of": null,
+  "verified_at": null,
+  "status": "unverified",
+  "unknown_reason": "待逐刊调查"
+}

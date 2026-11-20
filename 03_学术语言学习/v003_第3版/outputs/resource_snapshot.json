@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "module_id": "03",
+  "module_version": 3,
+  "resource_version": 1,
+  "resource_snapshot_id": "language_candidate_r1_corpus20_attempt001",
+  "lifecycle": "build_once_reuse_many",
+  "status": "needs_review",
+  "resource_available_for_formal_writing": false,
+  "files": [
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/activation_record.json",
+      "sha256": "cc0a3cc58de8a2d1c7b2fe136a9130fe9596a8410c25b17405979b9ca898ae45"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/corpus_language_review.csv",
+      "sha256": "b975d2e11871325b96af91419b552c233d7c1427b327ff3d82ed77ca4bda055e"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/gate_report.json",
+      "sha256": "20b1f9b3194af4e25a0aa7e50135a7eace8e4bb9c7de327b45be01733de390b3"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/00_module_registry.json",
+      "sha256": "e0f9dad7170e264fcbb4f7c9a7fee7a2645c39694c8a56b5729567fba1c29386"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/01_project_config.json",
+      "sha256": "3176575e61e34abb0d81e635b304b081c859950f1bd1ad036ec5bc2663500223"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/02_版本索引.md",
+      "sha256": "e503f5c07067aa57efc579cc755a2c2db9d130d92e3c41c7d77eea435545080b"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/03_CHANGELOG.md",
+      "sha256": "6c3185289ff6eaf6fcde1853cd999f12da1562ac01a4c7d3eba1267149eb4fd7"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/integration_before/04_README.md",
+      "sha256": "4f660de1f2db3f71be2ff45602a362e5761eb7a19cae61ded12d5fc7c3a00367"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_audit.csv",
+      "sha256": "b0aafc0a709b8b70ba47708b6d48c46efd55492a16a72118b99a61ae2334a7b7"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_evidence.jsonl",
+      "sha256": "2d6e2fdf1e033f85f7da598c4989a27da338f0f460164cc72269da9b5d9ded53"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_handbook.md",
+      "sha256": "0a639552dcfa25aedef01ba35cd9d4ab970be44ffd9a807c3ad41262eaa04337"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_rules.csv",
+      "sha256": "8ae0485f74ffe4d91dbd77b9af1f9b11022d41d00f0bb3ce4c4a9c4831855b83"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/original_examples.md",
+      "sha256": "b7a92d5755121121876008d450c4429aa3cc18a9e861b5169a14a4c133187924"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/source_wording_cautions.csv",
+      "sha256": "43fed29367690f37bcbbd2d8d07c8fa7636c3217670cd187787f15de49380db5"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/terminology.csv",
+      "sha256": "a459b6b5d89e73b2c0487e730d673f6241cc593ef1523948510064f4e986e316"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/unselected_candidates.csv",
+      "sha256": "23115de042bf4776997c0a16b86225076a0456e3a4a37efb447c03bf1bb38625"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P01_语言笔记.md",
+      "sha256": "9e4ee4702080a53a939895e96c633920e15943b92623c83e65f257ac5f7a26b4"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P02_语言笔记.md",
+      "sha256": "751e116a136600c96007efb7669612919b21c28320be6bf90846906d6cdf65dc"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P03_语言笔记.md",
+      "sha256": "1872a1102e0bf22a081232e6cbdf51485bcc1ee4294071fecc81ea1f3443a5c7"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P04_语言笔记.md",
+      "sha256": "71b4a0c73805fee93d0ca2ac766544ea2d2ab9c41826fddc921ee72d9a5fc77a"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P05_语言笔记.md",
+      "sha256": "370e8b688f45a73a31af4841a4686b5749e36fcb28c6cbde0456824ee2016e1b"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P06_语言笔记.md",
+      "sha256": "1e062c0a36ba357bd6cd098f6ea9f1982e42e4ebda66580e7afaa30306a1233a"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P07_语言笔记.md",
+      "sha256": "ec7a279c4d4b769f879d67337fa0576a142fd4de11b39f73bcb3b5e22579bedf"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P08_语言笔记.md",
+      "sha256": "1101dcd8878edda777423aaa2bcc1e1a76f0fcbe94f0cb9ddb790370d35395a2"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P09_语言笔记.md",
+      "sha256": "4621f90cdae4f99d094b175bed8e97bc9aa2110ca0bf1eb38cefd8214d0b7d29"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P10_语言笔记.md",
+      "sha256": "232185fba479a12b070318731e881162bd41cb188de337a433fb11f2c7e8f2c5"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P11_语言笔记.md",
+      "sha256": "1ccea420aaf69e3378230b60583c58d4d6e51b0d7d896318cb71cf96092b1ff7"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P12_语言笔记.md",
+      "sha256": "4e9f632f24607321319cb1c12d9c7ebd347b98899445fb4b0166239b7afece38"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P13_语言笔记.md",
+      "sha256": "ce3195234d5bad14b8f9469ec0ed674ed2312b4d4417da9605068f3d1802ae9d"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P14_语言笔记.md",
+      "sha256": "2a5b618f208038c768b7ebb30c638ba9ea9c5498623ade859fb1a73f7e4648df"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P15_语言笔记.md",
+      "sha256": "4c59e14ec95740aa38bbc1cee72c007f7ad0e34b1225f2b4310d057950706fe8"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P16_语言笔记.md",
+      "sha256": "e91fe486ea4bad642ae9388fd2d55d8cc14b8db672e135b724f093851e746bd1"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P17_语言笔记.md",
+      "sha256": "7a787ad69a981c9065cb884365d97ea12359fdc1581fa892235b8e7a54b76d76"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P18_语言笔记.md",
+      "sha256": "6ee085b11b814dda4e90fa6ba2b4ccfe88fe8a4f57dc57b18e57cfbb6f2368e8"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P19_语言笔记.md",
+      "sha256": "c0edf0b64f2e671061c76a52f09aaef19df7445370ef0515e6279af4e78da30a"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/逐篇语言笔记/P20_语言笔记.md",
+      "sha256": "8e8d05688292b4dfe54a6f9f2f16b7b81aaa4bdeb9c2b6cf821a4d3a1cba677b"
+    },
+    {
+      "path": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/验收报告.md",
+      "sha256": "d51511eca3486e64cbc42b69fd39af765a6165c73ca7201be9dfb3768b49f0d0"
+    }
+  ],
+  "business_gate_report": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/gate_report.json",
+  "upstream_snapshot": {
+    "path": "02_文章结构学习/v005_第5版/outputs/resource_snapshot.json",
+    "sha256": "01cd55a152243ea462bfd05351580e240bb2733230e05daf609e8a644a8b922e"
+  },
+  "counts": {
+    "corpus_pdfs": 20,
+    "journals": {
+      "中国社会科学": 7,
+      "社会学研究": 13
+    },
+    "candidates_read_in_context": 181,
+    "selected_evidence": 113,
+    "unselected_candidates": 68,
+    "rules": 27,
+    "original_examples": 27,
+    "counterexamples": 27,
+    "source_wording_cautions": 3,
+    "fulltext_read_complete_certified_by_this_attempt": 0
+  },
+  "created_at": "2026-11-14T22:48:58.316334+08:00",
+  "note": "Actual reviewed language candidate, not an accepted G3 resource. Original PDFs remain external/read-only."
+}

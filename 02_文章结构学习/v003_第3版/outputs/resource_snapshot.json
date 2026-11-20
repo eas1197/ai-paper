@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "module_id": "02",
+  "module_version": 3,
+  "resource_version": 2,
+  "resource_snapshot_id": "structure_candidate_r2_with_architecture_1_0",
+  "lifecycle": "build_once_reuse_many",
+  "status": "needs_review",
+  "files": [
+    {
+      "path": "02_文章结构学习/v003_第3版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "5e578c591c7fda1f23754825b1b9334e016e9abd100d1f73b27101210df3c37d"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/writing_profile.json",
+      "sha256": "2b5f9c95dd1de0c60fc0067e1bae827edaf11b65495d38b2e2502513a73294ac"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/写作计划.md",
+      "sha256": "cd36dd94fad96bd145ffe0f1a4b4c3bab90ac9a7f87083b6c12dde1eecf2d481"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/corpus20.csv",
+      "sha256": "515c9825026e063c92281b57f15246f08a30bff39b1146b1ccdca47f0b1eddd4"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_moves.csv",
+      "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/abstract_sentences.csv",
+      "sha256": "cbe750ae4a56f064e41ee2397a016339e775eec18fa563346f151a4682a9b5ce"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_handbook.md",
+      "sha256": "b1e9aad521197da084e12bc6f7fae1ae393efe8c55825b1f86ca8e18e9cb3c4f"
+    }
+  ],
+  "business_gate_report": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+  "writing_norm_available": true,
+  "note": "用户要求的架构规范已交付；20篇逐段复核仍未完成，不发布passed，不等同语言资源或研究关卡完成。"
+}

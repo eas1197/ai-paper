@@ -1,0 +1,18 @@
+{
+  "journal_id": "J002",
+  "source_url": "https://shjs.ruc.edu.cn/CN/column/column6.shtml",
+  "retrieved_at": "2026-11-16T15:02:31.887883+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://wvpn.ruc.edu.cn/login/index?redirect_authurl=https%3A%2F%2Fshjs.ruc.edu.cn%2FCN%2Fcolumn%2Fcolumn6.shtml",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J002_7217712edbd9/text.txt",
+  "sha256": "1311726e8362790ab3b0f5d8f4c55d23ce3b3e4182f001b6343b36f5cdd3b5f7",
+  "original_path": "primary_http/J002_7217712edbd9/response.html",
+  "original_sha256": "944c0473a73e1f8d75d14300bec08f96252b7b4726a1d42e7e87f349381fbced",
+  "line_count": 15,
+  "title": "VPN 认证与提示系统",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,24 @@
+{
+  "module_id": "01",
+  "name": "投稿期刊库",
+  "version": 1,
+  "version_label": "第1版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "10",
+    "11"
+  ],
+  "expected_artifacts": [
+    "journals.csv",
+    "journal_profile.json",
+    "guidelines_checklist.csv"
+  ],
+  "folders": [
+    "assets/guidelines",
+    "templates",
+    "outputs"
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "journal_id": "J013",
+  "source_url": "http://csss.whu.edu.cn/",
+  "retrieved_at": "2026-11-16T15:04:43.674174+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://csss.whu.edu.cn/",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J013_7d8c8d8a29da/text.txt",
+  "sha256": "bfd05898dc49314e1c4818167144f87a1f73da772ba9780ab885e891dd41a6c4",
+  "original_path": "primary_http/J013_7d8c8d8a29da/response.html",
+  "original_sha256": "d779f553fcd7ced31d3ad9d3a5f819ecdc35ebc16cd33cb13cfd7c312477fe36",
+  "line_count": 176,
+  "title": "武汉大学社会保障研究中心",
+  "guideline_links": [
+    "https://csss.whu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1461"
+  ],
+  "review_status": "awaiting_source_readback"
+}

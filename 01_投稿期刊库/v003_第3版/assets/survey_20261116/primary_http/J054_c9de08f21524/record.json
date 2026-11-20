@@ -1,0 +1,20 @@
+{
+  "journal_id": "J054",
+  "source_url": "https://www.zjskw.gov.cn/art/2024/10/10/art_1229819897_61002.html",
+  "retrieved_at": "2026-11-16T15:05:05.086695+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.zjskw.gov.cn/art/2024/10/10/art_1229819897_61002.html",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J054_c9de08f21524/text.txt",
+  "sha256": "0010b13a96c9296f880e21a4ad7d8b323eb63414f6a3c4848ba9474f01889cf1",
+  "original_path": "primary_http/J054_c9de08f21524/response.html",
+  "original_sha256": "b8f63d0dca79a65723c692caf9a743d19763e518c2f662a198a752213cbe0ab8",
+  "line_count": 120,
+  "title": "《浙江社会科学》投稿须知",
+  "guideline_links": [
+    "https://www.zjskw.gov.cn/col/col1229819897/index.html"
+  ],
+  "review_status": "awaiting_source_readback"
+}

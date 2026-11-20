@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-11-18",
+  "distinct_local_pdfs": 135,
+  "by_journal": {
+    "中国社会科学": 55,
+    "社会学研究": 80
+  },
+  "pdf_pages": 3013,
+  "hashes_rechecked": 135,
+  "abstracts_with_extracted_sentences": 126,
+  "abstract_sentence_candidates": 556,
+  "abstract_status_counts": {
+    "首页定位已复核，无显式摘要标签": 3,
+    "首页附英文摘要，中文写作范例仅取正文。": 1,
+    "已取得中文摘要候选": 123,
+    "首页题名后直接进入前言。": 1,
+    "首页题名后直接进入正文。": 5,
+    "笔谈编者按之后是本文题名与正文。": 1,
+    "研讨会发言，编者按后的本文题名下直接进入正文。": 1
+  },
+  "body_paragraph_candidates": 11149,
+  "study_type_counts": {
+    "定量": 45,
+    "理论与经验论述": 4,
+    "理论": 44,
+    "混合": 6,
+    "质性": 22,
+    "方法": 2,
+    "理论与案例": 3,
+    "综述": 1,
+    "质性与理论": 1,
+    "实验": 1,
+    "理论与模拟": 2,
+    "历史文本": 2,
+    "定量描述": 2
+  },
+  "exemplar_count": 58,
+  "functions": {
+    "design": 13,
+    "literature": 8,
+    "discussion": 6,
+    "hypothesis": 8,
+    "results": 17,
+    "question": 6
+  },
+  "supplementally_reviewed_paragraphs": 12,
+  "holdout_count": 8,
+  "min_function_examples": 6,
+  "retrieval": {
+    "manual": {
+      "queries": 8,
+      "returned": 0,
+      "function_hits": 0
+    },
+    "topic": {
+      "queries": 8,
+      "returned": 16,
+      "function_hits": 3
+    },
+    "function": {
+      "queries": 8,
+      "returned": 16,
+      "function_hits": 16
+    }
+  },
+  "gate_suggestion": "pilot"
+}

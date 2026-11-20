@@ -1,0 +1,35 @@
+{
+  "module_id": "07",
+  "name": "论文写作（单稿或三稿）",
+  "version": 2,
+  "version_label": "第2版",
+  "schema_version": 1,
+  "framework_status": "ready",
+  "business_status": "planned",
+  "depends_on": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "expected_artifacts": [
+    "frozen_manifest.json",
+    "draft_manifest.json",
+    "claims.csv",
+    "manuscript.md",
+    "self_check.csv"
+  ],
+  "folders": [
+    "templates",
+    "A稿",
+    "B稿",
+    "C稿",
+    "outputs"
+  ],
+  "execution_scope": "research",
+  "writing_modes": [
+    "single",
+    "three_plus_review"
+  ]
+}

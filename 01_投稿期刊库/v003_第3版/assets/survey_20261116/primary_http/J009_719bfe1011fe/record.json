@@ -1,0 +1,18 @@
+{
+  "journal_id": "J009",
+  "source_url": "https://qnyj.ajcass.com/",
+  "retrieved_at": "2026-11-16T15:04:33.898523+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://qnyj.ajcass.com/",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J009_719bfe1011fe/text.txt",
+  "sha256": "21d574558b8e6bbaf5dd01d5ed1b28bc4d288b1d71faefa48df5e68725ada0ac",
+  "original_path": "primary_http/J009_719bfe1011fe/response.html",
+  "original_sha256": "4de775275a17e241f759bc323b520ef904c3d4447549ed4e994cc97e0a7cfa01",
+  "line_count": 47,
+  "title": "青年研究",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

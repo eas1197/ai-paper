@@ -1,0 +1,20 @@
+{
+  "journal_id": "J096",
+  "source_url": "http://journal.ujn.edu.cn/zh/info/6189/",
+  "retrieved_at": "2026-11-16T15:05:25.418133+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "http://journal.ujn.edu.cn/zh/info/6189/",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J096_88f188ce0b77/text.txt",
+  "sha256": "e7f36ca50a8507471057d806b51853db697c9e3b0b933ebf13dd94c252b87428",
+  "original_path": "primary_http/J096_88f188ce0b77/response.html",
+  "original_sha256": "f0e060d01b9fc17591e0336341f67db5b2a9095ddbca4c0bafda6dc12ed969e9",
+  "line_count": 82,
+  "title": "投稿须知 - 济南大学学报（社会科学版）",
+  "guideline_links": [
+    "http://journal.ujn.edu.cn/zh/info/6189/"
+  ],
+  "review_status": "awaiting_source_readback"
+}

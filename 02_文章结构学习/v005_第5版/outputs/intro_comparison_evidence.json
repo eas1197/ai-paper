@@ -1,0 +1,293 @@
+{
+  "checked_at": "2026-11-14T22:05:24.904733+08:00",
+  "scope": "targeted_8_introductions",
+  "records": [
+    {
+      "paper_id": "P02",
+      "attachment_key": "SCCKUUS9",
+      "title": "当代中国的代际流动模式及其变迁",
+      "journal_issue": "中国社会科学，2015(5)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\SCCKUUS9\\李路路和朱斌 - 2015 - 当代中国的代际流动模式及其变迁.pdf",
+      "pdf_sha256": "38a9f42b02e881aa74796fc986f6378d3956ff10bed43252c51718313b909667",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/SCCKUUS9/pages.json",
+      "pages_json_sha256": "11dad8c315cf1a3e8507333c32d5665c545d3f44a41e3c4e2fe74e5b0d6e463c",
+      "checked_pdf_pages": [
+        1,
+        2
+      ],
+      "printed_intro_pages": "40—41",
+      "progression_summary": "社会变化与不平等→代际流动与机会结构→研究的公共及学术意义；两种逻辑在下一节展开。",
+      "I3_implication": "研究意义与对象聚焦先行，不要求I3列出解释路径。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "f89e82be6ef0671278fc49753419d9d98c97368bc14c00b0932b57a3a4177214",
+          "text_length": 1202
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "0ccb77df90289aec63456e2f5b83496c0b20578b49391295ae9674acc39a78af",
+          "text_length": 1929
+        }
+      ]
+    },
+    {
+      "paper_id": "P05",
+      "attachment_key": "MY99VSIF",
+      "title": "资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008)",
+      "journal_issue": "中国社会科学，2011(3)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\MY99VSIF\\刘军强 - 2011 - 资源、激励与部门利益：中国社会保险征缴体制的纵贯研究(1999—2008).pdf",
+      "pdf_sha256": "03350a59af9155c576b77cd07b5486aeaa3a587f8f57032087986b0ab44a33da",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/MY99VSIF/pages.json",
+      "pages_json_sha256": "070f6ea804806b3d7eff0030271133374c74b71192aeff712490c23495922877",
+      "checked_pdf_pages": [
+        1,
+        2
+      ],
+      "printed_intro_pages": "139—140",
+      "progression_summary": "未决征缴条款→制度选择疑问及规模意义→部门利益→资料与两个问题；文献综述随后开始。",
+      "I3_implication": "制度条款可以直接组织设问，不需先形成2—4条路径清单。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "6fde7aacbb247a1c1a8eb983ec387b7cbbbfb2c7e37b01be7f0762b83308706c",
+          "text_length": 1195
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "52f4573cdc59ff43cd9b2e9b6ff72b68c41fd44116eff536014c831415879208",
+          "text_length": 1915
+        }
+      ]
+    },
+    {
+      "paper_id": "P08",
+      "attachment_key": "89UP6KH7",
+      "title": "文化再生产还是文化流动——中国大学生的教育成就获得不平等研究",
+      "journal_issue": "社会学研究，2018(1)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\89UP6KH7\\朱斌 - 2018 - 文化再生产还是文化流动——中国大学生的教育成就获得不平等研究.pdf",
+      "pdf_sha256": "d15befee9da4f344052c9fdf2895aa8b55546c3a3981ca1c4eff51330a4af33e",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/89UP6KH7/pages.json",
+      "pages_json_sha256": "617672cb0ec40bd557c6ef765c8b76ecace936d7d8400524ff1530ed2c05ae2d",
+      "checked_pdf_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "printed_intro_pages": "142—144（引言）",
+      "progression_summary": "现代化与教育不平等的经验疑问→升学阶段→学业成就环节→文化理论及问题；下一节从PDF第4页开始。",
+      "I3_implication": "引言确可展开较长理论铺垫，不能反向规定引言一律不综述。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "5f5b1a07f236dee439eb610707e551545d788d9c54146c3a9f33584d555c314b",
+          "text_length": 834
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "ad50568bd6114db6aa919226298faa14b477290a1463637a3b1940263e5cbb43",
+          "text_length": 1093
+        },
+        {
+          "pdf_page": 3,
+          "text_sha256": "027142e58b157c44fe8256935ce461bee6ca6837b1b1d7a8ee03a227dbbaa792",
+          "text_length": 963
+        },
+        {
+          "pdf_page": 4,
+          "text_sha256": "02e0fced970d78eb9d3faaa95a43d7d2ff95b1b2d181cf7ec42b2027ced3afb1",
+          "text_length": 1005
+        }
+      ]
+    },
+    {
+      "paper_id": "P10",
+      "attachment_key": "FQ7RQ5NC",
+      "title": "低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析",
+      "journal_issue": "社会学研究，2025(2)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\FQ7RQ5NC\\宋健和陈文琪 - 2025 - 低生育率社会中的家庭结构与育儿功能——基于资源供需视角的实证分析.pdf",
+      "pdf_sha256": "a8fa2c99ce1edfc84f4d80dc0548e1f254e3e1ba177f9ffb91cde671edc64393",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/FQ7RQ5NC/pages.json",
+      "pages_json_sha256": "a1b74018e65c15f97593aea8257bd80235a442ba0b342e4a959f22fb1dd23aed",
+      "checked_pdf_pages": [
+        1,
+        2,
+        3
+      ],
+      "printed_intro_pages": "19—21",
+      "progression_summary": "低生育情境、政策与资源→育儿功能研究需要→家庭对象界定→供需视角→贡献。",
+      "I3_implication": "理论引入服务对象与功能界定，顺序取决于问题。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "63a9bdf944a8d14c08388f1873b5ac9494599ef9928c99088f1dfadf554130fc",
+          "text_length": 740
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "2b3162ea3a4f91599c32aac9d10b3bd8b4b85edb838b42d2487e19c6e0910e66",
+          "text_length": 1410
+        },
+        {
+          "pdf_page": 3,
+          "text_sha256": "cd3960cdf63dc9c67b71b7a1426d6b4e1293364aaa0016eccba6f38a304e2b74",
+          "text_length": 1109
+        }
+      ]
+    },
+    {
+      "paper_id": "P12",
+      "attachment_key": "CJB64WZK",
+      "title": "从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究",
+      "journal_issue": "社会学研究，2024(4)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\CJB64WZK\\张咏雪 - 2024 - 从自动化技术到生成式人工智能——技术对劳动者影响的技能异质性研究.pdf",
+      "pdf_sha256": "a6c04485c67ae0dc7eccc6da981027986dcde9f202a9b8b4b9ada7774ea4f499",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/CJB64WZK/pages.json",
+      "pages_json_sha256": "c7a77a685234a6b96656312669936462ea734cec3b3c0faf40dca0481ed51e0b",
+      "checked_pdf_pages": [
+        1,
+        2
+      ],
+      "printed_intro_pages": "69—70",
+      "progression_summary": "国家目标→技术演变与中国情境→生成式技术的新变化→劳动问题；替代与控制的系统综述在下一节。",
+      "I3_implication": "引言可优先搭建情境，解释路径放入后续文献节。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "748b73b60903d761fba012426b566b8b411f7f2d16143b617a8f85ce7121fdfb",
+          "text_length": 926
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "f4df619c1a057374f1e2bb4d9c2fa9a6bfe2b807e334ba6d0a354ad7bb3d1402",
+          "text_length": 1187
+        }
+      ]
+    },
+    {
+      "paper_id": "P15",
+      "attachment_key": "ZLZANUD2",
+      "title": "技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响",
+      "journal_issue": "社会学研究，2021(1)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\ZLZANUD2\\范梓腾和宁晶 - 2021 - 技术变革中的福利态度转变——自动化替代对个体养老责任偏好的影响.pdf",
+      "pdf_sha256": "ebbed199cf68395555e3d0912d966aa7cbfbcd5b985af9dd279670e80ebb9cd9",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/ZLZANUD2/pages.json",
+      "pages_json_sha256": "08715a7875ceb67aa23769b0da469b17cd3ebe87fed4753a4576a7c718365649",
+      "checked_pdf_pages": [
+        1,
+        2,
+        3
+      ],
+      "printed_intro_pages": "160—162",
+      "progression_summary": "自动化情境与风险→福利联系→养老责任→相关因素及技术风险待解释处→数据与贡献。",
+      "I3_implication": "从现实风险收窄到具体态度关系，不必按路径数量组织I3。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "16cd86ce9159d83fa572d3385ae40d4e23d7e235fd6fc8058cfdf748afe079e9",
+          "text_length": 834
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "0302126879e669daf62f8b9404d3855ce0ac2a09727b0ce626c1519b612c00ce",
+          "text_length": 1160
+        },
+        {
+          "pdf_page": 3,
+          "text_sha256": "d0715893d8ef0015afea4dfdd348842f20fb2af927d6c0a209aa2f2d56ce13db",
+          "text_length": 993
+        }
+      ]
+    },
+    {
+      "paper_id": "P16",
+      "attachment_key": "V3CA3AZW",
+      "title": "家庭背景如何影响儿童学业成就——义务教育阶段家庭社会经济地位影响差异分析",
+      "journal_issue": "社会学研究，2016(4)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\V3CA3AZW\\李忠路和邱泽奇 - 2016 - 家庭背景如何影响儿童学业成就——义务教育阶段家庭社会经济地位影响差异分析.pdf",
+      "pdf_sha256": "531bf821c12b9b46d40632b6e06a91185c620b67520db03b36dca8c3f8edc1b7",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/V3CA3AZW/pages.json",
+      "pages_json_sha256": "548482131e0de441b11c1debe658d27592c91378f97fb16eaa6daf7db940f51e",
+      "checked_pdf_pages": [
+        1,
+        2,
+        3
+      ],
+      "printed_intro_pages": "121—122（引言）",
+      "progression_summary": "教育公平意义→已有家庭背景关系→最终获得研究与过程问题→义务教育成就→研究问题；三类资本综述在下一节。",
+      "I3_implication": "从最终结果转向过程是研究聚焦动作，不等于解释路径概括。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "1d3d337ceaa63a734806912a3c6b2e376cbe148ccbcc7d5658ef289fdb157f9e",
+          "text_length": 829
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "77a2999af63818bc5d2f611b920370b870f492335297a735841e12551f4dcdb3",
+          "text_length": 1019
+        },
+        {
+          "pdf_page": 3,
+          "text_sha256": "dc7c0ce66e6c352d53231fb2860e74591ff22b53b9df39f065f826dc478d17d0",
+          "text_length": 1008
+        }
+      ]
+    },
+    {
+      "paper_id": "P19",
+      "attachment_key": "GTUTSZDI",
+      "title": "外出还是留守——农村夫妻外出安排的经验研究",
+      "journal_issue": "社会学研究，2016(5)",
+      "checked_at": "2026-11-14T22:05:24.904733+08:00",
+      "pdf_path": "C:\\Users\\hou\\Zotero\\storage\\GTUTSZDI\\李代和张春泥 - 2016 - 外出还是留守——农村夫妻外出安排的经验研究.pdf",
+      "pdf_sha256": "95bf479e4d6d08e66be5d8afdffc6a36b2299612a78c703981ac24ea908e93f2",
+      "pages_json_path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/fulltext/GTUTSZDI/pages.json",
+      "pages_json_sha256": "d9dd44e5c16270c09d3f1f3e66a831179ea3f75e4a469bc1e70e97477dd7e8ef",
+      "checked_pdf_pages": [
+        1,
+        2
+      ],
+      "printed_intro_pages": "139—140",
+      "progression_summary": "家庭迁移变化→社会后果→外出安排的基础分布问题→既有资料与家庭单位→CFPS问题；随后进入文献节。",
+      "I3_implication": "对象与分析单位可以成为引言推进的核心。",
+      "evidence_type": "direct_page_text_plus_cross_paper_synthesis",
+      "paragraph_numbers_verified": false,
+      "page_locators": [
+        {
+          "pdf_page": 1,
+          "text_sha256": "262ea21295461d5a726b5db2e56915f681e668d9af15bb2aefa5e8ee1da98369",
+          "text_length": 745
+        },
+        {
+          "pdf_page": 2,
+          "text_sha256": "b7c36994ad8118334005556b103b6d86310f1cbc3c9f4578355b56229712523f",
+          "text_length": 925
+        }
+      ]
+    }
+  ],
+  "G2_status": "needs_review"
+}

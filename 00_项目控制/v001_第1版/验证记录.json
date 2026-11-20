@@ -1,0 +1,27 @@
+{
+  "created_on": "2026-11-14",
+  "framework_version": 1,
+  "module_count": 13,
+  "validation": {
+    "framework_valid": true,
+    "problems": [],
+    "database_table_count": 33,
+    "research_gates_evaluated": false,
+    "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+  },
+  "schema_reference_integrity": true,
+  "schema_definition_count": 12,
+  "full_jsonschema_metaschema_validation": "not_run_no_validator_installed",
+  "business_status": "not_executed",
+  "submission_enabled": false,
+  "unit_tests": {
+    "passed": 4,
+    "failed": 0,
+    "coverage": [
+      "dependency_cycle_and_missing_reference",
+      "path_escape",
+      "init_no_overwrite_and_optional_skip",
+      "submission_family_and_active_slot"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "journal_id": "J047",
+  "source_url": "https://gggl.cbpt.cnki.net/portal/journal/portal/client/news/GGGL_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:02:54.603154+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://gggl.cbpt.cnki.net/portal/journal/portal/client/news/GGGL_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J047_46abb894870c/text.txt",
+  "sha256": "a9ddef1bd04bab3b60b23de8d5aaf3e13c5846d34027e95db212ed9f77795028",
+  "original_path": "primary_http/J047_46abb894870c/response.html",
+  "original_sha256": "c181df9565faf90ca6240d126b7d9c48387ac3e35cc4c86b2e3b97facc8c140f",
+  "line_count": 347,
+  "title": "公共管理学报",
+  "guideline_links": [
+    "https://gggl.cbpt.cnki.net/portal/journal/portal/client/news/0c152b48054b0517e9108a5b670fb674",
+    "https://gggl.cbpt.cnki.net/portal/journal/portal/client/news/GGGL_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

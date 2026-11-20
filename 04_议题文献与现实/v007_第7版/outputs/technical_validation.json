@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-18",
+  "technical_validation": {
+    "04_unit_tests_passed": 28,
+    "11_unit_tests_passed": 16,
+    "07_unit_tests_passed": 6,
+    "framework_unit_tests_passed": 9,
+    "framework_valid": true
+  },
+  "field_run": "cgss23_edu_internet_20261118",
+  "field_stage_04": {
+    "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_04/attempt_007/gate_report.json",
+    "sha256": "58cfa384d7c0948bfb208275c8682ba6e67a7becc47cb56f986b39d0639f5f2a"
+  },
+  "field_stage_05": {
+    "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/stage_05/attempt_007/gate_report.json",
+    "sha256": "863412085b33be4f3f14595d57c96503483a49e399e039fa0123b2e1b2dd9620"
+  },
+  "field_counts": {
+    "metadata": 1,
+    "source_eligible": 1,
+    "abstracts_read": 1,
+    "core_selected": 0,
+    "core_read": 0,
+    "views": 0
+  },
+  "field_status": "needs_review",
+  "online_reading_ledger": {
+    "path": "00_项目控制/v002_第2版/runs/cgss23_edu_internet_20261118/联网六刊_20261118_attempt002/公开片段阅读.md",
+    "sha256": "32ebf2d28622d438a13b644e7e9960e094eef17d28503eea3413b1631540ac9d"
+  }
+}

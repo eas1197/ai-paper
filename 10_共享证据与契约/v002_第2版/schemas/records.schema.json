@@ -1,0 +1,1073 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sociology-research:records:v1",
+  "title": "定量社会学核心交换记录 · 第1版",
+  "description": "附加字段由模块扩展；形状校验不能证明证据或研究有效。template=true文件不属于正式记录。",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/source"
+    },
+    {
+      "$ref": "#/$defs/journal"
+    },
+    {
+      "$ref": "#/$defs/paper"
+    },
+    {
+      "$ref": "#/$defs/evidence"
+    },
+    {
+      "$ref": "#/$defs/relation"
+    },
+    {
+      "$ref": "#/$defs/hypothesis"
+    },
+    {
+      "$ref": "#/$defs/variable"
+    },
+    {
+      "$ref": "#/$defs/method_reference"
+    },
+    {
+      "$ref": "#/$defs/result"
+    },
+    {
+      "$ref": "#/$defs/claim"
+    },
+    {
+      "$ref": "#/$defs/draft"
+    },
+    {
+      "$ref": "#/$defs/stage_manifest"
+    }
+  ],
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "nullableText": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/text"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "source"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "source_id": {
+          "$ref": "#/$defs/text"
+        },
+        "kind": {
+          "$ref": "#/$defs/text"
+        },
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "url_or_path": {
+          "$ref": "#/$defs/text"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "access_basis": {
+          "$ref": "#/$defs/text"
+        },
+        "share_scope": {
+          "$ref": "#/$defs/text"
+        },
+        "status": {
+          "enum": [
+            "unverified",
+            "verified",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "source_id",
+        "kind",
+        "title",
+        "url_or_path",
+        "retrieved_at",
+        "access_basis",
+        "share_scope",
+        "status"
+      ],
+      "additionalProperties": true
+    },
+    "journal": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "journal"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "journal_id": {
+          "$ref": "#/$defs/text"
+        },
+        "name": {
+          "$ref": "#/$defs/text"
+        },
+        "quota_group": {
+          "enum": [
+            "CSSCI",
+            "PKU",
+            null
+          ]
+        },
+        "indexing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "CSSCI_SOURCE",
+                  "CSSCI_EXPANDED",
+                  "CSSCI_COLLECTION",
+                  "PKU_CORE"
+                ]
+              },
+              "edition": {
+                "$ref": "#/$defs/text"
+              },
+              "evidence_ids": {
+                "$ref": "#/$defs/texts"
+              }
+            },
+            "required": [
+              "kind",
+              "edition",
+              "evidence_ids"
+            ]
+          }
+        },
+        "directions": {
+          "$ref": "#/$defs/texts"
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "fees": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "submission": {
+          "type": "object"
+        },
+        "undergraduate_policy": {
+          "$ref": "#/$defs/text"
+        },
+        "guideline_document_id": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "verification_status": {
+          "enum": [
+            "unverified",
+            "verified",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "journal_id",
+        "name",
+        "quota_group",
+        "indexing",
+        "directions",
+        "metrics",
+        "fees",
+        "submission",
+        "undergraduate_policy",
+        "guideline_document_id",
+        "as_of",
+        "verification_status"
+      ],
+      "additionalProperties": true
+    },
+    "paper": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "paper"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "paper_id": {
+          "$ref": "#/$defs/text"
+        },
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "authors": {
+          "$ref": "#/$defs/texts"
+        },
+        "year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "journal": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "doi": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "source_id": {
+          "$ref": "#/$defs/text"
+        },
+        "abstract": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "fulltext_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "fulltext_identity_verified": {
+          "type": "boolean"
+        },
+        "fulltext_complete": {
+          "type": "boolean"
+        },
+        "fulltext_read_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "verification_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "paper_id",
+        "title",
+        "authors",
+        "source_id",
+        "abstract",
+        "fulltext_identity_verified",
+        "fulltext_complete",
+        "verification_status"
+      ],
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "evidence"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "evidence_id": {
+          "$ref": "#/$defs/text"
+        },
+        "paper_id": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "document_id": {
+          "$ref": "#/$defs/text"
+        },
+        "locator": {
+          "$ref": "#/$defs/text"
+        },
+        "paraphrase": {
+          "$ref": "#/$defs/text"
+        },
+        "evidence_class": {
+          "enum": [
+            "direct",
+            "synthesis",
+            "inference"
+          ]
+        },
+        "stance": {
+          "enum": [
+            "support",
+            "contradict",
+            "qualify",
+            "context"
+          ]
+        },
+        "basis_evidence_ids": {
+          "$ref": "#/$defs/texts"
+        },
+        "source_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "review_status": {
+          "enum": [
+            "unverified",
+            "verified",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "evidence_id",
+        "document_id",
+        "locator",
+        "paraphrase",
+        "evidence_class",
+        "stance",
+        "basis_evidence_ids",
+        "source_sha256",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "relation": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "relation"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "relation_id": {
+          "$ref": "#/$defs/text"
+        },
+        "paper_id": {
+          "$ref": "#/$defs/text"
+        },
+        "X": {
+          "$ref": "#/$defs/text"
+        },
+        "Y": {
+          "$ref": "#/$defs/text"
+        },
+        "M": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "Z": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "relation_type": {
+          "$ref": "#/$defs/text"
+        },
+        "direction": {
+          "$ref": "#/$defs/text"
+        },
+        "unit": {
+          "$ref": "#/$defs/text"
+        },
+        "scope": {
+          "type": "object"
+        },
+        "claimed_strength": {
+          "$ref": "#/$defs/text"
+        },
+        "supported_strength": {
+          "$ref": "#/$defs/text"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "read_basis": {
+          "enum": [
+            "abstract",
+            "fulltext"
+          ]
+        },
+        "review_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "relation_id",
+        "paper_id",
+        "X",
+        "Y",
+        "relation_type",
+        "direction",
+        "unit",
+        "scope",
+        "claimed_strength",
+        "supported_strength",
+        "evidence_ids",
+        "read_basis",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "hypothesis": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "hypothesis"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "hypothesis_id": {
+          "$ref": "#/$defs/text"
+        },
+        "run_id": {
+          "$ref": "#/$defs/text"
+        },
+        "research_question": {
+          "$ref": "#/$defs/text"
+        },
+        "gap_type": {
+          "enum": [
+            "reality_theory_tension",
+            "same_level_gap",
+            "scope_change",
+            "relation_revision"
+          ]
+        },
+        "baseline_paper_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "same_level_checks": {
+          "type": "object",
+          "properties": {
+            "abstraction": {
+              "type": "object",
+              "properties": {
+                "passed": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "passed",
+                "reason"
+              ]
+            },
+            "unit": {
+              "type": "object",
+              "properties": {
+                "passed": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "passed",
+                "reason"
+              ]
+            },
+            "role": {
+              "type": "object",
+              "properties": {
+                "passed": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "passed",
+                "reason"
+              ]
+            },
+            "time": {
+              "type": "object",
+              "properties": {
+                "passed": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "passed",
+                "reason"
+              ]
+            },
+            "dimension": {
+              "type": "object",
+              "properties": {
+                "passed": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "passed",
+                "reason"
+              ]
+            }
+          },
+          "required": [
+            "abstraction",
+            "unit",
+            "role",
+            "time",
+            "dimension"
+          ]
+        },
+        "X": {
+          "$ref": "#/$defs/text"
+        },
+        "Y": {
+          "$ref": "#/$defs/text"
+        },
+        "mechanism": {
+          "$ref": "#/$defs/text"
+        },
+        "scope": {
+          "$ref": "#/$defs/text"
+        },
+        "expected_pattern": {
+          "$ref": "#/$defs/text"
+        },
+        "falsification": {
+          "$ref": "#/$defs/text"
+        },
+        "competing_explanations": {
+          "$ref": "#/$defs/texts"
+        },
+        "dataset_feasibility": {
+          "$ref": "#/$defs/text"
+        },
+        "causal_claim_level": {
+          "$ref": "#/$defs/text"
+        },
+        "review_status": {
+          "enum": [
+            "pending",
+            "accepted",
+            "revised",
+            "deferred",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "hypothesis_id",
+        "run_id",
+        "research_question",
+        "gap_type",
+        "baseline_paper_ids",
+        "evidence_ids",
+        "same_level_checks",
+        "X",
+        "Y",
+        "mechanism",
+        "scope",
+        "expected_pattern",
+        "falsification",
+        "competing_explanations",
+        "dataset_feasibility",
+        "causal_claim_level",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "variable": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "variable"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "variable_id": {
+          "$ref": "#/$defs/text"
+        },
+        "run_id": {
+          "$ref": "#/$defs/text"
+        },
+        "dataset_id": {
+          "$ref": "#/$defs/text"
+        },
+        "source_variable": {
+          "$ref": "#/$defs/text"
+        },
+        "role": {
+          "enum": [
+            "X",
+            "Y",
+            "M",
+            "Z",
+            "control",
+            "design",
+            "id"
+          ]
+        },
+        "concept": {
+          "$ref": "#/$defs/text"
+        },
+        "question_text": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "variable_label": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "value_labels": {
+          "type": "object"
+        },
+        "special_missing": {
+          "type": "object"
+        },
+        "population": {
+          "$ref": "#/$defs/text"
+        },
+        "measurement_time": {
+          "$ref": "#/$defs/text"
+        },
+        "construction": {
+          "$ref": "#/$defs/text"
+        },
+        "rationale": {
+          "$ref": "#/$defs/text"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/texts"
+        },
+        "review_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "variable_id",
+        "run_id",
+        "dataset_id",
+        "source_variable",
+        "role",
+        "concept",
+        "value_labels",
+        "special_missing",
+        "population",
+        "measurement_time",
+        "construction",
+        "rationale",
+        "evidence_ids",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "method_reference": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "method_reference"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "method_id": {
+          "$ref": "#/$defs/text"
+        },
+        "paper_id": {
+          "$ref": "#/$defs/text"
+        },
+        "reference_role": {
+          "$ref": "#/$defs/text"
+        },
+        "method_locator": {
+          "$ref": "#/$defs/text"
+        },
+        "table_locator": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "extracted_rules": {
+          "type": "object"
+        },
+        "fulltext_read": {
+          "type": "boolean"
+        },
+        "review_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "method_id",
+        "paper_id",
+        "reference_role",
+        "method_locator",
+        "extracted_rules",
+        "fulltext_read",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "result"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "result_id": {
+          "$ref": "#/$defs/text"
+        },
+        "run_id": {
+          "$ref": "#/$defs/text"
+        },
+        "model_id": {
+          "$ref": "#/$defs/text"
+        },
+        "sample_version": {
+          "$ref": "#/$defs/text"
+        },
+        "outcome": {
+          "$ref": "#/$defs/text"
+        },
+        "term": {
+          "$ref": "#/$defs/text"
+        },
+        "estimate": {
+          "type": "number"
+        },
+        "scale": {
+          "$ref": "#/$defs/text"
+        },
+        "n_obs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "p_value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "ci_level": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 1
+        },
+        "code_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "output_document_id": {
+          "$ref": "#/$defs/text"
+        },
+        "executed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verification_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "result_id",
+        "run_id",
+        "model_id",
+        "sample_version",
+        "outcome",
+        "term",
+        "estimate",
+        "scale",
+        "n_obs",
+        "code_sha256",
+        "output_document_id",
+        "executed_at",
+        "verification_status"
+      ],
+      "additionalProperties": true
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "claim"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "claim_id": {
+          "$ref": "#/$defs/text"
+        },
+        "draft_id": {
+          "$ref": "#/$defs/text"
+        },
+        "sentence_locator": {
+          "$ref": "#/$defs/text"
+        },
+        "claim_text": {
+          "$ref": "#/$defs/text"
+        },
+        "claim_type": {
+          "enum": [
+            "literature",
+            "result",
+            "context",
+            "inference"
+          ]
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/texts"
+        },
+        "result_ids": {
+          "$ref": "#/$defs/texts"
+        },
+        "scope_limit": {
+          "$ref": "#/$defs/text"
+        },
+        "review_status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "claim_id",
+        "draft_id",
+        "sentence_locator",
+        "claim_text",
+        "claim_type",
+        "evidence_ids",
+        "result_ids",
+        "scope_limit",
+        "review_status"
+      ],
+      "additionalProperties": true
+    },
+    "draft": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "draft"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "draft_id": {
+          "$ref": "#/$defs/text"
+        },
+        "run_id": {
+          "$ref": "#/$defs/text"
+        },
+        "pack_id": {
+          "$ref": "#/$defs/text"
+        },
+        "pack_manifest_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "label": {
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "manuscript_family_id": {
+          "$ref": "#/$defs/text"
+        },
+        "context_id": {
+          "$ref": "#/$defs/text"
+        },
+        "read_files": {
+          "$ref": "#/$defs/texts"
+        },
+        "other_drafts_accessed": {
+          "const": false
+        },
+        "file_path": {
+          "$ref": "#/$defs/text"
+        },
+        "file_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "status": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "draft_id",
+        "run_id",
+        "pack_id",
+        "pack_manifest_sha256",
+        "label",
+        "manuscript_family_id",
+        "context_id",
+        "read_files",
+        "other_drafts_accessed",
+        "file_path",
+        "file_sha256",
+        "status"
+      ],
+      "additionalProperties": true
+    },
+    "stage_manifest": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "stage_manifest"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "run_id": {
+          "$ref": "#/$defs/text"
+        },
+        "stage_id": {
+          "$ref": "#/$defs/text"
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "module_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "ready",
+            "running",
+            "needs_review",
+            "failed",
+            "passed",
+            "stale",
+            "skipped"
+          ]
+        },
+        "config_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "root_requirements_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "upstream_manifests": {
+          "type": "array"
+        },
+        "input_files": {
+          "type": "array"
+        },
+        "output_files": {
+          "type": "array"
+        },
+        "environment": {
+          "type": "object"
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "gate_report": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "deviations": {
+          "$ref": "#/$defs/texts"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "run_id",
+        "stage_id",
+        "attempt",
+        "module_version",
+        "status",
+        "config_sha256",
+        "root_requirements_sha256",
+        "upstream_manifests",
+        "input_files",
+        "output_files",
+        "environment",
+        "seed",
+        "gate_report",
+        "deviations"
+      ],
+      "additionalProperties": true
+    }
+  }
+}

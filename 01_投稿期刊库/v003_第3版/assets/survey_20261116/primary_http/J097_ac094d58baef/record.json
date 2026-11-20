@@ -1,0 +1,20 @@
+{
+  "journal_id": "J097",
+  "source_url": "https://journal.bjut.edu.cn/bjgydxxbskb/zgjz",
+  "retrieved_at": "2026-11-16T15:05:26.314490+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://journal.bjut.edu.cn/bjgydxxbskb/zgjz",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J097_ac094d58baef/text.txt",
+  "sha256": "0edc1bfc023784418d2bd7ac96b842c99551210b1ce9253aee167eaa7cdf48bf",
+  "original_path": "primary_http/J097_ac094d58baef/response.html",
+  "original_sha256": "68d3121d7e3850b520ab179ec60cef91ff9d00048fe926d788b612509499c290",
+  "line_count": 75,
+  "title": "《北京工业大学学报（社会科学版）》征稿简则",
+  "guideline_links": [
+    "https://journal.bjut.edu.cn/bjgydxxbskb/zgjz"
+  ],
+  "review_status": "awaiting_source_readback"
+}

@@ -1,0 +1,9 @@
+{
+  "journal_id": "J063",
+  "source_url": "https://zzxk1979.cn/Article/index/cid/69/lid/55/id/1378.html",
+  "retrieved_at": "2026-11-16T15:05:07.651312+08:00",
+  "tls_verified": true,
+  "status": "failed",
+  "error_type": "ReadTimeout",
+  "reason": "HTTPSConnectionPool(host='zzxk1979.cn', port=443): Read timed out. (read timeout=16)"
+}

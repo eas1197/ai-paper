@@ -1,0 +1,765 @@
+42 ঳第四三Н期
+引言
+随着中国式现代化进程的不断推进,无论是建设现代化产业体系,还是提升全民生活水平,
+都要求我们顺应数字时代潮流、深入推进信息化。数字时代本身就是知识时代,生活于其中的人
+们不仅从各种渠道获得知识以塑造和更新认知,而且个体的社会行动与话语实践也会凭借数字技
+术为社会知识库创造各种新内容。1因此,数字时代的知识生产与接受实践构成人们精神生活的
+重要部分,也成为社会理论必须回答的基本问题。不少学者已花费笔墨探讨数字社会中的知识
+实践,或者讨论数字社会中的现实建构问题,为我们处理数字时代各种问题提供了基本参照。2
+然而,多数研究者或集中于明晰的文本化知识,或呈现网络中的社会共享认知,对隐匿的、非书
+面的、情境性的、实践性的具身知识或默会知识(tacit knowledge)的讨论却不够系统,3关于这
+种知识如何在数字技术影响下生成、存续与更新的讨论更少。
+默会知识构成人们日常实践或群体活动常识化运作的基础,从各种制作技能到各种集体活动,
+都需要依赖默会逻辑。4社会理论对知识生产与存续过程毫不陌生,针对默会知识及其生产过程的
+系统分析却少之又少,遑论直接分析数字技术对其塑造的问题。具体而言,奥古斯特·孔德(Auguste
+数字时代的默会知识何以生产
+杨太文
+【内容摘要】 数字技术已然改变了知识生产、传播与实践的底层逻辑,为知识社会学研究开辟了新情
+境,但充满隐匿性、实践性、情境性的默会知识如何被其塑造的问题尚未被深入讨论。
+尽管默会知识早已被广泛认可,但鲜有学者对默会知识的生产进行系统梳理,遑论考察
+数字技术对其的影响。在回溯过往对默会知识探讨的基础上,默会知识可根据内容与存
+在基础划分为九种类型,知识生产路径可依据时间性与能动性水平区分为三种模式,数
+字技术的深度介入正在重塑默会知识的生产、传播与使用路径。
+【关 键 词】 默会知识 数字技术 惯习 身体 知识社会学 知识生产
+【作 者】 杨太文,华东师范大学社会发展学院博士研究生。(上海 201100)
+微信公众号
+
+
+43
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+Comte)在 19 世纪初就划定了社会研究的知识范围,规定研究对象需为真实、精确、有用、确定
+的实证知识(positive knowledge),而非神秘、模糊、思辨的知识。5这种实证精神奠定了较长时期
+内社会理论研究的认识论基础,使后继社会学家尤为重视操作性定义、表象、分类等问题,所以
+当时学界对分析性知识的偏好胜过默会知识。6 20 世纪以来的知识社会学,大都将注意力转移到
+科学知识之中,旨在探讨科学知识制造的社会基础,学界要么围绕实验室探究社会因素对知识生
+产的作用,要么探究科学的社会形式及其变迁,较少专门将默会知识作为考察中心。7之后,新观
+念社会学转而用场域、荣誉或自我概念研究学派、学脉、学术观念、哲学理念等知识形式,虽然
+有些讨论不乏涉及默会性的符号权力或观念风格,但其论证核心仍是可清晰言说或能被明确表征
+的知识。8与之有别,现象学式的知识社会学曾大量讨论日常生活中的常识知识和社会现实,这挑
+战了既有的实证知识传统,对我们理解默会知识帮助甚大,但这种研究仍存在问题,尤其是并未
+说明常识知识和默会知识之间的复杂关系。9
+虽然既往知识社会学未将其系统化,但很多学者并未遗忘这个主题。一方面,对认知、实
+践、互动、集体活动乃至权力作用范围问题进行讨论时,他们大都或多或少谈及此问题。早期
+社会人类学家十分关注部落社会流传的非书面化沟通技术,他们集中讨论巫术、工匠技艺(如
+制造斧头)、暗号(眨眼睛)及其背后的深层游戏(deep play)。10另一方面,默会知识又是一种
+碎片化主题,其可见于各个理论家的论证材料、观点以及佐证思路之中,甚至很多学者将社会
+研究本身作为一种手艺(craft)。11很多学者虽未直接使用默会知识概念,但许多争论却总是围
+绕这个概念展开。这既包括安东尼·吉登斯(Anthony Giddens)的实践意识、皮埃尔·布尔迪厄
+(Pierre Bourdieu)的具身化惯习(habitus)等个体层面的默会知识概念,也包括伊维塔·泽鲁巴维
+尔(Eviatar Zerubavel)的合谋性沉默、哈罗德·加芬克尔(Harold Gar■nkel)的索引链条或威廉·托
+马斯(William Thomas)理论中的情景定义等社会关系或集体层面的默会知识概念。12关于默会知
+识的社会学研究散落在不同学者论证的诸多层次,但鲜有学者对它们进行系统性比较与论述。
+因此,要想反思默会知识的生产以及数字时代的默会知识问题,必须从碎片化的社会理论出
+发,先回顾以往学者探讨默会知识的基本范围,再梳理默会知识的类型、生产 / 再生产机制,最
+后考察数字技术对它的塑造和影响,以此拓展出一种新的知识社会学研究路径。知识生产是指个
+体对默会知识的获取和具身化过程,再生产是指默会知识在个人那里稳定延续以及跨主体传播,
+二者存在重叠。本文拟从知识本身的类型、性质以及存在形式出发,考察实践过程中的默会知识,
+并以此为基础讨论数字空间中的默会知识问题。
+如何理解默会知识 :既有方案及其问题
+探究默会知识是厘清日常知识逻辑的关键,也是知识社会学从科学范式、观念范式向常识范
+式转变的基础。当今学界对默会知识的理解很大程度上得益于迈克尔·波兰尼(Michael Polanyi)
+在《个人知识》中的相关定义,即具体行动中所拥有的、实践性的、难以言说的隐性知识,其与
+书面文字、地图和数学公式等显性知识形成对照。13之后,很多学者也曾专门辨析和讨论过默会
+知识的基本内涵,但不同学者因语境与视域不同,对此概念的使用差异较大。因此,有必要回到
+以往学者对默会知识的辩论之中。
+知识是否具有可表述性是理解“默会”的首要问题。不同学者对此问题的回答观点各异,有
+
+
+44 ঳第四三Н期
+些学者认为不同于可以完整表述的清晰知识,很多技能、经验或直觉很难被清晰表达。14相反,
+一些学者则认为这种知识可以借助故事或类比进行表达,即默会知识存在可表达性,或者同时突
+出默会知识的可言明性与不可言性双重性质,而反对者紧接着指出,隐性知识虽可以被口头表达
+或传授,但被表达出来的知识便不再是隐性的。15然而,很多时候二分法并不能概括这种默会知识,
+我们可以进一步归纳出包括未被意识到的、未被表达的、借助非语言表达的默会知识在内的三种
+类型(图 1)。
+图 1 知识可表达性的连续统
+未被意识到的默会知识主要指那些无法被知觉到或认知能力限度之外的知识,体现为具身化
+的惯习或弗洛伊德式的潜意识、无意识动机。16未被言说的知识主要包括有意未被言说和言说困
+难两类,这类似“知道但不愿表达的隐性知识”抑或“知道但不能表达的默会知识”的分类。17
+前者对应于哈拉尔德·格里门(Harald Grimen)的“有意识欠表达”——有意识地避免用语言去
+表达,如政治或婚姻中的相互妥协 ;后者突出受限于权力、具体情景或个体能力而表达困难,但
+不否认其具有可表达性。18波兰尼指出,具体行动细节和默会背景虽具有可表达性,但整体感官
+体验或正在进行的行动本身极难被直接观照。19在“使用锤子敲钉子”的过程中,对钉子的意识
+是集中意识(focal awareness),握锤子的背景意识则是辅助意识(subsidiary awareness),而具体操
+作过程要求人们忽略背景知识而从事当下活动。20然而,不可被言说并不代表不可表达,因为纯
+粹个人直觉、情感姿态等“可意会不可言传”的内在体验可以借助非语言进行表达。21就言说的
+主观程度而言,完全不可言说或言说困难皆主观性程度较低,而有意未被言说则主观性程度更高。
+二者虽然都建立在具有言说可能的前提上,但后者是主观上不愿意表达的知觉,前者是客观语言
+限制下不能被表达的内在经验,限制包括权威压制、保密要求以及气味等感官形式。22
+辨析“可认知性与可表达性”很容易忽视默会知识的共享范围,以及默会知识可能存在的社
+会维度。虽然很多学者的确意识到纯粹个人内部经验、关系中的默会知识以及群体共享知识存在
+区别,但这些分析仍不够系统。23将默会知识还原为纯粹个人的内部经验能够说明私人心理图式
+的认知作用,并不能说明理所当然的认知习惯如何共享,而强调制度传统与社会互动虽能补充个
+人路径的偏见,但缺少一种关于个人与群体连续性的讨论。有些学者曾指出默会知识具有群体性
+特征,认为默会知识存在于相互交往与共同决策之中,从组织和社会关系出发讨论默会知识的集
+体共享性。24安德雷亚斯·莱克维茨(Andreas Reckwitz)也将“实践—方法知识”相关的个人认
+
+
+45
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+知归因于知识秩序与文化诠释系统,使人们可以在非反思基础上知道如何(know how)实践,以
+及理解他者实践的背景。25然而,个人认识与社会心理图式之间的发生学关系并未被揭露,而社
+会理论的任务恰是从格式塔(Gestalt)分析,回到日常生活中未被编码或体系化的经验、行业规
+则以及隐晦礼仪的形成过程。有些学者曾经从过程维度剖析过默会知识,注意到默会知识中存在
+知(knowing)与已知(known)的区别,或者区分出作为过程的默会知识(tacit knowing)和作为
+结果的默会知识(tacit knowledge)。26波兰尼对两种意识统一整体的讨论也揭示了一种连续过程,
+其中背景与主题之间便是一种过程性交织,将“知”本身作为一种过程性存在,一种处在实践中
+或知道如何实践的意识,但这种过程解释并不是针对默会知识生成过程的发生学阐释。
+从上述回顾可以看出,以往研究者在不同领域针对默会知识进行了大量梳理,但仍存在不少
+问题。一是既有研究偏重于波兰尼抑或维特根斯坦的传统,而较少关注其他丰富的解释方案,尤
+其是过于强调可表述这一标准,从而淡化神圣面向、生活面向或工具面向的区别,甚至经常走
+向一种形而上学式的分析。同时,以往研究者善于用二分法路径概括默会知识,但这种路径的
+分析性较弱。二是既有研究忽略了默会知识与主体性、时间性存在的多重关系,尤其是对社会
+实践之复杂性以及具身性程度分析不足。27这会使人们模糊无意识、常态化默认以及协商默认在
+发生过程上的区别。三是对知识生产本身缺少一种清晰梳理,也没有细究默会知识再生产是如
+何成为可能的。马塞尔·莫斯(Marcel Mauss)曾经以多重社会依据划分人们的默会知识或具身
+技艺,如性别、效率、年龄、传承形式,但这些依据是枚举式的区分,并未按照知识生产的过
+程予以澄清。28若要讨论数字时代默会知识如何生产,需要在社会理论中重新梳理默会知识及其
+生产过程。
+默会知识的类型与区分
+默会知识可以被定义为“由某种动机、能力限制或常规化造成的具身知识,涵盖从技能到常
+识的多个维度”。为了清楚说明默会知识何以生产,有必要对默会知识再进行类型化区分。
+(一)以知识性质区分默会知识
+在《尼各马可伦理学》论述理智德性的章节,亚里士多德专门讨论到“技艺”等问题。他区
+分了实践的逻各斯和制作的逻各斯,前者指实践者在社会关系、道德和政治、伦理上“正当”处
+事的智慧,突出行动因时制宜的特点 ;后者关联着事物的生成,但与既存事物、必然生成的事物
+以及同出于自然而生成的事物无关,而是突出个体擅长的制作技艺。29这二者可以作为默会知识
+的基本维度,前者突出日常实践者与自身、他人打交道的过程,可以被称为日常性默会知识 ;后
+者突出制作者与器具打交道的过程,可以被称为工具性默会知识。工具性默会知识是与行动者使
+用“用具”有关的实用或操作技术,“庖丁解牛”就描述了这种技艺——“手之所触,肩之所倚,
+足之所履,膝之所踦,砉然向然,奏刀騞然,莫不中音”(《庄子·养生主》)。这属于一种指导如
+何操作的手艺,使操作具有连续性和前反思性。在制作相关的过程中,用具往往处于上手状态,
+即人们不会仔细观察工具的材料或属性,而是会全身心地投入到相关工具—目标系统之中,除非
+工具不再“趁手”“异常”或“不再合用”,才会被问题化或“触目”,后者使默会知识的有效性
+被迫中断。30
+日常性默会知识则指处理非工具性的日常事务或者与他人打交道过程中所使用的知识,既包
+
+
+46 ঳第四三Н期
+括饮食、睡眠等身体姿态,也包括与其他人交往过程中的隐藏规则与非工具性的习惯。31莫斯注
+意到工具技术和身体技术的区分,分娩技术、哺乳与抚养揭示的姿态、睡眠与休息技术、运动技
+术以及照料技术等身体技术都不同于对物品的操作。32日常性默会知识并不集中于某个具体的工
+具性领域,而是渗透在处理情感体验、谈话际遇以及仪式活动等较广的社会情境中。作为默会知
+识整体的惯习使人们保持对世界的“前期待”,使实践者灵活地面向紧迫的未来,使人们不假思
+索地创造事件和恰如其分地做事、游戏,使实践在客观潜在的急迫形势中存续。33默会实践以及
+实践意识又会使习性和场域之间继续保持无需深思熟虑的必要契合,它植根于持续存在的行为素
+养以及对身体“智慧”的动用,在体育运动、音乐和舞蹈中皆有体现。34当然,日常性与工具性
+仅是两种理想类型,在现实生活中存在许多杂糅的联通之处。当涉及非制作场景时,人们既需要
+掌握身体技术,也需要掌握对物品的使用技术,如驾驶、射箭。不仅如此,现实中的人们经常面
+对一个包含工具性操作和身体技艺的默会知识整体。例如,阿尔弗雷德·许茨(Alfred Schutz)提
+到过的“烹饪指南性知识”就可以被看作一整套工具性默会知识,默会化的烹饪过程使其不追
+究烹制是否最为简便、经济,而是直接遵循各种自然而然的习惯,灵活把握食谱、配料、时间、
+工具。35
+此外,同样存在非日常的、非工具的神秘性默会知识,例如指导僧侣坐卧行走、感受神祇的
+法门,抑或哲学家启迪智慧的技艺,能够打开包含自我世界在内的诸多维度。之所以将其单独列
+出并与上述两者并列,既是因为这种默会知识占据一个特殊领域,至少在前现代社会人们很难将
+从事仪式、自我反思作为工具性或日常性活动,也是因为它能使人们面向自我或超越世界加以领
+会,而非仅仅与他人或世界之物打交道。显然,神秘体验是不可言说的,因为语言仅仅能够承载
+这种体验的某一主题,所以人们只能“聆听”到某种“召唤”,但不能使用人为语言将其以主题
+化的方式呈现出来。这并不是要在内在感受与可表达性之间划定清晰的边界,而是更加强调“使
+用自我”(usus sui)、感受或洞悉(conciliatio)自我构造以及“自我沉思”的沉默维度,尤其是将
+其放在惯用(euchresstia)、潜能(potent)以及习性(hexis)层面,因而“思”与“行”才能被糅
+合为一种运作性的生活形式。36在不否定“话语”作用的前提下,我们至少可以为无人称的、匿
+名的存在状态,以及绝对他异的或不能领会的沉默区域留下足够空间。37神秘性默会知识有时兼
+具上述两种默会知识的性质,要么将神秘性融入日常生活,要么发掘类似实用属性,但其底层逻
+辑不同于上述二者。
+(二)以互动过程区分默会知识
+上述区分虽十分重要,但并不能说明默会知识在互动实践中的存在形式,因此还需要进一步
+区分个体与非个体情景。个体性默会知识强调非反思性和非逻辑性的认知,后者以一种黏稠态形
+式存在于个体认知系统之中,呈现为一种常规化的实践意识。这种知识使实践十分灵活(dextérté)
+和省力,即人们不用计算就可合理行动、做事恰到好处。38相反,关系性默会知识则作为互动过
+程得以顺利开展的前提或节省调试消耗的背景,既表现为面对面的主体间关系中双方的共享体验
+或接近呈现,39也表现为表演性行为中剧班同伴之间、演员与观众之间的默契或者默认配合。40
+当然,这并不意味着所有默会知识都能产生默契,有时也包括诸多误会——难以协调的认知,使双
+方相互误解。群体性场景同样存在默会知识,这可见于泽鲁巴维尔笔下互相留面子式的沉默、集
+体礼仪中的姿态以及政治局势中的沉默,41抑或布尔迪厄笔下群体互惠赠礼活动背后的社会实践逻
+辑。42布尔迪厄常将前认知性的经验作为交互主体(inter-subjective)意义的资源,使人们可以根
+
+
+47
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+据某种“场域大局观”(■eld vision),或者借助灵感式的、无所用心式的默会知觉,无须借助事后
+认识和计算理性的方式,迅速反应和参与整体性游戏。43总之,默会实践以及群体之间有节奏的
+互动建立在群体分享意向以及互相默许基础上,使人们懂得在集体场合何时发笑、何时沉默,以
+此融入连贯而有序的群体活动节奏之中。
+根据上述两个线索,我们可以将不同维度的默会知识进行交叉类型化(表 1)。工具性默会知
+识既体现为个人与物打交道过程中的技术或手艺,也体现为多个不同行动者以合作性默契共同完
+成某种工作,如流水线以及复杂的社会分工中的合作默契。44发生在互动情境下的默会知识是操
+作化的默契,而发生在群体背景中的默会知识则是制度化或程序化的默契。同样,日常性默会知
+识也体现为三种类型 :一是支撑日常活动和决策的潜在知识图式、身体图式或者惯习,是一种超
+越工具理性的身体技术 ;二是社会关系中的谈话索引或当下产生的共识,体现在人们达成共识的
+交谈性默契或合谋性沉默中,构成日常互动彼此确证的认知基础 ;三是能内化到个人认知图式并
+在日常事务中起到常识作用的共享分类系统,包括意义的象征性连接系统、情感表达的模式或者
+共享的实践逻辑或情境定义。神秘性默会知识同样既涉及个体认知层面的顿悟、自我领会以及难
+以言明的神秘体验 ;也涉及关系之中的共同体会或理解,如僧侣之间传道所采用的动作暗示,以
+及人与人之间的爱 ;还包括存在于群体之中的集体礼仪或节日时刻的集体欢腾,使每个参与者都
+共享相关情绪或有关行为正当性的信念。其中,第三种和日常性默会知识在形式上接近,但在内
+容和意义上存在差异。可以肯定,默会知识绝非限于储存于个人身体内部的、具有单一形态的知识,
+而是一个复杂的知识系统。这个系统可以联通其他个体或群体,从而构成多元的默会知识储存库,
+并在不同情境中发挥不同作用。
+表 1 多元默会知识模型
+工具性默会知识 日常性默会知识 神秘性默会知识
+个体性默会 工匠技艺 身体图式或惯习 智慧与神秘体验
+关系性默会 操作化默契 共识或交谈索引 暗示、爱
+群体性默会 程序化默契 共享分类或情境假定 集体情感或集体欢腾
+默会知识的生产过程 :能动性与时间性视角
+前文根据既有研究区分了默会知识的类别,但并不能因此回答默会知识何以生产的问题。为
+了探究默会知识生产过程的性质和逻辑,此处引入时间性和能动性视角进一步澄明。
+(一)考察默会知识生成的两个视角
+在知识生产的语境下,能动性是指行动者参与默会知识生产的主动程度。其中,被动参与是
+行动者以被灌输或被规训的姿态形成默会知识(不涵盖行动者对技艺或习惯的再创造),包括对身
+体姿势、思想或情绪的规训。此处的“被动”还具有“非主动”的含义,如前观念的身体图式得
+益于持久的共同生活,这种对共存的习惯具有非主动的特征。45相比之下,主动参与则强调知识
+获取过程中涉及的能动创造,比如神秘性默会知识就需要个体的“凝思”与聆听,而非仅靠对身
+体机能的训练。当然,神圣活动也涉及规训,至少在米歇尔·福柯(Michel Foucault)的意义上,
+
+
+48 ঳第四三Н期
+教士的仪式行为大都是规训的结果,使个体谨慎地依照既有知识训练或操控肉体,但是自我技术
+一开始并不是“自我舍弃”,而是本身就凸显“致良知”的属性——通过自我审察或灵魂观照以
+发掘内在真相。46从显性知识向隐性知识的转变则可以视作一种受限的主动过程,体现为生平情
+境或知识库存的形构。由此,默会知识的生产可以被区分为三种过程,即主动建构(强)、主动转
+变(弱)、被动规训。
+为了呈现个体获取默会知识的过程,时间性作为另一衡量标准同样应该被重视。这能够呈现
+默会知识本身的历时性和即时性涌现两种维度。工具性或日常性知识需要经过长时间训练才能获
+得,因此这种规训性生产路径在突出被动生产的同时,也强调持续性。长时间的训练会不断积淀
+寄居于身体内部的默会知识与实践感,使得习惯呈现为过去、现在和未来的交织整体。47具体情
+景中不断领会或依据顿悟的感召性(calling-enlighting)生产,体现为一种当下性涌现过程。不同
+于两种简单划分,转化过程(将显性知识转化为隐性知识)同时突出当下性与历时性。就历时性
+而言,日常经验不断转化为潜在认知,使人们可以用前对象性(preobjective)、非设定性(nonthetic)
+的方式从事实践。48同样,默会知识随着新经验的加入而逐渐更新,使积累—建构取向具有历史
+性和去历史性双重特征。在此基础上,我们可以区分出长时间的规训过程、综合历时性和即时性
+的积累—建构过程,以及即时获取知识的顿悟或感召过程三种生产模式(表 2);接下来,将详述
+这三种知识生产路径,并试图考查它们与上述默会知识类型的对应关系(表 3)。
+表 2 时间与能动性视角思考生产路径
+时间性 vs 能动性 被动性 主动性
+历史主义路径 规训性生产 积累-建构
+
+当下主义路径 — 感召性生产
+(二)类型I :规训性生产
+规训性生产是指个体经过长时间被动规训而逐渐获得默会知识的过程,建立在对肉体、思想、
+情绪状态训练的基础上,体现在日常生活习惯以及手艺的代际传递中。在福柯看来,身体作为精
+心培养、计算和使用的政治工具,以驯服的、有能力的、习惯性的面目出现。49其中,驯服就是
+形成一种与外在权力要求契合的默会知识——“对......不再怀疑”,那些掌握“灵魂秘密”的权
+力会借助监控、矫正等措施作用于肉体、时间、日常行为态度,“被反复使用的强制方法,不是
+符号,而是活动 :时间表、强制性运动、有规律的活动、隔离反省、集体劳动、保持沉默、专心
+致志、遵纪守法、良好的习惯”。50这种立足于“痕迹”的规训与立足于“标志”的折磨或立足于
+“符号”的强制一样,都能够塑造默会知识,不过其作用效果更偏重非暴力,主要使用分配技术、
+规定活动,实现肉体—对象联结,以及经过较长时间的持续操练等方式实现身体图示化,比如军
+队对士兵身体姿势的训练、医院对人体运作的控制或矫正、工厂依靠纪律对身体的监督和使用。
+这种规训具有历史性,既强调个人史意义上长时间、连续、累积的控制和支配,也突出控制机器
+本身的客观性以及历时效果。
+布尔迪厄也有类似的观点,他将“惯习”(即习性)理解为一种持久沉淀而形成的认知、情感
+与行为模式,一种与社会结构保持一致的默会心智结构。作为内在持久倾向系统,惯习得益于持
+
+
+49
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+久灌输、专门训练或潜移默化的历时化过程,其中身体作为持续训练的对象和知识载体,并在身
+体化运作图式基础上形成实践知识、实践逻辑、实践感(sens pratique),人们很少质疑某种潜在
+的符号暴力。 练习舞蹈、杂技、绘画以及音乐相关技能,都得益于对社会品位与规范姿势的内
+化,将特定节奏或动作嵌入内在意识流,所以经过长时间操练形成的身体感知,使人们无需思考
+就能得当地变换姿势和参与实践。 在他看来,传授一门技艺(métier)——“没有理论的纯粹实践”
+的社会“艺术”,需要一种完全不同于直接教授知识的教学方式,即“以教授者和学习者间直接的、
+长期稳定的接触为基础的,通过总体全面、实践可行的传递方式,从实践到实践地传递”,因为心跳、
+肌肉、呼吸作为一套完整的框架都难以用语言表达直接传授。 虽然个体在其中具有主动性,但“照
+我的样子做”本身就是在一套既定行为框架中反复修改惯习、模仿“教练”动作以及校正自身实
+践的过程,其整体的被动性不言而喻。 同样,身处同一阶级的人们会产生相似的习性,以及在
+认知层面共享同一套实践图式或实践逻辑,并由此形成一种前认知的默契,为实践者之间的礼物
+交易、荣誉斗争以及日常互动提供参照。
+(三)类型II :感召性生产
+与忽视能动性的规训性生产不同,神秘性默会知识的生产或智慧启迪虽有时也依赖外部规训,
+但更依赖感召性生产。面对“只可意会不可言传”的奥秘、天启(illumination)、神谕或“真理”(关
+于本质的认知),行动者需要主动领悟、体会、聆听、默想、自我审查。 宋朝禅宗强调“不立文
+字”——智慧的获得过程需要依靠领会手势、动作、隐喻或事件带来的启发。在这种过程中,个
+体知识的产生并非得益于对外部经验的内化或规训,因为探索“真理”或智慧的活动需要依靠一
+种当下主义的“顿悟”和创造。 这种强调顿悟的生成路径与“渐悟”积累有所不同,其拒绝将
+历史作为驱动知识获取的中心,而是持有一种当下取向。这体现出一种不断捕捉时机(kairos)的
+运作性时间(operational time),人们并不是在以往线性时间的积淀中获得默会体验,而是需要当
+下主义式的凝思、感受与行动,这在那些讨论“弥撒亚时间”的学者笔下有大量例证。 这种知
+识的再生产并不依赖将实质性的逻辑强行灌输给他人,而是传递或启发一种意义的连接方式,使
+知识接收者能借助已有的认知图式发掘最恰当的可能性。意义连接过程在形式上具有开放性、能
+动性和即时性,因此实践智慧类似一种不断寻找合适时机的实践感知,强调实践过程中的寻觅、
+等待、顿悟以及内部经验的不断整合。 在结构和可表达性的意义上看,人们掌握的默会知识或
+象征系统或许联系着一种“漂浮的能指”(■oating signi■er),使人们根据情境决定其涌现的可能
+意义。
+尽管支配、管理与反思自我的技术可以视为规训的延伸,但福柯对“自我技术”的讨论同样
+为主体性与积极性留下了空间。“关注自我”(the concern with self)是照看以及细搜灵魂的每个
+角落,以凝思的方式形成一种关于自身的沉默性认知,这个过程面对的是“自我”而非神圣性
+的“祂”。 “自我技术”突出个体“能够通过自己的力量,或者他人的帮助,进行一系列对他们
+自身的身体及灵魂、思想、行为、存在方式的操控,以此达成自我的转变,以求获得某种幸福、
+纯洁、智慧、完美或不朽的状态”,因而可以作为一种自我“操心”以及关于灵魂的“所思所
+感”。 这种产生默会经验的方式无疑是内在的、当下的、主动的行为。福柯也曾提到,柏拉图
+式的自我“默想”(Melete)与“对话”这种社交情境辩证融合在一起,在中世纪与借助“忏悔”
+(自我表露)这种找到邪恶意图的言说联系在一起,但无论是“感受”的自我声音,还是倾听逻
+各斯的声音或“对话”,一种默会的“觉醒”和明察都脱离于言语所表达的内容,属于一种当下
+
+
+50 ঳第四三Н期
+“召唤”,而这为自我训练(gymnasia)实践奠定了“自我诠释学”式的基础。
+(四)类型III :转化性生产(积累—建构)
+区别于上述模式,兼具主动性和被动性的转化性生产是更为基础的形式。“转化”包括多种不
+同面向 :一方面,显性知识和隐性知识之间存在转变关系,这多被称为知识的默会化 ;另一方面,
+知识使用的前台(焦点)和后台(背景)存在转变。不仅如此,转换涉及积累性和建构性两种策
+略,前者是指显性知识不断积累而逐渐默会化的过程,是一种弱能动性的历史主义路径 ;后者是
+不断积累形成的默会认知在当下具体情境中调整、重构以及建构的过程,有时也呈现为当下化的
+协调行动。二者共同使身体图式与默会实践兼具历史性与去历史性。
+积累性转变展示知识默会化过程,即直接经验与来自他人传授或典籍记载的间接经验逐渐沉
+淀到个人生平情境的过程,沉淀为常识的知识会形构个人的知识储存库,并影响和塑造人们的判
+断和认知。 前文讨论的性情倾向系统,其形成也有赖于某种社会转换,其过程体现为个体在外
+在现实约束下,将现存社会环境的规范性予以内化或习惯化。 显然,这种转化并非一蹴而就,
+但其不同于规训过程,因为将以往经验进行综合或者将客观知识默会化都需要个人的能动参与。
+这也可以在神秘性默会知识的生成过程中找到,如“转识成智”本身就是通过理智将经验性的认
+识转变为关于本质的智慧。 在社会关系和群体层面,转换过程表现为协调过程,这既指不同个
+体依赖共享心理规范产生默契的过程,也指通过互动建构默契的过程,比如配合默契的足球比赛
+策略可视为这种转化的结果。家庭成员的默契往往是在长时间生活中积累起来的,他们共同经历
+的积淀成就了彼此谙熟与习惯交织。
+相比之下,创造性转化则是对积累形成的模式化认知进行修正。例如,欧文·戈夫曼(Erving
+Go■man)谈及日常戏剧的演绎过程时,会强调观众与演员之间存在一种受过训练的成熟与互相
+支持,但演出故障却会破坏这种平衡,这就需要双方借助谈话界定角色或者借助修复机制保证默
+会知识重新运行。 同样以足球比赛为例,失误或突发情况会使策略面临危机,需要眼神、手势
+等非语言表达即时协调行动和修正默会认知。建构路径也能说明个人实践中的自我图式建构与“身
+体—世界”图示的动态调整,比如腿部受伤会使个体调整身体图式,并建构新的默会认知。 这
+种更新表明,建构性生产具有当下取向,而且其十分依赖主体的不断参与。需要注意的是,对习
+惯的调整并不是更新全部,因为当涉及将新经验转化为既有知识库存时,以往知识和当下经验同
+时起作用,因此这种知识生成路径兼具当下性和历时性。
+表 3 默会知识类型与生产过程
+工具性默会知识 日常性默会知识 神秘性默会知识
+个体性默会 类型 I + III 类型 I + III 类型 I + II + III
+关系性默会 类型 I + III 类型I + III 类型 I + II + III
+群体性默会 类型 I + III 类型I + III 类型 I + II + III
+数字技术对默会知识生产过程的塑造
+随着数字技术对人们社会活动的塑造,默会知识的生产以及默会实践产生了很大变化。一方
+
+
+51
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+面,数字技术改变了默会知识的储存形式以及默会化过程 ;另一方面,数字技术使人际交互环境
+与默契产生条件不断变化。以往学者也曾花费不少笔墨讨论数字技术对知识生产本身的改变,要
+么侧重于数字技术对知识内容与形式的塑造,着重讨论机器学习与创造、知识可视化、知识碎片
+化等相关过程 ;要么采取一种横向对比,旨在说明从在场空间转向数字空间的过程中,知识积累、
+生产、传播以及现实建构路径的变化 ;抑或讨论数字技术对知识与其他社会生活领域的塑造,并
+创造出许多分析性概念。 这些讨论虽然可以从很多层面呈现知识本身的变化,并以一些有趣的
+概念说明数字社会知识的基本特征,但主要集中于数据或外显知识,对认知观念或默会知识的讨
+论不够详尽。同样,即使着眼于数字技术对人们知觉过程塑造的学者,也难以清晰讨论数字技术
+对默会知识的塑造。 与之不同,有些研究者直接指出数字技术会褫夺默会知识生产的土壤—
+数字情境弱化互动能力以及对环境的感知力,但无法详细区分默会知识内部的复杂性,也忽略其
+生产机制以及默会化过程。 因此,我们将着重以数字空间为例,沿着上述对默会知识生产过程
+的讨论,详细分析数字技术对默会知识生产与传播的塑造。
+当今社会,数字空间充当日常实践不可或缺的新基础。一方面,人们在其中延续着在场互动
+中的社会规则和集体观念,借助各种符号或者在视频通话中运用肢体动作、语气或表情,保持互
+动节奏、交流默契并领会彼此的言外之意 ;另一方面,人们需要不断内化各种新规则,以更新默
+会知识和参与充满变动的制度化现实。 数字技术拓展了人们日常生活的领域,塑造了不同主体
+相互协调的默会实践与深层游戏,并呈现出两个基本特征。其一,数字技术不断产生各种难以预
+料的新状况,惯习化的身体图式经常因面对生疏或故障情境而呈现在反思性、问题化或需要言说
+层面,因而陌生化主导的数字空间使默会知识呈现出敏感性。如前所述,具身化的默会知识可
+以呈现在前反思的身体图式层面,使身体获得一种实践层面的“预知”,人们可以对现实的规律
+性进行实践性理解。 然而,数字空间因其不断变动以及不确定性,使人们的认知活动充满敏感
+性,预示了默会知识可能仅暂时起作用,也可能在有限的环境中起作用。面对各种数字技术化的
+现实装置或未知领域,实践者不仅需要调适“惯习”,也需要在数字空间之中与陌生人重新建立
+“默契”。 换言之,数字空间作为默会实践的土壤较为特殊,它虽提供了与线下相似的沟通情境,
+便于人们使用建立在熟悉基础上的默会认知,但默会认知会因经常遭到质询而转为显性认知。人
+们逐渐意识到,始终存在一个绝对的“未知”隐匿其后,比如人们不知道云端储存是否会出现故
+障、系统是否会崩溃,不清楚对方的真实身份与意图。其二,数字空间很难产生多元的知觉体验,
+将知觉整体缩减为视听为主的零散感知,而且很难形成身临其境的空间性氛围,因为人们并不是
+栖息于数字空间,而是以两栖的方式游离于两个社会现实之间,即肉身在现实世界之中存在,而
+象征性的身体在数字空间存在,使默会实践的稳定基础遭到破坏。 一方面,数字技术能够构建
+作为现实镜像或延伸的社会世界,很多行为规则都被建构出熟悉的形式,现实建构的默会知识迁
+移到数字空间。但是,由于线上空间发展出来的默会知识本身就是以视觉与听觉为依托,个体对
+互动双方共享背景的调试不仅是激活已有的默会经验,也是在将多元经验按照视觉与听觉重新
+编码。 另一方面,数字空间中的默会实践构成线下默会实践的一个不完整的镜像或延伸,使人
+们在无数个岛屿式的子领域不断产生默契,但只有在不停维持参与和更新的过程中才能使自身的
+默会知识暂时有效。 的确,阻碍默会实践的障碍来源于日益分裂且多元的群体文化,因为源自
+不同社会处境或具有不同实践逻辑的行动者可能存在理解框架的冲突,而从熟悉情景到陌生情境
+的跨领域转变,可能会使持久沉淀过程中形成的默会经验毫无用武之地或暂时搁置。 这也印证
+
+
+52 ঳第四三Н期
+了前文提到的默会知识面对数字技术的脆弱性,以及媒介实践的“默会化”与“去默会化”双重
+特征。
+不仅如此,相应改变还体现在人与物打交道的工具性层面。数字技术物作为一种“现实物与
+虚拟物的集合”,其嵌入人们身体图式的方式并不同于传统社会的工具,因为肉体并不直接与操
+作内容发生关系,也不直接面对器具。意志发挥作用的方式会在一种拟象化或媒介化的程序中进
+行。 一方面,操控对象从上手之物变为数据堆砌起来的程序性之物,人们在熟稔规则的情况下
+虽同样能默会性操纵,但屏幕总会使人们不自觉地注意到各种操作规则 ;另一方面,数据提供的
+线上情境并非与现实世界保持匀速,如网速不佳或卡顿会使操作性的工具性默会知识被反思之光
+照见。 换言之,人们与数字技术共生状态下形成的技艺存在双重属性,一是硬件器物的“上手”,
+二是软件或模拟形象的“第二上手状态”或程序性上手状态,而后者会因卡顿、延迟失效。
+当然,数字技术创造了很多现实的上手之物,如数码相机、3D 打印机、电动牙刷,但离线状态
+与数据在线连接后的转译区别甚大。可以肯定,默会知识存在从稳定到柔软的不同外壳。不仅如
+此,数字技术的普遍流行会使很多传统技艺成为非必要的事项,比如自动驾驶会使人们逐渐调整
+驾驶技艺,甚至将技艺本身作为可由技术替代完成的事务,将一切化约为指令性的操作。而数字
+技术对神秘性默会知识的影响同样复杂,因为人们向内的自我质询以及面向超越性的默会体验看
+似不会直接被技术这种形式所塑造,但是数字技术已经悄然地塑造了各种自我反思的手段,因为
+任何数字行动都可以在系统中留下痕迹,所以自我反思或领会呈现出可见性与复杂性。从另一层
+面看,不再沉思本身成为数字技术时代很多人生存的现状,毕竟技术本身不仅提供了一个祛魅的
+世界,而且提供了可供精确计算的、可预期的,甚至近乎完全合乎理性的程序,并创造了一个普
+遍连接且自身很难系统反思的生活情境。
+数字技术还会影响知识的生产和传播逻辑。在数字平台中,知识生产需要依靠两套完整的逻
+辑 :一是以信息计算、智能生成以及代码转化为基础的技术装置和技术逻辑 ;二是贯通线上与线
+下的社会现实逻辑。知识生产在二者相互杂糅的基础上展开,其中现实在场的默会知识十分强调
+具身性和直接互动情境,但数字空间却时常使身体遁形和互动间接化。 这进一步重塑了默会知
+识的三种生产方式。
+就规训性生产而言,数字技术最直观的影响是提供自动化的规训手段,比如人们可以通过
+程序化设定学习制作技艺、通过自动化操作纠错或提供指导、通过模拟技术提供减少资源耗费
+的练习机会。因此,技艺能以更加高效、便捷且无害化的方式被培养。此外,熟悉数字技术相
+关的装置本身与学习使用“锤子”存在很多相似性,如操控电子游戏角色就需要不断训练操纵
+键盘与鼠标的技术 ;但不同的是,前者不仅需要训练与物质世界打交道的操作规则,还需要额
+外熟悉和接受一套数字程序性规则。就转换性生产而言,显性知识默会化的过程与线下类似,
+既包括将客观知识主动内化到个人的认知系统之中,也包括根据新情况不断创造默会认知的过
+程。正是在这个意义上,数字空间被视作一种与在场相仿的“现实”(reality),甚至逐渐被视为
+活生生的、习以为常的、默会的日常实在,而且这种作为默会背景的现实能在数字空间中再生
+产。 不同的是,人们并不仅仅直接照搬来自现实社会的默会认知,还能根据数字空间自身的逻
+辑不断调整丰富自身的类型化构想,将不同技术物、记忆存储以及意义编码逻辑整合到自身掌
+握的知识库存之中。同理,作为身体延伸的技术塑造着社会交往领域的转化性生产过程,即塑
+造人们协商与达成共识的过程,甚至对合法性知识的稳定性提出挑战。我们清楚,数字空间为
+
+
+53
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+关系性默会知识设置了较多阻碍,因为非面对面的互动过程难以产生熟悉感、默契、信任,无
+论是从身体在场到缺场转变,还是从身体缺场转变回在场,都会使默会知识发生错位或失效,
+因此需要不停沟通、重申共同内容作为知识默会化得以生产的必要保证。 换言之,转化性生产
+往往需要不停运作,以补充前述的规训性生产,二者在数字技术的作用下结合得日益紧密。此
+外,数字技术并不会取消感召性生产,因为数字技术能够储存各种象征性事物、有关记忆的痕
+迹,允许人们产生获得诸多难以言明的感受、体验、顿悟、启发,或更高效地回溯自身。然而,
+观点林立的数字媒体空间不断生成各种价值评判,这不仅会干扰自我反思和理解的过程,而且
+容易使人们陷入上述“非思”的状况。我们甚至可以看到神秘性默会知识面临逐渐消解的状况,
+这不仅是因为祛魅、否定真理、娱乐化,更直接的原因或许是数字空间从根本上消耗了自我审
+视的时间和精力。不同于现实中默会知识的生产过程,数字空间中的默会知识是程序与个人双
+重作用的结果,涉及编码储存程序与常识知识的复杂关系,同样也是“现实的社会建构过程”
+及其数字化版本无法绕开的问题。
+综上所述,数字技术不断更新着默会知识的形式与生产方式。但由于其更新加速及整体的不
+可见性,理所当然的信任与确定性遭到风险逻辑的侵蚀,各种误解与争论正在破坏默会实践的土
+壤,使得共有的默会知识不再能够为人们提供熟悉与常规的解决路径。因此,在数字技术加速变
+革的时代,我们既要意识到积极参与沟通在当下时代重建安全感的基础性作用,也需要保持哲学
+式的凝思和保有对抗不确定性的应变能力,以及强调默会认知、出神、观照自我的价值,而后者
+恰是近当代思想家试图摆脱异化所无法绕开的路径。
+结语
+生活在数字时代,我们不仅需要重新思考知识之于社会生活的作用,也需要考察知识的存在
+形式、传播路径以及生产方式的相应变化。然而,我们并不满足只考察显性知识,那些难以表达
+的默会知识同样需要被系统分析。作为日常生活的重要基础,默会知识常被视作客观知识的边角
+料,或被裹挟进常识知识的建构过程,使我们难以直观说明数字技术对它的塑造过程。为此,我
+们就默会知识的存在形式和性质各划分出三个维度,并在此基础上交叉出九种类型。借助时间性
+和能动性角度,我们将九种默会知识归结为规训性、感召性以及转化性三种生产路径,并详细阐
+述其各自的内在逻辑。由此出发,我们说明了数字技术影响下每种默会知识的相应变化,进而分
+析了数字空间中默会知识的生产、传播与实践过程。
+这种讨论十分必要,因为面向未来的知识生产不能遗忘作为人们日常生活基础的默会知识。
+当下社会发展新质生产力和关键技术已成为重中之重,而生产力发展本身不仅需要客观的科学技
+术与物质装置,也涉及实践性的工匠技艺、实践技术、生活技术以及其他默会知识。在建设中国
+式现代化的进程中,有必要重新反思默会知识的存在形式、生成过程,以及数字技术对默会知识
+生产的塑造。这种默会知识既是人们认识世界、从事生产与实践的基础,也有助于在数字时代推
+进知识社会学研究,因为目前面向数字空间中的常识知识、共享认知以及知识建构过程的研究仍
+然不足,而常识知识的社会建构恰恰是以现象学为基础的知识社会学研究无法绕开的核心议题。
+不仅如此,晚期现代性使抽象的专家系统代替地方性知识,或许使得默会知识早已被话语暴政或
+媒体意识形态所垄断。因此,只有从概念本身出发,厘清默会知识,我们才能充分理解数字技术
+
+
+54 ঳第四三Н期
+注释 :
+1 丹尼尔·贝尔 :《后工业社会的来临》,高铦等译,南昌 :
+江西人民出版社,2018 年。
+2 彼得·伯克 :《知识社会史(下卷):从〈百科全书〉到
+维基百科》,汪一帆、赵博囡译,杭州 :浙江大学出版社,
+2024 年 ;尼克·库尔德利、安德烈亚斯·赫普 :《现实的
+中介化建构》,刘泱育译,上海 :复旦大学出版社,2023 年。
+3 默会知识也被称为隐形知识、意会知识、隐默知识、
+缄默知识、实践知识、心理图式、具身技能或实践能力,
+等等。不少社会理论家曾经使用过这个概念,但较为典型
+的系统阐述是波兰尼在 1958 年出版的《个人知识 :朝向
+后批判哲学》(Personal Knowledge: Towards a Post-Critical
+Philosophy)一书。
+4 帕特里克·瓦蒂尔 :《社会学的知识》,王赟译,上海 :
+上海人民出版社,2022 年,第 92— 114 页。
+5 奥古斯特·孔德 :《论实证精神》,黄建华译,北京 :商
+务印书馆,2001 年,第 29— 30 页。
+6 埃 米 尔·涂 尔 干 :《 社 会 学 方 法 的 准 则 》, 王 赟 译,
+上海 :上海人民出版社,2025 年,第 72— 91 页。
+7 无论是罗伯特·默顿(Robert K. Merton)对 17 世纪英
+国科学知识的探讨,还是大卫·布鲁尔(David Bloor)、史
+蒂文·夏平(Steven Shapin)等学者推动的科学知识社会
+学(Sociology of Scienti■c Knowledge, 简 称 SSK), 都 将
+科学知识及其制造过程作为研究中心对象,即便他们持
+有的纲领有所不同。这虽可以使我们重新反思科学的发
+展,但难以将默会知识纳入考虑范畴。参见大卫·布鲁
+尔 :《知识和社会意象》,霍桂桓译,北京 :中国人民大学
+出版社,2014 年 ;史蒂文·夏平 :《利维坦与空气泵 :霍
+布斯、玻意耳与实验生活》,蔡佩君译,上海 :上海人民
+出版社,2008 年 ;罗伯特·金·默顿 :《十七世纪英格兰
+的科学、技术与社会》,范岱年等译,北京 :商务印书馆,
+2000 年。
+8 Charles Camic,“Reputation and Predecessor Selection:
+Parsons and the Institutionalists,”American Sociological
+Review, vol.57, no.4, 1992, pp.421-445; Neil Gross,
+“Becoming a Pragmatist Philosopher: Status, Self-Concept,
+and Intellectual Choice,”American Sociological Review, vol.
+67, no. 1, 2002, pp. 52-76.
+9 彼得·伯格、托马斯·卢克曼 :《现实的社会建构 :
+知识社会学论纲》,吴肃然译,北京 :北京大学出版社,
+2019 年,第 20— 60 页,第 27— 38 页。
+10 马塞尔·莫斯、昂利·于贝尔 :《巫术的一般理论 :献
+祭的性质与功能》,杨渝东等译,桂林 :广西师范大学出
+版社,2007 年,第 34— 78 页 ;克利福德·格尔茨 :《文
+化的解释》,韩莉译,南京 :译林出版社,2014 年,第 3
+42 页。
+11 布尔迪厄等学者就特别强调一种社会学的手艺,而托
+马斯·库恩(Thomas Kuhn)在论述范式和范例时,也常
+使用默会化过程指涉学术共同体内部共享的认知取向。参
+见托马斯·库恩 :《结构之后的路》,邱慧译,北京 :北
+京 大 学 出 版 社,2012 年, 第 168、299 页 ;David Stark,
+Practicing Sociology: Tacit Knowledge for the Sociological
+Craft, New York: Columbia University Press, 2024。
+12 参见安东尼 ·吉登斯 :《社会的构成 :结构化理论纲要》,
+李康、李猛译,北京 :中国人民大学出版社,2016 年,第
+38— 63 页 ; Harold Gar■nkel, Ethnomethodologys Program
+Working Out Durkheims Aphorism, Lanham: Rowman &
+Littlefield Publishers, 2002; Rainer Egloff,“Definition of
+the Situation: History of the Concept,”in James D. Wright,
+International Encyclopedia of the Social and Behavioral
+Sciences, Amsterdam: Elsevier, 2015, pp.19-23。
+13 迈克尔·波兰尼 :《个人知识 :朝向后批判哲学》,徐陶、
+许 泽 民 译, 上 海 :上 海 人 民 出 版 社,2021 年, 第 81
+157 页。
+14 Dorothy A. Leonard, Sylvia Sensiper,“The Role of Tacit
+Knowledge in Group Innovation,”California Management
+Review, vol.40, no.3, 1998, pp. 112-132.
+15 吉特·丹普尼(Kit Dampney)等人使用扎根理论梳理
+了诸多文献中默会知识的含义,他们使用 aTK 和 iTK 两
+个模型分别概括可表达的和无法表达的默会知识。参见
+Kit Dampney, Peter Busch, Deborah Richards,“The Meaning
+of Tacit Knowledge,”Australasian Journal of Information
+Systems, vol. 10, no. 1, 2002. pp. 2-3; Robert J. Sternberg,
+“Theory and Measurement of Tacit Knowledge as a Part of
+Practical Intelligence,”Zeitschrift für Psychologie, vol. 203,
+no. 4, 1995, pp. 319-334.
+16 与此区分类似,斯拉沃热·齐泽克(Slavoj Žižek)认
+为 已 知 的 已 知(known knowns)、 已 知 的 未 知(known
+unknowns)、未知的未知(unknown un-knowns)之外,还
+存在“未知的已知”——那些我们不知道自己已然知晓
+的东西。这是弗洛伊德意义上的无意识,也是雅克·拉康
+(Jacques Lacan)所谓的“不自知的知识”。不管是前逻辑
+的本能、无意识的信念,还是主体遗忘或常规化的符号知
+识,都有助于我们廓清默会知识的范围。参见斯拉沃热·齐
+对人们无意识实践或前话语实践层面的塑造,才能重新反思资本主义话语霸权所造成的深层影响,
+以及尝试发掘和捍卫日常生活多样性的潜质。
+
+
+55
+'FC 2026
+第二单元:知识生产的范式转型 二O二六年 第二期
+泽克 :《事件》,王师译,上海 :上海文艺出版社,2016 年,
+第 10— 12 页。
+17 Philippe Baumard, Tacit Knowledge in Organizations,
+trans., Samantha Wauchoye, London & Thousand Oaks: Sage
+Publications, 1999, p. 78.
+182021 郁振华 :《从表达问题看默会知识》,《哲学研究》,
+2003 年第 5 期。
+19 Michael Polanyi, The Tacit Dimension, Magnolia: Peter
+Smith Publisher Inc, 1983, pp. 9-20.
+22 A. Janik,“Tacit Knowledge, Working Life and Scienti■c
+Method,”in Bo Gōranzon, Ingela Josefson, Knowledge, Skill
+and Arti■cial Intelligence, London & Berlin: Springer-Verlag,
+1988, pp. 54-58.
+23 谭笑 :《集体默会知识何以可能》,《哲学研究》2024
+年 第 10 期 ; Stephen Turner, Understanding the Tacit, New
+York: Routledge, 2014, pp. 55-81。
+24 Georg von Krogh Johan Roos, Organizational
+Epistemology, London: Macmillan Press Ltd., 1995, pp.
+50-51; John Harald Aadne, Georg von Krogh, Johan Roos,
+“Representationism: the Traditional Approach to Cooperative
+Strategies,”in Georg von Krogh, Johan Roos, eds., Managing
+knowledge: Perspectives on Cooperation and Competition,
+London: Sage Publications, 1996, pp. 9-31.
+25 莱克维茨认为,知识秩序在非话语实践中都是默会的、
+不被言明的,但在话语实践中,却会以文字或视觉的方式
+明确地表达出来,因此非话语实践与话语实践常常可以
+超越实践与话语的二元论。参见安德雷亚斯·莱克维茨 :
+《将社会理论作为工具》,安德雷亚斯·莱克维茨、哈特穆
+特·罗萨 :《晚期现代社会的危机 :社会理论能做什么?》,
+郑 作 彧 译, 上 海 :上 海 人 民 出 版 社,2024 年, 第 40
+43 页。
+26 类 似 区 分 还 有 很 多, 比 如 奥 托· 沙 尔 默(C. Otto
+Scharmer) 也 将 默 会 知 识 区 分 为 具 身 化 隐 性 知 识 和 尚 未
+具身的隐性知识。参见郁振华 :《波兰尼的默会认识论》,
+《自然辩证法研究》2001 年第 8 期 ;Claus Otto Scharmer,
+“Organizing Around Not-yet-embodied Knowledge,”in Georg
+von Krogh, Ikujiro Nonaka, Toshihiro Nishiguchi, Knowledge
+Creation: A Source of Value, Basingstoke and London:
+Macmillan Press Ltd., 2000, pp. 26-62; John Dewey, Arthur F.
+Bentley, Knowing and the Known, Boston: The Beacon Press,
+1949, pp. 129-130.
+27 郁振华 :《再论亲知——从罗素到凯农》,《华东师范大
+学学报》(哲学社会科学版)2010 年第 4 期。
+2832 马塞尔·莫斯 :《身体技术(1935)》,纳丹·施郎格编 :
+《论技术、技艺与文明》,蒙养山人译,北京 :世界图书出
+版公司,2010 年,第 86— 88 页,第 88— 98 页。
+29 亚里士多德 :《尼各马可伦理学》,廖申白译,北京 :
+商务印书馆,2017 年,第 180— 197 页。
+30 马丁·海德格尔 :《存在与时间》,陈嘉映、王庆节译,
+北京 :商务印书馆,2018 年,第 88— 147 页。
+31 皮埃尔·布迪厄 :《实践感》,蒋梓骅译,南京 :译林出
+版社,2012 年,第 73— 91 页。
+333438 皮埃尔·布尔迪厄 :《帕斯卡尔式的沉思》,刘晖
+译,北京 :生活·读书·新知三联书店,2009 年,第 29 页,
+第 169 页,第 168 页,第 243— 245 页。
+35 阿尔弗雷德·许茨 :《社会理论研究》,霍桂桓译,杭州 :
+浙江大学出版社,2011 年,第 81— 82 页。
+36 吉奥乔·阿甘本 :《身体使用》,蓝江译,上海 :上海
+社会科学院出版社,2025 年,第 93— 95、101— 113 页。
+37 伊曼努尔·列维纳斯 :《总体与无限 :论外在性》,朱刚
+译,北京 :北京大学出版社,2016 年,第 26— 57 页。
+39 阿尔弗雷德·许茨 :《社会世界的意义建构》,霍桂桓
+译,北京 :北京师范大学出版社,2017 年,第 145— 161、
+214— 216 页。
+40 欧文·戈夫曼 :《日常生活中的自我呈现》,冯钢译,
+北京 :北京大学出版社,2008 年,第 68— 92 页,第 1
+15 页。
+41 伊维塔·泽鲁巴维尔 :《房间里的大象》,胡缠译,重庆 :
+重庆大学出版社,2011 年,第 9— 39、130— 159 页。
+42 皮埃尔·布尔迪厄 :《经济人类学 :法兰西学院课程
+(1992— 1993)》,张璐译,上海 :上海人民出版社,2023 年,
+第 25— 31 页。
+4348 皮埃尔·布尔迪厄、华康德 :《反思社会学
+导引》,李猛、李康译,北京 :商务印书馆,2015 年,第
+19— 28 页,第 19— 21 页,第 19— 26 页,第 10— 14 页,
+第 319 页,第 14— 19 页,第 10— 14 页。
+44 郁振华 :《论三种智慧》,《华东师范大学学报》(哲学社
+会科学版)2020 年第 5 期。
+45 莫里斯·梅洛-庞蒂 :《知觉现象学 :梅洛-庞蒂文集
+(第 2 卷)》,杨大春等译,北京 :商务印书馆,2021 年,
+第 105— 112 页,第 199— 211 页。
+46 米歇尔·福柯 :《自我技术 :福柯文选III》,北
+京 :北京大学出版社,2016,第 96— 105 页,第 98— 99 页,
+第 62— 74 页,第 54 页,第 75— 83 页。
+47 参见 Samuel B. Mallin, Merleau-Ponty's Philosophy, New
+Haven: Yale University Press, 1979, p. 12 ;另外,布尔迪厄
+也提到一种持久性逻辑,“为了能够使用一种工具......应
+该通过一种漫长的使用过程,有时甚至通过一种系统的训
+练......将作为一种默许的使用模式存在于它身上的目的变
+成自己的目的”。原文参见皮埃尔·布尔迪厄 :《帕斯卡尔
+
+
+56 ঳第四三Н期
+式的沉思》,刘晖译,北京 :生活·读书·新知三联书店,
+2009 年,第 168 页。
+4950 米歇尔·福柯 :《规训与惩罚 :监狱的诞生》,刘北
+成、杨远婴译,北京 :生活·读书·新知三联书店,2012 年,
+第 27 页,第 144 页,第 147— 190 页。
+杜维明 :《后记 :“觉悟”的宗教思考》,彼得·N·格里
+高瑞编 :《顿与渐 :中国思想中觉悟的不同法门》,冯焕珍
+等译,上海 :上海古籍出版社,2010 年,第 356— 363 页 ;
+罗伯特·E·巴斯韦尔 :《看话禅之捷径 :中国禅佛教顿悟
+行的演变》,彼得·N·格里高瑞编 :《顿与渐 :中国思想
+中觉悟的不同法门》,冯焕珍等译,上海 :上海古籍出版社,
+2010 年,第 260— 306 页。
+吉奥乔·阿甘本 :《剩余的时间 :解读〈罗马书〉》,钱
+立卿译,北京 :中央编译出版社,2016 年,第 84— 120 页。
+Phillip Sipiora,“Introduction: The Ancient Concept of
+Kairos,”in Phillip Sipiora, James S. Baumln, Rhetoric and
+Kairos: Essays in History, Theory, and Praxis, New York:
+State University of New York Press, 2002, pp. 7-16; C. D. C.
+Reeve, Practices of Reason: Aristotle's Nicomachean Ethics,
+Oxford: Oxford University Press. 2002. pp.67-98.
+谢晶 :《从莫斯到列维-斯特劳斯 :“玛纳”与实践观念
+的可译性》,《社会》2019 年第 5 期。
+阿尔弗雷德·许茨 :《社会实在问题》,霍桂桓译,杭州 :
+浙江大学出版社,2011 年,第 3— 21 页。
+蒂安娜·保尔 :《中国六世纪的心识哲学 :真谛的〈转
+识论〉》,秦瑜、庞玮译,上海 :上海古籍出版社,2011 年 ;
+牟宗三 :《智的直觉与中国哲学》,北京 :中国社会科学出
+版社,2008 年。
+Daniel R. Headrick, When Information Came of Age:
+Technologies of Knowledge in the Age of Reason and
+Revolution 1700-1850, New York: Oxford University Press,
+2000; Johannes Glückler, Robert Panitz, Knowledge and
+Digital Technology, Cham: Springer, 2024, pp. 1-13.
+Igor Farkaš,“Transforming Cognition and Human Society
+in the Digital Age,”Biological Theory, 2024, pp.1-13.
+Lihua Zhang Hongfa Yi,“The Diminishment of Tacit
+Knowledge: Teaching Practice Based on Live Streaming
+Context,”Teaching and Teacher Education,vol. 155, 2025.
+克里斯蒂安·福克斯 :《社交媒体批判导言》,赵文丹
+译, 北 京 :北 京 广 播 学 院 出 版 社,2018 年, 第 37— 44
+页 ;乔治·H. 米德 :《心灵、自我与社会》,赵月瑟译,上
+海 :上海译文出版社,2018 年,第 173— 186 页 ; Rogers
+Brubaker, Hyperconnectivity and lts Discontents, Medford:
+Polity, 2023, pp. 1-19.
+延斯·贝克特 :《想象的未来 :虚构预期与资本主义动
+态发展》,黄勤等译,武汉 :华中科技大学出版社,2023 年,
+第 29— 47 页。
+不可否认,数字技术能提供大量便捷且毋庸置疑的装
+置,并逐渐成为人们行动或交流得以凭借但不必注视的背
+景环境,但这种环境并不具有稳定性。另外,依托数字技
+术的现实装置能够提供感知的其他维度,比如智能假肢能
+为人们提供基础的触感,使人们重构自身的知觉图式,并
+因此能够发展各种默会实践或技艺,但作为身体部分的装
+置也可能随时遭遇失效风险。从另一种意义上,我们也可
+以看到默会条件遭到的破坏——默许被严格的监控取代。
+数字空间中的行动总是有痕迹的,任何以文本对话为基础
+的行动都具有明晰性,所以很多可以“睁一只眼闭一只眼”
+的领域,都因责任清晰化而逐渐消失。
+威廉·弗卢塞尔 :《技术图像的宇宙》,李一君译,上海 :
+复旦大学出版社,2021 年。
+南希·K.拜厄姆 :《交往在云端 :数字时代的人际关
+系》,董晨宇、唐悦哲译,北京 :中国人民大学出版社,
+2020 年,第 3— 21 页。
+Lee Rainie Barry Wellman,“The Internet in Daily Life:
+The Turn to Networked Individualism,”in Mark Graham,
+William H. Dutton eds., Society and the Internet: How
+Networks of Information and Communication are Changing
+Our Lives, Oxford: Oxford University Press, 2019, pp. 27-42.
+我们承认唐·伊德(Don Ihde)或其他强调技术具身化
+学者的观点,即个人身体不仅是知觉性、文化性的,更是
+技术性的,因而传统社会的工匠制造实践本身就体现出技
+术身体化以及身体技术化双重逻辑。但是面对虚拟技术
+物,具身化逻辑显然存在很大不同。唐·伊德 :《技术中
+的身体》,王明玉译,上海 :上海人民出版社,2025 年,
+第 15— 30 页。
+许煜 :《论数码物的存在》,李婉楠译,上海 :上海人
+民出版社,2019 年,第 1— 37 页。
+参见阿曼达·拉格奎斯特 :《生存媒介 :走向一种数字
+被抛境况的理论化(2017)》,载韩晓强主编 :《走向媒介
+本体论 :欧美媒介理论文选》,王敏燕译,北京 :中国国
+际广播出版社,2024 年,第 462— 484 页 ;戴维·J. 贡克尔、
+保罗·A. 泰勒 :《海德格尔论媒介》,吴江译,北京 :中国
+传媒大学出版社,2019 年,第 120— 135、168— 175 页。
+Shanyang Zhao,“The Internet and the Transformation of
+the Reality of Everyday Life: Toward a New Analytic Stance
+in Sociology,”Sociological Inquiry, vol.76, no.4, 2006,
+pp.458 -474.
+李钧鹏、杨太文 :《数字空间与社会世界结构 :许茨理
+论再探》,《现代传播(中国传媒大学学报)》2024 年第 10 期。
+编辑 李 梅
+
+
+英文摘要 二 O 二六年 第二期
+177
+'FC 2026
+ABSTRACT
+Life and Institution: Marx’s Problem of Second Nature Song Yifan
+Abstract: The concept of “second nature” is a “ghost” that has haunted the entire history of Marxism. Western Marxists, represented by Lukács, creatively introduced this concept, but cut o■ the organic unity of the theory of value forms, ecology and social solidarity in Marx’s philosophy. At this point, the second nature manifests itself only as abstract social domination. But there is a great struggle contained at the origins of Marx’s philosophyvia the con■ict and dialogue between Spinoza and Hegel—over how freedom can be reconciled with nature and how freedom can be built on its institutional roots, the most difficult dilemmas presented to Marx. The second nature is not a transcendence of the ■rst nature, but a replication of the relation between nature and spirit within it. Understanding this notion entails simultaneously asking what forms the nature/politics alliance should take: what is the relationship between life and institution, and whether the real vitality of social solidarity resides in the centralized political state, or in a pluralistic mutual flourishing of life from the margins and the bottom. By investigating capitalism’s domination “through nature”, Marx explored how to resist the petrifaction of second nature from the perspective of immanence of life. The question of second nature reveals the contemporary relevance of Marx’s philosophy in the Anthropocene. Keywords: nature/politics alliance; habitus; genus and species; second nature
+How is the Lifeworld Inferred: The Modalized Predictions of Arti■cial Intelligence and Their Risks Gao Tianshu
+Abstract: With the widespread application of arti■cial intelligence in social governance, public decision-making, and daily life scenarios, its mode of intervention in the lifeworld is undergoing a shift: From the technical processing of existing facts to prospective prediction based on probability models and algorithmic inference. Within the analytical framework of possible worlds theory and modal logic, generative arti■cial intelligence can reconstruct the lifeworld—which originally relied on subjective experience, value judgment, and normative understanding—into a set of computable, comparable, and anticipatable modalized possible worlds. This is achieved through the abstract modeling of empirical facts and probabilistic calculus. The value of this transformation lies in enhancing decisionmaking efficiency and risk control capabilities, but its potential risks pose a profound challenge to normative foundations. The imminent issues are the misuse of the predictive functions of generative artificial intelligence, the misguidance of holistic cognition, and the trust risks associated with modal calculus. These are unavoidable in the short term. Addressing them requires starting from clarifying the boundaries of the lifeworld’s modalization by generative arti■cial intelligence, strengthening ethical review in the design and updating of generative arti■cial intelligence prediction models, and improving legal constraints on the self-iteration and autonomous operation of generative arti■cial intelligence, thereby constructing a normative discourse for the modalization of the lifeworld. Keywords: generative arti■cial intelligence; lifeworld; possible worlds; modalization
+The “Plural” Community: Rethinking Political Philosophy in Modernity Li Mujin
+Abstract: A reexamination of the normative debate between liberalism and communitarianism, which has persisted for many years, reveals that in the “plural” community reality shaped by digitalization and global mobility, both the institutional neutrality relied upon by liberalism and the cultural recognition emphasized by communitarianism exhibit limitations in integration. New institutional concepts urgently need to be explored. Drawing on Giddens’ theory of modernity, we can propose a “re■ective-multiple belonging” identity logic to reveal how contemporary individuals engage in identity practices among diverse communities. Addressing the reality of plural communities is no longer a matter of ethical choice, it is an unavoidable governance challenge in the design of modern social institutions. Based on this, critically examining the limitations of existing paradigms, we attempt to build a bridge between theoretical language and practical dilemmas, advocating that political philosophy should shift from normative disputes over value hierarchies to feasible paths of institutional construction, and explore a framework of “integrative community” that can accommodate di■erences and inspire unity. Keywords: modernity; liberalism; communitarianism; re■ective identity
+How to Produce Tacit Knowledge in the Digital Age Yang Taiwen
+Abstract: Digital technology has changed the underlying logic of knowledge production, dissemination, and practice, opening up new contexts for the study of the knowledge sociology. However, the question of how tacit knowledge full of concealment, practicality, and contextuality can be shaped by digital technology has not been deeply discussed. Although tacit knowledge has long been widely recognized, few scholars have systematically sorted out the production issues of tacit knowledge, let alone examined the impact of digital technology on it. Based on previous exploration of tacit knowledge tacit knowledge can be divided into nine types according to content and existence basis, and the knowledge production path can be divided into three different modes according to temporality and agency level. The deep intervention of digital technology is reshaping the path of tacit knowledge production, dissemination, and use.
+
+
+178 ঳第四三Н期
+Keywords: tacit knowledge; digital technology; habits; body; sociology of knowledge; knowledge production
+The Banality of Evil: The Paradox of Intertextual Knowledge Production in the Era of Large Language Models Jie Qitao
+Abstract: Large language models are intervening in knowledge production on an unprecedented scale. Their impact extends beyond mere efficiency gains to fundamentally reshaping how knowledge is understood, evaluated, and transmitted. Their generative mechanism, centered on intertextuality, enables texts to circulate and reconfigure frequently within existing discourses, yielding highly fluid, logically coherent, and widely acceptable forms of knowledge. Yet within this seemingly “rational” generative process, di■erences, negations, and critical judgments are progressively compressed. Complex issues are prematurely converged into safe, stable answers, revealing a latent and structural tendency toward the “banality of evil” in knowledge production. This banality is not about errors or lowquality knowledge, but rather the automation, scaling, and subjectlessness inherent in intertextuality—which shifts the burden of judgment and displaces the subject’s position. Consequently, knowledge production increasingly relies on algorithms probabilistically ■tting existing corpora, no longer unfolding through debate, hesitation, and re■ection. Instead, it can be continually con■rmed and reinforced along predetermined paths of technological intertextuality. If this persists, the unique spiritual resonance, humanity, emotion, and experience inherent in knowledge production will gradually be extinguished. Therefore, the true challenge brought by technological progress lies in preventing knowledge from losing its tension and depth during continuous generation. Only by reserving space for uncertainty and multiple interpretations in technological design, preventing e■ciency logic from imposing low-level lock-in on innovation pathways through institutional arrangements, and reemphasizing the value of judgment, responsibility, and intrinsic insight at the cultural level can knowledge production escape the gravitational pull of mediocrity. It can then reclaim its role as a process leading to new questions, new meanings, and new possibilities. Keywords: intertextuality; knowledge production; knowledge’s spiritual resonance; generative arti■cial intelligence; the banality of evil
+Scienti■c Discourse in Modern African Knowledge Production: Origins, Transformations, and Transcendence Duo Yue
+Abstract: “Science” has long been regarded as one of the pivotal consequences of Western modernity, serving as both the intellectual foundation of the European Industrial Revolution and the moral justi■cation for colonial rule. Since the nineteenth century, scienti■c discourse has profoundly reshaped Western humanities and social sciences while exerting a deep influence on the formation of modern African thought. This study identifies two critical threads in the examination of scienti■c discourse within modern African knowledge production: First, early PanAfrican writing employed the empirical methodology of Rankean historiography to argue for the legitimacy of African civilizations, yet remained tethered to the civilizational hierarchy inherent in scienti■c methodology. Second, during the era of national independence movements, African intellectuals transformed the universality of science into the possibility of scienti■c liberation, elevating the abstract objectivity of science into the concrete pursuit of national independence and modernization. Across these two trajectories, “science” as a tool of Western hegemony was gradually recon■gured into a “science” as a tool of resistance and emancipation, manifesting a new potential for universality.
+Keywords: science; empire; Africa; knowledge production; positivism
+“Non-Knowledge” as Knowledge: Rethinking the Concept, Legitimation, and Value Functions of “Knowledge” Yu Jingwei
+Abstract: In the current context of internet popular culture, “pure knowledge” within Western epistemology has been disenchanted by the masses. Through the generalization of concepts and the reconstruction of meaning, a form of “non-knowledge” has emerged, which has become the actual referent of knowledge within the realm of popular culture. By leveraging technological contexts, “non-knowledge” has achieved its own legitimation. Characterized by weakened specialization, data■cation, accessible expression, and a heightened focus on empirical matters, “nonknowledge” has become a vital tool for modern individuals to understand and engage with the experiential world. While facilitating the circulation and exchange of memory, it also signals the advent of a state of “industrialization of memory,” o■ering structural insights for future-oriented knowledge production. Keywords: pure knowledge; “non-knowledge”; technological contexts; legitimation; industrialization of memory
+The Flow of Information Control Power: Digital Revolution and the Building of State Information Capacity Lv Junyan
+Abstract: Regarding the role of digital technology in state capacity, research has fallen into a generalized discussion of technological empowerment, without clearly elucidating which entities will be empowered and what the mechanisms of empowerment are. With digital technology embedded in national governance, a signi■cant impact is the flow of information and the redistribution of power among entities. Therefore, the analysis of how digital technology reshapes state capacity can be considered from the perspectives of information ■ow, transfer of control, and redistribution of power. Specifically, the digital revolution has unleashed the flow of information. Different entities engage in fierce competition for information ownership, shaping power dominance and redistribution structures based on information. The digital revolution reshapes state information capacity, through a process that involves intense competition for information among vertical governments, between the state and society, and

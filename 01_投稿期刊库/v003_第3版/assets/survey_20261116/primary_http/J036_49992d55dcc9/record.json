@@ -1,0 +1,20 @@
+{
+  "journal_id": "J036",
+  "source_url": "https://szjk.cbpt.cnki.net/portal/journal/portal/client/index",
+  "retrieved_at": "2026-11-16T15:02:47.937160+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://szjk.cbpt.cnki.net/portal/journal/portal/client/index",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J036_49992d55dcc9/text.txt",
+  "sha256": "807cbbf39b511383f32fe94ca6e1ab97f01c2a092b655f15b18ddbe43272ac99",
+  "original_path": "primary_http/J036_49992d55dcc9/response.html",
+  "original_sha256": "6b96728294216e56abc161bff4af823a78befaf1e32ae09d76e016111d01e1e9",
+  "line_count": 705,
+  "title": "苏州大学学报（教育科学版）",
+  "guideline_links": [
+    "https://szjk.cbpt.cnki.net/portal/journal/portal/client/news/szjk_c9e38183-6ff3-4939-8b0a-d38c877a65eb"
+  ],
+  "review_status": "awaiting_source_readback"
+}

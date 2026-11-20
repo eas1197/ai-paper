@@ -1,0 +1,18 @@
+{
+  "journal_id": "J019",
+  "source_url": "https://rwskc.njau.edu.cn/info/1084/3889.htm",
+  "retrieved_at": "2026-11-16T15:04:21.924358+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://rwskc.njau.edu.cn/info/1084/3889.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J019_31a24b4f954c/text.txt",
+  "sha256": "eb58c8f7682f912c62aeed9ba5148aa2ddd8449e78bdd69f088d2d6901350333",
+  "original_path": "primary_http/J019_31a24b4f954c/response.html",
+  "original_sha256": "99220dd7e9b50c9a557916ba6327c62f26162549760882354423fc3b197ec532",
+  "line_count": 155,
+  "title": "《南京农业大学学报（社会科学版）》-南京农业大学人文社科办",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

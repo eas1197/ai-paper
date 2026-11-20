@@ -1,0 +1,22 @@
+{
+  "journal_id": "J094",
+  "source_url": "https://www.journal.sdu.edu.cn/tgxz.htm",
+  "retrieved_at": "2026-11-16T15:03:21.874207+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://www.journal.sdu.edu.cn/tgxz.htm",
+  "content_type": "text/html",
+  "status": "archived",
+  "snapshot_path": "primary_http/J094_f787753fdad0/text.txt",
+  "sha256": "473ba2e831bb229d71afc6b2ff3f8a4bdea8ddf243cbc61488c3c44399a555b1",
+  "original_path": "primary_http/J094_f787753fdad0/response.html",
+  "original_sha256": "96d60a2295f0220322aed4ac9d2d9fe4aa0cff048baefa9ce56da44f4f10f4bf",
+  "line_count": 75,
+  "title": "投稿须知-山东大学学报（哲学社会科学版）",
+  "guideline_links": [
+    "https://www.journal.sdu.edu.cn/tgxz.htm",
+    "https://www.journal.sdu.edu.cn/tgzn/tgsgxt.htm",
+    "https://www.journal.sdu.edu.cn/tgzn/zgqs.htm"
+  ],
+  "review_status": "awaiting_source_readback"
+}

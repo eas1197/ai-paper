@@ -1,0 +1,18 @@
+{
+  "journal_id": "J061",
+  "source_url": "https://yshx.cbpt.cnki.net/EditorHN/PromptPageInfo.aspx?c=1&t=v",
+  "retrieved_at": "2026-11-16T15:04:08.179069+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://yshx.cbpt.cnki.net/EditorHN/PromptPageInfo.aspx?c=1&t=v",
+  "content_type": "text/html; charset=utf-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J061_a0b2eb7eb871/text.txt",
+  "sha256": "f3acc9a5fe637fa6bdc83d7e998cee9a7c0f040fb30d822dfedef8dec6efd087",
+  "original_path": "primary_http/J061_a0b2eb7eb871/response.html",
+  "original_sha256": "8b98fd4c9a3d6bfe698fd11ed235bd55492e62291679bc793ecafc2cc941dc00",
+  "line_count": 25,
+  "title": "\r\n\t投稿须知\r\n",
+  "guideline_links": [],
+  "review_status": "awaiting_source_readback"
+}

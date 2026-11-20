@@ -1,0 +1,20 @@
+{
+  "journal_id": "J068",
+  "source_url": "https://xslt.cbpt.cnki.net/portal/journal/portal/client/news/xslt_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "retrieved_at": "2026-11-16T15:03:03.361100+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://xslt.cbpt.cnki.net/portal/journal/portal/client/news/xslt_0a96be87-490b-49ff-90aa-bee7b5d1b2cc",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J068_567eb5fa1be9/text.txt",
+  "sha256": "ce2dc84861b77654fe387cf5cd2368c8308dcb857c23bed1b907bd90386fe6df",
+  "original_path": "primary_http/J068_567eb5fa1be9/response.html",
+  "original_sha256": "65eb4379ec8834c3e8fc180ef15eb222cd446ac4708c30fe58a0292e6897c732",
+  "line_count": 66,
+  "title": "学术论坛",
+  "guideline_links": [
+    "https://xslt.cbpt.cnki.net/portal/journal/portal/client/news/xslt_0a96be87-490b-49ff-90aa-bee7b5d1b2cc"
+  ],
+  "review_status": "awaiting_source_readback"
+}

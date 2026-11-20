@@ -1,0 +1,214 @@
+{
+  "activated_at": "2026-11-14T20:32:35.355368+08:00",
+  "request": "后续论文按详细架构写作；需部分顺序、字数、格式、特殊句式及热点/理论分支",
+  "module_versions": {
+    "02": 3,
+    "07": 3
+  },
+  "writing_architecture": {
+    "profile_id": "quant_sociology_cn_architecture",
+    "profile_version": "1.0",
+    "profile_path": "02_文章结构学习/v003_第3版/templates/writing_profile.json",
+    "profile_sha256": "2b5f9c95dd1de0c60fc0067e1bae827edaf11b65495d38b2e2502513a73294ac",
+    "guide_path": "02_文章结构学习/v003_第3版/assets/写作架构/定量社会学论文写作架构.md",
+    "guide_sha256": "5e578c591c7fda1f23754825b1b9334e016e9abd100d1f73b27101210df3c37d"
+  },
+  "control_registry": {
+    "path": "00_项目控制/v002_第2版/module_registry.json",
+    "sha256": "e6afbec634ac1e3428b9db7b2b669c33aa4922d67c3981e52f1d5d198329b638"
+  },
+  "config": {
+    "path": "00_项目控制/v002_第2版/project_config.json",
+    "sha256": "a65a955135146703cc25e3c6210238cdc3cbb11124a1e6db87d7bd99594f8ba4"
+  },
+  "source_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c2868cc22a421147a4fa2ef8e1cf73009b808c11aa31ceb690911b9e138dc8bd"
+    },
+    {
+      "path": "基础要求.md",
+      "sha256": "3ce960e84d18120908d662c8a91029f46fde7b81d5279d91f2625117ca8f1a8b"
+    },
+    {
+      "path": "项目架构.md",
+      "sha256": "62b9fbd642555ae074ce3eec616b02353e79c74bde883b9f6902ca36f8c96697"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/run_manifest.json",
+      "sha256": "e34bece7f6874170de26eee949e2eb035448d71ebc052123dab6cbb68d0d3d27"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/structure_moves.csv",
+      "sha256": "63e0f88cabce7c8a330700cc5e05e562e47ac518cf7e8d4d4ee2c7109efb156d"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/abstract_sentences.csv",
+      "sha256": "cbe750ae4a56f064e41ee2397a016339e775eec18fa563346f151a4682a9b5ce"
+    },
+    {
+      "path": "02_文章结构学习/v002_第2版/outputs/资源建设_20261114_attempt002/gate_report.json",
+      "sha256": "3a871e5aa6ac4923f0988242d396047d3d97b2bc693aaa1d56fa1b6db66e6799"
+    }
+  ],
+  "seed": null,
+  "model": "current Codex conversation; exact model identifier not exposed",
+  "normative_design": true,
+  "empirical_G2": "needs_review",
+  "validation": {
+    "checked_at": "2026-11-14T20:32:35.355368+08:00",
+    "passed": true,
+    "problems": [],
+    "framework_validation": {
+      "framework_valid": true,
+      "problems": [],
+      "database_table_count": 33,
+      "research_gates_evaluated": false,
+      "note": "通过仅代表框架结构有效，所有研究业务仍待执行。"
+    },
+    "budgets_checked": [
+      12000,
+      15000,
+      18000,
+      400
+    ],
+    "binding_hashes_checked": true,
+    "empirical_resource_status": "needs_review",
+    "research_gates_passed": false,
+    "scope": "writing norm completeness, budget arithmetic, configuration paths/hashes, existing framework and routing"
+  },
+  "files": [
+    {
+      "path": "02_文章结构学习/v003_第3版/assets/corpus/README.md",
+      "sha256": "058a4f8246cc921ebee4c94040cf683bf8a33b78589b3607ae917cb657fcb972"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/assets/写作架构/定量社会学论文写作架构.md",
+      "sha256": "5e578c591c7fda1f23754825b1b9334e016e9abd100d1f73b27101210df3c37d"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/CHANGELOG.md",
+      "sha256": "dcc3dc2287d0b88c58148a9154bcf5493a125c5a68bee7d960c30c87db83a8f9"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/manifest.json",
+      "sha256": "c4da9378c73a27677247129b75750bccff4c8cc21471d0d6d94641dfa88a235d"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/outputs/activation_history/before_module_registry.json",
+      "sha256": "1dfc397b154ee582ab8266135d096457d0f4001acb8d9cddc456593b751ab1cf"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/outputs/activation_history/before_project_config.json",
+      "sha256": "7bbe236a61412b3cdb8897d6c68d91143d6ac11922e3e51d5900763e4d5efdd3"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/outputs/activation_validation.json",
+      "sha256": "b224a4cf6a13bae75af9fa222bd20838c80614e7d59856a7f21901e733241fe6"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/outputs/resource_snapshot.json",
+      "sha256": "0de1ff04f56cc872b1a8ed7afcaed6f13f638b124149a36b8d10c96ed8a7b3cc"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/abstract_sentences.csv",
+      "sha256": "5ad634713770b886dae6fb9a31cdd5e0bc9c54f306438775172a76a6716ab3d2"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/corpus20.csv",
+      "sha256": "3d58e5e5d65c7ab543f743d8b5919bf868ebf1b710bb21a57ac478261bb3d54c"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/README.md",
+      "sha256": "a7d4b9ca8c67408e5befb57ce04d6e7321500fc5108b4e4d881c32678ac811b7"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/structure_handbook.md",
+      "sha256": "adbf5f715cb5ccc0235674089c7202a3d0a67070b80e8a2c64c676535037b975"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/structure_moves.csv",
+      "sha256": "f5b5ebc9e8be472f6a8ed454a5358d0d69dc9857a1282888c3743c7438e96e8d"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/writing_profile.json",
+      "sha256": "2b5f9c95dd1de0c60fc0067e1bae827edaf11b65495d38b2e2502513a73294ac"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/templates/写作计划.md",
+      "sha256": "cd36dd94fad96bd145ffe0f1a4b4c3bab90ac9a7f87083b6c12dde1eecf2d481"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/tools/activate_architecture.py",
+      "sha256": "055da0cdd3ab8582a35e8d1fe8b9b1b10eb7d9db4dad6a82572e31a4a1649230"
+    },
+    {
+      "path": "02_文章结构学习/v003_第3版/模块说明.md",
+      "sha256": "5135e61b858988f1134b6dfa0df7be8e94a27689ead8655dc631bf558a30af3a"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/A稿/README.md",
+      "sha256": "ad2a556c32ed0d54c422b130fdac418c1d3ce2a6c874d77cfa3faba5738c6016"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/B稿/README.md",
+      "sha256": "0bfb2b0c43cdc7c91dd19bf5869ba69e04ad6036334371e55ef4427f9d6dc80e"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/CHANGELOG.md",
+      "sha256": "62ca2ea15785f51bbb5f13b1cc29e9b419ae58fbb4a5184637370bf6abfc73b0"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/C稿/README.md",
+      "sha256": "88dea12b0dbbfdb20fae174a6989337f22d3faabf678e46ba0178d45b1288a78"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/manifest.json",
+      "sha256": "e04af04bfde4388be25279cf7c29ffc2ddad8c1c1ee0113575a41c2de7dc5767"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/outputs/activation_validation.json",
+      "sha256": "b224a4cf6a13bae75af9fa222bd20838c80614e7d59856a7f21901e733241fe6"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/architecture_self_check.csv",
+      "sha256": "813abb81d9be52faf821deaf54796d743777f15717a2fcd13d12fdb64a516691"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/claims.csv",
+      "sha256": "6624ef56840eb5eeadd82d3172004afc870131b890e6b8f350f8bbd83809178e"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/draft_manifest.json",
+      "sha256": "f752bf7ebe9cffe3b7dc200059cff8d9976e24ae2e2786a030e050640dc2ff7b"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/frozen_manifest.json",
+      "sha256": "b3cac1cee16273ffea5a7e1f3c9b71efd5c1d8a5ac590a61bbcf1a891eb1b1f1"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/manuscript.md",
+      "sha256": "df6d510339bb352bf1640c88b03e3af5b1032825b635a16a3f25c971e1f434d7"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/README.md",
+      "sha256": "4e712915ca8648192e99a99d743505d7d0e673d1be7c680f67b7cac9299b690b"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/self_check.csv",
+      "sha256": "158f555af13d5641860cb66e0b96148ce838b2ba6c7e6a7e7b308aa562e8dd8d"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/writing_architecture_binding.json",
+      "sha256": "e9887ac0f705d54378ed58fc46ceac392784c7103dd67d90d8cbf93f1e22115b"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/templates/写作计划.md",
+      "sha256": "cd36dd94fad96bd145ffe0f1a4b4c3bab90ac9a7f87083b6c12dde1eecf2d481"
+    },
+    {
+      "path": "07_三稿独立写作/v003_第3版/模块说明.md",
+      "sha256": "6e5e287d9c3d01be930ccea8e997aa4690ae116ef3307710fb7483a03d0f6028"
+    }
+  ]
+}

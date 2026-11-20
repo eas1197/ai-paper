@@ -1,0 +1,20 @@
+{
+  "journal_id": "J036",
+  "source_url": "https://szjk.cbpt.cnki.net/portal/journal/portal/client/news/szjk_c9e38183-6ff3-4939-8b0a-d38c877a65eb",
+  "retrieved_at": "2026-11-16T15:04:59.188355+08:00",
+  "tls_verified": true,
+  "status_code": 200,
+  "final_url": "https://szjk.cbpt.cnki.net/portal/journal/portal/client/news/szjk_c9e38183-6ff3-4939-8b0a-d38c877a65eb",
+  "content_type": "text/html;charset=UTF-8",
+  "status": "archived",
+  "snapshot_path": "primary_http/J036_cab1ea01e412/text.txt",
+  "sha256": "35e65db1bf627a92bf6b478275ec65dd0a49625f54b9c5e72fd0662674b17e2c",
+  "original_path": "primary_http/J036_cab1ea01e412/response.html",
+  "original_sha256": "08bbeaaabc0de753e5fadaac65129b30f614818e6da2e3c8f0b3a1af89b8fc33",
+  "line_count": 333,
+  "title": "苏州大学学报（教育科学版）",
+  "guideline_links": [
+    "https://szjk.cbpt.cnki.net/portal/journal/portal/client/news/szjk_c9e38183-6ff3-4939-8b0a-d38c877a65eb"
+  ],
+  "review_status": "awaiting_source_readback"
+}
