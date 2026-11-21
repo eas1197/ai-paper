@@ -4,6 +4,8 @@ from collect_common import digest, load, sha, write
 
 
 def check(work, matrix):
+    if matrix.get("run_mode") == "dev" or matrix.get("formal_eligible") is False:
+        raise ValueError("Experimental literature cannot be exported by the regular handoff")
     from providers import LocalLiteratureProvider
     from literature_sources import DESIGNATED, online_record
 

@@ -164,7 +164,8 @@ def invoke(executable, work, prompt, schema, *, timeout, model=None):
 def collect(config, work, template, schema, *, resume=False, pilot=None):
     work = work.resolve()
     work.mkdir(parents=True, exist_ok=True)
-    if config["target"] not in (20, 100) or not 2 <= len(config["theme"].strip()) <= 160:
+    targets = (10,) if config.get("run_mode") == "dev" else (20, 100)
+    if config["target"] not in targets or not 2 <= len(config["theme"].strip()) <= 160:
         raise ValueError("Invalid theme or target")
     if not 1 <= config["max_batches"] <= 8 or not 60 <= config["timeout_seconds"] <= 1800:
         raise ValueError("Invalid execution budget")
@@ -213,6 +214,9 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
                 desired=min(24, config["target"] - len(papers) + 3),
                 accepted=json.dumps([r["title"] for r in papers], ensure_ascii=False),
             )
+            if config.get("run_mode") == "dev":
+                prompt += (f"\n本轮是实验。最多使用 {config['search_action_budget']} 个原生网页工具动作，"
+                           "接近预算时先提交已核实条目，保留缺口。")
             try:
                 code = invoke(executable, directory, prompt, schema,
                               timeout=config["timeout_seconds"], model=config.get("model"))
@@ -245,5 +249,10 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
             "batches": state["batches"], "unverified": state["rejected"],
             "status": "verification_pending" if len(papers) >= config["target"] else "incomplete",
         }
+        if config.get("run_mode") == "dev":
+            bundle.update(run_mode="dev", formal_eligible=False,
+                          workload_sha256=config["workload_sha256"])
+            if sum(b.get("search_events", 0) for b in state["batches"]) > config["search_action_budget"]:
+                bundle["status"] = "experimental_budget_exceeded"
         write(work / "abstract_collection.json", bundle)
         return bundle

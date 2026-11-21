@@ -1,0 +1,186 @@
+{
+  "round": 3,
+  "stage": "deepening",
+  "next_stage": "formal",
+  "reason": "quality_met",
+  "config_sha256": "8ec641f5d2aefc83188c519372cae7b58645a81bcfe9d77a784b4b988e3579f9",
+  "approved_ids": [
+    "Q1"
+  ],
+  "bundle": {
+    "evidence": [
+      {
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+        "evidence_id": "E1",
+        "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+        "kind": "abstract",
+        "source_id": "RK1",
+        "locator": {
+          "section": "官网摘要短摘"
+        },
+        "paper_id": "RK1",
+        "document_id": "DOC1",
+        "excerpt": "受教育程度更高的老年人能够更多地受益于互联网使用。"
+      },
+      {
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+        "evidence_id": "E2",
+        "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+        "kind": "abstract",
+        "source_id": "RK2",
+        "locator": {
+          "section": "官网摘要短摘"
+        },
+        "paper_id": "RK2",
+        "document_id": "DOC2",
+        "excerpt": "中老年上网者互联网使用时长适中,内部异质性强"
+      },
+      {
+        "paper_id": "RK3",
+        "locator": {
+          "section": "官网摘要短摘"
+        },
+        "excerpt": "城镇老年人在网络接入、网络使用、学习上网途径、上网设备等方面存在性别、年龄、受教育程度上的显著差异",
+        "kind": "abstract",
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source_3.txt",
+        "evidence_id": "E3",
+        "document_id": "DOC3",
+        "sha256": "5f207cba06713bfd7e77087da30c8a891975823811a144427ed6985a7ca3e173",
+        "source_id": "RK3"
+      }
+    ],
+    "schema_version": 1,
+    "opportunities": [
+      {
+        "observation": "一项CLASS研究报告较高教育组的互联网使用收益更大，教育差异出现在哪类使用中尚待追问。",
+        "opportunity_id": "O1",
+        "social_process": "学校教育资源和老年互联网使用回报",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "observation": "调查报告中老年上网者在使用时长方面存在内部异质性，教育是否与上网者群体内的强度相关仍待查证。",
+        "opportunity_id": "O2",
+        "social_process": "老年上网人群内部的使用分化",
+        "evidence_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "critiques": [
+      {
+        "kind": "competing",
+        "evidence_ids": [
+          "E3"
+        ],
+        "text": "接入门槛可能使已上网者构成不同，时长差异也可能受城乡基础设施、出生队列影响。两阶段描述可区分差异的位置，不能识别机制或因果。",
+        "critique_id": "C1",
+        "explanation_ids": [
+          "X1"
+        ]
+      }
+    ],
+    "evolution": [
+      {
+        "next_question_id": "Q1",
+        "explanation_ids": [
+          "X1"
+        ],
+        "question_id": "Q0",
+        "disposition": "retained",
+        "increment": "将接入和接入后时长放在同一设计中，在城乡组内检查教育分层出现的位置。现有摘要尚不能确认文献空白和问项可行性。",
+        "critique_ids": [
+          "C1"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "concepts": [
+          "教育分层",
+          "使用时长",
+          "数字接入"
+        ],
+        "opportunity_id": "O2",
+        "text": "在已使用互联网的60岁及以上人群中，不同受教育程度者的上网时长分布是否不同？",
+        "comparison": "小学及以下与初中及以上，比较时长分布",
+        "population": "60岁及以上且已上网者",
+        "question_id": "Q0",
+        "answer_value": "有差异支持教育分层延续到接入之后；没有差异时，优先区分接入差异与接入后的使用类型差异。",
+        "scope": "中国横截面调查，调查年份与问项待核实"
+      },
+      {
+        "scope": "单期横截面；须确认同一调查同时涵盖两阶段结局",
+        "concepts": [
+          "教育分层",
+          "数字接入",
+          "使用时长"
+        ],
+        "answer_value": "如果差异主要集中在接入，数字排斥首先表现为进入机会；若时长也有差异，教育分层延续到使用阶段，但其福利意义依然未知。",
+        "comparison": "同一城乡组内小学及以下与初中及以上，分别比较接入与接入后时长",
+        "opportunity_id": "O2",
+        "population": "中国60岁及以上者；时长分析限定已上网者",
+        "question_id": "Q1",
+        "text": "在同一调查的60岁及以上人群中，教育程度与上网接入的关联，是否也出现在已接入者的上网时长上？城乡组内结论是否一致？"
+      }
+    ],
+    "explanations": [
+      {
+        "unknown_reason": "摘要未给出教育与接入后时长的具体估计",
+        "observed_result": "作者根据CLASS2018报告差异",
+        "applicable_scope": "中国城镇老年人",
+        "proposed_mechanism": null,
+        "system_inference": "年龄构成和接入选择可能共同影响时长比较",
+        "question_id": "Q0",
+        "explanation_id": "X1",
+        "evidence_ids": [
+          "E3"
+        ],
+        "author_claim": "城镇样本的接入和使用等维度存在人口学差异",
+        "evidence_strength": "author_report"
+      }
+    ]
+  },
+  "review": {
+    "stage": "deepening",
+    "verdict": "READY",
+    "model": "gpt-6.2-sol",
+    "invocation_id": "a5b5f7e4-42cd-458b-bff5-6860bd924a3f",
+    "input_sha256": "009aa0e2fccaa160dad286918b56f63aef3225bfdbe32b319e7f361392d51d85",
+    "selected_ids": [
+      "Q1"
+    ],
+    "evidence": [
+      {
+        "evidence_id": "E3",
+        "locator": "《人口研究》2021年第2期官网中文及英文摘要，https://rkyj.ruc.edu.cn/CN/Y2021/V45/I2/61",
+        "finding": "丁志宏、张现苓用CLASS 2018分析城镇老年人，已报告教育组在网络接入和网络使用方面的差异。摘要没有给出教育组的时长比较或城乡对照。"
+      },
+      {
+        "evidence_id": "E2",
+        "locator": "《人口研究》2024年第1期官网中文摘要，https://rkyj.ruc.edu.cn/CN/Y2024/V48/I1/40",
+        "finding": "专项调查报告50岁及以上上网者的时长存在异质性，为实测时长提供数据线索，样本可取得性及60岁以上城乡组的问项和样本量待查。"
+      }
+    ],
+    "strongest_objection": "既有研究已经覆盖城镇老年人的接入和使用教育差异，城乡扩展的实质增量和使用时长是否属于同一既有结局均待核对。教育影响接入构成，条件时长差异不能解释为教育效应或数字福利差异。",
+    "actual_increment": "Q1将目标明确为同一调查中的两个结局，并在城乡组内比较。有经验内容的候选增量是教育差异在已上网者的时长上是否可见，以及该差异是否跨城乡一致。两阶段的差异应分别报告，不能按原始效应大小断言主要集中在哪一阶段。",
+    "gap": "当前仅有摘要，尚未核清已有研究的时长口径、同一可用数据的两项结局及城乡识别、两阶段有效人数和调查权重。正式文献和数据证据尚未冻结。",
+    "reason": "Q1可以进入正式证据收集。近邻研究已经回答部分问题，使优先查证有明确对象。专项调查已有时长线索，定向核对有较高信息收益。只有量表、分组和实际增量均有证据时才继续定题。",
+    "next_action": "先核对2021年全文和2024年调查问卷、数据获取及样本说明，确认上网的操作定义、时长单位、跳转、城乡与教育分组。若已经存在同样比较或缺少同源可用测量，停止该候选。",
+    "expected_gain": "用最接近的原研究和调查文档确定问题增量与可测性，并在投入全量分析之前排除重复或不可执行的方向。",
+    "cost": {
+      "model_calls": 1,
+      "search_calls": 2
+    },
+    "action_worth_cost": true
+  },
+  "usage": {
+    "model_calls": 2,
+    "search_calls": 1
+  },
+  "used": {
+    "model_calls": 6,
+    "search_calls": 2
+  }
+}

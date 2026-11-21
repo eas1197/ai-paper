@@ -56,5 +56,8 @@ def receive(work, journals):
         "excerpt_visible_count": sum(row["excerpt_visible_in_logged_result"] for row in rows),
         "rows": rows, "conflicts": conflicts,
     }
+    if bundle.get("run_mode") == "dev":
+        matrix.update(run_mode="dev", formal_eligible=False,
+                      workload_sha256=bundle["workload_sha256"])
     write(work / "literature_matrix.json", matrix)
     return matrix

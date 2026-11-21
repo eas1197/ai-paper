@@ -47,6 +47,7 @@ def main():
     parser.add_argument("--verify-only", action="store_true")
     parser.add_argument("--expand-from", help="A copyable 20-paper acceptance run")
     parser.add_argument("--handoff-check", action="store_true")
+    parser.add_argument("--dev-run", type=Path)
     args = parser.parse_args()
     config = load(args.config)
     if args.theme:
@@ -56,6 +57,20 @@ def main():
     work = contained(ROOT, args.work)
     if work == ROOT:
         raise ValueError("Use an independent run directory")
+    if args.dev_run:
+        sys.path.insert(0, str(ROOT / "00_项目控制/v007_第7版/tools"))
+        from run_mode import verified_run
+        experiment = verified_run(args.dev_run)
+        if work != args.dev_run.resolve() / "literature" or args.expand_from or args.handoff_check:
+            raise ValueError("Experimental literature is confined to its own run and handoff")
+        limits = experiment["workload"]
+        config.update(theme=experiment["theme"], target=limits["04"]["abstract_target"],
+                      max_batches=limits["11"]["max_batches"],
+                      timeout_seconds=limits["11"]["timeout_seconds"],
+                      search_action_budget=limits["11"]["native_search_actions"],
+                      run_mode="dev", workload_sha256=experiment["workload_sha256"])
+    if config.get("target") == 10 and not args.dev_run:
+        raise ValueError("Ten papers requires a registered Dev Mode run")
     if args.expand_from and (config["target"] != 100 or args.resume or args.verify_only):
         raise ValueError("--expand-from starts a new 100-paper run")
     pilot = None
@@ -76,6 +91,13 @@ def main():
         pilot = pilot_dir, review
     if args.verify_only:
         result = load(work / "abstract_collection.json")
+        if result.get("run_mode") == "dev" and not args.dev_run:
+            raise ValueError("Experimental bundle requires its frozen Dev Mode run")
+        if args.dev_run and (result.get("run_mode"), result.get("workload_sha256"),
+                             result.get("target"), result.get("theme")) != (
+            "dev", config["workload_sha256"], config["target"], config["theme"],
+        ):
+            raise ValueError("Literature bundle does not match the frozen Dev Mode run")
     else:
         result = collect(config, work, HERE / "templates/search_prompt.txt",
                          HERE / "templates/native_response.schema.json", resume=args.resume,
@@ -88,7 +110,8 @@ def main():
         {key: result[key] for key in ("status", "target", "count", "batches")},
         excerpt_visible_count=matrix["excerpt_visible_count"],
     ), ensure_ascii=False, indent=2))
-    return 0 if result["count"] >= result["target"] else 3
+    return 0 if (result["count"] >= result["target"]
+                 and result["status"] != "experimental_budget_exceeded") else 3
 
 
 if __name__ == "__main__":
