@@ -1,0 +1,16 @@
+{
+  "module_id": "11",
+  "version": 4,
+  "status": "candidate",
+  "profile": "paper_autonomous_v31",
+  "entrypoint": "tools/abstract_acquisition.py",
+  "reuse": [
+    "v003/tools/acquisition.py",
+    "v003/tools/cnki.py",
+    "v003/tools/collect_common.py"
+  ],
+  "outputs": [
+    "checkpoint.json",
+    "abstract_collection.json"
+  ]
+}
