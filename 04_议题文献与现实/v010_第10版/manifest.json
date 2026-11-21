@@ -1,0 +1,16 @@
+{
+  "module_id": "04",
+  "version": 10,
+  "status": "candidate",
+  "profile": "paper_autonomous_v31",
+  "scope": "multi_source_abstract_only",
+  "entrypoint": "tools/multi_library.py",
+  "reuse_receiver": "v009_第9版/tools/abstract_library.py",
+  "provider_module": 5,
+  "outputs": [
+    "abstract_collection.json",
+    "literature_matrix.json",
+    "historical_regression.json",
+    "checkpoint.json"
+  ]
+}

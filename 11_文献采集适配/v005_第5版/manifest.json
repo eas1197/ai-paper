@@ -1,0 +1,14 @@
+{
+  "module_id": "11",
+  "version": 5,
+  "status": "candidate",
+  "profile": "paper_autonomous_v31",
+  "engine": "multi_v2",
+  "entrypoint": "tools/multi_acquisition.py",
+  "sources": [
+    "vip_public",
+    "journal_shxyj_public",
+    "cnki_normal_selenium"
+  ],
+  "prior_version": 4
+}
