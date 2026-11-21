@@ -1,0 +1,15 @@
+{
+  "module_id": "11",
+  "version": 6,
+  "status": "candidate",
+  "profile": "paper_adaptive_v31",
+  "engine": "adaptive_v1",
+  "entrypoint": "tools/adaptive_acquisition.py",
+  "prior_version": 5,
+  "sources": [
+    "vip_public",
+    "journal_shxyj_public",
+    "cnki_normal_selenium",
+    "zhipu_web_index"
+  ]
+}
