@@ -1,0 +1,10 @@
+{
+  "module_id": "00",
+  "name": "项目控制",
+  "version": 6,
+  "schema_version": 1,
+  "framework_status": "development",
+  "business_status": "planned",
+  "depends_on": [],
+  "execution_scope": "support"
+}
