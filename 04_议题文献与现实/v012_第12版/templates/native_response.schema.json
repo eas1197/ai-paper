@@ -1,0 +1,115 @@
+{
+  "type": "object",
+  "properties": {
+    "papers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "原始中文题名"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "单个作者姓名"
+            }
+          },
+          "journal": {
+            "type": "string",
+            "description": "七刊之一的准确刊名"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "doi": {
+            "type": "string",
+            "description": "明确出现的 DOI 或空字符串"
+          },
+          "metadata_url": {
+            "type": "string",
+            "description": "本次工具结果中的题录 HTTPS URL"
+          },
+          "abstract_url": {
+            "type": "string",
+            "description": "本次工具实际看过摘要的 HTTPS URL"
+          },
+          "abstract_locator": {
+            "type": "string",
+            "description": "摘要段落、提要或原刊第一页"
+          },
+          "abstract_excerpt": {
+            "type": "string",
+            "description": "原摘要中能定位的中文短语，8至45个汉字"
+          },
+          "abstract_summary": {
+            "type": "string",
+            "description": "根据原摘要撰写的中文改述，80至160字"
+          },
+          "relevance": {
+            "type": "string",
+            "enum": [
+              "direct",
+              "substantive"
+            ]
+          },
+          "relevance_reason": {
+            "type": "string",
+            "description": "说明研究中的分流路径或机制"
+          }
+        },
+        "required": [
+          "title",
+          "authors",
+          "journal",
+          "year",
+          "doi",
+          "metadata_url",
+          "abstract_url",
+          "abstract_locator",
+          "abstract_excerpt",
+          "abstract_summary",
+          "relevance",
+          "relevance_reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unverified": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "候选题名"
+          },
+          "reason": {
+            "type": "string",
+            "description": "未纳入原因"
+          }
+        },
+        "required": [
+          "title",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "search_notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "主要查询、结果驱动的改写与局限"
+      }
+    }
+  },
+  "required": [
+    "papers",
+    "unverified",
+    "search_notes"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+{"module_id":"04","version":12,"status":"candidate","scope":"native_search_abstract_only","profile":"paper_codex_native","entrypoint":"tools/native_library.py","source_module_version":7,"outputs":["checkpoint.json","abstract_collection.json","literature_matrix.json"]}

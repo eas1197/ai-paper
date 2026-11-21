@@ -1,0 +1,249 @@
+"""Run a ChatGPT-authenticated Codex search and admit only traceable observations."""
+
+import json
+import os
+import shutil
+import subprocess
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+from abstract_acquisition import abstract_text, clean_doi, job_lock, safe_url, text_hash
+from collect_common import digest, load, normalize, now, sha, write
+from verified_identity import MATCH, resolve
+
+
+ENGINE = "codex_native_v1"
+
+
+def web_url(url):
+    if not safe_url(url):
+        # Source references may point to an abstract on the first page of a publisher PDF.
+        if not isinstance(url, str):
+            return None
+        try:
+            parsed = urlsplit(url)
+        except ValueError:
+            return None
+        if (parsed.scheme != "https" or not parsed.hostname or parsed.username
+                or not parsed.path.lower().endswith(".pdf")):
+            return None
+    parsed = urlsplit(url)
+    query = [(key, value) for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+             if not key.lower().startswith("utm_")]
+    return urlunsplit((parsed.scheme, parsed.netloc.lower(), parsed.path.rstrip("/") or "/",
+                       urlencode(sorted(query)), ""))
+
+
+def evidence(path):
+    trace = []
+    with path.open(encoding="utf-8-sig") as stream:
+        for line in stream:
+            event = json.loads(line)
+            item = event.get("item") or {}
+            if event["type"] == "item.completed" and item.get("type") == "web_search":
+                trace.append(item)
+            if event["type"] == "item.completed" and item.get("type") in (
+                "command_execution", "mcp_tool_call", "file_change",
+            ):
+                raise ValueError("Non-native execution in literature search session")
+    return trace
+
+
+def proof(url, event_id, trace):
+    canonical = web_url(url)
+    for event in trace:
+        if not canonical or event["id"] != event_id:
+            continue
+        if any(web_url(result.get("url")) == canonical for result in event.get("results", [])):
+            return True
+        action = event.get("action")
+        if isinstance(action, dict) and action.get("type") in ("open_page", "find_in_page"):
+            return web_url(action.get("url")) == canonical and bool(event.get("results"))
+    return False
+
+
+def url_event(url, trace):
+    # The model sees search references; CLI item ids belong to the outer receipt.
+    return next((event["id"] for event in reversed(trace)
+                 if proof(url, event["id"], [event])), None)
+
+
+def observation(row, trace, journals, batch, position):
+    if row["journal"] not in journals or not normalize(row["title"]):
+        raise ValueError("out_of_scope")
+    authors = [name.strip() for name in row["authors"] if isinstance(name, str) and name.strip()]
+    if not authors or not 1900 <= row["year"] <= 2100:
+        raise ValueError("bibliography_incomplete")
+    if row["relevance"] not in ("direct", "substantive") or not row["relevance_reason"].strip():
+        raise ValueError("relevance_unconfirmed")
+    summary = abstract_text(row["abstract_summary"], row["title"])
+    excerpt = row["abstract_excerpt"].strip()
+    if not summary or not 8 <= len(excerpt) <= 90 or not row["abstract_locator"].strip():
+        raise ValueError("abstract_not_verified")
+    identity_event = url_event(row["metadata_url"], trace)
+    abstract_event = url_event(row["abstract_url"], trace)
+    if not identity_event or not abstract_event:
+        raise ValueError("missing_native_tool_receipt")
+    return dict(row, authors=authors, doi=clean_doi(row["doi"]), year=str(row["year"]),
+                status="valid_abstract", provider="codex_native_web", url=row["abstract_url"],
+                abstract_summary=summary, abstract_hash=text_hash(summary),
+                excerpt_sha256=text_hash(excerpt), searched_at=now(), batch=batch,
+                observation_id=f"{batch}:{position}",
+                metadata_event_id=identity_event, abstract_event_id=abstract_event)
+
+
+def group(rows):
+    """Apply the existing identity rule across all observations, including the seventh journal."""
+    components = []
+    problems = []
+    for row in rows:
+        linked = []
+        for component in components:
+            for prev in component:
+                same_doi = row["doi"] and row["doi"] == prev["doi"]
+                same_title = (row["journal"] == prev["journal"]
+                              and normalize(row["title"]) == normalize(prev["title"]))
+                if same_doi or same_title and row["year"] == prev["year"]:
+                    decision = resolve(prev, row)
+                    if decision in MATCH:
+                        linked.append(component)
+                    elif same_doi or decision == "doi_conflict":
+                        problems.append({"ids": [prev["observation_id"], row["observation_id"]],
+                                         "reason": decision})
+            # Compare each member; a lone author cannot bridge incompatible teams.
+        merged = [row]
+        for component in linked:
+            if component in components:
+                components.remove(component)
+                merged.extend(component)
+        components.append(merged)
+    bad = {ident for conflict in problems for ident in conflict["ids"]}
+    papers = []
+    for component in components:
+        conflicts = [resolve(a, b) for pos, a in enumerate(component) for b in component[pos + 1:]
+                     if resolve(a, b) not in MATCH]
+        if conflicts:
+            problems.append({"ids": [r["observation_id"] for r in component],
+                             "reason": "ambiguous_bridge:" + conflicts[0]})
+        if conflicts or any(r["observation_id"] in bad for r in component):
+            continue
+        r = max(component, key=lambda item: (len(item["authors"]), item["relevance"] == "direct"))
+        ident = r["doi"] or [r["journal"], normalize(r["title"]), r["year"],
+                            sorted(normalize(n) for n in r["authors"])]
+        papers.append(dict(r, article_id="A_" + digest(ident)[:24], provenance=component))
+    return papers, problems
+
+
+def invoke(executable, work, prompt, schema, *, timeout, model=None):
+    """No API credentials, external provider configuration, or inherited task workspace."""
+    for filename in ("prompt.txt", "events.jsonl", "stderr.log", "response.json"):
+        if (work / filename).exists():
+            raise FileExistsError("Batch already exists")
+    (work / "prompt.txt").write_text(prompt, encoding="utf-8")
+    env = {k: v for k, v in os.environ.items()
+           if not (k.upper().endswith("_API_KEY") or k.startswith("CODEX_APP_TOOLS_")
+                   or k in {"CODEX_SANDBOX_NETWORK_DISABLED", "CODEX_THREAD_ID", "CODEX_SESSION_ID"})}
+    login = subprocess.run([executable, "login", "status"], capture_output=True,
+                           env=env, timeout=20, encoding="utf-8", errors="replace")
+    login_text = login.stdout + login.stderr
+    write(work / "login_status.json", {"chatgpt": login.returncode == 0 and
+                                      "Logged in using ChatGPT" in login_text})
+    if not load(work / "login_status.json")["chatgpt"]:
+        raise RuntimeError("Codex CLI needs the existing ChatGPT login")
+    command = [
+        executable, "-a", "never", "--search", "exec", "--ignore-user-config",
+        "-s", "read-only", "--ephemeral", "--skip-git-repo-check", "-C", str(work),
+        "--json", "--output-schema", str(schema.resolve()), "-o", str(work / "response.json"),
+    ]
+    if model:
+        command.extend(["-m", model])
+    with (work / "events.jsonl").open("wb") as events, (work / "stderr.log").open("wb") as errors:
+        return subprocess.run(command + ["-"], input=prompt.encode("utf-8"),
+                              stdout=events, stderr=errors, env=env, timeout=timeout).returncode
+
+
+def collect(config, work, template, schema, *, resume=False, pilot=None):
+    work = work.resolve()
+    work.mkdir(parents=True, exist_ok=True)
+    if config["target"] not in (20, 100) or not 2 <= len(config["theme"].strip()) <= 160:
+        raise ValueError("Invalid theme or target")
+    if not 1 <= config["max_batches"] <= 8 or not 60 <= config["timeout_seconds"] <= 1800:
+        raise ValueError("Invalid execution budget")
+    identity = digest([ENGINE, config, sha(template), sha(schema), sha(__file__)])
+    with job_lock(work):
+        checkpoint = work / "checkpoint.json"
+        if checkpoint.exists() != resume:
+            raise ValueError("Choose an unused work path or use --resume")
+        state = load(checkpoint) if resume else dict(
+            config_sha256=identity, collection_id="COL_" + digest([identity, str(work), now()])[:24],
+            engine=ENGINE, config=config, batches=[], observations=[], rejected=[],
+        )
+        if state["config_sha256"] != identity:
+            raise ValueError("Resume requires the original config and code")
+        if not resume and pilot:
+            pilot_dir, review = pilot
+            original = load(pilot_dir / "checkpoint.json")
+            accepted = set(review["article_ids"])
+            selected = [p for p in load(pilot_dir / "abstract_collection.json")["articles"]
+                        if p["article_id"] in accepted]
+            ids = {r["observation_id"] for p in selected for r in p["provenance"]}
+            state["observations"] = [r for r in original["observations"] if r["observation_id"] in ids]
+            state["batches"] = [r for r in original["batches"] if r["status"] == "completed"]
+            state["pilot_review_sha256"] = digest(review)
+            for batch in state["batches"]:
+                name = batch["batch"]
+                shutil.copytree(pilot_dir / name, work / name)
+        write(checkpoint, state)
+        executable = shutil.which("codex")
+        if not executable:
+            raise RuntimeError("Codex CLI not found")
+        for _ in range(config["max_batches"]):
+            papers, _ = group(state["observations"])
+            if len(papers) >= config["target"]:
+                break
+            if len(state["batches"]) >= config["max_batches"]:
+                break
+            batch = f"batch_{len(state['batches']) + 1:03}"
+            directory = work / batch
+            directory.mkdir()
+            entry = {"batch": batch, "started_at": now(), "status": "started"}
+            state["batches"].append(entry)
+            write(checkpoint, state)
+            prompt = template.read_text(encoding="utf-8").format(
+                theme=config["theme"], journals="、".join(config["journals"]),
+                desired=min(24, config["target"] - len(papers) + 3),
+                accepted=json.dumps([r["title"] for r in papers], ensure_ascii=False),
+            )
+            try:
+                code = invoke(executable, directory, prompt, schema,
+                              timeout=config["timeout_seconds"], model=config.get("model"))
+                if code:
+                    raise RuntimeError(f"Codex process exit {code}")
+                trace = evidence(directory / "events.jsonl")
+                if not trace:
+                    raise ValueError("No native web_search events")
+                data = load(directory / "response.json")
+            except (OSError, ValueError, RuntimeError, subprocess.TimeoutExpired) as exc:
+                entry.update(status="failed", failure=str(exc), finished_at=now())
+                write(checkpoint, state)
+                break
+            for position, row in enumerate(data["papers"], 1):
+                try:
+                    state["observations"].append(observation(row, trace, config["journals"],
+                                                            batch, position))
+                except (ValueError, KeyError, TypeError) as exc:
+                    state["rejected"].append({"title": row.get("title"), "reason": str(exc), "batch": batch})
+            state["rejected"].extend(dict(row, batch=batch) for row in data["unverified"])
+            entry.update(status="completed", search_events=len(trace), finished_at=now(),
+                         event_sha256=sha(directory / "events.jsonl"),
+                         response_sha256=sha(directory / "response.json"), notes=data["search_notes"])
+            write(checkpoint, state)
+        papers, conflicts = group(state["observations"])
+        bundle = {
+            "engine": ENGINE, "schema_version": 2, "acquisition_mode": "abstract_only",
+            "collection_id": state["collection_id"], "theme": config["theme"], "journals": config["journals"],
+            "target": config["target"], "count": len(papers), "articles": papers, "conflicts": conflicts,
+            "batches": state["batches"], "unverified": state["rejected"],
+            "status": "verification_pending" if len(papers) >= config["target"] else "incomplete",
+        }
+        write(work / "abstract_collection.json", bundle)
+        return bundle
