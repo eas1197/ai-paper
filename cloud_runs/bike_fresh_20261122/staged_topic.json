@@ -1,0 +1,15 @@
+{
+  "run_id": "bike_fresh_20261122",
+  "mode": "dev",
+  "theme": "城市共享单车停放与数字平台治理",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "explanation_exchange",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "issue_search": true,
+  "reality_sha256": "ed21da5ccb3ceef00f32562bda3c0941bb40eb6a1dd15ea5110a24fa669db5a2"
+}

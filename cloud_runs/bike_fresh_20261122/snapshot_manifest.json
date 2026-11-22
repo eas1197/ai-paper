@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "bike_fresh_20261122",
+  "purpose": "public-source-metadata-only; no raw interviews or credentials",
+  "files": {
+    "cloud_next_task.json": {
+      "sha256": "4e76225167ee448db84bbb7769675ed0500a741b512fc173ffe7a655ffff304b",
+      "bytes": 6796
+    },
+    "cloud_run_status.json": {
+      "sha256": "922e331a6dc051b42f104183421c15db4de15f206620882835f022cdaa55eb74",
+      "bytes": 480
+    },
+    "event_comparison.json": {
+      "sha256": "cf1ea4a9dc6c065ec5bdd17e0cf2ad996d034db6781a12c6d9771dd5ab53a302",
+      "bytes": 3443
+    },
+    "reality.json": {
+      "sha256": "ccd7e14d0f2fe3ca8ea3b1cbc94efef39ad52c637071ef51293a17a246230cd3",
+      "bytes": 2834
+    },
+    "run_manifest.json": {
+      "sha256": "9f0f1ab8eb62d068eb23c4b542fe3a407ae847053c6dc373b2aa8c895289762c",
+      "bytes": 4059
+    },
+    "staged_topic.json": {
+      "sha256": "da7e7c327c81aaad5a28e56c490f1ae58cb540e9d2d9d6101b102cf51074f574",
+      "bytes": 505
+    }
+  }
+}
