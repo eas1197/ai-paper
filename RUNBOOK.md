@@ -13,3 +13,5 @@ Python 3.11。离线运行 `python .github/scripts/verify_handoff.py`，以及 `
 
 ## ai-writer 4.0定性写作候选
 当前入口 `07_三稿独立写作/v016_第16版/tools/ai_writer4.py`，完整说明见模块说明。以V15写作任务JSON为输入，执行 `route --packet 文件`、`prepare --packet 文件 --workspace 新空目录 --mode exploratory`、`submit --packet 文件 --workspace 同目录 --manuscript 正文.md --claims 主张证据台账.json`。本次用户现有示例位于 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/`。离线测试 `python -m unittest discover -s '07_三稿独立写作/v016_第16版/tests' -v`，无模型调用；GitHub Actions `.github/workflows/ai-writer4-offline.yml` 只进行离线检查。两个来源都要保留原始哈希及现有审查状态；源码提交不等于自动起草与正式G7运行。本聊天写作仅作探索性A稿和样本语言修订，不接管原研究冻结检查点。
+
+ai-writer 4.0现也通过实验总控显式入口 `run_mode.py --mode dev --run-id <有效实验> --writer4 route|prepare|submit <对应参数>` 调用。该添加仅针对定性writer4试验，其他`--topic`、`--writing-plan`、定量及formal逻辑保持原样。真实实验运行目录不得用脱敏GitHub归档冒名替换。
