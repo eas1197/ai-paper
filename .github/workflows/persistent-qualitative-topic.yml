@@ -89,12 +89,14 @@ jobs:
           manifest=json.loads((base/"run_manifest.json").read_text(encoding="utf-8"))
           comparison=json.loads((base/"event_comparison.json").read_text(encoding="utf-8"))
           assert stage["status"]=="explanation_exchange"
+          status=json.loads((base/"cloud_run_status.json").read_text(encoding="utf-8"))
+          assert status["initialized"] is False, "Repeat workflow must restore, never re-initialize"
           assert stage["mode"]=="dev" and stage["reality_first"]
           assert comparison["event_count"]>=2
           assert manifest["formal_eligible"] is False
           assert not (base/"s08_topic.json").exists()
           assert not (base/"writing/论文写作方案.md").exists()
-          print("REAL TOPIC INIT / REALITY / EVENT COMPARISON SUCCESS")
+          print("PERSISTED REAL TOPIC STATE RESTORED AND CHECKED WITHOUT RE-INITIALIZATION")
           print("Academic gates preserved; no independent critic or research freeze yet.")
           PY
 
