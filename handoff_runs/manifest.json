@@ -65,6 +65,14 @@
       "type": "historical",
       "root": "00_项目控制/v007_第7版/runs_dev/digital_mutual_aid_20261122",
       "files": 12
+    },
+    {
+      "run_id": "rider_access_20261123",
+      "files": 2,
+      "type": "chat_native_v5_experiment",
+      "root": "handoff_runs/rider_access_20261123/ai_paper5",
+      "provenance": "summary_and_manuscript_only_full_stage_snapshots_in_conversation_zip",
+      "formal_eligible": false
     }
   ],
   "files": {
@@ -517,7 +525,9 @@
     "digital_mutual_aid_20261122/chat_native_20261122/writing/写作状态.json": "4b8b80c2ed2e65d9291f87b76f7bbd5cabf123bf929b902a8800cd2fe26ab044",
     "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/A稿_学术语体修订版.md": "b3b2fd12aa3a6265f0320f9fe647215c411d077f31ca225c0814241dae4690ed",
     "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/逐段语言修订记录.json": "a39b6f5ca5de4cbe695b31064522945603c029ac3133214e34b76f7f4c29b264",
-    "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/静态核验.json": "1cf4eab06b4c4d92ae3cb6fa3618b83c83307b9a2a65a57402bd54f153b44d03"
+    "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/静态核验.json": "1cf4eab06b4c4d92ae3cb6fa3618b83c83307b9a2a65a57402bd54f153b44d03",
+    "rider_access_20261123/ai_paper5/论文_探索性全文.md": "f53c48130e237b888e57b92da622201d3552d7865b2a26390eff0f5a658f4063",
+    "rider_access_20261123/ai_paper5/研究全过程与验收.md": "0557c146ae398a3058b8bf5d212b52f0494bc189f62612e48ec878aa36442f50"
   },
   "omitted": [
     [
