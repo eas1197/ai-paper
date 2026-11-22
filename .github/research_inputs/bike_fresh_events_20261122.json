@@ -1,0 +1,59 @@
+{
+  "sources": {
+    "BJD2024": "https://news.bjd.com.cn/2024/03/29/10733821.shtml",
+    "PDR2026": "https://paper.people.com.cn/rmrb/pc/content/202605/28/content_30159501.html"
+  },
+  "events": [
+    {
+      "identity": "北京朝阳某地铁入栏停放区_2024-03-28_记者三车实测",
+      "facts": [
+        {
+          "statement": "报道记录记者在同一停放区测试三辆不同品牌共享单车，有两辆首次不能关锁。",
+          "source_id": "BJD2024",
+          "status": "single_account",
+          "key": true,
+          "use": "确认同地点呈现不同的还车结果，但不能推断具体判定规则。"
+        },
+        {
+          "statement": "其中一辆经多次移车后关锁，另一辆多次移车仍失败，经联系客服反馈后关锁。",
+          "source_id": "BJD2024",
+          "status": "single_account",
+          "key": true,
+          "use": "记录两种行动序列；不等同于客服直接操作或手机应用已确认结束订单。"
+        }
+      ]
+    },
+    {
+      "identity": "重庆市民指定停车区无空位_2026人民日报多地调查",
+      "facts": [
+        {
+          "statement": "调查采访中有重庆受访者称指定区域车辆堆积，自己的还车尝试虽收到未入框提示却找不到空位。",
+          "source_id": "PDR2026",
+          "status": "single_account",
+          "key": true,
+          "use": "提示物理停车容量和数字规则可能相互制约，不等同于定位故障。"
+        },
+        {
+          "statement": "未获得该事件的车辆照片、实际停车位置、计费流水和最终订单状态。",
+          "source_id": "PDR2026",
+          "status": "unverified",
+          "key": true,
+          "use": "限定只能提出场地容量竞争解释，不能还原完整关单链条。"
+        }
+      ]
+    },
+    {
+      "identity": "武汉汉阳马鹦路地铁站_2026人民日报通勤访谈",
+      "facts": [
+        {
+          "statement": "报道中的通勤受访者认为指定区域和电子围栏导航使还车秩序比以往更好。",
+          "source_id": "PDR2026",
+          "status": "single_account",
+          "key": false,
+          "use": "作为对电子围栏普遍增加负担的反例线索，不作为对同一冲突事件的独立检验。"
+        }
+      ]
+    }
+  ],
+  "sensitivity": "所有关键事件事实目前只有单一报道依据，缺少独立核验；并非三个同条件可比事件。不得将比对自动转化为因果判定，后续仍需独立反方解释、文献初查与审查。"
+}
