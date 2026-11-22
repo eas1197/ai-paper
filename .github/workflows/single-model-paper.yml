@@ -1,0 +1,71 @@
+name: Single-model qualitative manuscript - two Word deliverables
+
+on:
+  push:
+    branches:
+      - experiment/single-model-paper-20261122
+    paths:
+      - .github/workflows/single-model-paper.yml
+      - .github/scripts/render_single_model_paper.py
+      - research_outputs/bike_paper_single_model_20261122/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Confirm this is a single-model supplementary study, not a forged independent pass
+        shell: bash
+        run: |
+          git fetch origin refs/heads/research-state/topic-20261122:refs/remotes/origin/research-state/topic-20261122
+          git show origin/research-state/topic-20261122:cloud_runs/bike_fresh_20261122/staged_topic.json > original_stage.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          stage=json.loads(Path("original_stage.json").read_text(encoding="utf-8"))
+          assert stage["status"]=="explanation_exchange", "Do not misrepresent formal research gate"
+          assert stage["mode"]=="dev" and stage["formal_eligible"] is False
+          print("Original v3.2 run still needs independent reviewer")
+          PY
+      - name: Install deterministic document writer
+        run: python -m pip install python-docx==1.2.0
+      - name: Render complete manuscript and full process log
+        run: python -B .github/scripts/render_single_model_paper.py --output paper_outputs
+      - name: Verify exactly two Word deliverables and academic status manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from docx import Document
+          root=Path("paper_outputs")
+          files=list(root.glob("*.docx"))
+          assert len(files)==2
+          m=json.loads((root/"build_manifest.json").read_text(encoding="utf-8"))
+          assert m["approved_independent_reviewer"] is False and m["api_calls"]==0
+          for f in files:
+              doc=Document(f)
+              assert len(doc.paragraphs)>25 and f.stat().st_size>10_000
+          print("TWO DOCUMENTS PRODUCED; INDEPENDENT ACADEMIC GATE NOT BYPASSED")
+          PY
+      - name: Upload both Word documents and reproducibility manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-model-paper-two-documents-20261122
+          path: |
+            paper_outputs/*.docx
+            paper_outputs/build_manifest.json
+          if-no-files-found: error
+          retention-days: 20
