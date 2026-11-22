@@ -1,0 +1,28 @@
+name: ai-paper 5.0 offline contract tests
+
+on:
+  push:
+    branches:
+      - dev/v3.1-abstract-acquisition
+    paths:
+      - '00_项目控制/v010_第10版/**'
+      - '07_三稿独立写作/v016_第16版/**'
+      - '.github/workflows/ai-paper5-offline.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  paper5-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exercise unified 5.0 source and checkpoint contracts
+        run: python -m unittest discover -s '00_项目控制/v010_第10版/tests' -v
+      - name: Exercise qualitative ai-writer 4.0 source-bound drafting interface
+        run: python -m unittest discover -s '07_三稿独立写作/v016_第16版/tests' -v
