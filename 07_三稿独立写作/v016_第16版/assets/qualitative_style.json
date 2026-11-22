@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "product": "ai-writer 4.0",
+  "basis": {
+    "style_rules": "03_学术语言学习/v004_第4版/assets/style_patterns.json",
+    "writing_guide": "03_学术语言学习/v004_第4版/outputs/语言风格学习.md",
+    "style_function_map": "03_学术语言学习/v005_第5版/assets/paragraph_style.json",
+    "argument_handbook": "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_handbook.md",
+    "manuscript_rules": "07_三稿独立写作/v014_第14版/templates/文字要求.md",
+    "qualitative_layout": "07_三稿独立写作/v015_第15版/tools/writing_plan.py"
+  },
+  "important_scope": "Reuse paragraph_style v005 units as linguistic hints only; D/R units in its source reflect quantitative writing tasks, not new qualitative research methods.",
+  "chapters": {
+    "problem": {
+      "style_ids": [
+        "ST01",
+        "ST04",
+        "ST05",
+        "ST12",
+        "ST14"
+      ],
+      "v005_units": [
+        "I2",
+        "I3",
+        "I4",
+        "I5"
+      ],
+      "argument_audit": [
+        "L03",
+        "L04",
+        "L05",
+        "L27"
+      ],
+      "writing_intent": "Begin with a bounded real tension, situate existing explanations, state specific core question."
+    },
+    "framework": {
+      "style_ids": [
+        "ST02",
+        "ST03",
+        "ST05",
+        "ST07",
+        "ST09",
+        "ST15"
+      ],
+      "v005_units": [
+        "L0",
+        "L_PATH",
+        "LR",
+        "LG",
+        "T0",
+        "T1"
+      ],
+      "argument_audit": [
+        "L01",
+        "L04",
+        "L06",
+        "L08",
+        "L09",
+        "L20"
+      ],
+      "writing_intent": "Compare nearest explanations, make conceptual distinctions, derive dimensions and counterpredictions."
+    },
+    "case": {
+      "style_ids": [
+        "ST01",
+        "ST03",
+        "ST04",
+        "ST06",
+        "ST11"
+      ],
+      "v005_units": [
+        "I6",
+        "D1",
+        "D2"
+      ],
+      "argument_audit": [
+        "L02",
+        "L05",
+        "L17",
+        "L23",
+        "L27"
+      ],
+      "writing_intent": "Identify cases and record types; distinguish reported interviewee statements from researcher inference."
+    },
+    "dimension": {
+      "style_ids": [
+        "ST01",
+        "ST02",
+        "ST03",
+        "ST06",
+        "ST09",
+        "ST15"
+      ],
+      "v005_units": [
+        "T1",
+        "T2",
+        "R5",
+        "C5"
+      ],
+      "argument_audit": [
+        "L01",
+        "L08",
+        "L09",
+        "L15",
+        "L17",
+        "L21",
+        "L27"
+      ],
+      "writing_intent": "Each analytic chapter links theorized dimension to located evidence, competing interpretations and scope."
+    },
+    "conclusion": {
+      "style_ids": [
+        "ST01",
+        "ST03",
+        "ST07",
+        "ST09",
+        "ST13"
+      ],
+      "v005_units": [
+        "C1",
+        "C2",
+        "C4",
+        "C7"
+      ],
+      "argument_audit": [
+        "L15",
+        "L20",
+        "L23",
+        "L24",
+        "L27"
+      ],
+      "writing_intent": "Answer only what the observed material establishes; delimit conceptual contribution and future test."
+    }
+  },
+  "manuscript_rules": [
+    "Use the actual researched object and relationship as subject; do not pad paragraphs with empty academic jargon.",
+    "Do not copy source paragraphs or use original style exercises as empirical evidence.",
+    "Author-year references and claim register must link to supplied sources; avoid ordinary-author name-led narrative.",
+    "Preserve original case IDs, unit boundaries, interviewee/journalist/researcher voices and source status.",
+    "Qualitative claims must not claim quantitative inference or rescue/transaction completion without outcome evidence.",
+    "Do not change core question, theory dimensions, frozen status or existing budget during stylistic editing."
+  ],
+  "formal_prerequisite": "Both independent research gate receipts and passed G3 business snapshot needed; current sources needs_review, so exploratory use only."
+}
