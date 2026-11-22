@@ -504,7 +504,12 @@
     "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/events.jsonl.summary.json": "2bfe38510cef8f3a811caf9f2936e3f1e55aca9300384b4bbdc268e340e091f7",
     "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/request.json": "4ad771916aecc918955e7de8a47f495b02a35fb66ace57795f1c0decfd6f836c",
     "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/response.json": "f44bb1bcdd7e5f4e9a917cc4d570228ffcca0ca3f445433a66df234797146cf9",
-    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/validated.json": "cd205418a69bf952a20093f00b90b74370b1abd141d16b0767d7fa4395f3fbb4"
+    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/validated.json": "cd205418a69bf952a20093f00b90b74370b1abd141d16b0767d7fa4395f3fbb4",
+    "digital_mutual_aid_20261122/chat_native_20261122/文献检索矩阵.json": "f1e2c47887abcae15dad2e7538a89ba395241642f8606368cfa5d562178cfbb2",
+    "digital_mutual_aid_20261122/chat_native_20261122/经验材料与分析矩阵.json": "71a7687e5a93a7e16787bc64d0ad753289efcff6e385db10e8577d024486c053",
+    "digital_mutual_aid_20261122/chat_native_20261122/研究全过程日志.md": "205a05407d08c33fdc6179231ca0596ac6c0a4dd5934ad7b2d3876e20e6db02f",
+    "digital_mutual_aid_20261122/chat_native_20261122/论文写作方案.md": "57e7fe00eccfa1641408dfc78460f3343a984ef1186fe20ede991fb1772dfcce",
+    "digital_mutual_aid_20261122/chat_native_20261122/Chat实验状态.json": "cad3158a2efd7e12bca80a8f77d0d49e7731098ed9ef34100324262c238d6685"
   },
   "omitted": [
     [
