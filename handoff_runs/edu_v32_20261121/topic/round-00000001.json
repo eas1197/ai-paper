@@ -1,0 +1,107 @@
+{
+  "round": 1,
+  "stage": "opportunity",
+  "next_stage": "question",
+  "reason": "quality_met",
+  "config_sha256": "6418dc84b5ac89e80bf2b9beb42207570eddf7214516cc77c8be93fead59971e",
+  "approved_ids": [
+    "O1"
+  ],
+  "bundle": {
+    "schema_version": 1,
+    "opportunities": [
+      {
+        "opportunity_id": "O1",
+        "observation": "CEPS研究报告，考虑家长主动沟通后，教师仍更常联系家庭背景较好的家长。",
+        "social_process": "家校沟通中学校对家庭诉求的识别与回应",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "opportunity_id": "O2",
+        "observation": "另一项CEPS研究报告，制度化合作缩小校际参与差异，但家庭地位仍重要。",
+        "social_process": "参与机会的制度化与家庭参与分层",
+        "evidence_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "questions": [],
+    "evidence": [
+      {
+        "source_id": "P1",
+        "excerpt": "教师与家庭背景较好的学生家长的沟通频率显著高于家庭背景较差的学生家长",
+        "document_id": "D1",
+        "locator": {
+          "section": "出版方网页摘要"
+        },
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E1.txt",
+        "evidence_id": "E1",
+        "paper_id": "P1",
+        "sha256": "ae9a93f7cbfe4a270f85a1bc0d134e69d9bf66e61080dc7897b1242fc357f9cc",
+        "kind": "abstract"
+      },
+      {
+        "source_id": "P2",
+        "excerpt": "家庭社会经济地位仍是决定父母教育参与水平的核心因素",
+        "document_id": "D2",
+        "locator": {
+          "section": "出版方网页摘要"
+        },
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E2.txt",
+        "evidence_id": "E2",
+        "paper_id": "P2",
+        "sha256": "1a1323d7f01b72a7fd5cafdd5ca5feb05a6bcbc31007447bc961c9e477652884",
+        "kind": "abstract"
+      }
+    ],
+    "explanations": [],
+    "critiques": [],
+    "evolution": [],
+    "reasoning": "S01 既有调查报告的是沟通频率与参与差异。S02 将家庭资源持有、资源动用与制度回应拆开。联系次数可观察接触机会，不能代表学校认可、解决诉求或文化资本。O1解释教师一侧如何回应，O2解释学校如何开放参与机会。"
+  },
+  "review": {
+    "stage": "opportunity",
+    "verdict": "PASS",
+    "model": "gpt-6.2-sol",
+    "invocation_id": "67380a77-a974-458a-80bd-332d9d7f1551",
+    "reviewer_dispatch_id": "01a1fde7-3c97-7953-b515-d5b32ee73070",
+    "dispatch_scope": "same independent reviewer dispatch; invocation_id identifies the individual stage decision, not a separate model call",
+    "input_sha256": "71c999957fbbfe230028e1689ca2dbde0afc5d9cd89b69d66f75c01f1f6fba39",
+    "selected_ids": [
+      "O1"
+    ],
+    "evidence": [
+      {
+        "evidence_id": "E1",
+        "locator": "社科文献出版社摘要；原条目同出版社镜像 https://cpms.ssap.com.cn/skwx_cmr/initDatabaseDetail?contentId=6727298&contentType=literature&siteId=23",
+        "finding": "作者报告控制家长主动沟通与学校固定效应等变量后的教师沟通频率差异。联系次数没有直接表明诉求得到处理。"
+      },
+      {
+        "evidence_id": "E2",
+        "locator": "《社会学评论》2026年第2期摘要 https://src.ruc.edu.cn/CN/Y2026/V14/I2",
+        "finding": "作者报告制度化家校合作与较小的校际参与差距同现，家庭社会经济地位仍与参与有关。校际差距与家庭阶层差距属于不同层次，参与也不等于实质回应。"
+      }
+    ],
+    "strongest_objection": "教师可能因学生需要、家长可联系性或学校惯例安排沟通。控制家长主动沟通的观察结果无法单独区分这些解释。",
+    "actual_increment": "将家庭资源、家长动用资源与学校做出回应区分开，提出学校一侧可能参与形成不平等的研究机会。",
+    "gap": "现有证据直接涉及联系频率和家长参与，两者均未观察同一类型诉求的进入、认可与处理。",
+    "reason": "O1依托可定位的调查报告，制度回应有独立分析价值。可形成问题，当前仅把实质回应当作待观察过程。",
+    "next_action": "推进概念问题，明确老师主动联系与收到诉求后处置属于不同互动。",
+    "expected_gain": "使后续问题的解释对象落在学校行为。",
+    "cost": {
+      "model_calls": 1,
+      "search_calls": 0
+    },
+    "action_worth_cost": true
+  },
+  "usage": {
+    "search_calls": 2,
+    "model_calls": 2
+  },
+  "used": {
+    "model_calls": 2,
+    "search_calls": 2
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "pending_independent_review",
+  "framework_sha256": "9052ed36d010b76f498980e209c81e1ecead58568036deb895468e3d20503da9",
+  "collection_sha256": "e7108717eb9920088c9b6452a06e515e39e713ce4eeddc741a698d15f3089d48",
+  "theoretical_increment_status": "proposed",
+  "rows": [
+    {
+      "id": "proof",
+      "name": "使用权的证明门槛",
+      "deduction": "制度可识别性依赖把人在场及持续使用简化为可验证的记录；因此分类依据与证明负担是同一个核心概念的第一个组织后果。",
+      "proposition": "扫码、签到和响应时限增强认定的一致性，同时可能让实际在场却没有及时响应的人被判为无有效使用。",
+      "needed_material": "高校官方签到及监督规则、规则如何实际用于认定的公开报道，并找现场签到或纯人工核查作为对照。",
+      "relationship": "这里分析什么证据具有初始或即时效力。另一个维度分析当证据与情境冲突时谁能重新解释。二者可在同一场景发生，并非两个顺序步骤。",
+      "conclusion": "规则把有效使用落实为可核验信号，但信号和实际在场可能脱节。",
+      "boundary": "限于公开规则及所见个案。",
+      "unresolved": "一则争议尚不能证实系统实际误判。",
+      "alternatives": "座位总量、现场入口、管理巡查。",
+      "dimension_id": "proof",
+      "status": "tentative",
+      "evidence": [
+        {
+          "material_id": "6450e9ee88e981ba",
+          "relation": "support",
+          "reason": "学生陈述揭示在场主张与系统状态的冲突，尚待旁证。",
+          "url": "https://www.sina.cn/news/detail/5244763726940110.html",
+          "locator": "新浪公开镜像正文首段",
+          "kind": "actor_statement"
+        },
+        {
+          "material_id": "034c0bc3b5cac1cb",
+          "relation": "counterexample",
+          "reason": "现场刷卡也是数字认定，手机响应并非唯一途径。",
+          "url": "https://lib.csu.edu.cn/xszl/zwyy/cjwt.htm",
+          "locator": "座位管理系统常见问题第2至4问",
+          "kind": "official_rule"
+        }
+      ]
+    },
+    {
+      "id": "repair",
+      "name": "情境例外与纠错权",
+      "deduction": "把异质情境压缩为少数分类必有边界，谁能把被遗漏的情境重新变成可受理的信息是制度可识别性的第二个后果。",
+      "proposition": "系统可编码的合理暂离较容易纳入自动保护；超出系统分类的情境需要申诉或工作人员裁量。若规则允许多种证明途径，纠错对自助操作能力的依赖可能更小。",
+      "needed_material": "不同暂离窗口、误举报处理或人工核验的原始规则与事件；找自动路径内部已提供纠错的反例。",
+      "relationship": "不同的是识别失败如何修复，而非管理是否存在。可回应为什么同样标准化的制度仍有不同的承认与申诉条件。",
+      "conclusion": "部分例外可由系统提前保护，部分争议移交人工。",
+      "boundary": "只比较规定的渠道和报道中的说明。",
+      "unresolved": "缺少申诉成功、座位恢复和当事人负担的记录。",
+      "alternatives": "系统替代凭证、馆员裁量及处置资源。",
+      "dimension_id": "repair",
+      "status": "tentative",
+      "evidence": [
+        {
+          "material_id": "2d43131ac10f1be2",
+          "relation": "support",
+          "reason": "应急码、暂离和复签为例外提供正式入口。",
+          "url": "https://lib.tjrac.edu.cn/kjfw/glbf.htm",
+          "locator": "预约座位管理办法第2至4条",
+          "kind": "official_rule"
+        },
+        {
+          "material_id": "bd890ff75fa51b9f",
+          "relation": "counterexample",
+          "reason": "系统内部也有保护和补救，不能把纠错等同于人工。",
+          "url": "https://library.hebtu.edu.cn/a/tsg/dzfw/kjyss/zwyy/index.html",
+          "locator": "暂离、监督占座、违规处理各节",
+          "kind": "official_rule"
+        },
+        {
+          "material_id": "47c6b0e71399a017",
+          "relation": "context",
+          "reason": "馆方说明线下申诉途径，但未记录个案结果。",
+          "url": "https://www.sina.cn/news/detail/5244763726940110.html",
+          "locator": "正文第二段，图书馆工作人员答复",
+          "kind": "actor_statement"
+        }
+      ]
+    }
+  ]
+}

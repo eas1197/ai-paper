@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "opportunities": [
+    {
+      "opportunity_id": "O1",
+      "observation": "CEPS研究报告，考虑家长主动沟通后，教师仍更常联系家庭背景较好的家长。",
+      "social_process": "家校沟通中学校对家庭诉求的识别与回应",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "opportunity_id": "O2",
+      "observation": "另一项CEPS研究报告，制度化合作缩小校际参与差异，但家庭地位仍重要。",
+      "social_process": "参与机会的制度化与家庭参与分层",
+      "evidence_ids": [
+        "E2"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q0",
+      "opportunity_id": "O1",
+      "text": "家庭的资源优势如何在家校互动中转化为学校回应的差异？",
+      "population": "家庭与学校互动者，具体待设计",
+      "scope": "中国学校家校互动，学校场域待定",
+      "comparison": "资源的持有、动用与教师回应",
+      "answer_value": "区分家庭资源如何被动用与学校如何回应。",
+      "concepts": [
+        "家庭资源",
+        "资本动用",
+        "制度回应"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "source_id": "P1",
+      "excerpt": "教师与家庭背景较好的学生家长的沟通频率显著高于家庭背景较差的学生家长",
+      "document_id": "D1",
+      "locator": {
+        "section": "出版方网页摘要"
+      },
+      "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E1.txt",
+      "evidence_id": "E1",
+      "paper_id": "P1",
+      "sha256": "ae9a93f7cbfe4a270f85a1bc0d134e69d9bf66e61080dc7897b1242fc357f9cc",
+      "kind": "abstract"
+    },
+    {
+      "source_id": "P2",
+      "excerpt": "家庭社会经济地位仍是决定父母教育参与水平的核心因素",
+      "document_id": "D2",
+      "locator": {
+        "section": "出版方网页摘要"
+      },
+      "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E2.txt",
+      "evidence_id": "E2",
+      "paper_id": "P2",
+      "sha256": "1a1323d7f01b72a7fd5cafdd5ca5feb05a6bcbc31007447bc961c9e477652884",
+      "kind": "abstract"
+    }
+  ],
+  "explanations": [],
+  "critiques": [],
+  "evolution": [],
+  "reasoning": "核心层：家庭资源的优势如何在学校互动中转化为回应差异？具体层：中国家校互动。操作层：样本、测量和方法待定；可以考虑互动链条的比较，不提前指定定量模型。"
+}

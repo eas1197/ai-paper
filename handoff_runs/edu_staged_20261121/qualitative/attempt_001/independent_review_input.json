@@ -1,0 +1,40 @@
+{
+  "model": "gpt-6.2-sol",
+  "invocation_id": "edu-staged-20261121-qual-independent-6bce81af",
+  "reason": "通过范围限定的公开制度文本实验。两州法条和一所高中指南可定位资格识别、默认排课、告知和退出责任，并保留资源配置与机会不平等的理论关切。实际落实与群体差距仍缺材料。",
+  "conversion_sha256": "2ebcf5e46bcb7c024341b04c2c09b218cfbb5ff4438370c9ea6dab6b832ac0e7",
+  "academic_value": "pass",
+  "outcome": "pass",
+  "reviewed_question": "两州进阶数学自动入读的公开规则把资格识别、首次排课和退出分别交给谁，哪些制度条件仍可能限制学生获得机会？",
+  "review_scope": "探索性公开制度文本个案。以华盛顿州高中州法及 Bothell High 公开指南为主个案，以北卡州六年级及以上州法为制度参照。比较单位是文本规定的配置环节，只核验文本所载资格、课程供给条件和行动责任，以及校方公开说明如何细化州义务。实际通知送达、咨询、退出处理、学生最终入读及群体差距均缺少直接证据。",
+  "method_assessment": {
+    "selected": "online_qualitative",
+    "paths": {
+      "quantitative": {
+        "status": "missing",
+        "reason": "现有公开统计无法联结原问题所需的个体资格、旧规则、家庭背景和实际排课。"
+      },
+      "secondary_interviews": {
+        "status": "missing",
+        "reason": "定向搜索已覆盖两州及关键角色。最完整的学生叙述来自 AP 世界史，北卡材料来自改革前资优认定，缺少直接贯通所选进阶数学案例的亲历证据。",
+        "search_attempt": "attempt_001",
+        "receipt_sha256": "f6605947c16d62e03843460a45f93268261f1dab774919ee1044535cd13579c2",
+        "search_assessment": "reasonable_but_insufficient"
+      },
+      "online_qualitative": {
+        "status": "ready",
+        "reason": "两州法条与 Bothell High 校方指南原文已核验，足以比较规则如何配置机会和行动责任，并观察学校如何公开细化州义务。",
+        "search_attempt": "attempt_001",
+        "receipt_sha256": "f6605947c16d62e03843460a45f93268261f1dab774919ee1044535cd13579c2",
+        "access": "verified",
+        "reviewed_reuse": "沿用材料收据中已独立打开核对的三份官方文本。两州法条支持比较资格触发、首次排课和退出权责，Bothell High 指南支持观察一所学校如何公开细化告知、咨询和退出程序。上述材料用于回答限定后的规则问题，文本未写明的环节记为未知。",
+        "materials": [
+          "ecf95367edf79b59",
+          "778ebc8061d0f486",
+          "b121c875d510728a"
+        ],
+        "approach": "public_text"
+      }
+    }
+  }
+}

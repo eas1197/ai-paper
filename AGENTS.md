@@ -1,3 +1,7 @@
+# 当前开发入口
+
+先读 [HANDOFF](HANDOFF.md)、[CURRENT_STATE](CURRENT_STATE.md)、[WORKFLOW](WORKFLOW.md) 和 [NEXT_TASKS](NEXT_TASKS.md)。历史规范与候选流程分别按各自版本使用。公开或私有推送前核对凭据、原始数据和个人信息。
+
 # 所有模块共同遵守的要求（第4版）
 
 本文件适用于本目录及全部子目录。开始任何后续工作时，先读本文件、`基础要求.md`、`项目架构.md`及目标模块当前版本的`模块说明.md`。

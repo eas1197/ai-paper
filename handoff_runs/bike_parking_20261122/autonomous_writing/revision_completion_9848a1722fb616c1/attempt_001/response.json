@@ -1,0 +1,7 @@
+[
+  {
+    "index": 0,
+    "completed": false,
+    "evidence": "哈希比较从 D1.boundary 移到了 D1.unresolved。修订后制品未展示矩阵元数据中的制品标识、版本及哈希计算口径，也未提供可核验的 collection_sha256（b3d5120c…）与本轮回执的对应关系，或旧哈希的替换记录。"
+  }
+]

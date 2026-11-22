@@ -1,0 +1,11 @@
+{
+  "run_id": "edu_reality_20261121",
+  "mode": "dev",
+  "theme": "教育",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "initial",
+  "formal_eligible": false,
+  "reality_first": true,
+  "reality_sha256": "0188d2632cdb908e99cd8857c8a5c931df4ce523edff03a207f9ef688cbc7dc5"
+}

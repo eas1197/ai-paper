@@ -1,0 +1,11 @@
+{
+  "expectation": "同一争议若材料、请求和判断标准不变，结果应相对稳定。",
+  "observation": "一宗二手包争议中，群审与平台复核的判断据报道出现变化。",
+  "initial_explanation": "复核可能发现群审未得到的新证据。",
+  "challenge": "同材前提未证实。也可能是材料可见性、证明力判断及举证负担不同，以及复核和公开案例有选择。",
+  "candidate_question": "二手交易争议中，群审与平台复核如何界定什么材料算证据？",
+  "search_focus": "平台治理、证明标准、用户众裁及竞争解释",
+  "research_actor": "primary",
+  "critical_actor": "event_critical_research",
+  "critical_receipt": "独立反方意见.md"
+}

@@ -1,0 +1,90 @@
+{
+  "papers": [
+    {
+      "title": "In the Land of the Blind, the One-Eyed Man Is King: Knowledge Brokerage in the Age of Learning Algorithms",
+      "authors": ["Lauren Waardenburg", "Marleen Huysman", "Anastasia Sergeeva"],
+      "journal": "Organization Science",
+      "year": 2022,
+      "doi": "10.1287/orsc.2021.1544",
+      "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+      "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+      "abstract_locator": "Abstract，开头两句。正式刊载为 33(1)，59–82，2021 年在线先发。",
+      "abstract_excerpt": "how knowledge brokers attempt to translate opaque algorithmic predictions",
+      "abstract_summary": "作者通过对荷兰警方引入犯罪预测算法开展的31个月民族志，考察知识中介如何尝试解释不透明的预测，并将其转译为一线人员可以使用的信息。本文推论是，还车复核也可考察中介是否具备解释系统判定所需的信息，以及解释能否转化为可执行的处理决定。",
+      "relevance": "substantive",
+      "relevance_reason": "回应“有客服入口就能解决问题”的反诘。若客服处在算法输出与现场证据之间，可区分接单、解释与改判三种工作，并追问哪一步仍需用户举证。警务案例支持知识中介机制，还车场景中的关单和撤费权限须另行验证。"
+    },
+    {
+      "title": "Working for an Algorithm: Power Asymmetries and Agency in Online Work Settings",
+      "authors": ["Corentin Curchod", "Gerardo Patriotta", "Laurie Cohen", "Nicolas Neysen"],
+      "journal": "Administrative Science Quarterly",
+      "year": 2020,
+      "doi": "10.1177/0001839219867024",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+      "abstract_locator": "Abstract，关于三种权力不对称机制的段落。正式刊载为 65(3)，644–676。",
+      "abstract_excerpt": "exploit their practical knowledge of the algorithm to increase their agency",
+      "abstract_summary": "作者访谈法国和比利时77名高绩效电商卖家，发现顾客评价造成买卖双方的可见性差距，算法将评价固化并延续权力不对称，卖家则借助对算法的实践知识扩大行动空间。本文推论是，骑行者可能通过反复试停摸索判定逻辑，同时仍依赖平台确认订单结束。",
+      "relevance": "substantive",
+      "relevance_reason": "回应“用户摸得出规律，平台就没有决定性作用”的反诘。若系统掌握结算权且用户可从反馈中学习，实用知识可以解释重试为何有时奏效，平台权力则解释为何用户仍须等候有效判定。卖家声誉与收入依赖无法直接推及一次租赁。"
+    },
+    {
+      "title": "The Making of the “Good Bad” Job: How Algorithmic Management Manufactures Consent Through Constant and Confined Choices",
+      "authors": ["Lindsey D. Cameron"],
+      "journal": "Administrative Science Quarterly",
+      "year": 2024,
+      "doi": "10.1177/00018392241236163",
+      "metadata_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+      "abstract_locator": "Abstract，描述七年质性研究与选择范围的段落。正式刊载为 69(2)，458–514。",
+      "abstract_excerpt": "more-frequent and narrow choice",
+      "abstract_summary": "作者基于七年的网约车行业质性研究，指出算法把工作切分为多个交互环节，给司机提供频繁而范围有限的选择。司机以不同策略应对，作者据此解释算法管理如何获得部分劳动者的同意。本文推论是，还车界面的多个操作选项也可能把纠错过程拆成需要用户逐步完成的任务。",
+      "relevance": "substantive",
+      "relevance_reason": "回应“可以换点、重试和申诉，就说明用户拥有充分控制权”的反诘。若平台限定每个选项的结果且保留最终关单权，可比较选项数量与用户实际能解决的问题。工作场域的管理同意机制无法据此推及消费者，也不能估计补救耗时。"
+    },
+    {
+      "title": "Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing",
+      "authors": ["Stella Pachidi", "Hans Berends", "Samer Faraj", "Marleen Huysman"],
+      "journal": "Organization Science",
+      "year": 2021,
+      "doi": "10.1287/orsc.2020.1377",
+      "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2020.1377",
+      "abstract_url": "https://doi.org/10.1287/orsc.2020.1377",
+      "abstract_locator": "Abstract，关于何种知识受承认及谁有决策权的段落。DOI 入口打开后返回 INFORMS 摘要，正式刊载为 32(1)，18–41，2020 年在线先发。",
+      "abstract_excerpt": "who has the authority to make decisions around those issues",
+      "abstract_summary": "作者研究一家企业的销售部门引入算法后，现有员工的表面遵从如何与技术人员展示改革成效的做法相互强化，使预测模型最终取代以客户接触为基础的知识体系。本文推论是，现场停车线与定位记录冲突时，纠错规则会决定哪种证据可以进入复核，以及谁有权据此改判。",
+      "relevance": "substantive",
+      "relevance_reason": "回应“冲突只是定位误差”的反诘。若现场标线与平台记录构成不同的证据来源，误差可以解释冲突的发生，证据采纳与裁决权限则可以解释举证工作落到谁身上。销售组织中的技术实施过程无法说明骑行者的实际补救路径或成功率。"
+    },
+    {
+      "title": "“网”路里的人：移动导航地图建构的劳动空间实践",
+      "authors": ["徐婧", "王婧涵"],
+      "journal": "社会学研究",
+      "year": 2024,
+      "doi": "",
+      "metadata_url": "https://sociologyol.ruc.edu.cn/shxyj/fzshx/wlshx/4f05870123b14d2a98dcb14552975701.htm",
+      "abstract_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/202005130001/2024/7//20240719121703WU_FILE_0.pdf",
+      "abstract_locator": "原刊第114页顶部提要，由原生网页搜索返回完整段落。正式刊载为第4期，114–135、228–229页。",
+      "abstract_excerpt": "平台劳资空间、导航数字空间和城市物理空间",
+      "abstract_summary": "作者考察平台内置导航与网约车司机劳动过程的结合，指出导航数字空间、城市物理空间和平台劳资空间共同塑造司机的身体行动与时空感知，数字中介下的地方感也难以稳定。本文推论是，还车时的挪车和往返可作为协调屏幕空间与现场空间的身体工作来观察。",
+      "relevance": "substantive",
+      "relevance_reason": "回应“用户走动只是个人选择”的反诘。若应用内地理表示决定现场动作能否完成交易，空间错位可解释部分额外移动。该文贴近数字出行场景，关于申诉、撤费及谁能改写订单状态仍需共享单车证据。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "行为助推共享单车堆积停放治理：来自数字平台实地实验的证据",
+      "reason": "找到北京师范大学会议预告及研究摘要，未核实限定期刊的正式刊载。实验考察行前提醒与堆积停放，未报告还车判定冲突后的纠错。"
+    },
+    {
+      "title": "“数字控制”下的劳动秩序——外卖骑手的劳动控制研究",
+      "reason": "交叉核对到陈龙及《社会学研究》2020年第6期，人大转载页打开超时，未取得可定位的完整提要。"
+    }
+  ],
+  "search_notes": [
+    "实际使用 24 个原生网页动作。14 条 search_query 用于发现，8 次 open 和 2 次 find 用于核验。进入最终核验清单的去重候选共 7 项，核实限定期刊正式题录 6 篇，取得可定位的原摘要并纳入 5 篇。英文 4 篇使用单独打开的网页或页内定位核对摘要，中文 1 篇使用原生搜索返回的原刊首面提要与人大转载提要交叉核对。未下载全文。",
+    "议题层先查 Organization Science 与 Uber algorithmic management、ASQ 与 platform repair、Organization Science 与 technology workarounds。早期打开 Cameron 的出版商入口，再用 Working for an Algorithm、Make Way for the Algorithms 与知识中介篇名追踪题录和摘要。中文用《社会学研究》加外卖骑手、数字劳动，再调整为内置导航与劳动空间。另查的 Constructing Envelopes 刊于 Academy of Management Journal，超出期刊范围。",
+    "对象层实际查询共享单车、电子围栏、还车、停放与限定中文刊名，再用“行为助推共享单车堆积停放治理”精确回查。找到行前提醒实验的会议材料，并认出已排重的哈啰单车信用管理研究。纳入的五篇均为机制或场景对照，本轮证据仍缺现场停车线与应用判定冲突后的关单或撤费研究。",
+    "理论层按补查处理，沿用任务给出的 Star 与 Strauss 隐形劳动线索。本轮理论相关查询聚焦技术变通、算法解释与决策权限，未另查或增列经典理论题录。可迁移的分析问题是走动、重试和举证有多少进入组织记录，以及谁有权认定纠错完成。"
+  ]
+}

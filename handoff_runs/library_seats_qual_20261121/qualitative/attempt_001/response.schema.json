@@ -1,0 +1,84 @@
+{
+  "type": "object",
+  "required": [
+    "materials",
+    "search_notes",
+    "gaps"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "date",
+          "subject",
+          "context",
+          "kind",
+          "path",
+          "locator",
+          "relation",
+          "limits",
+          "access"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "actor_statement",
+              "documented_action",
+              "official_rule",
+              "reporter_account"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "enum": [
+              "online_qualitative",
+              "secondary_interviews"
+            ]
+          },
+          "locator": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "limits": {
+            "type": "string"
+          },
+          "access": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "search_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

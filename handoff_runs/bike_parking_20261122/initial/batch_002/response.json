@@ -1,0 +1,31 @@
+{
+  "papers": [
+    {
+      "title": "How Managers Maintain Control Through Collaborative Repair: Evidence from Platform-Mediated “Gigs”",
+      "authors": ["Hatim A. Rahman", "Melissa A. Valentine"],
+      "journal": "Organization Science",
+      "year": 2021,
+      "doi": "10.1287/orsc.2021.1428",
+      "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+      "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+      "abstract_locator": "INFORMS 原刊页面 Abstract，第 168–171 行。正式卷期为 32(5)，1300–1326 页。",
+      "abstract_excerpt": "surface misaligned interpretations of a situation",
+      "abstract_summary": "作者通过平台软件开发项目的归纳式田野研究发现，面对承包者的意外行动，客户经理动用平台工具强制管控，反而妨碍项目完成。协作修复让双方说清对故障的不同理解，协商新的相互预期，从而有助于恢复信任并完成项目。本研究据此推论，还车争议中能否提交证据、由谁复核和改判，可能影响骑行者的重试与求助负担。",
+      "relevance": "substantive",
+      "relevance_reason": "这篇论文能部分回应「骑行者多走几步只是定位误差的后果」这一反诘。定位误差可以触发争议，组织如何处理分歧则可能影响后续由谁举证、反复尝试或确认服务结束。可迁移的条件是现场情况与系统判定存在分歧，用户能提交可采纳的现场证据，且平台有人或有流程能复核并改判。原研究观察的是承包项目中的协作与控制，无法据此判断单车平台的实际关单、撤费权限，也无法估计骑行者多承担了多少劳动。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "“网”路里的人：移动导航地图建构的劳动空间实践",
+      "reason": "题录可交叉核对为徐婧、王婧涵发表于《社会学研究》2024年第4期。检索结果显示提要，但人大社会学视野网页面打开超时，原刊检索返回 PDF，未打开该全文。该研究也是定位技术和身体移动的近邻，现有证据较少涉及故障后的复核与结单权限。"
+    }
+  ],
+  "search_notes": [
+    "网页预算使用 20/24 个动作，其中查询 12 次、打开 5 次、页内定位 3 次。以进入逐篇复核且未命中排重表的指定期刊候选为计数口径，发现 3 篇、核实题录 3 篇、从成功访问的页面读到原摘要 2 篇、纳入 1 篇。未下载全文。",
+    "议题层先在 INFORMS 和 SAGE 用期刊名配合 exception handling、technology routines、repair、help desk、Barley technicians control、customer service repair 和 workarounds 检索，随即定位两篇优先候选的摘要。纳入的论文涵盖平台工具、意外事件和协作修复。另已核实 Daphne Demetry 的 Embrace the Unexpected: How Organizations Foster Participatory Improvisation with Customers，在线发表于 2024 年，正式卷期为 Organization Science 36(4)，2025 年，1288–1313 页。其摘要解释餐厅与顾客如何共同应对服务中断，数字判定和改判权限的贴合度较低。https://pubsonline.informs.org/doi/10.1287/orsc.2023.17551",
+    "对象层将「共享单车＋电子围栏／定位还车／停车」及「bike sharing＋geofencing／parking」与指定刊名组合查询，随后加用「停放」「哈啰」「驾照分」和中文期刊官网域名。查到排重表中的《信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析》。另一停车治理近邻《北京市老旧社区共享单车使用的现状、问题与治理策略》属于蓝皮书章节。进一步按《社会学研究》的移动导航篇名、作者和官网域名查找。此次未核实到符合期刊范围且能直接解释还车争议后额外劳动的新论文。https://sociology.ssap.com.cn/skwx_shx/LiteratureDetail.aspx?ID=1380181",
+    "理论层按 Star、Strauss、Layers of Silence、visible invisible work 和 Springer abstract 检索。DOI 入口跳转失败后，直接打开 Springer 的文章页并定位摘要。理论条目另计。",
+    "THEORY|Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work|https://link.springer.com/article/10.1023/A%3A1008651105359|Star 与 Strauss（1999）认为，工作是否可见，取决于特定情境选择了哪些指标来表征工作。应用于还车争议时，可以对照用户实际走动、重试和求助的过程与平台日志、工单和绩效指标，检查这些活动何时被记录并进入复核。理论可解释劳动如何变得不可见，关单与撤费权的实际归属仍需核对平台流程。"
+  ]
+}

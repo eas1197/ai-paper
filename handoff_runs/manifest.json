@@ -1,0 +1,1671 @@
+{
+  "runs": [
+    {
+      "run_id": "bike_parking_20261122",
+      "files": 220,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122"
+    },
+    {
+      "run_id": "community_meals_20261122",
+      "files": 21,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/community_meals_20261122"
+    },
+    {
+      "run_id": "edu_older_internet_dev_20261121",
+      "files": 24,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121"
+    },
+    {
+      "run_id": "edu_reality_20261121",
+      "files": 8,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/edu_reality_20261121"
+    },
+    {
+      "run_id": "edu_staged_20261121",
+      "files": 24,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/edu_staged_20261121"
+    },
+    {
+      "run_id": "edu_topic_dev_20261121",
+      "files": 3,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/edu_topic_dev_20261121"
+    },
+    {
+      "run_id": "edu_v32_20261121",
+      "files": 60,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121"
+    },
+    {
+      "run_id": "global_20261121_001",
+      "files": 9,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/global_20261121_001"
+    },
+    {
+      "run_id": "library_seats_qual_20261121",
+      "files": 26,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/library_seats_qual_20261121"
+    },
+    {
+      "run_id": "resale_events_20261122",
+      "files": 20,
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/resale_events_20261122"
+    }
+  ],
+  "files": {
+    "bike_parking_20261122/autonomous_writing_status.json": "3ff02d590e4830adf07b2eadb75c2a1e54486cf06bdcec81ac44796822b105e5",
+    "bike_parking_20261122/event_comparison.json": "12e54122cd86d376cc76e6ab2aae890b33490f3956b16e3ff82ae802743b2284",
+    "bike_parking_20261122/explanation_exchange.json": "9a3f3f2ea8fb1ef1b24cd75b14f327b6a3933e37cd614b5303af1251a39c8ed4",
+    "bike_parking_20261122/issue_plan.json": "d0f4f777c40803a918b280eae661e9a20c19bbac62e33f1ba6621d4c777729ca",
+    "bike_parking_20261122/matrix_independent_review.json": "551eb2fe7f1e0ea8d4daa13e88b5292403b038eb9b074a6dd4aeedd6c6ab07fe",
+    "bike_parking_20261122/merged_literature.json": "e3ac36d64888b25b8715004316029d77eeb04affdea005810e8a2b6fb94dde7c",
+    "bike_parking_20261122/reality.json": "7c75138d17c253be3a92fbb93857850f686d3a4e7ab2f2ae18245ce2b961e414",
+    "bike_parking_20261122/run_manifest.json": "ed71d2f70a19007749843af778b732ade6666630c33d06859d6adb5a134058de",
+    "bike_parking_20261122/s08_topic.json": "8362b0fad9a5c306904a785c3af473da23c508ebbeec68b514ee2c61020370ea",
+    "bike_parking_20261122/staged_topic.json": "d994024a416948171ab52683a447b8c8f62f4b1d16fcb471a55cc683d4bf5c9f",
+    "bike_parking_20261122/三批预算续跑验收.md": "4d43ef83a7c2bc3e6da8b1f52872af0bfaa989b204eedb3836ef7b0cd22e25c5",
+    "bike_parking_20261122/事件.json": "e2ce45e0163b9f481014186c8dddc0efc65da45e51699ce91ed71f20680d2179",
+    "bike_parking_20261122/共享单车_结构行动试跑.md": "65a48e07c67904e9caf497d83dd91869fe6b11bfe69a6974ab2b86e3385c33fc",
+    "bike_parking_20261122/共享单车_续跑验收.md": "299898c679a7460924a52193d2c596c3debb66bbd9b3210d62bb41a14d6aa87b",
+    "bike_parking_20261122/冻结后自主接续验收.md": "42a09071870d310d4e66ade77dc4352b417fa1e2ba991c0d0332b215b1dcd294",
+    "bike_parking_20261122/初步学术审查.json": "5bc1d0b7db5d369093289575278d784d93fc693a94605b510b41fc46ff118a0c",
+    "bike_parking_20261122/反方意见.md": "6e241bd4bdb936c9d89bb87aef7ff0d04e66e010b3f3292aea39999c08d149d0",
+    "bike_parking_20261122/反诘.json": "d39d3612507050d98520c60df1115bebb2ece00825f7e82fbcf00d323bb136f8",
+    "bike_parking_20261122/审查分级与成本验收.md": "eafd5505e378ad1c2ffb8f5f17c8b7cb028eead8cbd2e4bbf9768caf30fa710e",
+    "bike_parking_20261122/方法核验输入.json": "94675f8395434171cfde501706993f069765fc3361acce620b86228f42854a51",
+    "bike_parking_20261122/方法核验输入_已修复.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/材料交接修复.json": "cf3d180346c916499c03f4d2575e37557c83330904f0878c8ad78af4891d4d79",
+    "bike_parking_20261122/材料交接修复_events.jsonl.summary.json": "5ea253571a018a5cba4fcb4387ff90c5e31c0af40794dbaf20a6d9337ea29fb4",
+    "bike_parking_20261122/材料交接修复_输入.txt": "c535e7a413007e522dc2bc353f05c39be507d414ca3fce577e41ecf430191629",
+    "bike_parking_20261122/框架_events.jsonl.summary.json": "180dfa70baf2a6a11836e610e2df73878056e91bdaec5d4ac89acd49a5eeacb9",
+    "bike_parking_20261122/框架输入.txt": "9524a609503980cd3a18855ef8cfc406e1405c445eab4af3b74d4d42a00b2cdf",
+    "bike_parking_20261122/独立复核.md": "6d7a2c265f4559199406414cade636a4c72af72a33af0a79e0329a46f77022f4",
+    "bike_parking_20261122/现实.json": "cbb742319b5a52405abbfd954d8a83713da70a781fc449d12a480dee03457525",
+    "bike_parking_20261122/理论框架.json": "0dc68615933c52e58f256eb2a461bf9dafee72bd6c3b4d97ee8d078bfcadf97d",
+    "bike_parking_20261122/研究审查包.json": "7e2b0e32a8b9477b3993d4c47ce4ee60de955ce43d395d9207791ae68bbf9fc0",
+    "bike_parking_20261122/研究审查包_events.jsonl.summary.json": "2270276e2aa1d0af34df643cde144c8e14ec1bf6e4e439ba383d14691cecaee7",
+    "bike_parking_20261122/研究审查包_输入.txt": "8c78bba3b130eaecca3f32f4d9c693999b57456fcca8c71e5a4240405094177e",
+    "bike_parking_20261122/终审.json": "8924f76a119770ee438044b31930c66a900bd220fa04c66263d77eb7a5294a5f",
+    "bike_parking_20261122/经验判断.json": "5651cb3f6b1d514e2814dab2361958ea73b4d2cc564835b416826dd6fe459252",
+    "bike_parking_20261122/经验判断_events.jsonl.summary.json": "e9709a0ea4c11406e0ebd744eb01f31bdc76015a5ffd5a2df356c2275dc49cdc",
+    "bike_parking_20261122/经验判断_接口格式.json": "61d207c6e94d1264a6c7baf9bebd996b396151e1b0ab90a803fb2cc17badef20",
+    "bike_parking_20261122/经验矩阵输入.txt": "1a370dfe9fbe89eda1c068b69843d45f64e431c9d9ce12d7821c902e6e8e54dd",
+    "bike_parking_20261122/自主研究_events.jsonl.summary.json": "c99b4af46e035e091153c7fffff5de2e661173e4cad7e6ae7b67e98c3397f4c1",
+    "bike_parking_20261122/自主研究_启动指令.txt": "6041bc0fa0daa6703227415238b2221724c17c03c1dd9b97a5ac17f7d6003e5b",
+    "bike_parking_20261122/自主研究_结果.md": "be9b08c97a4d1180a82054c8d512299ee13696714133c9a00e3baf3454a08f2f",
+    "bike_parking_20261122/议题.json": "92de5787915d2dfdf639ee846d229f2268df38a90f459a8bd6b0f1cd906b7682",
+    "bike_parking_20261122/设计可行性审查.json": "d9d9dfef687ed25005e31389c60b125fa7b169e88e9db95d3c978cf34183b542",
+    "bike_parking_20261122/跨模块返修闭环验收.md": "62e553744aef87f395ad1135246562c1726f6f332c5cfd3feba274052d2970cc",
+    "bike_parking_20261122/返修来源分流验收.md": "b2aeca45c6398ad06931acabeeef6c3de959abae6851acd94ef69177bde3f329",
+    "bike_parking_20261122/autonomous_writing/artifact_lineage_verified.json": "bf940caaaa66773c119baf42b5c1c359dfd50da8d4ef9e30657dbdefd5a2566d",
+    "bike_parking_20261122/autonomous_writing/local_context_benchmark.json": "bbcb77c4de301a056a7b62419c38e17e0ed9612339bbc9a587f75d546d5aba7d",
+    "bike_parking_20261122/autonomous_writing/revision_checkpoint.json": "d2049bab18cd0bc90db6215e11b8224d19ef8037186cf8ad2d52c20adee84236",
+    "bike_parking_20261122/autonomous_writing/revision_completion_9848a1722fb616c1_a539bfed932a.json": "8f7ac1aebbe8989bde6f12c8382ac935e5476781af808b240a72a0f7058b189d",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42.json": "ba7c5dcc07ebc57da5001f381add5b59c619ac72d8316ec2ac20d3633d2c6ce5",
+    "bike_parking_20261122/autonomous_writing/revision_completion_fb1472fb9006831a_10b0d9f9b4d6.json": "b3bef77337c937cee1f30770a6f2fc023d62525f86545b192d00bbee6739d4a4",
+    "bike_parking_20261122/autonomous_writing/revision_preflight.json": "6d6c4880145379e8ef19f3e907e83ec03ad572a261291795a018847eeb3fade3",
+    "bike_parking_20261122/autonomous_writing/technical_closure.json": "926693ed3494c2f2cb77c907fd9ec36f5d652c2e54175796c1128861e898d4c4",
+    "bike_parking_20261122/autonomous_writing/draft_0/plan_input.json": "8373cc5feeaf23d4d0ef689024b23de93b8e360bca514e90167792a52c5006c5",
+    "bike_parking_20261122/autonomous_writing/draft_0/writing_plan_review_request.json": "abc78c9da5f604d1dcb6987965c04a97a45b79dae06b6dad733f34d8ff884120",
+    "bike_parking_20261122/autonomous_writing/draft_0/论文写作方案.md": "c1d9e1289a8c3963b4ab471cfea41614083f9c2aa238dfe4891a884d8406ded5",
+    "bike_parking_20261122/autonomous_writing/matrix_review_1/attempt_001/events.jsonl.summary.json": "44d05507ce657639f8d4b0ef8fa48ac0434c2465c4cbc4de73877f32c9805603",
+    "bike_parking_20261122/autonomous_writing/matrix_review_1/attempt_001/request.json": "290433419331e1c4a9746147c4aec27acecbaa40938d50a0b72696a2ef020e69",
+    "bike_parking_20261122/autonomous_writing/matrix_review_1/attempt_001/response.json": "25b1b6211500798c54501fb3e0b416c15bc2b3ee9647edc381bbe273cc804248",
+    "bike_parking_20261122/autonomous_writing/matrix_review_1/attempt_001/validated.json": "bd76409775f04534aa61ec649a65ab25f1f8f932a69aee1e303f7411e57d63eb",
+    "bike_parking_20261122/autonomous_writing/matrix_review_2/attempt_001/events.jsonl.summary.json": "9638a7c4ac5d00d89aab055f0671a4ece239d6078ce6c0e5e547921d89bb7533",
+    "bike_parking_20261122/autonomous_writing/matrix_review_2/attempt_001/request.json": "b523666197db06be2bac2d3aa161e9f6331ea6a726b15886739790d583c89327",
+    "bike_parking_20261122/autonomous_writing/matrix_review_2/attempt_001/response.json": "23583fc863aafd5d1e61abed8ea39a06af98a05a17ea847a5c1fb72766a3e4bb",
+    "bike_parking_20261122/autonomous_writing/matrix_review_2/attempt_001/validated.json": "6523771ded716624cfc4d1cb7038ce58f54731026bff2994a71e355f3c7b1c2c",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_1/attempt_001/events.jsonl.summary.json": "bcdd1c8657a4c0d0f6659ae4bcef81629ebb05c17749c343579f69b3569ed788",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_1/attempt_001/request.json": "fd1578f859ae15f4315770aabde3a5ed5aa535967ce73283015c6f154dc85281",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_1/attempt_001/response.json": "6a5e41f602460dea49f4d302cba76dd2fb5f900f381570d9a3b41e924988e924",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_1/attempt_001/validated.json": "50e20a3ebe8339ae9dda3cf2458dd4c52386712a3a1d3eeac819b2cf7f37c266",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_2/attempt_001/events.jsonl.summary.json": "bb0822ea7cb7518ab19608586150a35755ffcffccfae31fc889681716386bd22",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_2/attempt_001/request.json": "c1d405e338c3dda0f993bccb1b119d662172d976e9fd1894ed1db0e5f5962a9c",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_2/attempt_001/response.json": "2b56113833d68944b0490de18cfb41b49b164902a9ca61ea0dcf68ec6264e17e",
+    "bike_parking_20261122/autonomous_writing/matrix_revision_2/attempt_001/validated.json": "b0b90f532dda96e6db97725cab4fdd4473aefc3cdfd913bc021c1be6b3997ffd",
+    "bike_parking_20261122/autonomous_writing/plan_0/attempt_001/events.jsonl.summary.json": "3c4954981ffe3a3dfe5a52ff2d1e912121d1c147ad533abe9cda57f1365e2455",
+    "bike_parking_20261122/autonomous_writing/plan_0/attempt_001/request.json": "248e96940f445bcb8a8c0de66f253802f1faa2431502beafe0e19e52b5357774",
+    "bike_parking_20261122/autonomous_writing/plan_0/attempt_001/response.json": "50ae63f3102811e807e63883e33b988dca295d52b3d12c64dcb98af465e001c3",
+    "bike_parking_20261122/autonomous_writing/plan_0/attempt_001/validated.json": "a39fe4a76a6a2963130147208511aca49e6f5bcda7ccca83bc3d6fe7fa429a81",
+    "bike_parking_20261122/autonomous_writing/plan_review_0/attempt_001/events.jsonl.summary.json": "46d0d1d79ea91adbb107eb657bb7eb4b95a4cd8e9ca14c43b64aa5ff3cc7c432",
+    "bike_parking_20261122/autonomous_writing/plan_review_0/attempt_001/request.json": "1eed2c6751d073942ccc5a8e8bcc0140ad10c378cf7e1b8cf6e9a2582e32f1f1",
+    "bike_parking_20261122/autonomous_writing/plan_review_0/attempt_001/response.json": "76f4f78683c4a2cda8ff858717665089389461d0bec69e182d6f4414156fc9f7",
+    "bike_parking_20261122/autonomous_writing/plan_review_0/attempt_001/validated.json": "40ccf2e1cf2b68d201902f892f758f0a7de9b7643cb091afb40bda20677b1fa4",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/request.json": "52ca42f1e3edbd23f339811af51130b60e9ef905fec09f38aabef270ce0b3a65",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/events.jsonl.summary.json": "2b8f987e21e4ca48f1449b3edee0acf0978f2b843aa1fabe9f1ae327285d92fa",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/request.json": "e605ac0fe1ee81491085f2197cb42453b61e2e0844659e49091b32a444befa52",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/response.json": "5d9eebd36a2fcf9d77acb049b15249375f6a50fa738af28da0acca6d292820c8",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/validated.json": "a31d009b2cf06361f170a19f3664ca76e50f07ab3b0f208033b1abb1e8c4092a",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/events.jsonl.summary.json": "878a19094c4fc770b9ecd1a01d661a458cf44fe64a87feff91c9c07589f1938e",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/request.json": "2fad2caa92aebf0ba1bf9690da8050d2d04ef134d43935392c11957760fbde94",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/response.json": "a695368495bdfddd0105d636f0e3f5d3efc527adafb28ea291d498d79428a801",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/validated.json": "9255956a60090a9f662fb1789dc96b9a4e2d8948603652a85e6ca7dee23bb752",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/events.jsonl.summary.json": "93dbd50c2f9a83854a476811bc00fa5e8a4013416067a0666f6c18d554fe5608",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/request.json": "9bd8e54cf4bf63d2bed222f5ff0dba958f67fa4b2435ce30e5e6a584e3cef363",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/response.json": "1e3f78908f1540ba3c6fed938af970a31d9960b1a06666aeb4abd628f6d0d1ac",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/validated.json": "4526c72a9122d3e7d4956ce5deab971612a3d46540548403e108742b7bf21204",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/events.jsonl.summary.json": "2463c964a873355c43c89da5490ccc0c1deea8bacb8153702eaa200c4ac5944c",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/request.json": "a3fc1a58f41fafd62d249be704134689b4617b67664e84aa4af2628f8af6f8d1",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/response.json": "fc7063e1eed20b23be00cfe45150407a70f98f8e58ab3be4fb9ef24a4a572b23",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/validated.json": "b9cd8e9dc2bb3033eea63371f63e0a14ce27f57856c5226ebd72d5c4a43ecb63",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/events.jsonl.summary.json": "54a56aec47718139d95d4e93c2dc8c35e545276bad16e4f2876377e13274458a",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/request.json": "bb1477dc64f435fe7a9e78e8367d5017ad77edf859a9e8c762ae3b9ee4813ba3",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/response.json": "4557479596b463abdfc36e9b22e40dac169469c2fbea0a66f18cac03b9ddf093",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/validated.json": "e7a48eb11362438b591e9a094f750f0ba09e0667e6f15602a7b2edb33611ea47",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/events.jsonl.summary.json": "d41a2eaf7ab349114bc735981c57d8863531d1ac740c60e5ce2305ddeec2d09a",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/request.json": "e84cd2ef16cadcdb2e9a0486c77f1d6d4ee9eb940f93c7c177fbea1b00e41ffa",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/response.json": "094e986f7295fd77fd109bd07c45fa891a4a39853f5eff76bcf8d0dd04034bf1",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/validated.json": "537b0758639c0dfdad10788963ea46e9748622613ea081788bca3e227f7b69bb",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/events.jsonl.summary.json": "e2089d0aa0c32b665aaa61832b76892ebea03cb4fa3a62d921757d650b21ce71",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/request.json": "44cb3c65b4427fcdbffd9e44378ad32c48003efb306ccc25f71631a23e43f93b",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/response.json": "3ff789fe93b09ec2d1d7fb623615f6b6e95330f2dc938d9dcf3b4a5f0c7cda47",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/validated.json": "b66cf3220b47d78d276918e471b0d010ffc73e472153f616756a08d4cd1efcee",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/events.jsonl.summary.json": "8470ec70a168d60990853be6689bdca3f97425358ff64834cf63e6ccc85106f4",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/request.json": "a1e1a45c7b184f080a0ec27c0a6ea9dc200f499ae6e8d12024b46fffd5d6114c",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/response.json": "58b4a4b1bdde29a624d5c24d449a1c36d6e5634e5aac0a2ba94e895f5aa7d29b",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/validated.json": "9fa815f4da8e58e382a55b2afd585ce12984f65a8711c5219c41e3fd74c16399",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/events.jsonl.summary.json": "d967fd779e7140887edd3f0cb2ebabd474379cc04c8aae493a9f0f059d110f77",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/request.json": "1ec4cfa0f68e6c248c47c91998b5d087437a5e45aa55169b214d6c75aa987eef",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/response.json": "f714781ae5dd2292f7d13d859669f69170e86d0c148fea9540b470fd6fc8dadc",
+    "bike_parking_20261122/autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/validated.json": "60ac53084c705e97fdf790c4a672328d1f8f1fb9e846be35b48aacacc1a5a63c",
+    "bike_parking_20261122/autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/events.jsonl.summary.json": "8267cad02d998a4776f1293c20e54b77f338b1f8a1bfa0d31b1a7b34c41a501c",
+    "bike_parking_20261122/autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/request.json": "fa4ad1e597d6dff4c94329b49c0ba329ce39b602a37e624f4dbe229c88eb8be6",
+    "bike_parking_20261122/autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/response.json": "1a0c06d33e89df4d418430ccb0d8442f460e449b001edfb1bfec86f19fe6c35b",
+    "bike_parking_20261122/autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/validated.json": "07ebf602c1823e45f2f0763f4ba7b0e8f6e0573c0722d16145d07ac5ee8114eb",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/events.jsonl.summary.json": "064fff2bf7d9c2408707771e47a81851e2d136a7b763de4652e6c0f5ada5aa6d",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/request.json": "cad851c412118fc6c0cc20816b7769193b847dc2ca5621ab0f4ad0f88096c325",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/response.json": "0d677c4ee763a84d6c9f4e3f30c7e5d656bab25b3ef11afeb97c354a99cafc0d",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/validated.json": "1bb2d8570b6688fe73c32271c4cf518cdd77eb9627b8a2fefcacccb817dea092",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/events.jsonl.summary.json": "f08554699a10c31ca6d4a6e523ffd5c332100b6e6eb01bc3fd2ee724bcac0b8f",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/request.json": "d5fa65899c28161fc1225b875e531304020ee64982b68c4f2edca98a7a5c17d6",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/response.json": "c787c457f60e15192eb29db955885406fb90585df8bc12fdbda260e14fa65f1f",
+    "bike_parking_20261122/autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/validated.json": "39b7935f2402dda03f12f6ed28b1c2f33dc8a477426214dc6b065587ee6ac144",
+    "bike_parking_20261122/autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/events.jsonl.summary.json": "690050f235c785afbaf4fdf52abfd009a4befc109c8bdfcdd36073a8bb5317df",
+    "bike_parking_20261122/autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/request.json": "884e4d6621d8fb394a6f1399d2a73333e1e98a1793408a88a5d85146183eb52a",
+    "bike_parking_20261122/autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/response.json": "83fd02e3d48398592d8e103405ecbff2972cafa9d58c2d199b68ccb03ac0a35b",
+    "bike_parking_20261122/autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/validated.json": "20e3de8603f977abf6e4511b38d0a4c039bf65a9166b1c72f61a3a551b179d45",
+    "bike_parking_20261122/autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/events.jsonl.summary.json": "eb8ab9eee1b0823c7b02723b85ce9bf93e77ac39a0e7ce350baac32eb81f3e9f",
+    "bike_parking_20261122/autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/request.json": "f06fd6f69d7679408927a2b47a05cc01248a87496b6a68a4ce1662124ca982da",
+    "bike_parking_20261122/autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/response.json": "dc339296129adec5b323042c3f015f2f15ad58b000465c1dc8f0704eda8bf113",
+    "bike_parking_20261122/autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/validated.json": "a36e6159a939cc8a275f93868a2ed9fe4b279205f9db7e60ecf8e9b2fe9c4058",
+    "bike_parking_20261122/autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/events.jsonl.summary.json": "cf9d11c0dca9734db0794b273d0057fd6e433a5025c23ad5516222f7ffd3fded",
+    "bike_parking_20261122/autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/request.json": "e50ff34ea01e9fc96a22fecf6d58cbcbe169927d7337e089685c5b96b1df8b03",
+    "bike_parking_20261122/autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/response.json": "a3199d9bd14cfe724c2b6740e0ac6dc3e47c1b3e0216c3a9c552f88f9190fb4f",
+    "bike_parking_20261122/autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/validated.json": "320af9a4d1656477b78539205c7652517787262cd9edb1ff00b83b3da072f98d",
+    "bike_parking_20261122/autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/events.jsonl.summary.json": "35ecd490dc3f15ef0db82d2669c3779fb5785d16a5b887daffdf2cfaee80582b",
+    "bike_parking_20261122/autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/request.json": "5206f108020767afe598a4e0d807cb0f9b76e100586431011cce5789cc44fb16",
+    "bike_parking_20261122/autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/response.json": "8d3fc4434e124f44c140037d4fd7003eaab8cb18fc2d9939c2e83815c778db93",
+    "bike_parking_20261122/autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/validated.json": "69b6d70ad488b052256440477eef5b4c4d7c213f06b09da28a73b8aac84ce180",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/events.jsonl.summary.json": "3a7d36f3186f179ea626ec00d09a61cbc572dec96e11ea1c479023ee3fb2b35c",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/request.json": "2e593d577cf02a4e3eb6411a7dd1e4e68a040635bb49a33c05c465392f535638",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/response.json": "e95568a8189d49190627954329ecc62d8f0dcf7e33aafcbdd3e4f6667778ee3e",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/validated.json": "375a28089179abcc9b1eb13b5c2bafccaac85febe31ed3b2abe7ce1afff4219c",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/events.jsonl.summary.json": "a9381eeb982ed227339f6495c23e416c3ff4688d66cbf6ce116c4e1985a00565",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/request.json": "6dbe9b25ae433578981afb8465e31c80986086d3fbcb44627cfe1a3d4eb0d803",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/response.json": "98dfa1c569def16d245b762a8b669f351096a2995c3fed90c4acb65c4232ed3b",
+    "bike_parking_20261122/autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/validated.json": "54fbe0c716980011a26eb1a0baecde57348313f24161a8abb6822f5cdae0f5bf",
+    "bike_parking_20261122/initial/abstract_collection.json": "554c81300a7af87834899b4c2b9938b0587587921fdaab7501dc6bb1777398b3",
+    "bike_parking_20261122/initial/checkpoint.json": "51354772e67d755ce35e3ff767494e9106565ac241c0a4a56ecfcd2f89e78cf5",
+    "bike_parking_20261122/initial/journal_tiers.json": "ad144d7366a7a12b615d135b53362ff0de81e16d8d12f9506df5fc44940aa79a",
+    "bike_parking_20261122/initial/literature_matrix.json": "2fd2a8533e771ce2e573241c8a77175f7fbaf5aae82d4c4282fec1ebaeed1ff7",
+    "bike_parking_20261122/initial/theories.json": "d7937c42c67842b5d8056720334176924a1f4ad6afe559b2f1f86c127f2df98b",
+    "bike_parking_20261122/initial/batch_001/events.jsonl.summary.json": "664247249cd96997ba1e52c2f952c8c8857972adb1c880b0a3df438fe5e0f138",
+    "bike_parking_20261122/initial/batch_001/prompt.txt": "fe19874b6cbbe03406626d8d85000ec42cefe2d3cdd9b2a59d5306b8b99f43c2",
+    "bike_parking_20261122/initial/batch_001/response.json": "36de5891fedded6d5d562fb3f84fee042f18641565be3759f7c076f5650c2c6f",
+    "bike_parking_20261122/initial/batch_002/events.jsonl.summary.json": "5e5fc2307964edceae47fa9601819bb799984b8e9db2e230ef2d9f2a298e2382",
+    "bike_parking_20261122/initial/batch_002/prompt.txt": "17c54314fd2a6193a0a54d562675eb651781d74155b773acfc27ce08895325ed",
+    "bike_parking_20261122/initial/batch_002/response.json": "7adadb014f94d627c83de3dce79eeffd799cc3ed699ebf78c940dfcd703148c2",
+    "bike_parking_20261122/qualitative/attempt_001/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative/attempt_001/events.jsonl.summary.json": "03ce0b6ba444cd668cda7ce52599257e6283c139c05c25d107d4a9ce0aa41c4f",
+    "bike_parking_20261122/qualitative/attempt_001/material_receipt.json": "57ff3f9055c8d4d8b9919c4856d38828eb0d9a51687904c4f0627baaf13cb637",
+    "bike_parking_20261122/qualitative/attempt_001/prompt.txt": "8a0a0fe0c361cfb08d99bb770b63ec1464d05bbfee290670df17805bf0df004f",
+    "bike_parking_20261122/qualitative/attempt_001/response.json": "6b5e82f609eba650d8376bcda16031145863ff0d35534ce8362565937e28632a",
+    "bike_parking_20261122/qualitative/attempt_001/response.schema.json": "f1376a9540c94477be5f5698c255319e9622c8095ddc7cf851271d26db22acf7",
+    "bike_parking_20261122/qualitative_framework/attempt_001/analysis_matrix.json": "4cdf6acdb869b777101668a1effb028307640f3ce4a664a6224d89b26f088fac",
+    "bike_parking_20261122/qualitative_framework/attempt_001/analysis_matrix_autonomous_revision_1.json": "32434166d4690778b843d83a6afba50fbd3c927ec6c666dae4bee56e74096774",
+    "bike_parking_20261122/qualitative_framework/attempt_001/analysis_matrix_autonomous_revision_2.json": "8b32aeeff75710b5b832857279ee07f7427acdfa6c216f0f300112627cb81cb9",
+    "bike_parking_20261122/qualitative_framework/attempt_001/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative_framework/attempt_001/events.jsonl.summary.json": "4328408b43bacf432e2c1972415e0b52631c4efc51cf4ab86e9402b3e32e9558",
+    "bike_parking_20261122/qualitative_framework/attempt_001/framework.json": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+    "bike_parking_20261122/qualitative_framework/attempt_001/material_receipt.json": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a",
+    "bike_parking_20261122/qualitative_framework/attempt_001/prompt.txt": "da330df346460d0818dae00aad30de92b821e10c1646ccfef12bd7a449c7868c",
+    "bike_parking_20261122/qualitative_framework/attempt_001/response.json": "182d79baddfe41dd2c21ba649ad84de5ddfcdbfb7bd38a928025be432e1a263e",
+    "bike_parking_20261122/qualitative_framework/attempt_001/response.schema.json": "f1376a9540c94477be5f5698c255319e9622c8095ddc7cf851271d26db22acf7",
+    "bike_parking_20261122/qualitative_framework/repair_001/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative_framework/repair_001/events.jsonl.summary.json": "abdb4d8ad00712d24e75f9b7137fab600dde91120daed882c6ee03d757fbdca6",
+    "bike_parking_20261122/qualitative_framework/repair_001/framework.json": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+    "bike_parking_20261122/qualitative_framework/repair_001/material_receipt.json": "6563bf6e96aee3729a74a78d737abdb717f9074e5d413caf4a0dc4eb2db5cfd1",
+    "bike_parking_20261122/qualitative_framework/repair_001/prompt.txt": "94d75cb71b15e30ae988dcc25225f06cf8f2093de7d6f48a8e83b92c2671bd35",
+    "bike_parking_20261122/qualitative_framework/repair_001/request.json": "69f93941c97f420f8e9df804ac5302b5019150edf70ef49f2a465cae15b35765",
+    "bike_parking_20261122/qualitative_framework/repair_001/response.json": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+    "bike_parking_20261122/qualitative_framework/repair_001/response.schema.json": "7b41fee9842c461be99eff9f5476f3745abdcb8a22f8fac6dc4cf608964b2bff",
+    "bike_parking_20261122/qualitative_framework/repair_002/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative_framework/repair_002/events.jsonl.summary.json": "5547c1311d7e172e36e9beb4020a2b38401c4f6741f57c36d61f5603c66cd7c7",
+    "bike_parking_20261122/qualitative_framework/repair_002/framework.json": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+    "bike_parking_20261122/qualitative_framework/repair_002/material_receipt.json": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4",
+    "bike_parking_20261122/qualitative_framework/repair_002/prompt.txt": "537300f725f2abc8d29e1cc7cbfee9b6bda160909673030568998794691f16f8",
+    "bike_parking_20261122/qualitative_framework/repair_002/request.json": "e122e67cdf66c7efcc9f11cf8b99c33807492bd29e3c8da47d00b916a51bf34a",
+    "bike_parking_20261122/qualitative_framework/repair_002/response.json": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+    "bike_parking_20261122/qualitative_framework/repair_002/response.schema.json": "7b41fee9842c461be99eff9f5476f3745abdcb8a22f8fac6dc4cf608964b2bff",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/analysis_matrix_rebuilt_9848a1722fb616c1.json": "2cfdc486402013a81d8aa4241156004e33442b3fdc86c9e67e1179474341f75d",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/analysis_matrix_rebuilt_fb1472fb9006831a.json": "a4662b5dae6419c2c00adb8f1ff54d6a05fc417c835934f3cf8a19c721a71eb4",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/analysis_matrix_reviewed.json": "cdfb70b448bd08c50a1424051dfb5360641f3ab06b1a75921eaddd373d0d2597",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/events.jsonl.summary.json": "5547c1311d7e172e36e9beb4020a2b38401c4f6741f57c36d61f5603c66cd7c7",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/framework.json": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/material_receipt.json": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2",
+    "bike_parking_20261122/qualitative_framework/requirements_0560fce703e633/response.json": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/analysis_matrix_rebuilt_e3161a4acbc9ad42.json": "f1161943746d2e9b008b2155a719eb921032dec5b52250ff00c6384d8593ad9a",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/conversion.json": "49e66ee67c6da59995e1d7a1ba6159196ebe5ce0e50bfccc458bec6d5032bb12",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/events.jsonl.summary.json": "abdb4d8ad00712d24e75f9b7137fab600dde91120daed882c6ee03d757fbdca6",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/framework.json": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/material_receipt.json": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde",
+    "bike_parking_20261122/qualitative_framework/requirements_570aa82a9f24d0/response.json": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+    "bike_parking_20261122/supplemental/abstract_collection.json": "337681d94d4dc51f7dabae9fc4521a24c133c3070c682f6442fd077b2d09d408",
+    "bike_parking_20261122/supplemental/checkpoint.json": "05d92ba58cf630b3c8e2fef61c66f53fc3d2aad2c259cc5c286d1cab4e1a3d8f",
+    "bike_parking_20261122/supplemental/journal_tiers.json": "5ce1b404799d07a5b4c2b6e5a9089964ac57677fb12d2e68fcfb14a44a05462c",
+    "bike_parking_20261122/supplemental/literature_matrix.json": "9ce03dd55718b6334ca3a0bb13d34e9d0dda72cd8569df5a616214a3fb3b34a7",
+    "bike_parking_20261122/supplemental/batch_001/events.jsonl.summary.json": "8769faf1b3f802b338c6eb58624951fed8fd59c3c257e2a03651417823ab6f61",
+    "bike_parking_20261122/supplemental/batch_001/prompt.txt": "46e19847ce0fc93e1911b4890cf8dfea5655a68a396b30a7567ef662011b3830",
+    "bike_parking_20261122/supplemental/batch_001/response.json": "9751e167b97e51a0b639f3f29ce794404dbefc575c7846dda6d44ca21b0f55af",
+    "bike_parking_20261122/supplemental/batch_002/events.jsonl.summary.json": "8a95c3aface79acfb087dd1e5b409db8a8352c69cfbb9c3267e4ffaa38ecc19c",
+    "bike_parking_20261122/supplemental/batch_002/prompt.txt": "7138e9044fa1f1ee312b28dbd4f8d7b47785da84a9287c5fae74182f80512aec",
+    "bike_parking_20261122/supplemental/batch_002/response.json": "b8d7a039b0d95ccfa7c328925fd973f7a80e4eefc7bf2f4d07b318cdb4ac90c2",
+    "community_meals_20261122/event_comparison.json": "d90eab2eb2056a0eaf435c7af0d73d866c4a26f688867ae71aa8484504f2b077",
+    "community_meals_20261122/explanation_exchange.json": "2550690f756009d69d4379036d7fb80e717f483e2c4e7e3376934971127842dd",
+    "community_meals_20261122/issue_plan.json": "c1c52886b73513206b4ac799e1d50648954b47a3d1e708383368a67aa46436fb",
+    "community_meals_20261122/reality.json": "493db9db2c5dcd2acba4f501495f4244e2719e59451058ec85fc56cc8b019e90",
+    "community_meals_20261122/run_manifest.json": "b6dde5e9ace2a3c59bef110133328abe5e3434e4bb20f073a59a645659c69864",
+    "community_meals_20261122/staged_topic.json": "01593327b8f514a5e532c3f2a4c4856c45f97ef3c45db1649eec42bac161c63c",
+    "community_meals_20261122/事件.json": "aa218e156997da945108cc3dc9e11dbdc3fcd5b310ff8a274b8702709cebd47f",
+    "community_meals_20261122/反诘.json": "63bd4fa67c272d771c4b304c65ac72a87e9ed2755512f0a8b98fd2ec72700dc1",
+    "community_meals_20261122/独立反方意见.md": "22d34eba589ff5818a7f12fd5899eb0554bee1e01d379745e8854948cdc1c6b8",
+    "community_meals_20261122/独立复核.md": "a9116baf6619e04d1e12d5dd051ef68a01e0968efd338e18d2d563b257e25122",
+    "community_meals_20261122/现实.json": "08c244fcc3149f5d77020c4285620b464567638f6941a5b7408da97cb31a6cb6",
+    "community_meals_20261122/社区食堂_三层检索试跑.md": "05f456d685a93536be70ca3a380302cf75287d7f56581489bdb42a2516d946e7",
+    "community_meals_20261122/议题.json": "e4d888d2e6db01f1a574cbbeeab8f2e2829ba4f5b43da0b9f86b6782caf9d9d7",
+    "community_meals_20261122/initial/abstract_collection.json": "31bd25eca7dcb0a59799417d8a29dc7a9f27c9ad9c150dbffbd1e2343f9c49d4",
+    "community_meals_20261122/initial/checkpoint.json": "04333ed0dc6c6422c02ffee639af6121794c88718478b84f82b78d626dcb5705",
+    "community_meals_20261122/initial/journal_tiers.json": "418aa9090591e5e55047ce22a8477394a97d383774fed4ff63051ace75722825",
+    "community_meals_20261122/initial/literature_matrix.json": "d2d8e21aaddc48c546c3c4edd779c8589023231cb1e970e1bf69ab5e83c5d7f1",
+    "community_meals_20261122/initial/theories.json": "c3e09697919b2f80ef7d470cd59f2c0a4dff94a774b8fefb9e1f90e77bea7a8e",
+    "community_meals_20261122/initial/batch_001/events.jsonl.summary.json": "f2a95bad5e67e3a20725ef7680e373bef7eb34cff25a0afc6a80d1a916fd9eaa",
+    "community_meals_20261122/initial/batch_001/prompt.txt": "322603f5f6f74d1f02032f4bd00a25fd820f524fc71ce66b2e00d5b14cc13efb",
+    "community_meals_20261122/initial/batch_001/response.json": "4cd8944266c9f401f2c454db664d264af39b1076060f4b865463c28b5b99b2ea",
+    "edu_older_internet_dev_20261121/run_manifest.json": "08308a438e1e232d153b7fc899793d548a04f0ff2f5a3811dbc9473453baf2cc",
+    "edu_older_internet_dev_20261121/试跑记录.md": "86cdc28150f59adc747442fb748739c30b0de5d0552e9c9fad670d6facae52e2",
+    "edu_older_internet_dev_20261121/literature/abstract_collection.json": "8fdb420e77cfdc3ff12cc0bc0a86c4adc9e90900ef8769abdec861dd39e3729a",
+    "edu_older_internet_dev_20261121/literature/checkpoint.json": "ca2a53187bb7c3f341b15627559af66796f00ae1626759fb92293a49195c891f",
+    "edu_older_internet_dev_20261121/literature/literature_matrix.json": "7ee7f5cafd6de92157e1985016a2d1355f2883c80553b1475ce669a01d9c0ebe",
+    "edu_older_internet_dev_20261121/literature/batch_001/prompt.txt": "44dd4115d44afa1e2e10e59881f14a2a3f33170f64f7bf9d35805574a4ebc151",
+    "edu_older_internet_dev_20261121/topic/config.json": "ed9c4a4a50d0a92d2022755280e52576760ef8dac6dc40955486d4abfeb2e211",
+    "edu_older_internet_dev_20261121/topic/deepening.json": "fbd4d9e1361a298d6c569ab0ea50991fa947ccc4ad22aad2de12c5aeda146ee7",
+    "edu_older_internet_dev_20261121/topic/deepening_review.json": "c17d04aa80dd1f3bbcb8e81a5146e1582f566aadc7c5273d871773adfce0d361",
+    "edu_older_internet_dev_20261121/topic/deepening_task.json": "715c96a0da446df39bad56d758a964f430616e85ca767b325e21ada5ba39494e",
+    "edu_older_internet_dev_20261121/topic/opportunity.json": "cd7d2c75250572cacd02cd13045cf4f468d93390f64c14825bbc5a72aa0ca4e0",
+    "edu_older_internet_dev_20261121/topic/opportunity_review.json": "8e4b0942d397bbf5f6f21a9d81215d87217a47c7f1f9000a2837dd3621848485",
+    "edu_older_internet_dev_20261121/topic/opportunity_review_normalized.json": "1782324cccf20786bbe15f00bec3207a62cfb57a0b7bc53a6bd7948c5dcfae00",
+    "edu_older_internet_dev_20261121/topic/question.json": "0231bec3792cbb13718b0783d2eb55abd990878eb37d4dc13880ee40c03f61fa",
+    "edu_older_internet_dev_20261121/topic/question_review.json": "45b47256918a8924e74a2a5bdd43da09334b87397328f9aa312fa8e17f950248",
+    "edu_older_internet_dev_20261121/topic/question_task.json": "f443b0c5f166cd067ecd7d15198c4d2c5e50c026a9f9842ad98708c012628144",
+    "edu_older_internet_dev_20261121/topic/round-00000001.json": "3f9e78ddf57691906c0101dc9aec979515d5866ab235c45908c695b105b60ee9",
+    "edu_older_internet_dev_20261121/topic/round-00000002.json": "2214e49cd4a8a1182b8312699407b7fb92b048524f18f029e193ad9ece0c33a9",
+    "edu_older_internet_dev_20261121/topic/round-00000003.json": "377c3a698a314670e865cad90c53e585f844ade3ed2c800fd809820a0b268e7f",
+    "edu_older_internet_dev_20261121/topic/source.txt": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+    "edu_older_internet_dev_20261121/topic/source_3.txt": "5f207cba06713bfd7e77087da30c8a891975823811a144427ed6985a7ca3e173",
+    "edu_older_internet_dev_20261121/topic/usage_1.json": "69e341d0a765e589517f911c370bdf7450b402fa5db724ac8d9cbd8f4e407340",
+    "edu_older_internet_dev_20261121/topic/usage_2.json": "8352b3709acf24b9ab1b5dccf4ceaaf0abfe3e798cc3259d6ccd5e9a7ee07fdb",
+    "edu_older_internet_dev_20261121/topic/usage_3.json": "69e341d0a765e589517f911c370bdf7450b402fa5db724ac8d9cbd8f4e407340",
+    "edu_reality_20261121/reality.json": "7715a94bd272448648771e01b20761c22e77bfcd55c6e388ab2bdaa8ce80f5c4",
+    "edu_reality_20261121/reality_input.json": "b29438d396f1c5d7b75620be6272d11ca6a0d043d65bba73ee6e0b6be9fdd9eb",
+    "edu_reality_20261121/run_manifest.json": "ea927c3f6095a7bbdedbe18f3ee89dbfbb81440b7cef55f8b04a89ab224a2e53",
+    "edu_reality_20261121/staged_topic.json": "9d5f3bfdd259274b04ce0e87f9f38b730d15d904ddffef0a54280ee411051a9c",
+    "edu_reality_20261121/独立学术复核.md": "fef97fe708f9662f9fd1eb8ddfaec3c9705bc6325bc66e203bc91309e47bda62",
+    "edu_reality_20261121/initial/literature_matrix.json": "e86193d85f06e6462e9f728d5b9c74e381222823c311455a01ff571c3f500a54",
+    "edu_reality_20261121/initial/batch_001/events.jsonl.summary.json": "f953fa6af80bcb3a2c264544be24133d4af8470c415507e34aeb9589276bc4fd",
+    "edu_reality_20261121/initial/batch_001/prompt.txt": "bfcdb316f1ae63ec8c4f3f9a1a8f58c3a5ef3d015cb07e0e0da86f326f8ce1c1",
+    "edu_staged_20261121/preliminary_review.json": "2dfad6eae65cb2c05dbfea922fd71ac316521af1d92ab42605474a470f8669f2",
+    "edu_staged_20261121/run_manifest.json": "3b641093f959946b10e0573f6e8e3cc349dcc06124416f5dbf6a0a7601d83bb3",
+    "edu_staged_20261121/staged_topic.json": "e488bf501bae9f98d2bf6aaf4a76b5a4fbfa01b9266032f29f8acda8f165336a",
+    "edu_staged_20261121/初查学术与可行性.md": "76c15e38564f67e7c9555ab7db4217111a05f68d5eaa636eb35fc36eec810147",
+    "edu_staged_20261121/定性转换_进阶课程.json": "302657c2648799656b254ee0a089392ded0cb5f6d2371e6b304a4abbec1400bd",
+    "edu_staged_20261121/initial/abstract_collection.json": "ddd358877adb31ba99b2823b803009ea53b540f69912851495889f327cb01176",
+    "edu_staged_20261121/initial/checkpoint.json": "eadb21017bb889333b984f61eda7f611a2989b670f64df828d8e3a073658127f",
+    "edu_staged_20261121/initial/literature_matrix.json": "38ed0eb1abd44cdcf5456b16e547816ef12ccc611ef5f0751904c3f2784c9569",
+    "edu_staged_20261121/initial/theories.json": "f802d721be203a6368aeb0646572103e3f53a3ed8d17f3967753a8a246d6981f",
+    "edu_staged_20261121/initial/batch_001/events.jsonl.summary.json": "4eb0d706561f66d96c723b81a633b80c951b213d52f687ecb21c00e182f21ca8",
+    "edu_staged_20261121/initial/batch_001/prompt.txt": "ae4111463c3ad97b848d69be96b0c788619d797353148e08b02baedc24dac4e4",
+    "edu_staged_20261121/initial/batch_001/response.json": "848a3a7df1141fbe0855139c73ad73b67d30423242091bd764414fd25415fd94",
+    "edu_staged_20261121/qualitative/attempt_001/conversion.json": "0bddf8b4cd0e8a1cc535c20a962c56a2a8de5497b13047d9e1ca07ba253338e6",
+    "edu_staged_20261121/qualitative/attempt_001/events.jsonl.summary.json": "291db2e3feb4512024e5ba364f55a453c02148a836eaca7fbfbc017df5cc2537",
+    "edu_staged_20261121/qualitative/attempt_001/independent_review_input.json": "e0ea9a276aba25935e45e0e9c33e45c2c489a733cd6cbc29cb25c14f6ece85d6",
+    "edu_staged_20261121/qualitative/attempt_001/material_receipt.json": "f6605947c16d62e03843460a45f93268261f1dab774919ee1044535cd13579c2",
+    "edu_staged_20261121/qualitative/attempt_001/prompt.txt": "2f07d069aca43a004c639f09216dc2d00a68145a3c82ac8041db662bb4c3ca0f",
+    "edu_staged_20261121/qualitative/attempt_001/response.json": "23399a8279d879acfbb65ea5b4345770650bf3e9dbd9b48a03d6826d5175fb0f",
+    "edu_staged_20261121/qualitative/attempt_001/response.schema.json": "f1376a9540c94477be5f5698c255319e9622c8095ddc7cf851271d26db22acf7",
+    "edu_staged_20261121/qualitative/attempt_001/review.json": "7880358ec247cd25fa7e4c1c073a5f7115f91656a250d78b42115e4779c258a9",
+    "edu_staged_20261121/qualitative/attempt_001/定性转换_实跑复核材料.md": "3c4082f8b9620ee8a937ccd85a635f5558190f451516ce4de9c2a76356fce357",
+    "edu_staged_20261121/qualitative/attempt_001/独立定性复核.md": "dffb3b78d4577a3879a639256b74832e91e168e8dfc1a67fd8b9fe98f93aa2f3",
+    "edu_staged_20261121/topic/config.json": "4698b4127f91ab7a3b53c6c837899adcaa90e391d09dfcaf28e1989cbc0d955c",
+    "edu_staged_20261121/topic/topic_version.json": "d74013d2be88d4a0b96934fc1ebbf42fb4ac2f2782d1435d0d868d66f60619de",
+    "edu_topic_dev_20261121/run_manifest.json": "12f62551da2a493e09be9fe2548a1bcfbbc410164b1b3e22e5950d40a4a21c7a",
+    "edu_topic_dev_20261121/topic/config.json": "381326b8ed184429d07c962f922853232f8ab3fa7e2d7dbe5042184ebdddddee",
+    "edu_topic_dev_20261121/topic/opportunity.json": "d27d45f8cf67e1fa352dc8c6409d535c717c21b22c23ef24cb61a9ff299b827e",
+    "edu_v32_20261121/archive_disposition.json": "3c1ea8dc893ab95a8752ba4cab04029b56d0e29635ca21f2852e1243a67657c3",
+    "edu_v32_20261121/Codex_CLI登录排查.md": "6136142f15541e25c5f1df8e201c629cac4b9cabe3dc40c432dff3239e71daba",
+    "edu_v32_20261121/run_manifest.json": "b6f36e4d2ca07e0ac3b2d8f05a2a159a2a7a807e9bc7a9357b77910db401e0df",
+    "edu_v32_20261121/v3.2_教育选题试跑.md": "73b9d07c48ebc7d0646ee1da8e3c44d18da75b0db742949554fed216d22787b7",
+    "edu_v32_20261121/literature/abstract_collection.json": "fda6a0973e4a543482acad80c7a65819eea5e6e6fd834f8c3aabc4672e874439",
+    "edu_v32_20261121/literature/checkpoint.json": "691560564081e45ab4fae766a76a7fd24303d3d1e3c1ab7bdf9e1d3ac609c366",
+    "edu_v32_20261121/literature/literature_matrix.json": "1abe5393265ca565feaa40144957b0f34c8d7fe0278d37cc4630e7c8044f8a5a",
+    "edu_v32_20261121/literature/batch_001/prompt.txt": "e4915e5a76cc328fa93dd35947d1a731976bb6bf7d9f5365fee3a573587f9e0a",
+    "edu_v32_20261121/literature/batch_002/events.jsonl.summary.json": "d9697c562e38bddbe40760d9395bcaca7d916898a8f5dfc93ad65aa706fe9d96",
+    "edu_v32_20261121/literature/batch_002/prompt.txt": "e4915e5a76cc328fa93dd35947d1a731976bb6bf7d9f5365fee3a573587f9e0a",
+    "edu_v32_20261121/literature/batch_002/response.json": "2ccbb874b8d8403560c805e6e43d9305dea94d26c3daaff95735a042ef94945c",
+    "edu_v32_20261121/literature_q1/abstract_collection.json": "c9c590412a952e20669bb87fc089c199c87baf50f2d96700365e36ef58aa0609",
+    "edu_v32_20261121/literature_q1/checkpoint.json": "064bfc2097b9fe998fc7b8b7fb59f2badd629e4b4219d3318c8543ea527880dd",
+    "edu_v32_20261121/literature_q1/literature_matrix.json": "fe530b4ee7bd75bd5389e83bb1ad7808174c7eb7e50a97dfb89d264dd74e170e",
+    "edu_v32_20261121/literature_q1/Q1_证据与设计预检.md": "73c04e641c902088e63d50d2efe45f248de1405f48f467ef4c8a82e7bafeef44",
+    "edu_v32_20261121/literature_q1/S07_独立复审.md": "930eb1080eb5d9d8da644cff8731ac8bad67567c2c5d59619b89d9f167cbb1ae",
+    "edu_v32_20261121/literature_q1/scope.json": "5adb4761d8ab9acf8ae13db44a1a97d6141f63f49c7130d60db1d58b36967287",
+    "edu_v32_20261121/literature_q1/batch_001/events.jsonl.summary.json": "8429779cb7bb21ef4687bf0da8296282eabe134b20ba881cfa4fc706f7474403",
+    "edu_v32_20261121/literature_q1/batch_001/prompt.txt": "c4d52038e7124b7922f56c013590d73faf793afc451b2daf3b6339e521fc1549",
+    "edu_v32_20261121/literature_q1/batch_001/response.json": "bd561e7bdc369b41293d3a5f37974b0ae4ff303be839cafdd10c1e010a45e1dd",
+    "edu_v32_20261121/literature_q1_followup/abstract_collection.json": "e2f2574db8b1f669162940dbb3b551958859271e055b43ec492e4fdd4586be34",
+    "edu_v32_20261121/literature_q1_followup/checkpoint.json": "3e047a24ce0974ee0ae6a8b693be09f597bcf63f2dcf9dc17886be696e3aa004",
+    "edu_v32_20261121/literature_q1_followup/literature_matrix.json": "ad2c738651da729bbe283a1ee086dcedc7fdbbb646e42abef28918580e4fbfac",
+    "edu_v32_20261121/literature_q1_followup/scope.json": "6da142e087d378296af88a1f6f0a56ba924b097a7346d0633331cb9881bda7c5",
+    "edu_v32_20261121/literature_q1_followup/batch_001/events.jsonl.summary.json": "7bfd04609148022284d22bbafca364dd21e6942c092c2ecd19a3d186dd1842e6",
+    "edu_v32_20261121/literature_q1_followup/batch_001/prompt.txt": "e5e090ba5578162f89db29e3802b625822b5dabb000f383f1ba58829ae12720f",
+    "edu_v32_20261121/literature_q1_followup/batch_001/response.json": "4f85ffb717e51d5eaa613a85c9eacc720236b42d2d8006eb5166868828da5953",
+    "edu_v32_20261121/login_smoke/after.json": "eea24f68ba43e058a585aecd625005d0173b5c92043cda23b7b3b233ad196b3d",
+    "edu_v32_20261121/login_smoke/before.json": "a916cee04496177235e4e7e09b6ee334a4507c9c27fd6e08bd3da938f34678de",
+    "edu_v32_20261121/login_smoke/prompt.txt": "21abf301d0b5488c4a51bd37ecf44d236829dd10d1083e767140f19eb719186f",
+    "edu_v32_20261121/login_smoke/schema.json": "bd4091fe066c1001eb3f7cb2c9922864a64f1ad43a84d0007a6da54ac4ca4b3e",
+    "edu_v32_20261121/login_smoke_verified/after.json": "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+    "edu_v32_20261121/login_smoke_verified/before.json": "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+    "edu_v32_20261121/login_smoke_verified/events.jsonl.summary.json": "b6cb9cc324c9d5c1d8c93c677ab8ab8b743c7e8609533aed95df740651496301",
+    "edu_v32_20261121/login_smoke_verified/prompt.txt": "21abf301d0b5488c4a51bd37ecf44d236829dd10d1083e767140f19eb719186f",
+    "edu_v32_20261121/login_smoke_verified/response.json": "1af8bc3ffd6b6c709df078590580b22987b991fe639a17339cb4af965a0db71d",
+    "edu_v32_20261121/login_smoke_verified/schema.json": "bd4091fe066c1001eb3f7cb2c9922864a64f1ad43a84d0007a6da54ac4ca4b3e",
+    "edu_v32_20261121/topic/config.json": "f123b2ec54a5f1f99d86948060c58d5521768186b1151f3592d70a20a70af984",
+    "edu_v32_20261121/topic/E1.txt": "ae9a93f7cbfe4a270f85a1bc0d134e69d9bf66e61080dc7897b1242fc357f9cc",
+    "edu_v32_20261121/topic/E2.txt": "1a1323d7f01b72a7fd5cafdd5ca5feb05a6bcbc31007447bc961c9e477652884",
+    "edu_v32_20261121/topic/E3.txt": "d2cbb4c66247a478069102c224fbafe5e11279b775ec93f634cde7dfd4139d6d",
+    "edu_v32_20261121/topic/prepare_next_1.json": "6e60de8b075c4fe1fe299cab83807af3d3d83f1c35b3c9c42723b06ce4755419",
+    "edu_v32_20261121/topic/prepare_next_2.json": "ae035d347e40063951a7b966b6cf8bc8e0f29c5e20a82544086d4b994a0b13c0",
+    "edu_v32_20261121/topic/review1.json": "7e03e0a801cbe7fe092e9d589e7f4037cfd6a253152dca6aea25feba7dff6abc",
+    "edu_v32_20261121/topic/review2.json": "71f25af1d4b34f9b218439b96d0f29cdada878de60d86b191f2e28a292472078",
+    "edu_v32_20261121/topic/review3.json": "b2f95b0c715bb9d3c68209f5881b1f84d9bdafcf0aa8b6cf632a7d89ddf7bd5b",
+    "edu_v32_20261121/topic/round-00000001.json": "64dbb23fa85ae6bbcb472cbf7fed349f69fab6b55b217dba037b8bbeb3096aa4",
+    "edu_v32_20261121/topic/round-00000002.json": "a74ef3d98646ec848d7087e79f205b6465fbba8a4a1de21ba3fce4fa9c675c86",
+    "edu_v32_20261121/topic/round-00000003.json": "0308398d1fba5810cd066643f976d31e9282c7d9df31080919547c3cc178ece2",
+    "edu_v32_20261121/topic/stage1.json": "da9ea786f69f66db93fc2970cfd15dc2a036335a697b25f93699a0268b98b895",
+    "edu_v32_20261121/topic/stage1_draft.json": "e6f622571f11504852ce2e929b43533a72ff3981fa472ef4dc804f9cdc832b83",
+    "edu_v32_20261121/topic/stage2.json": "ffcfdf6e08c3f754a33ab935058cb8d8fe19059a10404d3c7759055c9734dab8",
+    "edu_v32_20261121/topic/stage2_draft.json": "5542737534cd32a56ede69e73c6779dced29c6f665dee8ddc5d0a300fa37ad59",
+    "edu_v32_20261121/topic/stage3.json": "1db1bde9f1ea10f0571f45896b54df7e6d863c6712f5c2502d5b43188f9fa13d",
+    "edu_v32_20261121/topic/stage3_draft.json": "ac14b97b97db842a92694410839c473083cc263598443ca414c76d2a01a2f8b5",
+    "edu_v32_20261121/topic/topic_version.json": "d74013d2be88d4a0b96934fc1ebbf42fb4ac2f2782d1435d0d868d66f60619de",
+    "edu_v32_20261121/topic/usage1.json": "db6642deed972dd954ca7e3d6f4ab6d0cfe49ffec0dbf1d4408405250dee96d7",
+    "edu_v32_20261121/topic/usage2.json": "77ca9b3c922180123ea8b0d0a54cfe04788c2c4a8163049581a9ffa7203dbbf5",
+    "edu_v32_20261121/topic/usage3.json": "4ab3d5e14edc2501119f1aa4cd6570812df1970f000020f7e754108791b99f94",
+    "global_20261121_001/engine_smoke.json": "cac19566ae3cbb571adc1a3c89d0c0790b46cbf834aa962f8e6c2d48710bd482",
+    "global_20261121_001/run_manifest.json": "bcf7c312c4330aec871712b19de06442eb595a0a3932e724bcd5f7a1556cb817",
+    "global_20261121_001/literature/abstract_collection.json": "70deebb56e5647289a7907f39f02f2a2b49285079bfb22e81a228a6f4715aab3",
+    "global_20261121_001/literature/checkpoint.json": "773f8a4d276b30bf19ff13aacd7d0a2e8fc6133f2bd74a2dd42e7b5a13a783fa",
+    "global_20261121_001/literature/literature_matrix.json": "0b854a3d9762a461082b0f5b4b8c92fb9e3943baea8ca4d7436d8edd4237e672",
+    "global_20261121_001/literature/batch_001/events.jsonl.summary.json": "59dba6236d6af2e0a741aef2d4ee5e19ce8e45cd5bf6e53af393965ecf3a83f2",
+    "global_20261121_001/literature/batch_001/prompt.txt": "c259215422264209703294136fd1d189d8193e582f48e05fe7075b3f8ed2600f",
+    "global_20261121_001/literature/batch_001/response.json": "a630cd3ac4ade8f475decac611e04a10e45de0ddf873849b2b58654ce0d84f3a",
+    "global_20261121_001/topic/config.json": "43490dfa14138ab43cea91a983f53b85542fbf2d0a26cb82988dd12612564440",
+    "library_seats_qual_20261121/run_manifest.json": "7d1d0b5e64c435e742107455876b20bdfe382e7049788f9d87cd050491f865ff",
+    "library_seats_qual_20261121/写作任务.json": "b19807b42fc446ddd56cfcb8b3d22368263be680148a6f55aa80a6bf750d78ff",
+    "library_seats_qual_20261121/写作任务.v1.json": "0a5cb1b78ee09886f40de421a7d5b1a4094043041ac6084056db8f0aad37b9c1",
+    "library_seats_qual_20261121/初步理论框架.json": "53d30a1f97c08c722731f4f07bb80044ec758514ffb3b214b3676684bcfd034d",
+    "library_seats_qual_20261121/独立框架与证据复核.md": "6155340fe61891651555fe867be877a0fd3efcf14b46b0eb9a7117d9049fc645",
+    "library_seats_qual_20261121/经验发现.json": "145078ca4de059c80a14e3df7bde1bc5c3471113076c274f0bb0dd8db2ffe818",
+    "library_seats_qual_20261121/转换与初查.json": "e76b167682adb93b8e17ba3e0c51d4cc3bb5c2b43efadbe8f0dc533a337efb25",
+    "library_seats_qual_20261121/验收与接续.md": "f805681ff09413450ee4c52dfdd7f0cc5713220779b0156f356522a9f3ff6e0e",
+    "library_seats_qual_20261121/qualitative/attempt_001/conversion.json": "29dfb28b28354b1ac416ee8bf3a3691a35dc59539b15d122e24a208aeb856187",
+    "library_seats_qual_20261121/qualitative/attempt_001/events.jsonl.summary.json": "cdb36869d784035fa65389e9301a07dfde261b317d19d4b8a5dc69ab70cb0122",
+    "library_seats_qual_20261121/qualitative/attempt_001/material_receipt.json": "ad48e6ff08a75e931a04cac6acd498bf86da3352aa545c24c803e207be315fb0",
+    "library_seats_qual_20261121/qualitative/attempt_001/prompt.txt": "848f0f1011102a79692705804963c2c17622a7fe68f2f1ad758b548805bda70a",
+    "library_seats_qual_20261121/qualitative/attempt_001/response.json": "62cf68ce0480ee2452c4553a703889aab1853d744b62e76f080252c1600fb366",
+    "library_seats_qual_20261121/qualitative/attempt_001/response.schema.json": "f1376a9540c94477be5f5698c255319e9622c8095ddc7cf851271d26db22acf7",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/analysis_matrix.json": "5ff48548b47958cf23079fb16354afd60bdaa9ff9ebe83a8e6478f3b97c3df1a",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/conversion.json": "29dfb28b28354b1ac416ee8bf3a3691a35dc59539b15d122e24a208aeb856187",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/events.jsonl.summary.json": "787247a2f1414bca5332d05d299004405bd35bedd71ee11f45218d7fb386493b",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/framework.json": "d53ed2602f043433033df44e4b5c474e399a9afd47edab92d0998534deff5d4c",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/material_receipt.json": "b38bef07ca2eb25f8700f130f3ce58bf3227a7d92c53815aa1113557697a125c",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/prompt.txt": "d42edabdf97316be74d603d305e74929936af16a7f96a2eeb7170131e5d3e292",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/response.json": "9c7da30f32d7c9f989072ec27f0a8ff9ea21f7a7bbb4820fcd5c976d3a8410b0",
+    "library_seats_qual_20261121/qualitative_framework/attempt_001/response.schema.json": "f1376a9540c94477be5f5698c255319e9622c8095ddc7cf851271d26db22acf7",
+    "library_seats_qual_20261121/writing/writing_plan_review_request.json": "c0a3e25532b6b6b70626fb48c09bdd84bfb54123242b7a65a3ec03f9440a6e69",
+    "library_seats_qual_20261121/writing/writing_plan_review_request.v1.json": "f61c8d9984b0d867e951205d7d41d564f335fef7cc379facf5a6f0e252209046",
+    "library_seats_qual_20261121/writing/论文写作方案.md": "1308864543497c7cd3d42224089f10afcd943f1e93b3ab21b366dd5f17952e7e",
+    "library_seats_qual_20261121/writing/论文写作方案.v1.md": "4780de21fca3cda30030bea59bcf256afdbbcea2b4d7fa8ebd6eb17099d99bed",
+    "resale_events_20261122/event_comparison.json": "cf415323bf898d3cf70a5e5aca4d54cfb58d4ad7668beb7079a785cb3d63fa94",
+    "resale_events_20261122/event_comparison.v1.json": "722e91f92ca2ea8cb15011b2f47ccb34ec69268eeccf9c9ae45ad42d266965f5",
+    "resale_events_20261122/explanation_exchange.json": "d14d90f39b3bb6c1907b033d51d3d14d2ab25cca192749eb2e260282e29115f7",
+    "resale_events_20261122/reality.json": "d6677964a4ffd92d452e7f61b412f3b181a16077ba9a6a8b9dfaa2c626e90224",
+    "resale_events_20261122/run_manifest.json": "bb25aedffe26db14dfd9cd894bf2121b3362594f1eeaee3e309ed55bb8f023e1",
+    "resale_events_20261122/staged_topic.json": "525e37cc40f3513e3355a68dc8ac372f7d553cb1b5c0bedaffa39d5fabccb4f4",
+    "resale_events_20261122/事件材料.json": "549cacaf25e69f954169094a541a1378dd826b23e3c9e7255f54c5c0512e507b",
+    "resale_events_20261122/事件材料.v1.json": "dd4d8cb4f182d36a8ee24c521ef98e8cc2b375a0eb73263c31f014bb75f6379b",
+    "resale_events_20261122/事件选题试跑.md": "c8bb3ed57c5b6d217c3c2444912fa1d7b6e175e3dbe64e1388e34b3f0bd6a979",
+    "resale_events_20261122/反诘输入.json": "b5200ab233a60432a67e6ce49e929e3a70f7f025bc743298bce03c7d434c0133",
+    "resale_events_20261122/独立反方意见.md": "4751c43c5aae8c82cb4e5fe0cfcf3bdb29b043598db890ae224795b1cc80707b",
+    "resale_events_20261122/独立学术复核.md": "74e882f8179b262b9c728daf67035f6b9a7b539fad2ace9c69b2d53ec7e352e7",
+    "resale_events_20261122/现实输入.json": "b91c0ee32c98ab51dcc3a63c4b6f03373b66c9cd4e40d3247933c9d89f060864",
+    "resale_events_20261122/initial/abstract_collection.json": "5382ae1dd1002cdee11272aff16723a914c8d9d60342c49271acbe2fb8e75fbb",
+    "resale_events_20261122/initial/checkpoint.json": "53a7bc8a9dfc1cf58727a50eeb894a44ae11d7efa85d006b69c50f3170bf547a",
+    "resale_events_20261122/initial/literature_matrix.json": "92c560eb148a4583777fca46a4ac0673d608dce9faeafeff100aedd883a0a334",
+    "resale_events_20261122/initial/theories.json": "6d21cfbafc101289221997405ad32bfcb2d2c034b2c58099180967a56bb0c181",
+    "resale_events_20261122/initial/batch_001/events.jsonl.summary.json": "87b0370b6b082df7306e011c7c1cc7619d8107f2a15d5710fe98b5db17394b5d",
+    "resale_events_20261122/initial/batch_001/prompt.txt": "cf39b910086a953e0400603eb9ef851bc6b46bc78f5ab44fbdd384587dfbc3a6",
+    "resale_events_20261122/initial/batch_001/response.json": "14fe60c6c4a5aa03b64e4ad512aaf95fd2ab1fdcd1bb1b7a164e240d018516d5",
+    "bike_parking_20261122/autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/response.json.raw.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "edu_v32_20261121/login_smoke/response.json.raw.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "omitted": [
+    [
+      "bike_parking_20261122",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "材料交接修复_events.jsonl",
+      "3a58eadd19bc78cacbfc6c45911cbc1a27cd074c8e2db848ff1eae401f0cf73c",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "材料交接修复_stderr.log",
+      "44dccd93b65385d0a47859d363c677671cfee2b45d645029d8d51dac459f7d7d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "框架_events.jsonl",
+      "ab28e5408a1417ab56269a92ec0257cbc1ed3accc179863e3b1a81a379185c80",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "框架_stderr.log",
+      "7b4b11191582173705fe4e291b7d31134b32d59926fb8b6e5d73629fb69cb53c",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "研究审查包_events.jsonl",
+      "e228e46db7857c910b36e326d47d5f0b31a9ec994eb42f683c3d3f88d25c5ca2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "研究审查包_stderr.log",
+      "0ee5c4a9e0211010df1209ed5245a11a7f383587e813a4dabd4cd0491e323b45",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "经验判断_events.jsonl",
+      "14036a790a786acb70956466439ed387a1dcdaa62ef72df81b3aa7b2ea23d9c5",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "经验判断_stderr.log",
+      "3453e60dd133683c7adce81a014f155d3e067ea92b2f217b96385381742ca5a2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "自主研究_events.jsonl",
+      "130081d1b539651f73e4656b7855adcf4e09427929bacdb203eaa9c76e61ed2f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "自主研究_stderr.log",
+      "e1982614cf465e1ba9a317cd905c71483b1ea0dc0681953fa85eda9280c2cbb6",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_1/attempt_001/events.jsonl",
+      "74d961937514e248289b6ecfd6f0cee8d41eebbc7a8d63820f1720a3314ee9b3",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_1/attempt_001/stderr.log",
+      "466e3e67001e877eaffa42a4d52499b38b5275c0e1c33f46f95c8029fc45185e",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_2/attempt_001/events.jsonl",
+      "62cbf9f5f158220a4a85832e7295c4450c377413afff4b509a4081166a0ba61e",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_2/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_review_2/attempt_001/stderr.log",
+      "8d486abb4a7db4f1c41de70565b3a9965dd4d63769a742792500226c80015fb9",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_1/attempt_001/events.jsonl",
+      "d710eb9719c12b87ef81aa75886e73890c9eaa125eb279aaf30bdf0622fd5743",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_1/attempt_001/stderr.log",
+      "804462ddc016f2e1af5a05093d9c2dc90598025de56d7ee348fb4d1483a4ab2c",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_2/attempt_001/events.jsonl",
+      "34a38c8a4e66c6d82ddb07f6a6e78e35519e45153a690c69b38d00730415eb4d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_2/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/matrix_revision_2/attempt_001/stderr.log",
+      "8bd5fe3cfd6d94971371c166c1568c53e3ccba2028a2d04ff326d34ff466eb78",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_0/attempt_001/events.jsonl",
+      "3db6bb9dad699cb55f0e090d9b5a252979615c6c8508d57446f40919fbd48225",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_0/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_0/attempt_001/stderr.log",
+      "6298f14db70d6491a23430d9cbfcb7536be611ee8e50dc7ef583ae37a9c283e5",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_review_0/attempt_001/events.jsonl",
+      "1820dc6c48d0d5772e3c249036a64b6cf74ed23f249f770ceb06cf0b0eaca06f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_review_0/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/plan_review_0/attempt_001/stderr.log",
+      "2bb78bc48b8d32dc63ba32617289f3f36b992b09e860922789b61c5df15f9538",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/events.jsonl",
+      "8eaa9209fc20afb8fcd956be9309f6c9a118848bb5ec54541abd3d66b1094aab",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/stderr.log",
+      "e5d012097c026413d4fc5ecbbfd8fc54bacf10868a787bd59fccd6315f090ec2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/events.jsonl",
+      "f8440fa43edaf36996b20b5460a90125958ae9c94d5a84d33101e46963fcc721",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_9848a1722fb616c1/attempt_001/stderr.log",
+      "3d7a917f1dbe00242e6cc185dde55586fdaeae2e5cafe2fb3f0be94e596b9f59",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/events.jsonl",
+      "a28d1da9724efbb267fa83ced30b004dc39660d5dfa371fdc5a00401245e30d0",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_001/stderr.log",
+      "349a29c1466467d23ca1671671bec760f81d4d156fbe2412c420462514aea3f1",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/events.jsonl",
+      "0ce049055f00a2f29f77005d98ae082bc5e7ace8ba997ac5fa8d5e0f1bb54991",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_e3161a4acbc9ad42/attempt_002/stderr.log",
+      "e0c52d7c750e5c705942e18accaf83c62bfcaaa1c2b8c1919463b466b8ec23fe",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/events.jsonl",
+      "0f9089ddff8d46b4856f75db4337f3ca467312ba138674d7aebf5dc44d9b0f06",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_fb1472fb9006831a/attempt_001/stderr.log",
+      "84878bc3abdd8de6874446ad108041ff5758911014ff1f66fbbfe6a5be689828",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/events.jsonl",
+      "00a6555e108c3879bfc3c5beb80092c15d4208f8d1c8ed60c17c605c4cca04b0",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_9848a1722fb616c1/attempt_001/stderr.log",
+      "eb4e4bfc4e0e32b402848346a19f6a81e07491b08ebf78984236c3afb45e9b68",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/events.jsonl",
+      "c2323de013fe4e6a89521abf49a38eace1813ca6b67fe772678f5c3e053f20a2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_e3161a4acbc9ad42/attempt_001/stderr.log",
+      "300ee9017a43db59390c8101e6d4de0be9bbd74c7afb9cee3db18588d70f6999",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/events.jsonl",
+      "318b69e626d873d2ccf36ee441c7eed462629d39a9688c5a7dca368161de883c",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/rebuilt_matrix_review_fb1472fb9006831a/attempt_001/stderr.log",
+      "7d10881af5d48b93586be10327d34e957c4e552456263c4879ab52f081c4be0f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/events.jsonl",
+      "329ac12cc4567cefc082b61441eab7f70d7ff2865b3786be80d62e6d79f05587",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_e3161a4acbc9ad42/attempt_001/stderr.log",
+      "2eee87ecca94979c92cb1e34f2bb840111f709cbcd23e48b07767ca3d94e3b8c",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/events.jsonl",
+      "fbf15b8487e5f9faac9176fb004000045410d6844eb37c1749f6cc8dba810910",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/requirements_repair_fb1472fb9006831a/attempt_001/stderr.log",
+      "60f13534169ac1b74a6c831d39d769cb212573841620bab72332566e6a191a59",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/events.jsonl",
+      "8aa8078b68bfcbf5f8f978748ab557ee8b6b5c2bb4f2a8d919d1d65cfb266901",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_9848a1722fb616c1/attempt_001/stderr.log",
+      "747f1c452f991c43c197f63669cedc4f9e86fc307c7525294760df3b805a98cb",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/events.jsonl",
+      "abc751201234ccccfe9685f4110f9c4a3fe09577708bfb636453ea3ca1e9cb58",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_001/stderr.log",
+      "d567b1643a46b727a988d3c46ec488559b748f7feab0e5c40a78fc9ddbcf5fd7",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/events.jsonl",
+      "46a60dda738a166b846a4e39ccc4c7138b536d0aeebc01f17f6ee22463415474",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_e3161a4acbc9ad42/attempt_002/stderr.log",
+      "3d8dd4784152366a03fdc8c183d30fb8f1bc27d10c111f6aa85ac3f2d423d1ea",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/events.jsonl",
+      "61a6313f918a601bc9c71603dcf085967574c27878e392aeedab769e5911200d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_completion_fb1472fb9006831a/attempt_001/stderr.log",
+      "5ccdcf8243d9d2c093714f65fb1041c0ddf8e3e02f3061cd4a5dfb5845ac16ee",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/events.jsonl",
+      "2566f88b7bbcd316006d2e9756e62778d5d6356e84ad4fab46ab70740e9308dc",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_0699c1a7082ca02e/attempt_001/stderr.log",
+      "e225553451f17145c0a33b9690a4e18c26861556b8bba540f43682335c20061f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/events.jsonl",
+      "f29b1598d85f81f296ac57f26fbe1f215e596923cdefb4b1587e4ce456e44657",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_9848a1722fb616c1/attempt_001/stderr.log",
+      "10bd24500ba9e0ca9242d9770c5a17eb188d40cef0cc4e77594a3305af37da9b",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/events.jsonl",
+      "61a4185750ef922b94fdd84defa1fb3cd8a4221b38ea693c76f10d92419887d8",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_e3161a4acbc9ad42/attempt_001/stderr.log",
+      "23ef93abd01b421fbb0238290640dd16de6fd3812ce08fa322e588f561a2d96b",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/events.jsonl",
+      "ae3a99115b14d4b048a429c6f2a113ac2d4d53aa82e8335e6896251f50c1ce45",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_001/stderr.log",
+      "a0c488b3913cbf29fe82239b72725e99a6c797821a556bbb4a3c2e2f888c12e2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/events.jsonl",
+      "38b576c5203ae7dc9578c50c10b4b2965cb40d24b7c3813d17b9917b2b674bbd",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/revision_routing_fb1472fb9006831a/attempt_002/stderr.log",
+      "70f890f1667eb01815f3f824afb27a62211e39b74dc5af7b4ce76e28b488693f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_001/events.jsonl",
+      "8d173db8903f71fba2d993969886260d880036d2fb0544c077a443598188b564",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_001/stderr.log",
+      "8ec05390ccc6b1174883937d25eb6b612a26a2f52671e3bb67ec845887f5e3ec",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_002/events.jsonl",
+      "780b74d2223766aa2018c915435cca410cc285f5ebd248bf1b5d2c081114d541",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_002/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_002/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "initial/batch_002/stderr.log",
+      "ebc47299ed7b17fbe51fe4a50d9ddf918a2f292ddff351d383b184cc5895e732",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative/attempt_001/events.jsonl",
+      "acb2a1c1e64ac5be4d3289ff526454cdde1362ce1ac7fa57b5caf4c74d014fea",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative/attempt_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative/attempt_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative/attempt_001/stderr.log",
+      "77632dbf7e448a4a3dfaf46b904d77edda3403eaf0fcd84850b6ffb5cbe6f987",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/attempt_001/events.jsonl",
+      "47f21da974e986381e95403955d7b903391dd2c6cb9dd87af35af98107e43196",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/attempt_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/attempt_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/attempt_001/stderr.log",
+      "8c201d9a93bda4e50b58f22e3cbbdcc9b35040692a6461cd836e98bbab91df98",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_001/events.jsonl",
+      "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_001/stderr.log",
+      "cbd3767e52ed81f1665be37ff09dc02ffb9e28b2b9c8102028383ffb2772cc3d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_002/events.jsonl",
+      "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_002/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_002/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/repair_002/stderr.log",
+      "4639c2b86e1260e6955e99ccb1a5a4c1d329e09a847c9eeae022a84dd7d71bc6",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/requirements_0560fce703e633/events.jsonl",
+      "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "qualitative_framework/requirements_570aa82a9f24d0/events.jsonl",
+      "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_001/events.jsonl",
+      "f86e0c023d3820cdc02f528f9531b90a3c73f03659ad23444e62d5f97964aa1e",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_001/stderr.log",
+      "21b1329426f0597d9b28043cceb95bbd63db5a1564e93c19a738f449655419d6",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_002/events.jsonl",
+      "e9d43712fdefcc98ba01d21297907364a0c0170199c7a82c975dd5ba1520a8a4",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_002/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_002/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "bike_parking_20261122",
+      "supplemental/batch_002/stderr.log",
+      "6df7c7b02f0a0404c585f587d3c640b9988fca9612a417441c485f4ec8c2bc60",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "community_meals_20261122",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "community_meals_20261122",
+      "initial/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "community_meals_20261122",
+      "initial/batch_001/events.jsonl",
+      "ee7bfcb849a9cad35ad8288b3ddf5e97ae4c8b6b0cbac761cda2e7eccbffe684",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "community_meals_20261122",
+      "initial/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "community_meals_20261122",
+      "initial/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "community_meals_20261122",
+      "initial/batch_001/stderr.log",
+      "90c2e45fa2a86aa91b0e094ea3666f8b824cd1dc464bcd203f21ca2609b7212d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_older_internet_dev_20261121",
+      "literature/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_older_internet_dev_20261121",
+      "literature/batch_001/login_status.json",
+      "d46742f904c9b85faa7bd23efbd898e4a35ed144f1b8afede9e2a740396e3b2e",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_reality_20261121",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_reality_20261121",
+      "现实驱动选题试跑.md",
+      "8063833fd09d749a43f55d82560975f862461c5dc7f78353d7d279cfe5bd1fad",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/abstract_collection.json",
+      "12123b8fe3a157bea23346cae5b09421357d62a06c8aef50f619d29155cbde2d",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/checkpoint.json",
+      "92ce4b14c88fc7dfa66add6baadc26f5d1c857b39425c318bbeaf199d80ad6f2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/theories.json",
+      "10f31f0a887aa9e71e44da6d8a59d2abda3a3032dd84e36704732125b72db101",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/batch_001/events.jsonl",
+      "b6cacbdcf83b8b9297cdacb63babb82a57c10dc6d5c0c7497bc643b099c79db3",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/batch_001/response.json",
+      "80720dea150aef67d57a10a6ed85dcc2b0e753e3722b04505e9ef9b5c089d114",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_reality_20261121",
+      "initial/batch_001/stderr.log",
+      "5916f0dca2e73b9f6d3e34fac49bb479098352be34e7d80dd2f586456ba32c00",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_staged_20261121",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "initial/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "initial/batch_001/events.jsonl",
+      "7e47309ec00265ec4aeb60cd755486c731391229059cda826ed0b77b227524e5",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_staged_20261121",
+      "initial/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "initial/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "initial/batch_001/stderr.log",
+      "de0d7ef5097438e5969acfd56da4b07fbdf28705604b07adab784781841c3497",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_staged_20261121",
+      "qualitative/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "qualitative/attempt_001/events.jsonl",
+      "2f60aa330c74bd121229d6af652ca7094f731a4f0dacb3693414003e736d633f",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_staged_20261121",
+      "qualitative/attempt_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "qualitative/attempt_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_staged_20261121",
+      "qualitative/attempt_001/stderr.log",
+      "fe3c6777a6ca860f03f1b97768b83f80422913182861609ab4331170a724ab7a",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/batch_001/login_status.json",
+      "d46742f904c9b85faa7bd23efbd898e4a35ed144f1b8afede9e2a740396e3b2e",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/batch_002/events.jsonl",
+      "5cd3765edc50c1fa886b4b019433e558fa3d2d8c3fe00e4edd1a90af038cef51",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/batch_002/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/batch_002/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature/batch_002/stderr.log",
+      "bb94c2c33dc6723bcb6e642af1aa1d3b1e721e49519939e959b70b2e55616664",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1/batch_001/events.jsonl",
+      "330f4a404cf54b4233007461f1d30dc21be3f61b80fb2c7c057770ca334d643e",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1/batch_001/stderr.log",
+      "0074088acd7b93061df1f62e640df281af5810c7b25cefafe6dfe68f8a71b807",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1_followup/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1_followup/batch_001/events.jsonl",
+      "484e893c8fec49e5e11dfd6274c917b8ce9984f83d3ad0c35749546437c930e0",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1_followup/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1_followup/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "literature_q1_followup/batch_001/stderr.log",
+      "93ac47e5a27e9849ab1e09990efe78c09ba4d79e0e08af409bbc104c0263757b",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke/events.jsonl",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke/login_diagnostics.json",
+      "781162408a4169e7db9f9f65758423063037845295d3b0a1b97386da1803515b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke/stderr.log",
+      "ae3c571a7f33b1aa3b5e8ae05eddaee13b1da16e853294c44e552c83c7d73605",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke_verified/events.jsonl",
+      "0f5626739fdc9a2347d39a4eb201074fc37a7a76192c7d00dd4b1552556a10dd",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke_verified/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke_verified/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "edu_v32_20261121",
+      "login_smoke_verified/stderr.log",
+      "613c107428c3f30b79c406e166c7bc4a07a0b12f8ab6443144581ef3fadbbd77",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "global_20261121_001",
+      "literature/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "global_20261121_001",
+      "literature/batch_001/events.jsonl",
+      "dcc38d70d48c67ae94284d048558d7da558610f9d33d19203a854d7ca9bc6bd2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "global_20261121_001",
+      "literature/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "global_20261121_001",
+      "literature/batch_001/stderr.log",
+      "e3d74daaeb4356cd867d39dfbf86038cfe1149619386b29ea1070cca9d66efd7",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative/attempt_001/events.jsonl",
+      "7d30f651aa7b90bdb2fb406ed3e1ed8039eecd2e2562d8661df7be2c5d367e30",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative/attempt_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative/attempt_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative/attempt_001/stderr.log",
+      "011c5769c9067172f0297414db826eb6afd144cde395b139a7f8a6010c95bd64",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative_framework/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative_framework/attempt_001/events.jsonl",
+      "d74f95a28a9511bd0a57d6620cfd66cca1f432f33f050e31369e9fb9a957d837",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative_framework/attempt_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative_framework/attempt_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "library_seats_qual_20261121",
+      "qualitative_framework/attempt_001/stderr.log",
+      "3ff35a1cbd1fc1177d637e8eb299c2787fbcda4e9687831e1877f7c82c28d356",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "resale_events_20261122",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "resale_events_20261122",
+      "initial/.lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "resale_events_20261122",
+      "initial/batch_001/events.jsonl",
+      "44c66ef853e2124a5b81c0628361d8797b75305513658a18525842f8780f7fd2",
+      "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "resale_events_20261122",
+      "initial/batch_001/login_diagnostics.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "resale_events_20261122",
+      "initial/batch_001/login_status.json",
+      "eba83eecd0e7e08999974d21a3c3afcad86f47df8fb0c8d9d87397c7c7ef832b",
+      "authentication diagnostic, unsupported format or size"
+    ],
+    [
+      "resale_events_20261122",
+      "initial/batch_001/stderr.log",
+      "849b8b3631db4dd962cc3c794e90d06380d3fd874a8f85f1574934cc32a34eb6",
+      "raw logs or sensitive patterns; use local original"
+    ]
+  ]
+}

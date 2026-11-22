@@ -1,0 +1,26 @@
+{
+  "answer": [
+    {
+      "index": 0,
+      "origin": "binding",
+      "severity": "local",
+      "reason": "变更涉及哈希比较和版本追踪的存放位置，以及各制品的标识和哈希计算口径，研究结论不受影响。"
+    },
+    {
+      "index": 1,
+      "origin": "binding",
+      "severity": "fatal",
+      "reason": "本阶段的绑定验收依赖可复算的证据，以确认当前哈希对应的采集制品及其与本轮回执的关系。旧哈希的版本与替换记录也依赖先核实制品身份。"
+    }
+  ],
+  "thread_id": "01a202c9-3062-7ad3-a3ae-1743edee359d",
+  "usage": {
+    "input_tokens": 19176,
+    "cached_input_tokens": 14208,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 157,
+    "reasoning_output_tokens": 0
+  },
+  "response_sha256": "dc339296129adec5b323042c3f015f2f15ad58b000465c1dc8f0704eda8bf113",
+  "model": "subscription_default"
+}

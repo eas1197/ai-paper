@@ -1,0 +1,24 @@
+{
+  "phenomenon": "不同地点同样出现现场停车与平台判定不一致，后续有人现场解决，有人报告持续计费。",
+  "search_focus": "共享单车停车生活事件",
+  "sources": [
+    {
+      "url": "https://xinwen.bjd.com.cn/content/s62373e26e4b0518681d88cc2.html",
+      "kind": "北京朝阳地铁站 记者现场观察",
+      "supports": "车进入可见停车线仍无法落锁",
+      "limits": "核对出现什么，不判定是定位误差"
+    },
+    {
+      "url": "https://news.ifeng.com/c/8pmSvtHXjCy",
+      "kind": "武汉地铁口 记者所见",
+      "supports": "骑行者按手机提示多推一段后落锁",
+      "limits": "现场调整和成功先后发生，无法排除重试恢复"
+    },
+    {
+      "url": "https://weibo.com/2/detail/5341980739764631",
+      "kind": "郑州媒体转载 消费者回忆",
+      "supports": "骑行者称按求助提示离开，后来订单仍计费",
+      "limits": "解释用户怎样理解关单承诺，不作为平台后台记录"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "events": [
+    {
+      "identity": "北京和平里 2023",
+      "retained_facts": [
+        {
+          "source_id": "B",
+          "statement": "记者所见老人先到，午间外带窗口以附近上班者居多",
+          "status": "corroborated",
+          "use": "区分时段和窗口",
+          "key": true
+        }
+      ],
+      "uncertain_facts": [],
+      "critical_gaps": []
+    },
+    {
+      "identity": "杭州灵隐 2023",
+      "retained_facts": [
+        {
+          "source_id": "H",
+          "statement": "报道记录经营方以家常菜吸引更广客群",
+          "status": "corroborated",
+          "use": "区分主动招徕与被动流入",
+          "key": true
+        }
+      ],
+      "uncertain_facts": [],
+      "critical_gaps": []
+    },
+    {
+      "identity": "大连走访 2024",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "D",
+          "statement": "部分市民反映高峰时年轻顾客多、等待问题",
+          "status": "single_account",
+          "use": "感知挤占，实际群体等待与退出待核",
+          "key": true
+        }
+      ],
+      "critical_gaps": [
+        "部分市民反映高峰时年轻顾客多、等待问题"
+      ]
+    }
+  ],
+  "event_count": 3,
+  "sensitivity": "排除大连的单方感受，仍有到店时间和经营策略差异，不能确认老年人实际被挤出或青年客流改善净收支。知乎作为观点不计事件。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "community_meals_20261122",
+  "input_sha256": "e48e9a5784a678f387331ed057db6bd5ab718eb297deba727dd80722acf9507b",
+  "exchange_sha256": null,
+  "reality_sha256": "2f5a66bdf6b7e9358239e2de1b871e1a11573d8aee3b158364710f165e23f1f5",
+  "formal_eligible": false
+}

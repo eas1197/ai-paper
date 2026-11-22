@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Street-Level Bureaucracy: Dilemmas of the Individual in Public Services",
+    "url": "https://www.russellsage.org/publications/book/street-level-bureaucracy",
+    "claim": "Lipsky 认为，直接面对公众的一线人员在工作量大、资源有限、目标含混且有裁量权时，会通过个案判断和日常做法塑造实际政策。适用于社区食堂一线能够决定例外放行、临时优先或短缺分配的情形。",
+    "event_id": "exec-c05677a1-4ac8-4b60-9f97-78491be686a5"
+  },
+  {
+    "title": "Administrative Burdens in the Social Safety Net",
+    "url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.20231394",
+    "claim": "Herd 与 Moynihan 的综述把行政负担落实为学习、合规和心理成本，借此解释正式资格与实际领取之间的落差。适用于需要了解补贴、证明身份、预约或反复办理的助餐环节。等待若源于出餐能力，需另查供给和排队证据。",
+    "event_id": "exec-c05677a1-4ac8-4b60-9f97-78491be686a5"
+  },
+  {
+    "title": "Why Do Policymakers Support Administrative Burdens? The Roles of Deservingness, Political Ideology, and Personal Experience",
+    "url": "https://academic.oup.com/jpart/article/31/1/184/5908124",
+    "claim": "该研究将对服务对象是否应得的判断与政策制定者对办理负担的支持联系起来。用到食堂时，须观察设计或执行者是否依据对特定群体的应得性判断设置证明、复核或优先条件。",
+    "event_id": "exec-c05677a1-4ac8-4b60-9f97-78491be686a5"
+  }
+]

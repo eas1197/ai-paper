@@ -1,0 +1,119 @@
+{
+  "round": 2,
+  "stage": "question",
+  "next_stage": "deepening",
+  "reason": "quality_met",
+  "config_sha256": "8ec641f5d2aefc83188c519372cae7b58645a81bcfe9d77a784b4b988e3579f9",
+  "approved_ids": [
+    "Q0"
+  ],
+  "bundle": {
+    "evidence": [
+      {
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+        "evidence_id": "E1",
+        "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+        "kind": "abstract",
+        "source_id": "RK1",
+        "locator": {
+          "section": "官网摘要短摘"
+        },
+        "paper_id": "RK1",
+        "document_id": "DOC1",
+        "excerpt": "受教育程度更高的老年人能够更多地受益于互联网使用。"
+      },
+      {
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+        "evidence_id": "E2",
+        "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+        "kind": "abstract",
+        "source_id": "RK2",
+        "locator": {
+          "section": "官网摘要短摘"
+        },
+        "paper_id": "RK2",
+        "document_id": "DOC2",
+        "excerpt": "中老年上网者互联网使用时长适中,内部异质性强"
+      }
+    ],
+    "schema_version": 1,
+    "opportunities": [
+      {
+        "observation": "一项CLASS研究报告较高教育组的互联网使用收益更大，教育差异出现在哪类使用中尚待追问。",
+        "opportunity_id": "O1",
+        "social_process": "学校教育资源和老年互联网使用回报",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "observation": "调查报告中老年上网者在使用时长方面存在内部异质性，教育是否与上网者群体内的强度相关仍待查证。",
+        "opportunity_id": "O2",
+        "social_process": "老年上网人群内部的使用分化",
+        "evidence_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "critiques": [],
+    "evolution": [],
+    "questions": [
+      {
+        "concepts": [
+          "教育分层",
+          "使用时长",
+          "数字接入"
+        ],
+        "opportunity_id": "O2",
+        "text": "在已使用互联网的60岁及以上人群中，不同受教育程度者的上网时长分布是否不同？",
+        "comparison": "小学及以下与初中及以上，比较时长分布",
+        "population": "60岁及以上且已上网者",
+        "question_id": "Q0",
+        "answer_value": "有差异支持教育分层延续到接入之后；没有差异时，优先区分接入差异与接入后的使用类型差异。",
+        "scope": "中国横截面调查，调查年份与问项待核实"
+      }
+    ],
+    "explanations": []
+  },
+  "review": {
+    "stage": "question",
+    "verdict": "PASS",
+    "model": "gpt-6.2-sol",
+    "invocation_id": "614682e8-3f3b-4288-b7dc-9ec94849918d",
+    "input_sha256": "d97ca2ee35bb6c2e9261e4586731145094b48d6314980581525c7b2ff7e74f9d",
+    "selected_ids": [
+      "Q0"
+    ],
+    "evidence": [
+      {
+        "evidence_id": "E2",
+        "locator": "《人口研究》2024年第1期官网中文摘要，https://rkyj.ruc.edu.cn/CN/Y2024/V48/I1/40",
+        "finding": "原调查以50岁及以上为范围，报告上网者时长的内部异质性。Q0将60岁及以上单独作为目标人群，教育组差异仍是待检验命题。"
+      },
+      {
+        "evidence_id": "E1",
+        "locator": "《人口研究》2023年第6期官网中文摘要，https://rkyj.ruc.edu.cn/CN/Y2023/V47/I6/3",
+        "finding": "CLASS研究报告的教育异质性涉及社会适应收益，不能替代教育组使用时长比较。"
+      }
+    ],
+    "strongest_objection": "现有摘要未验证60岁及以上子样本中的时长分布与教育差异。接入互联网可能具有教育选择性，比较结果的适用范围限于已上网者。数据也可能只测频率或类别，无法直接估计时长分布。",
+    "actual_increment": "问题明确限定60岁及以上已上网者，把研究结果定义为时长分布，给出小学及以下与初中及以上的初拟比较，允许检验有无差异。",
+    "gap": "调查年份、时长及接入定义、分组依据、有效样本与已有研究是否已做同样比较待核实。",
+    "reason": "Q0对象和对照足够明确，可进入深化。两组差异若存在，支持接入后使用强度仍呈教育分层的描述；若未检出，应结合数据精度和实际差异大小，不能沿用零差异推断。",
+    "next_action": "核对可用调查的教育、年龄、接入、时长问项及跳转和有效样本，并对同人群同结局的既有文献做一次定向查证。",
+    "expected_gain": "确认实测变量与问题一致，验证比较组可用并识别已有实证结论的重合程度。",
+    "cost": {
+      "model_calls": 1,
+      "search_calls": 2
+    },
+    "action_worth_cost": true
+  },
+  "usage": {
+    "model_calls": 2,
+    "search_calls": 0
+  },
+  "used": {
+    "model_calls": 4,
+    "search_calls": 1
+  }
+}

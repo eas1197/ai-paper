@@ -1,0 +1,27 @@
+name: Handoff offline verification
+on: [push, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify archived results and run candidate tests
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pip install beautifulsoup4
+          {
+            python .github/scripts/verify_handoff.py &&
+            python -m unittest discover -s '00_项目控制/v009_第9版/tests' &&
+            python -m unittest discover -s '06_数据方法与分析/v005_第5版/tests' &&
+            python -m unittest discover -s '07_三稿独立写作/v015_第15版/tests'
+          } 2>&1 | tee handoff-test.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: handoff-test-log
+          path: handoff-test.log
+          retention-days: 14

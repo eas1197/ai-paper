@@ -1,0 +1,24 @@
+{
+  "phenomenon": "一场县级教育会议按班级低分公开点名教师；媒体后续采访中有教师反映类似以分数排序、集体问责的经历。值得解释的是问责公开化如何改变教师的教学选择。",
+  "search_focus": "教师绩效问责、考试成绩与教师教学回应，包括应试策略、任务替代与教师自主性",
+  "sources": [
+    {
+      "url": "https://m.thepaper.cn/newsDetail_forward_34236591",
+      "kind": "媒体采访与公开平台反应的二手转述",
+      "supports": "单一已报道事件之外，受访教师描述过分数排序及集体问责",
+      "limits": "受访者与社交平台评论并非概率样本，不能据此推断普遍性或行为后果"
+    },
+    {
+      "url": "https://www.xinhuanet.com/local/20261016/f4a63bdc761241a9bb76ae8212c77d62/c.html",
+      "kind": "新华社报道地方调查通报",
+      "supports": "核实雷波会议、错误做法调查与整改",
+      "limits": "个案和整改承诺不能说明全国普遍性，也不能证明教师行为改变"
+    }
+  ],
+  "alternatives": [
+    {
+      "url": "https://www.thepaper.cn/newsDetail_forward_33995443",
+      "reason": "校服选用参与的媒体线索保留作其他方向，未作为本轮选题"
+    }
+  ]
+}

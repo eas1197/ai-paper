@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "mode": "abstract_only",
+  "engine": "codex_native_v1",
+  "collection_id": "COL_2aff5d5addff94cd62f8afdc",
+  "collection_sha256": "91babcd18c380634fecf5354b0e7d9200af3886fcb4347bbd5fa492cec0294bc",
+  "theme": "当学校统一开放家校沟通渠道时，资源较弱家庭提出的诉求更容易得到实质回应，还是依然因学校认可的表达方式而被过滤？",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界"
+  ],
+  "verified_rows": 2,
+  "excerpt_visible_count": 0,
+  "rows": [
+    {
+      "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+      "authors": [
+        "沈洪成"
+      ],
+      "journal": "社会",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_locator": "原刊网页中文摘要，第34行",
+      "abstract_excerpt": "不同群体的家长参与表现",
+      "abstract_summary": "作者跟踪调查同一城区的两个初中班级，发现学校通过强调家庭资源、家长能力和教育责任来推动家长参与。参与更多发生在家庭内部，家长参与学校公共事务的程度较低。外来务工家长多被动应对，城市普通工薪家长多模仿既有做法，中产家长更常主动形成自己的参与方式。",
+      "relevance": "substantive",
+      "relevance_reason": "研究揭示学校如何设定家长参与的要求，以及不同阶层如何调动既往教育经验来适应这些要求。观察的是家长如何回应学校要求，因果问题仍需追踪统一开放渠道后学校如何处理不同家庭提出的诉求。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_hash": "adcf0df15f1a80e34f4db53cd2bf655797988af505cf1484e57ea2f421fa7bc9",
+      "excerpt_sha256": "5f8cc23f436483d991be9ba4fd6021f317e9b27649e508973ad74176a6b446f7",
+      "searched_at": "2026-11-21T19:54:06.280996+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "article_id": "A_5aca0bf05e8bbdacef20d69a",
+      "provenance": [
+        {
+          "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+          "authors": [
+            "沈洪成"
+          ],
+          "journal": "社会",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_locator": "原刊网页中文摘要，第34行",
+          "abstract_excerpt": "不同群体的家长参与表现",
+          "abstract_summary": "作者跟踪调查同一城区的两个初中班级，发现学校通过强调家庭资源、家长能力和教育责任来推动家长参与。参与更多发生在家庭内部，家长参与学校公共事务的程度较低。外来务工家长多被动应对，城市普通工薪家长多模仿既有做法，中产家长更常主动形成自己的参与方式。",
+          "relevance": "substantive",
+          "relevance_reason": "研究揭示学校如何设定家长参与的要求，以及不同阶层如何调动既往教育经验来适应这些要求。观察的是家长如何回应学校要求，因果问题仍需追踪统一开放渠道后学校如何处理不同家庭提出的诉求。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_hash": "adcf0df15f1a80e34f4db53cd2bf655797988af505cf1484e57ea2f421fa7bc9",
+          "excerpt_sha256": "5f8cc23f436483d991be9ba4fd6021f317e9b27649e508973ad74176a6b446f7",
+          "searched_at": "2026-11-21T19:54:06.280996+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+          "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466"
+        }
+      ],
+      "evidence_id": "E_a2cfbaed1e1056910fcdafd4",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "1990-2000年中国的经济转型、学校扩招和教育不平等",
+      "authors": [
+        "吴晓刚"
+      ],
+      "journal": "社会",
+      "year": "2009",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_locator": "原刊网页中文摘要，第36行",
+      "abstract_excerpt": "高中教育升学机会的城乡差距却在扩大",
+      "abstract_summary": "研究用1990年和2000年人口普查样本匹配学龄子女与父母信息，比较十年间家庭背景与入学、升学机会的关系。义务教育普及期间，农村户籍子女的初中机会相对改善，但高中升学的城乡差距扩大。控制地区经济发展水平后，父亲社会经济地位与高中升学的关联仍呈增强趋势。",
+      "relevance": "substantive",
+      "relevance_reason": "研究区分初中机会扩展与高中升学关口，说明制度扩大覆盖后，户籍与家庭社会经济地位仍可在后续选拔阶段影响机会分配。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_hash": "feddeed0dbc807b2885f40f385bdabc1ab8e70f3ff11b1cc80a38b6038c2cead",
+      "excerpt_sha256": "711ce2c991e963f67a805c9bfd16fd78b792bfc30e4962cc0ce522f6f02825ff",
+      "searched_at": "2026-11-21T19:54:06.280996+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "article_id": "A_e08a5214b86a204f5a540d8e",
+      "provenance": [
+        {
+          "title": "1990-2000年中国的经济转型、学校扩招和教育不平等",
+          "authors": [
+            "吴晓刚"
+          ],
+          "journal": "社会",
+          "year": "2009",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_locator": "原刊网页中文摘要，第36行",
+          "abstract_excerpt": "高中教育升学机会的城乡差距却在扩大",
+          "abstract_summary": "研究用1990年和2000年人口普查样本匹配学龄子女与父母信息，比较十年间家庭背景与入学、升学机会的关系。义务教育普及期间，农村户籍子女的初中机会相对改善，但高中升学的城乡差距扩大。控制地区经济发展水平后，父亲社会经济地位与高中升学的关联仍呈增强趋势。",
+          "relevance": "substantive",
+          "relevance_reason": "研究区分初中机会扩展与高中升学关口，说明制度扩大覆盖后，户籍与家庭社会经济地位仍可在后续选拔阶段影响机会分配。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_hash": "feddeed0dbc807b2885f40f385bdabc1ab8e70f3ff11b1cc80a38b6038c2cead",
+          "excerpt_sha256": "711ce2c991e963f67a805c9bfd16fd78b792bfc30e4962cc0ce522f6f02825ff",
+          "searched_at": "2026-11-21T19:54:06.280996+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+          "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466"
+        }
+      ],
+      "evidence_id": "E_b2088e88c71849df612a253d",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    }
+  ],
+  "conflicts": [],
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+}

@@ -1,0 +1,33 @@
+{
+  "parent_receipt_sha256": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a",
+  "items": [
+    {
+      "index": 1,
+      "origin": "source",
+      "reason": "改写 D2 的前提是更正原始材料的可追溯状态，并分别标明报道中记者落锁和市民停车的出处。",
+      "instruction": "改写 D2 的 needed_material，明确 626a689967415c40 原始来源未定位，等待后落锁仅为待核线索。以 a8d0ded030678bb7 分别定位记者推行20余米后落锁和另一位市民推行10余米后停车两个事件。保留首次标线及其适用性、等待期间操作和订单确认的缺项。[武汉报道第49、54行](https://www.sohu.com/a/974401971_121284943)",
+      "handler": "source",
+      "status": "resource_limit",
+      "remaining_collection_batches": 0
+    },
+    {
+      "index": 2,
+      "origin": "event",
+      "reason": "更新 D1 引用的前提是为金鱼胡同建立独立事件记录，并将证据关联到该事件。",
+      "instruction": "为金鱼胡同建立独立事件记录和可追溯的证据条目，更新 D1 引用。用第10至27行定位框内车辆照片、哈啰停车点截图、同次还车显示距停车点20米以及发起申诉。保留核心候选身份，明确标线适用性、申诉后的锁态、关单和费用结果的核验状态。[北京交通广播第10至27行](https://www.sohu.com/a/539971892_100081921)",
+      "handler": "event",
+      "status": "resource_limit",
+      "remaining_collection_batches": 0
+    },
+    {
+      "index": 3,
+      "origin": "source",
+      "reason": "更正回执中的商场名称和 PDF 原文定位后，再同步更新 D1、D3、D4 的引用。",
+      "instruction": "将金台路回执中的‘惠民商场’改为‘万惠商场’，并同步修正 D1、D3、D4 引用同一 PDF 时的定位，统一指向第4版第17至40行。保留首次尝试处标线用途、报障与最终落锁的精确先后和实际结算为未知。[人民日报海外版第4版](https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf)",
+      "handler": "source",
+      "status": "resource_limit",
+      "remaining_collection_batches": 0
+    }
+  ],
+  "framework_sha256": "0921a92583934350234f3d3244c6ec4897466875591231c0b8377fdd40d916e1"
+}

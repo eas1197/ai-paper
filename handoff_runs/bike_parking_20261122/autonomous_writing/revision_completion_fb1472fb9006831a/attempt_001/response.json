@@ -1,0 +1,17 @@
+[
+  {
+    "index": 0,
+    "completed": false,
+    "evidence": "D1.unresolved 中的版本绑定问题被移至 D1.boundary。所供矩阵元数据缺少指定旧哈希对应的制品路径与计算方法，也无法核实原 collection_sha256 21df4638… 对应的采集制品与本轮回执的绑定关系。"
+  },
+  {
+    "index": 1,
+    "completed": true,
+    "evidence": "D2.evidence 中武汉记者材料 d930c9f8e01020d8 和市民材料 bd56212f3f6aa551 的 relation 均由 support 改为 context。D2.unresolved 保留市民实际锁态及两次应用关单未知，D2.conclusion 保留提示能否减少试探性移车和重试待检验。"
+  },
+  {
+    "index": 2,
+    "completed": true,
+    "evidence": "D3.evidence 将同一金台路事件的材料 3a88dc2f62f73de6 更新为 370c56bc7c58aaa3，补记小程序和热线求助因人工客服繁忙未果、随后拍照报障及当天稍晚显示可享免单。D3.unresolved 保留报障与最终落锁的精确先后、应用关单确认及实际结算待核。"
+  }
+]

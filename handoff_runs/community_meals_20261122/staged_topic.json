@@ -1,0 +1,18 @@
+{
+  "run_id": "community_meals_20261122",
+  "mode": "dev",
+  "theme": "社区食堂",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "initial",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "issue_search": true,
+  "reality_sha256": "2f5a66bdf6b7e9358239e2de1b871e1a11573d8aee3b158364710f165e23f1f5",
+  "event_comparison_sha256": "fc8135560ad5216f0eeff8b03a8aaaf65266b5730d4fc76bd8b62881b8ef2fea",
+  "exchange_sha256": "daf909ac79f29cfe7604ebd2adcb08c05bba1c902e45eaccb72ba34902795045",
+  "issue_plan_sha256": "804c2302909bc7a8fba0c16ea901167b1cf05b87d51a260039f26e42751da819"
+}

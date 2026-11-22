@@ -1,0 +1,21 @@
+{
+  "issue": "服务组织中的数字控制、用户的补救劳动及决策权",
+  "why": "用户的走动、重试、求助与平台控制的关单、撤费权相遇，是结构与行动关系，而非停车规则罗列。",
+  "object_search": "共享单车电子围栏、定位还车、数字出行服务",
+  "issue_search": "算法控制与行动策略，服务系统故障后的补救劳动与权限，保留劳动场域作为机制对照而不套用雇佣关系",
+  "theory_search": "Star 与 Strauss 的隐形劳动，组织调节与技术中介控制；解释什么劳动被计入，何种推论仅是类比",
+  "specialist_journals": [
+    {
+      "name": "Administrative Science Quarterly",
+      "publisher_url": "https://journals.sagepub.com/home/asq",
+      "standing": "Cornell Johnson 的组织研究期刊，由 SAGE 出版",
+      "fit": "组织和平台规则如何塑造行动者选择"
+    },
+    {
+      "name": "Organization Science",
+      "publisher_url": "https://pubsonline.informs.org/journal/orsc",
+      "standing": "INFORMS 的组织科学研究期刊",
+      "fit": "技术控制、服务组织和行动者抵抗"
+    }
+  ]
+}

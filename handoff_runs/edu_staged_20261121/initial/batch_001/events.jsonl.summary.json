@@ -1,0 +1,32 @@
+[
+  {
+    "type": "web_search",
+    "event_id": "exec-d3ee7f02-ec7c-44f1-b697-bfa5f1116e2c",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-a825fc5d-fc4b-4e63-aad6-52e6febe1813",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-242b5ac4-970e-45f0-911d-666d8e8ed6e7",
+    "action_type": "other"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-bfdfd328-7c1d-46f7-b988-810330f4ed69",
+    "action_type": "other"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 197392,
+      "cached_input_tokens": 148864,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3968,
+      "reasoning_output_tokens": 177
+    }
+  }
+]

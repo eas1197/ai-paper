@@ -1,0 +1,35 @@
+{
+  "stage": "question",
+  "verdict": "PASS",
+  "model": "gpt-6.2-sol",
+  "invocation_id": "c6b55c71-94b3-41a1-bb5a-0a9ce458e343",
+  "reviewer_dispatch_id": "01a1fde7-3c97-7953-b515-d5b32ee73070",
+  "dispatch_scope": "same independent reviewer dispatch; invocation_id identifies the individual stage decision, not a separate model call",
+  "input_sha256": "a9cad96f001dbb15e4c360ea7caaef96827065f2d03d1cba151652e4cd3fe5dd",
+  "selected_ids": [
+    "Q0"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "locator": "社科文献出版社摘要；原条目同出版社镜像 https://cpms.ssap.com.cn/skwx_cmr/initDatabaseDetail?contentId=6727298&contentType=literature&siteId=23",
+      "finding": "作者报告控制家长主动沟通与学校固定效应等变量后的教师沟通频率差异。联系次数没有直接表明诉求得到处理。"
+    },
+    {
+      "evidence_id": "E2",
+      "locator": "《社会学评论》2026年第2期摘要 https://src.ruc.edu.cn/CN/Y2026/V14/I2",
+      "finding": "作者报告制度化家校合作与较小的校际参与差距同现，家庭社会经济地位仍与参与有关。校际差距与家庭阶层差距属于不同层次，参与也不等于实质回应。"
+    }
+  ],
+  "strongest_objection": "提问预设资源优势已转化为回应优势，而目前只看到联系频率与参与差异。积极回应也可能出于学生需要，不一定是资源带来的待遇。",
+  "actual_increment": "Q0明确问及学校回应的形成，区分家庭动用资源和学校在互动中分配注意力与处理机会，具有独立学术价值。",
+  "gap": "中国学校是初步经验范围。何种诉求、何种学校规则和何种回应有待划定，学校如何处置及可用数据均待核。",
+  "reason": "可作为初始学术问题进入解释与反诘。后续须允许没有资源梯度，并明确比较单位和使差异发生的条件。",
+  "next_action": "定向核查家校互动的资本动用研究与学校参与制度研究，提出可以分辨的解释。",
+  "expected_gain": "判断差异产生在哪一环节，以及学校规则能否改变这种差异。",
+  "cost": {
+    "model_calls": 1,
+    "search_calls": 2
+  },
+  "action_worth_cost": true
+}

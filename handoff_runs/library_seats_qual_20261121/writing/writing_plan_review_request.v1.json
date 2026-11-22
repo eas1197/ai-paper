@@ -1,0 +1,20 @@
+{
+  "run_id": "library_seats_qual_20261121",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "method": "online_qualitative",
+  "requested_deliverable": "plan",
+  "status": "plan_prepared",
+  "input_sha256": "c5bf221165bc3170d7e73724bf11e21179167d0480e5e5946dfceae59703185b",
+  "plan_sha256": "4780de21fca3cda30030bea59bcf256afdbbcea2b4d7fa8ebd6eb17099d99bed",
+  "topic_sha256": null,
+  "analysis_matrix_sha256": "5ff48548b47958cf23079fb16354afd60bdaa9ff9ebe83a8e6478f3b97c3df1a",
+  "review_criteria": [
+    "各章和各节承担可执行的论证任务，材料定位可回查。",
+    "证据范围与计划提出的主张相符，跨章节衔接最终回答核心问题。",
+    "定性维度由理论推演，逐章结合经验材料和理论解释，结论整合各维度并回应既有理论。",
+    "定量方案遵循本项目的正式设计及结果口径，写作方案的结构检查不构成正式稿件验收。"
+  ],
+  "review_status": "pending",
+  "full_draft_entry": "not_requested"
+}

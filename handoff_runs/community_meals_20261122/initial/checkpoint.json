@@ -1,0 +1,163 @@
+{
+  "config_sha256": "e447a5af054d9d2fc1bd5e72a0a07a2eb8ea82049c0451ab10f2412663881761",
+  "collection_id": "COL_ec3d5599f628af356a6d111b",
+  "engine": "codex_native_v1",
+  "config": {
+    "theme": "社区食堂",
+    "target": 5,
+    "topic_search_phase": "initial",
+    "journals": [
+      "中国社会科学",
+      "社会学研究",
+      "社会",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界",
+      "American Sociological Review",
+      "American Journal of Sociology",
+      "Social Problems",
+      "Social Forces"
+    ],
+    "max_batches": 1,
+    "timeout_seconds": 480,
+    "excluded_titles": [],
+    "search_guidance": {
+      "issue": "福利资格的实施边界；组织使命与市场资源；公共服务实际可及性",
+      "why": "相同的开放规则可能产生不同的等待与可得性，问题超越老年助餐本身，涉及服务资格如何转化为实际使用。",
+      "object_search": "社区助餐、老年食堂、社区餐饮及社会组织运营的最近研究",
+      "issue_search": "优先找福利服务中非正式配给、行政负担、服务提供者组织使命与不同群体实际可及性；也找教育、医疗或社会救助中的负例，说明与等候、服务进入、目标群体机制对应",
+      "theory_search": "福利应得性、行政负担、街头官僚裁量；经典原著和理论单列",
+      "specialist_journals": [
+        {
+          "name": "Social Problems",
+          "publisher_url": "https://academic.oup.com/socpro/",
+          "standing": "Society for the Study of Social Problems 官方期刊",
+          "fit": "基层组织和制度实践如何影响弱势群体实际获得服务"
+        },
+        {
+          "name": "Social Forces",
+          "publisher_url": "https://academic.oup.com/sf/pages/About",
+          "standing": "UNC 社会学系与 OUP 合作的国际老牌社会学期刊，出版社列明学科引文指标",
+          "fit": "公共服务和福利资格如何经组织实施形成群体差异"
+        }
+      ]
+    },
+    "run_mode": "dev",
+    "search_action_budget": 24,
+    "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+  },
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-22T12:19:59.178803+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-22T12:21:46.618179+08:00",
+      "event_sha256": "ee7bfcb849a9cad35ad8288b3ddf5e97ae4c8b6b0cbac761cda2e7eccbffe684",
+      "response_sha256": "4cd8944266c9f401f2c454db664d264af39b1076060f4b865463c28b5b99b2ea",
+      "notes": [
+        "本轮核实纳入3篇，距目标差5篇。按用户消息逐项列出的11种期刊执行，排重名单为空，按初查处理。按每条查询或每个打开页面各计一次，网页工具使用24个动作。网页核验只查看工具返回的题录和摘要，未下载全文。技能文件读取受本地执行策略阻止，检索按本轮给定约束执行。",
+        "议题层先查 welfare access、administrative burdens、gatekeeping、shelter、food pantry、take-up、stigma，以及低保、福利资格、裁量和政府购买服务。英文改查期刊全名后，命中住房券排序和私人救助污名，随后回查 SAGE 卷期及论文页。中文顺着低保监管和服务外包改用题名检索，核实了两篇《社会学研究》的组织实施研究。住房券条目最贴近名额排序，两篇中文条目分别解释资源调度和专业使命受到的约束。",
+        "对象层用社区食堂、老年助餐、社区餐饮和组织运营，结合《社会学研究》《管理世界》《探索与争鸣》《中国社会科学》检索。命中的两类社区食堂比较、老年助餐运营比较及社区互助养老研究均刊于指定范围之外。本轮未核实指定刊表内直接观察社区食堂等候和餐份分配的论文，也未逐刊扫目录。",
+        "理论层查询 Lipsky、street-level bureaucracy、Moynihan、Herd、Harvey、administrative burden，以及 van Oorschot 和 deservingness。取得街头官僚经典的出版方书页、行政负担综述和福利应得性实证解释。福利应得性的经典原文仍待补核。",
+        "THEORY|Street-Level Bureaucracy: Dilemmas of the Individual in Public Services|https://www.russellsage.org/publications/book/street-level-bureaucracy|Lipsky 认为，直接面对公众的一线人员在工作量大、资源有限、目标含混且有裁量权时，会通过个案判断和日常做法塑造实际政策。适用于社区食堂一线能够决定例外放行、临时优先或短缺分配的情形。",
+        "THEORY|Administrative Burdens in the Social Safety Net|https://www.aeaweb.org/articles?id=10.1257%2Fjep.20231394|Herd 与 Moynihan 的综述把行政负担落实为学习、合规和心理成本，借此解释正式资格与实际领取之间的落差。适用于需要了解补贴、证明身份、预约或反复办理的助餐环节。等待若源于出餐能力，需另查供给和排队证据。",
+        "THEORY|Why Do Policymakers Support Administrative Burdens? The Roles of Deservingness, Political Ideology, and Personal Experience|https://academic.oup.com/jpart/article/31/1/184/5908124|该研究将对服务对象是否应得的判断与政策制定者对办理负担的支持联系起来。用到食堂时，须观察设计或执行者是否依据对特定群体的应得性判断设置证明、复核或优先条件。"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "title": "“低治理权”与基层购买公共服务困境研究",
+      "authors": [
+        "陈家建",
+        "赵阳"
+      ],
+      "journal": "社会学研究",
+      "year": "2019",
+      "doi": null,
+      "metadata_url": "https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2019-01-24/Issue/3ze1lhmt.pdf",
+      "abstract_url": "https://www.sohu.com/a/295780021_652526",
+      "abstract_locator": "《社会学研究》杂志发布的网页中，作者署名下方的“摘要”段",
+      "abstract_excerpt": "两种治理逻辑的张力是购买公共服务产生困境的根本原因",
+      "abstract_summary": "作者以社会组织承接社区公共服务为例，指出基层社区在治理权限有限、上级任务较多时，会拼凑资源应对。承接机构按专业分工运行，两种做法在项目落地时发生冲突。本文检索推论是，同样的委托服务安排可因社区对资源的调度方式而产生不同的运行结果。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“财政出资并委托专业机构，为什么服务仍不稳定”的反诘。迁移条件是食堂由外部机构承接，社区承担场地、人员或服务衔接，并需要用同一批资源应对多项任务。该机制解释组织协调和供给变化，对老年用户的排序、等待和营收压力缺少直接证据。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.sohu.com/a/295780021_652526",
+      "abstract_hash": "2c457260218f0d6f2067eb1ffe68c6deb40684593fe7c271325fc8fe455f80d9",
+      "excerpt_sha256": "12d10d3d145c9c80929ad29744c1907d8477fd600aaf2218ec69f6d56c2f2da8",
+      "searched_at": "2026-11-22T12:21:46.617674+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-753ccf94-00a4-43a8-bd92-804170539338",
+      "abstract_event_id": "exec-81dc8c91-e3b9-429d-9caf-d6ec61438dc8"
+    },
+    {
+      "title": "嵌入中的专业社会工作与街区权力关系——对一个政府购买服务项目的个案分析",
+      "authors": [
+        "朱健刚",
+        "陈安娜"
+      ],
+      "journal": "社会学研究",
+      "year": "2013",
+      "doi": null,
+      "metadata_url": "https://www.oalib.com/research/5189392",
+      "abstract_url": "https://www.oalib.com/research/5189392",
+      "abstract_locator": "Open Access Library 题录下方的 Abstract",
+      "abstract_excerpt": "外部服务行政化、内部治理官僚化和专业建制化",
+      "abstract_summary": "作者考察一个政府购买服务项目，发现专业社工进入街区权力网络后，服务和内部治理逐步吸收行政运行方式，专业社工对社区治理的影响随之减弱。本文检索推论是，承接机构即使承诺优先服务困难老人，实际执行这项使命的能力也取决于它能否参与街区的资源配置。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“承接机构有公益使命，为什么目标群体仍可能难以得到服务”的反诘。迁移条件是街道或社区能够控制食堂的合同考核、场地或其他关键资源，且运营方有可观察的专业目标。该研究解释专业使命受街区权力约束的路径，对市场客源、成本回收和等候差异缺少直接检验。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.oalib.com/research/5189392",
+      "abstract_hash": "12d059b2e33129d8d1d0635cad2482353c0499edbe9f03976a1faba8e6e2dd83",
+      "excerpt_sha256": "37ce57f9fdffa476a248972a461e0c8c988a61c1a5aff707281c631497202405",
+      "searched_at": "2026-11-22T12:21:46.618179+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-81dc8c91-e3b9-429d-9caf-d6ec61438dc8",
+      "abstract_event_id": "exec-81dc8c91-e3b9-429d-9caf-d6ec61438dc8"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "Hierarchies in the Decentralized Welfare State: Prioritization in the Housing Choice Voucher Program",
+      "reason": "abstract_not_verified",
+      "batch": "batch_001"
+    },
+    {
+      "title": "Ready to Rent: Administrative Decisions and Poverty Governance in the Housing Choice Voucher Program",
+      "reason": "SAGE 卷期页核实了题名与作者 Brian J. McCabe，摘要预览只显示开头，未核实其主要发现。https://journals.sagepub.com/toc/asra/88/1",
+      "batch": "batch_001"
+    },
+    {
+      "title": "Getting out and giving back: repertoires of destigmatization in the private social safety net",
+      "reason": "搜索结果显示私人救助体系中的污名应对机制，打开 DOI 时重定向到工具无法访问的页面，未完成题录与摘要的逐篇核验。https://doi.org/10.1093/sf/soae106",
+      "batch": "batch_001"
+    },
+    {
+      "title": "从“自保式执行”到有效治理——地方自主性实践的制度路径转换",
+      "reason": "高校转载核实了原刊、年份与卷期，网页可见输出中的作者字段与正文署名有差异，且打开结果未呈现可定位的完整摘要。https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+      "batch": "batch_001"
+    },
+    {
+      "title": "Chronic, Disruptive, or Resistant? Target Ecologies and the Medicalization of Homelessness in California",
+      "reason": "出版页的搜索结果显示了政策如何界定不同类型的服务对象，尚未完成作者和摘要的打开核验。该机制主要针对政策分类，距离实际候补与服务进入还有一层。https://academic.oup.com/socpro/article-abstract/72/4/1339/7641531",
+      "batch": "batch_001"
+    },
+    {
+      "title": "社区公共服务供给模式研究——以两类社区食堂为例",
+      "reason": "同一街道内两类社区食堂的比较直接切题，原刊《秘书》在指定刊表之外。https://www.mishu.shu.edu.cn/CN/Y2025/V43/I1/48",
+      "batch": "batch_001"
+    },
+    {
+      "title": "我国老年助餐服务可持续运营模式研究",
+      "reason": "题录与摘要可见，比较了不同主体主导的助餐模式，原刊《当代经济管理》在指定刊表之外。https://opaj.napstic.cn/periodicalArticle/0120250600082271",
+      "batch": "batch_001"
+    }
+  ]
+}

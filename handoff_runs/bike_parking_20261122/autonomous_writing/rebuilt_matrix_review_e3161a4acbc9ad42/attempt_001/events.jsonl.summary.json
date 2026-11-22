@@ -1,0 +1,22 @@
+[
+  {
+    "type": "web_search",
+    "event_id": "exec-0e6a1672-dc04-4b2b-8317-ee91cbff15d9",
+    "action_type": "open_page"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-744c2980-bd5c-4e31-b55b-05b5a27e1451",
+    "action_type": "other"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 117083,
+      "cached_input_tokens": 86400,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1126,
+      "reasoning_output_tokens": 23
+    }
+  }
+]

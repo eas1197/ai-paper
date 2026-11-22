@@ -1,0 +1,1184 @@
+{
+  "instruction": "Independently review this paragraph-level plan against the actual design and evidence. Check logical progression, source traceability and inference limits. Return JSON only: decision (pass/conditional_pass/revise/stop), reason and concrete changes if needed.",
+  "inputs": {
+    "question_binding": {
+      "question_id": "RQ-990e6aca1d8cc135b230d308",
+      "semantic_version": "27d8f77bc657d7e62bf0e3ea962692e9dbcabc4c4ea1299afe089807f2aa6509",
+      "core_question": "共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？",
+      "specific_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+      "method": "secondary_interviews",
+      "freeze_sha256": "8362b0fad9a5c306904a785c3af473da23c508ebbeec68b514ee2c61020370ea",
+      "framework_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+      "receipt_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2"
+    },
+    "framework": {
+      "core_question": "共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？",
+      "core_concept": "还车冲突后的补救工作",
+      "meaning": "指骑行者从首次遇到现场停车线与应用还车判定不一致，到确认订单结束期间，为继续完成还车而额外进行的边界辨认、移车、重试、求助、举证和状态追查。分别记录操作次数、可核实的耗时和等待时长。落锁、订单关闭、费用减免承诺及实际到账分别编码，关单后的费用申诉作为后续过程记录。",
+      "choice": "采用纠错安排如何分配补救工作与订单处置权的过程解释，以单次还车事件为单位。沿用 conversion.core_question 的原文，按冻结设计将核心案例限定为有材料可核对的现场停车线与应用判定冲突。普通框与专用框的适用差异、首次尝试处缺少标线证据以及事后费争用于界定比较边界。",
+      "nearest_study": "在已提供的摘要中，机制上最接近的是 Rahman 与 Valentine（2021）的 How Managers Maintain Control Through Collaborative Repair: Evidence from Platform-Mediated “Gigs”，摘要位于 INFORMS 文章页第168至171行，DOI 为 10.1287/orsc.2021.1428。该研究追踪平台中介项目出现分歧后，参与者如何通过协作修复恢复项目推进，与本研究对冲突后处置过程的关注最接近。",
+      "existing_explanation": "Rahman 与 Valentine 的摘要指出，参与者通过说清不同理解、重新协商预期，使项目得以推进。Rahman（2021）的摘要提供了理解另一条路径的线索，判定标准不透明时，行动者难以预判系统反馈。Star 与 Strauss 的理论摘述提示，补救活动是否被组织看见，取决于组织用哪些记录表征这些活动。李晶晶等（2025）的摘要为停车规则和信用激励可能改变行为提供了同场域参照。",
+      "limitation": "文献对话限于已提供的摘要和理论摘述。已有案例材料仍待独立复核，部分事件缺少适用标线、提示原文、后台判定或应用结单记录。当前未见能够同时核实框内首次被拒、平台当场代为关单且骑行者无需继续操作或申诉的同类对照。现有材料可用于提出和辨析过程命题，结论限于可追踪案例中的行动过程。",
+      "proposed_increment": "在单次共享单车还车事件中，把判定冲突的触发条件与冲突后的处置机制分开考察。追踪应用提示何时让骑行者知道怎样调整，以及现场证据何时能被有处置权限的渠道采纳并转化为可确认的关单结果。由此检验额外工作在哪一步减少、继续由骑行者承担，或随处置路径从移车和重试转为举证和状态追查。",
+      "integration": "先核对现场标线的类型及其适用范围、车辆位置与应用拒绝提示，再按时间重建等待、移车、重试、求助、举证、复核、落锁和应用确认。每项记录标注行动主体、可证实的处置权限、来源类型和证据位置，缺失记为未知。优先比较同平台、拒绝原因及场地条件相近的事件，检查规则边界、设备问题、等待与重复提交能否解释结果。北京普通框转专用框和武汉记者首次尝试处缺少标线证据的事件作为边界对照。北京金台路材料用于区分换点还车与事后免单显示，其核心案例资格取决于现场标线证据。郑州两条材料按同一订单处理，分别保留骑行者回忆、记者所见和记者后续实测，用于比较离场后追查及事后费用处置。",
+      "dimensions": [
+        {
+          "id": "D1",
+          "name": "冲突识别与比较条件",
+          "deduction": "相同的落锁失败表象可能对应实际适用边界不同、设备问题或判定与现场标线不一致。只有核对触发条件，才能判断两条补救路径是否可比。",
+          "proposition": "作为案例判别条件，只有能够把适用的现场停车线、车辆位置和应用拒绝对应到同一次尝试时，才将该事件纳入核心比较。触发原因仍可记为未知。",
+          "needed_material": "首次尝试位置、现场标线及用途、事发时适用的停车规则、应用界面或提示记录，及能核对的车锁、定位和点位信息。北京金鱼胡同为独立事件，保留核心候选身份。北京交通广播搜狐刊载版第10至27行（材料 508f73328a7abe0e）记载框内关锁失败，第14至16行定位框内车辆照片及图注，第18至20行定位哈啰P点截图及图注，第23行记载同次还车时应用显示距停车点20米及随后发起申诉，第25至27行定位申诉配图及图注。配图目前仅定位到链接及图注，现场标线对该订单的适用性、申诉后的实际锁态、关单及费用结果仍待核。北京金台路万惠商场附近的小程序推荐点位与首次还车被拒见《人民日报海外版》2023年5月11日第4版PDF第17至29行（材料 370c56bc7c58aaa3），首次尝试处地面标线的用途及其对该车的适用性仍待核。",
+          "relationship": "为提示和复核的比较限定条件。北京崇文门普通框与专用框的差异、武汉记者单首次尝试处的标线缺项，分别提供规则边界和证据边界的对照。"
+        },
+        {
+          "id": "D2",
+          "name": "提示与现场调整",
+          "deduction": "提示给出可到达的点位或可执行的调整时，骑行者有明确的下一步。分析每次状态变化前做了什么，才能辨别提示、移车、等待和重试各自可能发挥的作用。",
+          "proposition": "在拒绝原因相近且现场存在可行调整的事件中，具体操作提示预计减少试探性移车和重试。",
+          "needed_material": "核对提示原文及出现时间、首次尝试处的标线及其适用性、可用点位及到达条件、逐次移车和重试、等待期间的位置及操作、物理锁态与应用关单确认。材料 626a689967415c40 的原始来源未定位，等待后落锁仅为待核线索，等待期间有无移车或重试及应用关单确认仍待核。极目新闻搜狐刊载版第49行（材料 d930c9f8e01020d8）记载记者按提示推行20余米后落锁，首次尝试处是否有标线及其适用性仍待核。第54行（材料 bd56212f3f6aa551）记载另一位市民按提示推行10余米后在电子围栏内停车，首次尝试处停车框的适用性及换点后的实际锁态仍待核。两次换点的应用关单确认均待核。",
+          "relationship": "在D1限定的条件下比较现场补救。现场调整仍未解决冲突时，转入D3考察首次求助后的处置路径。"
+        },
+        {
+          "id": "D3",
+          "name": "现场举证与有效复核",
+          "deduction": "求助之后的工作取决于渠道能否接收和沿用现场证据、启动有权处置订单的复核，并把结果传回骑行者。应沿着证据提交、采纳、处置与反馈逐步查证。",
+          "proposition": "现场调整未能解决冲突时，能够采纳现场证据、触发有效复核并确认订单结束的求助渠道，预计减少首次求助后的重复举证和追查。",
+          "needed_material": "首次求助及各次转接或回拨时间、提交与补交的材料、受理和采纳记录、复核主体及其实际操作、订单状态变化和通知。北京金台路万惠商场附近事件见《人民日报海外版》2023年5月11日第4版PDF（材料 370c56bc7c58aaa3）。第31至36行记载记者通过小程序和客服热线求助，因人工客服繁忙未果，随后拍照报障。第37至40行记载当天稍晚，记者看到报障已通过，小程序显示可享免单。报障与最终落锁的精确先后、应用关单确认及实际结算仍未知。郑州同一订单的后续记者实测见大河报署名报道的北青网搜狐转载第40至64行（合并材料 0d133b9d6c7ecaee），用于界定费争处理环节。",
+          "relationship": "承接现场调整未解决的事件，由D4核对复核是否确实伴随关单。现有事后免单和申请减免记录可帮助界定结果，现场举证经复核促成即时关单的路径仍缺同类案例支持。"
+        },
+        {
+          "id": "D4",
+          "name": "订单结束确认与费用后续",
+          "deduction": "停止现场操作、物理落锁、平台关闭订单和骑行者收到结束确认可能发生在不同时间。确认前的等待和追查属于本研究的观察区间，后续费用处置另有时间线。",
+          "proposition": "作为过程检验，若离场提示或物理落锁发生在订单结束确认之前，检查骑行者是否在两者之间继续等待、核对状态或再次求助。以确认时间界定关单补救工作，以账单和流水核对费用结果。",
+          "needed_material": "离场提示、实际锁态及时间、应用或短信通知、订单关闭时间、计费和扣款记录、减免承诺与到账凭证。北京金台路万惠商场附近事件见《人民日报海外版》2023年5月11日第4版PDF（材料 370c56bc7c58aaa3）。第17至29行记载换点后还车，第37至40行记载当天稍晚小程序显示可享免单。应用是否确认关单及确认时间、免单是否兑现及实际结算仍待核。郑州同一订单见大河报署名报道的北青网搜狐转载第10至30行及第40至64行（合并材料 0d133b9d6c7ecaee），分别定位当事人回忆及记者经手材料、记者后续费争复核。离场提示原始界面、实际锁态、后台关单日志及减免到账凭证仍待核。",
+          "relationship": "为D2和D3的行动序列确定观察终点，并核对成功落锁、关单确认和费用处置各自对应的证据，避免把关单后申诉计入结束订单所需的工作。"
+        }
+      ]
+    },
+    "receipt": {
+      "status": "pending_independent_review",
+      "events_sha256": "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+      "response_sha256": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+      "tool_events": 1,
+      "materials": [
+        {
+          "url": "https://www.sohu.com/a/1074901486_255783",
+          "date": "2026-09-11",
+          "subject": "郑州哈啰同一订单的离场回忆、账单与费争复核",
+          "context": "8月11日19时06分开单。当事人回忆，骑行约5分钟到地铁站，未见常用还车入口，求助后依可离开提示离场。据其陈述，23时许收到未完成还车的消息，23时37分收到系统已自动锁车并结束订单的短信。记者记载当事人出示16.5元订单截图，并查看客服交流录屏。当事人当晚及次日上午申诉，次日17时36分漏接外呼，同分钟收到工单关闭短信，4分钟后开始回拨，称共尝试6次。9月6日记者跟进同一争议订单，经历智能问答、重复陈述、转热线和身份复核，第4次拨打后人工调取订单，援引后台骑行数据认可收费异常，承诺申请减免14.5元。",
+          "kind": "reporter_account",
+          "path": "secondary_interviews",
+          "locator": "大河报署名报道的北青网搜狐转载，第10至30行是当事人回忆与记者经手材料，第40至64行是记者操作，第71至79行是记者对外呼流程的说明及采访函结果。合并 b19cc854cb5f961a 与 9cdcbdc904fffcd4。",
+          "relation": "可离开提示据自述结束了现场操作，后来出现查账、重提工单、回拨与核验。人工调单是报道中可定位的实际复核。投诉工单关闭、租赁订单关闭和退款应分别记时。",
+          "limits": "首次停车线、适用围栏、离开提示原始界面与实物锁态未核。当事人此前向平台说已关锁，短信又称系统随后自动锁车，公开文本无法解释两者关系。账单截图由记者记载，扣款流水、后台关闭日志、减免入账凭证均未核。记者在9月测试客服通路，无法补证8月现场。",
+          "access": "转载正文免登录公开可阅。本轮核对正文对截图、录屏和短信的记载。研究再使用许可尚待核实。",
+          "event_id": "exec-5dca5fcb-12ff-401f-b0b3-d874efa9b711",
+          "material_id": "0d133b9d6c7ecaee"
+        },
+        {
+          "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+          "date": "2024-03-29",
+          "subject": "北京同一位置三辆车的还车对照",
+          "context": "3月28日，法治日报记者在朝阳区一处地铁口入栏结算区，将不同品牌的三辆车依次停在同一位置。一辆直接关锁，一辆移车六七次后关锁，第三辆移车六七次仍失败，联系平台客服后关锁。另一处白色框线内，记者按应用提示前往29米外点位仍被拒，随后在原停车区域两侧短距离推行并返回，才成功关锁。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "人民日报客户端刊载的法治日报报道，第64至66行。",
+          "relation": "同一停车位置可出现直接成功、反复移车成功及联系后成功。另一次测试中，导航到下一点仍被拒，对照武汉的短距离有效引导。",
+          "limits": "报道未给出三车对应品牌、围栏覆盖图、锁型、客服操作或订单关闭与费用记录。车辆和平台随测试变化，无法单独识别定位、车锁、边界或客服处理的影响。",
+          "access": "报道正文免登录公开可阅，评论入口提示打开客户端。研究再使用许可尚待核实。",
+          "event_id": "exec-47afa9c9-1ad9-4750-b24b-ae71662f7b62",
+          "material_id": "4569b0463bf43a01"
+        },
+        {
+          "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+          "date": "2024-03-29",
+          "subject": "北京五棵松附近哈啰用户选择付费还车",
+          "context": "受访者说，2月9日在永定路口西侧自行车停车点划线内尝试还车，被应用拒绝。界面提供刷新定位、寻找约32米外点位和支付1元调度费三个选项。其称刷新和找点均未成功，最后付费锁车。报道记订单历时10分57秒、支付2.5元，其中1元为调度费。",
+          "kind": "actor_statement",
+          "path": "secondary_interviews",
+          "locator": "法治日报报道第20至23、36至39行。与同页记者实测是独立事件。",
+          "relation": "付费入口提供了结束订单的途径，此单在使用该入口前已发生刷新和找点。可与金台路先自行完成还车、后来显示免单对照。",
+          "limits": "受访者说法及报道账单数字可定位，原始定位、现场围栏和支付回执未独立核验。总时长与文中耗时回忆的口径难以对齐，额外找点分钟数留空。",
+          "access": "报道正文免登录公开可阅。研究再使用许可尚待核实。",
+          "event_id": "exec-47afa9c9-1ad9-4750-b24b-ae71662f7b62",
+          "material_id": "c9853fa8c37ea7f0"
+        },
+        {
+          "url": "https://www.sohu.com/a/539971892_100081921",
+          "date": "2022-04，日未核",
+          "subject": "北京临河里同品牌同地点出现收费关锁和直接关锁",
+          "context": "北京交通广播记者测试时，临河里站B口广场在哈啰地图上可停，美团地图不认可。记者把美团车推到马路对面，选择接受5元违停管理费后成功锁车。随后在同处另扫一辆美团车并立即归还，未见违停提示便关锁。记者又对被收取的管理费发起申诉，报道记17秒通过，界面结果为无需再支付。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "1039调查团搜狐转载，第41至71行。第23至33行另有受访者自述申诉有时通过、有时失败。第81至90行是企业人员解释。",
+          "relation": "同品牌同地点的不同结果，提示还需比较车辆、判定状态和豁免。快速申诉通过是郑州多轮人工复核的反例。哈啰与美团地图点位差别也提示地面可停或已有同品牌车并不足以确认本单适用边界。",
+          "limits": "两次用车及位置变化均应保留。17秒通过无法说明审核是人工还是自动，亦无扣款或退款流水。企业所述定位漂移及高峰容错无法归因到这两辆车。",
+          "access": "转载正文免登录公开可阅。研究再使用许可尚待核实。",
+          "event_id": "exec-556ffdaf-d633-4166-80fa-e81365391c5a",
+          "material_id": "2af636583a67f015"
+        },
+        {
+          "url": "https://www.sohu.com/a/974401971_121284943",
+          "date": "2026-01-09",
+          "subject": "武汉老关村站记者按提示推行20余米后落锁",
+          "context": "极目新闻记者从老关村站C口扫码，骑行50余米后首次尝试还车，未能落锁。应用提示前方20余米有电子围栏P点，记者随即推车到该点，报道记载其成功落锁还车。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "极目新闻搜狐刊载版第49行。极目新闻原站同题稿对应记者体验段。",
+          "relation": "供D2引用。报道记录了提示、推车和落锁的顺序。首次尝试位置的标线缺项使该事件适合作为D1的证据边界对照。",
+          "limits": "首次尝试处是否有标线、标线用途及对该车的适用性均未知。实测车辆品牌、应用关单确认及费用结果未核。",
+          "access": "搜狐正文公开可阅。极目新闻原站的检索结果返回同段正文。两处刊载对应同一次记者实测。",
+          "issue_index": 1,
+          "supersedes": [
+            "a8d0ded030678bb7"
+          ],
+          "event_id": "exec-ab1e995c-b7b4-4f8b-9954-7b869286e052",
+          "material_id": "d930c9f8e01020d8"
+        },
+        {
+          "url": "https://www.sohu.com/a/974401971_121284943",
+          "date": "2026-01-09",
+          "subject": "武汉老关村站附近市民按提示推行10余米后停车",
+          "context": "极目新闻报道，同一时段另一位市民在附近有停车框的点位尝试还车，未能落锁。根据手机提示推行10余米后，报道记载其在电子围栏内停车。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "极目新闻搜狐刊载版第54行。极目新闻原站同题稿对应市民现场段。",
+          "relation": "供D2引用。可编码的动作是收到提示后推车换点，报道确认的终点是围栏内停车。",
+          "limits": "首次停车框对该车的适用性、提示原文、换点后的实际锁态、应用关单确认及费用结果均未知。",
+          "access": "搜狐正文公开可阅。极目新闻原站的检索结果返回同段正文。两处刊载对应同一次市民停车。",
+          "issue_index": 1,
+          "supersedes": [],
+          "event_id": "exec-ab1e995c-b7b4-4f8b-9954-7b869286e052",
+          "material_id": "bd56212f3f6aa551"
+        },
+        {
+          "url": "https://www.sohu.com/a/539971892_100081921",
+          "date": "2022-04-21（报道日期）",
+          "subject": "北京金鱼胡同哈啰单车框内还车失败后发起申诉",
+          "context": "北京交通广播报道，一位骑行者将哈啰单车停入金鱼胡同的停车框，关锁失败。报道的现场照片图注指认车辆在框内，记者截图图注指认手机端地图将该处标为哈啰P点。正文记载同次还车时应用显示距停车点20米，骑行者随后发起违停申诉。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "北京交通广播搜狐刊载版第10至27行。第12行记框内关锁失败，第14至16行为框内车辆照片及图注，第18至20行为哈啰P点截图及图注，第23行记20米提示和发起申诉，第25至27行为申诉配图及图注。",
+          "relation": "D1引用此独立事件，保留核心候选身份。报道把现场停车框、地图点位、还车拒绝与申诉关联到同一次还车，正式纳入核心比较仍需核对标线对该订单的适用性。",
+          "limits": "标线在事发时对该订单的适用范围、平台实际使用的电子边界、申诉结果、申诉后的物理锁态、关单与费用结果均未知。定位故障属于骑行者推测。20米提示据正文，配图内容的核对限于原链接和图注。",
+          "access": "北京交通广播署名刊载页公开可阅，三幅配图链接可定位。事件发生日未核。",
+          "issue_index": 2,
+          "supersedes": [],
+          "event_id": "exec-ab1e995c-b7b4-4f8b-9954-7b869286e052",
+          "material_id": "508f73328a7abe0e"
+        },
+        {
+          "url": "https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf",
+          "date": "2023-05-11",
+          "subject": "北京金台路万惠商场附近首次还车被拒、换点与报障",
+          "context": "《人民日报海外版》记者记载，5月8日在小程序推荐的金台路万惠商场附近点位尝试还车时，小程序判定车辆位于停车点外，记者无法结束行程并落锁。报道记载记者又骑行十几分钟，辗转多个指定点后完成还车。还车期间，记者尝试通过小程序和客服热线求助，因人工客服繁忙未果，随后拍照报障。当天稍晚，记者看到报障已通过，小程序显示可享免单。",
+          "kind": "documented_action",
+          "path": "secondary_interviews",
+          "locator": "《人民日报海外版》2023年5月11日第4版PDF。第17至29行记首次拒绝与换点后还车，第31至36行记求助未果和随后拍照报障，第37至40行记当天稍晚看到报障通过及可享免单。",
+          "relation": "D3沿用同一次还车事件，补记人工客服繁忙导致求助未果，以及随后拍照报障。D4分别记录报道所述的换点后还车和当天稍晚的免单显示。报障是否促成落锁或关单仍未知。",
+          "limits": "报障与最终落锁的精确先后、应用是否确认关单及确认时间、免单是否兑现及实际结算均未知。首次尝试处地面标线的用途及对该车的适用性仍未知。卫星定位是报道给出的归因。",
+          "access": "已打开并核对公开可阅的报纸原版PDF。",
+          "issue_index": 2,
+          "supersedes": [
+            "3a88dc2f62f73de6"
+          ],
+          "event_id": "exec-ba1e6058-9d58-4499-8b35-f6e9bb454487",
+          "material_id": "370c56bc7c58aaa3"
+        }
+      ],
+      "excluded": [],
+      "notes": [
+        "仅核对独立审查项2，使用1次原生网页操作打开审查指定的报纸原版PDF。补记写入既有金台路事件的替换记录。"
+      ],
+      "gaps": [
+        "审查项2仍缺可核对的报障与最终落锁精确时序、应用关单确认及实际结算记录。"
+      ],
+      "run_id": "bike_parking_20261122",
+      "phase": "framework_collection",
+      "conversion_sha256": "625c53948d2fe940181de75230101c4948574c15233f1cc27e328aedbe98c632",
+      "framework_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+      "parent_attempt": "repair_002",
+      "parent_receipt_sha256": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4",
+      "retired_material_ids": [],
+      "added_material_ids": [],
+      "covered_issue_indices": [
+        2
+      ],
+      "review_key": "fb1472fb9006831a",
+      "revision_kind": "evidence_requirements_only"
+    },
+    "freeze": {
+      "stage": "S08",
+      "question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+      "design": "采用公开深度报道中的记者实测和二手访谈，以单次还车事件重建提示、移动或等待、重试、求助和举证、复核、落锁及应用确认的时序。编码时区分记者直接观察、当事人陈述和第三方解释，保留可定位来源与缺项。按真正的现场标线与判定冲突筛选核心个案，把普通车位与专用车位不一致、首处无标线证据及事后费争作为边界对照。比较同类触发条件下的路径，逐项核对规则边界、设备问题、等待和重试等竞争解释。郑州两条材料按同一订单处理。落锁、关闭订单、费用减免承诺及到账分别编码。分析结论限于可追踪案例中的行动过程。",
+      "research_case": {
+        "core_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+        "context": "研究数字服务的异常处置如何分配操作、举证及订单决定权。以首次出现可见标线与应用判定不一致到订单状态得到确认为观察区间，计费和撤费作为后续结果记录。",
+        "hypotheses_or_propositions": [
+          "在拒绝原因相近且现场存在可行调整的事件中，具体操作提示预计减少试探性移车和重试。",
+          "现场调整未能解决冲突时，能够采纳现场证据、触发有效复核并确认订单结束的求助渠道，预计减少首次求助后的重复举证和追查。"
+        ]
+      },
+      "research_method": {
+        "path": "secondary_interviews",
+        "approach": null,
+        "entry06": "planned",
+        "writing07": "planned",
+        "design05": "理论分析框架、研究命题、案例选择与二手访谈来源"
+      },
+      "evidence_sha256": "ec1592019353e8b330b3111c01c372843da6af5f9ce110e0dd3472911e04e2c1",
+      "review_sha256": "b686f56be8f93b6a32f0baf440461c1953b0c47884e0da9f13c1761d7054e8d4",
+      "mode": "dev",
+      "formal_eligible": false,
+      "scope": "experimental"
+    },
+    "matrix": {
+      "status": "pending_independent_review",
+      "framework_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+      "collection_sha256": "b3d5120c3928af9641e48d8d6dda6745969d0c730fe2a915f030c411470c21e3",
+      "theoretical_increment_status": "proposed",
+      "rows": [
+        {
+          "id": "D1",
+          "name": "冲突识别与比较条件",
+          "deduction": "相同的落锁失败表象可能对应实际适用边界不同、设备问题或判定与现场标线不一致。只有核对触发条件，才能判断两条补救路径是否可比。",
+          "proposition": "作为案例判别条件，只有能够把适用的现场停车线、车辆位置和应用拒绝对应到同一次尝试时，才将该事件纳入核心比较。触发原因仍可记为未知。",
+          "needed_material": "首次尝试位置、现场标线及用途、事发时适用的停车规则、应用界面或提示记录，及能核对的车锁、定位和点位信息。北京金鱼胡同为独立事件，保留核心候选身份。北京交通广播搜狐刊载版第10至27行（材料 508f73328a7abe0e）记载框内关锁失败，第14至16行定位框内车辆照片及图注，第18至20行定位哈啰P点截图及图注，第23行记载同次还车时应用显示距停车点20米及随后发起申诉，第25至27行定位申诉配图及图注。配图目前仅定位到链接及图注，现场标线对该订单的适用性、申诉后的实际锁态、关单及费用结果仍待核。北京金台路万惠商场附近的小程序推荐点位与首次还车被拒见《人民日报海外版》2023年5月11日第4版PDF第17至29行（材料 370c56bc7c58aaa3），首次尝试处地面标线的用途及其对该车的适用性仍待核。",
+          "relationship": "为提示和复核的比较限定条件。北京崇文门普通框与专用框的差异、武汉记者单首次尝试处的标线缺项，分别提供规则边界和证据边界的对照。",
+          "conclusion": "金鱼胡同、北京白色框线实测和五棵松自述均保留为核心候选。正式纳入须把事发时适用的标线、车辆位置与应用拒绝对应到同一次尝试。符合纳入条件后，具体拒绝原因仍可保留为未知。",
+          "boundary": "金鱼胡同与临河里是独立事件。金台路和武汉记者实测用于界定标线证据要求，武汉市民另作一例。崇文门普通框与专用框的差异见框架描述，回执缺少可单独核对的材料。",
+          "unresolved": "三个候选的标线适用性仍待核。金鱼胡同事发日期、原始配图、实际电子边界和申诉后的锁态、关单及费用结果待核。金台路首次尝试处标线的用途及适用性待核，相关事件的车辆品牌、围栏版本及拒绝原因仍有缺项。",
+          "alternatives": "平台或车型适用边界、设备状态、定位和系统判定状态均可能产生相似的关锁失败。金鱼胡同的定位故障来自骑行者推测，金台路的卫星定位解释来自报道归因。",
+          "dimension_id": "D1",
+          "status": "tentative",
+          "evidence": [
+            {
+              "material_id": "508f73328a7abe0e",
+              "relation": "support",
+              "reason": "第10至27行把金鱼胡同的框内关锁失败、哈啰地图P点、同次尝试显示距停车点20米及随后发起申诉关联到一次事件。配图证据限于链接和图注，标线对该订单的适用性待核。",
+              "url": "https://www.sohu.com/a/539971892_100081921",
+              "locator": "北京交通广播搜狐刊载版第10至27行。第12行记框内关锁失败，第14至16行为框内车辆照片及图注，第18至20行为哈啰P点截图及图注，第23行记20米提示和发起申诉，第25至27行为申诉配图及图注。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "4569b0463bf43a01",
+              "relation": "support",
+              "reason": "第64至66行记载一项独立的白色框线内还车被拒实测。另一次同位置三车实测分别出现直接关锁、移车六七次后关锁及移车六七次仍失败而联系客服后关锁，车辆和平台同时变化。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "人民日报客户端刊载的法治日报报道，第64至66行。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "c9853fa8c37ea7f0",
+              "relation": "support",
+              "reason": "五棵松受访者称在自行车停车点划线内尝试还车时被应用拒绝。现场围栏和原始定位待核。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "法治日报报道第20至23、36至39行。与同页记者实测是独立事件。",
+              "kind": "actor_statement"
+            },
+            {
+              "material_id": "2af636583a67f015",
+              "relation": "competing",
+              "reason": "临河里同一广场在哈啰和美团地图上的点位标示不同，两次美团用车分别出现接受管理费后关锁和直接关锁。车辆、位置变化及用车过程均需保留。",
+              "url": "https://www.sohu.com/a/539971892_100081921",
+              "locator": "1039调查团搜狐转载，第41至71行。第23至33行另有受访者自述申诉有时通过、有时失败。第81至90行是企业人员解释。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "370c56bc7c58aaa3",
+              "relation": "context",
+              "reason": "第17至29行记录金台路小程序推荐点位与首次被判在点外，首次尝试处地面标线的用途及适用性缺证。",
+              "url": "https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf",
+              "locator": "《人民日报海外版》2023年5月11日第4版PDF。第17至29行记首次拒绝与换点后还车，第31至36行记求助未果和随后拍照报障，第37至40行记当天稍晚看到报障通过及可享免单。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "d930c9f8e01020d8",
+              "relation": "context",
+              "reason": "武汉记者首次落锁失败的位置缺少现场标线记录。",
+              "url": "https://www.sohu.com/a/974401971_121284943",
+              "locator": "极目新闻搜狐刊载版第49行。极目新闻原站同题稿对应记者体验段。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "bd56212f3f6aa551",
+              "relation": "context",
+              "reason": "武汉另一位市民在有停车框的点位未能落锁，该框对该车的适用性待核。",
+              "url": "https://www.sohu.com/a/974401971_121284943",
+              "locator": "极目新闻搜狐刊载版第54行。极目新闻原站同题稿对应市民现场段。",
+              "kind": "documented_action"
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "name": "提示与现场调整",
+          "deduction": "提示给出可到达的点位或可执行的调整时，骑行者有明确的下一步。分析每次状态变化前做了什么，才能辨别提示、移车、等待和重试各自可能发挥的作用。",
+          "proposition": "在拒绝原因相近且现场存在可行调整的事件中，具体操作提示预计减少试探性移车和重试。",
+          "needed_material": "核对提示原文及出现时间、首次尝试处的标线及其适用性、可用点位及到达条件、逐次移车和重试、等待期间的位置及操作、物理锁态与应用关单确认。材料 626a689967415c40 的原始来源未定位，等待后落锁仅为待核线索，等待期间有无移车或重试及应用关单确认仍待核。极目新闻搜狐刊载版第49行（材料 d930c9f8e01020d8）记载记者按提示推行20余米后落锁，首次尝试处是否有标线及其适用性仍待核。第54行（材料 bd56212f3f6aa551）记载另一位市民按提示推行10余米后在电子围栏内停车，首次尝试处停车框的适用性及换点后的实际锁态仍待核。两次换点的应用关单确认均待核。",
+          "relationship": "在D1限定的条件下比较现场补救。现场调整仍未解决冲突时，转入D3考察首次求助后的处置路径。",
+          "conclusion": "点位提示可以给骑行者一个明确的移动目标。可追踪结果包括按提示换点后落锁、换点后在围栏内停车，以及到达提示点后仍被拒。提示能否在拒绝原因相近且有可行调整的事件中减少试探性移车和重试，仍待检验。",
+          "boundary": "武汉记者与市民是两个独立事件，报道确认的终点分别是落锁和围栏内停车。记者首次尝试处的标线未知，市民首次停车框的适用性未知。跨案例的行动差异可用于辨析过程，提示对重试次数的影响仍待同类案例比较。",
+          "unresolved": "626a689967415c40的原始来源及所提2023年转载与该编号的对应关系未确认。等待后落锁仍是待核线索，首次标线及其适用性、提示、等待时长、车辆是否原地、期间有无移车或重试、实际锁态及应用关单均待核。武汉两次换点的关单确认及费用结果未知，市民换点后的锁态未知。各例缺少可比较的拒绝原因、提示原文和时点、点位可用性及逐次操作记录。五棵松的订单总时长无法拆出额外找点耗时。",
+          "alternatives": "点位的可达性及当时的可用性、车辆适用边界、移动带来的定位变化、等待及重复尝试均可能影响结果。",
+          "dimension_id": "D2",
+          "status": "tentative",
+          "evidence": [
+            {
+              "material_id": "d930c9f8e01020d8",
+              "relation": "context",
+              "reason": "第49行记录武汉记者按提示推行20余米，到电子围栏P点后落锁。首次尝试处标线及应用关单确认未知。",
+              "url": "https://www.sohu.com/a/974401971_121284943",
+              "locator": "极目新闻搜狐刊载版第49行。极目新闻原站同题稿对应记者体验段。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "bd56212f3f6aa551",
+              "relation": "context",
+              "reason": "第54行记录另一位市民按提示推行10余米后在电子围栏内停车。换点后的实际锁态及应用关单确认未知。",
+              "url": "https://www.sohu.com/a/974401971_121284943",
+              "locator": "极目新闻搜狐刊载版第54行。极目新闻原站同题稿对应市民现场段。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "4569b0463bf43a01",
+              "relation": "competing",
+              "reason": "北京记者到达提示所指的29米外点位后仍被拒，随后在原停车区域两侧短距离推行并返回，才成功关锁。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "人民日报客户端刊载的法治日报报道，第64至66行。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "c9853fa8c37ea7f0",
+              "relation": "context",
+              "reason": "五棵松受访者称刷新定位和寻找约32米外点位均未成功，最后支付1元调度费后锁车。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "法治日报报道第20至23、36至39行。与同页记者实测是独立事件。",
+              "kind": "actor_statement"
+            },
+            {
+              "material_id": "370c56bc7c58aaa3",
+              "relation": "context",
+              "reason": "金台路记者在推荐点位被拒，又骑行十几分钟，辗转多个指定点后据报道完成还车。",
+              "url": "https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf",
+              "locator": "《人民日报海外版》2023年5月11日第4版PDF。第17至29行记首次拒绝与换点后还车，第31至36行记求助未果和随后拍照报障，第37至40行记当天稍晚看到报障通过及可享免单。",
+              "kind": "documented_action"
+            }
+          ]
+        },
+        {
+          "id": "D3",
+          "name": "现场举证与有效复核",
+          "deduction": "求助之后的工作取决于渠道能否接收和沿用现场证据、启动有权处置订单的复核，并把结果传回骑行者。应沿着证据提交、采纳、处置与反馈逐步查证。",
+          "proposition": "现场调整未能解决冲突时，能够采纳现场证据、触发有效复核并确认订单结束的求助渠道，预计减少首次求助后的重复举证和追查。",
+          "needed_material": "首次求助及各次转接或回拨时间、提交与补交的材料、受理和采纳记录、复核主体及其实际操作、订单状态变化和通知。北京金台路万惠商场附近事件见《人民日报海外版》2023年5月11日第4版PDF（材料 370c56bc7c58aaa3）。第31至36行记载记者通过小程序和客服热线求助，因人工客服繁忙未果，随后拍照报障。第37至40行记载当天稍晚，记者看到报障已通过，小程序显示可享免单。报障与最终落锁的精确先后、应用关单确认及实际结算仍未知。郑州同一订单的后续记者实测见大河报署名报道的北青网搜狐转载第40至64行（合并材料 0d133b9d6c7ecaee），用于界定费争处理环节。",
+          "relationship": "承接现场调整未解决的事件，由D4核对复核是否确实伴随关单。现有事后免单和申请减免记录可帮助界定结果，现场举证经复核促成即时关单的路径仍缺同类案例支持。",
+          "conclusion": "材料可追踪部分求助、举证、关锁和费用反馈。由有订单处置权的渠道采纳现场证据并促成骑行者确认关单的完整过程仍缺证据，求助渠道能否减少首次求助后的重复举证和追查仍未判定。",
+          "boundary": "金台路换点后还车和当天稍晚看到免单提示各有报道记录，两者与报障处置的关系待核。郑州9月实测和临河里快速申诉用于比较费用复核过程。客服当场代为关单且骑行者无需继续操作或申诉的同类对照仍缺。",
+          "unresolved": "缺少同一次可核标线冲突中关于首次求助、转接或回拨、材料提交与补交、证据采纳、复核主体及权限、实际处置和关单反馈的完整记录。缺少触发条件相近且可比较重复举证和追查次数的事件。金台路审核主体、报障与最终落锁的精确先后、应用关单确认及实际结算待核。金鱼胡同申诉结果及联系客服后关锁事件中的客服操作与应用关单确认待核。",
+          "alternatives": "联系客服后关锁可能与人工操作、系统重新判定、等待或再次尝试有关。费用复核可能依赖后台骑行数据，快速通过也可能来自人工审核、自动审核或既有费用规则。",
+          "dimension_id": "D3",
+          "status": "unresolved",
+          "evidence": [
+            {
+              "material_id": "370c56bc7c58aaa3",
+              "relation": "context",
+              "reason": "金台路第31至40行记载记者通过小程序和客服热线求助，因人工客服繁忙未果，随后拍照报障。当天稍晚，记者看到报障通过且小程序显示可享免单。",
+              "url": "https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf",
+              "locator": "《人民日报海外版》2023年5月11日第4版PDF。第17至29行记首次拒绝与换点后还车，第31至36行记求助未果和随后拍照报障，第37至40行记当天稍晚看到报障通过及可享免单。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "4569b0463bf43a01",
+              "relation": "context",
+              "reason": "一辆车移车六七次仍失败，联系客服后关锁。报道给出动作顺序，客服操作及其权限未知。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "人民日报客户端刊载的法治日报报道，第64至66行。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "508f73328a7abe0e",
+              "relation": "context",
+              "reason": "金鱼胡同骑行者在框内遇拒后发起违停申诉，证据是否被采纳及处置结果未知。",
+              "url": "https://www.sohu.com/a/539971892_100081921",
+              "locator": "北京交通广播搜狐刊载版第10至27行。第12行记框内关锁失败，第14至16行为框内车辆照片及图注，第18至20行为哈啰P点截图及图注，第23行记20米提示和发起申诉，第25至27行为申诉配图及图注。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "0d133b9d6c7ecaee",
+              "relation": "context",
+              "reason": "郑州记者9月跟进同一订单的费争，经历智能问答、重复陈述、转热线和身份复核。第4次拨打后，人工调取订单，援引后台骑行数据认可收费异常并承诺申请减免14.5元。",
+              "url": "https://www.sohu.com/a/1074901486_255783",
+              "locator": "大河报署名报道的北青网搜狐转载，第10至30行是当事人回忆与记者经手材料，第40至64行是记者操作，第71至79行是记者对外呼流程的说明及采访函结果。合并 b19cc854cb5f961a 与 9cdcbdc904fffcd4。",
+              "kind": "reporter_account"
+            },
+            {
+              "material_id": "2af636583a67f015",
+              "relation": "context",
+              "reason": "临河里记者接受管理费后关锁，随后申诉据报道17秒通过，界面显示无需再支付。审核方式及采纳的证据未知。",
+              "url": "https://www.sohu.com/a/539971892_100081921",
+              "locator": "1039调查团搜狐转载，第41至71行。第23至33行另有受访者自述申诉有时通过、有时失败。第81至90行是企业人员解释。",
+              "kind": "documented_action"
+            }
+          ]
+        },
+        {
+          "id": "D4",
+          "name": "订单结束确认与费用后续",
+          "deduction": "停止现场操作、物理落锁、平台关闭订单和骑行者收到结束确认可能发生在不同时间。确认前的等待和追查属于本研究的观察区间，后续费用处置另有时间线。",
+          "proposition": "作为过程检验，若离场提示或物理落锁发生在订单结束确认之前，检查骑行者是否在两者之间继续等待、核对状态或再次求助。以确认时间界定关单补救工作，以账单和流水核对费用结果。",
+          "needed_material": "离场提示、实际锁态及时间、应用或短信通知、订单关闭时间、计费和扣款记录、减免承诺与到账凭证。北京金台路万惠商场附近事件见《人民日报海外版》2023年5月11日第4版PDF（材料 370c56bc7c58aaa3）。第17至29行记载换点后还车，第37至40行记载当天稍晚小程序显示可享免单。应用是否确认关单及确认时间、免单是否兑现及实际结算仍待核。郑州同一订单见大河报署名报道的北青网搜狐转载第10至30行及第40至64行（合并材料 0d133b9d6c7ecaee），分别定位当事人回忆及记者经手材料、记者后续费争复核。离场提示原始界面、实际锁态、后台关单日志及减免到账凭证仍待核。",
+          "relationship": "为D2和D3的行动序列确定观察终点，并核对成功落锁、关单确认和费用处置各自对应的证据，避免把关单后申诉计入结束订单所需的工作。",
+          "conclusion": "郑州当事人的回忆支持以23时37分收到订单结束短信作为暂定观察终点。矩阵转述的离场后、确认前至少一次再次联系可暂列为待核的补救动作。短信后的申诉、回拨和记者跟进属于同一订单的后续费争。",
+          "boundary": "郑州按同一订单记录，保留当事人回忆、记者经手材料和9月客服实测的来源差别。该案缺首次标线证据，用于检验观察区间。离场、物理落锁、后台关单、骑行者收到结束确认、投诉工单关闭、减免承诺与到账分别记录。",
+          "unresolved": "郑州首次停车线、适用围栏、离场提示和短信原始记录待核。确认前再次联系的原始表述、联系总次数、其他核查动作和可核实的等待时长仍待核。当事人所称已关锁与短信所称随后自动锁车的关系未厘清。实际锁态、后台关闭时点、实际扣款及减免入账未知。金台路的关单确认及其时点、免单是否兑现和实际结算均待核。",
+          "alternatives": "离场提示可能对应临时处置。物理锁态、后台关单和短信送达可能不同步，再次联系与后台操作的关系待核。",
+          "dimension_id": "D4",
+          "status": "tentative",
+          "evidence": [
+            {
+              "material_id": "0d133b9d6c7ecaee",
+              "relation": "support",
+              "reason": "当事人回忆依提示离场，约23时收到未完成还车消息，23时37分收到称系统已自动锁车并结束订单的短信。所供矩阵对第14至19行的转述另记两条消息之间再次联系平台，回执摘要未列该动作。记者记载当事人出示16.5元订单截图，并查看客服交流录屏。次日17时36分的短信涉及投诉工单关闭。9月记者跟进时，人工承诺申请减免14.5元。",
+              "url": "https://www.sohu.com/a/1074901486_255783",
+              "locator": "大河报署名报道的北青网搜狐转载，第10至30行是当事人回忆与记者经手材料，第40至64行是记者操作，第71至79行是记者对外呼流程的说明及采访函结果。合并 b19cc854cb5f961a 与 9cdcbdc904fffcd4。",
+              "kind": "reporter_account"
+            },
+            {
+              "material_id": "370c56bc7c58aaa3",
+              "relation": "context",
+              "reason": "金台路第17至29行记载换点后完成还车，第37至40行记载当天稍晚看到报障通过并显示可享免单。应用关单确认及实际结算未知。",
+              "url": "https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf",
+              "locator": "《人民日报海外版》2023年5月11日第4版PDF。第17至29行记首次拒绝与换点后还车，第31至36行记求助未果和随后拍照报障，第37至40行记当天稍晚看到报障通过及可享免单。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "2af636583a67f015",
+              "relation": "context",
+              "reason": "临河里记者接受5元管理费后关锁，随后申诉界面显示无需再支付。扣款或退款流水待核。",
+              "url": "https://www.sohu.com/a/539971892_100081921",
+              "locator": "1039调查团搜狐转载，第41至71行。第23至33行另有受访者自述申诉有时通过、有时失败。第81至90行是企业人员解释。",
+              "kind": "documented_action"
+            },
+            {
+              "material_id": "c9853fa8c37ea7f0",
+              "relation": "context",
+              "reason": "五棵松受访者称最终付费锁车，报道记载支付2.5元，其中1元为调度费。原始支付回执及订单结束确认时点待核。",
+              "url": "https://www.peopleapp.com/column/30044122931-500005263134",
+              "locator": "法治日报报道第20至23、36至39行。与同页记者实测是独立事件。",
+              "kind": "actor_statement"
+            }
+          ]
+        }
+      ],
+      "question_binding": {
+        "question_id": "RQ-990e6aca1d8cc135b230d308",
+        "semantic_version": "27d8f77bc657d7e62bf0e3ea962692e9dbcabc4c4ea1299afe089807f2aa6509",
+        "core_question": "共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？",
+        "specific_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+        "method": "secondary_interviews",
+        "freeze_sha256": "8362b0fad9a5c306904a785c3af473da23c508ebbeec68b514ee2c61020370ea",
+        "framework_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+        "receipt_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2"
+      },
+      "technical_metadata": {
+        "artifact_lineage": [
+          {
+            "framework_path": "qualitative_framework/requirements_0560fce703e633/framework.json",
+            "framework_file_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+            "framework_canonical_json_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+            "receipt_path": "qualitative_framework/requirements_0560fce703e633/material_receipt.json",
+            "receipt_file_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2",
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "b3d5120c3928af9641e48d8d6dda6745969d0c730fe2a915f030c411470c21e3",
+            "acquisition_events_sha256": "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+            "acquisition_response_sha256": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+            "parent_receipt_sha256": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4"
+          },
+          {
+            "framework_path": "qualitative_framework/repair_002/framework.json",
+            "framework_file_sha256": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+            "framework_canonical_json_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+            "receipt_path": "qualitative_framework/repair_002/material_receipt.json",
+            "receipt_file_sha256": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4",
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "ecd264c0ceb0d122be4fd5c9deac1487e30165a396d917fccccfc3a468e9fbbb",
+            "acquisition_events_sha256": "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+            "acquisition_response_sha256": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+            "parent_receipt_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde"
+          },
+          {
+            "framework_path": "qualitative_framework/requirements_570aa82a9f24d0/framework.json",
+            "framework_file_sha256": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+            "framework_canonical_json_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+            "receipt_path": "qualitative_framework/requirements_570aa82a9f24d0/material_receipt.json",
+            "receipt_file_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde",
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "21df46387d585777f7833aeb3672996817b1db64ccd0c4e8102df28da0fe5404",
+            "acquisition_events_sha256": "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+            "acquisition_response_sha256": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+            "parent_receipt_sha256": "6563bf6e96aee3729a74a78d737abdb717f9074e5d413caf4a0dc4eb2db5cfd1"
+          },
+          {
+            "framework_path": "qualitative_framework/repair_001/framework.json",
+            "framework_file_sha256": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+            "framework_canonical_json_sha256": "0921a92583934350234f3d3244c6ec4897466875591231c0b8377fdd40d916e1",
+            "receipt_path": "qualitative_framework/repair_001/material_receipt.json",
+            "receipt_file_sha256": "6563bf6e96aee3729a74a78d737abdb717f9074e5d413caf4a0dc4eb2db5cfd1",
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "d194de32a60a26c50b71c7f14bf9d2e6b666917315496fb323a5d95a85e3dd18",
+            "acquisition_events_sha256": "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+            "acquisition_response_sha256": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+            "parent_receipt_sha256": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a"
+          },
+          {
+            "framework_path": "qualitative_framework/attempt_001/framework.json",
+            "framework_file_sha256": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+            "framework_canonical_json_sha256": "0921a92583934350234f3d3244c6ec4897466875591231c0b8377fdd40d916e1",
+            "receipt_path": "qualitative_framework/attempt_001/material_receipt.json",
+            "receipt_file_sha256": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a",
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "6b03827f0a807b23e473b900534f9beb58481ee73238b358ca930a1a19c3eb85",
+            "acquisition_events_sha256": "47f21da974e986381e95403955d7b903391dd2c6cb9dd87af35af98107e43196",
+            "acquisition_response_sha256": "182d79baddfe41dd2c21ba649ad84de5ddfcdbfb7bd38a928025be432e1a263e",
+            "parent_receipt_sha256": null
+          }
+        ],
+        "moved": [
+          {
+            "dimension_id": "D1",
+            "field": "unresolved",
+            "text": "矩阵元数据仍须核验。"
+          },
+          {
+            "dimension_id": "D1",
+            "field": "unresolved",
+            "text": "当前回执与矩阵的框架字段均为0560fce7…，上一轮审查称框架文件与规范化JSON的哈希口径已有说明。"
+          },
+          {
+            "dimension_id": "D1",
+            "field": "unresolved",
+            "text": "所供材料仍无法独立重算哈希，确认b3d5120c…对应的采集制品及其与本轮回执的关系，或厘清旧值、内嵌绑定和外层回执绑定的版本及替换关系。"
+          },
+          {
+            "dimension_id": "D1",
+            "field": "unresolved",
+            "text": "矩阵行留存的570aa82a…与当前矩阵外层值不同，相关旧值及计算口径应在制品元数据中核对。"
+          }
+        ],
+        "resolved_conditions": [
+          "将哈希比较和版本追踪从 D1.unresolved 移至矩阵制品元数据。记录框架文件、规范化 JSON、回执文件及采集制品的路径或稳定标识、版本、哈希值和计算口径。",
+          "核验 b3d5120c… 对应的采集制品及其与本轮回执的绑定，在版本记录中标明 570aa82a… 对应的制品及替换关系，并提供可复算的核验记录。"
+        ]
+      }
+    },
+    "literature": {
+      "rows": [
+        {
+          "title": "The Invisible Cage: Workers’ Reactivity to Opaque Algorithmic Evaluations",
+          "authors": [
+            "Hatim A. Rahman"
+          ],
+          "journal": "Administrative Science Quarterly",
+          "year": "2021",
+          "doi": "10.1177/00018392211010118",
+          "metadata_url": "https://journals.sagepub.com/toc/asq/66/4",
+          "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+          "abstract_locator": "SAGE 文章页 Abstract，正式卷期 66(4)，945–988",
+          "abstract_excerpt": "algorithmic evaluation systems are not transparent",
+          "abstract_summary": "作者以三年多的访谈、档案和平台观察研究自由职业者，指出平台以不透明的算法拉开评分差异，劳动者难以预测评价标准及其变化。对还车研究的推论是，当判定依据与反馈不清楚时，骑行者可能需要靠走动和反复提交来试探系统。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“规则公布后，额外操作只是用户没照做”的反诘。迁移条件是区分公开停车规则与用户实际能获得的判定信号，并观察用户能否据此调整行动。原文研究关乎影响工作机会的反复评价，对单次关单、撤费以及定位误差的来源解释有限。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+          "abstract_hash": "b570df5e22f786443ef84064be40c16e5f6e617a4fa979765a5050c445a4b88a",
+          "excerpt_sha256": "714cebf9480eb40086653f5f2b202faad736480368ef1b02efdb9eb360c3001b",
+          "searched_at": "2026-11-22T12:38:04.949902+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-74fd618b-929f-4c8a-b9a2-89c2f93f2637",
+          "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+          "article_id": "A_db29896d5c83724691e35994",
+          "provenance": [
+            {
+              "title": "The Invisible Cage: Workers’ Reactivity to Opaque Algorithmic Evaluations",
+              "authors": [
+                "Hatim A. Rahman"
+              ],
+              "journal": "Administrative Science Quarterly",
+              "year": "2021",
+              "doi": "10.1177/00018392211010118",
+              "metadata_url": "https://journals.sagepub.com/toc/asq/66/4",
+              "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+              "abstract_locator": "SAGE 文章页 Abstract，正式卷期 66(4)，945–988",
+              "abstract_excerpt": "algorithmic evaluation systems are not transparent",
+              "abstract_summary": "作者以三年多的访谈、档案和平台观察研究自由职业者，指出平台以不透明的算法拉开评分差异，劳动者难以预测评价标准及其变化。对还车研究的推论是，当判定依据与反馈不清楚时，骑行者可能需要靠走动和反复提交来试探系统。",
+              "relevance": "substantive",
+              "relevance_reason": "可回应“规则公布后，额外操作只是用户没照做”的反诘。迁移条件是区分公开停车规则与用户实际能获得的判定信号，并观察用户能否据此调整行动。原文研究关乎影响工作机会的反复评价，对单次关单、撤费以及定位误差的来源解释有限。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+              "abstract_hash": "b570df5e22f786443ef84064be40c16e5f6e617a4fa979765a5050c445a4b88a",
+              "excerpt_sha256": "714cebf9480eb40086653f5f2b202faad736480368ef1b02efdb9eb360c3001b",
+              "searched_at": "2026-11-22T12:38:04.949902+08:00",
+              "batch": "batch_001",
+              "observation_id": "batch_001:1",
+              "metadata_event_id": "exec-74fd618b-929f-4c8a-b9a2-89c2f93f2637",
+              "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2"
+            }
+          ]
+        },
+        {
+          "title": "Expanding the Locus of Resistance: Understanding the Co-constitution of Control and Resistance in the Gig Economy",
+          "authors": [
+            "Lindsey D. Cameron",
+            "Hatim A. Rahman"
+          ],
+          "journal": "Organization Science",
+          "year": "2022",
+          "doi": "10.1287/orsc.2021.1557",
+          "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+          "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+          "abstract_locator": "INFORMS 文章页 Abstract 开头，正式卷期 33(1)",
+          "abstract_excerpt": "algorithmically mediated customer control",
+          "abstract_summary": "作者把控制与抵抗放在服务互动中考察，指出平台将顾客给劳动者的评分交由算法汇总和追踪，据此影响劳动者未来获得的机会。对还车研究的推论是，应追踪现场行为如何被转化为平台记录，以及参与者能在哪个环节影响记录或其后果。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“系统只是记录现场状态”的反诘，因为记录经规则处理后会约束后续机会。迁移条件是还车证据确实进入平台判断，且能够追踪证据在哪个环节可被更正。原研究中的顾客提供评分，共享单车骑行者则承受还车判定，角色方向有别。该文无法确定客服能否关单或撤费。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+          "abstract_hash": "6f54f154624175dbdc7b188863d1f2caceb3749a66a07dacbd270c57e4ee21b5",
+          "excerpt_sha256": "c23b920d1c335a507e732d0786fc3f764df7677a496b43c939c8f777e2158338",
+          "searched_at": "2026-11-22T12:38:04.951578+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+          "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+          "article_id": "A_a16dfb6325ab03efed191b99",
+          "provenance": [
+            {
+              "title": "Expanding the Locus of Resistance: Understanding the Co-constitution of Control and Resistance in the Gig Economy",
+              "authors": [
+                "Lindsey D. Cameron",
+                "Hatim A. Rahman"
+              ],
+              "journal": "Organization Science",
+              "year": "2022",
+              "doi": "10.1287/orsc.2021.1557",
+              "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+              "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+              "abstract_locator": "INFORMS 文章页 Abstract 开头，正式卷期 33(1)",
+              "abstract_excerpt": "algorithmically mediated customer control",
+              "abstract_summary": "作者把控制与抵抗放在服务互动中考察，指出平台将顾客给劳动者的评分交由算法汇总和追踪，据此影响劳动者未来获得的机会。对还车研究的推论是，应追踪现场行为如何被转化为平台记录，以及参与者能在哪个环节影响记录或其后果。",
+              "relevance": "substantive",
+              "relevance_reason": "可回应“系统只是记录现场状态”的反诘，因为记录经规则处理后会约束后续机会。迁移条件是还车证据确实进入平台判断，且能够追踪证据在哪个环节可被更正。原研究中的顾客提供评分，共享单车骑行者则承受还车判定，角色方向有别。该文无法确定客服能否关单或撤费。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+              "abstract_hash": "6f54f154624175dbdc7b188863d1f2caceb3749a66a07dacbd270c57e4ee21b5",
+              "excerpt_sha256": "c23b920d1c335a507e732d0786fc3f764df7677a496b43c939c8f777e2158338",
+              "searched_at": "2026-11-22T12:38:04.951578+08:00",
+              "batch": "batch_001",
+              "observation_id": "batch_001:2",
+              "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+              "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2"
+            }
+          ]
+        },
+        {
+          "title": "Enacting Integrated Information Technology: A Human Agency Perspective",
+          "authors": [
+            "Marie-Claude Boudreau",
+            "Daniel Robey"
+          ],
+          "journal": "Organization Science",
+          "year": "2005",
+          "doi": "10.1287/orsc.1040.0103",
+          "metadata_url": "https://pubsonline.informs.org/toc/orsc/16/1",
+          "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+          "abstract_locator": "INFORMS 文章页 Abstract，正式卷期 16(1)，3–18",
+          "abstract_excerpt": "work around system constraints in unintended ways",
+          "abstract_summary": "作者对大型政府机构的企业资源计划系统做解释性个案研究，发现用户起初尽量回避系统，后来借助项目领导、熟练用户和同伴的影响，即兴学会绕开系统限制。对还车研究的推论是，反复使用者可能通过同伴经验形成系统设计之外的补救办法。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“技术限制给所有人留下同样选择”的反诘。迁移条件是骑行者有重复使用或交流的机会，且系统实际留有可行的替代操作。绕行成功能解释用户如何恢复流程，仍需另查它是否改变平台认定、计费或人工纠错权限。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+          "abstract_hash": "ce87b6c5adb0c181e5de64ee54f08f29bc8cd9380ead8a5f031936713030cb13",
+          "excerpt_sha256": "79479cc2ad9a33e757da1348a9c37fe1b93774c7539567e8b222e5b509239d45",
+          "searched_at": "2026-11-22T12:38:04.951578+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+          "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d",
+          "article_id": "A_4f54bc6a7e0801ec04f833be",
+          "provenance": [
+            {
+              "title": "Enacting Integrated Information Technology: A Human Agency Perspective",
+              "authors": [
+                "Marie-Claude Boudreau",
+                "Daniel Robey"
+              ],
+              "journal": "Organization Science",
+              "year": "2005",
+              "doi": "10.1287/orsc.1040.0103",
+              "metadata_url": "https://pubsonline.informs.org/toc/orsc/16/1",
+              "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+              "abstract_locator": "INFORMS 文章页 Abstract，正式卷期 16(1)，3–18",
+              "abstract_excerpt": "work around system constraints in unintended ways",
+              "abstract_summary": "作者对大型政府机构的企业资源计划系统做解释性个案研究，发现用户起初尽量回避系统，后来借助项目领导、熟练用户和同伴的影响，即兴学会绕开系统限制。对还车研究的推论是，反复使用者可能通过同伴经验形成系统设计之外的补救办法。",
+              "relevance": "substantive",
+              "relevance_reason": "可回应“技术限制给所有人留下同样选择”的反诘。迁移条件是骑行者有重复使用或交流的机会，且系统实际留有可行的替代操作。绕行成功能解释用户如何恢复流程，仍需另查它是否改变平台认定、计费或人工纠错权限。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+              "abstract_hash": "ce87b6c5adb0c181e5de64ee54f08f29bc8cd9380ead8a5f031936713030cb13",
+              "excerpt_sha256": "79479cc2ad9a33e757da1348a9c37fe1b93774c7539567e8b222e5b509239d45",
+              "searched_at": "2026-11-22T12:38:04.951578+08:00",
+              "batch": "batch_001",
+              "observation_id": "batch_001:3",
+              "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+              "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d"
+            }
+          ]
+        },
+        {
+          "title": "信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析",
+          "authors": [
+            "李晶晶",
+            "陈帅",
+            "秦萍",
+            "耿可心",
+            "王雅璨"
+          ],
+          "journal": "管理世界",
+          "year": "2025",
+          "doi": "10.19744/j.cnki.11-1235/f.2025.0051",
+          "metadata_url": "https://sem.bjtu.edu.cn/show-975-9999.html",
+          "abstract_url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+          "abstract_locator": "原刊第一页，第136页“摘要”。原摘要由原生搜索结果完整展开，另打开北京交通大学经管学院页面核对《管理世界》2025年第4期题录",
+          "abstract_excerpt": "奖励性激励效果明显优于惩罚性激励",
+          "abstract_summary": "作者用哈啰单车十四城高频数据开展双重差分分析，发现驾照分制度增加骑行，违规行为随时间逐渐减少，信誉和经济激励均发挥作用，且奖励效果更强。对还车研究的推论是，观察到的行为变化可能来自激励，需要与判定冲突后用户承担的纠错成本分别识别。",
+          "relevance": "direct",
+          "relevance_reason": "可回应“平台管控只会妨碍骑行”的反诘，并为同场域的激励解释提供参照。迁移条件是区分实际违停、系统判定与复核结果，并观察是否存在类似的积分或费用后果。论文考察制度实施后的骑行和违规行为，摘要未报告误判后的走动、重试、关单或撤费。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+          "abstract_hash": "b8154fb648bae71602775c9bcaadea5f55805ae918d1bf5c5bfb7a169a7f73a3",
+          "excerpt_sha256": "8b734ad741ac470ba07eb5db99653ed13b0fe339264b88e5ae4ffc72c681dd09",
+          "searched_at": "2026-11-22T12:38:04.952091+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:5",
+          "metadata_event_id": "exec-f891092a-1e14-4c9a-810d-b1624f9b60e0",
+          "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d",
+          "article_id": "A_6535088ff7fdfe62dd1d1838",
+          "provenance": [
+            {
+              "title": "信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析",
+              "authors": [
+                "李晶晶",
+                "陈帅",
+                "秦萍",
+                "耿可心",
+                "王雅璨"
+              ],
+              "journal": "管理世界",
+              "year": "2025",
+              "doi": "10.19744/j.cnki.11-1235/f.2025.0051",
+              "metadata_url": "https://sem.bjtu.edu.cn/show-975-9999.html",
+              "abstract_url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+              "abstract_locator": "原刊第一页，第136页“摘要”。原摘要由原生搜索结果完整展开，另打开北京交通大学经管学院页面核对《管理世界》2025年第4期题录",
+              "abstract_excerpt": "奖励性激励效果明显优于惩罚性激励",
+              "abstract_summary": "作者用哈啰单车十四城高频数据开展双重差分分析，发现驾照分制度增加骑行，违规行为随时间逐渐减少，信誉和经济激励均发挥作用，且奖励效果更强。对还车研究的推论是，观察到的行为变化可能来自激励，需要与判定冲突后用户承担的纠错成本分别识别。",
+              "relevance": "direct",
+              "relevance_reason": "可回应“平台管控只会妨碍骑行”的反诘，并为同场域的激励解释提供参照。迁移条件是区分实际违停、系统判定与复核结果，并观察是否存在类似的积分或费用后果。论文考察制度实施后的骑行和违规行为，摘要未报告误判后的走动、重试、关单或撤费。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+              "abstract_hash": "b8154fb648bae71602775c9bcaadea5f55805ae918d1bf5c5bfb7a169a7f73a3",
+              "excerpt_sha256": "8b734ad741ac470ba07eb5db99653ed13b0fe339264b88e5ae4ffc72c681dd09",
+              "searched_at": "2026-11-22T12:38:04.952091+08:00",
+              "batch": "batch_001",
+              "observation_id": "batch_001:5",
+              "metadata_event_id": "exec-f891092a-1e14-4c9a-810d-b1624f9b60e0",
+              "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d"
+            }
+          ]
+        },
+        {
+          "title": "How Managers Maintain Control Through Collaborative Repair: Evidence from Platform-Mediated “Gigs”",
+          "authors": [
+            "Hatim A. Rahman",
+            "Melissa A. Valentine"
+          ],
+          "journal": "Organization Science",
+          "year": "2021",
+          "doi": "10.1287/orsc.2021.1428",
+          "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+          "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+          "abstract_locator": "INFORMS 原刊页面 Abstract，第 168–171 行。正式卷期为 32(5)，1300–1326 页。",
+          "abstract_excerpt": "surface misaligned interpretations of a situation",
+          "abstract_summary": "作者通过平台软件开发项目的归纳式田野研究发现，面对承包者的意外行动，客户经理动用平台工具强制管控，反而妨碍项目完成。协作修复让双方说清对故障的不同理解，协商新的相互预期，从而有助于恢复信任并完成项目。本研究据此推论，还车争议中能否提交证据、由谁复核和改判，可能影响骑行者的重试与求助负担。",
+          "relevance": "substantive",
+          "relevance_reason": "这篇论文能部分回应「骑行者多走几步只是定位误差的后果」这一反诘。定位误差可以触发争议，组织如何处理分歧则可能影响后续由谁举证、反复尝试或确认服务结束。可迁移的条件是现场情况与系统判定存在分歧，用户能提交可采纳的现场证据，且平台有人或有流程能复核并改判。原研究观察的是承包项目中的协作与控制，无法据此判断单车平台的实际关单、撤费权限，也无法估计骑行者多承担了多少劳动。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+          "abstract_hash": "8cda6456a669875c6c2e0d0f98007dc9330a973b652131da01b211289d315a10",
+          "excerpt_sha256": "4e3ce953cf5fca2ad1716068e1bfcd85e987a32dbedf93a0eaaaf02fecaed3ef",
+          "searched_at": "2026-11-22T12:58:21.627223+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:1",
+          "metadata_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9",
+          "abstract_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9",
+          "article_id": "A_f519c086e1f21dcbcc1e52af",
+          "provenance": [
+            {
+              "title": "How Managers Maintain Control Through Collaborative Repair: Evidence from Platform-Mediated “Gigs”",
+              "authors": [
+                "Hatim A. Rahman",
+                "Melissa A. Valentine"
+              ],
+              "journal": "Organization Science",
+              "year": "2021",
+              "doi": "10.1287/orsc.2021.1428",
+              "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+              "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+              "abstract_locator": "INFORMS 原刊页面 Abstract，第 168–171 行。正式卷期为 32(5)，1300–1326 页。",
+              "abstract_excerpt": "surface misaligned interpretations of a situation",
+              "abstract_summary": "作者通过平台软件开发项目的归纳式田野研究发现，面对承包者的意外行动，客户经理动用平台工具强制管控，反而妨碍项目完成。协作修复让双方说清对故障的不同理解，协商新的相互预期，从而有助于恢复信任并完成项目。本研究据此推论，还车争议中能否提交证据、由谁复核和改判，可能影响骑行者的重试与求助负担。",
+              "relevance": "substantive",
+              "relevance_reason": "这篇论文能部分回应「骑行者多走几步只是定位误差的后果」这一反诘。定位误差可以触发争议，组织如何处理分歧则可能影响后续由谁举证、反复尝试或确认服务结束。可迁移的条件是现场情况与系统判定存在分歧，用户能提交可采纳的现场证据，且平台有人或有流程能复核并改判。原研究观察的是承包项目中的协作与控制，无法据此判断单车平台的实际关单、撤费权限，也无法估计骑行者多承担了多少劳动。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+              "abstract_hash": "8cda6456a669875c6c2e0d0f98007dc9330a973b652131da01b211289d315a10",
+              "excerpt_sha256": "4e3ce953cf5fca2ad1716068e1bfcd85e987a32dbedf93a0eaaaf02fecaed3ef",
+              "searched_at": "2026-11-22T12:58:21.627223+08:00",
+              "batch": "batch_002",
+              "observation_id": "batch_002:1",
+              "metadata_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9",
+              "abstract_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9"
+            }
+          ]
+        },
+        {
+          "title": "In the Land of the Blind, the One-Eyed Man Is King: Knowledge Brokerage in the Age of Learning Algorithms",
+          "authors": [
+            "Lauren Waardenburg",
+            "Marleen Huysman",
+            "Anastasia Sergeeva"
+          ],
+          "journal": "Organization Science",
+          "year": "2022",
+          "doi": "10.1287/orsc.2021.1544",
+          "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+          "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+          "abstract_locator": "Abstract，开头两句。正式刊载为 33(1)，59–82，2021 年在线先发。",
+          "abstract_excerpt": "how knowledge brokers attempt to translate opaque algorithmic predictions",
+          "abstract_summary": "作者通过对荷兰警方引入犯罪预测算法开展的31个月民族志，考察知识中介如何尝试解释不透明的预测，并将其转译为一线人员可以使用的信息。本文推论是，还车复核也可考察中介是否具备解释系统判定所需的信息，以及解释能否转化为可执行的处理决定。",
+          "relevance": "substantive",
+          "relevance_reason": "回应“有客服入口就能解决问题”的反诘。若客服处在算法输出与现场证据之间，可区分接单、解释与改判三种工作，并追问哪一步仍需用户举证。警务案例支持知识中介机制，还车场景中的关单和撤费权限须另行验证。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+          "abstract_hash": "e5e081b6d09858f25d36ed02f0a1f99e8166eb9580cfd1dff920b7a788681a62",
+          "excerpt_sha256": "cf6ea85a0c7419f8bce2d412c66e6ce28095e363fa76c3e200047e2b918e3269",
+          "searched_at": "2026-11-22T17:31:42.174290+08:00",
+          "batch": "batch_001",
+          "observation_id": "supplemental:batch_001:1",
+          "metadata_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+          "abstract_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+          "article_id": "A_2b2ed429b6b6b363c9d5f875",
+          "provenance": [
+            {
+              "title": "In the Land of the Blind, the One-Eyed Man Is King: Knowledge Brokerage in the Age of Learning Algorithms",
+              "authors": [
+                "Lauren Waardenburg",
+                "Marleen Huysman",
+                "Anastasia Sergeeva"
+              ],
+              "journal": "Organization Science",
+              "year": "2022",
+              "doi": "10.1287/orsc.2021.1544",
+              "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+              "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+              "abstract_locator": "Abstract，开头两句。正式刊载为 33(1)，59–82，2021 年在线先发。",
+              "abstract_excerpt": "how knowledge brokers attempt to translate opaque algorithmic predictions",
+              "abstract_summary": "作者通过对荷兰警方引入犯罪预测算法开展的31个月民族志，考察知识中介如何尝试解释不透明的预测，并将其转译为一线人员可以使用的信息。本文推论是，还车复核也可考察中介是否具备解释系统判定所需的信息，以及解释能否转化为可执行的处理决定。",
+              "relevance": "substantive",
+              "relevance_reason": "回应“有客服入口就能解决问题”的反诘。若客服处在算法输出与现场证据之间，可区分接单、解释与改判三种工作，并追问哪一步仍需用户举证。警务案例支持知识中介机制，还车场景中的关单和撤费权限须另行验证。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544",
+              "abstract_hash": "e5e081b6d09858f25d36ed02f0a1f99e8166eb9580cfd1dff920b7a788681a62",
+              "excerpt_sha256": "cf6ea85a0c7419f8bce2d412c66e6ce28095e363fa76c3e200047e2b918e3269",
+              "searched_at": "2026-11-22T17:31:42.174290+08:00",
+              "batch": "batch_001",
+              "observation_id": "supplemental:batch_001:1",
+              "metadata_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+              "abstract_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde"
+            }
+          ]
+        },
+        {
+          "title": "Working for an Algorithm: Power Asymmetries and Agency in Online Work Settings",
+          "authors": [
+            "Corentin Curchod",
+            "Gerardo Patriotta",
+            "Laurie Cohen",
+            "Nicolas Neysen"
+          ],
+          "journal": "Administrative Science Quarterly",
+          "year": "2020",
+          "doi": "10.1177/0001839219867024",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+          "abstract_locator": "Abstract，关于三种权力不对称机制的段落。正式刊载为 65(3)，644–676。",
+          "abstract_excerpt": "exploit their practical knowledge of the algorithm to increase their agency",
+          "abstract_summary": "作者访谈法国和比利时77名高绩效电商卖家，发现顾客评价造成买卖双方的可见性差距，算法将评价固化并延续权力不对称，卖家则借助对算法的实践知识扩大行动空间。本文推论是，骑行者可能通过反复试停摸索判定逻辑，同时仍依赖平台确认订单结束。",
+          "relevance": "substantive",
+          "relevance_reason": "回应“用户摸得出规律，平台就没有决定性作用”的反诘。若系统掌握结算权且用户可从反馈中学习，实用知识可以解释重试为何有时奏效，平台权力则解释为何用户仍须等候有效判定。卖家声誉与收入依赖无法直接推及一次租赁。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+          "abstract_hash": "431b94a0670a9434ba42487c6906993129a2f5e5714a6ea88e19c68d4e3e6c4c",
+          "excerpt_sha256": "e73be40d2ab9f5ff9f1d5fb0403703ca38def3d8161b9c1b2c197ba3ce251519",
+          "searched_at": "2026-11-22T17:31:42.175291+08:00",
+          "batch": "batch_001",
+          "observation_id": "supplemental:batch_001:2",
+          "metadata_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+          "abstract_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+          "article_id": "A_39940a4c1506e3c97c0df522",
+          "provenance": [
+            {
+              "title": "Working for an Algorithm: Power Asymmetries and Agency in Online Work Settings",
+              "authors": [
+                "Corentin Curchod",
+                "Gerardo Patriotta",
+                "Laurie Cohen",
+                "Nicolas Neysen"
+              ],
+              "journal": "Administrative Science Quarterly",
+              "year": "2020",
+              "doi": "10.1177/0001839219867024",
+              "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+              "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+              "abstract_locator": "Abstract，关于三种权力不对称机制的段落。正式刊载为 65(3)，644–676。",
+              "abstract_excerpt": "exploit their practical knowledge of the algorithm to increase their agency",
+              "abstract_summary": "作者访谈法国和比利时77名高绩效电商卖家，发现顾客评价造成买卖双方的可见性差距，算法将评价固化并延续权力不对称，卖家则借助对算法的实践知识扩大行动空间。本文推论是，骑行者可能通过反复试停摸索判定逻辑，同时仍依赖平台确认订单结束。",
+              "relevance": "substantive",
+              "relevance_reason": "回应“用户摸得出规律，平台就没有决定性作用”的反诘。若系统掌握结算权且用户可从反馈中学习，实用知识可以解释重试为何有时奏效，平台权力则解释为何用户仍须等候有效判定。卖家声誉与收入依赖无法直接推及一次租赁。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://journals.sagepub.com/doi/abs/10.1177/0001839219867024?journalCode=asqa",
+              "abstract_hash": "431b94a0670a9434ba42487c6906993129a2f5e5714a6ea88e19c68d4e3e6c4c",
+              "excerpt_sha256": "e73be40d2ab9f5ff9f1d5fb0403703ca38def3d8161b9c1b2c197ba3ce251519",
+              "searched_at": "2026-11-22T17:31:42.175291+08:00",
+              "batch": "batch_001",
+              "observation_id": "supplemental:batch_001:2",
+              "metadata_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+              "abstract_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4"
+            }
+          ]
+        },
+        {
+          "title": "The Making of the “Good Bad” Job: How Algorithmic Management Manufactures Consent Through Constant and Confined Choices",
+          "authors": [
+            "Lindsey D. Cameron"
+          ],
+          "journal": "Administrative Science Quarterly",
+          "year": "2024",
+          "doi": "10.1177/00018392241236163",
+          "metadata_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+          "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+          "abstract_locator": "Abstract，描述七年质性研究与选择范围的段落。正式刊载为 69(2)，458–514。",
+          "abstract_excerpt": "more-frequent and narrow choice",
+          "abstract_summary": "作者基于七年的网约车行业质性研究，指出算法把工作切分为多个交互环节，给司机提供频繁而范围有限的选择。司机以不同策略应对，作者据此解释算法管理如何获得部分劳动者的同意。本文推论是，还车界面的多个操作选项也可能把纠错过程拆成需要用户逐步完成的任务。",
+          "relevance": "substantive",
+          "relevance_reason": "回应“可以换点、重试和申诉，就说明用户拥有充分控制权”的反诘。若平台限定每个选项的结果且保留最终关单权，可比较选项数量与用户实际能解决的问题。工作场域的管理同意机制无法据此推及消费者，也不能估计补救耗时。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+          "abstract_hash": "a8cf897a12365edf8683fba2bceeb88cbb023e45c117c23282e6831288ad2d50",
+          "excerpt_sha256": "d3f87e842bc8cbea7b4ae62adabb27fe186197d0c89355f1cb3e855caf62d8ff",
+          "searched_at": "2026-11-22T17:31:42.176290+08:00",
+          "batch": "batch_001",
+          "observation_id": "supplemental:batch_001:3",
+          "metadata_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+          "abstract_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+          "article_id": "A_77a749f8281522fe9d4660b3",
+          "provenance": [
+            {
+              "title": "The Making of the “Good Bad” Job: How Algorithmic Management Manufactures Consent Through Constant and Confined Choices",
+              "authors": [
+                "Lindsey D. Cameron"
+              ],
+              "journal": "Administrative Science Quarterly",
+              "year": "2024",
+              "doi": "10.1177/00018392241236163",
+              "metadata_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+              "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+              "abstract_locator": "Abstract，描述七年质性研究与选择范围的段落。正式刊载为 69(2)，458–514。",
+              "abstract_excerpt": "more-frequent and narrow choice",
+              "abstract_summary": "作者基于七年的网约车行业质性研究，指出算法把工作切分为多个交互环节，给司机提供频繁而范围有限的选择。司机以不同策略应对，作者据此解释算法管理如何获得部分劳动者的同意。本文推论是，还车界面的多个操作选项也可能把纠错过程拆成需要用户逐步完成的任务。",
+              "relevance": "substantive",
+              "relevance_reason": "回应“可以换点、重试和申诉，就说明用户拥有充分控制权”的反诘。若平台限定每个选项的结果且保留最终关单权，可比较选项数量与用户实际能解决的问题。工作场域的管理同意机制无法据此推及消费者，也不能估计补救耗时。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://journals.sagepub.com/doi/10.1177/00018392241236163",
+              "abstract_hash": "a8cf897a12365edf8683fba2bceeb88cbb023e45c117c23282e6831288ad2d50",
+              "excerpt_sha256": "d3f87e842bc8cbea7b4ae62adabb27fe186197d0c89355f1cb3e855caf62d8ff",
+              "searched_at": "2026-11-22T17:31:42.176290+08:00",
+              "batch": "batch_001",
+              "observation_id": "supplemental:batch_001:3",
+              "metadata_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4",
+              "abstract_event_id": "exec-ae53c5b3-6ce1-4cb6-8571-e04dfa86c5c4"
+            }
+          ]
+        },
+        {
+          "title": "“网”路里的人：移动导航地图建构的劳动空间实践",
+          "authors": [
+            "徐婧",
+            "王婧涵"
+          ],
+          "journal": "社会学研究",
+          "year": "2024",
+          "doi": null,
+          "metadata_url": "https://sociologyol.ruc.edu.cn/shxyj/fzshx/wlshx/4f05870123b14d2a98dcb14552975701.htm",
+          "abstract_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/202005130001/2024/7//20240719121703WU_FILE_0.pdf",
+          "abstract_locator": "原刊第114页顶部提要，由原生网页搜索返回完整段落。正式刊载为第4期，114–135、228–229页。",
+          "abstract_excerpt": "平台劳资空间、导航数字空间和城市物理空间",
+          "abstract_summary": "作者考察平台内置导航与网约车司机劳动过程的结合，指出导航数字空间、城市物理空间和平台劳资空间共同塑造司机的身体行动与时空感知，数字中介下的地方感也难以稳定。本文推论是，还车时的挪车和往返可作为协调屏幕空间与现场空间的身体工作来观察。",
+          "relevance": "substantive",
+          "relevance_reason": "回应“用户走动只是个人选择”的反诘。若应用内地理表示决定现场动作能否完成交易，空间错位可解释部分额外移动。该文贴近数字出行场景，关于申诉、撤费及谁能改写订单状态仍需共享单车证据。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/202005130001/2024/7//20240719121703WU_FILE_0.pdf",
+          "abstract_hash": "ab4d2a30aeb21004bcf0e512593611b12bd89816e973d4c6b4f62b0545f9134d",
+          "excerpt_sha256": "b40dd90d70b9a63a81fe38072502ebd6dc33a5c75c5eed110593f0ea370578ce",
+          "searched_at": "2026-11-22T17:31:42.177291+08:00",
+          "batch": "batch_001",
+          "observation_id": "supplemental:batch_001:5",
+          "metadata_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+          "abstract_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+          "article_id": "A_269f58483c10d23feba0cfce",
+          "provenance": [
+            {
+              "title": "“网”路里的人：移动导航地图建构的劳动空间实践",
+              "authors": [
+                "徐婧",
+                "王婧涵"
+              ],
+              "journal": "社会学研究",
+              "year": "2024",
+              "doi": null,
+              "metadata_url": "https://sociologyol.ruc.edu.cn/shxyj/fzshx/wlshx/4f05870123b14d2a98dcb14552975701.htm",
+              "abstract_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/202005130001/2024/7//20240719121703WU_FILE_0.pdf",
+              "abstract_locator": "原刊第114页顶部提要，由原生网页搜索返回完整段落。正式刊载为第4期，114–135、228–229页。",
+              "abstract_excerpt": "平台劳资空间、导航数字空间和城市物理空间",
+              "abstract_summary": "作者考察平台内置导航与网约车司机劳动过程的结合，指出导航数字空间、城市物理空间和平台劳资空间共同塑造司机的身体行动与时空感知，数字中介下的地方感也难以稳定。本文推论是，还车时的挪车和往返可作为协调屏幕空间与现场空间的身体工作来观察。",
+              "relevance": "substantive",
+              "relevance_reason": "回应“用户走动只是个人选择”的反诘。若应用内地理表示决定现场动作能否完成交易，空间错位可解释部分额外移动。该文贴近数字出行场景，关于申诉、撤费及谁能改写订单状态仍需共享单车证据。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/202005130001/2024/7//20240719121703WU_FILE_0.pdf",
+              "abstract_hash": "ab4d2a30aeb21004bcf0e512593611b12bd89816e973d4c6b4f62b0545f9134d",
+              "excerpt_sha256": "b40dd90d70b9a63a81fe38072502ebd6dc33a5c75c5eed110593f0ea370578ce",
+              "searched_at": "2026-11-22T17:31:42.177291+08:00",
+              "batch": "batch_001",
+              "observation_id": "supplemental:batch_001:5",
+              "metadata_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde",
+              "abstract_event_id": "exec-b03adfe6-3edf-42eb-bebe-9aa5337c1dde"
+            }
+          ]
+        },
+        {
+          "title": "Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing",
+          "authors": [
+            "Stella Pachidi",
+            "Hans Berends",
+            "Samer Faraj",
+            "Marleen Huysman"
+          ],
+          "journal": "Organization Science",
+          "year": "2021",
+          "doi": "10.1287/orsc.2020.1377",
+          "metadata_url": "https://pubsonline.informs.org/toc/orsc/32/1",
+          "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc",
+          "abstract_locator": "INFORMS 文章页 Abstract，第 219–223 行。原文短摘见第 221 行。",
+          "abstract_excerpt": "who has the authority to make decisions around those issues",
+          "abstract_summary": "作者研究一家销售组织引入算法工具的过程，发现员工的表面配合与技术人员对工具的正面展示相互强化，使销售决策从依赖客户接触转向依赖模型预测。本轮据此推论，若还车平台优先采信定位结果，骑行者可能需要重试或另行举证，才能让有权限的人改判。",
+          "relevance": "substantive",
+          "relevance_reason": "论文能部分回应“额外动作是否只是定位误差造成”的反诘。定位误差可以触发冲突，组织认可何种证据、授权谁改判，则可能改变冲突后的处理路径。可迁移的条件是平台判定控制关单，且客服或其他复核渠道能够按明确规则采信现场证据。由此可比较系统重试、用户举证和人工改判三条路径。销售组织的证据能解释判断权如何向模型集中，骑行者多走多远、重试几次、等待多久，以及关单和撤费权限如何分配，仍需共享单车场域的证据。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc",
+          "abstract_hash": "5c5574e4a8ce27fa392403e5323837f11762fb431943737806709bee1d046cfd",
+          "excerpt_sha256": "bce56f3f57d9e25ae1da3663516a53ba47541edcbd6b21e842de0ffdf9846554",
+          "searched_at": "2026-11-22T17:32:58.337209+08:00",
+          "batch": "batch_002",
+          "observation_id": "supplemental:batch_002:1",
+          "metadata_event_id": "exec-a183d911-9e70-401c-af3d-2b3265ef113e",
+          "abstract_event_id": "exec-a183d911-9e70-401c-af3d-2b3265ef113e",
+          "article_id": "A_52a6f6e83636ae0aebf81264",
+          "provenance": [
+            {
+              "title": "Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing",
+              "authors": [
+                "Stella Pachidi",
+                "Hans Berends",
+                "Samer Faraj",
+                "Marleen Huysman"
+              ],
+              "journal": "Organization Science",
+              "year": "2021",
+              "doi": "10.1287/orsc.2020.1377",
+              "metadata_url": "https://pubsonline.informs.org/toc/orsc/32/1",
+              "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc",
+              "abstract_locator": "INFORMS 文章页 Abstract，第 219–223 行。原文短摘见第 221 行。",
+              "abstract_excerpt": "who has the authority to make decisions around those issues",
+              "abstract_summary": "作者研究一家销售组织引入算法工具的过程，发现员工的表面配合与技术人员对工具的正面展示相互强化，使销售决策从依赖客户接触转向依赖模型预测。本轮据此推论，若还车平台优先采信定位结果，骑行者可能需要重试或另行举证，才能让有权限的人改判。",
+              "relevance": "substantive",
+              "relevance_reason": "论文能部分回应“额外动作是否只是定位误差造成”的反诘。定位误差可以触发冲突，组织认可何种证据、授权谁改判，则可能改变冲突后的处理路径。可迁移的条件是平台判定控制关单，且客服或其他复核渠道能够按明确规则采信现场证据。由此可比较系统重试、用户举证和人工改判三条路径。销售组织的证据能解释判断权如何向模型集中，骑行者多走多远、重试几次、等待多久，以及关单和撤费权限如何分配，仍需共享单车场域的证据。",
+              "status": "valid_abstract",
+              "provider": "codex_native_web",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc",
+              "abstract_hash": "5c5574e4a8ce27fa392403e5323837f11762fb431943737806709bee1d046cfd",
+              "excerpt_sha256": "bce56f3f57d9e25ae1da3663516a53ba47541edcbd6b21e842de0ffdf9846554",
+              "searched_at": "2026-11-22T17:32:58.337209+08:00",
+              "batch": "batch_002",
+              "observation_id": "supplemental:batch_002:1",
+              "metadata_event_id": "exec-a183d911-9e70-401c-af3d-2b3265ef113e",
+              "abstract_event_id": "exec-a183d911-9e70-401c-af3d-2b3265ef113e"
+            }
+          ]
+        }
+      ],
+      "conflicts": [],
+      "initial_sha256": "afeda6c9615ebcf229a047ac1d847e5b846e9731ca3c5886f2edb7f870cb0c0f",
+      "supplemental_sha256": "74c284c2aa51d88ff93ced06831b45cfb42c97487bacac71720c02dc1a2e363d"
+    },
+    "theories": [
+      {
+        "title": "Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work",
+        "url": "https://link.springer.com/article/10.1023/A%3A1008651105359",
+        "claim": "Star 与 Strauss 将劳动可见性联系到谁能看见劳动、用什么指标承认劳动。用于比较骑行者实际做过的走动、重试和求助与平台记录计入的活动，适用条件是能够同时观察操作序列与平台记录。",
+        "event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d"
+      },
+      {
+        "title": "Algorithms at Work: The New Contested Terrain of Control",
+        "url": "https://journals.aom.org/doi/10.5465/annals.2018.0174",
+        "claim": "Kellogg、Valentine 与 Christin 将算法控制归纳为指挥、评价和规训机制。迁移时可检验系统是否限制操作、记录行动并执行费用后果。雇佣场域的劳动规训结论仅作机制类比。",
+        "event_id": "exec-cb6b5467-b11b-422e-8f9e-a64b422a8167"
+      },
+      {
+        "title": "Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work",
+        "url": "https://link.springer.com/article/10.1023/A%3A1008651105359",
+        "claim": "Star 与 Strauss（1999）认为，工作是否可见，取决于特定情境选择了哪些指标来表征工作。应用于还车争议时，可以对照用户实际走动、重试和求助的过程与平台日志、工单和绩效指标，检查这些活动何时被记录并进入复核。理论可解释劳动如何变得不可见，关单与撤费权的实际归属仍需核对平台流程。",
+        "event_id": "exec-2e653aae-2ce8-41c5-9aa0-167fa1ff482e"
+      }
+    ],
+    "plan": "# 论文写作方案\n\n**核心问题** 共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？\n**回答路径** question — 共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？\napproach — 沿单次还车事件追踪三个环节：提示怎样引导下一步操作，求助渠道怎样处理现场证据，以及骑行者何时获得订单结束的确认。先核对首次冲突的比较条件，再逐项判断平台流程接手了哪些工作、骑行者继续做了哪些工作，以及工作是否从移车和重试转为举证和状态追查。\nprovisional_answer — 可定位报道显示，点位提示能给骑行者明确的移动目标，但到达提示点后仍可能被拒。求助后的报道记录覆盖了提交申诉、拍照报障、联系后关锁和事后费用复核等环节，现场证据经有权渠道采纳并促成骑行者确认关单的完整路径仍缺证据。郑州边界案例提示，离场和收到订单结束确认之间可能有继续追查的工作，具体动作待核。\nevidence_ceiling — 回执和矩阵均待独立审查。本计划沿用冻结问题和二手访谈设计，核心候选的标线适用性仍待核。两条机制命题保留为待检验命题。结论限于可追踪案例中的行动过程，材料用于辨析路径及其条件，无法估计平均负担、比较平台总体表现或判定机制的普遍因果效应。\n\n## 分析框架的形成\n\n- **已有文献及解释** 以Rahman与Valentine的摘要为最近研究，交代协作修复如何使分歧得以表达并恢复项目推进。以Rahman的摘要解释判定标准不透明时为何可能出现试探操作，以李晶晶等的摘要交代同场域中停车规则及信用激励对行为的影响。文献对话限于所供摘要与理论摘述。\n- **已有解释的不足** 既有解释提示了项目如何恢复、行为如何受规则和反馈影响。本文接着追问，在一笔共享单车订单中，冲突发生以后，骑行者要做哪些额外工作，平台在哪一步接手，以及什么证据能确认订单已经结束。\n- **适用理论及选择理由** 以协作修复研究组织过程解释，用Star与Strauss的劳动可见性框架辨认哪些实际操作会留下平台可用的记录，用算法控制理论分析应用怎样给出行动选项、作出评价并关联费用后果。以知识中介和判断权研究细化接收、解释与处置的区别。理论迁移所需的平台实际权限由个案证据检验。\n- **结合问题的理论推演** D1先确定适用标线、车辆位置和应用拒绝能否对应同一次尝试。D2检验拒绝原因相近且存在可行调整时，具体提示是否减少试探性移车和重试。D3检验现场调整未解决时，证据采纳、有权复核与结束确认能否减少首次求助后的重复举证和追查。D4核对现场操作停止至骑行者收到结束确认之间的动作，并另记后续费用处置。\n- **相对已有解释的增量** 拟议增量是把触发条件、冲突后的工作分配和订单处置权限落实到同一笔订单的可核对步骤，辨明现场工作在哪一步结束、哪些工作可能转为举证或状态追查，以及作出或传达结束确认需要什么证据。\n- **维度如何合答问题并与理论对话** 按事件时间排列提示、移车、等待、重试、求助、举证、复核、落锁与订单结束确认。每项标注行动主体、权限证据、来源类型和位置。先在同平台、拒绝原因及现场条件相近的事件间寻找可比路径，再用边界案例检视规则适用、设备、等待和重复操作等解释。锁态、后台关单、骑行者收到确认、投诉工单关闭、费用显示或承诺、实际扣款与减免到账单独编码。\n- **冲突识别与比较条件** 相同的落锁失败表象可能对应实际适用边界不同、设备问题或判定与现场标线不一致。只有核对触发条件，才能判断两条补救路径是否可比。\n- **提示与现场调整** 提示给出可到达的点位或可执行的调整时，骑行者有明确的下一步。分析每次状态变化前做了什么，才能辨别提示、移车、等待和重试各自可能发挥的作用。\n- **现场举证与有效复核** 求助之后的工作取决于渠道能否接收和沿用现场证据、启动有权处置订单的复核，并把结果传回骑行者。应沿着证据提交、采纳、处置与反馈逐步查证。\n- **订单结束确认与费用后续** 停止现场操作、物理落锁、平台关闭订单和骑行者收到结束确认可能发生在不同时间。确认前的等待和追查属于本研究的观察区间，后续费用处置另有时间线。\n\n## 案例与材料设计\n\n- **案例背景** 以北京、武汉、郑州公开报道中的还车尝试为材料，交代地面标线、应用停车点及围栏、车锁和订单状态如何在一次还车中相遇。个案承担过程比较，城市和品牌作为事件背景。\n- **案例选择** 以单次还车事件为单位。适用标线、车辆位置和应用拒绝可对应到同一次尝试时才进入核心比较。金鱼胡同、北京白色框线实测和五棵松保留为候选。金台路和武汉两次事件各按标线缺项或适用性缺项使用。临河里用于检视规则边界和结果变化，郑州用于检验观察终点和费争边界。崇文门普通框与专用框仅列为设计中的待核规则边界，现有回执缺少可独立定位的材料。\n- **资料来源** 使用公开深度报道中的记者实测、当事人二手访谈、记者记载的截图或录屏及可辨识的第三方解释。原版与转载按事件去重。郑州8月当事人经历和9月记者跟进归同一订单，保留来源角色及时间差。未定位原始来源的626a689967415c40列入待核清单。回执独立审查及部分公开材料的再使用许可待核。\n- **研究方法** 以首次遇到适用现场标线与应用判定不一致为起点，以骑行者获得订单结束确认为终点。对缺首端或末端证据的路径保留可追踪片段并标出缺项。分别记录边界辨认、移车、重试、求助、举证、状态追查的次数、可核实操作耗时和等待时长。区分记者直接观察、当事人陈述、记者经手材料和第三方归因，区分明示先后、相对顺序和未知。对拒绝原因、权限和结果逐一核对竞争解释。\n\n## 正文章节及分节任务\n\n### 问题的提出\n\n**章节任务** 提出研究问题并界定补救工作的范围。\n**章节衔接** 从同类还车表象背后的不同后续动作，转入协作修复、判定反馈与工作可见性的解释。\n\n#### 从还车被拒到订单结束\n\n- **任务** 用一件可定位事件引出问题，再给出研究对象和观察区间。\n- **拟论证** 应用拒绝可能使骑行者继续移动、试停或申诉。要解释额外工作如何分配，需同时观察骑行者的行动及平台对订单状态的处置。\n- **材料与用途** 以金鱼胡同关联同次拒绝与申诉，以五棵松展示刷新、找点和付费入口，以郑州说明为什么收到订单结束确认应有独立时间点。（508f73328a7abe0e、c9853fa8c37ea7f0、0d133b9d6c7ecaee）\n\n- 第 1 段 以金鱼胡同开篇，依次交代报道中的框内停放、应用显示距停车点20米和申诉，交代照片证据目前定位至链接与图注、标线适用性待核。\n- 第 2 段 用五棵松受访者所说的刷新、找点、付费锁车引出冻结问题，指出每次操作所针对的判定障碍以及行动主体。\n- 第 3 段 界定还车冲突后的补救工作，列明操作次数、可核实耗时与等待的观察指标。借郑州界定骑行者获得结束确认的终点及后续费用过程的起点。\n\n### 文献综述与分析框架\n\n**章节任务** 交代理论来源、最近研究、研究空缺与四个维度的分工。\n**章节衔接** 将理论推论转成事件筛选条件、行动记录和结局指标，交给案例章说明如何落实。\n\n#### 从协作修复到一次还车中的工作分配\n\n- **任务** 区分最近研究、同场域参照和核心理论。\n- **拟论证** 协作修复解释分歧如何进入后续处置。工作可见性与算法控制进一步说明应追问哪些动作得到记录、哪些主体拥有改变后果的权限。\n- **材料与用途** 仅使用所供摘述和摘要。用已有研究提出观察问题，平台的关单及费用权限由个案材料核实。（A_f519c086e1f21dcbcc1e52af、A_db29896d5c83724691e35994、A_6535088ff7fdfe62dd1d1838、T_STAR_STRAUSS、T_KELLOGG、A_2b2ed429b6b6b363c9d5f875、A_52a6f6e83636ae0aebf81264）\n\n- 第 1 段 交代最近研究的项目场景及其发现，说明表达不同理解、重新协商预期为何可能让中断的流程恢复。写明迁移到单次还车所需的证据和处置条件。\n- 第 2 段 分别用不透明评价和共享单车信用激励研究说明反馈可预判性及费用后果可能如何影响行动，明确两篇摘要各自报告的结果。\n- 第 3 段 用劳动可见性解释移车、重试和求助如何被选择性记录，用算法控制说明界面选项和费用后果为何值得随事件追踪。结合中介和判断权研究，提出受理证据、解释判定及实际改判三个观察点。\n- 第 4 段 提出理论增量的可检验形式，说明一次冲突之后，现场任务、证据任务和订单状态确认可能怎样由不同主体完成。\n\n#### 比较条件、机制命题与结果检验\n\n- **任务** 把理论推导落到D1至D4的证据要求。\n- **拟论证** D1保证比较起点有据可查，D2和D3分别提出现场调整与复核命题，D4界定结果及工作何时结束。\n- **材料与用途** 用北京29米指引后仍被拒的序列说明提示命题的条件，以金台路的报障与稍晚免单显示说明复核和关单需各有证据。（T_KELLOGG、T_STAR_STRAUSS、A_f519c086e1f21dcbcc1e52af、4569b0463bf43a01、370c56bc7c58aaa3）\n\n- 第 1 段 说明相似的关锁失败可能来自适用边界、设备状态或判定与标线冲突，推出D1的同次尝试核对条件。\n- 第 2 段 完整陈述D2命题，列出拒绝原因相近、调整现场可行两个条件，并说明应比较提示后的试探性移车和重试。\n- 第 3 段 完整陈述D3命题，给出证据提交、采纳、有权处置、反馈及结束确认的过程预期，说明应比较首次求助后的重复举证和追查。\n- 第 4 段 说明D4如何用骑行者收到结束确认的时点界定观察终点，并为锁态、后台关单及费用结果分别规定证据。\n\n### 案例介绍\n\n**章节任务** 说明报道材料如何形成单次还车事件及可复查的比较样本。\n**章节衔接** 按同次尝试和标线适用性规则，将核心候选和各类边界对照交由D1核对。\n\n#### 事件选择与材料来源\n\n- **任务** 交代场景、纳入门槛、报道来源和去重方法。\n- **拟论证** 可追踪性决定一篇报道中的一笔订单可以回答哪些问题，同文多次试验和同一事件多次刊载需要逐项识别。\n- **材料与用途** 用北京实测展示同文独立试验，用武汉同题报道展示转载去重，用郑州展示同订单不同阶段和观察者。（4569b0463bf43a01、508f73328a7abe0e、c9853fa8c37ea7f0、d930c9f8e01020d8、bd56212f3f6aa551、370c56bc7c58aaa3、0d133b9d6c7ecaee）\n\n- 第 1 段 介绍三地公开报道来自记者实测与二手访谈，交代以单次还车事件为单位，并说明报道偏向可叙述的异常经历造成的选材限制。\n- 第 2 段 列出核心候选和各边界对照的入选理由，说明标线适用性待核时该材料可以支持的局部判断。崇文门保留为待核线索。\n- 第 3 段 展示拆分与合并口径：北京白线实测独立于同位置三车实测，武汉记者与市民为两例且转载各自去重，郑州当事人与记者跟进归同一订单。\n\n#### 时序编码和比较方法\n\n- **任务** 说明如何把报道转成可比较的行动和状态记录。\n- **拟论证** 行动、权限和状态各有证据位置。来源冲突及未报道动作需保留，避免把材料缺项当作零次操作或即时处理。\n- **材料与用途** 用郑州锁态说法和短信之间的未决关系、五棵松总时长无法拆分、金台路报障与最终落锁先后不明，示范缺项编码。（T_STAR_STRAUSS、0d133b9d6c7ecaee、c9853fa8c37ea7f0、370c56bc7c58aaa3）\n\n- 第 1 段 给出事件记录字段，覆盖可确认的时间或顺序、动作、主体、状态、权限、来源角色和定位。示范如何登记当事人陈述与记者经手材料。\n- 第 2 段 规定移车、重试、求助、举证、追查次数及耗时的计量口径。五棵松额外找点时长留空，金台路局部时序按可定位记录保留。\n- 第 3 段 说明比较优先条件和核验顺序，在代码或写作表格中保留规则边界、点位可用性、设备、等待和重试等解释。交代独立审查状态和缺证对结论的约束。\n\n### 冲突识别与比较条件\n\n**章节任务** 判断哪些事件具备比较同类还车冲突的起点。\n**章节衔接** 将各事件的标线、车辆和拒绝提示的证据状态带入D2，限定现场调整的可比性。\n\n#### 核心候选与同次尝试证据\n\n- **任务** 逐项核对三个候选的首次尝试证据。\n- **拟论证** 核心资格取决于适用现场停车线、车辆位置和应用拒绝在同一次尝试中的对应。满足纳入条件后，具体拒绝原因仍可记为未知。\n- **材料与用途** 用工作可见性区分可见的框内停放、平台点位显示与实际判定所用边界。分别标明图注、实测和自述的证明范围。（T_STAR_STRAUSS、508f73328a7abe0e、4569b0463bf43a01、c9853fa8c37ea7f0）\n\n- 第 1 段 核对金鱼胡同第10至27行的框内关锁失败、照片和P点截图定位、20米提示及申诉。保留原始配图、标线适用性、实际电子边界和申诉结果的缺项，并把定位故障标为当事人推测。\n- 第 2 段 分别重建北京白色框线记者实测和五棵松受访者的首次尝试，记录拒绝与现场边界的关联、证据类型和标线适用性缺项。\n- 第 3 段 汇总三个候选达到和欠缺的纳入条件，区分核心资格待定与拒绝原因未知对后续比较的不同影响。\n\n#### 规则边界与材料边界\n\n- **任务** 用对照说明相似表象可来自不同触发条件。\n- **拟论证** 地面位置相同或出现停车框，只提供部分比较条件。平台及车型规则、点位状态、设备与定位都需单独核对。\n- **材料与用途** 以算法评价说明记录与判断的关系。用北京同位置三车和临河里比较车辆与平台变化，用金台路及武汉区分首处标线缺证的不同情形。（T_KELLOGG、4569b0463bf43a01、2af636583a67f015、370c56bc7c58aaa3、d930c9f8e01020d8、bd56212f3f6aa551）\n\n- 第 1 段 列出北京同位置三车的直接关锁、移车六七次后关锁和多次移车后联系客服才关锁三种序列，标明车辆与平台共同变化及权限缺项。\n- 第 2 段 对照临河里两平台地图认可差异及两次美团用车结果，保留换车、位置变化和操作顺序。将企业的通用定位及容错解释留在第三方解释栏。\n- 第 3 段 区分金台路推荐点缺适用标线证据、武汉记者首处标线未知、武汉市民有框但适用性未知。把崇文门普通框与专用框写成比较时应核实的规则分界，注明所供回执缺单独材料。\n\n### 提示与现场调整\n\n**章节任务** 检验提示怎样改变现场调整的下一步及后续重试。\n**章节衔接** 用换点仍被拒、刷新未果或多次移动的路径，提出D3首次求助以后由谁接手的问题。\n\n#### 提示可执行性与换点结果\n\n- **任务** 对照提示后去向明确但结果不同的案例。\n- **拟论证** 点位提示可以给骑行者一个明确的移动目标。移动后的结果取决于到达条件和应用判定，现有案例可显示动作顺序，减少重试的命题仍待同类比较。\n- **材料与用途** 用算法指挥与判定不透明解释提示为何是可观察的行动条件，以武汉两例和北京29米换点区分三种报道终点。（T_KELLOGG、A_db29896d5c83724691e35994、d930c9f8e01020d8、bd56212f3f6aa551、4569b0463bf43a01）\n\n- 第 1 段 重建武汉记者收到前方P点提示、推行20余米并落锁的顺序，记首处标线和应用关单确认为未知。\n- 第 2 段 单独重建武汉市民在有框位置失败、按提示推行10余米并在围栏内停车的顺序，保留停车框适用性、提示原文、锁态与关单的缺项。\n- 第 3 段 对照北京白线案例到达29米外点位后仍被拒、随后短距离推行并返回才关锁的序列，讨论可达与可用为何需要各有证据。\n\n#### 选择、等待与试探性操作\n\n- **任务** 辨析多个界面选项、移动、等待和重复提交对结果的可能作用。\n- **拟论证** 评估提示能否节省操作，需要比较相近拒绝原因下的逐次动作，并知道状态改变前是否发生移动、等待或重试。\n- **材料与用途** 用五棵松和金台路展示多步调整，用北京白线实测检验到达提示点后仍失败的情况。未定位来源的等待记录仅列待核。（T_KELLOGG、c9853fa8c37ea7f0、370c56bc7c58aaa3、4569b0463bf43a01）\n\n- 第 1 段 重建五棵松受访者所述的刷新定位、寻找约32米外点位和最终接受1元调度费后锁车，分别记录尝试动作和报道账单，总订单时长留在原口径。\n- 第 2 段 记录金台路首次在推荐点位被拒、其后骑行十几分钟并辗转多个指定点完成还车的报道序列。标出这段耗时的报道口径及应用结束确认缺项。\n- 第 3 段 逐项列出点位可用性、移动引起的定位变化、设备状态、等待和重复尝试的竞争解释。指出626a689967415c40缺原始来源，原地等待、移车、重试、锁态和关单均待核。以缺少可比的提示时点和逐次操作说明命题仍待检验。\n\n### 现场举证与有效复核\n\n**章节任务** 检验现场证据能否由求助渠道接收、采纳并转换为有权限的订单处置。\n**章节衔接** 将联系后关锁、报障通过、费用反馈分别交D4核对对应的状态和时间。\n\n#### 首次求助到关单反馈之间的证据\n\n- **任务** 定位求助、举证、复核和确认各环节的已知动作与缺项。\n- **拟论证** 求助后的工作能否减少，取决于提交的现场证据能否沿用、复核者能否处置订单，以及骑行者能否收到结束确认。现有材料只覆盖这条链的部分环节。\n- **材料与用途** 用协作修复推导分歧进入处置所需的证据，用工作可见性及判断权区分上传、受理、采纳和操作。逐项核对金台路、金鱼胡同与北京三车实测。（T_STAR_STRAUSS、A_f519c086e1f21dcbcc1e52af、A_52a6f6e83636ae0aebf81264、370c56bc7c58aaa3、508f73328a7abe0e、4569b0463bf43a01）\n\n- 第 1 段 按金台路第31至40行写小程序和热线求助未果、随后拍照报障、当天稍晚看到报障通过及免单显示。联系第17至29行的换点还车记录，标明报障与最终落锁的精确先后、角色权限和关单确认待核。\n- 第 2 段 并置金鱼胡同申诉已发起和北京三车实测中一辆联系客服后关锁的两段记录，逐项列出提交内容、采纳记录、客服操作和应用确认哪些尚无证据。\n- 第 3 段 检视人工操作、系统重新判定、等待和再次尝试等解释。指出缺少同类标线冲突中平台当场代为关单且骑行者无需继续操作或申诉的完整对照，暂无法判断复核渠道是否减少重复举证及追查。\n\n#### 费用复核提供的权限对照\n\n- **任务** 用可定位的费争动作说明受理、调单和费用决定如何区分。\n- **拟论证** 事后费争可以展示某些渠道实际调取了哪些记录、作出了什么费用反馈，其权限证据限于已观察到的费用处置环节。\n- **材料与用途** 以知识中介区分受理、解释和改判。比较郑州记者跟进中的多环节复核和临河里快速申诉结果，保留准据和权限缺项。（T_STAR_STRAUSS、A_2b2ed429b6b6b363c9d5f875、0d133b9d6c7ecaee、2af636583a67f015）\n\n- 第 1 段 重建郑州9月跟进同一订单时的智能问答、重复陈述、转热线、身份复核和第4次拨打后人工调单，说明人工援引后台骑行数据并承诺申请减免14.5元。\n- 第 2 段 重建临河里接受5元管理费后关锁、事后申诉约17秒通过并显示无需再支付的过程，保留审核方式、采纳证据和资金流水缺项。\n- 第 3 段 比较两个费争过程各自可见的工作、处置主体和结果反馈，说明这些材料对D3关单命题的适用边界以及费用结果应如何转入D4。\n\n### 订单结束确认与费用后续\n\n**章节任务** 核对离场、落锁、关单确认及费用结果，判定哪些工作发生在观察区间内。\n**章节衔接** 把各事件可确认的工作终点和证据缺项带入结论，避免把局部顺序扩大为处置效果。\n\n#### 郑州同一订单的离场与结束确认\n\n- **任务** 重建现场停止操作到收到结束短信之间的可追踪时序。\n- **拟论证** 用于计量补救工作的终点应依据骑行者获得的结束确认。后台何时关单、实物何时落锁以及离场后做了哪些工作，各需要对应证据。\n- **材料与用途** 用劳动可见性区分骑行者经历、记者经手记录及平台通知，保留矩阵与回执对确认前再次联系的记录差异。（T_STAR_STRAUSS、0d133b9d6c7ecaee）\n\n- 第 1 段 写当事人回忆依提示离场、约23时收到未完成还车消息、23时37分收到称系统已自动锁车并结束订单的短信。将23时37分记为暂定的骑行者确认终点，实际锁态和后台关单时刻留空。\n- 第 2 段 核对矩阵第14至19行转述所指的两条消息之间再次联系。因回执未列该动作，暂录为待核；联系总次数、其他追查动作及可核实等待时长留空。\n- 第 3 段 列出当事人曾说已关锁与短信所称随后自动锁车之间的未决关系，说明原始离场提示、短信、锁态及首次标线缺证怎样限制该案的比较用途。\n\n#### 关单后的费争与结算证据\n\n- **任务** 给金台路、郑州及两种付费还车路径建立各自的状态记录。\n- **拟论证** 物理落锁、订单结束确认、投诉工单关闭、费用减免显示或承诺和实际结算，是各自可核查的结果。\n- **材料与用途** 以算法控制理论区分判定和费用后果。对照报道中的账单截图、短信、免单界面、申诉反馈及原始资金凭证缺项。（T_KELLOGG、0d133b9d6c7ecaee、370c56bc7c58aaa3、2af636583a67f015、c9853fa8c37ea7f0）\n\n- 第 1 段 沿郑州23时37分之后的时间线记录申诉、次日漏接外呼、17时36分投诉工单关闭及回拨，再记9月记者跟进。区分记者记述的16.5元订单截图、14.5元减免申请承诺和未核的扣款及入账。\n- 第 2 段 并列金台路报道的换点还车和当天稍晚显示可享免单，明确应用关单确认、免单兑现和实际结算待核。\n- 第 3 段 对照临河里管理费申诉显示无需支付、五棵松报道的付费锁车及1元调度费，分别记录报道能支持的费用状态与原始回执、资金流水及结束确认的缺项。\n\n### 结论与讨论\n\n**章节任务** 用与证据强度相称的表述直接回应冻结问题，并归纳拟议理论增量。\n**章节衔接** 末段以两条机制命题各自所缺的可比时序和凭证收束全文。\n\n#### 纠错安排在哪里改变了骑行者的工作\n\n- **任务** 综合可追踪动作与未决机制，给出案例范围内的回答。\n- **拟论证** 现有路径显示，应用提示可以确定移动目标，骑行者仍可能继续试停或选择付费。求助渠道的受理与复核可能改变举证和追查的分配，现场关单路径的证据仍不完整。离场和订单结束确认之间存在需要单独核对的观察区间。\n- **材料与用途** 以武汉和北京比较提示后的局部结果，用金台路和郑州限定复核、关单及费用解释。以理论解释为什么要同时追踪骑行者动作与平台记录。（T_STAR_STRAUSS、T_KELLOGG、A_f519c086e1f21dcbcc1e52af、d930c9f8e01020d8、bd56212f3f6aa551、4569b0463bf43a01、370c56bc7c58aaa3、0d133b9d6c7ecaee）\n\n- 第 1 段 直接回答平台纠错安排如何影响额外工作，依提示、求助复核和结果反馈三个环节各给一个由现有证据支撑的过程判断，并逐项标明暂定或未决。\n- 第 2 段 归纳拟议增量：用单次事件的行动记录追踪谁能提交证据、谁能处置订单，以及线下操作何时可能转为举证和追查。说明这一分析如何接续协作修复和工作可见性研究。\n- 第 3 段 分别交代两条命题待核的证据。提示命题需适用标线和触发条件可比的逐次操作记录，复核命题需同次冲突中的证据采纳、权限操作、关单反馈和后续工作记录。最后限定结论适用于可追踪过程，并保留独立审查状态。\n\n## 材料索引\n\n- **T_STAR_STRAUSS** Star 与 Strauss（1999），Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work，输入所附理论摘述，关于工作如何通过指标和记录获得可见性的部分。Springer文章页 https://link.springer.com/article/10.1023/A%3A1008651105359\n- **T_KELLOGG** Kellogg、Valentine 与 Christin，Algorithms at Work: The New Contested Terrain of Control，输入所附理论摘述，关于指挥、评价和规训的部分。https://journals.aom.org/doi/10.5465/annals.2018.0174\n- **A_f519c086e1f21dcbcc1e52af** Rahman 与 Valentine（2021），平台中介项目中的协作修复，INFORMS文章页Abstract，第168至171行。https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428\n- **A_db29896d5c83724691e35994** Rahman（2021），The Invisible Cage: Workers’ Reactivity to Opaque Algorithmic Evaluations，SAGE文章页Abstract，66卷4期，945至988页。https://journals.sagepub.com/doi/10.1177/00018392211010118\n- **A_6535088ff7fdfe62dd1d1838** 李晶晶等（2025），《信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析》，《管理世界》原刊第136页摘要。https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf\n- **A_2b2ed429b6b6b363c9d5f875** Waardenburg、Huysman 与 Sergeeva（2022），不透明算法的知识中介，INFORMS文章页Abstract开头两句，33卷1期，59至82页。https://pubsonline.informs.org/doi/10.1287/orsc.2021.1544\n- **A_52a6f6e83636ae0aebf81264** Pachidi等（2021），Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing，INFORMS文章页Abstract，第219至223行。https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc\n- **508f73328a7abe0e** 北京金鱼胡同哈啰单车框内关锁失败后发起申诉，北京交通广播搜狐刊载版第10至27行。第14至20行为现场照片和P点截图的链接及图注，第23行记载20米提示及申诉。https://www.sohu.com/a/539971892_100081921\n- **4569b0463bf43a01** 北京同位置三车实测及独立的白色框线换点实测，人民日报客户端刊载的《法治日报》报道第64至66行。https://www.peopleapp.com/column/30044122931-500005263134\n- **c9853fa8c37ea7f0** 北京五棵松受访者刷新、找点及付费锁车，《法治日报》报道第20至23、36至39行。https://www.peopleapp.com/column/30044122931-500005263134\n- **2af636583a67f015** 北京临河里两次美团还车及管理费申诉，1039调查团搜狐转载第41至71行。第81至90行为企业人员解释。https://www.sohu.com/a/539971892_100081921\n- **d930c9f8e01020d8** 武汉老关村站记者按提示推行20余米后落锁，极目新闻搜狐刊载版第49行，同题原站稿记者体验段对应同一次实测。https://www.sohu.com/a/974401971_121284943\n- **bd56212f3f6aa551** 武汉老关村站附近市民按提示推行10余米后在围栏内停车，极目新闻搜狐刊载版第54行，同题原站稿市民现场段对应同一次停车。https://www.sohu.com/a/974401971_121284943\n- **370c56bc7c58aaa3** 北京金台路万惠商场附近记者换点还车、拍照报障及免单显示，《人民日报海外版》2023年5月11日第4版PDF，第17至29行记首次被拒及换点还车，第31至36行记求助未果及拍照报障，第37至40行记当天稍晚的免单显示。https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf\n- **0d133b9d6c7ecaee** 郑州哈啰同一订单的离场回忆、账单及后续费争复核，大河报署名报道的北青网搜狐转载，第10至30行为当事人回忆及记者经手材料，第40至64行为记者后续实测，第71至79行为外呼流程说明及采访函结果。合并旧材料b19cc854cb5f961a和9cdcbdc904fffcd4。https://www.sohu.com/a/1074901486_255783\n",
+    "plan_sha256": "c1d9e1289a8c3963b4ab471cfea41614083f9c2aa238dfe4891a884d8406ded5"
+  },
+  "model": "gpt-6.2-sol"
+}

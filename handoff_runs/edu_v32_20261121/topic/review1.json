@@ -1,0 +1,35 @@
+{
+  "stage": "opportunity",
+  "verdict": "PASS",
+  "model": "gpt-6.2-sol",
+  "invocation_id": "67380a77-a974-458a-80bd-332d9d7f1551",
+  "reviewer_dispatch_id": "01a1fde7-3c97-7953-b515-d5b32ee73070",
+  "dispatch_scope": "same independent reviewer dispatch; invocation_id identifies the individual stage decision, not a separate model call",
+  "input_sha256": "71c999957fbbfe230028e1689ca2dbde0afc5d9cd89b69d66f75c01f1f6fba39",
+  "selected_ids": [
+    "O1"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "locator": "社科文献出版社摘要；原条目同出版社镜像 https://cpms.ssap.com.cn/skwx_cmr/initDatabaseDetail?contentId=6727298&contentType=literature&siteId=23",
+      "finding": "作者报告控制家长主动沟通与学校固定效应等变量后的教师沟通频率差异。联系次数没有直接表明诉求得到处理。"
+    },
+    {
+      "evidence_id": "E2",
+      "locator": "《社会学评论》2026年第2期摘要 https://src.ruc.edu.cn/CN/Y2026/V14/I2",
+      "finding": "作者报告制度化家校合作与较小的校际参与差距同现，家庭社会经济地位仍与参与有关。校际差距与家庭阶层差距属于不同层次，参与也不等于实质回应。"
+    }
+  ],
+  "strongest_objection": "教师可能因学生需要、家长可联系性或学校惯例安排沟通。控制家长主动沟通的观察结果无法单独区分这些解释。",
+  "actual_increment": "将家庭资源、家长动用资源与学校做出回应区分开，提出学校一侧可能参与形成不平等的研究机会。",
+  "gap": "现有证据直接涉及联系频率和家长参与，两者均未观察同一类型诉求的进入、认可与处理。",
+  "reason": "O1依托可定位的调查报告，制度回应有独立分析价值。可形成问题，当前仅把实质回应当作待观察过程。",
+  "next_action": "推进概念问题，明确老师主动联系与收到诉求后处置属于不同互动。",
+  "expected_gain": "使后续问题的解释对象落在学校行为。",
+  "cost": {
+    "model_calls": 1,
+    "search_calls": 0
+  },
+  "action_worth_cost": true
+}

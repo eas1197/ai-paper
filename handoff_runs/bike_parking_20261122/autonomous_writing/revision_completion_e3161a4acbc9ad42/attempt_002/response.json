@@ -1,0 +1,22 @@
+[
+  {
+    "index": 0,
+    "completed": false,
+    "evidence": "after.framework_sha256 与 receipt.framework_sha256 同为 570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb。after.rows[D1].unresolved 仍将旧哈希 b3a591ec 和 0921a925 对应的制品、版本关系及矩阵实际绑定列为待核，版本元数据也未记录这些核验结果。"
+  },
+  {
+    "index": 1,
+    "completed": true,
+    "evidence": "D2.needed_material 将 626a689967415c40 标为原始来源未定位，等待后落锁列为待核线索。D2.evidence 将原合并引用 a8d0ded030678bb7 拆为第49行记者推行20余米后落锁和第54行市民推行10余米后停车两条，保留首次标线及其适用性、等待期间操作和应用关单确认的缺项。"
+  },
+  {
+    "index": 2,
+    "completed": true,
+    "evidence": "receipt.materials 新增金鱼胡同独立条目 508f73328a7abe0e，D1.needed_material 和 D1.evidence 引用第10至27行，定位框内照片、哈啰P点截图、同次还车的20米提示及申诉。D1.conclusion 保留核心候选身份，D1.unresolved 保留标线适用性及申诉后的锁态、关单和费用结果待核。"
+  },
+  {
+    "index": 3,
+    "completed": true,
+    "evidence": "receipt.materials 的替换条目 3a88dc2f62f73de6 将商场写为万惠商场。D1、D3、D4 的 needed_material 和 evidence 均引用该条目并统一定位至《人民日报海外版》第4版PDF第17至40行，保留首次尝试处标线用途、报障与最终落锁的精确先后及实际结算待核。"
+  }
+]

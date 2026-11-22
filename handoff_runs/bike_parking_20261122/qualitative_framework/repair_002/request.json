@@ -1,0 +1,16 @@
+{
+  "parent_receipt_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde",
+  "items": [
+    {
+      "index": 2,
+      "origin": "source",
+      "severity": "local",
+      "reason": "补记金台路报道中的求助、报障和免单显示，属于原始事实补充，保留现有事件身份及对落锁时序、应用关单和实际结算的判断。",
+      "instruction": "在 D3 金台路证据中补记小程序和热线求助因人工客服繁忙未果，随后拍照报障，当天稍晚显示可享免单。继续将报障与最终落锁的精确先后、应用关单确认及实际结算列为未知。[金台路报道第4版第31至40行](https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf)",
+      "handler": "source",
+      "status": "ready",
+      "remaining_collection_batches": 1
+    }
+  ],
+  "framework_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb"
+}

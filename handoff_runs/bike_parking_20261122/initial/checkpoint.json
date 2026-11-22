@@ -1,0 +1,303 @@
+{
+  "config_sha256": "af2e19ff70b92cb9bcb4615fba1ad45f27832a9d963b8447638af2eba72bae14",
+  "collection_id": "COL_0e2f4b9714f9f6b6f28fca5b",
+  "engine": "codex_native_v1",
+  "config": {
+    "theme": "共享单车停车",
+    "target": 5,
+    "topic_search_phase": "initial",
+    "journals": [
+      "中国社会科学",
+      "社会学研究",
+      "社会",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界",
+      "American Sociological Review",
+      "American Journal of Sociology",
+      "Administrative Science Quarterly",
+      "Organization Science"
+    ],
+    "max_batches": 3,
+    "timeout_seconds": 480,
+    "excluded_titles": [],
+    "search_guidance": {
+      "issue": "服务组织中的数字控制、用户的补救劳动及决策权",
+      "why": "用户的走动、重试、求助与平台控制的关单、撤费权相遇，是结构与行动关系，而非停车规则罗列。",
+      "object_search": "共享单车电子围栏、定位还车、数字出行服务",
+      "issue_search": "算法控制与行动策略，服务系统故障后的补救劳动与权限，保留劳动场域作为机制对照而不套用雇佣关系",
+      "theory_search": "Star 与 Strauss 的隐形劳动，组织调节与技术中介控制；解释什么劳动被计入，何种推论仅是类比",
+      "specialist_journals": [
+        {
+          "name": "Administrative Science Quarterly",
+          "publisher_url": "https://journals.sagepub.com/home/asq",
+          "standing": "Cornell Johnson 的组织研究期刊，由 SAGE 出版",
+          "fit": "组织和平台规则如何塑造行动者选择"
+        },
+        {
+          "name": "Organization Science",
+          "publisher_url": "https://pubsonline.informs.org/journal/orsc",
+          "standing": "INFORMS 的组织科学研究期刊",
+          "fit": "技术控制、服务组织和行动者抵抗"
+        }
+      ],
+      "candidate_question": "还车判定发生冲突时，平台的纠错安排如何影响骑行者承担的额外劳动？"
+    },
+    "run_mode": "dev",
+    "search_action_budget": 24,
+    "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0",
+    "topic_batch_budget": true
+  },
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-22T12:36:04.034884+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-22T12:38:04.952091+08:00",
+      "event_sha256": "8d173db8903f71fba2d993969886260d880036d2fb0544c077a443598188b564",
+      "response_sha256": "36de5891fedded6d5d562fb3f84fee042f18641565be3759f7c076f5650c2c6f",
+      "notes": [
+        "按本批为初查处理。纳入范围按用户明确列出的11刊执行，排重表为空。检索日志使用正式卷期年份，明确记录提前在线发表的差异。",
+        "原生网页动作共24项，含14条查询、8项打开和2项页内查找。按进入逐篇筛查的去重正刊候选计，发现7篇，核实可入表题录5篇，获得原摘要内容5篇，其中3篇取得完整摘要，2篇取得可定位摘要片段。4篇在打开的文章页面核过摘要内容，哈啰单车论文的原摘要由搜索结果完整展开，另打开高校题录页核对。若验收要求每篇必须独立打开摘要来源，则满足该要求的为4篇，缺口1篇。未下载全文或保存文件。长任务技能文件读取被本地策略拦截。",
+        "议题层先以 Organization Science algorithmic control gig workers platform Möhlmann algorithms at work abstract Kellogg Valentine Christin、Administrative Science Quarterly algorithmic control platform workers Uber discretion customer Rosenblat Rahman invisible cage abstract、Organization Science service failure customer work technology workarounds repair routines exception handling abstract 查询。优先打开 Expanding the Locus of Resistance，再以 The Invisible Cage Rahman Administrative Science Quarterly abstract 和两个刊名版本的 Flexing and Flirting Cameron algorithm 定向追查，后者未形成可纳入的独立记录。",
+        "议题层扩展使用 Organization Science workarounds routines technology exceptions abstract Kellogg Beane、Enacting Integrated Information Technology site:pubsonline.informs.org abstract、平台 算法 骑手 数字控制 社会学研究 管理世界 外卖 申诉，以及陈龙题名关键词加 site:shxyj.ajcass.com。结果提供两项不同于零工劳动的对照，分别解释系统约束下的绕行和技术扰动后的路径延续。INFORMS 的 Path Coherence 入口在工具记录中关联 DOI 与出版商摘要转写，表中保留此次实际返回摘要的出版商入口。ASR、AJS 入口本轮未单独打开。",
+        "对象层使用 共享单车 停车 管理世界 OR 经济研究 OR 社会学研究 电子围栏 还车，随后用 DOI 10.19744/j.cnki.11-1235/f.2025.0051 加共享单车摘要、以及完整题名加管理世界 摘要 cnki 官网追查。命中一篇同场域准实验。其结果可以比较积分激励，但预算内未核实到直接回答定位争议中补救劳动及撤费权限的目标刊研究。",
+        "理论层以 Star Strauss Layers of Silence Arenas of Voice invisible work Springer abstract 搜索。DOI 入口转跳失败，改用 Springer 文章页成功打开。算法控制综述来自议题层查询，作为理论线索单列。",
+        "THEORY|Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work|https://link.springer.com/article/10.1023/A%3A1008651105359|Star 与 Strauss 将劳动可见性联系到谁能看见劳动、用什么指标承认劳动。用于比较骑行者实际做过的走动、重试和求助与平台记录计入的活动，适用条件是能够同时观察操作序列与平台记录。",
+        "THEORY|Algorithms at Work: The New Contested Terrain of Control|https://journals.aom.org/doi/10.5465/annals.2018.0174|Kellogg、Valentine 与 Christin 将算法控制归纳为指挥、评价和规训机制。迁移时可检验系统是否限制操作、记录行动并执行费用后果。雇佣场域的劳动规训结论仅作机制类比。"
+      ]
+    },
+    {
+      "batch": "batch_002",
+      "started_at": "2026-11-22T12:57:13.223653+08:00",
+      "status": "completed",
+      "search_events": 5,
+      "finished_at": "2026-11-22T12:58:21.627223+08:00",
+      "event_sha256": "780b74d2223766aa2018c915435cca410cc285f5ebd248bf1b5d2c081114d541",
+      "response_sha256": "7adadb014f94d627c83de3dce79eeffd799cc3ed699ebf78c940dfcd703148c2",
+      "notes": [
+        "网页预算使用 20/24 个动作，其中查询 12 次、打开 5 次、页内定位 3 次。以进入逐篇复核且未命中排重表的指定期刊候选为计数口径，发现 3 篇、核实题录 3 篇、从成功访问的页面读到原摘要 2 篇、纳入 1 篇。未下载全文。",
+        "议题层先在 INFORMS 和 SAGE 用期刊名配合 exception handling、technology routines、repair、help desk、Barley technicians control、customer service repair 和 workarounds 检索，随即定位两篇优先候选的摘要。纳入的论文涵盖平台工具、意外事件和协作修复。另已核实 Daphne Demetry 的 Embrace the Unexpected: How Organizations Foster Participatory Improvisation with Customers，在线发表于 2024 年，正式卷期为 Organization Science 36(4)，2025 年，1288–1313 页。其摘要解释餐厅与顾客如何共同应对服务中断，数字判定和改判权限的贴合度较低。https://pubsonline.informs.org/doi/10.1287/orsc.2023.17551",
+        "对象层将「共享单车＋电子围栏／定位还车／停车」及「bike sharing＋geofencing／parking」与指定刊名组合查询，随后加用「停放」「哈啰」「驾照分」和中文期刊官网域名。查到排重表中的《信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析》。另一停车治理近邻《北京市老旧社区共享单车使用的现状、问题与治理策略》属于蓝皮书章节。进一步按《社会学研究》的移动导航篇名、作者和官网域名查找。此次未核实到符合期刊范围且能直接解释还车争议后额外劳动的新论文。https://sociology.ssap.com.cn/skwx_shx/LiteratureDetail.aspx?ID=1380181",
+        "理论层按 Star、Strauss、Layers of Silence、visible invisible work 和 Springer abstract 检索。DOI 入口跳转失败后，直接打开 Springer 的文章页并定位摘要。理论条目另计。",
+        "THEORY|Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work|https://link.springer.com/article/10.1023/A%3A1008651105359|Star 与 Strauss（1999）认为，工作是否可见，取决于特定情境选择了哪些指标来表征工作。应用于还车争议时，可以对照用户实际走动、重试和求助的过程与平台日志、工单和绩效指标，检查这些活动何时被记录并进入复核。理论可解释劳动如何变得不可见，关单与撤费权的实际归属仍需核对平台流程。"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "title": "The Invisible Cage: Workers’ Reactivity to Opaque Algorithmic Evaluations",
+      "authors": [
+        "Hatim A. Rahman"
+      ],
+      "journal": "Administrative Science Quarterly",
+      "year": "2021",
+      "doi": "10.1177/00018392211010118",
+      "metadata_url": "https://journals.sagepub.com/toc/asq/66/4",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+      "abstract_locator": "SAGE 文章页 Abstract，正式卷期 66(4)，945–988",
+      "abstract_excerpt": "algorithmic evaluation systems are not transparent",
+      "abstract_summary": "作者以三年多的访谈、档案和平台观察研究自由职业者，指出平台以不透明的算法拉开评分差异，劳动者难以预测评价标准及其变化。对还车研究的推论是，当判定依据与反馈不清楚时，骑行者可能需要靠走动和反复提交来试探系统。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“规则公布后，额外操作只是用户没照做”的反诘。迁移条件是区分公开停车规则与用户实际能获得的判定信号，并观察用户能否据此调整行动。原文研究关乎影响工作机会的反复评价，对单次关单、撤费以及定位误差的来源解释有限。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/10.1177/00018392211010118",
+      "abstract_hash": "b570df5e22f786443ef84064be40c16e5f6e617a4fa979765a5050c445a4b88a",
+      "excerpt_sha256": "714cebf9480eb40086653f5f2b202faad736480368ef1b02efdb9eb360c3001b",
+      "searched_at": "2026-11-22T12:38:04.949902+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-74fd618b-929f-4c8a-b9a2-89c2f93f2637",
+      "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2"
+    },
+    {
+      "title": "Expanding the Locus of Resistance: Understanding the Co-constitution of Control and Resistance in the Gig Economy",
+      "authors": [
+        "Lindsey D. Cameron",
+        "Hatim A. Rahman"
+      ],
+      "journal": "Organization Science",
+      "year": "2022",
+      "doi": "10.1287/orsc.2021.1557",
+      "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+      "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+      "abstract_locator": "INFORMS 文章页 Abstract 开头，正式卷期 33(1)",
+      "abstract_excerpt": "algorithmically mediated customer control",
+      "abstract_summary": "作者把控制与抵抗放在服务互动中考察，指出平台将顾客给劳动者的评分交由算法汇总和追踪，据此影响劳动者未来获得的机会。对还车研究的推论是，应追踪现场行为如何被转化为平台记录，以及参与者能在哪个环节影响记录或其后果。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“系统只是记录现场状态”的反诘，因为记录经规则处理后会约束后续机会。迁移条件是还车证据确实进入平台判断，且能够追踪证据在哪个环节可被更正。原研究中的顾客提供评分，共享单车骑行者则承受还车判定，角色方向有别。该文无法确定客服能否关单或撤费。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1557",
+      "abstract_hash": "6f54f154624175dbdc7b188863d1f2caceb3749a66a07dacbd270c57e4ee21b5",
+      "excerpt_sha256": "c23b920d1c335a507e732d0786fc3f764df7677a496b43c939c8f777e2158338",
+      "searched_at": "2026-11-22T12:38:04.951578+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+      "abstract_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2"
+    },
+    {
+      "title": "Enacting Integrated Information Technology: A Human Agency Perspective",
+      "authors": [
+        "Marie-Claude Boudreau",
+        "Daniel Robey"
+      ],
+      "journal": "Organization Science",
+      "year": "2005",
+      "doi": "10.1287/orsc.1040.0103",
+      "metadata_url": "https://pubsonline.informs.org/toc/orsc/16/1",
+      "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+      "abstract_locator": "INFORMS 文章页 Abstract，正式卷期 16(1)，3–18",
+      "abstract_excerpt": "work around system constraints in unintended ways",
+      "abstract_summary": "作者对大型政府机构的企业资源计划系统做解释性个案研究，发现用户起初尽量回避系统，后来借助项目领导、熟练用户和同伴的影响，即兴学会绕开系统限制。对还车研究的推论是，反复使用者可能通过同伴经验形成系统设计之外的补救办法。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“技术限制给所有人留下同样选择”的反诘。迁移条件是骑行者有重复使用或交流的机会，且系统实际留有可行的替代操作。绕行成功能解释用户如何恢复流程，仍需另查它是否改变平台认定、计费或人工纠错权限。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1040.0103?journalCode=orsc",
+      "abstract_hash": "ce87b6c5adb0c181e5de64ee54f08f29bc8cd9380ead8a5f031936713030cb13",
+      "excerpt_sha256": "79479cc2ad9a33e757da1348a9c37fe1b93774c7539567e8b222e5b509239d45",
+      "searched_at": "2026-11-22T12:38:04.951578+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-ae3d264f-a95d-415f-af65-8543167408f2",
+      "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d"
+    },
+    {
+      "title": "信用管理对消费者行为的双重影响——基于哈啰单车驾照分的实证分析",
+      "authors": [
+        "李晶晶",
+        "陈帅",
+        "秦萍",
+        "耿可心",
+        "王雅璨"
+      ],
+      "journal": "管理世界",
+      "year": "2025",
+      "doi": "10.19744/j.cnki.11-1235/f.2025.0051",
+      "metadata_url": "https://sem.bjtu.edu.cn/show-975-9999.html",
+      "abstract_url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+      "abstract_locator": "原刊第一页，第136页“摘要”。原摘要由原生搜索结果完整展开，另打开北京交通大学经管学院页面核对《管理世界》2025年第4期题录",
+      "abstract_excerpt": "奖励性激励效果明显优于惩罚性激励",
+      "abstract_summary": "作者用哈啰单车十四城高频数据开展双重差分分析，发现驾照分制度增加骑行，违规行为随时间逐渐减少，信誉和经济激励均发挥作用，且奖励效果更强。对还车研究的推论是，观察到的行为变化可能来自激励，需要与判定冲突后用户承担的纠错成本分别识别。",
+      "relevance": "direct",
+      "relevance_reason": "可回应“平台管控只会妨碍骑行”的反诘，并为同场域的激励解释提供参照。迁移条件是区分实际违停、系统判定与复核结果，并观察是否存在类似的积分或费用后果。论文考察制度实施后的骑行和违规行为，摘要未报告误判后的走动、重试、关单或撤费。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://ae.ruc.edu.cn/docs/2026-04/83159d50e6c24639948cbc16e46a01eb.pdf",
+      "abstract_hash": "b8154fb648bae71602775c9bcaadea5f55805ae918d1bf5c5bfb7a169a7f73a3",
+      "excerpt_sha256": "8b734ad741ac470ba07eb5db99653ed13b0fe339264b88e5ae4ffc72c681dd09",
+      "searched_at": "2026-11-22T12:38:04.952091+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:5",
+      "metadata_event_id": "exec-f891092a-1e14-4c9a-810d-b1624f9b60e0",
+      "abstract_event_id": "exec-37bb4503-d161-4925-b9fd-d81cec2a358d"
+    },
+    {
+      "title": "How Managers Maintain Control Through Collaborative Repair: Evidence from Platform-Mediated “Gigs”",
+      "authors": [
+        "Hatim A. Rahman",
+        "Melissa A. Valentine"
+      ],
+      "journal": "Organization Science",
+      "year": "2021",
+      "doi": "10.1287/orsc.2021.1428",
+      "metadata_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+      "abstract_url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+      "abstract_locator": "INFORMS 原刊页面 Abstract，第 168–171 行。正式卷期为 32(5)，1300–1326 页。",
+      "abstract_excerpt": "surface misaligned interpretations of a situation",
+      "abstract_summary": "作者通过平台软件开发项目的归纳式田野研究发现，面对承包者的意外行动，客户经理动用平台工具强制管控，反而妨碍项目完成。协作修复让双方说清对故障的不同理解，协商新的相互预期，从而有助于恢复信任并完成项目。本研究据此推论，还车争议中能否提交证据、由谁复核和改判，可能影响骑行者的重试与求助负担。",
+      "relevance": "substantive",
+      "relevance_reason": "这篇论文能部分回应「骑行者多走几步只是定位误差的后果」这一反诘。定位误差可以触发争议，组织如何处理分歧则可能影响后续由谁举证、反复尝试或确认服务结束。可迁移的条件是现场情况与系统判定存在分歧，用户能提交可采纳的现场证据，且平台有人或有流程能复核并改判。原研究观察的是承包项目中的协作与控制，无法据此判断单车平台的实际关单、撤费权限，也无法估计骑行者多承担了多少劳动。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2021.1428",
+      "abstract_hash": "8cda6456a669875c6c2e0d0f98007dc9330a973b652131da01b211289d315a10",
+      "excerpt_sha256": "4e3ce953cf5fca2ad1716068e1bfcd85e987a32dbedf93a0eaaaf02fecaed3ef",
+      "searched_at": "2026-11-22T12:58:21.627223+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9",
+      "abstract_event_id": "exec-ab3f828c-9fd4-4836-9192-17748c98f9f9"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "Path Coherence and Disruption in Routine Dynamics",
+      "reason": "missing_native_tool_receipt",
+      "batch": "batch_001"
+    },
+    {
+      "title": "“数字控制”下的劳动秩序——外卖骑手的劳动控制研究",
+      "reason": "检索结果返回陈龙发表于《社会学研究》2020年第6期的引文。预算内未打开该文的原始题录或摘要入口。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "在线劳动平台算法管理：理论探索与研究展望",
+      "reason": "检索结果返回《管理世界》2022年第2期引文。预算内未打开原始题录或摘要入口。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "“网”路里的人：移动导航地图建构的劳动空间实践",
+      "reason": "题录可交叉核对为徐婧、王婧涵发表于《社会学研究》2024年第4期。检索结果显示提要，但人大社会学视野网页面打开超时，原刊检索返回 PDF，未打开该全文。该研究也是定位技术和身体移动的近邻，现有证据较少涉及故障后的复核与结单权限。",
+      "batch": "batch_002"
+    }
+  ],
+  "budget_history": [
+    {
+      "prior_config": {
+        "theme": "共享单车停车",
+        "target": 5,
+        "topic_search_phase": "initial",
+        "journals": [
+          "中国社会科学",
+          "社会学研究",
+          "社会",
+          "探索与争鸣",
+          "中国青年研究",
+          "经济研究",
+          "管理世界",
+          "American Sociological Review",
+          "American Journal of Sociology",
+          "Administrative Science Quarterly",
+          "Organization Science"
+        ],
+        "max_batches": 1,
+        "timeout_seconds": 480,
+        "excluded_titles": [],
+        "search_guidance": {
+          "issue": "服务组织中的数字控制、用户的补救劳动及决策权",
+          "why": "用户的走动、重试、求助与平台控制的关单、撤费权相遇，是结构与行动关系，而非停车规则罗列。",
+          "object_search": "共享单车电子围栏、定位还车、数字出行服务",
+          "issue_search": "算法控制与行动策略，服务系统故障后的补救劳动与权限，保留劳动场域作为机制对照而不套用雇佣关系",
+          "theory_search": "Star 与 Strauss 的隐形劳动，组织调节与技术中介控制；解释什么劳动被计入，何种推论仅是类比",
+          "specialist_journals": [
+            {
+              "name": "Administrative Science Quarterly",
+              "publisher_url": "https://journals.sagepub.com/home/asq",
+              "standing": "Cornell Johnson 的组织研究期刊，由 SAGE 出版",
+              "fit": "组织和平台规则如何塑造行动者选择"
+            },
+            {
+              "name": "Organization Science",
+              "publisher_url": "https://pubsonline.informs.org/journal/orsc",
+              "standing": "INFORMS 的组织科学研究期刊",
+              "fit": "技术控制、服务组织和行动者抵抗"
+            }
+          ],
+          "candidate_question": "还车判定发生冲突时，平台的纠错安排如何影响骑行者承担的额外劳动？"
+        },
+        "run_mode": "dev",
+        "search_action_budget": 24,
+        "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+      },
+      "prior_config_sha256": "a43b1b1992d42ec9c5bad4e78212035170bef1f8f092af39c870b2ef6df6ff14",
+      "prior_checkpoint_sha256": "b5fcbe0c56da265306a97b9fe3e878b3dcfd4a9e92b486835cce6d1007c84811",
+      "changed_at": "2026-11-22T12:57:13.201592+08:00"
+    }
+  ]
+}

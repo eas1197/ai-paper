@@ -1,0 +1,87 @@
+{
+  "events": [
+    {
+      "identity": "2020-11 二手包 争议",
+      "retained_facts": [
+        {
+          "source_id": "R",
+          "statement": "媒体载群审票数以及记者直接取得的平台复核答复，报告两次判断不同。",
+          "status": "corroborated",
+          "key": true,
+          "use": "描述公开可核验的判断变化，观察范围不含后台记录"
+        }
+      ],
+      "uncertain_facts": [
+        {
+          "source_id": "R",
+          "statement": "两次审理看到相同证据，且最终退款。",
+          "status": "unverified",
+          "key": true,
+          "use": "两点均没有证据确认，不用于推断机制或结果"
+        }
+      ],
+      "critical_gaps": [
+        "两次审理看到相同证据，且最终退款。"
+      ]
+    },
+    {
+      "identity": "2024-04 沈阳相机 争议",
+      "retained_facts": [
+        {
+          "source_id": "C",
+          "statement": "记者直接问到平台给出的理由：原有商品质量问题比退款争议中新发生的损坏更重要。",
+          "status": "corroborated",
+          "key": true,
+          "use": "说明平台公开表述的责任排序，而非核准实际损坏事实"
+        }
+      ],
+      "uncertain_facts": [
+        {
+          "source_id": "C",
+          "statement": "视频证明损坏归责全部成立。",
+          "status": "single_account",
+          "key": false,
+          "use": "只保留当事人的理解，不裁判真实损坏原因"
+        }
+      ],
+      "critical_gaps": []
+    },
+    {
+      "identity": "2024-10 卡牌 争议",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "T",
+          "statement": "卖家称群审支持自己，复核支持买家，并认为照片与视频被区别对待。",
+          "status": "single_account",
+          "key": true,
+          "use": "作为卖家对改判及证明力的解释，不能证实结果或理由"
+        }
+      ],
+      "critical_gaps": [
+        "卖家称群审支持自己，复核支持买家，并认为照片与视频被区别对待。"
+      ]
+    },
+    {
+      "identity": "2024-05 平板 争议",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "D",
+          "statement": "买家叙述依赖序列号与当时照片判断货源，并据己方经历解释退款时序。",
+          "status": "single_account",
+          "key": false,
+          "use": "显示买家如何组织证明，不能验证商家责任或后续诉讼结果"
+        }
+      ],
+      "critical_gaps": []
+    }
+  ],
+  "event_count": 4,
+  "sensitivity": "剔除全部单方关键叙述，两则媒体材料仍支持区分外部可见的改判和平台公开陈述的责任排序，但不能证明同材异判、真实改判率、稳定的裁决机制或经验理想类型。两起论坛叙述只保留在主观理由层。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "resale_events_20261122",
+  "input_sha256": "c3ae9319abc8752a31912b7679480aab802ccbee48e12cbbf41e5b2d7799a031",
+  "exchange_sha256": "923ed6defcdafc28cc9cfc1544fa64309ae510843e21d895f1a04fe575213422",
+  "formal_eligible": false
+}

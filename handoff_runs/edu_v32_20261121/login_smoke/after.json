@@ -1,0 +1,6 @@
+{
+  "chatgpt": true,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "WARNING: failed to clean up stale arg0 temp dirs: 拒绝访问。 (os error 5)\nWARNING: proceeding, even though we could not create PATH aliases: 拒绝访问。 (os error 5) at path \"<user-dir>\\\\.codex\\\\tmp\\\\arg0-windows\\\\codex-arg01hC2yb\"\nLogged in using ChatGPT\n"
+}

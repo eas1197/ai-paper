@@ -1,0 +1,131 @@
+{
+  "engine": "codex_native_v1",
+  "schema_version": 2,
+  "acquisition_mode": "abstract_only",
+  "collection_id": "COL_c617f93a09929bdfa76ec316",
+  "theme": "家长主义、家校合育与家校关系经营：学校如何组织家长参与、处理家长诉求。排除一般教育分流、扩招和升学机会研究。",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界"
+  ],
+  "target": 10,
+  "count": 1,
+  "articles": [
+    {
+      "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+      "authors": [
+        "沈洪成"
+      ],
+      "journal": "社会",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_locator": "原刊网页“摘要/Abstract”下的中文摘要",
+      "abstract_excerpt": "通过资源激活、能力塑造和责任伦理",
+      "abstract_summary": "研究跟踪同一城区的两个初中班级，比较不同群体家长如何回应学校对参与的要求。学校动员家庭资源并塑造家长的能力和责任意识，家庭内部的参与扩展较快，学校公共事务中的参与发展较慢。务工、普通工薪和中产家庭分别倾向于被动应对、模仿依循和主动建构。",
+      "relevance": "direct",
+      "relevance_reason": "揭示学校如何界定并动员家长参与，以及不同群体如何调动既有教育经验回应学校要求，形成有阶层差异的参与方式。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_hash": "52f34ff438427f0ccdcc25feb8bcf9097292855a4988f4e0df550c5e42e9c302",
+      "excerpt_sha256": "30eef05a2b694fb0c6a452837b25fa5bee6310dd663d1fefd4206eabb85705ef",
+      "searched_at": "2026-11-21T19:55:57.027368+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-88b8887f-466f-462c-9507-3c13c7409d02",
+      "abstract_event_id": "exec-88b8887f-466f-462c-9507-3c13c7409d02",
+      "article_id": "A_5aca0bf05e8bbdacef20d69a",
+      "provenance": [
+        {
+          "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+          "authors": [
+            "沈洪成"
+          ],
+          "journal": "社会",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_locator": "原刊网页“摘要/Abstract”下的中文摘要",
+          "abstract_excerpt": "通过资源激活、能力塑造和责任伦理",
+          "abstract_summary": "研究跟踪同一城区的两个初中班级，比较不同群体家长如何回应学校对参与的要求。学校动员家庭资源并塑造家长的能力和责任意识，家庭内部的参与扩展较快，学校公共事务中的参与发展较慢。务工、普通工薪和中产家庭分别倾向于被动应对、模仿依循和主动建构。",
+          "relevance": "direct",
+          "relevance_reason": "揭示学校如何界定并动员家长参与，以及不同群体如何调动既有教育经验回应学校要求，形成有阶层差异的参与方式。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_hash": "52f34ff438427f0ccdcc25feb8bcf9097292855a4988f4e0df550c5e42e9c302",
+          "excerpt_sha256": "30eef05a2b694fb0c6a452837b25fa5bee6310dd663d1fefd4206eabb85705ef",
+          "searched_at": "2026-11-21T19:55:57.027368+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-88b8887f-466f-462c-9507-3c13c7409d02",
+          "abstract_event_id": "exec-88b8887f-466f-462c-9507-3c13c7409d02"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-21T19:54:45.146914+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-21T19:55:57.027368+08:00",
+      "event_sha256": "484e893c8fec49e5e11dfd6274c917b8ce9984f83d3ad0c35749546437c930e0",
+      "response_sha256": "4f85ffb717e51d5eaa613a85c9eacc720236b42d2d8006eb5166868828da5953",
+      "notes": [
+        "第一轮按《社会学研究》《社会》《探索与争鸣》《中国青年研究》组合检索家校关系、家长参与和家校合育，找到城乡学校家校互动研究及家校合育的期刊线索。",
+        "第二轮追查制度化家校合作的原刊，改用家长主义和家校权利边界检索，定位到《社会》的原刊摘要页。",
+        "第三轮打开《社会》摘要页，沿家校关系经营、家长委员会、增值评价及合育论文 DOI 扩展检索，发现单篇摘要和目录线索。",
+        "第四轮增加中国青少年研究网域名限制，查到洪明论文的正式期刊目录，补查《管理世界》《经济研究》《中国社会科学》中的家长参与和家长会，未取得可纳入的摘要证据。",
+        "第五轮追查洪明论文的中文摘要和流动儿童研究，并用《社会学研究》站点域名组合检索家长、教师与教育参与。",
+        "第六轮补查家校关系经营和家师互动，打开两条转载线索并尝试查看合育论文首页，遇到网页超时和首页截图失败。按每条查询、打开或截图各计一次，共用24个原生网页动作。最终核实1篇，距13篇目标差12篇。"
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "title": "论家校合育的基本模式",
+      "reason": "《中国青年研究》2015年官网目录确认作者为洪明，搜索返回了原刊首页摘要。独立打开首页的截图动作失败，未达到逐篇打开核验的要求。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "家校社协同推进青少年生命教育：基于交叠影响域的视角",
+      "reason": "检索发现带摘要标签的公开转载，打开时超时，原刊题录与完整摘要未完成核对。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "父母参与、学校融入与农民工子女的心理健康——来自中国教育追踪调查的证据",
+      "reason": "检索结果指向《中国青年研究》2020年第3期。打开转载页后，返回片段落在研究假设和设计部分，完整原摘要及其与家校参与的具体联系未核实。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "基于增值评价理念谈家校合作对学校的增值作用",
+      "reason": "命中的是中国青少年研究网的《少年儿童研究》2019年目录，超出指定七刊范围。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "制度化家校合作、父母教育参与和青少年发展——基于中国教育追踪调查的研究",
+      "reason": "转载页标明原刊为《社会学评论》2026年第2期，超出指定七刊范围。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "教育竞争、家校联系与教育不平等——以围绕家庭作业的家校互动为例",
+      "reason": "高校学术平台标明原刊为《社会学评论》2024年第1期，超出指定七刊范围。",
+      "batch": "batch_001"
+    }
+  ],
+  "status": "incomplete",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+}

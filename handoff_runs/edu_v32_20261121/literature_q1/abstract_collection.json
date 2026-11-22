@@ -1,0 +1,210 @@
+{
+  "engine": "codex_native_v1",
+  "schema_version": 2,
+  "acquisition_mode": "abstract_only",
+  "collection_id": "COL_2aff5d5addff94cd62f8afdc",
+  "theme": "当学校统一开放家校沟通渠道时，资源较弱家庭提出的诉求更容易得到实质回应，还是依然因学校认可的表达方式而被过滤？",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界"
+  ],
+  "target": 10,
+  "count": 2,
+  "articles": [
+    {
+      "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+      "authors": [
+        "沈洪成"
+      ],
+      "journal": "社会",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_locator": "原刊网页中文摘要，第34行",
+      "abstract_excerpt": "不同群体的家长参与表现",
+      "abstract_summary": "作者跟踪调查同一城区的两个初中班级，发现学校通过强调家庭资源、家长能力和教育责任来推动家长参与。参与更多发生在家庭内部，家长参与学校公共事务的程度较低。外来务工家长多被动应对，城市普通工薪家长多模仿既有做法，中产家长更常主动形成自己的参与方式。",
+      "relevance": "substantive",
+      "relevance_reason": "研究揭示学校如何设定家长参与的要求，以及不同阶层如何调动既往教育经验来适应这些要求。观察的是家长如何回应学校要求，因果问题仍需追踪统一开放渠道后学校如何处理不同家庭提出的诉求。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+      "abstract_hash": "adcf0df15f1a80e34f4db53cd2bf655797988af505cf1484e57ea2f421fa7bc9",
+      "excerpt_sha256": "5f8cc23f436483d991be9ba4fd6021f317e9b27649e508973ad74176a6b446f7",
+      "searched_at": "2026-11-21T19:54:06.280996+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "article_id": "A_5aca0bf05e8bbdacef20d69a",
+      "provenance": [
+        {
+          "title": "激活优势：家长主义浪潮下家长参与的群体差异",
+          "authors": [
+            "沈洪成"
+          ],
+          "journal": "社会",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_locator": "原刊网页中文摘要，第34行",
+          "abstract_excerpt": "不同群体的家长参与表现",
+          "abstract_summary": "作者跟踪调查同一城区的两个初中班级，发现学校通过强调家庭资源、家长能力和教育责任来推动家长参与。参与更多发生在家庭内部，家长参与学校公共事务的程度较低。外来务工家长多被动应对，城市普通工薪家长多模仿既有做法，中产家长更常主动形成自己的参与方式。",
+          "relevance": "substantive",
+          "relevance_reason": "研究揭示学校如何设定家长参与的要求，以及不同阶层如何调动既往教育经验来适应这些要求。观察的是家长如何回应学校要求，因果问题仍需追踪统一开放渠道后学校如何处理不同家庭提出的诉求。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I2/168",
+          "abstract_hash": "adcf0df15f1a80e34f4db53cd2bf655797988af505cf1484e57ea2f421fa7bc9",
+          "excerpt_sha256": "5f8cc23f436483d991be9ba4fd6021f317e9b27649e508973ad74176a6b446f7",
+          "searched_at": "2026-11-21T19:54:06.280996+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+          "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466"
+        }
+      ]
+    },
+    {
+      "title": "1990-2000年中国的经济转型、学校扩招和教育不平等",
+      "authors": [
+        "吴晓刚"
+      ],
+      "journal": "社会",
+      "year": "2009",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_locator": "原刊网页中文摘要，第36行",
+      "abstract_excerpt": "高中教育升学机会的城乡差距却在扩大",
+      "abstract_summary": "研究用1990年和2000年人口普查样本匹配学龄子女与父母信息，比较十年间家庭背景与入学、升学机会的关系。义务教育普及期间，农村户籍子女的初中机会相对改善，但高中升学的城乡差距扩大。控制地区经济发展水平后，父亲社会经济地位与高中升学的关联仍呈增强趋势。",
+      "relevance": "substantive",
+      "relevance_reason": "研究区分初中机会扩展与高中升学关口，说明制度扩大覆盖后，户籍与家庭社会经济地位仍可在后续选拔阶段影响机会分配。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_hash": "feddeed0dbc807b2885f40f385bdabc1ab8e70f3ff11b1cc80a38b6038c2cead",
+      "excerpt_sha256": "711ce2c991e963f67a805c9bfd16fd78b792bfc30e4962cc0ce522f6f02825ff",
+      "searched_at": "2026-11-21T19:54:06.280996+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+      "article_id": "A_e08a5214b86a204f5a540d8e",
+      "provenance": [
+        {
+          "title": "1990-2000年中国的经济转型、学校扩招和教育不平等",
+          "authors": [
+            "吴晓刚"
+          ],
+          "journal": "社会",
+          "year": "2009",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_locator": "原刊网页中文摘要，第36行",
+          "abstract_excerpt": "高中教育升学机会的城乡差距却在扩大",
+          "abstract_summary": "研究用1990年和2000年人口普查样本匹配学龄子女与父母信息，比较十年间家庭背景与入学、升学机会的关系。义务教育普及期间，农村户籍子女的初中机会相对改善，但高中升学的城乡差距扩大。控制地区经济发展水平后，父亲社会经济地位与高中升学的关联仍呈增强趋势。",
+          "relevance": "substantive",
+          "relevance_reason": "研究区分初中机会扩展与高中升学关口，说明制度扩大覆盖后，户籍与家庭社会经济地位仍可在后续选拔阶段影响机会分配。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+          "abstract_hash": "feddeed0dbc807b2885f40f385bdabc1ab8e70f3ff11b1cc80a38b6038c2cead",
+          "excerpt_sha256": "711ce2c991e963f67a805c9bfd16fd78b792bfc30e4962cc0ce522f6f02825ff",
+          "searched_at": "2026-11-21T19:54:06.280996+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466",
+          "abstract_event_id": "exec-909a7547-1461-499f-a18f-603bb5b4a466"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-21T19:52:41.091177+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-21T19:54:06.280996+08:00",
+      "event_sha256": "330f4a404cf54b4233007461f1d30dc21be3f61b80fb2c7c057770ca334d643e",
+      "response_sha256": "bd561e7bdc369b41293d3a5f37974b0ae4ff303be839cafdd10c1e010a45e1dd",
+      "notes": [
+        "首轮用家校沟通、家长参与、文化资本、普职分流和招生机会组合检索。家校互动方向找到《社会》的家长参与研究，同时发现若干相近文章刊于范围外期刊。",
+        "第二轮追查家校互动候选的原刊，并用《社会》《社会学研究》官网域名检索择校、分流与升学；沿农村学生择校线索查找《中国青年研究》题录。",
+        "第三轮把制度筛选细化为高考阈值、重点学校和高校录取，同时查找《管理世界》《经济研究》中涉及家庭条件与高等教育机会的论文。",
+        "第四轮沿吴愈晓的分流研究查到《中国社会科学》的城乡升学研究，并检索《社会》的高校分层研究及《中国青年研究》的刊期目录。第五轮按题名追查原刊、高校摘要和助学贷款研究的发表信息。",
+        "按每条搜索查询和每次网页打开分别计数，共用19次查询和5次打开，达到24个动作上限。两篇原刊网页成功打开并核实中文摘要，三篇原刊文章页打开失败。本轮纳入2篇，距13篇目标差11篇。已核实摘要提供了家长参与的阶层差异和升学筛选机制，统一开放沟通渠道后弱资源家庭诉求的实际回应仍缺直接证据。"
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "title": "“撤点并校”、家庭背景与入学机会",
+      "reason": "搜索返回原刊题录及摘要片段，打开原刊文章页超时，未完成逐篇核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "家庭背景与教育分流教育——分流过程中的非学业性因素分析",
+      "reason": "原刊网页打开返回 502，题名在检索结果中的写法及正文摘要均未完成核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "市场转型、教育分流与中国城乡高等教育机会不平等(1977-2008)——兼论重点中学制度是否应该为城乡高等教育机会不平等买单",
+      "reason": "原刊文章页打开超时，现有搜索摘录不足以完成题录和摘要核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "阶层分化视角下的农村学生进县城就学潮分析",
+      "reason": "搜索找到刊期目录及注明来自刊方公众号的转载，预算内未逐一打开核对原刊题录与摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "教育分流体制与中国的教育分层(1978-2008)",
+      "reason": "搜索找到数据库摘要和刊方 PDF，预算内未完成摘要页打开核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "中国城乡居民的中学教育分流与职业地位获得",
+      "reason": "搜索找到复旦大学的摘要页面与刊方 PDF，预算内未完成摘要页打开核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "中国当代的高等教育、精英形成与社会分层——来自“首都大学生成长追踪调查”的初步发现",
+      "reason": "搜索找到《社会》官网目录与摘要信息，预算内未打开摘要入口。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "中国城乡居民的教育机会不平等及其演变（1978-2008）",
+      "reason": "山东大学成果推介列明原刊并提供研究简介，预算内未核实该简介是否为完整原摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "阈值依赖的教育扩张与教育机会不平等——以A省某年高考数据为例",
+      "reason": "搜索定位到《社会学研究》刊方 PDF，预算内未核对首页提要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "家庭借贷约束、人力资本形成与长期发展——基于大学生生源地助学贷款的研究",
+      "reason": "搜索找到作者所在高校的成果介绍和转载，预算内未完成正式题录及原摘要核验。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "教育竞争、家校联系与教育不平等——以围绕家庭作业的家校互动为例",
+      "reason": "检索结果标明原刊为《社会学评论》，超出指定七刊范围。",
+      "batch": "batch_001"
+    }
+  ],
+  "status": "incomplete",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+}

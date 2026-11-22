@@ -1,0 +1,11 @@
+{
+  "expectation": "若扩大客群必然稀释服务，错峰和外带分流不应消除挤占。",
+  "observation": "社区助餐中同时出现错峰共用、招徕年轻食客和关于排队的抱怨。",
+  "initial_explanation": "经营方吸引额外付费用户可能维持经营，较强供给可容纳不同需求。",
+  "challenge": "收入不等于盈余，三处材料不是同一因果链。时间差、固定产能与预留优先是可区分的机制。",
+  "candidate_question": "社区食堂在什么条件下能让不同年龄群体错峰共用？何时反而增加原有服务对象的用餐成本？",
+  "search_focus": "普惠开放、福利资格、服务承载与实际可及性",
+  "research_actor": "primary",
+  "critical_actor": "canteen_critic",
+  "critical_receipt": "独立反方意见.md"
+}

@@ -1,0 +1,236 @@
+{
+  "engine": "codex_native_v1",
+  "schema_version": 2,
+  "acquisition_mode": "abstract_only",
+  "collection_id": "COL_bbaf7e9f4a030eff415392bd",
+  "theme": "教育分流",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界"
+  ],
+  "target": 10,
+  "count": 3,
+  "articles": [
+    {
+      "title": "中国城乡居民的中学教育分流与职业地位获得",
+      "authors": [
+        "王威海",
+        "顾源"
+      ],
+      "journal": "社会学研究",
+      "year": "2012",
+      "doi": null,
+      "metadata_url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+      "abstract_url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+      "abstract_locator": "复旦大学社会学系页面第107—108行，刊期及「摘要」段",
+      "abstract_excerpt": "导致了后续高等教育机会分配的不平等",
+      "abstract_summary": "文章用2008年中国综合社会调查数据，考察中国城乡居民的中学就读经历与职业地位。重点初中或高中经历与更高的教育获得相关，进而关联较高的职业地位。重点学校经历与现职地位的直接关联未达显著，间接关联经由后续教育和首份工作的职业地位体现。",
+      "relevance": "direct",
+      "relevance_reason": "比较重点与非重点中学两条学校层级路径，并检验其差异如何延续至高等教育和劳动力市场。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+      "abstract_hash": "c307a5580634a044d3b9958e57eb3c71abebdedd72f4b41c5e4ebf251862fb82",
+      "excerpt_sha256": "efcafab650c11e9b794d4865af65f5452fe1faa5b31ff73aeee9c69468e85ab5",
+      "searched_at": "2026-11-21T19:13:04.867998+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-08fdcb59-12ac-4e4d-ad23-8fc7581bea9a",
+      "abstract_event_id": "exec-08fdcb59-12ac-4e4d-ad23-8fc7581bea9a",
+      "article_id": "A_c68af39e9fe41cc732c43f7e",
+      "provenance": [
+        {
+          "title": "中国城乡居民的中学教育分流与职业地位获得",
+          "authors": [
+            "王威海",
+            "顾源"
+          ],
+          "journal": "社会学研究",
+          "year": "2012",
+          "doi": null,
+          "metadata_url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+          "abstract_url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+          "abstract_locator": "复旦大学社会学系页面第107—108行，刊期及「摘要」段",
+          "abstract_excerpt": "导致了后续高等教育机会分配的不平等",
+          "abstract_summary": "文章用2008年中国综合社会调查数据，考察中国城乡居民的中学就读经历与职业地位。重点初中或高中经历与更高的教育获得相关，进而关联较高的职业地位。重点学校经历与现职地位的直接关联未达显著，间接关联经由后续教育和首份工作的职业地位体现。",
+          "relevance": "direct",
+          "relevance_reason": "比较重点与非重点中学两条学校层级路径，并检验其差异如何延续至高等教育和劳动力市场。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://sociology.fudan.edu.cn/ef/26/c32220a388902/page.htm",
+          "abstract_hash": "c307a5580634a044d3b9958e57eb3c71abebdedd72f4b41c5e4ebf251862fb82",
+          "excerpt_sha256": "efcafab650c11e9b794d4865af65f5452fe1faa5b31ff73aeee9c69468e85ab5",
+          "searched_at": "2026-11-21T19:13:04.867998+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-08fdcb59-12ac-4e4d-ad23-8fc7581bea9a",
+          "abstract_event_id": "exec-08fdcb59-12ac-4e4d-ad23-8fc7581bea9a"
+        }
+      ]
+    },
+    {
+      "title": "教育分流体制与中国的教育分层（1978—2008）",
+      "authors": [
+        "吴愈晓"
+      ],
+      "journal": "社会学研究",
+      "year": "2013",
+      "doi": null,
+      "metadata_url": "https://www.oalib.com/research/5187819",
+      "abstract_url": "https://www.oalib.com/research/5187819",
+      "abstract_locator": "题录页面第41—45行的 Abstract 段，摘要内容与原刊首页提要的检索呈现相符",
+      "abstract_excerpt": "家庭社会经济地位越高的学生",
+      "abstract_summary": "文章用2008年中国综合社会调查数据重建改革开放以来城乡居民的初中、高中和大学升学路径。户籍、父亲职业和父母教育程度与路径分化有关。家庭地位较高者更常进入重点学校或走学术轨道，早期就读重点学校的优势也延续到下一阶段的重点学校入学。",
+      "relevance": "direct",
+      "relevance_reason": "同时研究普职轨道和重点学校层级，分析家庭背景与跨学段累积优势。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.oalib.com/research/5187819",
+      "abstract_hash": "07cd91985cf1d8655dc6e982e0b6cb73808e1c4ce15de33012a8d959090cf88c",
+      "excerpt_sha256": "79ec0f10a7ba366b5ed7e8ab38d3f7954b52137ea99f91bd25d4eb224c5b5ba4",
+      "searched_at": "2026-11-21T19:13:04.867998+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+      "abstract_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+      "article_id": "A_dc03216fa6bc2d1fdb970875",
+      "provenance": [
+        {
+          "title": "教育分流体制与中国的教育分层（1978—2008）",
+          "authors": [
+            "吴愈晓"
+          ],
+          "journal": "社会学研究",
+          "year": "2013",
+          "doi": null,
+          "metadata_url": "https://www.oalib.com/research/5187819",
+          "abstract_url": "https://www.oalib.com/research/5187819",
+          "abstract_locator": "题录页面第41—45行的 Abstract 段，摘要内容与原刊首页提要的检索呈现相符",
+          "abstract_excerpt": "家庭社会经济地位越高的学生",
+          "abstract_summary": "文章用2008年中国综合社会调查数据重建改革开放以来城乡居民的初中、高中和大学升学路径。户籍、父亲职业和父母教育程度与路径分化有关。家庭地位较高者更常进入重点学校或走学术轨道，早期就读重点学校的优势也延续到下一阶段的重点学校入学。",
+          "relevance": "direct",
+          "relevance_reason": "同时研究普职轨道和重点学校层级，分析家庭背景与跨学段累积优势。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.oalib.com/research/5187819",
+          "abstract_hash": "07cd91985cf1d8655dc6e982e0b6cb73808e1c4ce15de33012a8d959090cf88c",
+          "excerpt_sha256": "79ec0f10a7ba366b5ed7e8ab38d3f7954b52137ea99f91bd25d4eb224c5b5ba4",
+          "searched_at": "2026-11-21T19:13:04.867998+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+          "abstract_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82"
+        }
+      ]
+    },
+    {
+      "title": "教育不平等的年代变化趋势（1940—2010）——对城乡教育机会不平等的再考察",
+      "authors": [
+        "李春玲"
+      ],
+      "journal": "社会学研究",
+      "year": "2014",
+      "doi": null,
+      "metadata_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+      "abstract_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+      "abstract_locator": "原刊PDF首页「提要」，网页文本第3—33行。题名年代和正式刊期由并行检索返回的引文互证",
+      "abstract_excerpt": "中等教育的城乡不平等是教育分层的关键所在",
+      "abstract_summary": "文章合并全国抽样调查数据，以升学模型比较不同出生组从小学到大学的城乡机会差异。小学差距缩小，初中差距稳定，高中及其他高级中等教育阶段的差距持续扩大，大学阶段则略有扩大。研究将农村子弟大学相对入学机会的下降追溯到初中后的升学关口。",
+      "relevance": "direct",
+      "relevance_reason": "逐阶段定位城乡升学差异，识别初中升入高级中等教育这一影响后续大学机会的分流关口。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+      "abstract_hash": "f81500c31c79edad334cb5710a51e3bec804eb845db413fd8acf18788f2004cc",
+      "excerpt_sha256": "513feee54c8ff963272e32979f1c094d8b9fa657c3a7012442bc023002b269d3",
+      "searched_at": "2026-11-21T19:13:04.867998+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+      "abstract_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+      "article_id": "A_d739d7cc863a25135a1b7785",
+      "provenance": [
+        {
+          "title": "教育不平等的年代变化趋势（1940—2010）——对城乡教育机会不平等的再考察",
+          "authors": [
+            "李春玲"
+          ],
+          "journal": "社会学研究",
+          "year": "2014",
+          "doi": null,
+          "metadata_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+          "abstract_url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+          "abstract_locator": "原刊PDF首页「提要」，网页文本第3—33行。题名年代和正式刊期由并行检索返回的引文互证",
+          "abstract_excerpt": "中等教育的城乡不平等是教育分层的关键所在",
+          "abstract_summary": "文章合并全国抽样调查数据，以升学模型比较不同出生组从小学到大学的城乡机会差异。小学差距缩小，初中差距稳定，高中及其他高级中等教育阶段的差距持续扩大，大学阶段则略有扩大。研究将农村子弟大学相对入学机会的下降追溯到初中后的升学关口。",
+          "relevance": "direct",
+          "relevance_reason": "逐阶段定位城乡升学差异，识别初中升入高级中等教育这一影响后续大学机会的分流关口。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://shxyj.ajcass.com/Admin/UploadFile/Issue/yfxi1fjr.pdf",
+          "abstract_hash": "f81500c31c79edad334cb5710a51e3bec804eb845db413fd8acf18788f2004cc",
+          "excerpt_sha256": "513feee54c8ff963272e32979f1c094d8b9fa657c3a7012442bc023002b269d3",
+          "searched_at": "2026-11-21T19:13:04.867998+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82",
+          "abstract_event_id": "exec-f7b04427-e75c-4ce6-a3cd-c246f97aab82"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-21T19:11:42.906734+08:00",
+      "status": "completed",
+      "search_events": 5,
+      "finished_at": "2026-11-21T19:13:04.870244+08:00",
+      "event_sha256": "dcc38d70d48c67ae94284d048558d7da558610f9d33d19203a854d7ca9bc6bd2",
+      "response_sha256": "a630cd3ac4ade8f475decac611e04a10e45de0ddf873849b2b58654ce0d84f3a",
+      "notes": [
+        "首轮用教育分流、职普轨道、教育获得组合七刊刊名，并以《社会》《社会学研究》域名检索升学机会。找到中学层级分流与职业地位研究，随后打开复旦大学题录及摘要页核对。",
+        "第二至第三轮沿检索结果改用重点学校、学轨制、高等教育机会、城乡差异和高校扩招，并继续检索《经济研究》《管理世界》《中国青年研究》等。扩招方向出现《经济学（季刊）》和教育类刊物条目，按原刊排除。",
+        "第四轮沿阶段性升学机制转查高考复读，并回查城乡教育机会研究的原刊来源。《社会》两条官网页面打开超时，人民大学两个转载入口分别超时和返回502。最后打开两篇《社会学研究》原刊PDF定位首页提要，并打开吴愈晓论文的公开题录页核对完整摘要。",
+        "共用24个原生网页动作，按每个查询和每个打开分别计数。核实并纳入4篇，距13篇目标差9篇。正式年份按原刊刊期或题录确定，DOI未获明确证据的留空。"
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "title": "复读与高等教育获得不平等",
+      "reason": "missing_native_tool_receipt",
+      "batch": "batch_001"
+    },
+    {
+      "title": "市场转型、教育分流与中国城乡高等教育机会不平等(1977-2008)——兼论重点中学制度是否应该为城乡高等教育机会不平等买单",
+      "reason": "《社会》官网的搜索索引显示庞圣民、2016年第5期及摘要，逐篇打开原刊网页时超时。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "中国城乡居民教育获得的性别差异研究",
+      "reason": "《社会》官网索引显示按教育阶段比较升学机会的摘要，原刊网页打开超时。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "中国城乡居民的教育机会不平等及其演变（1978—2008）",
+      "reason": "山东大学成果推介确认了作者和《中国社会科学》2013年第3期，但将相关文字标为简介。本轮未打开原摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "大学教育的社会回报——扩招与人力资本外溢效应",
+      "reason": "检索结果确认原刊为《经济学（季刊）》，超出指定七刊范围。",
+      "batch": "batch_001"
+    }
+  ],
+  "status": "incomplete",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+}

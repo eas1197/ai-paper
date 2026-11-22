@@ -1,0 +1,42 @@
+[
+  {
+    "type": "web_search",
+    "event_id": "exec-85e3c17e-df50-44e4-b78c-f7ddea75dfad",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-ce553dc6-f0c4-403e-9fe8-f317510285fd",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-2f1f2d3d-dd6c-4354-b00e-d4ed0785df19",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-37435b94-7314-40e0-8562-9d1cf6633ac3",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-cf77305a-0477-48af-9bd7-c45827714c62",
+    "action_type": "search"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-5b059399-a962-4884-ae75-85e21db04287",
+    "action_type": "other"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 295139,
+      "cached_input_tokens": 240512,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2425,
+      "reasoning_output_tokens": 242
+    }
+  }
+]

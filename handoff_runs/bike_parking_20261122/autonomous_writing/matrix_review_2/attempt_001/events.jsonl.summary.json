@@ -1,0 +1,27 @@
+[
+  {
+    "type": "web_search",
+    "event_id": "exec-fadceeca-45b2-4dc8-875f-2feb1738141f",
+    "action_type": "open_page"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-b34415bf-069d-4c7e-a188-a279a14d4154",
+    "action_type": "open_page"
+  },
+  {
+    "type": "web_search",
+    "event_id": "exec-e387ab5c-5290-4b4f-b03d-9bdd2777e73f",
+    "action_type": "open_page"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 166527,
+      "cached_input_tokens": 132352,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1066,
+      "reasoning_output_tokens": 0
+    }
+  }
+]

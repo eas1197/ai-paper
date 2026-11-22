@@ -1,0 +1,30 @@
+{
+  "phenomenon": "社区助餐中同时出现错峰共用、招徕年轻食客和关于排队的抱怨。",
+  "search_focus": "社区助餐",
+  "sources": [
+    {
+      "url": "https://news.cnr.cn/rebang/20230905/t20230905_526408311.shtml",
+      "kind": "报道",
+      "supports": "公开叙述及可定位情境",
+      "limits": "不能推断普遍性、是否同店或营业盈亏"
+    },
+    {
+      "url": "https://zjnews.zjol.com.cn/202308/t20230817_26107238.shtml",
+      "kind": "报道",
+      "supports": "公开叙述及可定位情境",
+      "limits": "不能推断普遍性、是否同店或营业盈亏"
+    },
+    {
+      "url": "https://dalian.runsky.com/2024-10/18/content_6248249.html",
+      "kind": "报道",
+      "supports": "公开叙述及可定位情境",
+      "limits": "不能推断普遍性、是否同店或营业盈亏"
+    },
+    {
+      "url": "https://www.zhihu.com/en/answer/3150106315",
+      "kind": "公开讨论",
+      "supports": "公开叙述及可定位情境",
+      "limits": "不能推断普遍性、是否同店或营业盈亏"
+    }
+  ]
+}

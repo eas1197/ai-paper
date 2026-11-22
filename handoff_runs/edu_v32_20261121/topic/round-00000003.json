@@ -1,0 +1,212 @@
+{
+  "round": 3,
+  "stage": "deepening",
+  "next_stage": "formal",
+  "reason": "quality_met",
+  "config_sha256": "6418dc84b5ac89e80bf2b9beb42207570eddf7214516cc77c8be93fead59971e",
+  "approved_ids": [
+    "Q1"
+  ],
+  "bundle": {
+    "schema_version": 1,
+    "opportunities": [
+      {
+        "opportunity_id": "O1",
+        "observation": "CEPS研究报告，考虑家长主动沟通后，教师仍更常联系家庭背景较好的家长。",
+        "social_process": "家校沟通中学校对家庭诉求的识别与回应",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "opportunity_id": "O2",
+        "observation": "另一项CEPS研究报告，制度化合作缩小校际参与差异，但家庭地位仍重要。",
+        "social_process": "参与机会的制度化与家庭参与分层",
+        "evidence_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question_id": "Q0",
+        "opportunity_id": "O1",
+        "text": "家庭的资源优势如何在家校互动中转化为学校回应的差异？",
+        "population": "家庭与学校互动者，具体待设计",
+        "scope": "中国学校家校互动，学校场域待定",
+        "comparison": "资源的持有、动用与教师回应",
+        "answer_value": "区分家庭资源如何被动用与学校如何回应。",
+        "concepts": [
+          "家庭资源",
+          "资本动用",
+          "制度回应"
+        ]
+      },
+      {
+        "question_id": "Q1",
+        "opportunity_id": "O1",
+        "text": "当学校统一开放家校沟通渠道时，资源较弱家庭提出的诉求更容易得到实质回应，还是依然因学校认可的表达方式而被过滤？",
+        "population": "家庭与学校互动者，具体待设计",
+        "scope": "中国学校家校互动，学校场域待定",
+        "comparison": "同类诉求的进入、认可和处理过程；比较渠道规则与回应裁量",
+        "answer_value": "可区分开放渠道消除进入成本和制度仍按表达方式筛选两种解释；也允许工作人员负荷或议题紧急程度解释差异。",
+        "concepts": [
+          "制度化参与机会",
+          "制度性认可",
+          "文化资本动用"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "source_id": "P1",
+        "excerpt": "教师与家庭背景较好的学生家长的沟通频率显著高于家庭背景较差的学生家长",
+        "document_id": "D1",
+        "locator": {
+          "section": "出版方网页摘要"
+        },
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E1.txt",
+        "evidence_id": "E1",
+        "paper_id": "P1",
+        "sha256": "ae9a93f7cbfe4a270f85a1bc0d134e69d9bf66e61080dc7897b1242fc357f9cc",
+        "kind": "abstract"
+      },
+      {
+        "source_id": "P2",
+        "excerpt": "家庭社会经济地位仍是决定父母教育参与水平的核心因素",
+        "document_id": "D2",
+        "locator": {
+          "section": "出版方网页摘要"
+        },
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E2.txt",
+        "evidence_id": "E2",
+        "paper_id": "P2",
+        "sha256": "1a1323d7f01b72a7fd5cafdd5ca5feb05a6bcbc31007447bc961c9e477652884",
+        "kind": "abstract"
+      },
+      {
+        "source_id": "P3",
+        "excerpt": "difference between possession and activation of capital",
+        "document_id": "D3",
+        "locator": {
+          "section": "原论文首页摘要"
+        },
+        "path": "00_项目控制/v007_第7版/runs_dev/edu_v32_20261121/topic/E3.txt",
+        "evidence_id": "E3",
+        "paper_id": "P3",
+        "sha256": "d2cbb4c66247a478069102c224fbafe5e11279b775ec93f634cde7dfd4139d6d",
+        "kind": "abstract"
+      }
+    ],
+    "explanations": [
+      {
+        "explanation_id": "X1",
+        "question_id": "Q0",
+        "author_claim": "Lareau与Horvat区分资本持有和动用，讨论学校互动中的接纳与排除。",
+        "proposed_mechanism": "资本须在具体家校互动中被动用，才可能转化为制度收益。",
+        "observed_result": "作者以美国学校互动为研究情境。",
+        "system_inference": "若渠道标准化消除入场障碍，但学校仍有实质回应裁量，差异可能转移到认可环节。",
+        "applicable_scope": "原研究的美国学校情境；中国场域需要另证。",
+        "evidence_strength": "author_report",
+        "evidence_ids": [
+          "E3"
+        ]
+      },
+      {
+        "explanation_id": "X2",
+        "question_id": "Q0",
+        "author_claim": "制度化合作与校际参与差距缩小有关，家庭资源仍解释参与差异。",
+        "proposed_mechanism": null,
+        "observed_result": "既有CEPS研究报告校际参与差距有一定缩小。",
+        "system_inference": "参与已有改善并不证明诉求已获实质回应。",
+        "applicable_scope": "研究采用的中国CEPS学校样本",
+        "evidence_strength": "author_report",
+        "evidence_ids": [
+          "E2"
+        ],
+        "unknown_reason": "现有证据未分别观察渠道进入与实质回应，不能判定机制。"
+      }
+    ],
+    "critiques": [
+      {
+        "critique_id": "C1",
+        "kind": "competing",
+        "text": "接触机会平等并不自动产生实质回应平等。若结构化渠道也规定处理和回执，差异可能收窄；若只改变入口，表达方式、紧急程度和教师工作负荷可能产生不同预测。",
+        "explanation_ids": [
+          "X1",
+          "X2"
+        ],
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3"
+        ]
+      }
+    ],
+    "evolution": [
+      {
+        "question_id": "Q0",
+        "next_question_id": "Q1",
+        "explanation_ids": [
+          "X1",
+          "X2"
+        ],
+        "critique_ids": [
+          "C1"
+        ],
+        "disposition": "retained",
+        "increment": "从解释资源怎样带来较多回应，转为判别制度化参与是削弱排斥，还是将排斥从进入环节转移至认可和处理环节。"
+      }
+    ],
+    "change_kind": "academic",
+    "reasoning": "S04 国内经验研究呈现参与及沟通差异，外部理论只作理论线索。S05 持有—动用与渠道开放—实质回应是不同解释环节。S06 标准化若同时规制处理，应压缩回应差距；若只改变入口、保留表达评价裁量，差距可能转移。学校制度是理论作用条件。研究能否识别同类诉求及适当场域待核。现有搜索没有证明理论空白。"
+  },
+  "review": {
+    "stage": "deepening",
+    "verdict": "READY",
+    "model": "gpt-6.2-sol",
+    "invocation_id": "27160f3c-0ed8-44f3-be9a-1d499c67aa90",
+    "reviewer_dispatch_id": "01a1fde7-3c97-7953-b515-d5b32ee73070",
+    "dispatch_scope": "same independent reviewer dispatch; invocation_id identifies the individual stage decision, not a separate model call",
+    "input_sha256": "465ce05f7212fe4c6237e3374815332a6166dda81c7525047566cbaa15f12195",
+    "selected_ids": [
+      "Q1"
+    ],
+    "evidence": [
+      {
+        "evidence_id": "E1",
+        "locator": "社科文献出版社摘要；原条目同出版社镜像 https://cpms.ssap.com.cn/skwx_cmr/initDatabaseDetail?contentId=6727298&contentType=literature&siteId=23",
+        "finding": "作者报告控制家长主动沟通与学校固定效应等变量后的教师沟通频率差异。联系次数没有直接表明诉求得到处理。"
+      },
+      {
+        "evidence_id": "E2",
+        "locator": "《社会学评论》2026年第2期摘要 https://src.ruc.edu.cn/CN/Y2026/V14/I2",
+        "finding": "作者报告制度化家校合作与较小的校际参与差距同现，家庭社会经济地位仍与参与有关。校际差距与家庭阶层差距属于不同层次，参与也不等于实质回应。"
+      },
+      {
+        "evidence_id": "E3",
+        "locator": "运行随附 E3.txt，Lareau 与 Horvat 原研究摘要短摘",
+        "finding": "持有与动用资本的区分提供理论线索。摘要短摘没有证明中国学校的回应规则或文化筛选机制。"
+      }
+    ],
+    "strongest_objection": "资源较强家庭的诉求可能更急、性质不同或更可能符合学校职责，且进入渠道后两组诉求构成也会变化。若只比较已提交个案，后续差异可由需求构成、选择或处理能力产生。统一开放与表达筛选也可同时存在。",
+    "actual_increment": "Q1把制度规则作为理论条件。若机会平等主要受入口限制，开放后提交差距应收窄，相当诉求的后续处理差距也应小。若仍有按表达方式分配认可的裁量，入口差距可收窄而后续结果仍随表达方式分化。若处理标准约束裁量，后者应减弱。不同结果改变对制度干预作用环节的解释。",
+    "gap": "近邻文献是否已检验这组条件未核实。具体中国学校是否同时存在可比较的渠道规则、处理程序和可追踪诉求尚未知。需要区分实际处理、答复或回执，核对相近诉求的紧急度和责任范围，并避免将只出现在提交后样本中的差异直接解释为文化筛选。",
+    "reason": "已有可区分的理论推论，值得进入实证设计与正式证据复核。当前READY只表示值得核查，不能确认原创性、数据可用性或机制已经成立。",
+    "next_action": "复核最接近的学校选择性回应、家长表达与制度化参与文献，再核对是否能现实观察入口、内容、裁量及处理。若可获得数据仅有沟通频率，继续深化或撤回。",
+    "expected_gain": "核实制度条件和可区分结果是否真能共同观察，并确认其与已有研究相比的知识增量。",
+    "cost": {
+      "model_calls": 1,
+      "search_calls": 3
+    },
+    "action_worth_cost": true
+  },
+  "usage": {
+    "search_calls": 1,
+    "model_calls": 2
+  },
+  "used": {
+    "model_calls": 6,
+    "search_calls": 3
+  }
+}

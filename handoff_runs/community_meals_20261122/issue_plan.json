@@ -1,0 +1,21 @@
+{
+  "issue": "福利资格的实施边界；组织使命与市场资源；公共服务实际可及性",
+  "why": "相同的开放规则可能产生不同的等待与可得性，问题超越老年助餐本身，涉及服务资格如何转化为实际使用。",
+  "object_search": "社区助餐、老年食堂、社区餐饮及社会组织运营的最近研究",
+  "issue_search": "优先找福利服务中非正式配给、行政负担、服务提供者组织使命与不同群体实际可及性；也找教育、医疗或社会救助中的负例，说明与等候、服务进入、目标群体机制对应",
+  "theory_search": "福利应得性、行政负担、街头官僚裁量；经典原著和理论单列",
+  "specialist_journals": [
+    {
+      "name": "Social Problems",
+      "publisher_url": "https://academic.oup.com/socpro/",
+      "standing": "Society for the Study of Social Problems 官方期刊",
+      "fit": "基层组织和制度实践如何影响弱势群体实际获得服务"
+    },
+    {
+      "name": "Social Forces",
+      "publisher_url": "https://academic.oup.com/sf/pages/About",
+      "standing": "UNC 社会学系与 OUP 合作的国际老牌社会学期刊，出版社列明学科引文指标",
+      "fit": "公共服务和福利资格如何经组织实施形成群体差异"
+    }
+  ]
+}

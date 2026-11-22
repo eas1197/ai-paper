@@ -1,0 +1,36 @@
+{
+  "papers": [
+    {
+      "title": "Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing",
+      "authors": ["Stella Pachidi", "Hans Berends", "Samer Faraj", "Marleen Huysman"],
+      "journal": "Organization Science",
+      "year": 2021,
+      "doi": "10.1287/orsc.2020.1377",
+      "metadata_url": "https://pubsonline.informs.org/toc/orsc/32/1",
+      "abstract_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.2020.1377?journalCode=orsc",
+      "abstract_locator": "INFORMS 文章页 Abstract，第 219–223 行。原文短摘见第 221 行。",
+      "abstract_excerpt": "who has the authority to make decisions around those issues",
+      "abstract_summary": "作者研究一家销售组织引入算法工具的过程，发现员工的表面配合与技术人员对工具的正面展示相互强化，使销售决策从依赖客户接触转向依赖模型预测。本轮据此推论，若还车平台优先采信定位结果，骑行者可能需要重试或另行举证，才能让有权限的人改判。",
+      "relevance": "substantive",
+      "relevance_reason": "论文能部分回应“额外动作是否只是定位误差造成”的反诘。定位误差可以触发冲突，组织认可何种证据、授权谁改判，则可能改变冲突后的处理路径。可迁移的条件是平台判定控制关单，且客服或其他复核渠道能够按明确规则采信现场证据。由此可比较系统重试、用户举证和人工改判三条路径。销售组织的证据能解释判断权如何向模型集中，骑行者多走多远、重试几次、等待多久，以及关单和撤费权限如何分配，仍需共享单车场域的证据。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "行为助推共享单车堆积停放治理：来自数字平台实地实验的证据",
+      "reason": "北师大论坛预告可核实会议摘要，指定期刊的正式发表题录未获核实。实验考察行程开始前的提醒对堆积停放的影响，研究结果未覆盖还车失败后的纠错流程。https://news.bnu.edu.cn/zx/xzdt/127299.htm"
+    },
+    {
+      "title": "扩展计划行为视角下随意还共享单车行为机制",
+      "reason": "检索结果来自《交通科学与工程》网站，超出指定刊单。打开原页面时工具返回缓存缺失。"
+    }
+  ],
+  "search_notes": [
+    "议题层先在 INFORMS 和 SAGE 以 Organization Science / Administrative Science Quarterly 配合 workaround、breakdown、exception、repair、technology 检索。优先打开 Orlikowski 的 INFORMS 条目后，用算法实施中的权威与象征性行动缩小范围，再按 Make Way for the Algorithms 题名回查期刊文章页及卷期目录。入选论文与排重清单无重复。",
+    "对象层使用“共享单车 电子围栏 还车失败 纠错 管理世界 社会学研究 中国青年研究”，再以“行为助推共享单车堆积停放治理”分别搭配“管理世界 摘要”和“王雅璇 发表 期刊”回查。可见新闻报道、异刊条目和会议摘要，本轮未核实指定刊单内直接研究还车判定冲突的论文。",
+    "理论层检索 Star Strauss Layers of Silence Arenas of Voice Ecology Visible Invisible Work Springer abstract。DOI 跳转未能取回页面，随后直接打开 Springer 原刊文章页并核对摘要。",
+    "THEORY|Layers of Silence, Arenas of Voice: The Ecology of Visible and Invisible Work|https://link.springer.com/article/10.1023/A%3A1008651105359|劳动的可见性取决于观察者采用什么指标及其使用情境。若平台记录只呈现关单或撤费结果，可据此追问挪车、重试、取证和求助是否被记录，以及这些工作对谁可见。平台权限对劳动负担的影响仍需逐单或跨流程比较。",
+    "最终卷期为 Organization Science 32(1)，18–41，2021 年 1–2 月。INFORMS 文章页标注 2020 年 10 月 20 日在线发表，年份字段采用正式卷期年份。文章入口直接返回原刊摘要，无镜像跳转。",
+    "共用 24 个原生网页动作，其中检索词 13 个、打开 9 次、页内定位 2 次。按纳入核验的研究候选计，发现 3 条，核实指定刊正式题录 1 篇，打开并获得指定刊原文摘要 1 篇。另核实会议摘要 1 条、理论摘要 1 条。未下载全文。"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "mode": "abstract_only",
+  "engine": "codex_native_v1",
+  "collection_id": "COL_43b380c9ab64c64d69c7e3f8",
+  "collection_sha256": "9e07ee12b67a48dbff30845007418bfa7eb929d21e30d5b43a62df9745b0ca6c",
+  "theme": "初查：教育；现实线索：教师绩效问责、考试成绩与教师教学回应，包括应试策略、任务替代与教师自主性。同时单列经典理论与权威解释。",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ],
+  "verified_rows": 1,
+  "excerpt_visible_count": 0,
+  "rows": [
+    {
+      "title": "教育评价的症结及出路",
+      "authors": [
+        "宗爱东"
+      ],
+      "journal": "探索与争鸣",
+      "year": "2022",
+      "doi": null,
+      "metadata_url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+      "abstract_url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+      "abstract_locator": "原刊第126页，首段「内容摘要」，网页工具文本第2–7行",
+      "abstract_excerpt": "合格性评价与选拔性评价的结构失调",
+      "abstract_summary": "文章将教育竞争中的资源内耗与评价制度的导向偏差联系起来，归纳了三类问题：合格与选拔目标失衡、整体评价与要素评价缺少衔接、定性与定量方法运用不当。作者从文化、教育治理和技术运用三个方面追问成因，并主张调整评价的价值导向、完善治理体系和推进数字化转型。",
+      "relevance": "substantive",
+      "relevance_reason": "讨论选拔性评价如何改变学校工作的优先顺序。原刊以初中评价偏重升学率为例，可据此提出升学指标挤压全面育人任务的机制假设。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+      "abstract_hash": "ff9cab3c35c36aa4346283c60b228c94f6d30a1005e5172fd08027da49d5cf61",
+      "excerpt_sha256": "433c1e9e9a5d092cdee0d36cc4bf9355f420cba42cb7db60c0ab6940cab57fd5",
+      "searched_at": "2026-11-21T20:55:57.412060+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-f1b01547-bffb-4003-977c-63ec956e1cac",
+      "abstract_event_id": "exec-f1b01547-bffb-4003-977c-63ec956e1cac",
+      "article_id": "A_e7eb2b0218b1679b2c3e9961",
+      "provenance": [
+        {
+          "title": "教育评价的症结及出路",
+          "authors": [
+            "宗爱东"
+          ],
+          "journal": "探索与争鸣",
+          "year": "2022",
+          "doi": null,
+          "metadata_url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+          "abstract_url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+          "abstract_locator": "原刊第126页，首段「内容摘要」，网页工具文本第2–7行",
+          "abstract_excerpt": "合格性评价与选拔性评价的结构失调",
+          "abstract_summary": "文章将教育竞争中的资源内耗与评价制度的导向偏差联系起来，归纳了三类问题：合格与选拔目标失衡、整体评价与要素评价缺少衔接、定性与定量方法运用不当。作者从文化、教育治理和技术运用三个方面追问成因，并主张调整评价的价值导向、完善治理体系和推进数字化转型。",
+          "relevance": "substantive",
+          "relevance_reason": "讨论选拔性评价如何改变学校工作的优先顺序。原刊以初中评价偏重升学率为例，可据此提出升学指标挤压全面育人任务的机制假设。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.tsyzm.cn/fileup/1004-2229/NEWS/20220526040840.pdf",
+          "abstract_hash": "ff9cab3c35c36aa4346283c60b228c94f6d30a1005e5172fd08027da49d5cf61",
+          "excerpt_sha256": "433c1e9e9a5d092cdee0d36cc4bf9355f420cba42cb7db60c0ab6940cab57fd5",
+          "searched_at": "2026-11-21T20:55:57.412060+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-f1b01547-bffb-4003-977c-63ec956e1cac",
+          "abstract_event_id": "exec-f1b01547-bffb-4003-977c-63ec956e1cac"
+        }
+      ],
+      "evidence_id": "E_2e50e2d448b49d6104b638db",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    }
+  ],
+  "conflicts": [],
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+}

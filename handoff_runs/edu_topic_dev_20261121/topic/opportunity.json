@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "opportunities": [
+    {
+      "opportunity_id": "O1",
+      "observation": "既有研究报告家庭背景与普职分流有关。需要进一步解释家庭优势在哪个决策环节发挥作用。",
+      "social_process": "初中后普通高中和中职之间的轨道进入",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "opportunity_id": "O2",
+      "observation": "政策文件提出市域层面的职普结构优化及学位需求预警，地区是否存在实际供需错配仍待查证。",
+      "social_process": "教育供给的区域布局与轨道选择条件",
+      "evidence_ids": [
+        "E2",
+        "E3"
+      ]
+    }
+  ],
+  "questions": [],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "source_id": "Tian2025",
+      "document_id": "DOC-Tian2025",
+      "paper_id": "Tian2025",
+      "path": "00_项目控制/v006_第6版/outputs/topic_runs/topic_v3_education_live_20261120/pu_zhi_compact_pages.json",
+      "locator": {
+        "page": 1,
+        "section": "摘要"
+      },
+      "sha256": "da7db55bb2d9ec447e0ab883cb24e86a79dd77cfee63c60badeb9a6257ada3a1",
+      "kind": "abstract",
+      "excerpt": "家庭背景对普职分流重要但并非桎梏"
+    },
+    {
+      "evidence_id": "E2",
+      "source_id": "EduPolicy2025",
+      "document_id": "DOC-EduPolicy2025",
+      "paper_id": null,
+      "path": "00_项目控制/v006_第6版/outputs/topic_runs/topic_v3_education_live_20261120/policy.txt",
+      "locator": {
+        "page": null,
+        "section": "三、教育资源扩容行动"
+      },
+      "sha256": "c60c1ba94b1afbc7f8d308f470afd9d8d604db9e06f68f2cbcaab00f74580e2f",
+      "kind": "context",
+      "excerpt": "建立学龄人口和学位需求预测预警机制"
+    },
+    {
+      "evidence_id": "E3",
+      "source_id": "EduPolicy2025",
+      "document_id": "DOC-EduPolicy2025",
+      "paper_id": null,
+      "path": "00_项目控制/v006_第6版/outputs/topic_runs/topic_v3_education_live_20261120/policy.txt",
+      "locator": {
+        "page": null,
+        "section": "二、工作任务（五）"
+      },
+      "sha256": "c60c1ba94b1afbc7f8d308f470afd9d8d604db9e06f68f2cbcaab00f74580e2f",
+      "kind": "context",
+      "excerpt": "以市域为单位，持续优化职普结构"
+    }
+  ],
+  "explanations": [],
+  "critiques": [],
+  "evolution": []
+}

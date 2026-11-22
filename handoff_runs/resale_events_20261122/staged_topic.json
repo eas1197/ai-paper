@@ -1,0 +1,15 @@
+{
+  "run_id": "resale_events_20261122",
+  "mode": "dev",
+  "theme": "二手平台交易纠纷",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "initial",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "reality_sha256": "bf9db26929fcfba0e54be1d725af39cd0b1b2620989b0d7285f13cb9e98e8da2",
+  "exchange_sha256": "923ed6defcdafc28cc9cfc1544fa64309ae510843e21d895f1a04fe575213422"
+}

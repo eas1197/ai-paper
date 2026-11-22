@@ -1,0 +1,19 @@
+{
+  "question_id": "Q1",
+  "question": {
+    "question_id": "Q1",
+    "opportunity_id": "O1",
+    "text": "当学校统一开放家校沟通渠道时，资源较弱家庭提出的诉求更容易得到实质回应，还是依然因学校认可的表达方式而被过滤？",
+    "population": "家庭与学校互动者，具体待设计",
+    "scope": "中国学校家校互动，学校场域待定",
+    "comparison": "同类诉求的进入、认可和处理过程；比较渠道规则与回应裁量",
+    "answer_value": "可区分开放渠道消除进入成本和制度仍按表达方式筛选两种解释；也允许工作人员负荷或议题紧急程度解释差异。",
+    "concepts": [
+      "制度化参与机会",
+      "制度性认可",
+      "文化资本动用"
+    ]
+  },
+  "previous_collection": "../literature",
+  "scope": "separate Q1 collection within original run"
+}

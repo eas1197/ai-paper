@@ -1,0 +1,20 @@
+[
+  {
+    "title": "The Market for “Lemons”: Quality Uncertainty and the Market Mechanism",
+    "url": "https://www.imf.org/external/pubs/ft/fandd/2011/06/people.htm",
+    "claim": "Akerlof 的逆向选择机制适用于卖方掌握更多商品质量信息、买方难以在交易前辨别质量的市场。可用来区分商品状况难以核验所引发的争议，与平台介入后裁决程序产生的分歧。链接为国际货币基金组织对原文及理论的介绍。",
+    "event_id": "exec-37435b94-7314-40e0-8562-9d1cf6633ac3"
+  },
+  {
+    "title": "Why People Obey the Law",
+    "url": "https://doi.org/10.2307/j.ctv1j66769.6",
+    "claim": "Tyler 的程序正义解释把程序公平感和权威正当性纳入服从机制。用于平台情境时，可在裁决结果相近的案件之间检验陈述机会和中立性感知是否影响当事人接受处理结果。",
+    "event_id": "exec-37435b94-7314-40e0-8562-9d1cf6633ac3"
+  },
+  {
+    "title": "构建互利共赢的平台治理机制",
+    "url": "https://www.samr.gov.cn/zt/ndzt/2025n/zhzznjsjzwhgpjzsczx/xwbd/art/2026/art_4da0e72787f24f16ab06dd956ac1d581.html",
+    "claim": "市场监管总局网站刊载的政策解读把举证责任配置及不诚信、滥用权利的识别纳入平台规则治理。适用于分析规则如何分配提交证据的责任，并据此提出关于纠纷处理路径的可检验问题。",
+    "event_id": "exec-85e3c17e-df50-44e4-b78c-f7ddea75dfad"
+  }
+]

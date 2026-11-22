@@ -1,0 +1,122 @@
+{
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0",
+  "reviewed_articles_reused": [
+    "A_dc03216fa6bc2d1fdb970875",
+    "A_5640d2dec22be61e16501d2d",
+    "A_d36a9b91edebb76048c761c3",
+    "A_f5e3f6188d525fae95579163",
+    "A_27bd8207740a17d17df1581a",
+    "A_da6fd843c0be713de559c853",
+    "A_74e73aac034843d80e2988e9",
+    "A_7fa4e696aff910e42300291f",
+    "A_a4b8b7f7b97f6e5c44a843ab",
+    "A_b3e59f13e3880455970c501a"
+  ],
+  "source_review_collection_sha256": "82590d7fe471baf57a99ff4a385a5cf32a093bef5e6e4815601bace6d0725b64",
+  "data_sha256": "571077d161e3441d9bea0a4ec174e38a1c3b93f0333a55091f5b6d54b23b2d7e",
+  "n_obs": 500,
+  "fits": [
+    {
+      "engine": "statsmodels",
+      "environment": {
+        "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+        "pandas": "2.3.3",
+        "numpy": "1.24.3",
+        "scipy": "1.15.3",
+        "statsmodels": "0.14.4",
+        "pyreadstat": "not_installed"
+      },
+      "parameters": [
+        {
+          "term": "const",
+          "estimate": 8.061180248896036,
+          "std_error": 0.508703355979729,
+          "p_value": 1.4857343651360116e-56,
+          "ci_low": 7.06413999236111,
+          "ci_high": 9.058220505430963,
+          "scale": "coefficient"
+        },
+        {
+          "term": "a2",
+          "estimate": -0.8008028904054598,
+          "std_error": 0.33370634413215117,
+          "p_value": 0.016407468959191426,
+          "ci_low": -1.4548553063170053,
+          "ci_high": -0.14675047449391432,
+          "scale": "coefficient"
+        }
+      ],
+      "diagnostics": {
+        "converged": true,
+        "rank": 2,
+        "n_parameters": 2,
+        "condition_number": 6.682668422331987,
+        "warnings": [],
+        "errors": [],
+        "n_clusters": null,
+        "llf": -1364.161052405027,
+        "aic": 2732.322104810054,
+        "bic": null,
+        "r_squared": 0.011510152691671438,
+        "breusch_pagan_p": 0.10643526400614499
+      },
+      "n_obs": 500,
+      "covariance": "HC1",
+      "ci_level": 0.95,
+      "prediction_exported": false
+    },
+    {
+      "engine": "statsmodels",
+      "environment": {
+        "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+        "pandas": "2.3.3",
+        "numpy": "1.24.3",
+        "scipy": "1.15.3",
+        "statsmodels": "0.14.4",
+        "pyreadstat": "not_installed"
+      },
+      "parameters": [
+        {
+          "term": "const",
+          "estimate": 8.061180248896036,
+          "std_error": 0.5096672682857335,
+          "p_value": 2.3923030970105455e-56,
+          "ci_low": 7.062250758957085,
+          "ci_high": 9.060109738834987,
+          "scale": "coefficient"
+        },
+        {
+          "term": "a2",
+          "estimate": -0.8008028904054598,
+          "std_error": 0.33439014545075524,
+          "p_value": 0.01662870499379985,
+          "ci_low": -1.4561955322740503,
+          "ci_high": -0.14541024853686935,
+          "scale": "coefficient"
+        }
+      ],
+      "diagnostics": {
+        "converged": true,
+        "rank": 2,
+        "n_parameters": 2,
+        "condition_number": 6.682668422331987,
+        "warnings": [],
+        "errors": [],
+        "n_clusters": null,
+        "llf": -1364.161052405027,
+        "aic": 2732.322104810054,
+        "bic": null,
+        "r_squared": 0.011510152691671438,
+        "breusch_pagan_p": 0.10643526400614499
+      },
+      "n_obs": 500,
+      "covariance": "HC3",
+      "ci_level": 0.95,
+      "prediction_exported": false
+    }
+  ],
+  "excessive_work_rejected": true,
+  "scope": "题录来源凭证和真实数据估计联调，未通过正式研究关卡"
+}

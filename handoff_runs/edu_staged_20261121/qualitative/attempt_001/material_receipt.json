@@ -1,0 +1,129 @@
+{
+  "status": "pending_independent_review",
+  "events_sha256": "2f60aa330c74bd121229d6af652ca7094f731a4f0dacb3693414003e736d633f",
+  "response_sha256": "23399a8279d879acfbb65ea5b4345770650bf3e9dbd9b48a03d6826d5175fb0f",
+  "tool_events": 5,
+  "materials": [
+    {
+      "url": "https://www.kuow.org/stories/proposed-law-would-require-wash-schools-enroll-students-ap-classes/",
+      "date": "2013-02-20",
+      "subject": "华盛顿州早期试点中，学生发现课表已排入进阶课，试读后决定是否留下",
+      "context": "KUOW 采访 Federal Way 学区学生，回顾学区实行自动入读后的经历。学生说，看到课表上的 AP 世界史后，自己和同伴起初考虑换课。他们先试读约两周，多数留下，据其回忆有一名同伴离开。",
+      "kind": "actor_statement",
+      "path": "secondary_interviews",
+      "locator": "正文中学区负责人谈退出许可之后、AP 考试通过率之前的学生访谈段。",
+      "relation": "自动排课把决定推迟到了有课堂体验之后。留下与退出都出现在同一组学生的叙述中。",
+      "limits": "这是 AP 世界史的跨学科参照。退出来自同伴转述，报道没有核实退出理由、监护人签字或改班记录。课表上出现课程也无法确认学生另行收到过正式通知。",
+      "access": "原站正文可免登录阅览。研究用途许可尚待核实。",
+      "event_id": "exec-fc80bbe3-d428-4ec7-8711-99d22df54ec5",
+      "material_id": "96809f522f9def91"
+    },
+    {
+      "url": "https://www.wunc.org/education/2017-05-23/counted-out-an-investigation-into-education-inequality-in-nc",
+      "date": "2017-05-23",
+      "subject": "北卡罗来纳州立法前，家长主动向教师争取进阶机会",
+      "context": "WUNC 跟进《Counted Out》调查。受访家长回忆，孩子在数学和阅读州测验中表现较好，仍未进入进阶项目。家长随后学习如何为孩子争取机会，并向教师说明孩子能够应对更有挑战的学习。",
+      "kind": "actor_statement",
+      "path": "secondary_interviews",
+      "locator": "正文中调查记者介绍同分学生获得资优认定的差异之后，家长讲述与教师交涉的段落。",
+      "relation": "呈现改革前的一项具体成本，即家长要发现落选并主动与教师交涉。可与自动排课后由学校先作出安排的过程比较。",
+      "limits": "涉及资优认定及进阶项目，早于州级自动入读法。公开文字未交代交涉后的最终数学排课，也不能由此判断当时的分数是否符合后来州法的最高等级门槛。",
+      "access": "原站文字摘要可免登录阅览。核查范围为网页文字，研究用途许可尚待核实。",
+      "event_id": "exec-e8ac0e0f-d8a1-4023-81fb-ec433f2dd3b7",
+      "material_id": "226afc8db9e7566f"
+    },
+    {
+      "url": "https://www.edweek.org/leadership/the-simple-policy-change-thats-getting-more-students-of-color-in-advanced-courses/2020/03",
+      "date": "2020-03-03",
+      "subject": "华盛顿州两地通过不同做法扩大进阶课机会",
+      "context": "Education Week 报道，Spokane 一所高中取消了部分阻碍升入进阶课程的先修课和教师推荐要求，按州测验表现安排下一门可用的进阶课。报道还记载，Bridgeport 在正式采纳加速政策前，已通过与社区学院合作开设可获大学学分的课程，并负担注册费和 AP 考试费。",
+      "kind": "reporter_account",
+      "path": "secondary_interviews",
+      "locator": "开头 Spokane 改革段及文末 Bridgeport 个案。中段校方另描述了与学生一对一谈话、与担心学业负担的家长沟通。",
+      "relation": "Spokane 同时调整了排课默认项和先修门槛。Bridgeport 提供反例，课程供给和费用支持在正式采用自动入读前就已发生变化，参与增长有这些替代解释。",
+      "limits": "报道覆盖多个学科，主要依据校方和倡议方访谈。没有逐生排课记录或辅导员亲述，无法分辨各项措施对数学入读的独立作用。",
+      "access": "原站相关正文在本次网页打开中可免登录读取。研究用途许可尚待核实。",
+      "event_id": "exec-fc80bbe3-d428-4ec7-8711-99d22df54ec5",
+      "material_id": "49020add3eb60a44"
+    },
+    {
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=28A.320.195",
+      "date": "2019 年修订，2021–22 学年起要求学区采纳",
+      "subject": "华盛顿州高中学业加速规则",
+      "context": "数学州测验达到或超过州标准的学生符合进阶数学资格。学区可增加符合公平要求的资格条件，须通知学生和家庭有关政策及可选进阶课程，并允许监护人为学生退出、改选符合高中及毕业后规划的课程。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "RCW 28A.320.195 第 1 至 6 款，尤其是第 3(c)、5、6 款。",
+      "relation": "州法把识别和默认安排交给学区，同时让本地可开设的课程和资格细则影响学生实际获得的机会。",
+      "limits": "条文确立通知和退出义务。实际送达、学生理解及退出处理需要另有记录。",
+      "access": "州立法机关网站可免登录阅览。未核验研究再利用条件。",
+      "event_id": "exec-82c599ed-9950-4553-bf37-4dce2e69469c",
+      "material_id": "ecf95367edf79b59"
+    },
+    {
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_115C/GS_115C-81.36.html",
+      "date": "2019 年成法，核查现行网页",
+      "subject": "北卡罗来纳州进阶数学资格、默认入读与书面退出规则",
+      "context": "在开设进阶数学课程的情况下，六年级及以上学生最近一次相关州测验达到最高等级后，下一门数学课须安排进阶课程。七年级数学年终测验获最高等级者，八年级须安排高中层级数学。学校在排除或移出合格学生前，须充分告知监护人分班依据，并取得书面同意。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "G.S. 115C-81.36 第 (a)、(b)、(c) 款。",
+      "relation": "与华盛顿州的达标门槛相比，该规则按最高等级触发，并指定八年级衔接。自动入读能覆盖哪些学生、能提前打开哪一段课程路径，两州规则有所不同。",
+      "limits": "法条规定资格和程序。需要结合课程供给与实际排课资料判断落实情况。",
+      "access": "州议会网站可免登录阅览。未核验研究再利用条件。",
+      "event_id": "exec-fc80bbe3-d428-4ec7-8711-99d22df54ec5",
+      "material_id": "778ebc8061d0f486"
+    },
+    {
+      "url": "https://bothell.nsd.org/counseling/wa-state-academic-acceleration",
+      "date": "网页未标明发布日期",
+      "subject": "华盛顿州 Bothell High 的口头告知、书面通知与负担咨询",
+      "context": "学校辅导网页规定，学生在注册时应获得口头说明，学生和家庭在自动排课时应收到书面通知。学生可就个别课程或全部进阶课程退出。自动排入三门及以上进阶或双学分课程时，学校还应就课业负担提供咨询。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "数学资格说明及退出要求问答，页面另列退出表链接。",
+      "relation": "校方公布的流程把通知放在注册和排课时，并在多门课程叠加时单设咨询环节。可据此追问学生何时获知安排、谁与学生讨论负担。",
+      "limits": "网页是程序说明。退出表链接未另行打开，也没有收件、咨询或改班记录。",
+      "access": "学校说明页可免登录阅览。表单访问与研究用途许可尚待核实。",
+      "event_id": "exec-e8ac0e0f-d8a1-4023-81fb-ec433f2dd3b7",
+      "material_id": "b121c875d510728a"
+    },
+    {
+      "url": "https://wsa.tacomaschools.org/programs-activities/student-support/my-now/advanced-programs",
+      "date": "网页未标明发布日期",
+      "subject": "华盛顿州 Tacoma 一所学校公布的退出流程和未达标学生入口",
+      "context": "页面要求拟退出者先联系学校辅导员启动流程，咨询可信任的成人或学校人员，再提交材料和监护人签字。页面也说明，指定测验未达标的学生仍可选择进阶项目。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "进阶项目资格段和退出流程段。",
+      "relation": "校方公布的流程显示，辅导员仍是退出的接洽点，未触发自动入读的学生仍有主动选择的入口。与 Bothell 页面相比，这里清楚列出了退出前的接洽、咨询和签字环节。",
+      "limits": "两校网页的详细程度不同，实际程序是否同样不同仍待核实。页面未提供辅导员处理个案或学生退出成功的记录。",
+      "access": "学校说明页可免登录阅览。研究用途许可尚待核实。",
+      "event_id": "exec-e8ac0e0f-d8a1-4023-81fb-ec433f2dd3b7",
+      "material_id": "14904836dd2f1ea9"
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://www.dpi.nc.gov/documents/advancedlearning/advanced-math-course-amc-report-2025-2026/download?attachment=",
+      "reason": "receipt or context incomplete"
+    }
+  ],
+  "notes": [
+    "共使用 24 项原生网页搜索或打开动作，分为 10 条检索词和 14 次页面打开，包含同页重开定位。全程使用公开网页，无账户登录。方法为公开网页材料查阅与二手访谈整理。",
+    "深度报道与二手访谈路径使用了 Washington North Carolina automatic enrollment advanced math students counselors opt out interview Hechinger EdWeek、North Carolina advanced math automatic enrollment parents opt out student counselor interviewed News Observer EdNC、Washington automatic enrollment advanced math academic acceleration student counselor interview opt out Kent Federal Way、Federal Way academic acceleration student counselor Seattle Times、Wake County parents denied advanced math News Observer，以及 Washington academic acceleration interviews counselor opt out students CEDR 等检索词。",
+    "该路径打开了 KUOW、WUNC、Education Week 和《Counted Out》报纸调查的公开 PDF 镜像。镜像与 WUNC 属同一调查链，未作独立印证。检索命中的 AP 达拉斯学生个案属于得州，Education Week 的一条新报道命中机构代理入口，均未纳入。AIR 项目页也已打开，其中高中阶段参与增加未延伸至可检出的大学结果，另一个只发通知的试验对多数学生的十年级实际修读影响有限。两项研究均缺少本轮所需的逐人行动链，未列入材料。",
+    "公开网络互动和制度事件路径使用了 reddit North Carolina Washington advanced math automatic enrollment opt out parent math placement、site:reddit.com OR site:talk.collegeconfidential.com math 1 8th grade Wake North Carolina math placement counselor opt out level 5、advanced math opt out North Carolina district parent math 1 placement board automatic，以及 advanced math opted out North Carolina school placement student parent level 5 OR 115C-81.36。打开并核对两州法条、Bothell 和 Tacoma 学校说明、北卡州教育部门年度报告。",
+    "公开互动未找到能同时核验州别、自动入读资格和最终排课的帖子。一条看似符合北卡课程命名的 Reddit 讨论中，发帖者在检索返回的公开回复里明确说自己并非在北卡。College Confidential 命中多为一般选课讨论，其他 Reddit 命中多为转学或特殊学校招生。论坛线索仅筛查检索返回，未打开帖子或纳入个案，也未保留账号与帖子链接。"
+  ],
+  "gaps": [
+    "现有材料支持一项过程判断。自动入读把识别和初次排课交给学校，家庭可能从争取名额转向了解安排、决定是否留下或申请调整。机会扩展能否缩小差距，还取决于资格门槛覆盖谁、学校有没有课可排，以及各群体在通知、咨询和后续修读中的经历。当前材料只能核实其中部分环节。",
+    "最接近完整行动过程的学生叙述来自华盛顿州 AP 世界史。两州进阶数学都未找到可核验的正式通知收件个案、签字退出并实际改班的个案，或辅导员亲述如何处理异议、漏排或排课冲突的案例。北卡的年度数据能确认未分班，无法还原未分班的决定过程。",
+    "来源的时间、对象和统计口径不同。北卡立法前的报道涉及资优认定与进阶机会，州报告统计最高等级合格生的数学分班，华盛顿早期报道多覆盖多个学科。入读、继续修读、通过 AP 考试和取得大学学分是不同结果。现有材料不足以构成两州同口径的个案比较。",
+    "课程供给和费用政策已有报道中的实际例子。师资短缺、统计时点和毕业学分安排是地方反馈或报告提出的可能解释。缺少逐案记录来判断它们与家庭退出、校方漏排各自解释多少差异。"
+  ],
+  "run_id": "edu_staged_20261121",
+  "conversion_sha256": "2ebcf5e46bcb7c024341b04c2c09b218cfbb5ff4438370c9ea6dab6b832ac0e7",
+  "formal_eligible": false,
+  "material_kind": "qualitative_empirical"
+}

@@ -1,0 +1,32 @@
+{
+  "answer": [
+    {
+      "index": 0,
+      "origin": "binding",
+      "severity": "local",
+      "reason": "需先核对哈希对应的版本和制品，以及矩阵采集制品与本轮回执的绑定关系，再更新矩阵元数据和 D1 的未决项。该调整不改变研究问题或实质结论。"
+    },
+    {
+      "index": 1,
+      "origin": "analysis",
+      "severity": "local",
+      "reason": "武汉两条记录的原始事实不变，调整的是证据与命题的关系，将支持范围限定为可观察时序，并保留锁态、应用关单和提示效果的不确定性。"
+    },
+    {
+      "index": 2,
+      "origin": "source",
+      "severity": "local",
+      "reason": "补记金台路报道中的求助、报障和免单显示，属于原始事实补充，保留现有事件身份及对落锁时序、应用关单和实际结算的判断。"
+    }
+  ],
+  "thread_id": "01a202c4-ade2-7421-802a-4d1fa7deece2",
+  "usage": {
+    "input_tokens": 19579,
+    "cached_input_tokens": 14208,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 244,
+    "reasoning_output_tokens": 0
+  },
+  "response_sha256": "98dfa1c569def16d245b762a8b669f351096a2995c3fed90c4acb65c4232ed3b",
+  "model": "subscription_default"
+}

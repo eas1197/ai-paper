@@ -1,0 +1,56 @@
+{
+  "events": [
+    {
+      "identity": "北京朝阳地铁站 记者现场观察",
+      "retained_facts": [
+        {
+          "source_id": "B",
+          "statement": "车进入可见停车线仍无法落锁",
+          "status": "corroborated",
+          "use": "核对出现什么，不判定是定位误差",
+          "key": true
+        }
+      ],
+      "uncertain_facts": [],
+      "critical_gaps": []
+    },
+    {
+      "identity": "武汉地铁口 记者所见",
+      "retained_facts": [
+        {
+          "source_id": "W",
+          "statement": "骑行者按手机提示多推一段后落锁",
+          "status": "corroborated",
+          "use": "现场调整和成功先后发生，无法排除重试恢复",
+          "key": true
+        }
+      ],
+      "uncertain_facts": [],
+      "critical_gaps": []
+    },
+    {
+      "identity": "郑州媒体转载 消费者回忆",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "Z",
+          "statement": "骑行者称按求助提示离开，后来订单仍计费",
+          "status": "single_account",
+          "use": "解释用户怎样理解关单承诺，不作为平台后台记录",
+          "key": true
+        }
+      ],
+      "critical_gaps": [
+        "骑行者称按求助提示离开，后来订单仍计费"
+      ]
+    }
+  ],
+  "event_count": 3,
+  "sensitivity": "去掉郑州单方陈述仍可观察北京现场不一致及武汉调整后成功，费用转移和后台机制均未证实。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "bike_parking_20261122",
+  "input_sha256": "1e9992bcfd929b5f2e51bb8e71a0a12f781f68b6440fd25503c423274881cd6b",
+  "exchange_sha256": null,
+  "reality_sha256": "77e915f30a7583d2476b235d82b14ebd819214ffeefee5e24ff578bcb52f657b",
+  "formal_eligible": false
+}

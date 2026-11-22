@@ -1,0 +1,185 @@
+{
+  "config_sha256": "e3c6ae643d274b1ea1fb7fa35054f9f6ed7373d4165369d889cf78ed75b359e2",
+  "collection_id": "COL_959f315386a15f0db30a4ef3",
+  "engine": "codex_native_v1",
+  "config": {
+    "theme": "教育",
+    "target": 10,
+    "max_batches": 1,
+    "timeout_seconds": 480,
+    "journals": [
+      "中国社会科学",
+      "社会学研究",
+      "社会",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界"
+    ],
+    "search_action_budget": 24,
+    "run_mode": "dev",
+    "workload_sha256": "c8780a4cba40397f87ec60c5b80d814d3e12c00f439e86db9e624d4ac1cd31a0"
+  },
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-21T19:39:39.142325+08:00",
+      "status": "failed",
+      "failure": "Codex CLI needs the existing ChatGPT login",
+      "finished_at": "2026-11-21T19:39:39.217087+08:00"
+    },
+    {
+      "batch": "batch_002",
+      "started_at": "2026-11-21T19:49:47.898134+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-21T19:51:22.283539+08:00",
+      "event_sha256": "5cd3765edc50c1fa886b4b019433e558fa3d2d8c3fe00e4edd1a90af038cef51",
+      "response_sha256": "2ccbb874b8d8403560c805e6e43d9305dea94d26c3daaff95735a042ef94945c",
+      "notes": [
+        "首轮按《社会》《社会学研究》官网域名查找教育分流，同时以职业教育、升学和高校扩招查找《中国青年研究》《经济研究》《管理世界》的候选。混刊结果较多，随后转向确切题名及参考文献中的线索。",
+        "第二轮由《教育分流体制与中国的教育分层》追查重点学校制度、学轨制及城乡升学机会。第三轮改用带 www 的《社会》官网域名，并用教育质量和市场转型等术语扩展到院校层级及其后果。",
+        "第四轮追查学校阶层分割和家庭教育期望。第五轮根据参考文献补查家庭背景与非学业分流，并用完整题名查找高校扩招与大学毕业生就业研究，核对易混淆刊名。",
+        "共使用24个原生网页动作，包括17个搜索查询和7次页面打开。成功打开并核实4篇，另有3次打开超时，距离13篇目标差9篇。两篇使用《社会》官网，另外两篇通过公开题录平台核实，DOI字段均因来源未明确显示而留空。"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "title": "教育分流体制与中国的教育分层（1978—2008）",
+      "authors": [
+        "吴愈晓"
+      ],
+      "journal": "社会学研究",
+      "year": "2013",
+      "doi": null,
+      "metadata_url": "https://www.oalib.com/research/5187819",
+      "abstract_url": "https://www.oalib.com/research/5187819",
+      "abstract_locator": "题录下方的中文 Abstract 段落",
+      "abstract_excerpt": "初中、高中和大学三个教育层次的升学路径差异",
+      "abstract_summary": "研究利用2008年中国综合社会调查数据，比较改革开放后城乡居民在初中、高中和大学三个阶段的升学路径。家庭社会经济地位较高的学生更容易进入重点学校，也更倾向于选择学术轨道。前一学段就读重点学校还会提高下一学段进入重点学校的机会，显示学校层级优势可以跨学段延续。",
+      "relevance": "direct",
+      "relevance_reason": "同时检验了学术与职业轨道的分流，以及重点学校经历如何影响下一阶段的升学路径。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.oalib.com/research/5187819",
+      "abstract_hash": "2d0fd9cbfefa9b7c72005625ea6514f779c9fd7c0904b0c004ab779dc2243115",
+      "excerpt_sha256": "e957cf97c4b032466deec337e3d67197a74f0192a0a2b765ed5112453dcb7ac8",
+      "searched_at": "2026-11-21T19:51:22.283539+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6",
+      "abstract_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6"
+    },
+    {
+      "title": "中国城乡居民的教育机会不平等及其演变（1978—2008）",
+      "authors": [
+        "吴愈晓"
+      ],
+      "journal": "中国社会科学",
+      "year": "2013",
+      "doi": null,
+      "metadata_url": "https://academicnewsletter.sufe.edu.cn/info/230029",
+      "abstract_url": "https://academicnewsletter.sufe.edu.cn/info/230029",
+      "abstract_locator": "上海财经大学图书馆全球经管学术页面的“摘要”段落",
+      "abstract_excerpt": "高中和大学升学机会的城乡不平等有扩大趋势",
+      "abstract_summary": "研究使用2008年中国综合社会调查数据，比较1978至2008年城乡居民升入初中、高中和大学的机会。初中升学的城乡差异基本稳定，高中和大学阶段的城乡差异趋于扩大。父亲职业地位的作用较稳定，父母受教育年限的影响逐渐增强，同胞数量差异所对应的教育机会不平等也有所上升。",
+      "relevance": "direct",
+      "relevance_reason": "逐个比较初中、高中和大学升学关口，考察户籍与家庭背景对各阶段教育机会的影响。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://academicnewsletter.sufe.edu.cn/info/230029",
+      "abstract_hash": "0434470aaf382a808f9c7a2be01807c8657e0350670b24ac58d305589685b7e5",
+      "excerpt_sha256": "847b99ce137b951b4e86e3a6232122c7135ca3163908b7cbae89493b0a94ca1d",
+      "searched_at": "2026-11-21T19:51:22.283539+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:2",
+      "metadata_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6",
+      "abstract_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6"
+    },
+    {
+      "title": "扩张的中国高等教育：教育质量与社会分层",
+      "authors": [
+        "叶晓阳",
+        "丁延庆"
+      ],
+      "journal": "社会",
+      "year": "2015",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2015/V35/I3/193",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2015/V35/I3/193",
+      "abstract_locator": "期刊官网“摘要/Abstract”栏的中文摘要首段",
+      "abstract_excerpt": "进入具有更好教育质量的精英院校",
+      "abstract_summary": "研究使用2011年首都高校学生调查数据，考察扩招背景下的院校入学和就业分层。优势家庭子女进入高质量精英院校的概率更高，家庭阶层背景的影响在中学阶段更明显，对大学专业选择的影响未达显著。控制家庭背景后，较高教育质量与进入市场化部门就业和较高起薪相关。",
+      "relevance": "direct",
+      "relevance_reason": "把精英院校进入机会作为院校层级分流结果，并追踪教育质量与毕业就业去向及起薪的关系。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2015/V35/I3/193",
+      "abstract_hash": "94b5a77da4726cf761737441e04d1c7ff8beca30c242e969c57ef55adfad44be",
+      "excerpt_sha256": "75ea6b6b70d7bdf14fc31ef5b577c4f2d4b854336fe882cd4a3711b55d557985",
+      "searched_at": "2026-11-21T19:51:22.283539+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:3",
+      "metadata_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6",
+      "abstract_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6"
+    },
+    {
+      "title": "1990-2000年中国的经济转型、学校扩招和教育不平等",
+      "authors": [
+        "吴晓刚"
+      ],
+      "journal": "社会",
+      "year": "2009",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_locator": "期刊官网“摘要/Abstract”栏的中文摘要段落",
+      "abstract_excerpt": "高中教育升学机会的城乡差距却在扩大",
+      "abstract_summary": "研究使用1990年和2000年人口普查样本，将学龄子女与父母背景配对，比较经济转型期间的入学和升学机会。九年义务教育普及期间，农村户籍儿童获得初中教育的相对机会有所增加，高中升学的城乡差距扩大。控制地区经济发展水平后，父亲社会经济地位对高中升学的影响仍呈增强趋势。",
+      "relevance": "direct",
+      "relevance_reason": "比较学校扩招期间初中和高中两个升学关口，揭示城乡户籍与父亲社会经济地位如何影响继续就学。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2009/V29/I5/88",
+      "abstract_hash": "03fd859feb375a1679b01d0894480f910763032a9beed7a3e1142b668f6ad03f",
+      "excerpt_sha256": "711ce2c991e963f67a805c9bfd16fd78b792bfc30e4962cc0ce522f6f02825ff",
+      "searched_at": "2026-11-21T19:51:22.283539+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:4",
+      "metadata_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6",
+      "abstract_event_id": "exec-c8d852d5-6903-4173-afbe-60f100fb76a6"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "市场转型、教育分流与中国城乡高等教育机会不平等(1977-2008)——兼论重点中学制度是否应该为城乡高等教育机会不平等买单",
+      "reason": "搜索命中《社会》官网及部分摘要，逐篇打开原刊页面时超时，完整摘要未核实。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "家庭背景、教育期望与大学教育获得：基于上海市调查数据的实证研究",
+      "reason": "搜索命中《社会》官网题录和部分摘要，逐篇打开时超时，完整摘要未核实。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "大学扩招如何影响高等教育溢价？",
+      "reason": "北京师范大学成果页的搜索结果标明刊于《管理世界》2017年第8期，逐篇打开时超时，完整摘要未核实。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "基础教育中的学校阶层分割与学生教育期望",
+      "reason": "南京大学成果报道给出了作者及《中国社会科学》刊期，公开检索返回的是成果介绍，原摘要未逐篇打开核实。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "家庭背景与教育分流——教育分流过程中的非学业性因素分析",
+      "reason": "《社会》官网搜索结果的摘要栏为空，题名与另一索引结果的断句也有差异，未在预算内核实原题及摘要。",
+      "batch": "batch_002"
+    }
+  ],
+  "previous_config_sha256": "a3ca60829e03a227ebc1ee1e0fd69232db0ca936a9782b78462399083dc1b0c5",
+  "login_preflight_only_batches": [
+    "batch_001"
+  ]
+}

@@ -10,6 +10,7 @@ from staged_topic import ROOT, run_mode, job_lock
 from codex_literature import cli_environment, cli_executable, login_probe
 from question_binding import artifact_lineage, binding, evidence_digest, file_hash
 from revision_routes import preflight, validate_routes
+from technical_review import close_binding_review, local_matrix_context
 
 sys.path.insert(0, str(ROOT / "06_数据方法与分析/v005_第5版/tools"))
 from framework import analysis_matrix
@@ -19,6 +20,30 @@ from writing_plan import produce
 
 REVIEWER = "gpt-6.2-sol"
 load, write = run_mode.load, run_mode.write
+
+
+def normalize_plan_prose(packet):
+    def text(value):
+        if isinstance(value, dict):
+            return "\n".join(f"{key} — {text(part)}" for key, part in value.items())
+        if isinstance(value, list):
+            return "\n".join(text(part) for part in value)
+        if not isinstance(value, str):
+            raise ValueError("Writing-plan prose must be text or structured text")
+        return value
+    packet["answer_strategy"] = text(packet["answer_strategy"])
+    for group in ("framework", "case"):
+        for key, value in packet[group].items():
+            if key not in {"dimensions"}:
+                packet[group][key] = text(value)
+    for chapter in packet["chapters"]:
+        for key in ("task", "bridge"):
+            chapter[key] = text(chapter[key])
+        for section in chapter["sections"]:
+            for key in ("title", "task", "argument", "evidence_use"):
+                section[key] = text(section[key])
+            section["paragraphs"] = [text(value) for value in section["paragraphs"]]
+    return packet
 
 
 def dispatch(area, label, instruction, inputs, *, reviewer=False):
@@ -110,10 +135,22 @@ def resume(work, folder, prior_review):
                                "historical_revisions": spent, "from_status": previous})
     if previous_status.exists():
         terminal = load(previous_status)
-        if terminal.get("stage") == "matrix" and terminal.get("status") == "academic_stop":
-            for record in sorted(area.glob("rebuilt_matrix_review_*/attempt_*/validated.json")):
+        if terminal.get("status") == "technical_block" and (area / "technical_closure.json").is_file():
+            prior = load(area / "technical_closure.json")
+            terminal = {"status": "technical_progress", "review": prior["prior_review"],
+                        "revisions": prior["academic_revisions"]}
+        if terminal.get("status") in {"academic_stop", "local_revision_limit", "technical_progress"}:
+            records = sorted(area.glob("rebuilt_matrix_review_*/attempt_*/validated.json"),
+                             key=lambda path: path.stat().st_mtime, reverse=True)
+            recovered = False
+            for record in records:
                 result = load(record)
-                if result["model"] != REVIEWER or result["answer"] != terminal.get("review"):
+                conditions = terminal.get("items", [])
+                linked = result["answer"] == terminal.get("review")
+                if terminal.get("status") == "local_revision_limit":
+                    linked = bool(conditions) and all(row["instruction"] in result["answer"].get("changes", [])
+                                                      for row in conditions)
+                if result["model"] != REVIEWER or not linked:
                     continue
                 key = record.parent.parent.name.removeprefix("rebuilt_matrix_review_")
                 request = load(record.parent / "request.json")
@@ -129,7 +166,21 @@ def resume(work, folder, prior_review):
                     current, review, spent = candidate, result["answer"], terminal["revisions"]
                     framework, receipt = (load(folder / name) for name in ("framework.json", "material_receipt.json"))
                     context.update(question_binding=contract, framework=framework, receipt=receipt)
+                    recovered = True
                     break
+                if recovered:
+                    break
+            if terminal.get("status") in {"local_revision_limit", "technical_progress"} and not recovered:
+                raise ValueError("The latest independent review cannot be bound to its matrix")
+    closed = close_binding_review(work, folder, current, review)
+    if closed is not None:
+        write(area / "technical_closure.json", {"prior_review": review, "status": "verified",
+                                                "metadata": closed["technical_metadata"],
+                                                "model_calls": 0, "academic_revisions": spent})
+        current = closed
+        write(previous_status, {"status": "technical_progress", "review": review,
+                               "revisions": spent})
+        review = {"decision": "pass", "reason": "Only verified artifact conditions remained"}
     while review["decision"] in {"revise", "conditional_pass"}:
         changes = review.get("changes")
         if not changes:
@@ -217,13 +268,19 @@ def resume(work, folder, prior_review):
                     "receipt_file_sha256": contract["receipt_sha256"]})
         context.update(question_binding=contract, framework=framework, receipt=receipt,
                        artifact_lineage=artifact_lineage(work, folder))
+        scoped = local_matrix_context(context, current, checks)
         updated = dispatch(area, f"rebuilt_matrix_{route_id}",
                            "Apply the independent review using ONLY the supplied evidence. JSON array only, no fences. "
                            "Each dimension: dimension_id, evidence [{material_id,relation,reason}], conclusion, "
                            "alternatives, unresolved, boundary, status. All scalar fields are strings; preserve unresolved claims.",
-                           {**context, "matrix": current, "review": review, "remaining_revisions": 2 - spent,
-                            "reverified_issue_indices": sorted(repaired)})
+                           scoped or {**context, "matrix": current, "review": review, "remaining_revisions": 2 - spent,
+                                      "reverified_issue_indices": sorted(repaired)})
         findings = updated["answer"]
+        if scoped:
+            ids = {row["dimension_id"] for row in scoped["matrix_rows"]}
+            if len(findings) != len(ids) or {row["dimension_id"] for row in findings} != ids:
+                raise ValueError("Local revision may only replace targeted analysis rows")
+            findings = [*findings, *(row for row in current["rows"] if row["dimension_id"] not in ids)]
         for finding in findings:
             for key in ("conclusion", "boundary", "unresolved", "alternatives"):
                 if isinstance(finding.get(key), list) and all(isinstance(x, str) for x in finding[key]):
@@ -233,12 +290,14 @@ def resume(work, folder, prior_review):
             return {"status": "revision_incomplete", "stage": "matrix",
                     "reason": "Revision did not change the reviewed analysis",
                     "items": checks, "revisions": spent}
-        completion = dispatch(
+        completion = ([{"index": row["index"], "completed": True,
+                        "evidence": "Scoped matrix structure verified; substantive changes await independent review"}
+                       for row in checks] if scoped else dispatch(
             area, f"revision_completion_{route_id}",
             "Check every routed item against the actual before/after artifacts. Return JSON only: array of objects "
             "with original index, completed (boolean), and evidence (nonempty string naming the changed field or "
             "verified hash). Mark unaddressed or unverifiable items false. Do not give an academic pass verdict.",
-            {**context, "before": current, "after": revised, "items": checks})["answer"]
+            {**context, "before": current, "after": revised, "items": checks})["answer"])
         indices = [row["index"] for row in checks]
         if (not isinstance(completion, list) or sorted(row["index"] for row in completion) != indices
                 or any(type(row.get("completed")) is not bool or not str(row.get("evidence", "")).strip()
@@ -263,10 +322,11 @@ def resume(work, folder, prior_review):
                           "Respect the current stage; unresolved propositions can remain. Return JSON only: "
                            "decision (pass/conditional_pass/revise/stop), reason, changes (string array), "
                            "and routes covering each change (index, origin, severity, reason).",
-                          {**context, "matrix": current, "previous_review": review,
+                          ({**scoped, "after": [row for row in current["rows"] if row["dimension_id"] in ids]}
+                           if scoped else {**context, "matrix": current, "previous_review": review,
                            "completion": completion,
                            "hash_note": "Framework file SHA-256 and canonical JSON SHA-256 use different encodings. "
-                                        "The program checked both; compare within the same hashing method."}, reviewer=True)["answer"]
+                                        "The program checked both; compare within the same hashing method."}), reviewer=True)["answer"]
         if blocked_budget:
             return {"status": "academic_stop", "stage": "matrix", "items": blocked_budget,
                     "local_review": review, "revisions": spent, "local_rounds": local_rounds}
@@ -290,7 +350,7 @@ def resume(work, folder, prior_review):
                           "title,task,argument,evidence_use,source_ids and paragraphs (nonempty array of distinct paragraph tasks). "
                           "Each analytic chapter uses theory and empirical sources. Preserve uncertain findings and evidence limits.",
                           {**context, "previous_plan": packet, "review": review, "remaining_revisions": 2 - spent})
-        packet = answer["answer"]
+        packet = normalize_plan_prose(answer["answer"])
         packet.update(question_binding=contract, core_question=contract["core_question"],
                       specific_question=contract["specific_question"], method=contract["method"],
                       analysis_matrix=str(matrix_path.relative_to(work)))

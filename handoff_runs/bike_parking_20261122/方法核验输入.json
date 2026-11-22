@@ -1,0 +1,10 @@
+{
+  "core_question": "共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？",
+  "prior_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+  "new_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+  "theoretical_concern": "数字服务组织如何通过现场反馈、证据采纳和订单处置，影响骑行者为恢复服务流程投入的工作。",
+  "reason_for_conversion": "未发生方法转换。本轮直接建议定性核验，因为当前问题首先需要重建行动和订单状态的先后顺序，识别技术恢复、可行动反馈与复核改判各自所处的环节。",
+  "framework": "以单次还车事件为单位，追踪现场条件与首次拒绝、提示与用户解释、移车或重试、求助与举证、复核、落锁与关单、计费与退款。优先在同平台和类似故障条件下比较解决路径，收集自动恢复、复核后解决和求助后仍未解决的事件。逐环节记录信息来源、时间、能采取行动的主体和能改变状态的主体，缺项写待核。",
+  "literature": "[\"Star 与 Strauss，Layers of Silence, Arenas of Voice，理论摘述用于定义补救工作的组织可见性，原文待核。\",\"Rahman，The Invisible Cage，E_91bc10ef41f5d885df1d97ef；Boudreau 与 Robey，Enacting Integrated Information Technology，E_6d755ca47f3a0f591bd22951。摘要用于比较反馈不透明与经验性补救，全文待核。\",\"Cameron 与 Rahman，Expanding the Locus of Resistance，E_d1cc6fca0072d080a2f8b5db；Rahman 与 Valentine，How Managers Maintain Control Through Collaborative Repair，E_bd593b250994b9337ad55a9a。摘要用于提出记录如何产生后果以及复核如何改变结果的问题，全文待核。\",\"李晶晶等，信用管理对消费者行为的双重影响，E_24a9f79b19165d7fb6a9e7a0。摘要用于核查真实违停与信用激励这两项竞争解释，全文待核。\"]",
+  "context": "沿用 bike_parking_20261122 的北京、武汉和郑州来源作为寻源起点。优先找可追溯的现场标线、应用提示、客服对话和订单时间记录。北京查首次拒绝与适用边界，武汉查提示、移车、重试与落锁的顺序，郑州查离开提示、实际关单和账单记录。将同平台的常规成功与异常自动恢复事件纳入比较。原始材料、平台身份、采样范围和获取条件待核。"
+}

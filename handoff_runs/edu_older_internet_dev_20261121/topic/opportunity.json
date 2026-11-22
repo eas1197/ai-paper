@@ -1,0 +1,53 @@
+{
+  "evidence": [
+    {
+      "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+      "evidence_id": "E1",
+      "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+      "kind": "abstract",
+      "source_id": "RK1",
+      "locator": {
+        "section": "官网摘要短摘"
+      },
+      "paper_id": "RK1",
+      "document_id": "DOC1",
+      "excerpt": "受教育程度更高的老年人能够更多地受益于互联网使用。"
+    },
+    {
+      "path": "00_项目控制/v007_第7版/runs_dev/edu_older_internet_dev_20261121/topic/source.txt",
+      "evidence_id": "E2",
+      "sha256": "9c31118a3de7e10c91537fa5caadc4c42a15f02405dc6b8cb6799cf266d28a4f",
+      "kind": "abstract",
+      "source_id": "RK2",
+      "locator": {
+        "section": "官网摘要短摘"
+      },
+      "paper_id": "RK2",
+      "document_id": "DOC2",
+      "excerpt": "中老年上网者互联网使用时长适中,内部异质性强"
+    }
+  ],
+  "schema_version": 1,
+  "opportunities": [
+    {
+      "observation": "一项CLASS研究报告较高教育组的互联网使用收益更大，教育差异出现在哪类使用中尚待追问。",
+      "opportunity_id": "O1",
+      "social_process": "学校教育资源和老年互联网使用回报",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "observation": "调查报告中老年上网者在使用时长方面存在内部异质性，教育是否与上网者群体内的强度相关仍待查证。",
+      "opportunity_id": "O2",
+      "social_process": "老年上网人群内部的使用分化",
+      "evidence_ids": [
+        "E2"
+      ]
+    }
+  ],
+  "critiques": [],
+  "evolution": [],
+  "questions": [],
+  "explanations": []
+}

@@ -1,0 +1,20 @@
+{
+  "review_sha256": "0699c1a7082ca02ecb8e6c3da47542f6403e34772850eb15c750166b6f676710",
+  "items": [
+    {
+      "index": 0,
+      "origin": "binding",
+      "severity": "local",
+      "reason": "变更涉及哈希比较和版本追踪的存放位置，以及各制品的标识和哈希计算口径，研究结论不受影响。",
+      "instruction": "将哈希比较和版本追踪从 D1.unresolved 移至矩阵制品元数据。记录框架文件、规范化 JSON、回执文件及采集制品的路径或稳定标识、版本、哈希值和计算口径。",
+      "handler": "binding",
+      "status": "verified",
+      "verification": {
+        "framework_file_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+        "framework_canonical_json_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+        "receipt_framework_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+        "receipt_file_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2"
+      }
+    }
+  ]
+}

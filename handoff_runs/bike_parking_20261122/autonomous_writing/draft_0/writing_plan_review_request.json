@@ -1,0 +1,30 @@
+{
+  "run_id": "bike_parking_20261122",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "method": "secondary_interviews",
+  "requested_deliverable": "plan",
+  "status": "plan_prepared",
+  "input_sha256": "5504d89f8be6e9fa0c4e367a1fcbd7d816abd3640ecaea0322ee7f76bb299faa",
+  "plan_sha256": "c1d9e1289a8c3963b4ab471cfea41614083f9c2aa238dfe4891a884d8406ded5",
+  "topic_sha256": "8362b0fad9a5c306904a785c3af473da23c508ebbeec68b514ee2c61020370ea",
+  "analysis_matrix_sha256": "cdfb70b448bd08c50a1424051dfb5360641f3ab06b1a75921eaddd373d0d2597",
+  "review_criteria": [
+    "各章和各节承担可执行的论证任务，材料定位可回查。",
+    "证据范围与计划提出的主张相符，跨章节衔接最终回答核心问题。",
+    "定性维度由理论推演，逐章结合经验材料和理论解释，结论整合各维度并回应既有理论。",
+    "定量方案遵循本项目的正式设计及结果口径，写作方案的结构检查不构成正式稿件验收。"
+  ],
+  "review_status": "pending",
+  "question_binding": {
+    "question_id": "RQ-990e6aca1d8cc135b230d308",
+    "semantic_version": "27d8f77bc657d7e62bf0e3ea962692e9dbcabc4c4ea1299afe089807f2aa6509",
+    "core_question": "共享单车还车判定发生冲突后，平台的纠错安排如何影响骑行者承担的补救工作？",
+    "specific_question": "共享单车现场停车线与应用还车判定发生冲突后，平台的纠错安排如何影响骑行者为结束订单所做的额外补救工作？",
+    "method": "secondary_interviews",
+    "freeze_sha256": "8362b0fad9a5c306904a785c3af473da23c508ebbeec68b514ee2c61020370ea",
+    "framework_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+    "receipt_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2"
+  },
+  "full_draft_entry": "not_requested"
+}

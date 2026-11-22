@@ -1,0 +1,98 @@
+{
+  "prior_review": {
+    "decision": "revise",
+    "reason": "上一轮要求的制品绑定整改尚未完成。旧哈希比较已移出 D1.boundary，仍留在 D1.unresolved。回执与矩阵的 framework_sha256 一致，completion 也记录了框架文件与规范化 JSON 的两种哈希，但仍缺少可核查的记录，说明 collection_sha256 b3d5120c… 对应哪个采集制品、该制品如何关联本轮回执，以及旧值 570aa82a… 对应哪个版本。本地只读检查被环境策略拦截，未能独立重算哈希。上一轮已通过来源复核的 D2 和 D3 无需返工，现有研究缺项及未决命题可按 S08 保留。",
+    "changes": [
+      "将哈希比较和版本追踪从 D1.unresolved 移至矩阵制品元数据。记录框架文件、规范化 JSON、回执文件及采集制品的路径或稳定标识、版本、哈希值和计算口径。",
+      "核验 b3d5120c… 对应的采集制品及其与本轮回执的绑定，在版本记录中标明 570aa82a… 对应的制品及替换关系，并提供可复算的核验记录。"
+    ]
+  },
+  "status": "verified",
+  "metadata": {
+    "artifact_lineage": [
+      {
+        "framework_path": "qualitative_framework/requirements_0560fce703e633/framework.json",
+        "framework_file_sha256": "4f4eafe9d60da92fa38300f5bec29814f97ccc3a7a14cb4544cf7bc18521fe1c",
+        "framework_canonical_json_sha256": "0560fce703e633c100e7a40b18a993ea7a89a32ee74d8e27da4428b9f0686184",
+        "receipt_path": "qualitative_framework/requirements_0560fce703e633/material_receipt.json",
+        "receipt_file_sha256": "b4bdcbe5749c3f82f94ee20811e186aed3d599ba115cdcb7fd0722079960d0e2",
+        "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "b3d5120c3928af9641e48d8d6dda6745969d0c730fe2a915f030c411470c21e3",
+        "acquisition_events_sha256": "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+        "acquisition_response_sha256": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+        "parent_receipt_sha256": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4"
+      },
+      {
+        "framework_path": "qualitative_framework/repair_002/framework.json",
+        "framework_file_sha256": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+        "framework_canonical_json_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+        "receipt_path": "qualitative_framework/repair_002/material_receipt.json",
+        "receipt_file_sha256": "0ee973aea2c73f6bf23b52b13a83f85d73b6441b6c94c15ec601c8f83a4bb0c4",
+        "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "ecd264c0ceb0d122be4fd5c9deac1487e30165a396d917fccccfc3a468e9fbbb",
+        "acquisition_events_sha256": "9279700d286f3ced2c74213eef66dba1f043957ed35aca4bed464e1422a4fddf",
+        "acquisition_response_sha256": "813e72070159f14b2ae9325ef681672153e0688737598747988bf5b096b10c81",
+        "parent_receipt_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde"
+      },
+      {
+        "framework_path": "qualitative_framework/requirements_570aa82a9f24d0/framework.json",
+        "framework_file_sha256": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+        "framework_canonical_json_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+        "receipt_path": "qualitative_framework/requirements_570aa82a9f24d0/material_receipt.json",
+        "receipt_file_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde",
+        "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "21df46387d585777f7833aeb3672996817b1db64ccd0c4e8102df28da0fe5404",
+        "acquisition_events_sha256": "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+        "acquisition_response_sha256": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+        "parent_receipt_sha256": "6563bf6e96aee3729a74a78d737abdb717f9074e5d413caf4a0dc4eb2db5cfd1"
+      },
+      {
+        "framework_path": "qualitative_framework/repair_001/framework.json",
+        "framework_file_sha256": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+        "framework_canonical_json_sha256": "0921a92583934350234f3d3244c6ec4897466875591231c0b8377fdd40d916e1",
+        "receipt_path": "qualitative_framework/repair_001/material_receipt.json",
+        "receipt_file_sha256": "6563bf6e96aee3729a74a78d737abdb717f9074e5d413caf4a0dc4eb2db5cfd1",
+        "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "d194de32a60a26c50b71c7f14bf9d2e6b666917315496fb323a5d95a85e3dd18",
+        "acquisition_events_sha256": "c3c5c9d740f20b30dc359c0fef257d99ea0f1597bf728042905a953808077d13",
+        "acquisition_response_sha256": "85e4ff6228a21552e12447f5c5887209927b6a9ce647bca678157e07e8cd3929",
+        "parent_receipt_sha256": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a"
+      },
+      {
+        "framework_path": "qualitative_framework/attempt_001/framework.json",
+        "framework_file_sha256": "b3a591ecb1933a871e7e672004b43ae68e4d0d9bbf69896cf7c49231deffae29",
+        "framework_canonical_json_sha256": "0921a92583934350234f3d3244c6ec4897466875591231c0b8377fdd40d916e1",
+        "receipt_path": "qualitative_framework/attempt_001/material_receipt.json",
+        "receipt_file_sha256": "b957f6d7ff789f1e57dc4ceb0b931a47f896d2e561bc94850a47f0ae84d7189a",
+        "matrix_collection_sha256_equals_receipt_canonical_json_sha256": "6b03827f0a807b23e473b900534f9beb58481ee73238b358ca930a1a19c3eb85",
+        "acquisition_events_sha256": "47f21da974e986381e95403955d7b903391dd2c6cb9dd87af35af98107e43196",
+        "acquisition_response_sha256": "182d79baddfe41dd2c21ba649ad84de5ddfcdbfb7bd38a928025be432e1a263e",
+        "parent_receipt_sha256": null
+      }
+    ],
+    "moved": [
+      {
+        "dimension_id": "D1",
+        "field": "unresolved",
+        "text": "矩阵元数据仍须核验。"
+      },
+      {
+        "dimension_id": "D1",
+        "field": "unresolved",
+        "text": "当前回执与矩阵的框架字段均为0560fce7…，上一轮审查称框架文件与规范化JSON的哈希口径已有说明。"
+      },
+      {
+        "dimension_id": "D1",
+        "field": "unresolved",
+        "text": "所供材料仍无法独立重算哈希，确认b3d5120c…对应的采集制品及其与本轮回执的关系，或厘清旧值、内嵌绑定和外层回执绑定的版本及替换关系。"
+      },
+      {
+        "dimension_id": "D1",
+        "field": "unresolved",
+        "text": "矩阵行留存的570aa82a…与当前矩阵外层值不同，相关旧值及计算口径应在制品元数据中核对。"
+      }
+    ],
+    "resolved_conditions": [
+      "将哈希比较和版本追踪从 D1.unresolved 移至矩阵制品元数据。记录框架文件、规范化 JSON、回执文件及采集制品的路径或稳定标识、版本、哈希值和计算口径。",
+      "核验 b3d5120c… 对应的采集制品及其与本轮回执的绑定，在版本记录中标明 570aa82a… 对应的制品及替换关系，并提供可复算的核验记录。"
+    ]
+  },
+  "model_calls": 0,
+  "academic_revisions": 2
+}
