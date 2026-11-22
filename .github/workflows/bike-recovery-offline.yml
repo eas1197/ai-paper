@@ -1,0 +1,46 @@
+name: Bike archived evidence recovery - offline only
+
+on:
+  push:
+    branches:
+      - experiment/offline-smoke-20261122
+    paths:
+      - .github/workflows/bike-recovery-offline.yml
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Probe archived bike case and render candidate plan
+        run: |
+          python -B .github/scripts/bike_recovery_offline.py --out "${RUNNER_TEMP}/bike_recovery"
+      - name: Check provisional output and academic block
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ["RUNNER_TEMP"])/"bike_recovery"
+          j = json.loads((root/"恢复诊断.json").read_text(encoding="utf-8"))
+          assert j["candidate_status"] == "rendered_unreviewed"
+          assert not j["academic_approval"] and not j["formal_eligible"]
+          assert j["latest_review_decision"] == "revise"
+          assert j["missing_runtime_files"]
+          assert (root/"候选论文写作方案_未经学术审查.md").stat().st_size > 2000
+          print("PROVISIONAL PLAN RENDERED, ACADEMIC GATE STILL BLOCKED")
+          PY
+      - name: Save recovery report and candidate for independent review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bike-offline-recovery-20261122
+          path: ${{ runner.temp }}/bike_recovery/
+          if-no-files-found: warn
+          retention-days: 20
