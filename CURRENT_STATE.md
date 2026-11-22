@@ -34,3 +34,7 @@
 已将数字互助A稿按语言库作7处真实语言修订，12条原始来源主张均保持原句且可定位；探索性修订稿及前后规则日志见 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/`。原数字互助流程 `explanation_exchange` 未修改，正式G7、正式语言快照和独立审查仍未通过。提交了6个离线合同测试并增加仅无模型的Actions工作流；**目前仅完成GitHub文件/引用静态核对，Python及Actions真实通过记录仍待核实**。
 
 **接口补充：** 已在实验 `00/v007/tools/run_mode.py` 增加显式 `--writer4` 分派（route/prepare/submit），保留原有选题、文献、写作计划及定量路径。新增单元测试覆盖实验总控派发，现共7项单元测试方法。本轮已经通过GitHub读取原语言资源并逐项核对v005快照锁定的5项SHA-256，均完全一致；完成5类定性章节到ST/L规则/源功能单元的静态有效性检查。真实Python和Actions运行结果仍未从受支持渠道确认。研究示例 `ai_writer4_0/A稿_学术语体修订版.md` 七处改写，12条关键源句仍在，汉字约2235，`静态核验.json`记录所做与未做事项，已进入handoff manifest。
+
+## 2026-11-23 ai-paper 5.0 统一候选与全流程新实验
+已新增`00_项目控制/v010_第10版/tools/ai_paper5.py`和离线单测/模块说明。实现14项append-only阶段锁定、文献去重与缺额提示、方法分流、`writer-prepare`/`writer-submit`调原V16、Stata未执行的诚实登记；没有改动main、v005生产注册表及原定量V14。独立反诘和G3/G7仍按原标准，不能靠JSON自己设置通过。
+2026-11-23新主题“骑手通行协商”，实际联网搜集3家媒体报道（5个不同场所、并非5个独立媒体旁证）与10篇文献摘要/HTML；用二手访谈定性路径形成3维经验矩阵和约3688汉字7章探索稿，13项绑定主张。**本地Python编排器运行14/14、单元测试5/5通过**，输出`technical_complete=true`、`scientific_acceptance=not_passed_without_genuine_independent_review`。真实V16 writer在完整仓库中的执行、GitHub Actions通过、独立终审未获得有效凭证，正式G7不通过。材料/论文见`handoff_runs/rider_access_20261123/ai_paper5/`；完整本地输入和哈希快照以对话ZIP交付，非仓库内全量运行记录。
