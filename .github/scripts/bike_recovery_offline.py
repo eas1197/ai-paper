@@ -223,6 +223,22 @@ def main():
         "latest_review_decision": latest_review.get("answer", {}).get("decision"),
         "matrix_status": matrix.get("status"),
         "matrix_sha256": raw_sha(MATRIX_FILE),
+        "snapshot_hash_comparison": {
+            label: {
+                "git_snapshot_raw_sha256": raw_sha(file),
+                "recorded_runtime_raw_sha256": listed.get(field) if listed else None,
+                "git_snapshot_bytes": len(file.read_bytes()),
+                "matches_if_lf_to_crlf": (
+                    hashlib.sha256(file.read_bytes().replace(b"\n", b"\r\n")).hexdigest()
+                    == listed.get(field) if listed else False),
+                "matches_if_trim_final_lf": (
+                    hashlib.sha256(file.read_bytes().rstrip(b"\r\n")).hexdigest()
+                    == listed.get(field) if listed else False),
+            } for label, file, field in (
+                ("framework", FOLDER / "framework.json", "framework_file_sha256"),
+                ("receipt", FOLDER / "material_receipt.json", "receipt_file_sha256")
+            )
+        },
         "missing_runtime_files": missing,
         "checks": checks,
         "dimensions": [{"id": r["id"], "status": r.get("status"), "evidence_count": len(r["evidence"])} for r in matrix["rows"]],
