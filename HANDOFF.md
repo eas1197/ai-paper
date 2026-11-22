@@ -16,3 +16,6 @@ Chat 搜索成果按现有研究资料字段和原 run_id 保存到 handoff_runs
 
 ## 数字互助 Chat 自主研究 2026-11-22 交接
 实际运行成果保存在 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/`，按 `研究全过程日志.md` → `文献检索矩阵.json` → `经验材料与分析矩阵.json` → `论文写作方案.md` → `Chat实验状态.json` 的顺序读取。总索引已更新SHA-256。当前为单模型真实网页检索加角色反诘的**探索性平行研究产物**，不是调用过原控制器各学术门禁的正式验收。源文件 `reality.json`、`event_comparison.json` 和 `staged_topic.json` 均未覆盖；正式恢复点仍是 `explanation_exchange`。文献数量10的原始阅读计数与期刊严格资格8分开；直接竞争郑州论文尚有索引阅读与全文查证差距。Codex接续须提供真正独立反诘证据、补足文献严选和材料交叉验证，不能把本次角色扮演当作 `critical_receipt` 或正式 `invocation_id`。
+
+## 2026-11-23 G7 写作端恢复提示
+Chat依据main/V14写作要求和候选V15定性框架，实际生成单稿样稿，位于 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/`。先读`写作状态.json`和`写作自检.md`，再读`写作任务V15输入.json`、`A稿_探索性正文.md`与`主张证据台账.json`。这些文件已被manifest按SHA-256索引。A稿是限额内单模型探索写作，不能把资料、字数和引用自检当成G7通过；既无旧main的定量G4–G6，也无新流程的真实独立审查与合格经验事件。想正式写作应从原`explanation_exchange`履行独立反诘、文献补足、真实资料适足性，之后在有效的V15/未来定性正式入口出具写作包。禁止伪造main冻结包、result_id、CLI原生事件与独立review_id。本轮仅增加归档，无代码改动。
