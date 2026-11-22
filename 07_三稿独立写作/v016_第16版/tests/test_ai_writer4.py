@@ -121,5 +121,23 @@ class Writer4Test(unittest.TestCase):
             writer.prepare(self.packet_path, self.work)
 
 
+    def test_existing_digital_mutual_aid_package_connects_without_formal_pass(self):
+        """Actual archived V15 input and source-bound A specimen, not invented fixture evidence."""
+        base = (writer.ROOT / "handoff_runs/digital_mutual_aid_20261122"
+                / "chat_native_20261122/writing")
+        old_input = base / "写作任务V15输入.json"
+        old_manuscript = base / "A稿_探索性正文.md"
+        old_claims = base / "主张证据台账.json"
+        for item in (old_input, old_manuscript, old_claims):
+            self.assertTrue(item.is_file(), str(item))
+        self.assertIn("v016", writer.route(old_input)["writer"])
+        response = writer.prepare(old_input, self.work)
+        self.assertEqual(response["task_count"], 14)
+        self.assertEqual(response["language_gate"], "needs_review")
+        report = writer.review_draft(old_input, self.work, old_manuscript, old_claims)
+        self.assertEqual(report["status"], "exploratory_draft_awaiting_review")
+        self.assertEqual(writer.load(self.work / "writing_review_request.json")["independent_review"], "pending")
+
+
 if __name__ == "__main__":
     unittest.main()
