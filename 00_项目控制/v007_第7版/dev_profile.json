@@ -10,6 +10,6 @@
   "08":{"review_rounds":1,"independent_reviews":1},
   "09":{"cssci_candidates":1,"pku_candidates":1,"send":false},
   "10":{},
-  "11":{"max_batches":1,"timeout_seconds":480,"native_search_actions":24},
+  "11":{"max_batches":1,"topic_batches_per_phase":3,"timeout_seconds":480,"native_search_actions":24},
   "12":{"migration_jobs":1}
 }

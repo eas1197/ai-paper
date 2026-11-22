@@ -61,3 +61,19 @@ def receive(work, journals):
                       workload_sha256=bundle["workload_sha256"])
     write(work / "literature_matrix.json", matrix)
     return matrix
+
+
+def receive_direct(rows, trace, journals):
+    """Apply the same article checks to separately recorded direct-search evidence."""
+    accepted = []
+    for position, row in enumerate(rows, 1):
+        item = observation(row, trace, journals, "direct_web", position)
+        excerpt = normalize(row["abstract_excerpt"])
+        if not any(web_url(source.get("url")) == web_url(row["abstract_url"])
+                   and excerpt in normalize(source.get("snippet") or "")
+                   for event in trace for source in event.get("results", [])):
+            raise ValueError("Direct-search abstract excerpt must be visible in its saved source receipt")
+        accepted.append(dict(item, provider="codex_direct_web", intake="manual_supplement"))
+    articles, conflicts = group(accepted)
+    return {"intake": "manual_supplement", "automated_count": 0, "count": len(articles),
+            "articles": articles, "conflicts": conflicts, "source_receipt_sha256": digest(trace)}

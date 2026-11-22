@@ -29,7 +29,16 @@ def write(path, value):
     temp.replace(path)
 
 
-def start(run_id, theme):
+def writing_policy(manifest):
+    policy = manifest.get("writing_policy", {"deliverable": "plan", "explicit_full_paper": False})
+    expected = ("full" if policy.get("explicit_full_paper") is True else "plan")
+    if (policy.get("deliverable") != expected
+            or ("writing_policy" in manifest and digest(policy) != manifest.get("writing_policy_sha256"))):
+        raise ValueError("Invalid or changed experimental writing policy")
+    return policy
+
+
+def start(run_id, theme, *, full_paper=False):
     if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}", run_id):
         raise ValueError("Invalid experimental run ID")
     policy = load(CONTROL / "dev_profile.json")
@@ -44,6 +53,9 @@ def start(run_id, theme):
                         dict(module=m["module_id"], limits=policy[m["module_id"]], status="planned")
                         for m in registry["modules"]
                     ])
+    manifest["writing_policy"] = {"deliverable": "full" if full_paper else "plan",
+                                  "explicit_full_paper": full_paper}
+    manifest["writing_policy_sha256"] = digest(manifest["writing_policy"])
     write(work / "run_manifest.json", manifest)
     return work
 
@@ -51,13 +63,17 @@ def start(run_id, theme):
 def verified_run(path):
     work = Path(path).resolve()
     manifest = load(work / "run_manifest.json")
+    current = load(CONTROL / "dev_profile.json")
+    legacy = {**current, "11": {key: value for key, value in current["11"].items()
+                               if key != "topic_batches_per_phase"}}
     if (work.parent != RUNS.resolve() or work.name != manifest.get("run_id")
             or manifest.get("run_mode") != "dev"
             or manifest.get("formal_eligible") is not False
             or digest(manifest["workload"]) != manifest["workload_sha256"]
-            or manifest["workload"] != load(CONTROL / "dev_profile.json")
+            or manifest["workload"] not in (current, legacy)
             or manifest["registry_sha256"] != digest(load(PRODUCTION / "module_registry.json"))):
         raise ValueError("Invalid or changed experiment contract")
+    writing_policy(manifest)
     return manifest
 
 
@@ -80,22 +96,31 @@ def main():
     parser.add_argument("--mode", choices=("formal", "dev"), default="formal")
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--theme")
+    parser.add_argument("--full-paper", action="store_true",
+                        help="Explicitly request full drafting for this new experimental run")
     stages = parser.add_mutually_exclusive_group()
     stages.add_argument("--topic", nargs=argparse.REMAINDER, metavar="COMMAND")
     stages.add_argument("--literature", choices=("start", "resume", "verify"))
+    stages.add_argument("--writing-plan", type=Path, metavar="INPUT")
     args = parser.parse_args()
     if args.mode == "formal":
-        if not args.theme or args.topic is not None or args.literature:
+        if not args.theme or args.topic is not None or args.literature or args.writing_plan or args.full_paper:
             parser.error("Formal initialization requires --theme and accepts no experimental stages")
         return subprocess.call([sys.executable, "-B", str(PRODUCTION / "tools/project.py"),
                                 "init", "--run-id", args.run_id, "--theme", args.theme])
-    if args.topic is not None or args.literature:
+    if args.topic is not None or args.literature or args.writing_plan:
+        if args.full_paper:
+            parser.error("--full-paper is only accepted when initializing a new experiment")
         if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}", args.run_id):
             parser.error("Invalid experimental run ID")
         work = RUNS / args.run_id
         manifest = verified_run(work)
         if args.theme is not None and args.theme != manifest["theme"]:
             parser.error("The theme is frozen at initialization")
+        if args.writing_plan:
+            script = ROOT / "07_三稿独立写作/v015_第15版/tools/writing_plan.py"
+            return subprocess.call([sys.executable, "-B", str(script), "--dev-run", str(work),
+                                    "--input", str(args.writing_plan)])
         if args.topic is not None:
             if not args.topic or args.topic[0] not in {"init", "status", "prepare", "allowance", "record"}:
                 parser.error("Specify an experimental topic command")
@@ -111,7 +136,7 @@ def main():
                                 *options[args.literature]])
     if not args.theme:
         parser.error("Experimental initialization requires --theme")
-    print(start(args.run_id, args.theme))
+    print(start(args.run_id, args.theme, full_paper=args.full_paper))
     return 0
 
 

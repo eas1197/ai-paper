@@ -2,6 +2,8 @@
 
 import json
 import os
+from pathlib import Path
+import re
 import shutil
 import subprocess
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -133,22 +135,67 @@ def group(rows):
     return papers, problems
 
 
+LEGACY_LOGIN_SOURCE = "4ceaa8c84aefb9468d66b623cbd93567c4fa2361139e6dcdb7c495584b6b7173"
+UNCHANGED_COLLECTOR_CONTRACT = "d61e400a004e67c579eb1868fda0d59a2b9dd605c33b161ed9553514bfbd12c2"
+LEGACY_LOGIN_FAILURE = "Codex CLI needs the existing ChatGPT login"
+
+
+def cli_environment():
+    env = {k: v for k, v in os.environ.items()
+           if not (k.upper().endswith("_API_KEY") or k.startswith("CODEX_APP_TOOLS_")
+                   or k in {"CODEX_SANDBOX_NETWORK_DISABLED", "CODEX_THREAD_ID", "CODEX_SESSION_ID"})}
+    # The Windows desktop child can inherit USERPROFILE while the CLI's OS home lookup fails.
+    if not env.get("CODEX_HOME") and os.name == "nt" and env.get("USERPROFILE"):
+        existing = Path(env["USERPROFILE"]) / ".codex"
+        if existing.is_dir():
+            env["CODEX_HOME"] = str(existing)
+    return env
+
+
+def cli_executable():
+    executable = shutil.which("codex")
+    if executable:
+        return executable
+    if os.name == "nt" and os.environ.get("LOCALAPPDATA"):
+        folder = Path(os.environ["LOCALAPPDATA"]) / "OpenAI/Codex/bin"
+        installed = sorted(folder.glob("*/codex.exe"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if installed:
+            return str(installed[0])
+    raise RuntimeError("Codex CLI not found")
+
+
+def login_probe(executable, env):
+    login = subprocess.run([executable, "login", "status"], capture_output=True,
+                           env=env, timeout=20, encoding="utf-8", errors="replace")
+    def sanitize(output):
+        output = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", output)
+        for variable in ("USERPROFILE", "CODEX_HOME"):
+            path = env.get(variable)
+            if path:
+                output = re.sub(re.escape(path.replace("\\", "\\\\")), "<user-dir>", output, flags=re.I)
+                output = re.sub(re.escape(path), "<user-dir>", output, flags=re.I)
+        return re.sub(r"(?i)(?:\bBearer\s+|\bsk-)[A-Za-z0-9_.-]+", "<redacted>", output)
+
+    stdout, stderr = sanitize(login.stdout), sanitize(login.stderr)
+    chatgpt = login.returncode == 0 and any(
+        re.fullmatch(r"\s*logged\s+in\s+using\s+chatgpt\s*\.?\s*", line, re.I)
+        for line in (stdout + "\n" + stderr).splitlines()
+    )
+    return {"chatgpt": chatgpt, "exit_code": login.returncode, "stdout": stdout, "stderr": stderr}
+
+
 def invoke(executable, work, prompt, schema, *, timeout, model=None):
-    """No API credentials, external provider configuration, or inherited task workspace."""
+    """Use the existing ChatGPT login without passing API keys."""
     for filename in ("prompt.txt", "events.jsonl", "stderr.log", "response.json"):
         if (work / filename).exists():
             raise FileExistsError("Batch already exists")
     (work / "prompt.txt").write_text(prompt, encoding="utf-8")
-    env = {k: v for k, v in os.environ.items()
-           if not (k.upper().endswith("_API_KEY") or k.startswith("CODEX_APP_TOOLS_")
-                   or k in {"CODEX_SANDBOX_NETWORK_DISABLED", "CODEX_THREAD_ID", "CODEX_SESSION_ID"})}
-    login = subprocess.run([executable, "login", "status"], capture_output=True,
-                           env=env, timeout=20, encoding="utf-8", errors="replace")
-    login_text = login.stdout + login.stderr
-    write(work / "login_status.json", {"chatgpt": login.returncode == 0 and
-                                      "Logged in using ChatGPT" in login_text})
-    if not load(work / "login_status.json")["chatgpt"]:
-        raise RuntimeError("Codex CLI needs the existing ChatGPT login")
+    env = cli_environment()
+    login = login_probe(executable, env)
+    write(work / "login_diagnostics.json", login)
+    write(work / "login_status.json", {"chatgpt": login["chatgpt"]})
+    if not login["chatgpt"]:
+        raise RuntimeError(f"{LEGACY_LOGIN_FAILURE} (exit {login['exit_code']}; see login_diagnostics.json)")
     command = [
         executable, "-a", "never", "--search", "exec", "--ignore-user-config",
         "-s", "read-only", "--ephemeral", "--skip-git-repo-check", "-C", str(work),
@@ -161,10 +208,17 @@ def invoke(executable, work, prompt, schema, *, timeout, model=None):
                               stdout=events, stderr=errors, env=env, timeout=timeout).returncode
 
 
-def collect(config, work, template, schema, *, resume=False, pilot=None):
+def collect(config, work, template, schema, *, resume=False, pilot=None, budget_migration=None,
+            initial_observations=()):
     work = work.resolve()
     work.mkdir(parents=True, exist_ok=True)
-    targets = (10,) if config.get("run_mode") == "dev" else (20, 100)
+    phase = config.get("topic_search_phase")
+    if phase == "initial":
+        targets = (5,)
+    elif phase == "supplemental":
+        targets = (5,) if config.get("run_mode") == "dev" else (35,)
+    else:
+        targets = (10,) if config.get("run_mode") == "dev" else (20, 100)
     if config["target"] not in targets or not 2 <= len(config["theme"].strip()) <= 160:
         raise ValueError("Invalid theme or target")
     if not 1 <= config["max_batches"] <= 8 or not 60 <= config["timeout_seconds"] <= 1800:
@@ -178,8 +232,35 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
             config_sha256=identity, collection_id="COL_" + digest([identity, str(work), now()])[:24],
             engine=ENGINE, config=config, batches=[], observations=[], rejected=[],
         )
+        if resume and not config.get("topic_batch_budget") and state["config"] == config:
+            previous = digest([ENGINE, config, sha(template), sha(schema), UNCHANGED_COLLECTOR_CONTRACT])
+            if state["config_sha256"] == previous:
+                state["previous_config_sha256"] = previous
+                state["config_sha256"] = identity
+        if state["config_sha256"] != identity and budget_migration is not None:
+            old = state["config"]
+            migrated = dict(old, max_batches=config["max_batches"], topic_batch_budget=config["topic_batch_budget"])
+            if (not resume or phase not in {"initial", "supplemental"} or old.get("run_mode") != "dev"
+                    or digest(state) != budget_migration or migrated != config
+                    or old["max_batches"] >= config["max_batches"]):
+                raise ValueError("Checkpoint does not qualify for the reviewed budget increase")
+            state.setdefault("budget_history", []).append({
+                "prior_config": old, "prior_config_sha256": state["config_sha256"],
+                "prior_checkpoint_sha256": budget_migration, "changed_at": now()})
+            state.update(config=config, config_sha256=identity)
+            write(checkpoint, state)
         if state["config_sha256"] != identity:
-            raise ValueError("Resume requires the original config and code")
+            legacy_identity = digest([ENGINE, config, sha(template), sha(schema), LEGACY_LOGIN_SOURCE])
+            if (state["config_sha256"] != legacy_identity or state["config"] != config
+                    or state["observations"] or state["rejected"] or not state["batches"]
+                    or not all(batch["status"] == "failed" and batch["failure"] == LEGACY_LOGIN_FAILURE
+                               and load(work / batch["batch"] / "login_status.json") == {"chatgpt": False}
+                               and not (work / batch["batch"] / "events.jsonl").exists()
+                               for batch in state["batches"])):
+                raise ValueError("Resume requires the original config and code")
+            state["previous_config_sha256"] = state["config_sha256"]
+            state["config_sha256"] = identity
+            state["login_preflight_only_batches"] = [batch["batch"] for batch in state["batches"]]
         if not resume and pilot:
             pilot_dir, review = pilot
             original = load(pilot_dir / "checkpoint.json")
@@ -194,14 +275,19 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
                 name = batch["batch"]
                 shutil.copytree(pilot_dir / name, work / name)
         write(checkpoint, state)
-        executable = shutil.which("codex")
-        if not executable:
-            raise RuntimeError("Codex CLI not found")
-        for _ in range(config["max_batches"]):
+        executable = cli_executable()
+        for _ in range(1 if config.get("topic_batch_budget") else config["max_batches"]):
             papers, _ = group(state["observations"])
-            if len(papers) >= config["target"]:
+            effective_count = len(papers)
+            if initial_observations:
+                prior, _ = group(initial_observations)
+                scoped = [dict(row, observation_id="supplemental:" + row["observation_id"])
+                          for row in state["observations"]]
+                combined, _ = group([*initial_observations, *scoped])
+                effective_count = len(combined) - len(prior)
+            if effective_count >= config["target"]:
                 break
-            if len(state["batches"]) >= config["max_batches"]:
+            if len(state["batches"]) - len(state.get("login_preflight_only_batches", [])) >= config["max_batches"]:
                 break
             batch = f"batch_{len(state['batches']) + 1:03}"
             directory = work / batch
@@ -211,12 +297,25 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
             write(checkpoint, state)
             prompt = template.read_text(encoding="utf-8").format(
                 theme=config["theme"], journals="、".join(config["journals"]),
-                desired=min(24, config["target"] - len(papers) + 3),
-                accepted=json.dumps([r["title"] for r in papers], ensure_ascii=False),
+                desired=min(24, config["target"] - effective_count
+                            + (0 if config.get("search_guidance") else 3)),
+                accepted=json.dumps([*config.get("excluded_titles", []),
+                                     *(r["title"] for r in papers)], ensure_ascii=False),
             )
             if config.get("run_mode") == "dev":
                 prompt += (f"\n本轮是实验。最多使用 {config['search_action_budget']} 个原生网页工具动作，"
                            "接近预算时先提交已核实条目，保留缺口。")
+            guidance = config.get("search_guidance")
+            if guidance:
+                prompt += "\n三层定位：" + json.dumps(guidance, ensure_ascii=False)
+                prompt += ("\n议题层优先，寻找异场域但能解释相同机制的论文；对象层比较近邻避免重复。"
+                           "理论层的经典单列。对每篇在摘要转述区分作者命题与研究者推论，"
+                           "在相关性理由说明该解释能否回应反诘、能够迁移的条件和解释不到的部分。"
+                           "在检索备注记下每层实际查询及结果。"
+                           "尽早打开少量优先候选的摘要，再扩大候选名单。"
+                           "出版商页面跳转到摘要镜像时，保留本次确实打开且返回该摘要的出版商入口作为摘要网址，"
+                           "说明跳转和最终卷期；若入口没有返回可核实摘要，标为未核实。不要提交仅在答复中出现的镜像网址。"
+                           "检索词和打开动作均记成本，分别报告发现、核实题录和获得摘要的数量。")
             try:
                 code = invoke(executable, directory, prompt, schema,
                               timeout=config["timeout_seconds"], model=config.get("model"))
@@ -252,7 +351,10 @@ def collect(config, work, template, schema, *, resume=False, pilot=None):
         if config.get("run_mode") == "dev":
             bundle.update(run_mode="dev", formal_eligible=False,
                           workload_sha256=config["workload_sha256"])
-            if sum(b.get("search_events", 0) for b in state["batches"]) > config["search_action_budget"]:
+            used = (max((b.get("search_events", 0) for b in state["batches"]), default=0)
+                    if config.get("topic_batch_budget") else
+                    sum(b.get("search_events", 0) for b in state["batches"]))
+            if used > config["search_action_budget"]:
                 bundle["status"] = "experimental_budget_exceeded"
         write(work / "abstract_collection.json", bundle)
         return bundle

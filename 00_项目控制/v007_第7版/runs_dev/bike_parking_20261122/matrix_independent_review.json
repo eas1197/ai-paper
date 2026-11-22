@@ -1,0 +1,11 @@
+{
+  "matrix_sha256": "4cdf6acdb869b777101668a1effb028307640f3ce4a664a6224d89b26f088fac",
+  "invocation_id": "/root/bike_budget_academic_review",
+  "changes": [
+    "D3 的临河里材料记录收费关锁后管理费申诉在17秒内通过，只是费用处置的背景对照，缺少现场证据被采纳和复核促成关单的记录。保留 unresolved。",
+    "D2 的两条反例应限于说明具体提示有时仍无法解决还车困难。尚未核实拒绝原因相近及替代点当时可用，不能判断提示是否减少试探性移车和重试。"
+  ],
+  "decision": "revise",
+  "reviewer": "gpt-6.2-sol",
+  "reason": "探索性分析方案可继续。矩阵有一处需实质性修订，框架与研究命题可保留。"
+}
