@@ -17,3 +17,8 @@
 
 ## 2026-11-22 Chat 研究模式决定
 本对话执行采用 ChatGPT 原生网页搜索，不再模拟本地 Codex CLI 检索，也不新增爬虫或为适配 Chat 改写既有学术阶段。规则见 HANDOFF 与 RUNBOOK。当前 `digital_mutual_aid_20261122` 的 `reality.json`、`event_comparison.json` 均保留，`staged_topic.json` 仍为 `explanation_exchange`；本次仅落实执行约定，尚未新增独立反诘凭证、未重跑搜索、未冻结新研究问题，现有学术门槛与预算未改变。Chat 后续新增实际搜索结果须以真实网页来源归档，不得以 CLI 事件冒充。
+
+## 2026-11-22 Chat 自主研究完整流程演练（数字互助，非正式放行）
+当前开发分支实际已超过旧表中 231f9eb5，最新以远端分支为准，勿把旧表当实时 HEAD。单模型 Chat 从 `digital_mutual_aid_20261122` 的有效 reality 和 event_comparison 接续，使用内置网页搜索开展完整研究角色演练，产物单独归档在 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/`，清单索引 `handoff_runs/manifest.json`。新增5个文件：`文献检索矩阵.json`、`经验材料与分析矩阵.json`、`研究全过程日志.md`、`论文写作方案.md` 和 `Chat实验状态.json`。
+
+实际：初查5篇+补查5篇有可追查摘要/全文页面，8篇符合候选核心九刊或可核验优秀专业刊范围、2篇仅专题辅助；另2篇郑州直近邻研究仅索引摘要，仍须核实正文。采访资料涉及两条可描述的组织障碍—调整序列及独立边界个案，但未取得外部核实的逐项执行结局；可完成探索矩阵和八章段落方案，不得写成已识别的因果机制。**当前独立反诘、最终学术审查和写作前材料适足性独立放行均缺真实调用，原始 `staged_topic.json` 仍为 `explanation_exchange`；此次所有多角色审查明确为同一模型演练。** 无 Codex CLI、无额外付费 API、无正文全文生成；运行工具用量与本对话的精确套餐Token未知。此项工作没有修改生产模块、学术预算或原始研究文件。
