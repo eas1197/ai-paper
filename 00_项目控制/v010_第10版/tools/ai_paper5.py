@@ -11,6 +11,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 
 STAGES = ("topic_candidates", "reality", "event_comparison", "explanation_exchange",
@@ -170,18 +171,61 @@ def status(work):
             "stata": manifest["quantitative_analyzer"]}
 
 
+
+def invoke_writer(work, packet, action, manuscript=None, claims=None):
+    """Call the actual v016 writing interface; never synthesize an author/review receipt."""
+    work, packet = Path(work).resolve(), Path(packet).resolve()
+    manifest = read(work / "manifest.json")
+    recorded = manifest["stages"].get("writing_packet")
+    if not recorded or recorded["source_sha256"] != digest(packet):
+        raise ValueError("The writer packet is not the recorded stage 12 input")
+    if manifest.get("selected_method") == "quantitative":
+        raise ValueError("Quantitative runs keep original v014 and have Stata not_executed")
+    if action == "submit" and "manuscript" not in manifest["stages"]:
+        raise ValueError("Record the actual manuscript stage before submitting to writer")
+    writer = Path(__file__).resolve().parents[3] / "07_三稿独立写作/v016_第16版/tools/ai_writer4.py"
+    if not writer.is_file():
+        raise FileNotFoundError("Actual ai-writer 4.0 executable is missing")
+    ws = work / "writer4_workspace"
+    cmd = [sys.executable, "-B", str(writer), action, "--packet", str(packet),
+           "--workspace", str(ws)]
+    if action == "prepare":
+        cmd += ["--mode", "exploratory"]
+    else:
+        if not manuscript or not claims:
+            raise ValueError("A real manuscript and claims file are required")
+        cmd += ["--manuscript", str(Path(manuscript).resolve()),
+                "--claims", str(Path(claims).resolve())]
+    completed = subprocess.run(cmd, check=False, capture_output=True, text=True, timeout=90)
+    return {"returncode": completed.returncode, "stdout": completed.stdout,
+            "stderr": completed.stderr, "action": action}
+
+
 def main(argv=None):
     cli = argparse.ArgumentParser(description=__doc__)
     sub = cli.add_subparsers(dest="cmd", required=True)
     init = sub.add_parser("init"); init.add_argument("--work", required=True); init.add_argument("--run-id", required=True)
     item = sub.add_parser("ingest"); item.add_argument("--work", required=True); item.add_argument("--stage", required=True, choices=STAGES); item.add_argument("--input", required=True)
     stat = sub.add_parser("status"); stat.add_argument("--work", required=True)
+    for action in ("prepare", "submit"):
+        writer_cmd = sub.add_parser("writer-" + action)
+        writer_cmd.add_argument("--work", required=True)
+        writer_cmd.add_argument("--packet", required=True)
+        if action == "submit":
+            writer_cmd.add_argument("--manuscript", required=True)
+            writer_cmd.add_argument("--claims", required=True)
     args = cli.parse_args(argv)
     try:
         if args.cmd == "init":
             result = str(start(args.work, args.run_id))
         elif args.cmd == "ingest":
             result = ingest(args.work, args.stage, args.input)
+        elif args.cmd.startswith("writer-"):
+            result = invoke_writer(args.work, args.packet, args.cmd.removeprefix("writer-"),
+                                   getattr(args, "manuscript", None), getattr(args, "claims", None))
+            if result["returncode"]:
+                print(json.dumps({"status": "blocked", "result": result}, ensure_ascii=False))
+                return 3
         else:
             result = status(args.work)
         print(json.dumps({"status": "ok", "result": result}, ensure_ascii=False, indent=2))
