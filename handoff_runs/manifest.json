@@ -2,7 +2,7 @@
   "runs": [
     {
       "run_id": "bike_parking_20261122",
-      "files": 220,
+      "files": 230,
       "type": "historical",
       "root": "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122"
     },
@@ -59,6 +59,12 @@
       "files": 20,
       "type": "historical",
       "root": "00_项目控制/v007_第7版/runs_dev/resale_events_20261122"
+    },
+    {
+      "run_id": "digital_mutual_aid_20261122",
+      "type": "historical",
+      "root": "00_项目控制/v007_第7版/runs_dev/digital_mutual_aid_20261122",
+      "files": 12
     }
   ],
   "files": {
@@ -476,7 +482,29 @@
     "resale_events_20261122/initial/batch_001/prompt.txt": "cf39b910086a953e0400603eb9ef851bc6b46bc78f5ab44fbdd384587dfbc3a6",
     "resale_events_20261122/initial/batch_001/response.json": "14fe60c6c4a5aa03b64e4ad512aaf95fd2ab1fdcd1bb1b7a164e240d018516d5",
     "bike_parking_20261122/autonomous_writing/rebuilt_matrix_0699c1a7082ca02e/attempt_001/response.json.raw.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "edu_v32_20261121/login_smoke/response.json.raw.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "edu_v32_20261121/login_smoke/response.json.raw.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digital_mutual_aid_20261122/autonomy_events.jsonl.summary.json": "4e4fb242515e56babeb6c2ab6f86bff2c504db3b6228f4c676ce46972beac7d5",
+    "digital_mutual_aid_20261122/autonomy_input.txt": "9ef123c9cd88f4b6026b3f5a5e65b6417f04ab37881e40b64f6c9243bf4afcff",
+    "digital_mutual_aid_20261122/autonomy_output.md": "5c659cd40963c639125a111bfd093ace100749517ba94e895598d6a7cd4f31c8",
+    "digital_mutual_aid_20261122/critical_input.txt": "7ded64d23e34505468d3d1efaeb3860babf21a1069ba46cb1126c5237b0ba9f6",
+    "digital_mutual_aid_20261122/critical_response.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digital_mutual_aid_20261122/event_comparison.json": "848213fa20f9f9143f62d2d0f551fd12ee55b84af328a1e7fe8394aba6f958f9",
+    "digital_mutual_aid_20261122/event_input.json": "9e736e6550577991977fe97fab63c9dbecf76abb68e534069441acdd0805bc07",
+    "digital_mutual_aid_20261122/reality.json": "b3dacd8c8dc7e592539c3ec2ba6dc046681a9c7665123bb587d3019a120dc8f9",
+    "digital_mutual_aid_20261122/reality_input.json": "03600f4208e5ed69917e1fde3135f0ab9853abcfc1def627f7096a3ebeeb94a2",
+    "digital_mutual_aid_20261122/resume_status.md": "493be8a2e949a3ff54b91667f459aaececc636ca7339712246e675ccfe8cc9f9",
+    "digital_mutual_aid_20261122/run_manifest.json": "2ec152362b4e6dbe9b451087ce29b7dc0e6eb3f4776a054b112a5d5c27f5e7ee",
+    "digital_mutual_aid_20261122/staged_topic.json": "45dcef3e7b873360220780a32ce15d0e2c708cd07855b894bc60da5ceae7b342",
+    "bike_parking_20261122/autonomous_writing/material_feasibility_closeout.json": "9be1ffc60e280953623f26cf899e3fd51089cb5d5e432a52048d2bcf22428948",
+    "bike_parking_20261122/autonomous_writing/scope_replay_comparison.json": "9c9b491eb46b813e4d991184b457541488ace31db7842903df928df1c917bc91",
+    "bike_parking_20261122/autonomous_writing/scope_replay_full/attempt_001/events.jsonl.summary.json": "1edc568818bfad7d3261c13ee8d0b6b4257a630413e3a1c67eb6fabb96fde385",
+    "bike_parking_20261122/autonomous_writing/scope_replay_full/attempt_001/request.json": "495f269edc3ec1c2f22c1a5b0f04f0e68485fbdb91725782dc6808335550a367",
+    "bike_parking_20261122/autonomous_writing/scope_replay_full/attempt_001/response.json": "cca3d06950109addfe315409058110556024e74bb6e4becba0d5e8483b618c21",
+    "bike_parking_20261122/autonomous_writing/scope_replay_full/attempt_001/validated.json": "3043dc9c33c69dca6dc7c5a7dc49a0156446f1d526995a43ba118387360bfcad",
+    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/events.jsonl.summary.json": "2bfe38510cef8f3a811caf9f2936e3f1e55aca9300384b4bbdc268e340e091f7",
+    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/request.json": "4ad771916aecc918955e7de8a47f495b02a35fb66ace57795f1c0decfd6f836c",
+    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/response.json": "f44bb1bcdd7e5f4e9a917cc4d570228ffcca0ca3f445433a66df234797146cf9",
+    "bike_parking_20261122/autonomous_writing/scope_replay_scoped/attempt_001/validated.json": "cd205418a69bf952a20093f00b90b74370b1abd141d16b0767d7fa4395f3fbb4"
   },
   "omitted": [
     [
@@ -1666,6 +1694,84 @@
       "initial/batch_001/stderr.log",
       "849b8b3631db4dd962cc3c794e90d06380d3fd874a8f85f1574934cc32a34eb6",
       "raw logs or sensitive patterns; use local original"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      ".lock",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "autonomy_events.jsonl",
+      "18658a3dad6f42d40c44147e2b5312bcea045876b7b960de17a695dd8dbfa9af",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "autonomy_stderr.log",
+      "61ca9f20256ae7f86d299a157c12eb6763f72c04971afe959b58601835db6c24",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "critical_events.jsonl",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "critical_retry_events.jsonl",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "critical_retry_stderr.log",
+      "e19478705607e969673442c2c0a0f831561333deb1750678ae534aa435db2f92",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "digital_mutual_aid_20261122",
+      "critical_stderr.log",
+      "d8a11b9c95a82fc5e9236e04716b16a3746304a5b582876f17c369ee4db0e16c",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_full/attempt_001/events.jsonl",
+      "5a48d1dd1a402bc5d7bdc016a6a03e5792e020fa17ba7e44fa6c7039307e3e6b",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_full/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_full/attempt_001/stderr.log",
+      "d398c68e2c76026107d885470a407768b73e5b14f9abf67abed0a87dc8ce4b8d",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_scoped/attempt_001/events.jsonl",
+      "1efac9eb46ff2b17f7ac2fe74a3443354a7fef0b38c95f687ca49acd759f8181",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_scoped/attempt_001/login.json",
+      "68f7f756af3c0b90c768500c4fe50be18e18f3b6055a8d37c6a9551a40fdbc75",
+      "raw output or sensitive diagnostic; local original retained"
+    ],
+    [
+      "bike_parking_20261122",
+      "autonomous_writing/scope_replay_scoped/attempt_001/stderr.log",
+      "8aabff383df1e2dcd7cfbebd7b7c894c176be09a9a0861f6ffabddcf4201a1cf",
+      "raw output or sensitive diagnostic; local original retained"
     ]
   ]
 }

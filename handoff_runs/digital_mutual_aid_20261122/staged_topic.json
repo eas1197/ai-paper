@@ -1,0 +1,15 @@
+{
+  "run_id": "digital_mutual_aid_20261122",
+  "mode": "dev",
+  "theme": "数字互助",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "explanation_exchange",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "issue_search": true,
+  "reality_sha256": "a00fc781d7025def74830a8d33390fbcf7bf0fbda9b7cd94c69d561e449e456c"
+}

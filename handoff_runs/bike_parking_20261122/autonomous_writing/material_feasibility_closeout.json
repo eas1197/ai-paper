@@ -1,0 +1,15 @@
+{
+  "status": "insufficient_core_material",
+  "stage": "writing_handoff",
+  "material_adequacy": {
+    "eligible_event_ids": [],
+    "support": "insufficient",
+    "reason": "The archived independent review found zero confirmed events satisfying the frozen design."
+  },
+  "review_record": "autonomous_writing/plan_review_0/attempt_001/validated.json",
+  "review_sha256": "40ccf2e1cf2b68d201902f892f758f0a7de9b7643cb091afb40bda20677b1fa4",
+  "consumed_academic_revisions": 2,
+  "prior_controller_status": "academic_stop",
+  "new_model_calls": 0,
+  "plan_status": "unapproved"
+}

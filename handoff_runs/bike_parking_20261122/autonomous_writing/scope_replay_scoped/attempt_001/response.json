@@ -1,0 +1,21 @@
+{
+  "dimension_id": "D2",
+  "requested_change_already_present": true,
+  "evidence": [
+    {
+      "material_id": "d930c9f8e01020d8",
+      "relation": "context",
+      "locator": "极目新闻搜狐刊载版第49行",
+      "observed_sequence": "武汉记者按应用提示推行20余米，到电子围栏P点后落锁。",
+      "limits": "首次尝试处是否有标线及标线对该车的适用性未知，应用关单确认及费用结果未核。"
+    },
+    {
+      "material_id": "bd56212f3f6aa551",
+      "relation": "context",
+      "locator": "极目新闻搜狐刊载版第54行",
+      "observed_sequence": "另一位武汉市民按手机提示推行10余米后，在电子围栏内停车。",
+      "limits": "首次停车框对该车的适用性、提示原文、换点后的实际锁态、应用关单确认及费用结果均未知。"
+    }
+  ],
+  "assessment": "现有D2矩阵已将两条武汉证据标为context，分别保留了落锁和围栏内停车两个报道终点，以及市民实际锁态和两次应用关单确认的缺项。提示能否在拒绝原因相近且现场存在可行调整的事件中减少试探性移车和重试，仍待检验。"
+}

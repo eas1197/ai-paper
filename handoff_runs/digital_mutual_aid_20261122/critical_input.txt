@@ -1,0 +1,65 @@
+Independently challenge this tentative explanation: volunteer brokerage converts digitally grouped requests into offline aid. Compare the two events in reality.json and event_comparison.json below. Identify rival mechanisms, selection bias, a discriminating observation and a candidate question. Answer in Chinese. This is an independent critical exchange, not a final academic review.
+{
+  "phenomenon": "郑州暴雨求助登记和上海封控团购都借助线上工具汇集需求，组织者参与了线下对接。",
+  "search_focus": "数字互助如何从汇集需求转入线下协调",
+  "sources": [
+    {
+      "url": "https://society.people.com.cn/n1/2021/0727/c1008-32170708.html",
+      "kind": "人物采访",
+      "supports": "报道所述郑州志愿者分工收集信息、电话联络和发布在线文档",
+      "limits": "未核实全部求助的结局"
+    },
+    {
+      "url": "https://m.21jingji.com/article/20220516/herald/1a926b1a1541078ae5f05f266aa3ef8f.html",
+      "kind": "人物采访",
+      "supports": "上海闵行莘庄镇西街居民区A小区组织者用微信群统计团购需求",
+      "limits": "受访者视角，不能推知未入群居民处境"
+    }
+  ],
+  "verified_on": "2026-11-22"
+}
+{
+  "events": [
+    {
+      "identity": "2021年郑州暴雨共享文档",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "statement": "报道所述郑州志愿者分工收集信息、电话联络和发布在线文档",
+          "use": "定位线上需求汇集与后续协调",
+          "source_id": "z",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "报道所述郑州志愿者分工收集信息、电话联络和发布在线文档"
+      ]
+    },
+    {
+      "identity": "2022年上海莘庄西街A小区团购",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "statement": "上海闵行莘庄镇西街居民区A小区组织者用微信群统计团购需求",
+          "use": "定位线上需求汇集与后续协调",
+          "source_id": "s",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "上海闵行莘庄镇西街居民区A小区组织者用微信群统计团购需求"
+      ]
+    }
+  ],
+  "event_count": 2,
+  "sensitivity": "排除各自采访证词后，两个案例的具体行动链均待补证；两个案例的需求类型和线下资源不同，不能识别平台效果。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "digital_mutual_aid_20261122",
+  "input_sha256": "7ba52a6e926029686397ed3b841dc2dd6e3cce171bd37c3c35d0a2606e9a95c5",
+  "exchange_sha256": null,
+  "reality_sha256": "a00fc781d7025def74830a8d33390fbcf7bf0fbda9b7cd94c69d561e449e456c",
+  "formal_eligible": false
+}
+

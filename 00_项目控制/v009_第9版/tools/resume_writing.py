@@ -10,6 +10,7 @@ from staged_topic import ROOT, run_mode, job_lock
 from codex_literature import cli_environment, cli_executable, login_probe
 from question_binding import artifact_lineage, binding, evidence_digest, file_hash
 from revision_routes import preflight, validate_routes
+from material_adequacy import writing_material_status
 from technical_review import close_binding_review, local_matrix_context
 
 sys.path.insert(0, str(ROOT / "06_数据方法与分析/v005_第5版/tools"))
@@ -321,7 +322,10 @@ def resume(work, folder, prior_review):
                           "Review only the listed changes and their impact unless a new material error is found. "
                           "Respect the current stage; unresolved propositions can remain. Return JSON only: "
                            "decision (pass/conditional_pass/revise/stop), reason, changes (string array), "
-                           "and routes covering each change (index, origin, severity, reason).",
+                          "and routes covering each change (index, origin, severity, reason). On pass include "
+                          "material_adequacy: eligible_event_ids (receipt material IDs representing distinct events "
+                          "meeting the frozen design), support (sufficient/insufficient/unknown), and reason. Distinguish "
+                          "related records, usable evidence, and support for the question within stated limits.",
                           ({**scoped, "after": [row for row in current["rows"] if row["dimension_id"] in ids]}
                            if scoped else {**context, "matrix": current, "previous_review": review,
                            "completion": completion,
@@ -332,6 +336,13 @@ def resume(work, folder, prior_review):
                     "local_review": review, "revisions": spent, "local_rounds": local_rounds}
     if review["decision"] != "pass":
         return {"status": "academic_stop", "stage": "matrix", "review": review, "revisions": spent}
+    adequacy = review.get("material_adequacy")
+    if adequacy is None:
+        return {"status": "awaiting_material_adequacy", "stage": "matrix",
+                "reason": "The existing independent review lacks a writing adequacy decision", "revisions": spent}
+    gate = writing_material_status(adequacy, (row["material_id"] for row in receipt["materials"]))
+    if gate != "ready":
+        return {"status": gate, "stage": "matrix", "material_adequacy": adequacy, "revisions": spent}
     current["question_binding"] = contract
     matrix_path = folder / "analysis_matrix_reviewed.json"
     write(matrix_path, current)

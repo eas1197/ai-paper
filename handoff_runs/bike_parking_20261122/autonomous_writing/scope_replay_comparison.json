@@ -1,0 +1,28 @@
+{
+  "full": {
+    "model": "subscription_default",
+    "usage": {
+      "input_tokens": 32071,
+      "cached_input_tokens": 14208,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 310,
+      "reasoning_output_tokens": 0
+    },
+    "thread_id": "01a203b1-c9d9-7811-871f-a883205000f1",
+    "response_sha256": "cca3d06950109addfe315409058110556024e74bb6e4becba0d5e8483b618c21",
+    "uncached_input_tokens": 17863
+  },
+  "scoped": {
+    "model": "subscription_default",
+    "usage": {
+      "input_tokens": 22943,
+      "cached_input_tokens": 14208,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 338,
+      "reasoning_output_tokens": 0
+    },
+    "thread_id": "01a203b2-0682-72e1-a1a7-4271606833a5",
+    "response_sha256": "f44bb1bcdd7e5f4e9a917cc4d570228ffcca0ca3f445433a66df234797146cf9",
+    "uncached_input_tokens": 8735
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "type": "web_search",
+    "event_id": "exec-8b484b6c-9166-49ed-8281-614dbd9c0230",
+    "action_type": "search"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 983216,
+      "cached_input_tokens": 913536,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4706,
+      "reasoning_output_tokens": 60
+    }
+  }
+]
