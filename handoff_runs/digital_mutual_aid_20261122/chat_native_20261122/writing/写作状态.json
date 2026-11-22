@@ -1,0 +1,47 @@
+{
+  "run_id": "digital_mutual_aid_20261122",
+  "subrun": "chat_native_20261122",
+  "writing_stage": "07",
+  "mode": "single",
+  "draft_label": "A",
+  "provenance": {
+    "writer": "ChatGPT same-conversation single model",
+    "canonical_research_package": "handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/经验材料与分析矩阵.json",
+    "literature": "handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/文献检索矩阵.json",
+    "main_reference": "07_三稿独立写作/v014_第14版",
+    "qualitative_plan_reference": "07_三稿独立写作/v015_第15版/tools/writing_plan.py",
+    "source_experience": "chat_native_web",
+    "external_cli_events": null,
+    "independent_review_id": null
+  },
+  "artifacts": {
+    "packet": "写作任务V15输入.json",
+    "draft": "A稿_探索性正文.md",
+    "claims": "主张证据台账.json",
+    "self_check": "写作自检.md"
+  },
+  "checks": {
+    "chapter_order": [
+      "problem",
+      "framework",
+      "case",
+      "D1",
+      "D2",
+      "D3",
+      "conclusion"
+    ],
+    "body_chinese_chars": 2172,
+    "dev_budget_max_words": 2500,
+    "conservative_count_under_budget": true,
+    "claim_count": 12,
+    "claims_located_in_draft": true,
+    "v15_structural_validator": "manual_js_checks_only",
+    "v15_python_renderer_executed": false,
+    "main_v14_stage07_executed": false,
+    "formal_independent_review_executed": false,
+    "formal_material_adequacy_passed": false,
+    "formal_review_status": "not_passed"
+  },
+  "status": "experimental_A_specimen_only_not_G7",
+  "next": "After true independent critical exchange and eligibility assessment, run existing v015 writing plan rendering in a valid run workspace. Do not invent v014 quantitative G4-G6 freezes."
+}
