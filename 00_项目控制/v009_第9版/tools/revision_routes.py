@@ -3,6 +3,7 @@
 from question_binding import evidence_digest, file_hash
 
 ORIGINS = {"analysis", "source", "event", "framework", "binding"}
+SEVERITIES = {"fatal", "substantial", "local", "suggestion"}
 
 
 def validate_routes(changes, rows):
@@ -14,6 +15,8 @@ def validate_routes(changes, rows):
     for row in rows:
         if row["origin"] not in ORIGINS or not isinstance(row.get("reason"), str) or not row["reason"].strip():
             raise ValueError("Each revision needs a supported origin and rationale")
+        if row.get("severity", "substantial") not in SEVERITIES:
+            raise ValueError("Unknown review severity")
     return [{**row, "instruction": changes[row["index"]]} for row in sorted(rows, key=lambda x: x["index"])]
 
 

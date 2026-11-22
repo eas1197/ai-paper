@@ -16,6 +16,29 @@ def evidence_digest(value):
                                      separators=(",", ":")).encode()).hexdigest()
 
 
+def artifact_lineage(work, directory):
+    """Expose hash encodings and immutable paths to a reviewer without browser calls."""
+    history = []
+    while True:
+        framework = directory / "framework.json"
+        receipt_path = directory / "material_receipt.json"
+        receipt = load(receipt_path)
+        history.append({
+            "framework_path": framework.relative_to(work).as_posix(),
+            "framework_file_sha256": file_hash(framework),
+            "framework_canonical_json_sha256": evidence_digest(load(framework)),
+            "receipt_path": receipt_path.relative_to(work).as_posix(),
+            "receipt_file_sha256": file_hash(receipt_path),
+            "matrix_collection_sha256_equals_receipt_canonical_json_sha256": evidence_digest(receipt),
+            "acquisition_events_sha256": file_hash(directory / "events.jsonl"),
+            "acquisition_response_sha256": file_hash(directory / "response.json"),
+            "parent_receipt_sha256": receipt.get("parent_receipt_sha256"),
+        })
+        if not receipt.get("parent_attempt"):
+            return history
+        directory = directory.parent / receipt["parent_attempt"]
+
+
 def binding(work, directory):
     work, directory = Path(work).resolve(), Path(directory).resolve()
     if directory.parent != work / "qualitative_framework":

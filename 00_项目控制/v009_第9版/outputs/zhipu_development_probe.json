@@ -1,0 +1,6 @@
+{
+  "status": "codex_takeover",
+  "model": "glm-4.7-flash",
+  "http_status": 429,
+  "verification": "codex_takeover"
+}

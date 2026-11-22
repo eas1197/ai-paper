@@ -1,0 +1,20 @@
+{
+  "answer": [
+    {
+      "index": 0,
+      "origin": "binding",
+      "severity": "local",
+      "reason": "这项变更的前提是核验采集制品、哈希与本轮回执的对应关系，再修正矩阵元数据和版本记录。影响范围限于制品的版本追溯与绑定核验，现有研究问题、理论和实质结论保持不变。"
+    }
+  ],
+  "thread_id": "01a202c7-b411-7112-ad44-dd31469dc4cd",
+  "usage": {
+    "input_tokens": 19290,
+    "cached_input_tokens": 17024,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 104,
+    "reasoning_output_tokens": 0
+  },
+  "response_sha256": "a3199d9bd14cfe724c2b6740e0ac6dc3e47c1b3e0216c3a9c552f88f9190fb4f",
+  "model": "subscription_default"
+}
