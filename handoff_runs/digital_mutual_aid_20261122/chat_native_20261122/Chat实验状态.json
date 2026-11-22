@@ -1,0 +1,81 @@
+{
+  "run_id": "digital_mutual_aid_20261122",
+  "subrun": "chat_native_20261122",
+  "date": "2026-11-22",
+  "source_branch": "dev/v3.1-abstract-acquisition",
+  "mode": "experimental_chat_native_single_model_adversarial",
+  "parent_staged_topic_status": "explanation_exchange",
+  "parent_modified": false,
+  "independent_model_invocation_id": null,
+  "independent_review_verified": false,
+  "cli_tool_receipts": null,
+  "actual_api_fee": null,
+  "web_search_mode": "ChatGPT native browsing, not Codex CLI",
+  "stages": [
+    [
+      "S01",
+      "inherited_valid_reality"
+    ],
+    [
+      "S02",
+      "inherited_event_comparison_plus_live_source_check"
+    ],
+    [
+      "S03",
+      "single_model_adversarial_only_independence_not_met"
+    ],
+    [
+      "S04",
+      "initial_5_source_abstracts_read"
+    ],
+    [
+      "S05",
+      "internal_academic_review_only"
+    ],
+    [
+      "S06",
+      "qualitative_material_feasibility_provisional"
+    ],
+    [
+      "S07",
+      "supplemental_5_abstracts_read_2_not_top_scope"
+    ],
+    [
+      "S08",
+      "final_single_model_review_not_formal_freeze"
+    ],
+    [
+      "S09",
+      "three_reported_case_materials_one_context_record"
+    ],
+    [
+      "S10",
+      "matrix_exploratory_no_independent_adequacy"
+    ],
+    [
+      "S11",
+      "provisional_paragraph_level_writing_plan"
+    ],
+    [
+      "S12",
+      "pending_internal_plan_check_and_archival"
+    ]
+  ],
+  "budget": {
+    "initial_target": 5,
+    "initial_retrieved": 5,
+    "supplemental_target": 5,
+    "supplemental_retrieved": 5,
+    "strict_core_top_qualifications": 8,
+    "qual_search_legacy_batch_limit": 1,
+    "script_cli_calls": 0,
+    "extra_paid_api_calls": 0,
+    "academic_revisions_formally_consumed": 0,
+    "self_review_rounds": 2,
+    "actual_chat_web_tool_calls": "not directly equivalent to CLI native search actions; audit query list and citations in process log",
+    "exact_subscription_tokens": "not visible"
+  },
+  "final_gate": "not_passed_due_to_missing_independent_review_and_empirical_limitations",
+  "writing_deliverable": "provisional_plan_not_full_paper",
+  "resume": "Keep original explanation_exchange frozen; Codex or future independent reviewer must supply actual critical receipt; Chat findings can guide retrieval but must not be dressed as original CLI events."
+}
