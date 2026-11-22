@@ -212,6 +212,46 @@ def main():
     (args.out / "候选论文写作方案_未经学术审查.md").write_text(header + plan, encoding="utf-8")
     (args.out / "candidate_packet.json").write_text(
         json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Prepare a *preview*, never mutate the reviewed matrix or reset revision budgets.
+    # Only move the recorded legacy hash comparison out of empirical D1.unresolved.
+    candidate_matrix = json.loads(json.dumps(matrix, ensure_ascii=False))
+    d1 = next(row for row in candidate_matrix["rows"] if row["id"] == "D1")
+    marker = "当前问题绑定"
+    if marker not in d1["unresolved"]:
+        raise ValueError("Cannot move an absent legacy hash comment")
+    empirical, legacy_hash_note = d1["unresolved"].split(marker, 1)
+    d1["unresolved"] = empirical.rstrip("；。") + "。"
+    if any(not (
+        hashlib.sha256(file.read_bytes().replace(b"\n", b"\r\n")).hexdigest()
+        == listed.get(field) if listed else False
+    ) for file, field in (
+        (FOLDER / "framework.json", "framework_file_sha256"),
+        (FOLDER / "material_receipt.json", "receipt_file_sha256")
+    )):
+        raise ValueError("Raw hash lineage cannot be explained by line endings")
+    candidate_matrix["artifact_version_metadata"] = {
+        "preview_status": "unreviewed_technical_repair_not_a_formal_revision",
+        "basis_matrix_file_sha256_in_git": raw_sha(MATRIX_FILE),
+        "historical_version_chain": lineage,
+        "moved_from": "D1.unresolved",
+        "legacy_hash_note": marker + legacy_hash_note,
+        "algorithm": {
+            "file_sha256": "sha256(original local raw bytes; historical sources use CRLF)",
+            "git_sha256": "sha256(GitHub checkout raw bytes; repository snapshot uses LF)",
+            "canonical_json_sha256": "sha256(json.dumps(data,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode('utf-8'))",
+            "newline_reconciliation": "SHA256(GitHub snapshot LF bytes converted to CRLF) matches historical local SHA256 for current framework and receipt",
+        },
+        "coverage": "Framework and receipt bytes reconciled; events.jsonl, response.json and full parent artifacts absent, not independently recomputed",
+        "review_gate": "pending_independent_review",
+        "academic_approval": False,
+    }
+    assert all(candidate_matrix["rows"][i] == matrix["rows"][i]
+               for i in range(1, len(matrix["rows"])))
+    assert all(d1[key] == matrix["rows"][0][key]
+               for key in matrix["rows"][0] if key != "unresolved")
+    (args.out / "候选矩阵_仅版本元数据返修_未经复审.json").write_text(
+        json.dumps(candidate_matrix, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
     report = {
         "scope": "offline_repository_snapshot_only",
         "repository_run": RUN.relative_to(ROOT).as_posix(),
@@ -245,6 +285,7 @@ def main():
         "receipt_materials": len(receipt["materials"]),
         "candidate_document": "候选论文写作方案_未经学术审查.md",
         "candidate_status": "rendered_unreviewed",
+        "candidate_matrix": "候选矩阵_仅版本元数据返修_未经复审.json",
         "next_gate": "recover runtime artifacts + version-metadata repair + authorized independent re-review",
         "paid_model_calls": 0,
     }
