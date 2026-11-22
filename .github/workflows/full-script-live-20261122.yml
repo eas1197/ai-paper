@@ -1,0 +1,88 @@
+name: Full-script gate-by-gate research trial (truthful statuses)
+on:
+  push:
+    branches: [experiment/full-script-live-20261122]
+    paths: [.github/workflows/full-script-live-20261122.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  script-trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Execute registered entry points without bypassing gates
+        shell: bash
+        run: |
+          set -u
+          mkdir -p execution_logs
+          function stage() {
+            local title="$1"; shift
+            local slug="$1"; shift
+            echo "=== $title ==="
+            set +e
+            "$@" > "execution_logs/$slug.stdout.log" 2> "execution_logs/$slug.stderr.log"
+            local rc=$?
+            set -e
+            printf '%s\n' "$rc" > "execution_logs/$slug.exit"
+            cat "execution_logs/$slug.stdout.log"
+            cat "execution_logs/$slug.stderr.log" >&2
+            echo "exit_code=$rc"
+            return 0
+          }
+          stage "00: Production framework validation" validate python -B 00_项目控制/v005_第5版/tools/project.py validate
+          stage "00: Registered single-paper plan" plan python -B 00_项目控制/v005_第5版/tools/project.py plan --writing-mode single
+          stage "00: No-theme autonomous topic request" init_no_theme python -B 00_项目控制/v005_第5版/tools/project.py init --run-id scripted_topic_discovery_20261122
+          stage "00/v007: isolated full-paper development run" dev_init python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --theme '城市共享单车停放规则与数字治理' --full-paper
+          stage "S01: topic script init" topic_init python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --topic init
+          stage "S01: prepare real research task" topic_prepare python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --topic prepare
+          stage "S01: budget and independent review readiness" topic_budget python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --topic allowance --model-calls 1 --search-calls 1
+          stage "S04/G4: execute registered literature search candidate" literature_start python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --literature start
+          stage "S04/G4: verify registered literature result" literature_verify python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --literature verify
+          stage "S01-S08: observed topic state" topic_status python -B 00_项目控制/v007_第7版/tools/run_mode.py --mode dev --run-id fresh_full_script_20261122 --topic status
+          stage "00: verify existing production/checkpoint states" trace python -B 00_项目控制/v005_第5版/tools/project.py trace
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          logdir=Path('execution_logs')
+          codes={p.name.removesuffix('.exit'):int(p.read_text().strip()) for p in logdir.glob('*.exit')}
+          topicfile=Path('00_项目控制/v007_第7版/runs_dev/fresh_full_script_20261122/topic/config.json')
+          literature=Path('00_项目控制/v007_第7版/runs_dev/fresh_full_script_20261122/literature/abstract_collection.json')
+          gate_state={
+              'run_id':'fresh_full_script_20261122',
+              'scope':'registered_script_trial',
+              'study_type':'development',
+              'full_paper_requested':True,
+              'script_exit_codes':codes,
+              'topic_initialized':topicfile.exists(),
+              'literature_bundle_exists':literature.exists(),
+              'G4':'unverified_or_blocked',
+              'G5':'not_executed_due_G4',
+              'G6':'not_executed_due_G5',
+              'G7':'not_executed_due_G6',
+              'complete_paper_approved':False,
+              'review_simulation_does_not_equal_independent_gpt_6_2_sol':True
+          }
+          if literature.exists():
+              try:
+                  doc=json.loads(literature.read_text(encoding='utf-8'))
+                  gate_state['literature']={'status':doc.get('status'),'count':doc.get('count'),'target':doc.get('target')}
+              except Exception as exc:
+                  gate_state['literature_read_error']=str(exc)
+          (logdir/'run_truth.json').write_text(json.dumps(gate_state,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(gate_state,ensure_ascii=False,indent=2))
+          PY
+      - name: Preserve CLI logs and research checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-script-live-20261122-gate-evidence
+          path: |
+            execution_logs/
+            00_项目控制/v007_第7版/runs_dev/fresh_full_script_20261122/
+          if-no-files-found: warn
+          retention-days: 20
