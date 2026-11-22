@@ -1,0 +1,24 @@
+name: ai-writer 4.0 offline tests
+
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+    paths:
+      - '07_三稿独立写作/v016_第16版/**'
+      - '.github/workflows/ai-writer4-offline.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  writer4-unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test qualitative writing interface without model calls
+        run: python -m unittest discover -s "07_三稿独立写作/v016_第16版/tests" -v
