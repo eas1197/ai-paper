@@ -27,3 +27,8 @@
 本轮实际读取了 `main` 的 `07_三稿独立写作/v014_第14版/tools/stage07.py`、`模块说明.md`、`使用说明.md`、`templates/文字要求.md` 和 `templates/定量社会学论文逐段写作与语言规则.md`，并核对候选 `07/v015/tools/writing_plan.py` 的 `render()` 输入合同。原 main V14 的正式 G7 需旧 G4 100篇摘要和25篇核心全文、G5/G6冻结的正式定量研究结果，不能直接接收尚未独立审查的定性 Chat 资料；V15 当前只实现定性写作方案，不是定性正文起草器。
 
 因此本次不改主程序与 main，不降低关卡，在 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/` 创建五项研究阶段产物：`写作任务V15输入.json`、`A稿_探索性正文.md`、`主张证据台账.json`、`写作自检.md`、`写作状态.json`。原8章论证计划的讨论并入结论，整理为V15七章14节任务，16个来源ID；D1—D3各含理论与经验材料。A稿在单模型探索范围约2172汉字（不含参考文献），12条关键主张逐字定位并绑定材料ID。输入已作字段/来源/维度覆盖JS静态核查，**没有实际执行V15 Python渲染器或V14 G7，也没有独立学术审查**。归档manifest目前共447项文件索引。原`staged_topic.json`检查点仍在`explanation_exchange`。
+
+## 2026-11-23 ai-writer 4.0候选建立
+按用户的新规范，定量路径继续main 07/v014不变；定性在07/v015结构计划后进入新增 `07_三稿独立写作/v016_第16版/tools/ai_writer4.py`，命名 `ai-writer 4.0`。07模块版本索引添加候选，正式注册表未变更。语体主库03/v004（15项ST）、03/v005（52项功能匹配但只借其写法）、03/v003（27条L类论证审查）、main/v014文字要求；原G3仍needs_review。新程序有route、prepare、submit，输出版本与来源锁、每节写作任务、V15渲染计划、语言审查和待审状态；没有自动调用LLM，不伪造独立学术通过。
+
+已将数字互助A稿按语言库作7处真实语言修订，12条原始来源主张均保持原句且可定位；探索性修订稿及前后规则日志见 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/`。原数字互助流程 `explanation_exchange` 未修改，正式G7、正式语言快照和独立审查仍未通过。提交了6个离线合同测试并增加仅无模型的Actions工作流；**目前仅完成GitHub文件/引用静态核对，Python及Actions真实通过记录仍待核实**。
