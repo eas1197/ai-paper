@@ -102,13 +102,15 @@ def main():
     stages.add_argument("--topic", nargs=argparse.REMAINDER, metavar="COMMAND")
     stages.add_argument("--literature", choices=("start", "resume", "verify"))
     stages.add_argument("--writing-plan", type=Path, metavar="INPUT")
+    stages.add_argument("--writer4", nargs=argparse.REMAINDER, metavar="COMMAND",
+                        help="Opt-in qualitative ai-writer 4.0 route/prepare/submit; quantitative path unchanged")
     args = parser.parse_args()
     if args.mode == "formal":
-        if not args.theme or args.topic is not None or args.literature or args.writing_plan or args.full_paper:
+        if not args.theme or args.topic is not None or args.literature or args.writing_plan or args.writer4 is not None or args.full_paper:
             parser.error("Formal initialization requires --theme and accepts no experimental stages")
         return subprocess.call([sys.executable, "-B", str(PRODUCTION / "tools/project.py"),
                                 "init", "--run-id", args.run_id, "--theme", args.theme])
-    if args.topic is not None or args.literature or args.writing_plan:
+    if args.topic is not None or args.literature or args.writing_plan or args.writer4 is not None:
         if args.full_paper:
             parser.error("--full-paper is only accepted when initializing a new experiment")
         if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}", args.run_id):
@@ -117,6 +119,11 @@ def main():
         manifest = verified_run(work)
         if args.theme is not None and args.theme != manifest["theme"]:
             parser.error("The theme is frozen at initialization")
+        if args.writer4 is not None:
+            if not args.writer4 or args.writer4[0] not in {"route", "prepare", "submit"}:
+                parser.error("--writer4 requires route, prepare or submit")
+            script = ROOT / "07_三稿独立写作/v016_第16版/tools/ai_writer4.py"
+            return subprocess.call([sys.executable, "-B", str(script), *args.writer4])
         if args.writing_plan:
             script = ROOT / "07_三稿独立写作/v015_第15版/tools/writing_plan.py"
             return subprocess.call([sys.executable, "-B", str(script), "--dev-run", str(work),
