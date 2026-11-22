@@ -4,6 +4,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import ai_writer4 as writer
@@ -137,6 +138,20 @@ class Writer4Test(unittest.TestCase):
         report = writer.review_draft(old_input, self.work, old_manuscript, old_claims)
         self.assertEqual(report["status"], "exploratory_draft_awaiting_review")
         self.assertEqual(writer.load(self.work / "writing_review_request.json")["independent_review"], "pending")
+
+
+    def test_dev_controller_dispatch_is_opt_in_and_qualitative_only(self):
+        sys.path.insert(0, str(writer.ROOT / "00_项目控制/v007_第7版/tools"))
+        import run_mode
+        with patch.object(run_mode, "RUNS", self.root):
+            run_mode.start("writer4_dispatch_fixture", "Digital mutual aid")
+            argv = ["run_mode.py", "--mode", "dev", "--run-id", "writer4_dispatch_fixture",
+                    "--writer4", "route", "--packet", str(self.packet_path)]
+            with patch.object(sys, "argv", argv), patch.object(run_mode.subprocess, "call", return_value=0) as mocked:
+                self.assertEqual(run_mode.main(), 0)
+                args = mocked.call_args.args[0]
+                self.assertIn("ai_writer4.py", args[2])
+                self.assertEqual(args[3:], ["route", "--packet", str(self.packet_path)])
 
 
 if __name__ == "__main__":
