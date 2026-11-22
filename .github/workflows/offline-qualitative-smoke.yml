@@ -1,0 +1,41 @@
+name: Qualitative offline smoke 20261122
+
+on:
+  push:
+    branches:
+      - experiment/offline-smoke-20261122
+    paths:
+      - .github/workflows/offline-qualitative-smoke.yml
+
+permissions:
+  contents: read
+
+jobs:
+  offline-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify experimental run policy
+        run: python -B -m unittest discover -s "00_项目控制/v007_第7版/tests" -p "test_run_mode.py" -v
+      - name: Verify qualitative writing-plan structure
+        run: python -B -m unittest discover -s "07_三稿独立写作/v015_第15版/tests" -p "test_writing_plan.py" -v
+      - name: Verify review and revision routing
+        run: python -B -m unittest discover -s "00_项目控制/v009_第9版/tests" -p "test_revision_routes.py" -v
+      - name: Run existing experimental entry point offline
+        run: |
+          python -B "00_项目控制/v007_第7版/tools/run_mode.py" --mode dev --run-id ci_smoke_20261122 --theme "共享单车停放治理"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("00_项目控制/v007_第7版/runs_dev/ci_smoke_20261122/run_manifest.json")
+          m=json.loads(p.read_text(encoding="utf-8"))
+          assert m["run_mode"]=="dev" and m["formal_eligible"] is False
+          assert m["writing_policy"]["deliverable"]=="plan"
+          print("OFFLINE EXPERIMENT INITIALIZATION PASSED:",m["run_id"])
+          PY
