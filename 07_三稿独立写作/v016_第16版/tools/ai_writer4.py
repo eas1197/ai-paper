@@ -71,7 +71,7 @@ def language_resources():
         locks[label] = {"path": relative(path), "sha256": hash_file(path)}
     rules = load(ROOT / profile["paragraph_style"]["rules"]["path"])
     units = load(ROOT / profile["paragraph_style"]["mapping"]["path"])["units"]
-    argument_titles = dict(re.findall(r"^## (L\\d\\d) (.+)$", LANGUAGE_V3.read_text(encoding="utf-8-sig"), re.M))
+    argument_titles = dict(re.findall(r"^## (L\d\d) (.+)$", LANGUAGE_V3.read_text(encoding="utf-8-sig"), re.M))
     by_id = {item["id"]: item for item in rules}
     if len(by_id) != 15 or set(profile["style_ids"]) != set(by_id):
         raise ValueError("Language pattern IDs no longer match v005 resource")
