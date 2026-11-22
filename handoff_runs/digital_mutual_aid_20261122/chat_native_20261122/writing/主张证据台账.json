@@ -1,0 +1,148 @@
+{
+  "run_id": "digital_mutual_aid_20261122",
+  "subrun": "chat_native_20261122",
+  "writing_mode": "single",
+  "draft_id": "A",
+  "source_trace": "main/v014 claims and source binding principles, adapted nonformally for dev/v015 qualitative writing",
+  "manuscript": "A稿_探索性正文.md",
+  "body_chinese_chars": 2172,
+  "claims": [
+    {
+      "claim_id": "C01",
+      "exact_text": "2021年郑州暴雨期间，志愿者群需要核验求助时效、地点并转交救援单位。",
+      "source_ids": [
+        "M-Z1"
+      ],
+      "claim_type": "reported",
+      "scope_limit": "央广网为单篇采访，具体执行频次未独立复核",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C02",
+      "exact_text": "2022年上海封控期间，居民微信群聚集买菜需求，却遭遇起订量、缺货和配送限制。",
+      "source_ids": [
+        "M-S1"
+      ],
+      "claim_type": "reported",
+      "scope_limit": "采访对象自述；不代表全市样本",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C03",
+      "exact_text": "已有研究揭示微信群的社会基础设施作用，以及团长与市场、基层治理资源的连接",
+      "source_ids": [
+        "L02",
+        "L03"
+      ],
+      "claim_type": "literature_synthesis",
+      "scope_limit": "仅据实际阅读摘要及HTML相关章节总结，不放大为相同结论",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C04",
+      "exact_text": "灾难行动涉及角色分工及组织协作，持续的公共行动也与既有组织结构相关",
+      "source_ids": [
+        "L01",
+        "L05"
+      ],
+      "claim_type": "literature_synthesis",
+      "scope_limit": "原研究单位与当前中国数字危机不同",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C05",
+      "exact_text": "郑州救援文档已有直接研究，但其持续参与者解释尚待全文核实",
+      "source_ids": [
+        "N11"
+      ],
+      "claim_type": "bibliographic_finding",
+      "scope_limit": "已知题录与索引摘要；未阅读全文，不确认具体创新冲突",
+      "located_in_draft": true,
+      "verification_status": "partial_index_only"
+    },
+    {
+      "claim_id": "C06",
+      "exact_text": "受访成员称，紧急求救消息需在一定时间内再次核实，上报后也需要查看状态。",
+      "source_ids": [
+        "M-Z1"
+      ],
+      "claim_type": "reported_actor_account",
+      "scope_limit": "当事人叙述，不能当作每条消息都核实或最后获救",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C07",
+      "exact_text": "上海A小区首次团购遭遇起订量、缺货与居民争议",
+      "source_ids": [
+        "M-S1"
+      ],
+      "claim_type": "reported_actor_account",
+      "scope_limit": "采访中的首次团购，不能推广全部社区",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C08",
+      "exact_text": "郑州采访中的组织分工将紧急事项、物资问题及不同求助类型引向救援队或相关渠道。",
+      "source_ids": [
+        "M-Z1"
+      ],
+      "claim_type": "reported_actor_account",
+      "scope_limit": "导向/转交不等于被成功救援",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C09",
+      "exact_text": "上海A小区的团购需跨越起订量、配送和分发约束，组织者调整采购渠道并与跑腿人员合作",
+      "source_ids": [
+        "M-S1"
+      ],
+      "claim_type": "reported_actor_account",
+      "scope_limit": "供应链条件变化等竞争解释未被排除",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C10",
+      "exact_text": "报道呈现了这些工作规则，却没有提供每条求助最终救援结果的独立验证",
+      "source_ids": [
+        "M-Z1"
+      ],
+      "claim_type": "evidence_boundary",
+      "scope_limit": "来自资料缺失判定，不是负面结果统计",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C11",
+      "exact_text": "上海团购中，组织者面对货品与费用纠纷，通过留证和价格公示回应质疑，同时承担劳动及经济风险",
+      "source_ids": [
+        "M-S1"
+      ],
+      "claim_type": "reported_actor_account",
+      "scope_limit": "责任成本来自受访者叙述",
+      "located_in_draft": true,
+      "verification_status": "linked_but_not_independent"
+    },
+    {
+      "claim_id": "C12",
+      "exact_text": "两份公开采访共同呈现出一个有限但具体的观察：线上信息汇集之后，组织者还要核对信息或承诺、寻找适配资源，并处理任务移交后的反馈与争议。",
+      "source_ids": [
+        "M-Z1",
+        "M-S1"
+      ],
+      "claim_type": "cross_case_interpretation",
+      "scope_limit": "仅探索性共同表述，非独立交叉核实或因果结论",
+      "located_in_draft": true,
+      "verification_status": "pending_independent_review"
+    }
+  ],
+  "global_limit": "No frozen G4–G6, no independent critical exchange or independent material review; claims not verified by G7",
+  "draft_status": "experimental_unapproved"
+}
