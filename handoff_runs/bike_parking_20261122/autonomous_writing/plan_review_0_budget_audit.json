@@ -1,0 +1,75 @@
+{
+  "run_id": "bike_parking_20261122",
+  "audit_type": "plan_review_budget_gate",
+  "audited_at": "2026-11-22",
+  "branch": "dev/v3.1-abstract-acquisition",
+  "base_commit": "97b48684e5fa077f00157eae5e70f8c8b0939e95",
+  "plan_review_0": {
+    "decision": "revise",
+    "model": "gpt-6.2-sol",
+    "input_tokens": 57330,
+    "cached_input_tokens": 14208,
+    "uncached_input_tokens": 43122,
+    "output_tokens": 865,
+    "actual_fee": null,
+    "changes_count": 6
+  },
+  "budget": {
+    "academic_revisions": {
+      "used": 2,
+      "limit": 2,
+      "remaining": 0,
+      "evidence": [
+        "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122/autonomous_writing/revision_checkpoint.json",
+        "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122/autonomous_writing/technical_closure.json",
+        "00_项目控制/v009_第9版/tools/resume_writing.py"
+      ]
+    },
+    "local_matrix_revision_rounds": {
+      "used": 2,
+      "limit": 2,
+      "remaining": 0,
+      "status": "local_revision_limit",
+      "evidence": [
+        "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122/autonomous_writing_status.json",
+        "handoff_runs/bike_parking_20261122/autonomous_writing/matrix_revision_1/attempt_001/validated.json",
+        "handoff_runs/bike_parking_20261122/autonomous_writing/matrix_revision_2/attempt_001/validated.json",
+        "00_项目控制/v009_第9版/tools/resume_writing.py"
+      ]
+    },
+    "targeted_evidence_repair_batches": {
+      "used": 2,
+      "limit": 2,
+      "remaining": 0,
+      "evidence": [
+        "06_数据方法与分析/v005_第5版/tools/repair_materials.py",
+        "handoff_runs/bike_parking_20261122/qualitative_framework/repair_001",
+        "handoff_runs/bike_parking_20261122/qualitative_framework/repair_002"
+      ]
+    },
+    "plan_revision": {
+      "remaining": 0,
+      "reason": "The plan loop permits plan_1 only when academic revisions remain; plan_1 increments the academic revision count. The checkpoint records 2 of 2 academic revisions already spent."
+    }
+  },
+  "review_change_assessment": {
+    "classification": "The six requested changes are predominantly evidence-scope narrowing, factual/source-locator corrections, and metadata traceability corrections. They do not require changing the frozen core question or theory. Items 1-3 nevertheless change what empirical claims the plan may make and are not merely cosmetic edits.",
+    "pipeline_constraint": "The current writing-plan loop has no separate local-plan-patch route. Any successor plan is plan_1 and consumes an academic revision. The local-round counter is applied in the matrix stage, not the plan stage."
+  },
+  "decision": "do_not_revise",
+  "reason": "Academic revision allowance is exhausted (2/2), local matrix revision allowance is exhausted (2/2), and targeted evidence-repair batches are exhausted (2/2). No budget reset or new authorization is present. The current script does not provide a budget-free local patch path for a reviewed writing plan.",
+  "actions_taken": [
+    "Read-only audit of the current development branch, handoff documents, run manifest, actual plan_review_0 request and validated review, revision checkpoint, technical closure, run status, revision records, and relevant execution code.",
+    "No model call made for a new revision.",
+    "No research evidence added or altered.",
+    "No plan_0 artifact overwritten.",
+    "No plan_1 or full manuscript generated.",
+    "No budget reset performed."
+  ],
+  "implementation_risk": {
+    "finding": "resume_writing.py initializes local_rounds to zero on each invocation and does not persist or reconstruct that counter from the checkpoint/status before the matrix revision loop.",
+    "implication": "A future re-entry could incorrectly make the local matrix allowance appear available again. This audit does not treat that implementation behavior as remaining budget.",
+    "required_fix_before_future_resume": "Persist local_rounds in revision_checkpoint/autonomous_writing_status and validate it against immutable revision records before dispatching another local revision."
+  },
+  "next_allowed_step": "Keep the run stopped. Before any further repair, explicitly authorize a new budget or implement and test a distinct plan-local patch allowance with persistent counters. Do not reset the existing academic or evidence-repair budgets implicitly."
+}
