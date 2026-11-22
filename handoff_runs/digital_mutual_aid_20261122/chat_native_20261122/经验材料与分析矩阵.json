@@ -1,0 +1,235 @@
+{
+  "run_id": "digital_mutual_aid_20261122",
+  "subrun": "chat_native_20261122",
+  "retrieved_on": "2026-11-22",
+  "acquisition_mode": "chat_native_web",
+  "method": "public_secondhand_interview_and_reported_process_comparison",
+  "units": "不同组织/小区的互助过程，不以同报道多个叙述为独立来源",
+  "materials": [
+    {
+      "id": "M-Z1",
+      "case_id": "E-Z1",
+      "name": "驰豫志愿者线上信息核验（郑州，2021）",
+      "url": "https://news.cnr.cn/dj/20210802/t20210802_525550382.shtml",
+      "publisher": "央广网",
+      "published": "2021-08-02",
+      "kind": "reported_interviews_and_journalist_narration",
+      "locator": "页面第45-85行（群建立、分工、核实、转交和回访）；第96-105行（救援队的信息接入）",
+      "facts": [
+        {
+          "stage": "obstacle",
+          "claim": "最初求助与救援信息混杂，后细分录入、核实、失联求助和物资匹配",
+          "status": "actor_account"
+        },
+        {
+          "stage": "verification",
+          "claim": "团队成员陈述紧急信息要求20分钟内核实，并在上报30分钟后复核求救结果",
+          "status": "actor_account"
+        },
+        {
+          "stage": "resource",
+          "claim": "报道中出现将紧急事项上报救援队、非紧急事项导向官方通道的分流规则",
+          "status": "actor_account"
+        }
+      ],
+      "boundaries": [
+        "采访为同一媒体来源，不能证实所有流程均严格执行",
+        "未核实每条求助是否最终获救",
+        "不得与另一份《待救援人员信息》或其他大学生创建的文档直接合并"
+      ],
+      "eligibility": "descriptive_sequence_only"
+    },
+    {
+      "id": "M-S1",
+      "case_id": "E-S1",
+      "name": "莘庄西街A小区志愿团购（上海，2022）",
+      "url": "https://m.21jingji.com/article/20220516/herald/1a926b1a1541078ae5f05f266aa3ef8f.html",
+      "publisher": "21世纪经济报道",
+      "published": "2022-05-16",
+      "kind": "named_interview_report",
+      "locator": "页面第26-41行（建群与志愿身份）；第50-72行（首次失败、后续采购改造）；第78-91行（分工与疲劳）",
+      "facts": [
+        {
+          "stage": "obstacle",
+          "claim": "受访者回忆首轮团购达到起订量困难、到货短缺及争议",
+          "status": "actor_account"
+        },
+        {
+          "stage": "verification",
+          "claim": "后续组织者报告使用公开保供渠道并验收司机证件、货品与价格公示",
+          "status": "actor_account"
+        },
+        {
+          "stage": "resource",
+          "claim": "受访者称与跑腿人员合作，自己统计需求，跑腿方采购配送",
+          "status": "actor_account"
+        }
+      ],
+      "boundaries": [
+        "只有该篇采访未见订单原表、账单与供应商核实",
+        "故事为42户A小区，不代表全上海",
+        "首次失败后的改善为受访者陈述而非可量化效果"
+      ],
+      "eligibility": "descriptive_sequence_only"
+    },
+    {
+      "id": "M-S2",
+      "case_id": "E-S2",
+      "name": "浦东一名团长的团购过程（上海，2022）",
+      "url": "https://www.thepaper.cn/newsDetail_forward_17747424",
+      "publisher": "澎湃号·媒体",
+      "published": "2022-04-22",
+      "kind": "reported_organizer_interview",
+      "locator": "页面约第29-40行（初建团购群）及团购物资过程",
+      "facts": [
+        {
+          "stage": "mobilization",
+          "claim": "受访者在既有小区群有人求助后自发担任团长另建蔬菜团购群",
+          "status": "actor_account"
+        }
+      ],
+      "boundaries": [
+        "不属于E-S1同一小区，不得与其拼接为同一行动链",
+        "若无完整阻碍—修复链，仅作为边界对照，不计核心合格过程"
+      ],
+      "eligibility": "contrast_only"
+    },
+    {
+      "id": "M-X1",
+      "case_id": "E-context",
+      "name": "上海社区互助与未入群者问题（社会组织采访）",
+      "url": "https://m.thepaper.cn/newsDetail_forward_17691044",
+      "publisher": "澎湃新闻",
+      "published": "2022-04-20",
+      "kind": "commentary_and_interviews",
+      "locator": "页面第9-17行（社区网络和老年人数字接入问题）",
+      "facts": [
+        {
+          "stage": "boundary",
+          "claim": "采访提及老年人难以触及线上渠道及在地志愿者协助",
+          "status": "reported_generalization"
+        }
+      ],
+      "boundaries": [
+        "该采访并非E-S1的直接旁证",
+        "不能推算数字排除比例"
+      ],
+      "eligibility": "context_only"
+    }
+  ],
+  "framework": {
+    "core_concept": "行动可执行性的协调性修复",
+    "definition": "当线上表达需求尚不足以触发可靠的线下行动时，组织者通过使需求可核、资源可调度、责任与结果可被承认，将信息或交易重新转化为可操作任务。此为本轮研究者拟议分析概念，并非已证实的新理论。",
+    "prior_explanation": "社会基础设施、社会资本、媒介化治理和合法性理论已经解释线上线下桥接、群体出现与资源动员。",
+    "gap": "既有研究已涉及核验和协调，增量不得宣称此前空白；仅将失败与修复作为对照单元，考察行动可执行的最小条件组合。",
+    "theory_choice": "以组织化行动的任务可执行性为核心，借助灾难组织角色、资源动员与合法性研究作为竞争和辅助解释。",
+    "deduction": "一项线上需求要成为有执行主体的实际任务，至少应在证据、资源和责任三个不同层面解除障碍；缺失任何一环可成为失败或重试的线索，但三者必要性尚需反例检验。",
+    "increment": "候选增量是把研究视角由互助网络是否形成，转向可见需求如何经核验、调配和责任承诺获得可执行性；不是现有资料已证成的原创贡献。",
+    "integration": "三个维度不是程序步骤清单：可信性、资源适配和责任承接是彼此制约的可执行性条件，可表现为交错、回返和补救。",
+    "dimensions": [
+      {
+        "id": "D1",
+        "title": "需求与承诺的可信性校准",
+        "deduction": "线上求助与团购请求必须被转为可核实且可供执行者信赖的对象；校准不仅核验求助者，也核验供货/承诺。"
+      },
+      {
+        "id": "D2",
+        "title": "异质资源的可调度性重组",
+        "deduction": "同样的信息在缺乏配送、起订量和救援权限时不可行动；协调者重组任务边界与资源匹配。"
+      },
+      {
+        "id": "D3",
+        "title": "责任承接与结果可确认化",
+        "deduction": "核验过并匹配资源还不足够；当出现失败、争议或状态不明，责任分工和反馈闭环决定是否再次协调。"
+      }
+    ]
+  },
+  "analysis_matrix": [
+    {
+      "dimension_id": "D1",
+      "evidence": [
+        {
+          "material_id": "M-Z1",
+          "relation": "紧急救援信息20分钟内复核，避免信息陈旧",
+          "reason": "求助内容可信时才可能进入救援队工作流"
+        },
+        {
+          "material_id": "M-S1",
+          "relation": "后续供应商渠道、司机证明和货品验收",
+          "reason": "承诺与交付可核对，不仅居民需求本身需真实"
+        }
+      ],
+      "conclusion": "两案的报道显示组织者面向不同对象进行核验：郑州核验求助新鲜度，上海核验供应及交付条件。",
+      "alternatives": [
+        "政策准入要求本身可能是关键，不一定来自互助协调学习",
+        "记者倾向突出组织者负责任的行为"
+      ],
+      "unresolved": "没有核验日志、误报或失败单；不能确认核验提升成功率",
+      "boundary": "仅能描述受访者所述核验安排",
+      "status": "partial_reported"
+    },
+    {
+      "dimension_id": "D2",
+      "evidence": [
+        {
+          "material_id": "M-Z1",
+          "relation": "将救援/物资分流至不同团队和平台",
+          "reason": "把不同类型需求转到具有不同资源的执行单位"
+        },
+        {
+          "material_id": "M-S1",
+          "relation": "起订量受限与跨小区凑团，后借跑腿人员配送",
+          "reason": "供需阈值与末端运力是独立约束"
+        }
+      ],
+      "conclusion": "数字化汇总本身不消除行动边界；分流、跨小区拼单和跑腿合作被报道为解决路径。",
+      "alternatives": [
+        "外部物资供给恢复可解释后期改善",
+        "社区原有关系网络可解释资源获得"
+      ],
+      "unresolved": "缺统一时间戳与按条的资源流向，无法比较实际效率",
+      "boundary": "不能推断平台效应或普遍成功率",
+      "status": "partial_reported"
+    },
+    {
+      "dimension_id": "D3",
+      "evidence": [
+        {
+          "material_id": "M-Z1",
+          "relation": "核实组培训、上报后复查并标记状态",
+          "reason": "组织责任从转发拓展到后续信息更新"
+        },
+        {
+          "material_id": "M-S1",
+          "relation": "首轮缺货亏损和批评、后续价格公示与验货留证",
+          "reason": "经济和信誉风险促进责任界限再明确"
+        }
+      ],
+      "conclusion": "访谈叙述均出现信息提交后持续工作的要求，但具体责任基础不同。",
+      "alternatives": [
+        "志愿者声誉维护可能主导改进",
+        "正式治理安排和风险规避可能比互惠更重要"
+      ],
+      "unresolved": "未核实实际救援完成、账单或责任分配的外部确认",
+      "boundary": "只支持责任安排的叙述性比较",
+      "status": "partial_reported"
+    }
+  ],
+  "eligible_for_descriptive_comparison": [
+    "E-Z1",
+    "E-S1"
+  ],
+  "eligible_for_verified_causal_mechanism": [],
+  "independent_corroboration_for_core_sequences": false,
+  "support_scope": "仅用于重建采访报道中的组织障碍、修复尝试与责任安排；不能回答真实成功率、因果有效性、未被报道者经历",
+  "material_adequacy": {
+    "assessment_mode": "single_model_internal_not_independent",
+    "support": "conditional_descriptive_only",
+    "eligible_event_ids": [
+      "E-Z1",
+      "E-S1"
+    ],
+    "reason": "两例有受访者所述的障碍—调整序列；若冻结设计要求外部独立验证的效果或完整订单/求助结果，则合格核心事件为零，不能正式放行。"
+  },
+  "status": "exploratory_matrix_only"
+}
