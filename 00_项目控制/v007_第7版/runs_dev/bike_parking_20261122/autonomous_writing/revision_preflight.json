@@ -1,0 +1,36 @@
+{
+  "review_sha256": "fb1472fb9006831abf9ae55226a6321e8568e8d564c9d5339dcb17c879ff3166",
+  "items": [
+    {
+      "index": 0,
+      "origin": "binding",
+      "reason": "将旧版本比较移出 D1.unresolved 的前提是核实哈希对应的制品路径、计算方法、版本及绑定关系。",
+      "instruction": "将版本绑定移至矩阵元数据。记录框架文件哈希 5764f5ca…、框架规范化 JSON 哈希 570aa82a… 及回执文件哈希 2dda8be3… 的制品路径与计算方法。按项目规则复核矩阵 collection_sha256 21df4638… 对应的采集制品及其与本轮回执的关系。将 D1 提到的 0921a925…、b3a591ec… 和旧回执哈希标明对应版本，核实后从 D1.unresolved 移除旧比较。",
+      "handler": "binding",
+      "status": "verified",
+      "verification": {
+        "framework_file_sha256": "5764f5ca6e5046231b60bd96b69916625b4869dbcbc756ceac573490d2dc5991",
+        "framework_canonical_json_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+        "receipt_framework_sha256": "570aa82a9f24d0696ccee402cb15f6fc9c5769753dedf5cd128d104866bc4edb",
+        "receipt_file_sha256": "2dda8be385cede13cd39e4121c432d682ccb7f2389c543aa6bf81dfde855fdde"
+      }
+    },
+    {
+      "index": 1,
+      "origin": "analysis",
+      "reason": "调整的是两条现有证据的支持范围，限于提示、移动与随后停车或落锁的可观察时序，并保留已有未知项和待检验命题。",
+      "instruction": "将 D2 两条武汉证据的 relation 标为 context，或明确 support 仅指提示、移动与停车或落锁的可观察时序。保留市民实际锁态及两次应用关单未知，继续将提示能否减少试探性移车和重试列为待检验。[武汉报道第49、54行](https://www.sohu.com/a/974401971_121284943)",
+      "handler": "analysis",
+      "status": "ready"
+    },
+    {
+      "index": 2,
+      "origin": "source",
+      "reason": "补记人工客服繁忙导致求助未果及后续报障、免单显示，涉及原报道的事实记录，依据定位为第4版第31至40行。",
+      "instruction": "在 D3 金台路证据中补记小程序和热线求助因人工客服繁忙未果，随后拍照报障，当天稍晚显示可享免单。继续将报障与最终落锁的精确先后、应用关单确认及实际结算列为未知。[金台路报道第4版第31至40行](https://paper.people.com.cn/rmrbhwb/images/2023-05/11/04/rmrbhwb2023051104.pdf)",
+      "handler": "source",
+      "status": "ready",
+      "remaining_collection_batches": 1
+    }
+  ]
+}

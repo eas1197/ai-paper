@@ -1,0 +1,34 @@
+{
+  "answer": [
+    {
+      "index": 0,
+      "completed": false,
+      "evidence": "after.rows[D1].unresolved 新增了绑定疑点，但矩阵与回执的 framework_sha256 仍为 0921a925…，问题绑定为 b3a591ec…。verification 中的 receipt_file_sha256 为父回执 b957f6d7…，本轮问题绑定的回执哈希为 6563bf6e…。版本元数据及矩阵与本轮采集制品、回执的完整绑定未获验证。"
+    },
+    {
+      "index": 1,
+      "completed": false,
+      "evidence": "after.rows[D2].evidence 已按第49、54行拆分记者落锁和市民停车，unresolved 已将等待后落锁列为待核线索。但 after.rows[D2].needed_material 与 before 相同，仍将两条记录归于 626a689967415c40，并写有市民等待后落锁。"
+    },
+    {
+      "index": 2,
+      "completed": true,
+      "evidence": "receipt.materials 新增独立金鱼胡同条目 508f73328a7abe0e，after.rows[D1].evidence 新增对该条目的引用，定位第10至27行的照片图注、哈啰P点截图图注、20米提示和申诉。D1 保留核心候选身份，并在 unresolved 记录标线适用性、实际锁态、关单和费用结果待核。"
+    },
+    {
+      "index": 3,
+      "completed": true,
+      "evidence": "receipt.materials 中的 3a88dc2f62f73de6 使用万惠商场，并替换旧条目 1d5fa3474fa4eb7e。after.rows[D1、D3、D4].evidence 均改引新条目，定位统一为第4版第17至40行。新条目的 limits 保留首次标线用途、报障与最终落锁的精确先后及实际结算为未知。"
+    }
+  ],
+  "thread_id": "01a202b5-b2a6-7920-bdce-7815a25580a9",
+  "usage": {
+    "input_tokens": 37573,
+    "cached_input_tokens": 14208,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 479,
+    "reasoning_output_tokens": 0
+  },
+  "response_sha256": "0d677c4ee763a84d6c9f4e3f30c7e5d656bab25b3ef11afeb97c354a99cafc0d",
+  "model": "subscription_default"
+}

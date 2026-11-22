@@ -25,6 +25,22 @@ def binding(work, directory):
     framework = load(directory / "framework.json")
     conversion = load(directory / "conversion.json")
     receipt = load(directory / "material_receipt.json")
+    if receipt.get("parent_attempt"):
+        parent = directory.parent / receipt["parent_attempt"]
+        if (parent.parent.resolve() != directory.parent or parent == directory
+                or file_hash(parent / "material_receipt.json") != receipt["parent_receipt_sha256"]):
+            raise ValueError("Parent material receipt changed")
+        binding(work, parent)
+        earlier = load(parent / "material_receipt.json")
+        prior_rows = {row["material_id"]: row for row in earlier["materials"]}
+        active = {row["material_id"]: row for row in receipt["materials"]}
+        added, retired = set(receipt["added_material_ids"]), set(receipt["retired_material_ids"])
+        if (not retired <= prior_rows.keys() or added & prior_rows.keys()
+                or set(active) != (prior_rows.keys() - retired) | added
+                or any(active[key] != prior_rows[key] for key in prior_rows.keys() - retired)
+                or set(active) != {row["material_id"] for row in receipt["materials"]}
+                or len(active) != len(receipt["materials"])):
+            raise ValueError("Amended receipt does not preserve unmodified evidence")
     method = frozen["research_method"]
     reviewed = state["history"][-1]
     from staged_topic import evidence_hash
