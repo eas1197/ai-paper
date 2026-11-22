@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "run_id": "digital_mutual_aid_20261122",
+  "subrun": "chat_native_20261122",
+  "bridge": "main/v014 writing principles -> dev/v015 qualitative plan; advisory only, no formal stage execution",
+  "method": "secondary_interviews",
+  "core_question": "危机情境下，线上互助需求为什么会在转化为线下行动时受阻，协调者又如何通过信息核验、资源协调与责任安排，使互助重新变得可执行？",
+  "answer_strategy": "二手采访的双案例过程比较：区分报道中可观察的障碍、组织者回应和后续责任安排；三维理论机制只作探索性命题，拒绝无证据的效率/成功率因果结论。",
+  "sources": {
+    "L01": {
+      "kind": "literature",
+      "label": "Gary A. Kreps; Susan Lovegren Bosworth（1993），Disaster, Organizing, and Role Enactment: A Structural Approach，American Journal of Sociology",
+      "locator": "https://www.journals.uchicago.edu/doi/abs/10.1086/230270；publisher_abstract_read"
+    },
+    "L02": {
+      "kind": "literature",
+      "label": "杨涵庚; 王琢玉（2024），作为社会基础设施的社區微信群：上海疫情期間社區團購研究，传播与社会学刊",
+      "locator": "https://www.cschinese.com/issueArticle.asp?CA_ID=757&P_No=108；publisher_abstract_read"
+    },
+    "L03": {
+      "kind": "literature",
+      "label": "Ying Wang; Tingting Lu; Can Ouyang; Fulong Wu（2025），Mobilising the Entrepreneurial Self to Manage the Crisis: Community Group-Buying during the Shanghai Lockdown，Antipode",
+      "locator": "https://onlinelibrary.wiley.com/doi/10.1111/anti.13131；publisher_fulltext_targeted_sections_read"
+    },
+    "L04": {
+      "kind": "literature",
+      "label": "Fei Chen（2026），The art of survival: spontaneous organization and autonomous action among Shanghai residents during the COVID-19 lockdown，International Journal of Asian Studies",
+      "locator": "https://www.cambridge.org/core/journals/international-journal-of-asian-studies/article/art-of-survival-spontaneous-organization-and-autonomous-action-among-shanghai-residents-during-the-covid19-lockdown/B53C91BD43657B20A1DB8B1ABE562E69；publisher_fulltext_targeted_sections_read"
+    },
+    "L05": {
+      "kind": "literature",
+      "label": "Robert J. Sampson; Doug McAdam; Heather MacIndoe; Simón Weffer-Elizondo（2005），Civil Society Reconsidered: The Durable Nature and Community Structure of Collective Civic Action，American Journal of Sociology",
+      "locator": "https://www.journals.uchicago.edu/doi/10.1086/497351；publisher_abstract_read"
+    },
+    "L06": {
+      "kind": "literature",
+      "label": "Trenton Alma Williams; Dean A. Shepherd（2021），Bounding and Binding: Trajectories of Community-Organization Emergence Following a Major Disruption，Organization Science",
+      "locator": "https://pubsonline.informs.org/doi/10.1287/orsc.2020.1409；publisher_abstract_read"
+    },
+    "L07": {
+      "kind": "literature",
+      "label": "Trenton A. Williams; Dean A. Shepherd（2018），To the Rescue!? Brokering a Rapid, Scaled and Customized Compassionate Response to Suffering after Disaster，Journal of Management Studies",
+      "locator": "https://onlinelibrary.wiley.com/doi/abs/10.1111/joms.12291；publisher_abstract_read"
+    },
+    "L08": {
+      "kind": "literature",
+      "label": "Russell E. Browder; Stella Seyb; Angela Forgues; Howard E. Aldrich（2023），Pandemic Makers: How Citizen Groups Mobilized Resources to Meet Local Needs in a Global Health Crisis，Entrepreneurship Theory and Practice",
+      "locator": "https://journals.sagepub.com/doi/full/10.1177/10422587221120206；publisher_fulltext_targeted_sections_read"
+    },
+    "N11": {
+      "kind": "literature",
+      "label": "戴佳；季诚浩（2024），媒介化灾难治理中的持续参与者——基于郑州暴雨“救援文档”的研究，国际新闻界；正文待核实",
+      "locator": "https://cjjc.ruc.edu.cn/CN/Y2024/V46/I9/111；indexed_abstract_excerpt_only_source_open_timeout"
+    },
+    "M-Z1": {
+      "kind": "empirical",
+      "label": "央广网（2021-08-02），驰豫志愿者线上信息核验（郑州，2021）",
+      "locator": "https://news.cnr.cn/dj/20210802/t20210802_525550382.shtml；页面第45-85行（群建立、分工、核实、转交和回访）；第96-105行（救援队的信息接入）；descriptive_sequence_only"
+    },
+    "M-S1": {
+      "kind": "empirical",
+      "label": "21世纪经济报道（2022-05-16），莘庄西街A小区志愿团购（上海，2022）",
+      "locator": "https://m.21jingji.com/article/20220516/herald/1a926b1a1541078ae5f05f266aa3ef8f.html；页面第26-41行（建群与志愿身份）；第50-72行（首次失败、后续采购改造）；第78-91行（分工与疲劳）；descriptive_sequence_only"
+    },
+    "M-S2": {
+      "kind": "empirical",
+      "label": "澎湃号·媒体（2022-04-22），浦东一名团长的团购过程（上海，2022）",
+      "locator": "https://www.thepaper.cn/newsDetail_forward_17747424；页面约第29-40行（初建团购群）及团购物资过程；contrast_only"
+    },
+    "M-X1": {
+      "kind": "empirical",
+      "label": "澎湃新闻（2022-04-20），上海社区互助与未入群者问题（社会组织采访）",
+      "locator": "https://m.thepaper.cn/newsDetail_forward_17691044；页面第9-17行（社区网络和老年人数字接入问题）；context_only"
+    },
+    "T01": {
+      "kind": "theory",
+      "label": "灾难组织角色与组织化行动的理论参照（Kreps & Bosworth, 1993）",
+      "locator": "https://www.journals.uchicago.edu/doi/abs/10.1086/230270；publisher_abstract_read"
+    },
+    "T02": {
+      "kind": "theory",
+      "label": "社会基础设施及弱关系协调的理论参照（杨涵庚、王琢玉，2024）",
+      "locator": "https://www.cschinese.com/issueArticle.asp?CA_ID=757&P_No=108；publisher_abstract_read"
+    },
+    "T03": {
+      "kind": "theory",
+      "label": "危机资源中介与责任动员的理论参照（Williams & Shepherd, 2018）",
+      "locator": "https://onlinelibrary.wiley.com/doi/abs/10.1111/joms.12291；publisher_abstract_read"
+    }
+  },
+  "framework": {
+    "core_concept": "行动可执行性的协调性修复",
+    "definition": "当线上表达需求尚不足以触发可靠的线下行动时，组织者通过使需求可核、资源可调度、责任与结果可被承认，将信息或交易重新转化为可操作任务。此为本轮研究者拟议分析概念，并非已证实的新理论。",
+    "prior_explanation": "社会基础设施、社会资本、媒介化治理和合法性理论已经解释线上线下桥接、群体出现与资源动员。",
+    "gap": "既有研究已涉及核验和协调，增量不得宣称此前空白；仅将失败与修复作为对照单元，考察行动可执行的最小条件组合。",
+    "theory_choice": "以组织化行动的任务可执行性为核心，借助灾难组织角色、资源动员与合法性研究作为竞争和辅助解释。",
+    "deduction": "一项线上需求要成为有执行主体的实际任务，至少应在证据、资源和责任三个不同层面解除障碍；缺失任何一环可成为失败或重试的线索，但三者必要性尚需反例检验。",
+    "increment": "候选增量是把研究视角由互助网络是否形成，转向可见需求如何经核验、调配和责任承诺获得可执行性；不是现有资料已证成的原创贡献。",
+    "integration": "三个维度不是程序步骤清单：可信性、资源适配和责任承接是彼此制约的可执行性条件，可表现为交错、回返和补救。",
+    "dimensions": [
+      {
+        "id": "D1",
+        "title": "需求与承诺的可信性校准",
+        "deduction": "线上求助与团购请求必须被转为可核实且可供执行者信赖的对象；校准不仅核验求助者，也核验供货/承诺。"
+      },
+      {
+        "id": "D2",
+        "title": "异质资源的可调度性重组",
+        "deduction": "同样的信息在缺乏配送、起订量和救援权限时不可行动；协调者重组任务边界与资源匹配。"
+      },
+      {
+        "id": "D3",
+        "title": "责任承接与结果可确认化",
+        "deduction": "核验过并匹配资源还不足够；当出现失败、争议或状态不明，责任分工和反馈闭环决定是否再次协调。"
+      }
+    ]
+  },
+  "case": {
+    "background": "2021年郑州暴雨志愿者线上信息处理，以及2022年上海封控期间莘庄西街A小区团购协调。",
+    "selection": "选择不同危机和资源任务下均见线上汇总—协调障碍—组织者调整的报道过程，做概念多样性比较而非统计配对。",
+    "materials": "M-Z1与M-S1为主要新闻报道/受访者材料，M-S2仅边界对照、M-X1为背景报道；全部保留来源链接、具体位置和受访者陈述等级。",
+    "method": "公开二手采访和报道的有边界定性比较；不将记者文章当原始访谈，不把同一来源重复成独立旁证；三个维度围绕D1—D3作探索性编码。"
+  },
+  "chapters": [
+    {
+      "id": "problem",
+      "task": "从在线汇总与实际执行的间隙提出有观察单位的社会学问题",
+      "bridge": "两案例都存在障碍，但不同紧迫性和制度背景构成研究边界",
+      "sections": [
+        {
+          "title": "信息可见而行动未至",
+          "task": "交代郑州混杂求助与上海首次团购失败",
+          "argument": "需求汇总不是最终服务结果",
+          "evidence_use": "分别核对 M-Z1、M-S1 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "M-S1"
+          ],
+          "paragraphs": [
+            "以各自报道说明行动障碍，不写跨组织的混合叙述",
+            "提出在线信息到线下行动之间的解释性问题"
+          ]
+        },
+        {
+          "title": "研究对象与解释范围",
+          "task": "定义过程比较单元与研究问句",
+          "argument": "探索性过程比较，不识别成功率",
+          "evidence_use": "分别核对 L01、L02、M-Z1 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "L01",
+            "L02",
+            "M-Z1"
+          ],
+          "paragraphs": [
+            "说明仅比较已有报道中能辨认的组织协调安排"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "framework",
+      "task": "以已有灾难组织、社会基础设施和资源中介理论推演三个维度",
+      "bridge": "由文献的网络形成解释转向执行条件的障碍与调整",
+      "sections": [
+        {
+          "title": "已有研究解释了什么",
+          "task": "比较组织化、微信群基础设施和资源中介解释",
+          "argument": "不能将线上中介或社会资本作为新发现",
+          "evidence_use": "分别核对 L01、L02、L03、L05 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L05"
+          ],
+          "paragraphs": [
+            "评价已有研究解释的观察单位和对象",
+            "说明N11为直接近邻且全文未核，原创性保留待审"
+          ]
+        },
+        {
+          "title": "执行条件的三个面向",
+          "task": "推演可信性、资源调度与责任承接",
+          "argument": "三个维度互相制约而非纯时间顺序",
+          "evidence_use": "分别核对 T01、T02、T03、L06、L07、N11 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "T01",
+            "T02",
+            "T03",
+            "L06",
+            "L07",
+            "N11"
+          ],
+          "paragraphs": [
+            "给出拟议概念的定义及其与成效的区别",
+            "提出可被反例限制的工作命题"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "task": "说明对比对象、来源类型和不能作出的推断",
+      "bridge": "两案的异质性可以展示协调任务，但不能识别共通因果效应",
+      "sections": [
+        {
+          "title": "两个主要行动序列",
+          "task": "分别陈述组织身份与危机背景",
+          "argument": "采访材料可以复述过程，不能合并不同救援团队",
+          "evidence_use": "分别核对 M-Z1、M-S1 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "M-S1"
+          ],
+          "paragraphs": [
+            "区分郑州志愿者信息核验与上海42户小区团购"
+          ]
+        },
+        {
+          "title": "材料编码与研究限度",
+          "task": "区分受访者陈述、记者转述和研究者解释",
+          "argument": "没有平台后台、完整订单和失败者资料",
+          "evidence_use": "分别核对 M-Z1、M-S1、M-S2、M-X1 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "M-S1",
+            "M-S2",
+            "M-X1"
+          ],
+          "paragraphs": [
+            "介绍事件ID、证据来源与交叉核验尚缺的问题"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "task": "分析需求和交付承诺成为可信任务的条件",
+      "bridge": "由可信性继续追问即使信息可信也可能资源不足",
+      "sections": [
+        {
+          "title": "核验对象如何变化",
+          "task": "对照郑州求助时效核实和上海货物承诺核查",
+          "argument": "核验对象从需求真伪到交付承诺发生转移",
+          "evidence_use": "分别核对 M-Z1、M-S1、T01、L02 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "M-S1",
+            "T01",
+            "L02"
+          ],
+          "paragraphs": [
+            "写清采访所说20分钟核实规则非已证明的执行事实",
+            "说明商品验货与求助核验风险不能等量"
+          ]
+        },
+        {
+          "title": "可信性与替代解释",
+          "task": "讨论正式准入和对媒体自我陈述的影响",
+          "argument": "核验是否改善结果仍待观察",
+          "evidence_use": "分别核对 L03、L04、M-S1 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "L03",
+            "L04",
+            "M-S1"
+          ],
+          "paragraphs": [
+            "区分已报道调整与实际效果"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "task": "分析可执行性的资源约束与协调重组",
+      "bridge": "说明完成资源匹配并不等于有人承担后续结果",
+      "sections": [
+        {
+          "title": "分流与对接",
+          "task": "郑州由信息分类转到救援队和官方渠道",
+          "argument": "不同求助需适配不同执行能力",
+          "evidence_use": "分别核对 M-Z1、T01、L06 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "T01",
+            "L06"
+          ],
+          "paragraphs": [
+            "不把转交信息写为获救事件"
+          ]
+        },
+        {
+          "title": "拼单与配送",
+          "task": "上海起订量、供应商和配送构成互助的实际条件",
+          "argument": "居民动员不足以独立解决市场和物流约束",
+          "evidence_use": "分别核对 M-S1、L03、L07 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-S1",
+            "L03",
+            "L07"
+          ],
+          "paragraphs": [
+            "区分供应恢复与组织者调整的竞争解释"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "task": "分析协调失败后的责任分配、反馈与信任维护",
+      "bridge": "综合讨论三个条件相互制约，并揭示数字渠道排斥问题",
+      "sections": [
+        {
+          "title": "结果回访与状态更新",
+          "task": "郑州的任务不仅是发布消息，还包括跟进工作规则",
+          "argument": "消息状态变更由采访记录，救援结果未逐条核实",
+          "evidence_use": "分别核对 M-Z1、T01、L08 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "T01",
+            "L08"
+          ],
+          "paragraphs": [
+            "说明确认任务和确认结果是不同对象"
+          ]
+        },
+        {
+          "title": "价格公示与组织成本",
+          "task": "上海亏损、纠纷、留证与公示增加责任可见性",
+          "argument": "责任与信任属于参与者关系，而非善意自动延伸",
+          "evidence_use": "分别核对 M-S1、L03、L04 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-S1",
+            "L03",
+            "L04"
+          ],
+          "paragraphs": [
+            "讨论责任落实的成本，保留非参与者和分配问题"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "task": "回答报道范围内能回答的问题，提出竞争解释与严选材料的后续检验",
+      "bridge": "将待证命题留在审查前状态，避免把探索性单稿列为正式论文",
+      "sections": [
+        {
+          "title": "三种协调条件的联动",
+          "task": "整合可信性、资源可调度性及责任承接",
+          "argument": "本轮比较显示协调任务安排，而未证成必要因果条件",
+          "evidence_use": "分别核对 M-Z1、M-S1、L01、L07 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "M-Z1",
+            "M-S1",
+            "L01",
+            "L07"
+          ],
+          "paragraphs": [
+            "以两案实际观察范围回答核心问句"
+          ]
+        },
+        {
+          "title": "竞争解释和进一步材料",
+          "task": "列明外部资源、原有关系、行政背书与未入群者问题",
+          "argument": "所需是同单位的连续记录和外部核实",
+          "evidence_use": "分别核对 L03、L04、M-X1、N11 的陈述层级与观察边界，未经独立核实的行为仅按报道处理",
+          "source_ids": [
+            "L03",
+            "L04",
+            "M-X1",
+            "N11"
+          ],
+          "paragraphs": [
+            "从直接竞争文献、事件样本及结果记录三个方面说明下一步检验要求"
+          ]
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "deliverable": "plan",
+    "full_draft_entry": "not_formally_authorized",
+    "draft_samples_permitted": "one experimental internal A specimen",
+    "max_words": 2500
+  },
+  "gate_status": {
+    "original_checkpoint": "explanation_exchange",
+    "independent_review_verified": false,
+    "strict_literature_complete": false,
+    "empirical_mechanism_verified": false,
+    "formally_frozen": false,
+    "independent_writing_approval": false
+  }
+}
