@@ -13,3 +13,6 @@
 Chat 搜索成果按现有研究资料字段和原 run_id 保存到 handoff_runs 与 manifest，逐条声明 `acquisition_mode=chat_native_web`、实际来源链接及检索/核验日期。Chat 没有产生的 Codex `web_search` 事件、`thread_id`、CLI 原始日志或 `invocation_id` 必须留空或标不可用，不能伪造、冒名或直接登记为 Codex 校验通过。Chat 原生检索与 CLI 调用动作不作虚假的一比一折算；实际搜索动作和预算口径一并记录，无法验证对应额度时保守停止。旧接收器若只认 CLI 凭证，保持该技术关卡待衔接，不为过关重新编造结果。
 
 当前 `digital_mutual_aid_20261122` 的现实观察与事件比较已留存，状态仍为 `explanation_exchange`。先保留已有材料；若独立反诘会话在 Chat 不可用，记录 `tool_limitation` 并等待真实独立回执。不得将同一对话内的研究者自审作为 `critical_receipt` 或独立学术通过。后续由 Codex 依据同一原始检查点及归档记录接续，不重复有效检索。
+
+## 数字互助 Chat 自主研究 2026-11-22 交接
+实际运行成果保存在 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/`，按 `研究全过程日志.md` → `文献检索矩阵.json` → `经验材料与分析矩阵.json` → `论文写作方案.md` → `Chat实验状态.json` 的顺序读取。总索引已更新SHA-256。当前为单模型真实网页检索加角色反诘的**探索性平行研究产物**，不是调用过原控制器各学术门禁的正式验收。源文件 `reality.json`、`event_comparison.json` 和 `staged_topic.json` 均未覆盖；正式恢复点仍是 `explanation_exchange`。文献数量10的原始阅读计数与期刊严格资格8分开；直接竞争郑州论文尚有索引阅读与全文查证差距。Codex接续须提供真正独立反诘证据、补足文献严选和材料交叉验证，不能把本次角色扮演当作 `critical_receipt` 或正式 `invocation_id`。
