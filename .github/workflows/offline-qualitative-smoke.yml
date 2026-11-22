@@ -13,7 +13,7 @@ permissions:
 jobs:
   offline-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     env:
       PYTHONDONTWRITEBYTECODE: "1"
     steps:
@@ -25,17 +25,32 @@ jobs:
         run: python -B -m unittest discover -s "00_项目控制/v007_第7版/tests" -p "test_run_mode.py" -v
       - name: Verify qualitative writing-plan structure
         run: python -B -m unittest discover -s "07_三稿独立写作/v015_第15版/tests" -p "test_writing_plan.py" -v
-      - name: Verify review and revision routing
-        run: python -B -m unittest discover -s "00_项目控制/v009_第9版/tests" -p "test_revision_routes.py" -v
-      - name: Run existing experimental entry point offline
+      - name: Run experiment initialization and writing plan using test-only fixture
         run: |
           python -B "00_项目控制/v007_第7版/tools/run_mode.py" --mode dev --run-id ci_smoke_20261122 --theme "共享单车停放治理"
           python - <<'PY'
+          import importlib.util, json
+          from pathlib import Path
+          p=Path("07_三稿独立写作/v015_第15版/tests/test_writing_plan.py")
+          spec=importlib.util.spec_from_file_location("test_writing_plan",p)
+          module=importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          Path("/tmp/ci_writing_fixture.json").write_text(json.dumps(module.packet(2),ensure_ascii=False),encoding="utf-8")
+          PY
+          python -B "00_项目控制/v007_第7版/tools/run_mode.py" --mode dev --run-id ci_smoke_20261122 --writing-plan /tmp/ci_writing_fixture.json
+          python - <<'PY'
           import json
           from pathlib import Path
-          p=Path("00_项目控制/v007_第7版/runs_dev/ci_smoke_20261122/run_manifest.json")
-          m=json.loads(p.read_text(encoding="utf-8"))
+          run=Path("00_项目控制/v007_第7版/runs_dev/ci_smoke_20261122")
+          m=json.loads((run/"run_manifest.json").read_text(encoding="utf-8"))
+          p=run/"writing/论文写作方案.md"
+          review=json.loads((run/"writing/writing_plan_review_request.json").read_text(encoding="utf-8"))
           assert m["run_mode"]=="dev" and m["formal_eligible"] is False
-          assert m["writing_policy"]["deliverable"]=="plan"
-          print("OFFLINE EXPERIMENT INITIALIZATION PASSED:",m["run_id"])
+          assert p.is_file() and "论文写作方案" in p.read_text(encoding="utf-8")
+          assert review["review_status"]=="pending" and review["formal_eligible"] is False
+          print("OFFLINE ENTRY POINT AND WRITING PLAN PASSED (TEST FIXTURE):",m["run_id"],"size",p.stat().st_size)
           PY
+      - name: Install repository acquisition dependencies for import tests only
+        run: python -m pip install -r "11_文献采集适配/v003_第3版/requirements.txt"
+      - name: Verify review and revision routing
+        run: python -B -m unittest discover -s "00_项目控制/v009_第9版/tests" -p "test_revision_routes.py" -v
