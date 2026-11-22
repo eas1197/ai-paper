@@ -33,6 +33,7 @@ jobs:
           assert not j["academic_approval"] and not j["formal_eligible"]
           assert j["latest_review_decision"] == "revise"
           assert "snapshot_hash_comparison" in j
+          assert (root/"候选矩阵_仅版本元数据返修_未经复审.json").is_file()
           assert j["missing_runtime_files"]
           assert (root/"候选论文写作方案_未经学术审查.md").stat().st_size > 2000
           print("PROVISIONAL PLAN RENDERED, ACADEMIC GATE STILL BLOCKED")
@@ -41,7 +42,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bike-offline-recovery-hash-audit-20261122
+          name: bike-offline-recovery-metadata-proposal-20261122
           path: ${{ runner.temp }}/bike_recovery/
           if-no-files-found: warn
           retention-days: 20
