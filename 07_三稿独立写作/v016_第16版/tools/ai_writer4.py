@@ -71,14 +71,16 @@ def language_resources():
         locks[label] = {"path": relative(path), "sha256": hash_file(path)}
     rules = load(ROOT / profile["paragraph_style"]["rules"]["path"])
     units = load(ROOT / profile["paragraph_style"]["mapping"]["path"])["units"]
+    argument_titles = dict(re.findall(r"^## (L\\d\\d) (.+)$", LANGUAGE_V3.read_text(encoding="utf-8-sig"), re.M))
     by_id = {item["id"]: item for item in rules}
     if len(by_id) != 15 or set(profile["style_ids"]) != set(by_id):
         raise ValueError("Language pattern IDs no longer match v005 resource")
     if any(not x.get("style_ids") or any(s not in by_id for s in x["style_ids"])
            or any(unit not in units for unit in x["v005_units"])
+           or any(arg not in argument_titles for arg in x["argument_audit"])
            for x in rolemap["chapters"].values()):
         raise ValueError("Invalid qualitative map or v005 unit reference")
-    return profile, snapshot, rolemap, by_id, locks
+    return profile, snapshot, rolemap, by_id, locks, argument_titles
 
 
 def validate_packet(packet):
@@ -111,7 +113,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
     packet_path, workspace = Path(packet_path), Path(workspace)
     packet = load(packet_path)
     rendered = validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks = language_resources()
+    profile, snapshot, rolemap, rules, locks, argument_titles = language_resources()
     if mode != "exploratory":
         formal_gates(packet, snapshot)
     if workspace.exists():
@@ -137,7 +139,10 @@ def prepare(packet_path, workspace, mode="exploratory"):
                     {k: rules[i][k] for k in ("id", "name", "how_to_write", "condition", "anti_pattern")}
                     for i in selected
                 ],
-                "v003_argument_audit": rolemap["argument_audit"],
+                "v003_argument_audit": [
+                    {"id": arg, "purpose": argument_titles[arg]}
+                    for arg in rulemap["argument_audit"]
+                ],
                 "instruction": (
                     "Write Chinese sociological prose answering THIS section task, not a generic overview. "
                     "Use only the cited, located sources. Distinguish interviewee claims, reported events, "
@@ -173,7 +178,7 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
     record = load(workspace / "writer_manifest.json")
     packet = load(packet_path)
     validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks = language_resources()
+    profile, snapshot, rolemap, rules, locks, argument_titles = language_resources()
     problems = []
     if record["packet_sha256"] != hash_file(packet_path):
         problems.append("Writing packet changed since prepare")
