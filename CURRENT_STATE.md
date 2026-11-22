@@ -14,3 +14,6 @@
 | origin/research-state/topic-20261122 | b2a860fff6ccfbd13041f1d7f7f862a02265b961 | 231f9eb5ca01 | checkpoint: bike_fresh_20261122 next-stage source records and hashes |
 
 候选依赖为 v007 实验总控、v008 选题任务、v009 分阶段控制、04/v012 原生文献、11/v007 采集、06/v005 定性材料与矩阵、07/v015 写作方案。正式模块逐项查看 v005 注册表。共享单车按 plan_review_0 收尾。确认符合冻结设计的核心事件为零，保留未通过方案及探索矩阵。数字互助实验已落盘现实与双事件比较，停在独立反诘 CLI 创建失败。云端单模型稿、云端持久化、离线 smoke 和真实脚本试验分别保留在各自分支，未合并为正式能力。
+
+## 2026-11-22 Chat 研究模式决定
+本对话执行采用 ChatGPT 原生网页搜索，不再模拟本地 Codex CLI 检索，也不新增爬虫或为适配 Chat 改写既有学术阶段。规则见 HANDOFF 与 RUNBOOK。当前 `digital_mutual_aid_20261122` 的 `reality.json`、`event_comparison.json` 均保留，`staged_topic.json` 仍为 `explanation_exchange`；本次仅落实执行约定，尚未新增独立反诘凭证、未重跑搜索、未冻结新研究问题，现有学术门槛与预算未改变。Chat 后续新增实际搜索结果须以真实网页来源归档，不得以 CLI 事件冒充。
