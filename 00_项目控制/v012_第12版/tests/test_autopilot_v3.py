@@ -1,3 +1,5 @@
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 import importlib.util
 import json
@@ -178,6 +180,26 @@ class StrictWakeTests(TestCase):
                              "v5_native/critical_exchange/attempt_001/critical_receipt.json")
             self.assertTrue((critic_folder/"events.jsonl").is_file())
             self.assertTrue((critic_folder/"response.json").is_file())
+
+
+    def test_main_refuses_to_reinitialize_saved_handoff_checkpoint(self):
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            runs=root/"runs_dev"
+            saved=root/"handoff_runs"/"sample"
+            saved.mkdir(parents=True)
+            m.heritage.write(saved/"staged_topic.json",{"run_id":"sample","status":"explanation_exchange"})
+            output=StringIO()
+            with patch.object(m.heritage,"ROOT",root), \
+                 patch.object(m.heritage,"RUNS",runs), \
+                 patch.object(m.heritage,"doctor",return_value={}), \
+                 patch.object(m.heritage,"original_call") as original:
+                with redirect_stdout(output):
+                    result=m.main(["--run-id","sample"])
+            self.assertEqual(result,2)
+            self.assertFalse((runs/"sample").exists())
+            original.assert_not_called()
+            self.assertIn("Refusing to initialize a fresh run",output.getvalue())
 
 
 if __name__=="__main__":main()
