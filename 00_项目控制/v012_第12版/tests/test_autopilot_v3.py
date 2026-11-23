@@ -118,7 +118,11 @@ class StrictWakeTests(TestCase):
             prepared={"expectation":"E","observation":"O",
                       "initial_explanation":"I","candidate_question":"Q","search_focus":"S"}
             research_task=json.dumps(prepared,ensure_ascii=False)+(
-                "\nRecord original explanation and what evidence would distinguish it.")
+                "\nRecord original explanation and what evidence would distinguish it. "
+                "Only event_comparison retained_facts with source_verification_status=verified "
+                "may be treated as verified empirical support. Treat uncertain_facts, pending_sources, "
+                "and pending source_verification_status as unresolved gaps; do not cite or promote them "
+                "as established facts.")
             researcher={"expectation":"E","observation":"O",
                         "initial_explanation":"I","candidate_question":"Q","search_focus":"S"}
             research_folder=work/"v5_native"/"research_exchange"/"attempt_001"
