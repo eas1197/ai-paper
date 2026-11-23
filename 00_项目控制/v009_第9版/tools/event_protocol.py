@@ -56,6 +56,12 @@ def validate_same_attempt(response_path, events_path):
     return True
 
 
+def resolve_events_path(response_path, events_path=None):
+    if events_path is not None:
+        return Path(events_path).resolve()
+    return Path(response_path).resolve().parent / "events.jsonl"
+
+
 def opened_event(url, trace, canonicalize):
     canonical = canonicalize(url)
     if not canonical:
@@ -261,12 +267,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dev-run", type=Path, required=True)
     parser.add_argument("--input", type=Path, required=True)
-    parser.add_argument("--events-jsonl", type=Path, required=True)
+    parser.add_argument("--events-jsonl", type=Path, default=None)
     args = parser.parse_args()
     work = args.dev_run.resolve()
     manifest = verified_run(work)
     input_path = args.input.resolve()
-    events_path = args.events_jsonl.resolve()
+    events_path = resolve_events_path(input_path, args.events_jsonl)
     validate_same_attempt(input_path, events_path)
     input_rel = relative_receipt_path(input_path, work)
     events_rel = relative_receipt_path(events_path, work, require_file=False)
