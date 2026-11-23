@@ -191,8 +191,9 @@ class StrictWakeTests(TestCase):
             folder.mkdir(parents=True)
             (folder/"response.json").write_text('{"sources":{"A":"https://example.org/source"}}',
                                                 encoding="utf-8")
-            (folder/"events.jsonl").write_text('{"type":"thread.started","thread_id":"events-1"}\\n',
-                                               encoding="utf-8")
+            (folder/"events.jsonl").write_text(
+                '{"type":"thread.started","thread_id":"events-1"}' + chr(10),
+                encoding="utf-8")
 
             class FakeEngine:
                 def __init__(self):
@@ -210,13 +211,15 @@ class StrictWakeTests(TestCase):
                 captured["cmd"]=cmd
                 raise RuntimeError("stop after event dispatch")
 
-            with patch.object(m.heritage,"RUNS",root), \\
-                 patch.object(m.heritage,"doctor",return_value={}), \\
-                 patch.object(m.heritage,"state_of",return_value={"status":"explanation_exchange"}), \\
-                 patch.object(m.heritage,"valid_https",return_value=True), \\
-                 patch.object(m.heritage,"original_call",side_effect=stop_after_event_dispatch):
-                with self.assertRaisesRegex(RuntimeError,"stop after event dispatch"):
-                    m.step("sample",executor=engine)
+            with patch.object(m.heritage,"RUNS",root):
+                with patch.object(m.heritage,"doctor",return_value={}):
+                    with patch.object(m.heritage,"state_of",
+                                      return_value={"status":"explanation_exchange"}):
+                        with patch.object(m.heritage,"valid_https",return_value=True):
+                            with patch.object(m.heritage,"original_call",
+                                              side_effect=stop_after_event_dispatch):
+                                with self.assertRaisesRegex(RuntimeError,"stop after event dispatch"):
+                                    m.step("sample",executor=engine)
 
             self.assertEqual(len(engine.calls),1)
             self.assertEqual(engine.calls[0][0],"events")
