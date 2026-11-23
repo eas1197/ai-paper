@@ -80,6 +80,41 @@ class StrictTests(TestCase):
         with self.assertRaises(ValueError):
             m.audit_chat(dict(task,source_mode="codex"),{"papers":[],"unverified":[],"search_notes":[]})
 
+    def test_v012_adapters_route_to_original_v009_v005_v016_modules(self):
+        topic=m.original_command("prepare","sample")
+        self.assertEqual(Path(topic[2]),m.V3_TOPIC)
+
+        materials=m.original_material_command("sample",conversion=Path("conversion.json"))
+        self.assertEqual(Path(materials[2]),m.MATERIAL)
+
+        writing=m.original_writing_command("sample")
+        self.assertEqual(Path(writing[2]),m.REVISION)
+
+        writer4=m.original_writer4_command(
+            "prepare",packet=Path("plan_input.json"),
+            workspace=Path("writer4_workspace"),mode="exploratory")
+        self.assertEqual(Path(writer4[2]),m.V16)
+        self.assertEqual(writer4[3],"prepare")
+        self.assertIn("--packet",writer4)
+        self.assertIn("--workspace",writer4)
+        self.assertIn("--mode",writer4)
+
+        resume_source=Path(m.REVISION).read_text(encoding="utf-8-sig")
+        self.assertIn("from material_adequacy import writing_material_status",resume_source)
+        self.assertIn("from repair_materials import",resume_source)
+        self.assertIn("from writing_plan import produce",resume_source)
+        writer_source=Path(m.V16).read_text(encoding="utf-8-sig")
+        self.assertIn("from writing_plan import render",writer_source)
+
+    def test_v016_adapter_rejects_incomplete_dispatch_arguments(self):
+        with self.assertRaisesRegex(ValueError,"workspace"):
+            m.original_writer4_command("prepare",packet=Path("plan.json"))
+        with self.assertRaisesRegex(ValueError,"manuscript and claims"):
+            m.original_writer4_command("submit",packet=Path("plan.json"),
+                                       workspace=Path("writer4"))
+        with self.assertRaisesRegex(ValueError,"Unknown original v016"):
+            m.original_writer4_command("unknown",packet=Path("plan.json"))
+
     def test_same_fixture_chat_native_run_is_separate_and_nonformal(self):
         base=m.ROOT/"handoff_runs"/"digital_mutual_aid_20261122"
         parent=m.read(base/"staged_topic.json")
