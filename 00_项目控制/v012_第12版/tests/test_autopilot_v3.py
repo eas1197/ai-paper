@@ -182,6 +182,50 @@ class StrictWakeTests(TestCase):
             self.assertTrue((critic_folder/"response.json").is_file())
 
 
+    def test_event_dispatch_requires_native_search_and_passes_raw_event_log(self):
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            work=root/"sample"
+            work.mkdir()
+            folder=work/"v5_native"/"events"/"attempt_001"
+            folder.mkdir(parents=True)
+            (folder/"response.json").write_text('{"sources":{"A":"https://example.org/source"}}',
+                                                encoding="utf-8")
+            (folder/"events.jsonl").write_text('{"type":"thread.started","thread_id":"events-1"}\\n',
+                                               encoding="utf-8")
+
+            class FakeEngine:
+                def __init__(self):
+                    self.calls=[]
+                def call(self,work,stage,task,**kwargs):
+                    self.calls.append((stage,kwargs))
+                    packet={"sources":{"A":"https://example.org/source"}}
+                    trace=[{"id":"item_1","type":"web_search","results":[
+                        {"url":"https://example.org/source"}]}]
+                    return packet,folder,"events-1",trace,lambda url,rows:"item_1"
+
+            engine=FakeEngine()
+            captured={}
+            def stop_after_event_dispatch(cmd):
+                captured["cmd"]=cmd
+                raise RuntimeError("stop after event dispatch")
+
+            with patch.object(m.heritage,"RUNS",root), \\
+                 patch.object(m.heritage,"doctor",return_value={}), \\
+                 patch.object(m.heritage,"state_of",return_value={"status":"explanation_exchange"}), \\
+                 patch.object(m.heritage,"valid_https",return_value=True), \\
+                 patch.object(m.heritage,"original_call",side_effect=stop_after_event_dispatch):
+                with self.assertRaisesRegex(RuntimeError,"stop after event dispatch"):
+                    m.step("sample",executor=engine)
+
+            self.assertEqual(len(engine.calls),1)
+            self.assertEqual(engine.calls[0][0],"events")
+            self.assertTrue(engine.calls[0][1]["must_search"])
+            self.assertIn("--events-jsonl",captured["cmd"])
+            self.assertIn(str(folder/"events.jsonl"),captured["cmd"])
+            self.assertIn(str(folder/"response.json"),captured["cmd"])
+
+
     def test_main_refuses_to_reinitialize_saved_handoff_checkpoint(self):
         with TemporaryDirectory() as directory:
             root=Path(directory)
