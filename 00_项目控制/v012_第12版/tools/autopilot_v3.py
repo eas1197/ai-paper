@@ -362,6 +362,11 @@ def main(argv=None):
         heritage.doctor()
         path=heritage.RUNS/heritage.run_id_guard(args.run_id)
         if not path.exists():
+            saved_checkpoint=heritage.ROOT/"handoff_runs"/args.run_id/"staged_topic.json"
+            if saved_checkpoint.is_file():
+                raise RuntimeError(
+                    "Saved handoff checkpoint exists but the original v3 run directory is missing; "
+                    "restore the exact original run before resuming. Refusing to initialize a fresh run.")
             heritage.original_call(heritage.original_command("init",args.run_id,theme=args.theme))
         engine=Executor(timeout=args.timeout,model=args.model)
         result=None
