@@ -6,7 +6,8 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 from event_protocol import (
-    build_source_receipts, compare_events, validate_exchange, validate_same_attempt,
+    build_source_receipts, compare_events, resolve_events_path, validate_exchange,
+    validate_same_attempt,
 )
 
 
@@ -284,6 +285,41 @@ class EventProtocolTest(unittest.TestCase):
             events.write_text("{}", encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "same native attempt"):
                 validate_same_attempt(response, events)
+
+    def test_legacy_cli_infers_sibling_events_path(self):
+        with tempfile.TemporaryDirectory() as folder:
+            attempt = Path(folder) / "attempt_001"
+            attempt.mkdir()
+            response = attempt / "response.json"
+            response.write_text("{}", encoding="utf-8")
+            inferred = resolve_events_path(response)
+            self.assertEqual(inferred, attempt / "events.jsonl")
+            self.assertTrue(validate_same_attempt(response, inferred))
+
+    def test_explicit_events_path_is_preserved(self):
+        with tempfile.TemporaryDirectory() as folder:
+            attempt = Path(folder) / "attempt_001"
+            attempt.mkdir()
+            response = attempt / "response.json"
+            events = attempt / "events.jsonl"
+            response.write_text("{}", encoding="utf-8")
+            events.write_text("{}", encoding="utf-8")
+            self.assertEqual(resolve_events_path(response, events), events.resolve())
+
+    def test_missing_legacy_sibling_events_path_is_pending(self):
+        with tempfile.TemporaryDirectory() as folder:
+            attempt = Path(folder) / "attempt_001"
+            attempt.mkdir()
+            response = attempt / "response.json"
+            response.write_text("{}", encoding="utf-8")
+            inferred = resolve_events_path(response)
+            receipts = build_source_receipts(
+                {"sources": {"A": URL}}, [], work=Path(folder),
+                events_path=inferred, response_path=response, thread_id=None,
+                url_event_fn=lambda url, rows: None, canonicalize=lambda url: url,
+            )
+            self.assertEqual(receipts["A"]["verification_status"], "pending")
+            self.assertEqual(receipts["A"]["verification_reason"], "missing_events_file")
 
     def test_receipt_paths_outside_current_run_are_rejected(self):
         with tempfile.TemporaryDirectory() as folder, tempfile.TemporaryDirectory() as outside:
