@@ -8,18 +8,18 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "原始中文题名"
+            "description": "原始发表语言的论文题名；中文或英文均保留原文，不翻译后替代"
           },
           "authors": {
             "type": "array",
             "items": {
               "type": "string",
-              "description": "单个作者姓名"
+              "description": "按原刊显示保留原始拼写的单个作者姓名"
             }
           },
           "journal": {
             "type": "string",
-            "description": "七刊之一的准确刊名"
+            "description": "九刊之一的准确刊名，必须与本轮九刊白名单完全一致"
           },
           "year": {
             "type": "integer"
@@ -42,11 +42,11 @@
           },
           "abstract_excerpt": {
             "type": "string",
-            "description": "原摘要中能定位的中文短语，8至45个汉字"
+            "description": "原摘要中的原文短摘并保留原始语言；中文约8至45字，英文约5至12词，整体长度8至90字符"
           },
           "abstract_summary": {
             "type": "string",
-            "description": "根据原摘要撰写的中文改述，80至160字"
+            "description": "根据原摘要撰写的中文改述，80至160字，概括方法、对象和关键结果"
           },
           "relevance": {
             "type": "string",
@@ -84,7 +84,7 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "候选题名"
+            "description": "候选论文原始语言题名"
           },
           "reason": {
             "type": "string",
@@ -102,7 +102,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "description": "主要查询、结果驱动的改写与局限"
+        "description": "记录实际使用的中文或英文检索词、结果驱动的改写、检索来源和局限"
       }
     }
   },
