@@ -79,7 +79,8 @@ class StrictWakeTests(TestCase):
 
     def test_saved_critical_input_must_match_frozen_run(self):
         with TemporaryDirectory() as directory:
-            work=Path(directory)
+            work=Path(directory)/"sample"
+            work.mkdir()
             reality={"phenomenon":"saved reality"}
             comparison={"run_id":"sample","reality_sha256":"reality-hash","event_count":2}
             m.heritage.write(work/"reality.json",reality)
@@ -149,6 +150,7 @@ class StrictWakeTests(TestCase):
 
             engine=FakeEngine()
             with patch.object(m.heritage,"RUNS",root), \
+                 patch.object(m.heritage,"ROOT",root), \
                  patch.object(m.heritage,"doctor",return_value={}), \
                  patch.object(m.heritage,"state_of",
                               side_effect=[{"status":"explanation_exchange"},
