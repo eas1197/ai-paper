@@ -152,3 +152,28 @@ class NativeContract(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "relevance_unconfirmed"):
             observation(record(relevance_reason=""), TRACE, PROFILE["journals"], "batch_001", 1)
 
+    def test_module_docs_and_manifest_identify_disabled_nine_journal_candidate(self):
+        docs = (VERSION / "模块说明.md").read_text(encoding="utf-8-sig")
+        manifest = json.loads((VERSION / "manifest.json").read_text(encoding="utf-8-sig"))
+        self.assertIn("九刊", docs)
+        self.assertIn("paper_codex_native", docs)
+        self.assertIn("target=0", docs)
+        self.assertIn("max_batches=0", docs)
+        self.assertIn("status=disabled", docs)
+        self.assertIn("不构成生产流程启用", docs)
+        self.assertEqual(manifest["status"], "candidate")
+        self.assertEqual(manifest["scope"], "native_search_abstract_only")
+        self.assertEqual(manifest["profile"], PROFILE["profile"])
+
+    def test_version_index_separates_registered_v008_from_v012_candidate(self):
+        index = (VERSION.parent / "版本索引.md").read_text(encoding="utf-8-sig")
+        self.assertIn("当前生产注册路径：", index)
+        self.assertIn("v008_第8版", index)
+        self.assertIn("business_status=planned", index)
+        self.assertIn("v012_第12版", index)
+        self.assertIn("九刊 Codex 原生摘要候选", index)
+        self.assertIn("target=0/max_batches=0", index)
+        self.assertIn("不构成生产启用或正式文献准入", index)
+        self.assertNotIn("七刊 Codex 原生检索候选", index)
+        self.assertIn("六刊范围", index)
+
