@@ -45,6 +45,20 @@ def relative_receipt_path(path, work):
     return resolved.relative_to(root).as_posix()
 
 
+def opened_event(url, trace, canonicalize):
+    canonical = canonicalize(url)
+    if not canonical:
+        return None
+    for event in reversed(trace):
+        action = event.get("action") if isinstance(event.get("action"), dict) else {}
+        if (event.get("type") == "web_search"
+                and action.get("type") in ("open_page", "find_in_page")
+                and canonicalize(action.get("url")) == canonical
+                and bool(event.get("results"))):
+            return event
+    return None
+
+
 def build_source_receipts(packet, trace, *, work, events_path, response_path,
                           thread_id, url_event_fn, canonicalize):
     """Bind each declared source to an event in this exact native CLI attempt."""
@@ -63,23 +77,23 @@ def build_source_receipts(packet, trace, *, work, events_path, response_path,
         if not isinstance(source_id, str) or not source_id.strip() or not valid_https(url):
             raise ValueError("Each source needs a non-empty ID and valid HTTPS URL")
         canonical = canonicalize(url)
-        event_id = url_event_fn(url, trace)
-        if not canonical or not event_id:
+        search_event_id = url_event_fn(url, trace)
+        if not canonical or not search_event_id:
             raise ValueError("Source URL is not present in this native search attempt")
-        event = next((row for row in trace if row.get("id") == event_id), None)
-        if not event or event.get("type") != "web_search":
-            raise ValueError("Source event ID is not a native web_search event")
-        action = event.get("action") if isinstance(event.get("action"), dict) else {}
+        opened = opened_event(url, trace, canonicalize)
+        if not opened:
+            raise ValueError("Source URL has no matching native page-open event")
+        event_id = opened["id"]
+        action = opened.get("action") if isinstance(opened.get("action"), dict) else {}
         action_type = action.get("type")
-        opened = (action_type in ("open_page", "find_in_page")
-                  and canonicalize(action.get("url")) == canonical)
         receipts[source_id] = {
             "source_id": source_id,
             "url": canonical,
             "event_id": event_id,
-            "event_type": event["type"],
+            "open_event_id": event_id,
+            "event_type": opened["type"],
             "action_type": action_type,
-            "opened": bool(opened),
+            "opened": True,
             "thread_id": thread_id,
             "events_path": events_rel,
             "events_sha256": events_sha,
@@ -105,8 +119,9 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
         if not isinstance(source_id, str) or not source_id.strip() or not valid_https(url):
             raise ValueError("Use a traceable HTTPS source with a non-empty source ID")
         receipt = source_receipts.get(source_id)
-        required = ("source_id", "url", "event_id", "event_type", "thread_id",
-                    "events_path", "events_sha256", "response_path", "response_sha256")
+        required = ("source_id", "url", "event_id", "open_event_id", "event_type",
+                    "action_type", "thread_id", "events_path", "events_sha256",
+                    "response_path", "response_sha256")
         if not isinstance(receipt, dict) or any(not receipt.get(key) for key in required):
             raise ValueError("Missing source-to-event raw receipt binding")
         if (receipt["source_id"] != source_id
@@ -115,8 +130,10 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
             raise ValueError("Source receipt ID or URL mismatch; event type must be native web_search")
         if len(receipt["events_sha256"]) != 64 or len(receipt["response_sha256"]) != 64:
             raise ValueError("Source receipt raw file hashes are malformed")
-        if "opened" not in receipt or type(receipt["opened"]) is not bool:
-            raise ValueError("Source receipt must preserve the page-open status")
+        if (receipt.get("opened") is not True
+                or receipt["event_id"] != receipt["open_event_id"]
+                or receipt["action_type"] not in ("open_page", "find_in_page")):
+            raise ValueError("Source receipt requires a matching native page-open event")
         normalized_receipts[source_id] = dict(receipt)
 
     seen = set()
