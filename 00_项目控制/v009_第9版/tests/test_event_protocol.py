@@ -59,6 +59,8 @@ class EventProtocolTest(unittest.TestCase):
         self.assertEqual(fact["source_verification_status"], "pending")
         self.assertEqual(result["pending_fact_count"], 1)
         self.assertEqual(result["source_verification_status"], "pending")
+        self.assertFalse(result["formal_eligible"])
+        self.assertEqual(result["pending_sources"][0]["reason"], "missing_source_receipt")
 
     def test_source_receipt_url_mismatch_is_pending_not_retained(self):
         result = compare_events(
@@ -93,6 +95,7 @@ class EventProtocolTest(unittest.TestCase):
                          "verified")
         self.assertEqual(result["pending_fact_count"], 0)
         self.assertEqual(result["source_verification_status"], "verified")
+        self.assertFalse(result["formal_eligible"])
 
     def test_source_receipts_bind_url_event_thread_and_raw_hashes(self):
         packet = {"sources": {"A": URL}}
