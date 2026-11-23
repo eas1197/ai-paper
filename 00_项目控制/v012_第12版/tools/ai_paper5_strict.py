@@ -176,6 +176,32 @@ def original_writing_command(run_id, *, attempt="attempt_001"):
             "--attempt",attempt]
 
 
+def original_writer4_command(action, *, packet, workspace=None, mode="exploratory",
+                               manuscript=None, claims=None):
+    """Dispatch directly to the original v016 writer; this adapter adds no writing rules."""
+    if action not in {"route", "prepare", "submit"}:
+        raise ValueError("Unknown original v016 writer action")
+    cmd = [sys.executable, "-B", str(V16), action,
+           "--packet", str(Path(packet).resolve())]
+    if action == "route":
+        if any(value is not None for value in (workspace, manuscript, claims)):
+            raise ValueError("The original v016 route command accepts only a packet")
+        return cmd
+    if workspace is None:
+        raise ValueError("The original v016 writer requires a workspace")
+    cmd += ["--workspace", str(Path(workspace).resolve())]
+    if action == "prepare":
+        if manuscript is not None or claims is not None or mode not in {"exploratory", "formal"}:
+            raise ValueError("Invalid original v016 prepare arguments")
+        cmd += ["--mode", mode]
+        return cmd
+    if manuscript is None or claims is None:
+        raise ValueError("The original v016 submit command requires manuscript and claims")
+    cmd += ["--manuscript", str(Path(manuscript).resolve()),
+            "--claims", str(Path(claims).resolve())]
+    return cmd
+
+
 def original_event_command(run_id, report):
     """Use the original v3.x fact-level event comparison contract."""
     return [sys.executable,"-B",str(V3_EVENTS),"--dev-run",
@@ -312,6 +338,13 @@ def main(argv=None):
     p.add_argument("--event-focus",action="store_true")
     p=sub.add_parser("resume-writing");p.add_argument("--run-id",required=True)
     p.add_argument("--attempt",default="attempt_001")
+    p=sub.add_parser("writer4")
+    p.add_argument("--action",choices=("route","prepare","submit"),required=True)
+    p.add_argument("--packet",type=Path,required=True)
+    p.add_argument("--workspace",type=Path)
+    p.add_argument("--mode",choices=("exploratory","formal"),default="exploratory")
+    p.add_argument("--manuscript",type=Path)
+    p.add_argument("--claims",type=Path)
     p=sub.add_parser("chat-task");p.add_argument("--run-id",required=True)
     p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
@@ -332,6 +365,13 @@ def main(argv=None):
         elif args.cmd=="resume-writing":
             doctor();result={"original_output":original_call(original_writing_command(
                 args.run_id,attempt=args.attempt))}
+        elif args.cmd=="writer4":
+            doctor()
+            command=original_writer4_command(
+                args.action,packet=args.packet,workspace=args.workspace,mode=args.mode,
+                manuscript=args.manuscript,claims=args.claims)
+            result={"original_output":original_call(command),"module":str(V16),
+                    "action":args.action,"formal_eligible":False}
         elif args.cmd=="chat-task":
             result=chat_task(args.run_id,args.phase);write(args.output,result)
         elif args.cmd=="chat-audit":
