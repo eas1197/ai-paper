@@ -48,6 +48,14 @@ def relative_receipt_path(path, work, *, require_file=True):
     return resolved.relative_to(root).as_posix()
 
 
+def validate_same_attempt(response_path, events_path):
+    response = Path(response_path).resolve()
+    events = Path(events_path).resolve()
+    if response.parent != events.parent:
+        raise ValueError("Response and raw events must come from the same native attempt directory")
+    return True
+
+
 def opened_event(url, trace, canonicalize):
     canonical = canonicalize(url)
     if not canonical:
@@ -118,7 +126,7 @@ def build_source_receipts(packet, trace, *, work, events_path, response_path,
     return receipts
 
 
-def compare_events(packet, source_receipts, *, canonicalize=None):
+def compare_events(packet, source_receipts, *, canonicalize=None, execution=None):
     """Keep all facts, but only promote facts with complete opened-source receipts."""
     sources = packet.get("sources")
     if not isinstance(sources, dict):
@@ -130,6 +138,17 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
         if not valid_https(url):
             return None
         return canonicalize(url) if canonicalize else url
+
+    execution = execution if isinstance(execution, dict) else {}
+    execution_fields = ("thread_id", "events_path", "events_sha256",
+                        "response_path", "response_sha256")
+    execution_valid = all(execution.get(key) for key in execution_fields)
+    if execution_valid:
+        execution_valid = all(
+            isinstance(execution[key], str) and len(execution[key]) == 64
+            and all(char in "0123456789abcdef" for char in execution[key].lower())
+            for key in ("events_sha256", "response_sha256")
+        )
 
     normalized_receipts = {}
     pending_sources = []
@@ -162,7 +181,8 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
             and receipt.get("action_type") in ("open_page", "find_in_page")
             and isinstance(receipt.get("thread_id"), str) and bool(receipt["thread_id"])
             and bool(receipt.get("events_path")) and bool(receipt.get("response_path"))
-            and raw_hashes_ok
+            and raw_hashes_ok and execution_valid
+            and all(receipt.get(key) == execution.get(key) for key in execution_fields)
         )
         if verified:
             receipt["verification_status"] = "verified"
@@ -170,7 +190,9 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
         else:
             receipt["verification_status"] = "pending"
             receipt["verification_reason"] = (
-                receipt.get("verification_reason") or "source_receipt_incomplete_or_mismatched"
+                receipt.get("verification_reason")
+                or ("missing_or_invalid_current_execution_receipt" if not execution_valid
+                    else "source_receipt_incomplete_or_mismatched")
             )
             receipt["opened"] = bool(receipt.get("opened"))
             pending_sources.append({
@@ -245,6 +267,7 @@ def main():
     manifest = verified_run(work)
     input_path = args.input.resolve()
     events_path = args.events_jsonl.resolve()
+    validate_same_attempt(input_path, events_path)
     input_rel = relative_receipt_path(input_path, work)
     events_rel = relative_receipt_path(events_path, work, require_file=False)
     packet = load(input_path)
@@ -273,17 +296,25 @@ def main():
         except (OSError, ValueError, json.JSONDecodeError):
             thread_id = None
 
+    events_sha = sha(events_path) if events_path.is_file() else None
+    response_sha = sha(input_path)
+    execution = {
+        "thread_id": thread_id,
+        "events_path": events_rel,
+        "events_sha256": events_sha,
+        "response_path": input_rel,
+        "response_sha256": response_sha,
+    }
     receipts = build_source_receipts(
         packet, trace, work=work, events_path=events_path, response_path=input_path,
         thread_id=thread_id, url_event_fn=url_event, canonicalize=web_url,
     )
-    result = compare_events(packet, receipts, canonicalize=web_url)
+    result = compare_events(packet, receipts, canonicalize=web_url, execution=execution)
     result.update(run_id=manifest["run_id"], input_sha256=digest(packet),
-                  input_path=input_rel, response_sha256=sha(input_path),
-                  events_path=events_rel,
-                  events_sha256=sha(events_path) if events_path.is_file() else None,
-                  thread_id=thread_id, exchange_sha256=exchange_sha,
-                  reality_sha256=state.get("reality_sha256"))
+                  input_path=input_rel, response_sha256=response_sha,
+                  events_path=events_rel, events_sha256=events_sha,
+                  thread_id=thread_id, execution_receipt=execution,
+                  exchange_sha256=exchange_sha, reality_sha256=state.get("reality_sha256"))
     output = work / "event_comparison.json"
     if output.exists():
         raise FileExistsError("Preserve the prior event comparison")
