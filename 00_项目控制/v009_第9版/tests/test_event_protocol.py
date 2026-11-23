@@ -238,6 +238,25 @@ class EventProtocolTest(unittest.TestCase):
                              "page_not_opened_in_current_trace")
             self.assertFalse(receipts["A"]["opened"])
 
+    def test_open_action_url_mismatch_is_pending(self):
+        packet = {"sources": {"A": URL}}
+        trace = [{"id": "item_1", "type": "web_search", "results": [{"url": URL}],
+                  "action": {"type": "open_page", "url": "https://other.example/source"}}]
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            events = work / "events.jsonl"
+            response = work / "response.json"
+            events.write_text("{}", encoding="utf-8")
+            response.write_text("{}", encoding="utf-8")
+            receipts = build_source_receipts(
+                packet, trace, work=work, events_path=events, response_path=response,
+                thread_id="thread-1", url_event_fn=lambda url, rows: "item_1",
+                canonicalize=lambda url: url,
+            )
+            self.assertEqual(receipts["A"]["verification_status"], "pending")
+            self.assertEqual(receipts["A"]["verification_reason"],
+                             "page_not_opened_in_current_trace")
+
     def test_missing_raw_event_file_keeps_source_pending(self):
         packet = {"sources": {"A": URL}}
         with tempfile.TemporaryDirectory() as folder:
