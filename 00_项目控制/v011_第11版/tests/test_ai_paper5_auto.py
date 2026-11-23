@@ -80,5 +80,26 @@ class DriverTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'CLI unavailable'):
                 auto.CodexAdapter(codex='nonexistent-codex-executable').invoke('reality','',Path(folder),True)
 
+    def test_codex_search_requires_completed_tool_event(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        with tempfile.TemporaryDirectory() as folder:
+            directory=Path(folder)
+            def call_with(event_type):
+                def fake_run(cmd, input, text, capture_output, cwd, timeout, check):
+                    self.assertEqual(cmd[:3], ['codex','--search','exec'])
+                    auto.save_json(directory/'result.json', {'sources':[{'url':'https://example.org'}]})
+                    output = json.dumps({'type':'thread.started','thread_id':'test-execution'})+'\n'
+                    output += json.dumps({'type':event_type,'item':{'type':'web_search'}})+'\n'
+                    return SimpleNamespace(stdout=output,stderr='',returncode=0)
+                with patch.object(auto.shutil,'which',return_value='/mock/codex'):
+                    with patch.object(auto.subprocess,'run',side_effect=fake_run):
+                        return auto.CodexAdapter().invoke('reality','prompt',directory,True)
+            with self.assertRaisesRegex(RuntimeError,'no verifiable native web-search'):
+                call_with('item.started')
+            result=call_with('item.completed')
+            self.assertEqual(result.search_calls,1)
+            self.assertEqual(result.session_id,'test-execution')
+
 if __name__=='__main__':
     unittest.main()

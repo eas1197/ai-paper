@@ -105,8 +105,9 @@ class CodexAdapter:
             item = evt.get('item') or {}
             tooltype = str(item.get('type', '')).lower()
             toolname = str(item.get('tool_name', item.get('name', ''))).lower()
-            if ('web_search' in tooltype or 'web_search' in toolname or
-                    evt.get('type') in {'web_search', 'web_search.completed'}):
+            if evt.get('type') in {'item.completed', 'web_search.completed'} and (
+                    'web_search' in tooltype or 'web_search' in toolname or
+                    evt.get('type') == 'web_search.completed'):
                 searches += 1
         if completed.returncode != 0:
             raise RuntimeError(f'{stage}: Codex failed (rc={completed.returncode}); inspect events.jsonl')
@@ -204,6 +205,9 @@ class AutoRunner:
             info = self.core.status(work)
             if stage in info['recorded']:
                 continue
+            if stage == 'manuscript' and not (work / 'writer4_workspace' / 'writer_manifest.json').is_file():
+                # Recover a writer-prepare interrupted after its writing packet froze.
+                self.writer.prepare(work, self._packet_path(work))
             repair = ''
             success = False
             prior_attempts = sum(x['stage'] == stage for x in state['attempts'])
@@ -230,6 +234,8 @@ class AutoRunner:
                     if stage == 'manuscript':
                         for key in ('manuscript', 'claims'):
                             filename = packet.get(key, '')
+                            if not isinstance(filename, str) or not filename:
+                                raise ValueError('Invalid manuscript/claims filename')
                             path = (result.packet.parent / filename).resolve()
                             if not path.is_file() or not path.is_relative_to(result.packet.parent.resolve()):
                                 raise ValueError('Missing or unsafe manuscript/claims path')
