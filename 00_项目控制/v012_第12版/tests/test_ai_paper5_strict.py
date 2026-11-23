@@ -80,4 +80,32 @@ class StrictTests(TestCase):
         with self.assertRaises(ValueError):
             m.audit_chat(dict(task,source_mode="codex"),{"papers":[],"unverified":[],"search_notes":[]})
 
+    def test_same_fixture_chat_native_run_is_separate_and_nonformal(self):
+        base=m.ROOT/"handoff_runs"/"digital_mutual_aid_20261122"
+        parent=m.read(base/"staged_topic.json")
+        chat=m.read(base/"chat_native_20261122"/"Chat实验状态.json")
+        self.assertEqual(parent["status"],"explanation_exchange")
+        self.assertFalse(parent["formal_eligible"])
+        self.assertEqual(chat["parent_staged_topic_status"],parent["status"])
+        self.assertFalse(chat["parent_modified"])
+        self.assertIsNone(chat["independent_model_invocation_id"])
+        self.assertFalse(chat["independent_review_verified"])
+        self.assertIsNone(chat["cli_tool_receipts"])
+        self.assertEqual(chat["web_search_mode"],"ChatGPT native browsing, not Codex CLI")
+        self.assertEqual(chat["final_gate"],
+                         "not_passed_due_to_missing_independent_review_and_empirical_limitations")
+
+    def test_chat_native_matrices_and_writing_plan_are_not_formal_v009_receipts(self):
+        base=m.ROOT/"handoff_runs"/"digital_mutual_aid_20261122"/"chat_native_20261122"
+        literature=m.read(base/"文献检索矩阵.json")
+        materials=m.read(base/"经验材料与分析矩阵.json")
+        writing=(base/"论文写作方案.md").read_text(encoding="utf-8-sig")
+        self.assertEqual(literature["acquisition_mode"],"chat_native_web")
+        self.assertFalse(literature["targets"]["formal"])
+        self.assertEqual(materials["acquisition_mode"],"chat_native_web")
+        self.assertEqual(materials["method"],
+                         "public_secondhand_interview_and_reported_process_comparison")
+        self.assertIn("未获独立审查放行",writing)
+        self.assertIn("exploratory",writing.lower())
+
 if __name__=="__main__":main()
