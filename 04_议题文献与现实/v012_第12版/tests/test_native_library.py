@@ -45,17 +45,58 @@ class NativeContract(unittest.TestCase):
             config = json.loads((VERSION / "templates" / name).read_text(encoding="utf-8-sig"))
             self.assertEqual(config["journals"], PROFILE["journals"])
 
-    def test_asr_and_ajs_are_accepted_by_native_candidate_scope(self):
-        for index, (journal, url) in enumerate(zip(
+    def test_asr_and_ajs_accept_original_english_metadata_and_excerpt(self):
+        english_titles = (
+            "Educational Stratification and School Transitions",
+            "School Choice and Unequal Educational Attainment",
+        )
+        english_excerpt = "Educational stratification shapes later opportunities"
+        for index, (journal, url, title) in enumerate(zip(
             ("American Sociological Review", "American Journal of Sociology"),
             V3_POLICY["preferred_platforms"],
+            english_titles,
         ), 1):
             trace = [{"id": f"item_{index}", "type": "web_search", "results": [{"url": url}]}]
+            authors = ["Alexandra Example", "Robert Researcher"]
             observed = observation(
-                record(journal=journal, metadata_url=url, abstract_url=url),
+                record(title=title, authors=authors, journal=journal,
+                       abstract_excerpt=english_excerpt, metadata_url=url, abstract_url=url),
                 trace, PROFILE["journals"], f"batch_{index:03d}", index,
             )
             self.assertEqual(observed["journal"], journal)
+            self.assertEqual(observed["title"], title)
+            self.assertEqual(observed["authors"], authors)
+            self.assertEqual(observed["abstract_excerpt"], english_excerpt)
+
+    def test_native_search_prompt_contains_bilingual_nine_journal_contract(self):
+        template = (VERSION / "templates" / "search_prompt.txt").read_text(encoding="utf-8-sig")
+        rendered = template.format(
+            theme="教育分流", desired=20,
+            journals="、".join(PROFILE["journals"]), accepted="[]",
+        )
+        for journal in PROFILE["journals"]:
+            self.assertIn(journal, rendered)
+        self.assertIn("journals.sagepub.com/home/asr", rendered)
+        self.assertIn("journals.uchicago.edu/toc/ajs/current", rendered)
+        self.assertIn("英文刊名及英文主题词", rendered)
+        self.assertIn("英文保留约5–12个词", rendered)
+        self.assertIn("中文以约8–45字为宜", rendered)
+        self.assertNotIn("8到45个汉字", rendered)
+        self.assertNotIn("{journals}", rendered)
+
+    def test_response_schema_supports_original_language_and_nine_journals(self):
+        schema = json.loads(
+            (VERSION / "templates" / "native_response.schema.json").read_text(encoding="utf-8-sig")
+        )
+        paper = schema["properties"]["papers"]["items"]["properties"]
+        self.assertIn("原始发表语言", paper["title"]["description"])
+        self.assertIn("原始拼写", paper["authors"]["items"]["description"])
+        self.assertIn("九刊", paper["journal"]["description"])
+        self.assertIn("英文", paper["abstract_excerpt"]["description"])
+        self.assertIn("中文改述", paper["abstract_summary"]["description"])
+        self.assertIn("中文或英文", schema["properties"]["search_notes"]["items"]["description"])
+        self.assertFalse(schema["additionalProperties"])
+        self.assertFalse(schema["properties"]["papers"]["items"]["additionalProperties"])
 
     def test_source_must_be_in_actual_native_tool_return(self):
         self.assertTrue(proof(URL + "?utm_source=example", "item_1", TRACE))
@@ -81,3 +122,4 @@ class NativeContract(unittest.TestCase):
             observation(record(journal="社会科学"), TRACE, PROFILE["journals"], "batch_001", 1)
         with self.assertRaisesRegex(ValueError, "relevance_unconfirmed"):
             observation(record(relevance_reason=""), TRACE, PROFILE["journals"], "batch_001", 1)
+
