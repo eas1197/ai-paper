@@ -122,8 +122,12 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
         required = ("source_id", "url", "event_id", "open_event_id", "event_type",
                     "action_type", "thread_id", "events_path", "events_sha256",
                     "response_path", "response_sha256")
-        if not isinstance(receipt, dict) or any(not receipt.get(key) for key in required):
+        if not isinstance(receipt, dict):
             raise ValueError("Missing source-to-event raw receipt binding")
+        missing = [key for key in required
+                   if key not in receipt or receipt[key] is None or receipt[key] == ""]
+        if missing:
+            raise ValueError("Missing source-to-event raw receipt binding: " + ", ".join(missing))
         if (receipt["source_id"] != source_id
                 or receipt["url"] != canonical(url)
                 or receipt["event_type"] != "web_search"):
