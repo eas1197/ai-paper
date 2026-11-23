@@ -9,7 +9,7 @@
 ---
 
 # 待完成
-1. **P0-EX02（当前唯一最小任务，blocked）**：在有可用登录与原生网页搜索的 Windows Codex CLI 环境中，接续 `digital_mutual_aid_20261122` 的 `explanation_exchange`。使用已保存 `handoff_runs/digital_mutual_aid_20261122/critical_input.txt`；控制器先复用哈希与任务完全匹配的成功研究者会话，再新建独立批评者会话。保存真实 `events.jsonl`、`response.json`、thread ID 和哈希；成功后才调用原 v009 `exchange`。不重跑现实观察/事件比较，不复用失败会话，不进入后续文献或写作阶段。当前阻塞：Chat 会话没有可调用的用户 Windows Codex CLI 进程；先前记录的 app-server `拒绝访问 (os error 5)` 尚无新的成功凭证。
+1. **P0-EX02（当前唯一最小任务，blocked）**：在有可用登录与原生网页搜索的 Windows Codex CLI 环境中，接续 `digital_mutual_aid_20261122` 的 `explanation_exchange`。使用已保存 `handoff_runs/digital_mutual_aid_20261122/critical_input.txt`；控制器先复用哈希与任务完全匹配的成功研究者会话，再新建独立批评者会话。保存真实 `events.jsonl`、`response.json`、thread ID 和哈希；成功后才调用原 v009 `exchange`。不重跑现实观察/事件比较，不复用失败会话，不进入后续文献或写作阶段。当前阻塞：Chat 会话没有可调用的用户 Windows Codex CLI 进程；先前记录的 app-server `拒绝访问 (os error 5)` 尚无新的成功凭证。用户本机恢复 CLI 后，从仓库根目录执行 `python -B "00_项目控制/v012_第12版/tools/autopilot_v3.py" --run-id digital_mutual_aid_20261122 --max-steps 1`；必须先确认原目录 `00_项目控制/v007_第7版/runs_dev/digital_mutual_aid_20261122` 存在。`--max-steps 1` 用于只完成 exchange，不自动进入议题定位/文献阶段；若原目录缺失，程序会拒绝初始化同名新研究，先恢复原始运行目录。
    - **P0-EX01（verified）**：v012 已支持从已保存 `critical_input.txt` 与 `explanation_exchange` 检查点恢复；仅复用原始 task、events、response 哈希均匹配的 completed 会话；失败会话不复用；独立批评者必须具有不同 thread ID；逐次保存 `critical_receipt.json` 和 exchange payload；原运行目录缺失时拒绝覆盖为新建研究。
 2. P0 验证矩阵独立审查在写作前核验核心事件与实际支持范围的正向路径。旧报告缺该判定时等待补齐，不把相关材料数当作合格事件数。
 3. P1 验证局部修正与独立复审的完整 Token 收益；本轮同任务真调用仅覆盖局部模型输入。
