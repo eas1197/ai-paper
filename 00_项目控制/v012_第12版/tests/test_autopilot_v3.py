@@ -172,6 +172,9 @@ class StrictWakeTests(TestCase):
 
             self.assertEqual(result["next"],"issue_positioning")
             self.assertEqual([stage for stage,_ in engine.calls],["critical_exchange"])
+            saved_research_task=m.heritage.read(research_folder/"task.json")["instruction"]
+            self.assertIn("pending_sources",saved_research_task)
+            self.assertIn("source_verification_status=verified",saved_research_task)
             self.assertIn("Independently challenge",engine.calls[0][1])
             self.assertIn("Current researcher's evidence-bound response",engine.calls[0][1])
             critic_folder=work/"v5_native"/"critical_exchange"/"attempt_001"
