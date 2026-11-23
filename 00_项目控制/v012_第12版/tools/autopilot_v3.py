@@ -104,7 +104,12 @@ class Executor:
                 "actor action, DOI, review identity or evidence. "
                 "Return JSON according to output schema; distinguish reported claims "
                 "from empirical outcomes and preserve uncertainty.")
-        code=invoke(cli(),folder,prompt,task_json,timeout=self.timeout,model=self.model)
+        try:
+            code=invoke(cli(),folder,prompt,task_json,timeout=self.timeout,model=self.model)
+        except Exception as exc:
+            record.update(status="technical_block",error=str(exc)[:1000])
+            heritage.write(history,ledger)
+            raise
         raw=folder/"events.jsonl"
         record.update(rc=code,events_sha256=checksum(raw),
                       response_sha256=checksum(folder/"response.json")
@@ -224,7 +229,7 @@ def main(argv=None):
                           "v3_stage":heritage.state_of(args.run_id)["status"],
                           "formal_eligible":False},ensure_ascii=False,indent=2))
         return 0
-    except (OSError,RuntimeError,ValueError,KeyError,TypeError) as exc:
+    except (OSError,RuntimeError,ValueError,KeyError,TypeError,TimeoutError) as exc:
         print(json.dumps({"status":"blocked","reason":str(exc)},ensure_ascii=False))
         return 2
 

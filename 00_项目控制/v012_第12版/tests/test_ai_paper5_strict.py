@@ -34,6 +34,20 @@ class StrictTests(TestCase):
         self.assertEqual(result["after"],"preliminary_review")
         self.assertEqual(fn.call_args.args[0][3],"initial")
 
+    def test_real_original_v3_init_and_prepare(self):
+        import uuid
+        import shutil
+        run_id="strict_ci_"+uuid.uuid4().hex[:12]
+        work=m.RUNS/run_id
+        try:
+            m.original_call(m.original_command("init",run_id,theme="教育分流"))
+            self.assertEqual(m.state_of(run_id)["status"],"reality")
+            prepared=m.original_call(m.original_command("prepare",run_id))
+            self.assertIn("reality_task",prepared)
+            self.assertEqual(m.status(run_id)["action"],"original_v3_requires_staged_evidence_or_independent_review")
+        finally:
+            if work.exists():shutil.rmtree(work)
+
     def test_chat_is_never_authorized_as_cli(self):
         info=m.doctor()
         task={"profile":"original_v3.2","source_mode":"chat_native_web",
