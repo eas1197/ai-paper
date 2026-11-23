@@ -34,6 +34,17 @@ class StrictTests(TestCase):
         self.assertEqual(result["after"],"preliminary_review")
         self.assertEqual(fn.call_args.args[0][3],"initial")
 
+    def test_original_06_07_and_events_are_not_reimplemented(self):
+        cmd=m.original_material_command("audit_run",conversion="conversion.json")
+        self.assertIn("v005_第5版/tools/qual_materials.py"," ".join(cmd))
+        self.assertIn("--conversion",cmd)
+        self.assertIn("v009_第9版/tools/resume_writing.py",
+                      " ".join(m.original_writing_command("audit_run")))
+        self.assertIn("v009_第9版/tools/event_protocol.py",
+                      " ".join(m.original_event_command("audit_run","events.json")))
+        with self.assertRaises(ValueError):m.original_material_command("audit_run")
+        with self.assertRaises(ValueError):m.original_material_command("audit_run",review="a",matrix="b")
+
     def test_real_original_v3_init_and_prepare(self):
         import uuid
         import shutil

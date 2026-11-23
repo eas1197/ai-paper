@@ -145,6 +145,43 @@ def status(run_id, *, progress=False):
             "strict_gate": "no advance on unreviewed internal roleplay"}
 
 
+def original_material_command(run_id, *, attempt="attempt_001",
+                              conversion=None, review=None, matrix=None,
+                              framework=None, framework_revision=None,
+                              preliminary_attempt="attempt_001", event_focus=False):
+    """Route without alteration to actual 06/v005 material collection/review/matrix."""
+    work = RUNS / run_id_guard(run_id)
+    if not all(re.fullmatch(r"attempt_[0-9]{3}", x)
+               for x in (attempt, preliminary_attempt)):
+        raise ValueError("Keep the original 06 numbered-attempt contract")
+    modes = [conversion, review, matrix]
+    if sum(x is not None for x in modes) != 1:
+        raise ValueError("Original 06 requires exactly one conversion, review, or matrix")
+    cmd=[sys.executable,"-B",str(MATERIAL),"--dev-run",str(work),
+         "--attempt",attempt,"--preliminary-attempt",preliminary_attempt]
+    for name,value in (("conversion",conversion),("review",review),("matrix",matrix),
+                       ("framework",framework),("framework-revision",framework_revision)):
+        if value is not None:
+            cmd += ["--"+name,str(Path(value).resolve())]
+    if event_focus:
+        cmd.append("--event-focus")
+    return cmd
+
+
+def original_writing_command(run_id, *, attempt="attempt_001"):
+    """Use the original independent matrix-to-writing revision controller."""
+    if not re.fullmatch(r"attempt_[0-9]{3}", attempt):
+        raise ValueError("Use original 06/07 attempt identity")
+    return [sys.executable,"-B",str(REVISION),run_id_guard(run_id),
+            "--attempt",attempt]
+
+
+def original_event_command(run_id, report):
+    """Use the original v3.x fact-level event comparison contract."""
+    return [sys.executable,"-B",str(V3_EVENTS),"--dev-run",
+            str(RUNS/run_id_guard(run_id)),"--input",str(Path(report).resolve())]
+
+
 def chat_task(run_id, phase):
     """Exact active 3.x journal scope and original native-search instructions."""
     doctor()
@@ -266,6 +303,15 @@ def main(argv=None):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
     for action in ("reality","exchange","issue","review"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
+    p=sub.add_parser("event-compare");p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
+    p=sub.add_parser("materials");p.add_argument("--run-id",required=True)
+    p.add_argument("--attempt",default="attempt_001")
+    for option in ("conversion","review","matrix","framework","framework-revision"):
+        p.add_argument("--"+option,type=Path)
+    p.add_argument("--preliminary-attempt",default="attempt_001")
+    p.add_argument("--event-focus",action="store_true")
+    p=sub.add_parser("resume-writing");p.add_argument("--run-id",required=True)
+    p.add_argument("--attempt",default="attempt_001")
     p=sub.add_parser("chat-task");p.add_argument("--run-id",required=True)
     p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
@@ -276,6 +322,16 @@ def main(argv=None):
         elif args.cmd=="init":
             doctor(); result={"original_output":original_call(original_command("init",args.run_id,theme=args.theme))}
         elif args.cmd in ("status","advance"): result=status(args.run_id,progress=args.cmd=="advance")
+        elif args.cmd=="event-compare":
+            doctor();result={"original_output":original_call(original_event_command(args.run_id,args.report))}
+        elif args.cmd=="materials":
+            doctor();result={"original_output":original_call(original_material_command(
+                args.run_id,attempt=args.attempt,conversion=args.conversion,review=args.review,
+                matrix=args.matrix,framework=args.framework,framework_revision=args.framework_revision,
+                preliminary_attempt=args.preliminary_attempt,event_focus=args.event_focus))}
+        elif args.cmd=="resume-writing":
+            doctor();result={"original_output":original_call(original_writing_command(
+                args.run_id,attempt=args.attempt))}
         elif args.cmd=="chat-task":
             result=chat_task(args.run_id,args.phase);write(args.output,result)
         elif args.cmd=="chat-audit":
