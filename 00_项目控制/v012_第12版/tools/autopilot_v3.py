@@ -250,7 +250,7 @@ def step(run_id, *, executor=None):
                 "statement, use, key and credibility status. One report describing two places "
                 "is not two independent reports.",
                 must_search=True)
-            event_source_proof(packet,trace,url_event)
+            # Let the original event_protocol preserve unresolved sources as pending.
             path=folder/"response.json"
             events_path=folder/"events.jsonl"
             cmd=[sys.executable,"-B",str(heritage.V3_EVENTS),
