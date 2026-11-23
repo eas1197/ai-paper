@@ -120,7 +120,7 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
             raise ValueError("Use a traceable HTTPS source with a non-empty source ID")
         receipt = source_receipts.get(source_id)
         required = ("source_id", "url", "event_id", "open_event_id", "event_type",
-                    "action_type", "thread_id", "events_path", "events_sha256",
+                    "thread_id", "events_path", "events_sha256",
                     "response_path", "response_sha256")
         if not isinstance(receipt, dict):
             raise ValueError("Missing source-to-event raw receipt binding")
@@ -136,7 +136,7 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
             raise ValueError("Source receipt raw file hashes are malformed")
         if (receipt.get("opened") is not True
                 or receipt["event_id"] != receipt["open_event_id"]
-                or receipt["action_type"] not in ("open_page", "find_in_page")):
+                or receipt.get("action_type") not in ("open_page", "find_in_page")):
             raise ValueError("Source receipt requires a matching native page-open event")
         normalized_receipts[source_id] = dict(receipt)
 
