@@ -158,6 +158,16 @@ def source_proof(packet, trace, url_event):
             raise ValueError("Reality source %d not bound to an actual original native web event"%index)
 
 
+def event_source_proof(packet, trace, url_event):
+    sources=packet.get("sources")
+    if not isinstance(sources,dict) or not sources:
+        raise ValueError("Event comparison requires a non-empty source ID to URL map")
+    for source_id,url in sources.items():
+        if (not isinstance(source_id,str) or not source_id.strip()
+                or not heritage.valid_https(url) or not url_event(url,trace)):
+            raise ValueError("Event source %s not bound to an actual original native web event"%source_id)
+
+
 class Executor:
     def __init__(self, *, timeout=900, model=None):
         self.timeout,self.model=timeout,model
@@ -238,7 +248,7 @@ def step(run_id, *, executor=None):
                 "with source_id, statement, use, key and credibility status. "
                 "One report describing two places is not two independent reports.",
                 must_search=True)
-            source_proof(packet,trace,url_event)
+            event_source_proof(packet,trace,url_event)
             path=folder/"response.json"
             events_path=folder/"events.jsonl"
             cmd=[sys.executable,"-B",str(heritage.V3_EVENTS),
