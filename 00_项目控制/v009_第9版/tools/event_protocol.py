@@ -112,7 +112,7 @@ def compare_events(packet, source_receipts, *, canonicalize=None):
         if (receipt["source_id"] != source_id
                 or receipt["url"] != canonical(url)
                 or receipt["event_type"] != "web_search"):
-            raise ValueError("Source receipt ID, URL, or native event type mismatch")
+            raise ValueError("Source receipt ID or URL mismatch; event type must be native web_search")
         if len(receipt["events_sha256"]) != 64 or len(receipt["response_sha256"]) != 64:
             raise ValueError("Source receipt raw file hashes are malformed")
         if "opened" not in receipt or type(receipt["opened"]) is not bool:
