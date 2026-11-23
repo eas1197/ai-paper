@@ -4,6 +4,7 @@ on:
     branches: [dev/v3.1-abstract-acquisition]
     paths:
       - '00_项目控制/v012_第12版/**'
+      - '00_项目控制/v009_第9版/**'
       - '04_议题文献与现实/版本索引.md'
       - '04_议题文献与现实/v012_第12版/**'
       - '.github/workflows/ai-paper5-strict-v3.yml'
