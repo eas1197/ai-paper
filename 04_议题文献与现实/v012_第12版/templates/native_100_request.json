@@ -1,7 +1,7 @@
 {
   "theme": "教育分流",
-  "target": 100,
-  "max_batches": 5,
+  "target": 0,
+  "max_batches": 0,
   "timeout_seconds": 900,
   "journals": [
     "中国社会科学",

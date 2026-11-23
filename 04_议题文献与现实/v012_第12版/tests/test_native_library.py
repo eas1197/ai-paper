@@ -1,13 +1,17 @@
 import json
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
+import uuid
 
 
 VERSION = Path(__file__).resolve().parents[1]
 ROOT = VERSION.parents[1]
 sys.path.insert(0, str(VERSION / "tools"))
-from native_library import registry
+from native_library import main, registry
 
 V3_POLICY = json.loads((ROOT / "00_项目控制/v009_第9版/search_policy.json").read_text(encoding="utf-8-sig"))
 
@@ -44,6 +48,31 @@ class NativeContract(unittest.TestCase):
         for name in ("native_request.json", "native_100_request.json"):
             config = json.loads((VERSION / "templates" / name).read_text(encoding="utf-8-sig"))
             self.assertEqual(config["journals"], PROFILE["journals"])
+            self.assertEqual(config["target"], 0)
+            self.assertEqual(config["max_batches"], 0)
+
+    def test_zero_target_exits_without_codex_search_or_run_directory(self):
+        work = VERSION / "outputs" / ("zero_target_test_" + uuid.uuid4().hex)
+        output = StringIO()
+        argv = [
+            "native_library.py", "--profile", PROFILE["profile"],
+            "--work", str(work),
+        ]
+        with patch.object(sys, "argv", argv), \
+             patch("codex_literature.collect") as collect, \
+             patch("native_receiving.receive") as receive, \
+             redirect_stdout(output):
+            exit_code = main()
+        self.assertEqual(exit_code, 0)
+        self.assertFalse(work.exists())
+        collect.assert_not_called()
+        receive.assert_not_called()
+        result = json.loads(output.getvalue())
+        self.assertEqual(result["status"], "disabled")
+        self.assertEqual(result["target"], 0)
+        self.assertEqual(result["count"], 0)
+        self.assertEqual(result["batches"], [])
+        self.assertEqual(result["reason"], "zero_target_configuration")
 
     def test_asr_and_ajs_accept_original_english_metadata_and_excerpt(self):
         english_titles = (

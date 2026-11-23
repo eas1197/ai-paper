@@ -40,9 +40,7 @@ def registry():
 
 def main():
     profile = registry()
-    from codex_literature import collect
     from collect_common import contained, digest, load
-    from native_receiving import receive
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", required=True, choices=(profile["profile"],))
@@ -75,6 +73,29 @@ def main():
                       timeout_seconds=limits["11"]["timeout_seconds"],
                       search_action_budget=limits["11"]["native_search_actions"],
                       run_mode="dev", workload_sha256=experiment["workload_sha256"])
+    target = config.get("target")
+    max_batches = config.get("max_batches")
+    if type(target) is not int or target < 0:
+        raise ValueError("Target must be a non-negative integer")
+    if type(max_batches) is not int or max_batches < 0:
+        raise ValueError("Max batches must be a non-negative integer")
+    if target == 0:
+        if max_batches != 0:
+            raise ValueError("A zero-target candidate must also set max_batches to zero")
+        if args.resume or args.verify_only or args.expand_from or args.handoff_check:
+            raise ValueError("The zero-target candidate is disabled; use a positive target for an explicit standalone run")
+        print(json.dumps({
+            "status": "disabled",
+            "target": 0,
+            "count": 0,
+            "batches": [],
+            "reason": "zero_target_configuration",
+        }, ensure_ascii=False, indent=2))
+        return 0
+    if max_batches == 0:
+        raise ValueError("A positive target requires at least one batch")
+    from codex_literature import collect
+    from native_receiving import receive
     if config.get("target") == 10 and not args.dev_run:
         raise ValueError("Ten papers requires a registered Dev Mode run")
     if args.expand_from and (config["target"] != 100 or args.resume or args.verify_only):
