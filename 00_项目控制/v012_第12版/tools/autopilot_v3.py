@@ -21,6 +21,10 @@ def checksum(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def text_checksum(value):
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
 def schema(fields):
     return {"type":"object","properties":fields,
             "required":list(fields),"additionalProperties":False}
@@ -78,6 +82,82 @@ def transcript_session(path):
     raise RuntimeError("Codex session has no authentic thread.started id")
 
 
+def completed_call(work, stage, task, *, exclude_thread_id=None):
+    """Reuse only a completed call whose exact task and raw receipts still match."""
+    history=work/"v5_native_calls.json"
+    if not history.is_file():
+        return None
+    ledger=heritage.read(history)
+    candidates=[row for row in ledger.get("records", [])
+                if row.get("stage")==stage and row.get("status")=="completed"]
+    if not candidates:
+        return None
+    _,_,evidence,url_event=native_modules()
+    for record in reversed(candidates):
+        try:
+            attempt=int(record["attempt"])
+            folder=work/"v5_native"/stage/("attempt_%03d"%attempt)
+            saved_task=heritage.read(folder/"task.json")
+            raw=folder/"events.jsonl"
+            response=folder/"response.json"
+            if saved_task.get("instruction") != task:
+                continue
+            if not raw.is_file() or not response.is_file():
+                continue
+            if (record.get("events_sha256") != checksum(raw)
+                    or record.get("response_sha256") != checksum(response)):
+                continue
+            session=transcript_session(raw)
+            if session != record.get("thread_id") or session == exclude_thread_id:
+                continue
+            trace=evidence(raw)
+            return heritage.read(response),folder,session,trace,url_event
+        except (OSError,RuntimeError,ValueError,KeyError,TypeError):
+            continue
+    return None
+
+
+def saved_critical_input(work):
+    """Load a saved critic task only when its embedded snapshots match this run."""
+    candidates=[work/"critical_input.txt",
+                heritage.ROOT/"handoff_runs"/work.name/"critical_input.txt"]
+    for source in candidates:
+        if not source.is_file():
+            continue
+        content=source.read_text(encoding="utf-8-sig")
+        if not content.strip():
+            raise ValueError("Saved critical task is empty")
+        start=content.find("{")
+        if start < 0:
+            raise ValueError("Saved critical task has no frozen context")
+        decoder=json.JSONDecoder()
+        try:
+            reality,end=decoder.raw_decode(content,start)
+            comparison_start=end
+            while comparison_start < len(content) and content[comparison_start].isspace():
+                comparison_start += 1
+            comparison,_=decoder.raw_decode(content,comparison_start)
+        except json.JSONDecodeError as exc:
+            raise ValueError("Saved critical task has malformed frozen context") from exc
+        current_reality=heritage.read(work/"reality.json")
+        current_comparison=heritage.read(work/"event_comparison.json")
+        state=heritage.read(work/"staged_topic.json")
+        if reality != current_reality or comparison != current_comparison:
+            raise ValueError("Saved critical task does not match this run's frozen reality/event comparison")
+        if (comparison.get("run_id") != work.name
+                or comparison.get("reality_sha256") != state.get("reality_sha256")):
+            raise ValueError("Saved critical task is bound to another run or reality snapshot")
+        return content,source
+    return None,None
+
+
+def source_proof(packet, trace, url_event):
+    for index,source in enumerate(packet["sources"],1):
+        url=source.get("url")
+        if not heritage.valid_https(url) or not url_event(url,trace):
+            raise ValueError("Reality source %d not bound to an actual original native web event"%index)
+
+
 class Executor:
     def __init__(self, *, timeout=900, model=None):
         self.timeout,self.model=timeout,model
@@ -129,11 +209,8 @@ class Executor:
         return packet,folder,session,trace,url_event
 
 
-def source_proof(packet, trace, url_event):
-    for index,source in enumerate(packet["sources"],1):
-        url=source.get("url")
-        if not heritage.valid_https(url) or not url_event(url,trace):
-            raise ValueError("Reality source %d not bound to an actual original native web event"%index)
+def relative_path(path, base):
+    return Path(path).resolve().relative_to(Path(base).resolve()).as_posix()
 
 
 def step(run_id, *, executor=None):
@@ -165,29 +242,96 @@ def step(run_id, *, executor=None):
                  "--dev-run",str(work),"--input",str(path)]
             heritage.original_call(cmd)
         task=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
-        researcher,ra,rs,rt,ref=engine.call(
-            work,"research_exchange",json.dumps(task,ensure_ascii=False)+
+        research_task=json.dumps(task,ensure_ascii=False)+(
             "\nRecord original explanation and what evidence would distinguish it.")
-        critic,ca,cs,ct,ref=engine.call(
-            work,"critical_exchange","You are a FRESH independent critic session. "
-            "Read only the frozen reality and event_comparison at "+str(work)+
-            " and the researcher's evidence-bound explanation at "+str(ra/"response.json")+
-            ". Critique strongest assumption, counterexample and competing explanation. "
-            "Do not assert an independent academic gate pass.")
+        research_call=completed_call(work,"research_exchange",research_task)
+        if research_call is None:
+            researcher,ra,rs,rt,ref=engine.call(
+                work,"research_exchange",research_task)
+        else:
+            researcher,ra,rs,rt,ref=research_call
+
+        saved_input,input_path=saved_critical_input(work)
+        researcher_json=json.dumps(researcher,ensure_ascii=False)
+        if saved_input is not None:
+            critic_task=(saved_input+
+                "\n\nCurrent researcher's evidence-bound response (JSON):\n"+
+                researcher_json+
+                "\nIndependently challenge this response. Do not reuse a failed prior session "
+                "or treat same-session roleplay as independent evidence.")
+        else:
+            critic_task=("You are a FRESH independent critic session. "
+                "Read only the frozen reality and event_comparison at "+str(work)+
+                " and the researcher's evidence-bound explanation at "+str(ra/"response.json")+
+                ". Critique the strongest assumption, counterexample and competing explanation. "
+                "Do not assert an independent academic gate pass.\nResearcher response:\n"+
+                researcher_json)
+        critic_call=completed_call(work,"critical_exchange",critic_task,
+                                   exclude_thread_id=rs)
+        if critic_call is None:
+            critic,ca,cs,ct,ref=engine.call(
+                work,"critical_exchange",critic_task)
+        else:
+            critic,ca,cs,ct,ref=critic_call
         if rs==cs:
             raise RuntimeError("Independent critical receipt must be a separate actual session")
+        if not isinstance(critic.get("challenge"),str) or not critic["challenge"].strip():
+            raise ValueError("Independent critical session returned no substantive challenge")
+
+        research_events=ra/"events.jsonl"
+        research_response=ra/"response.json"
+        critical_events=ca/"events.jsonl"
+        critical_response=ca/"response.json"
+        receipt_path=ca/"critical_receipt.json"
+        input_path_value=(relative_path(input_path,heritage.ROOT)
+                          if input_path is not None else None)
+        receipt={
+            "schema_version":1,
+            "run_id":run_id,
+            "stage":"explanation_exchange",
+            "research_thread_id":rs,
+            "research_events_path":relative_path(research_events,work),
+            "research_events_sha256":checksum(research_events),
+            "research_response_path":relative_path(research_response,work),
+            "research_response_sha256":checksum(research_response),
+            "critical_thread_id":cs,
+            "critical_attempt":ca.name,
+            "critical_task_sha256":text_checksum(critic_task),
+            "critical_input_path":input_path_value,
+            "critical_input_sha256":text_checksum(saved_input) if saved_input is not None else None,
+            "critical_events_path":relative_path(critical_events,work),
+            "critical_events_sha256":checksum(critical_events),
+            "critical_response_path":relative_path(critical_response,work),
+            "critical_response_sha256":checksum(critical_response),
+            "thread_separation":"verified_by_distinct_thread_ids",
+            "status":"separate_session_receipt_recorded",
+        }
+        if receipt_path.exists():
+            if heritage.read(receipt_path)!=receipt:
+                raise FileExistsError("Preserve the existing critical receipt; it does not match this attempt")
+        else:
+            heritage.write(receipt_path,receipt)
         combined={**researcher,"challenge":critic["challenge"],
                   "research_actor":"codex_research_session_"+rs,
                   "critical_actor":"codex_critical_session_"+cs,
                   "critical_receipt":cs,
-                  "critical_response_sha256":checksum(ca/"response.json")}
-        result=work/"v5_native"/"exchange_payload.json"
+                  "critical_receipt_path":relative_path(receipt_path,work),
+                  "research_events_sha256":receipt["research_events_sha256"],
+                  "research_response_sha256":receipt["research_response_sha256"],
+                  "critical_task_sha256":receipt["critical_task_sha256"],
+                  "critical_input_path":input_path_value,
+                  "critical_input_sha256":receipt["critical_input_sha256"],
+                  "critical_events_sha256":receipt["critical_events_sha256"],
+                  "critical_response_sha256":receipt["critical_response_sha256"]}
+        result=ca/"exchange_payload.json"
         if result.exists():
-            raise FileExistsError("Do not rewrite a critical exchange")
-        heritage.write(result,combined)
+            if heritage.read(result)!=combined:
+                raise FileExistsError("Preserve the existing exchange payload; it does not match this attempt")
+        else:
+            heritage.write(result,combined)
         heritage.original_call(heritage.original_command("exchange",run_id,report=result))
         return {"next":heritage.state_of(run_id)["status"],
-                "actions":"original event and independent-session exchange"}
+                "actions":"original event and independent-session exchange with raw receipts"}
     if phase=="issue_positioning":
         instructions=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
         packet,folder,session,trace,url_event=engine.call(
