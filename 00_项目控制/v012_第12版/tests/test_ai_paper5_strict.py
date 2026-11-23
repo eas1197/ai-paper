@@ -1,6 +1,7 @@
 """Actual 3.x contracts are authoritative; no fake Chat source promotion."""
 from pathlib import Path
 import importlib.util
+import subprocess
 import sys
 from unittest import TestCase, main
 from unittest.mock import patch
@@ -79,6 +80,40 @@ class StrictTests(TestCase):
         self.assertEqual(len(result["rejected"]),1)
         with self.assertRaises(ValueError):
             m.audit_chat(dict(task,source_mode="codex"),{"papers":[],"unverified":[],"search_notes":[]})
+
+    def test_original_v009_direct_cli_init_prepare_without_wrapper(self):
+        import uuid
+        import shutil
+        run_id="direct_cli_"+uuid.uuid4().hex[:12]
+        work=m.RUNS/run_id
+        try:
+            init_result=subprocess.run(
+                m.original_command("init",run_id,theme="教育分流"),
+                cwd=m.ROOT,capture_output=True,text=True,timeout=90)
+            self.assertEqual(init_result.returncode,0,init_result.stderr+init_result.stdout)
+            self.assertEqual(m.state_of(run_id)["status"],"reality")
+            prepare_result=subprocess.run(
+                m.original_command("prepare",run_id),
+                cwd=m.ROOT,capture_output=True,text=True,timeout=90)
+            self.assertEqual(prepare_result.returncode,0,
+                             prepare_result.stderr+prepare_result.stdout)
+            self.assertIn("reality_task",prepare_result.stdout)
+            self.assertEqual(m.status(run_id)["action"],
+                             "original_v3_requires_staged_evidence_or_independent_review")
+        finally:
+            if work.exists():
+                shutil.rmtree(work)
+
+    def test_original_cli_help_smoke_without_v012_execution(self):
+        modules=(m.V3_TOPIC,m.V3_EVENTS,m.MATERIAL,m.REVISION,m.V15,m.V16)
+        for module in modules:
+            with self.subTest(module=module.name):
+                result=subprocess.run(
+                    [sys.executable,"-B",str(module),"--help"],
+                    cwd=m.ROOT,capture_output=True,text=True,timeout=45)
+                self.assertEqual(result.returncode,0,
+                                 str(module)+"\n"+result.stderr+result.stdout)
+                self.assertIn("usage:",result.stdout.lower())
 
     def test_v012_adapters_route_to_original_v009_v005_v016_modules(self):
         topic=m.original_command("prepare","sample")
