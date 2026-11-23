@@ -152,6 +152,9 @@ def chat_task(run_id, phase):
         raise ValueError("Chat search not authorized by original v3.2 state")
     state = state_of(run_id)
     work = RUNS / run_id
+    # Verify the original phase, source hashes and 3-level plan first.
+    # Chat uses the same frozen task; never silently accept a changed plan.
+    original_call(original_command("prepare", run_id))
     rules = read(V3_POLICY)
     journals = list(rules["journals"])
     plan = read(work / "issue_plan.json")
