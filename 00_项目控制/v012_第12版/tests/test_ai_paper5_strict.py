@@ -106,6 +106,16 @@ class StrictTests(TestCase):
         writer_source=Path(m.V16).read_text(encoding="utf-8-sig")
         self.assertIn("from writing_plan import render",writer_source)
 
+    def test_writer4_cli_dispatches_v016_through_original_adapter(self):
+        with patch.object(m,"doctor",return_value={}), \
+             patch.object(m,"original_call",return_value="writer4 complete") as original:
+            result=m.main(["writer4","--action","prepare","--packet","plan_input.json",
+                           "--workspace","writer4_workspace","--mode","exploratory"])
+        self.assertEqual(result,0)
+        command=original.call_args.args[0]
+        self.assertEqual(Path(command[2]),m.V16)
+        self.assertEqual(command[3],"prepare")
+
     def test_v016_adapter_rejects_incomplete_dispatch_arguments(self):
         with self.assertRaisesRegex(ValueError,"workspace"):
             m.original_writer4_command("prepare",packet=Path("plan.json"))
