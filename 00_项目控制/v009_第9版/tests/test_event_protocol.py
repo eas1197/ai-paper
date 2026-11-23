@@ -11,11 +11,12 @@ from event_protocol import (build_source_receipts, compare_events, validate_exch
 URL = "https://example.org/source"
 
 
-def source_receipt(source_id="A", url=URL, *, opened=False):
+def source_receipt(source_id="A", url=URL, *, opened=True):
     return {
         "source_id": source_id,
         "url": url,
         "event_id": "item_1",
+        "open_event_id": "item_1",
         "event_type": "web_search",
         "action_type": "open_page" if opened else None,
         "opened": opened,
@@ -55,6 +56,14 @@ class EventProtocolTest(unittest.TestCase):
                 "status": "corroborated", "key": True}]}], "sensitivity": "Unknown"}
         with self.assertRaisesRegex(ValueError, "URL mismatch"):
             compare_events(packet, {"A": source_receipt(url="https://other.example/source")})
+
+    def test_unopened_source_receipt_is_rejected(self):
+        packet = {"sources": {"A": URL}, "events": [{
+            "identity": "case", "facts": [{
+                "source_id": "A", "statement": "Claim", "use": "Account",
+                "status": "corroborated", "key": True}]}], "sensitivity": "Unknown"}
+        with self.assertRaisesRegex(ValueError, "page-open event"):
+            compare_events(packet, {"A": source_receipt(opened=False)})
 
     def test_source_receipts_bind_url_event_thread_and_raw_hashes(self):
         packet = {"sources": {"A": URL}}
@@ -96,6 +105,22 @@ class EventProtocolTest(unittest.TestCase):
                 build_source_receipts(
                     packet, [], work=work, events_path=events, response_path=response,
                     thread_id="thread-1", url_event_fn=lambda url, rows: None,
+                    canonicalize=lambda url: url,
+                )
+
+    def test_search_result_without_page_open_is_rejected(self):
+        packet = {"sources": {"A": URL}}
+        trace = [{"id": "item_1", "type": "web_search", "results": [{"url": URL}]}]
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            events = work / "events.jsonl"
+            response = work / "response.json"
+            events.write_text("{}", encoding="utf-8")
+            response.write_text("{}", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "no matching native page-open event"):
+                build_source_receipts(
+                    packet, trace, work=work, events_path=events, response_path=response,
+                    thread_id="thread-1", url_event_fn=lambda url, rows: "item_1",
                     canonicalize=lambda url: url,
                 )
 
