@@ -21,3 +21,6 @@ ai-writer 4.0现也通过实验总控显式入口 `run_mode.py --mode dev --run-
 
 ## 单 AI 启动（候选 v011）
 先用 00/v011/tools/ai_paper5_auto.py doctor 检查环境，然后 run --work <不存在的新实验目录> --run-id <唯一ID>。重新运行同一条命令只接续未冻结阶段；自动检索走 Codex CLI --search，不会调用 ChatGPT 当前会话的网页工具。详情见 00/v011/模块说明.md。未认证实跑不算全流程验收。
+
+## 严格3.x入口
+python 00_项目控制/v012_第12版/tools/ai_paper5_strict.py doctor；后续init/status/advance路由原00/v009，Chat用chat-task/chat-audit按九刊、三层定位、真实摘要规范生成候选。无独立来源回执或学术审查时应保留待核，不能冒充原CLI搜索验收。

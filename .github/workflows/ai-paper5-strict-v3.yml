@@ -1,0 +1,28 @@
+name: ai-paper strict v3 regression
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+    paths:
+      - '00_项目控制/v012_第12版/**'
+      - '.github/workflows/ai-paper5-strict-v3.yml'
+  workflow_dispatch:
+jobs:
+  original-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: New strict adapter
+        run: python -m unittest discover -s '00_项目控制/v012_第12版/tests' -v
+      - name: v3.2 staged research
+        run: python -m unittest discover -s '00_项目控制/v009_第9版/tests' -v
+      - name: Original native literature
+        run: python -m unittest discover -s '04_议题文献与现实/v012_第12版/tests' -v
+      - name: Original qualitative framework
+        run: python -m unittest discover -s '06_数据方法与分析/v005_第5版/tests' -v
+      - name: Original V15 writing plans
+        run: python -m unittest discover -s '07_三稿独立写作/v015_第15版/tests' -v
+      - name: Original V16 writer
+        run: python -m unittest discover -s '07_三稿独立写作/v016_第16版/tests' -v
