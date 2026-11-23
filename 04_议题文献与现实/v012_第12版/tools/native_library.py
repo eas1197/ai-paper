@@ -1,4 +1,4 @@
-"""Launch the seven-journal Codex native search candidate."""
+"""Launch the nine-journal Codex native search candidate."""
 
 import argparse
 import json
@@ -19,6 +19,12 @@ def registry():
         "paper_codex_native", False, HERE,
     ):
         raise ValueError("Wrong Codex candidate profile")
+    journals = profile.get("journals")
+    if not isinstance(journals, list) or len(journals) != 9:
+        raise ValueError("Require exactly nine registered journals")
+    original_policy = read("00_项目控制/v009_第9版/search_policy.json")
+    if journals != original_policy.get("journals"):
+        raise ValueError("Codex candidate journals must match the original v3.2 nine-journal policy")
     previous = read(profile["previous_registry"])
     multi = read(previous["phase2_registry"])
     first = read(multi["base_registry"])
@@ -53,7 +59,7 @@ def main():
     if args.theme:
         config["theme"] = args.theme
     if config["journals"] != profile["journals"]:
-        raise ValueError("Require the seven registered journals")
+        raise ValueError("Require the nine registered journals in canonical order")
     work = contained(ROOT, args.work)
     if work == ROOT:
         raise ValueError("Use an independent run directory")

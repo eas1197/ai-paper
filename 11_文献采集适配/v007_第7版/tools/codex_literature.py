@@ -94,7 +94,7 @@ def observation(row, trace, journals, batch, position):
 
 
 def group(rows):
-    """Apply the existing identity rule across all observations, including the seventh journal."""
+    """Apply the existing identity rule across all observations and registered journals."""
     components = []
     problems = []
     for row in rows:

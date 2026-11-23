@@ -1,11 +1,15 @@
+import json
 from pathlib import Path
 import sys
 import unittest
 
 
 VERSION = Path(__file__).resolve().parents[1]
+ROOT = VERSION.parents[1]
 sys.path.insert(0, str(VERSION / "tools"))
 from native_library import registry
+
+V3_POLICY = json.loads((ROOT / "00_项目控制/v009_第9版/search_policy.json").read_text(encoding="utf-8-sig"))
 
 PROFILE = registry()
 from codex_literature import group, observation, proof
@@ -33,6 +37,26 @@ def record(**changes):
 
 
 class NativeContract(unittest.TestCase):
+    def test_nine_journal_scope_matches_v3_policy_and_templates(self):
+        self.assertEqual(len(PROFILE["journals"]), 9)
+        self.assertEqual(len(set(PROFILE["journals"])), 9)
+        self.assertEqual(PROFILE["journals"], V3_POLICY["journals"])
+        for name in ("native_request.json", "native_100_request.json"):
+            config = json.loads((VERSION / "templates" / name).read_text(encoding="utf-8-sig"))
+            self.assertEqual(config["journals"], PROFILE["journals"])
+
+    def test_asr_and_ajs_are_accepted_by_native_candidate_scope(self):
+        for index, (journal, url) in enumerate(zip(
+            ("American Sociological Review", "American Journal of Sociology"),
+            V3_POLICY["preferred_platforms"],
+        ), 1):
+            trace = [{"id": f"item_{index}", "type": "web_search", "results": [{"url": url}]}]
+            observed = observation(
+                record(journal=journal, metadata_url=url, abstract_url=url),
+                trace, PROFILE["journals"], f"batch_{index:03d}", index,
+            )
+            self.assertEqual(observed["journal"], journal)
+
     def test_source_must_be_in_actual_native_tool_return(self):
         self.assertTrue(proof(URL + "?utm_source=example", "item_1", TRACE))
         self.assertFalse(proof(URL, "different_item", TRACE))
@@ -40,7 +64,7 @@ class NativeContract(unittest.TestCase):
             observation(record(abstract_url="https://public.example/abs"),
                         TRACE, PROFILE["journals"], "batch_001", 1)
 
-    def test_seventh_journal_uses_same_identity_resolver(self):
+    def test_registered_journals_use_same_identity_resolver(self):
         first = observation(record(), TRACE, PROFILE["journals"], "batch_001", 1)
         again = observation(record(), TRACE, PROFILE["journals"], "batch_002", 1)
         papers, conflicts = group([first, again])

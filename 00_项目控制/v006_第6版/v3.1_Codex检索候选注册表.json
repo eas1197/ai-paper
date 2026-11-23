@@ -3,10 +3,20 @@
   "enabled_by_default": false,
   "scope": "native_search_abstract_only",
   "modules": {
-    "04": "04_议题文献与现实/v012_第12版",
-    "11": "11_文献采集适配/v007_第7版"
+    "11": "11_文献采集适配/v007_第7版",
+    "04": "04_议题文献与现实/v012_第12版"
   },
   "identity_module": "11_文献采集适配/v006_第6版",
   "previous_registry": "00_项目控制/v006_第6版/v3.1_AI检索候选注册表.json",
-  "journals": ["中国社会科学", "社会学研究", "社会", "探索与争鸣", "中国青年研究", "经济研究", "管理世界"]
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ]
 }
