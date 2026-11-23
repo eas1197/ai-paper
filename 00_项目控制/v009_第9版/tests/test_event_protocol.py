@@ -58,7 +58,8 @@ class EventProtocolTest(unittest.TestCase):
 
     def test_source_receipts_bind_url_event_thread_and_raw_hashes(self):
         packet = {"sources": {"A": URL}}
-        trace = [{"id": "item_1", "type": "web_search", "results": [{"url": URL}]}]
+        trace = [{"id": "item_1", "type": "web_search", "results": [{"url": URL}],
+                  "action": {"type": "open_page", "url": URL}}]
         with tempfile.TemporaryDirectory() as folder:
             work = Path(folder)
             events = work / "events.jsonl"
@@ -81,7 +82,7 @@ class EventProtocolTest(unittest.TestCase):
             self.assertEqual(row["response_sha256"], hashlib.sha256(response.read_bytes()).hexdigest())
             self.assertEqual(row["events_path"], "events.jsonl")
             self.assertEqual(row["response_path"], "response.json")
-            self.assertFalse(row["opened"])
+            self.assertTrue(row["opened"])
 
     def test_source_receipt_rejects_url_absent_from_native_trace(self):
         packet = {"sources": {"A": URL}}
