@@ -1,0 +1,21 @@
+name: ai-paper 5.0 autonomous adapter offline tests
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+    paths:
+      - '00_项目控制/v011_第11版/**'
+      - '.github/workflows/ai-paper5-auto-offline.yml'
+  workflow_dispatch:
+jobs:
+  autonomous-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify autonomous adapter offline without model login
+        run: python -m unittest discover -s '00_项目控制/v011_第11版/tests' -v
+      - name: Compile V10 V11 V16
+        run: |
+          python -m py_compile '00_项目控制/v010_第10版/tools/ai_paper5.py' '00_项目控制/v011_第11版/tools/ai_paper5_auto.py' '07_三稿独立写作/v016_第16版/tools/ai_writer4.py'

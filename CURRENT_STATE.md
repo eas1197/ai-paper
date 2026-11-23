@@ -38,3 +38,6 @@
 ## 2026-11-23 ai-paper 5.0 统一候选与全流程新实验
 已新增`00_项目控制/v010_第10版/tools/ai_paper5.py`和离线单测/模块说明。实现14项append-only阶段锁定、文献去重与缺额提示、方法分流、`writer-prepare`/`writer-submit`调原V16、Stata未执行的诚实登记；没有改动main、v005生产注册表及原定量V14。独立反诘和G3/G7仍按原标准，不能靠JSON自己设置通过。
 2026-11-23新主题“骑手通行协商”，实际联网搜集3家媒体报道（5个不同场所、并非5个独立媒体旁证）与10篇文献摘要/HTML；用二手访谈定性路径形成3维经验矩阵和约3688汉字7章探索稿，13项绑定主张。**本地Python编排器运行14/14、单元测试5/5通过**，输出`technical_complete=true`、`scientific_acceptance=not_passed_without_genuine_independent_review`。真实V16 writer在完整仓库中的执行、GitHub Actions通过、独立终审未获得有效凭证，正式G7不通过。材料/论文见`handoff_runs/rider_access_20261123/ai_paper5/`；完整本地输入和哈希快照以对话ZIP交付，非仓库内全量运行记录。
+
+## 2026-11-23 5.0 自动执行层候选（00/v011）
+在原 v010 14 阶段编排器之上增设真实 AI 适配和自动循环，当前接入 Codex CLI --search，本地执行环境必须已登录；阶段源文件附带真实 CLI 调用日志，重试预算和失败恢复。写作继续走实际 V16；完全拒绝 Stata 及假独立审查。离线模拟测试不替代登录实跑，main 与生产注册表未修改。
