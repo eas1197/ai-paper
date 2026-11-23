@@ -236,10 +236,14 @@ def step(run_id, *, executor=None):
                 "real events from the frozen reality.json at "+str(work)+
                 ". Sources is an ID-to-HTTPS-URL map; each event has identity and facts "
                 "with source_id, statement, use, key and credibility status. "
-                "One report describing two places is not two independent reports.")
+                "One report describing two places is not two independent reports.",
+                must_search=True)
+            source_proof(packet,trace,url_event)
             path=folder/"response.json"
+            events_path=folder/"events.jsonl"
             cmd=[sys.executable,"-B",str(heritage.V3_EVENTS),
-                 "--dev-run",str(work),"--input",str(path)]
+                 "--dev-run",str(work),"--input",str(path),
+                 "--events-jsonl",str(events_path)]
             heritage.original_call(cmd)
         task=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
         research_task=json.dumps(task,ensure_ascii=False)+(
