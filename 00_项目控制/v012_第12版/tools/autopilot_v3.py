@@ -244,9 +244,11 @@ def step(run_id, *, executor=None):
             packet,folder,session,trace,url_event=engine.call(
                 work,"events","Compare at least two distinct independently identified "
                 "real events from the frozen reality.json at "+str(work)+
-                ". Sources is an ID-to-HTTPS-URL map; each event has identity and facts "
-                "with source_id, statement, use, key and credibility status. "
-                "One report describing two places is not two independent reports.",
+                ". Sources is an ID-to-HTTPS-URL map; open each cited source page "
+                "with the native open_page/find_in_page action before using it. Search snippets "
+                "alone are not sufficient. Each event has identity and facts with source_id, "
+                "statement, use, key and credibility status. One report describing two places "
+                "is not two independent reports.",
                 must_search=True)
             event_source_proof(packet,trace,url_event)
             path=folder/"response.json"
