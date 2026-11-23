@@ -138,7 +138,12 @@ def status(run_id, *, progress=False):
         return {"action": "original_06_adequacy_then_v15_v16",
                 "status": "awaiting_original_independent_material_and_writing_receipts",
                 "modules": [str(MATERIAL), str(MATERIAL_REPAIR), str(MATERIAL_ADEQUACY),
-                            str(REVISION), str(V15), str(V16)]}
+                            str(REVISION), str(V15), str(V16)],
+                "writer4_dispatch": (
+                    "writer4 --action prepare --packet <reviewed V15 plan_input.json> "
+                    "--workspace <new workspace> --mode exploratory"
+                ),
+                "writer4_formal_status": "blocked_until_original_independent_receipts"}
     return {"action": "original_v3_requires_staged_evidence_or_independent_review",
             "stage": stage,
             "prepare": original_command("prepare", run_id),
