@@ -249,7 +249,11 @@ def step(run_id, *, executor=None):
             heritage.original_call(cmd)
         task=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
         research_task=json.dumps(task,ensure_ascii=False)+(
-            "\nRecord original explanation and what evidence would distinguish it.")
+            "\nRecord original explanation and what evidence would distinguish it. "
+            "Only event_comparison retained_facts with source_verification_status=verified "
+            "may be treated as verified empirical support. Treat uncertain_facts, pending_sources, "
+            "and pending source_verification_status as unresolved gaps; do not cite or promote them "
+            "as established facts.")
         research_call=completed_call(work,"research_exchange",research_task)
         if research_call is None:
             researcher,ra,rs,rt,ref=engine.call(
