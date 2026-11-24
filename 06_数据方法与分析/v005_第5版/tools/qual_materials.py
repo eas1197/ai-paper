@@ -77,10 +77,14 @@ def read_materials(folder, budget):
     result = load(folder / "response.json")
     candidates, excluded = [], []
     for row in result["materials"]:
+        missing = [key for key in FIELDS if not isinstance(row.get(key), str) or not row[key].strip()]
+        if missing:
+            excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete",
+                             "missing_fields": missing})
+            continue
         event = url_event(row["url"], trace)
         if (not event or row.get("kind") not in KINDS - {"researcher_inference"}
-                or row.get("path") not in PATHS
-                or any(not row.get(key, "").strip() for key in FIELDS)):
+                or row.get("path") not in PATHS):
             excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete"})
             continue
         candidates.append(dict(row, event_id=event, material_id=digest(row)[:16]))
