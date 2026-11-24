@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **I11（当前唯一最小任务）**：验证跨 Chat/Codex 交接后能按同一研究 ID 和任务 ID 恢复。
-   - 状态：pending；核对原交接任务包、执行绑定与恢复入口，测试身份一致及错配拒绝。
+   - 状态：implemented_unverified；I11 新增跨执行器续接集成用例：保存Chat交接包后由Codex按同一research_id/stage_id/task_id/snapshot恢复；Chat/Codex两种结果接收均绑定同一快照，错研究/错任务拒绝。新增1项离线测试待CI，不计完成。
    - 完成后：提交并转 I12。
 
 I10 已验收：[续跑原始材料保护与新版本追加保存](00_项目控制/v012_第12版/outputs/I10_续跑原始材料保护与新版本追加保存.md)；I10 verified（续跑/写作产物历史归档及版本追加；strict `45422661925` success，新增2/2，348+46+10+4+7+17=432项去重；Handoff `45422661906` success；V16独立CI `45422464340` success；代码 `d15a2c5`）。

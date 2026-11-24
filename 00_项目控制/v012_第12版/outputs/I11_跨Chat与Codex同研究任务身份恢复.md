@@ -1,0 +1,5 @@
+# I11 跨 Chat/Codex 同研究与任务身份恢复
+
+状态：implemented_unverified，待CI。
+
+现有C05 chat_task/codex_task共用冻结任务包及同一C04快照；C15统一接收器按receiver选定的research_id、task_snapshot和独立expected_execution核验结果，C19/C20分别校验Chat/Codex原始凭证。I11新增跨模块集成回归：在真实原始init的离线fixture中先生成Chat任务并保存handoff/executor_handoff.json，再按交接包research_id和stage_id调用Codex恢复；核对research_id、stage_id、task_id、snapshot_sha256及完整task_packet不变。随后分别生成Chat/Codex不同provenance的结果包，两个接收结果都绑定同一task_snapshot并通过C15字节/独立执行绑定检查；wrong task_id及wrong research_id均拒绝。无真实Chat/Codex会话、无真实搜索；结果状态仅records_hash_bound_pending_source_verification，不构成学术或正式通过。新增1项离线集成测试待CI。
