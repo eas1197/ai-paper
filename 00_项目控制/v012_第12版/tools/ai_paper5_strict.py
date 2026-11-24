@@ -492,6 +492,7 @@ def build_parser():
     p.add_argument("--preliminary-attempt",default="attempt_001")
     p.add_argument("--event-focus",action="store_true")
     p.add_argument("--task-output",type=Path,help="Prepare only: frozen material task, no search")
+    p.add_argument("--analysis-kind",choices=("framework","matrix"),help="With --task-output, prepare original analysis inputs")
     p=sub.add_parser("resume-writing");p.add_argument("--run-id",required=True)
     p.add_argument("--attempt",default="attempt_001")
     p=sub.add_parser("writer4")
@@ -572,11 +573,17 @@ def main(argv=None):
         elif args.cmd=="materials" and args.task_output:
             if any((args.conversion,args.review,args.matrix,args.framework,args.framework_revision,args.event_focus)):
                 raise ValueError("Material task preparation cannot execute or change reviewed inputs")
-            from material_task import prepare_material_task
             output=cli_output_path(args.task_output,run_id=args.run_id)
-            result=prepare_material_task(args.run_id)
+            if args.analysis_kind:
+                from analysis_task import prepare_analysis_task
+                result=prepare_analysis_task(args.run_id,args.analysis_kind,args.attempt)
+            else:
+                from material_task import prepare_material_task
+                result=prepare_material_task(args.run_id)
             write_cli_output(output,result)
         elif args.cmd=="materials":
+            if args.analysis_kind:
+                raise ValueError("--analysis-kind requires --task-output")
             doctor();result={"original_output":original_call(original_material_command(
                 args.run_id,attempt=args.attempt,conversion=args.conversion,review=args.review,
                 matrix=args.matrix,framework=args.framework,framework_revision=args.framework_revision,
