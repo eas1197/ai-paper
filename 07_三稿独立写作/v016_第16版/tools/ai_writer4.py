@@ -325,10 +325,25 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
     record = load(workspace / "writer_manifest.json")
     packet = load(packet_path)
     validate_packet(packet)
-    profile, snapshot, rolemap, rules, _units, locks, _argument_rules, snapshot_warnings, resource_versions = language_resources()
+    def pending_language_review(errors):
+        # Supersede any previous candidate request; do not consume stale language rules.
+        save(workspace / "writing_review_request.json", {
+            "packet_sha256": hash_file(packet_path),
+            "manuscript_sha256": hash_file(manuscript_path),
+            "claim_ledger_sha256": hash_file(claims_path),
+            "gate": "G7", "formal_pass": False, "independent_review": "pending",
+            "language_resource_status": "pending_recheck",
+            "status": "technical_revisions_needed", "structural_errors": errors,
+            "scope": "Language resource stop; no new style or scientific review performed",
+        })
+        return {"status": "technical_revisions_needed", "errors": errors,
+                "language_resource_status": "pending_recheck"}
+
+    try:
+        profile, snapshot, rolemap, rules, _units, locks, _argument_rules, snapshot_warnings, resource_versions = language_resources()
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return pending_language_review(["Language resource invalid: " + str(exc)])
     problems = []
-    if record["packet_sha256"] != hash_file(packet_path):
-        problems.append("Writing packet changed since prepare")
     if record["resource_sha256"] != locks:
         problems.append("Language resource or writer mapping changed")
     if record.get("resource_snapshot_warnings") != snapshot_warnings:
@@ -338,6 +353,10 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
             or record.get("v004_resource_version") != resource_versions["v004"]
             or record.get("language_formal_resource_status") != snapshot["status"]):
         problems.append("Language resource version or formal status changed")
+    if problems:
+        return pending_language_review(problems)
+    if record["packet_sha256"] != hash_file(packet_path):
+        problems.append("Writing packet changed since prepare")
     if record["chapter_ids"] != [c["id"] for c in packet["chapters"]]:
         problems.append("Chapter structure changed")
     if record["mode"] != "exploratory":

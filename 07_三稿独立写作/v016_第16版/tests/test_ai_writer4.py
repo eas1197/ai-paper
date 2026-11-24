@@ -214,6 +214,41 @@ class Writer4Test(unittest.TestCase):
                         <= set(review["protected_boundaries"]))
         self.assertFalse(writer.load(self.work / "writing_review_request.json")["formal_pass"])
 
+    def test_language_resource_failure_stops_submit_and_invalidates_candidate(self):
+        writer.prepare(self.packet_path, self.work)
+        draft = self.root / "draft.md"
+        draft.write_text("## 一\n材料。\n", encoding="utf-8")
+        claims = self.root / "claims.json"
+        writer.save(claims, {"claims": []})
+        writer.save(self.work / "writing_review_request.json",
+                    {"status": "exploratory_draft_awaiting_review", "formal_pass": False})
+        before = (draft.read_bytes(), claims.read_bytes())
+        for failure in (FileNotFoundError("missing language resource"),
+                        ValueError("Language snapshot dependency changed"),
+                        ValueError("Invalid qualitative map or v005/V003 rule reference")):
+            with patch.object(writer, "language_resources", side_effect=failure):
+                result = writer.review_draft(self.packet_path, self.work, draft, claims)
+            self.assertEqual(result["language_resource_status"], "pending_recheck")
+            self.assertEqual(result["status"], "technical_revisions_needed")
+            saved = writer.load(self.work / "writing_review_request.json")
+            self.assertFalse(saved["formal_pass"])
+            self.assertEqual(saved["language_resource_status"], "pending_recheck")
+            self.assertFalse((self.work / "style_review.json").exists())
+            self.assertEqual(before, (draft.read_bytes(), claims.read_bytes()))
+
+    def test_language_lock_change_stops_before_new_style_review(self):
+        writer.prepare(self.packet_path, self.work)
+        draft = self.root / "draft.md"
+        draft.write_text("材料。", encoding="utf-8")
+        claims = self.root / "claims.json"
+        writer.save(claims, {"claims": []})
+        resources = list(writer.language_resources())
+        resources[5] = dict(resources[5], changed={"sha256": "0" * 64})
+        with patch.object(writer, "language_resources", return_value=tuple(resources)):
+            result = writer.review_draft(self.packet_path, self.work, draft, claims)
+        self.assertEqual(result["language_resource_status"], "pending_recheck")
+        self.assertFalse((self.work / "style_review.json").exists())
+
     def test_rejects_missing_evidence_from_dimension(self):
         self.data["chapters"][3]["sections"][0]["source_ids"] = ["T"]
         self.packet_path.write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")
