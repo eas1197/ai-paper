@@ -7,7 +7,7 @@ import ai_paper5_strict as strict
 import subprocess
 from jsonschema import ValidationError
 from run_observation import (STATES, observation, attempt_observation, command_observation,
-    classify_failure, OriginalBudgetExhausted)
+    classify_failure, OriginalBudgetExhausted, recovery_policy, retry_decision)
 
 
 class RuntimeObservationTest(unittest.TestCase):
@@ -56,6 +56,37 @@ class RuntimeObservationTest(unittest.TestCase):
             self.assertEqual(result["outcome_kind"], kind)
             self.assertEqual(result["runtime_status"], "blocked" if kind=="evidence_missing" else "failed")
             self.assertFalse(result["academic_approval_granted"])
+
+    def test_i13_every_failure_has_explicit_nonautomatic_recovery_policy(self):
+        expected = {
+            "network_failure":"retryable", "model_timeout":"retryable",
+            "executor_unavailable":"manual", "schema_error":"manual",
+            "evidence_missing":"manual", "review_failure":"manual",
+            "technical_failure":"manual", "academic_failure":"terminate",
+            "research_failure":"terminate", "budget_exhausted":"terminate",
+            "user_cancelled":"terminate",
+        }
+        for outcome, disposition in expected.items():
+            with self.subTest(outcome=outcome):
+                policy = recovery_policy(outcome)
+                self.assertEqual(policy["disposition"], disposition)
+                self.assertFalse(policy["automatic_retry"])
+                self.assertFalse(policy["formal_eligible"])
+                self.assertTrue(policy["next_action"])
+
+    def test_i13_retry_requires_remaining_original_budget_new_attempt_and_user_authorization(self):
+        kwargs = dict(remaining_budget=2, task_snapshot_current=True,
+                      previous_attempt_preserved=True, new_attempt_identity=True,
+                      explicit_retry_authorized=True)
+        self.assertTrue(retry_decision("network_failure", **kwargs)["allowed"])
+        self.assertTrue(retry_decision("model_timeout", **kwargs)["allowed"])
+        for change in ({"remaining_budget":0}, {"remaining_budget":None},
+                       {"task_snapshot_current":False}, {"previous_attempt_preserved":False},
+                       {"new_attempt_identity":False}, {"explicit_retry_authorized":False}):
+            values = {**kwargs, **change}
+            self.assertFalse(retry_decision("network_failure", **values)["allowed"])
+        self.assertFalse(retry_decision("budget_exhausted", **kwargs)["allowed"])
+        self.assertFalse(retry_decision("academic_failure", **kwargs)["allowed"])
 
     def test_cli_exit_zero_can_be_waiting(self):
         result={"action":"await_independent_review","status":"blocked_by_original_v3_gate"}

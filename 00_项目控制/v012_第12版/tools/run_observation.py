@@ -67,13 +67,112 @@ def classify_failure(error):
     return classify_failure_message(error)
 
 
+RECOVERY_POLICIES = {
+    "network_failure": {
+        "disposition": "retryable",
+        "next_action": "Check the transient network fault, then request an explicitly authorized new attempt.",
+        "preconditions": ["same current task snapshot", "original remaining call/time budget is positive",
+                         "previous attempt and receipts are preserved", "new attempt identity",
+                         "explicit retry authorization"],
+    },
+    "model_timeout": {
+        "disposition": "retryable",
+        "next_action": "Inspect timeout and partial receipts, then request an explicitly authorized new attempt.",
+        "preconditions": ["same current task snapshot", "original remaining call/time budget is positive",
+                         "previous attempt and partial receipts are preserved", "new attempt identity",
+                         "explicit retry authorization"],
+    },
+    "executor_unavailable": {
+        "disposition": "manual",
+        "next_action": "Restore and verify the selected executor or login before resuming.",
+        "preconditions": ["executor availability independently verified", "same active task snapshot"],
+    },
+    "schema_error": {
+        "disposition": "manual",
+        "next_action": "Inspect the schema/contract mismatch; correct and freeze a new task version before resubmission.",
+        "preconditions": ["schema error understood", "new or revalidated task snapshot", "old result preserved"],
+    },
+    "evidence_missing": {
+        "disposition": "manual",
+        "next_action": "Obtain the missing original source, file or receipt; do not rerun the model to fabricate it.",
+        "preconditions": ["missing evidence supplied and hash-checked", "dependent snapshot revalidated"],
+    },
+    "academic_failure": {
+        "disposition": "terminate",
+        "next_action": "Stop this topic path; only an explicit new research decision may start another path.",
+        "preconditions": ["no automatic retry or same-topic promotion"],
+    },
+    "budget_exhausted": {
+        "disposition": "terminate",
+        "next_action": "Stop until the user explicitly authorizes a new original budget and a new verified manifest.",
+        "preconditions": ["no automatic retry", "no implicit budget increase"],
+    },
+    "user_cancelled": {
+        "disposition": "terminate",
+        "next_action": "Remain stopped until the user explicitly starts a new run or authorizes resumption.",
+        "preconditions": ["no automatic restart"],
+    },
+    "technical_failure": {
+        "disposition": "manual",
+        "next_action": "Inspect and refine the unclassified technical failure before any retry.",
+        "preconditions": ["failure reason classified", "original budget checked", "previous attempt preserved"],
+    },
+    "research_failure": {
+        "disposition": "terminate",
+        "next_action": "Stop the current research path; do not promote or retry automatically.",
+        "preconditions": ["new research path requires explicit authorization"],
+    },
+    "review_failure": {
+        "disposition": "manual",
+        "next_action": "Restore the missing independent reviewer/session/receipt and revalidate the same task.",
+        "preconditions": ["reviewer independence and original execution records checked"],
+    },
+}
+
+
+def recovery_policy(outcome_kind):
+    if outcome_kind is None:
+        return None
+    if outcome_kind not in RECOVERY_POLICIES:
+        raise ValueError("Unknown recovery outcome")
+    return {"outcome_kind": outcome_kind, **RECOVERY_POLICIES[outcome_kind],
+            "automatic_retry": False, "formal_eligible": False}
+
+
+def retry_decision(outcome_kind, *, remaining_budget=None, task_snapshot_current=False,
+                   previous_attempt_preserved=False, new_attempt_identity=False,
+                   explicit_retry_authorized=False):
+    """Only transient network/timeout failures can be retried, and never automatically."""
+    policy = recovery_policy(outcome_kind)
+    if policy is None or policy["disposition"] != "retryable":
+        return {"allowed": False, "disposition": policy["disposition"] if policy else "manual",
+                "reason": "Outcome is not eligible for retry", "automatic_retry": False}
+    if task_snapshot_current is not True:
+        reason = "Current task snapshot is not verified"
+    elif type(remaining_budget) not in (int, float) or remaining_budget <= 0:
+        reason = "Original remaining budget is unknown or exhausted"
+    elif previous_attempt_preserved is not True:
+        reason = "Previous attempt and receipts are not preserved"
+    elif new_attempt_identity is not True:
+        reason = "A new attempt identity is required"
+    elif explicit_retry_authorized is not True:
+        reason = "Explicit retry authorization is required"
+    else:
+        return {"allowed": True, "disposition": "retryable",
+                "reason": "All original-budget and preservation guards passed",
+                "automatic_retry": False}
+    return {"allowed": False, "disposition": "manual", "reason": reason,
+            "automatic_retry": False}
+
+
 def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None):
     if status not in STATES:
         raise ValueError("Unknown runtime observation")
     if outcome_kind not in {None, *OUTCOME_KINDS}:
         raise ValueError("Unknown runtime outcome")
     return {"runtime_status":status,"outcome_kind":outcome_kind,"scope":scope,"original_stage":original_stage,
-        "reason":reason,"academic_approval_granted":False,"formal_eligible":False}
+        "reason":reason,"recovery_policy":recovery_policy(outcome_kind),
+        "academic_approval_granted":False,"formal_eligible":False}
 
 
 def attempt_observation(record):
