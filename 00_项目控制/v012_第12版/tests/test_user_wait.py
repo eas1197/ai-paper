@@ -4,7 +4,7 @@ import uuid
 from unittest.mock import Mock
 import ai_paper5_strict as strict
 from autopilot_v3 import step
-from user_wait import request_hold, acknowledge_hold
+from user_wait import request_hold, acknowledge_hold, cancel_run
 from run_observation import command_observation
 from runtime_waiting import attach_wait
 
@@ -54,6 +54,19 @@ class UserWaitTest(unittest.TestCase):
         self.assertEqual(strict.state_of(self.run)["status"],"reality")
         self.assertFalse(result["advance_gate"])
         self.assertNotEqual(strict.status(self.run).get("status"),"waiting_for_user")
+
+    def test_explicit_cancel_preserves_original_and_stops_scheduler(self):
+        before=(self.work/"staged_topic.json").read_bytes()
+        with self.assertRaises(ValueError): cancel_run(self.run,"")
+        result=cancel_run(self.run,"Synthetic operator cancellation")
+        self.assertEqual(result,cancel_run(self.run,"Synthetic operator cancellation"))
+        engine=Mock()
+        self.assertEqual(result,step(self.run,executor=engine))
+        self.assertEqual(result,strict.status(self.run,progress=True))
+        self.assertEqual(command_observation("advance",result)["outcome_kind"],"user_cancelled")
+        self.assertEqual(before,(self.work/"staged_topic.json").read_bytes())
+        engine.call.assert_not_called()
+        with self.assertRaises(ValueError): request_hold(self.run,"question")
 
 
 if __name__=="__main__": unittest.main()
