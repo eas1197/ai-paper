@@ -16,3 +16,7 @@ C12 首次 CI 45316989400 发现 jsonschema 默认未安装 RFC3339 日期校验
 ## C13 五阶段独立记录
 
 每条 literature 来源必须包含 discovery_status（发现）、原 open_status（打开）、abstract_read_status（摘要读取）、fulltext_read_status（全文读取）、formal_inclusion_status（正式纳入）五个独立字段。后四个中不由其他状态自动推定；打开、摘要或全文读取的声明均非学术门禁回执。人工文件阅读可能不涉及网页打开，故不硬编码先后关系。未核实记录 unknown/pending_original_gate，未纳入为 not_included；执行器提交包禁止 included/verified 等自报正式通过，原 gate 的最终纳入由接收器独立记录，C18/C21 后续接入。非 literature 来源的 literature_stages 必须为 null。遵守 B09 原 v009 摘要级与生产 G4 全文资格的不同边界。
+
+## C14 经验材料独立字段
+
+empirical 来源必须具有 empirical_material：来源说明、事件或对象、事件日期/时间（保留原始精度）、具体定位、内容类型、情境、采集路径、访问边界、可核实事实候选、研究者解释及不能支持的判断。公共 source 中仍保留原始 URL、作者/媒介、打开声明、行动 ID 和失败原因。内容类型沿用原 06/v005 的 actor_statement/reporter_account/official_rule/documented_action；other/unknown 仅为统一候选承载，不能替代原 06 资格，researcher_inference 只能放解释字段。事实候选独立包含 statement/locator/status/limits，status 只允许 reported/needs_verification/contradicted，不得自报 verified；实际事实级凭证和独立核验仍由原 event_protocol/06 接收及后续 C19–C24 判断。未知值显式 null/空数组，保留失败和不能支持的判断，不补造材料。非经验来源 empirical_material 为 null。

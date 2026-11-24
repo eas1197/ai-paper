@@ -619,6 +619,16 @@
               "type": "null"
             }
           ]
+        },
+        "empirical_material": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/empirical_material"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -641,7 +651,8 @@
         "limits",
         "failure_reasons",
         "action_ids",
-        "literature_stages"
+        "literature_stages",
+        "empirical_material"
       ],
       "additionalProperties": false,
       "allOf": [
@@ -666,6 +677,32 @@
           "else": {
             "properties": {
               "literature_stages": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "const": "empirical"
+              }
+            },
+            "required": [
+              "source_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "empirical_material": {
+                "$ref": "#/$defs/empirical_material"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "empirical_material": {
                 "type": "null"
               }
             }
@@ -710,6 +747,142 @@
         "abstract_read_status",
         "fulltext_read_status",
         "formal_inclusion_status"
+      ],
+      "additionalProperties": false
+    },
+    "empirical_fact_candidate": {
+      "type": "object",
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "reported",
+            "needs_verification",
+            "contradicted"
+          ]
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "statement",
+        "locator",
+        "status",
+        "limits"
+      ],
+      "additionalProperties": false
+    },
+    "empirical_material": {
+      "type": "object",
+      "properties": {
+        "source_description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "event_or_subject": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "event_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "locator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "content_type": {
+          "enum": [
+            "actor_statement",
+            "reporter_account",
+            "official_rule",
+            "documented_action",
+            "other",
+            "unknown"
+          ]
+        },
+        "context": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "collection_path": {
+          "enum": [
+            "secondary_interviews",
+            "online_qualitative",
+            "other",
+            "unknown"
+          ]
+        },
+        "access": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "verifiable_facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/empirical_fact_candidate"
+          }
+        },
+        "researcher_interpretations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unsupported_judgments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "source_description",
+        "event_or_subject",
+        "event_date",
+        "locator",
+        "content_type",
+        "context",
+        "collection_path",
+        "access",
+        "verifiable_facts",
+        "researcher_interpretations",
+        "unsupported_judgments"
       ],
       "additionalProperties": false
     }

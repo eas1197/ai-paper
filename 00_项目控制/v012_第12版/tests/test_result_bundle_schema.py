@@ -38,7 +38,24 @@ def source():
         "limits": ["Not actual evidence"], "failure_reasons": [], "action_ids": ["open-1"],
         "literature_stages": {"discovery_status": "discovered", "abstract_read_status": "unknown",
                               "fulltext_read_status": "not_read", "formal_inclusion_status": "pending_original_gate"},
+        "empirical_material": None,
     }
+
+
+def empirical_source():
+    return dict(source(), source_type="empirical", literature_stages=None,
+                empirical_material={
+                    "source_description": "Offline report fixture",
+                    "event_or_subject": "Reported action in a fixture",
+                    "event_date": "2024-01", "locator": "Paragraph 2",
+                    "content_type": "reporter_account", "context": "Fixture context",
+                    "collection_path": "online_qualitative", "access": "Fixture only",
+                    "verifiable_facts": [{"statement": "An action was reported",
+                        "locator": "Paragraph 2", "status": "reported",
+                        "limits": ["Report is not independent corroboration"]}],
+                    "researcher_interpretations": ["Possible coordination mechanism"],
+                    "unsupported_judgments": ["Actual prevalence and causal effect"],
+                })
 
 
 def search_action():
@@ -135,10 +152,39 @@ class ResultEnvelopeTest(unittest.TestCase):
                 dict(item, literature_stages=stages)])))
         self.assertFalse(self.validator.is_valid(dict(result(), sources=[
             dict(item, literature_stages=None)])))
-        empirical = dict(item, source_type="empirical", literature_stages=None)
+        empirical = empirical_source()
         self.validator.validate(dict(result(), sources=[empirical]))
         self.assertFalse(self.validator.is_valid(dict(result(), sources=[
             dict(empirical, literature_stages=item["literature_stages"])])))
+
+    def test_c14_empirical_fields_separate_fact_and_interpretation(self):
+        item = empirical_source()
+        material = item["empirical_material"]
+        self.validator.validate(dict(result(), sources=[item]))
+        for key in material:
+            broken = dict(material)
+            del broken[key]
+            self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+                dict(item, empirical_material=broken)])))
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(item, empirical_material=dict(material, content_type="researcher_inference"))])))
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(item, empirical_material=dict(material, verifiable_facts=["An interpretation"]))])))
+
+    def test_c14_missing_material_and_self_verified_fact_rejected_or_pending(self):
+        item = empirical_source()
+        material = item["empirical_material"]
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(item, empirical_material=None)])))
+        fact = dict(material["verifiable_facts"][0], status="verified")
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(item, empirical_material=dict(material, verifiable_facts=[fact]))])))
+        missing = dict(material, event_date=None, locator=None, content_type="unknown",
+                       verifiable_facts=[], researcher_interpretations=[],
+                       unsupported_judgments=["No accessible evidence"])
+        self.validator.validate(dict(result(), sources=[dict(item, empirical_material=missing)]))
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(source(), empirical_material=material)])))
 
 
 if __name__ == "__main__":
