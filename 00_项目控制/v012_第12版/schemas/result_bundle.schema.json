@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "ai-paper shared result envelope, C11",
-  "description": "Executor-neutral identity with mutually exclusive native provenance. Structure never authenticates execution or establishes eligibility.",
+  "title": "ai-paper unified result bundle, C12",
+  "description": "Transport only: identities, distinct provenance, action/source claims and explicit missing evidence. Original receivers decide actual academic eligibility.",
   "type": "object",
   "properties": {
     "schema_version": {
@@ -55,13 +55,60 @@
           "$ref": "#/$defs/manual_provenance"
         }
       ]
+    },
+    "execution_time": {
+      "type": "object",
+      "properties": {
+        "started_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "started_at",
+        "finished_at"
+      ],
+      "additionalProperties": false
+    },
+    "search_actions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/search_action"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "failure_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "required": [
     "schema_version",
     "task_snapshot",
     "executor",
-    "provenance"
+    "provenance",
+    "execution_time",
+    "search_actions",
+    "sources",
+    "failure_reasons"
   ],
   "additionalProperties": false,
   "allOf": [
@@ -353,6 +400,233 @@
         "verification_status",
         "original_files",
         "missing_fields"
+      ],
+      "additionalProperties": false
+    },
+    "search_action": {
+      "type": "object",
+      "properties": {
+        "action_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action_type": {
+          "enum": [
+            "search",
+            "open_page",
+            "find_in_page",
+            "other"
+          ]
+        },
+        "occurred_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "query": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "original_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "record_locator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "failure_reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "action_id",
+        "action_type",
+        "occurred_at",
+        "query",
+        "original_url",
+        "record_locator",
+        "source_ids",
+        "failure_reason"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "enum": [
+            "literature",
+            "empirical",
+            "other"
+          ]
+        },
+        "original_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "metadata_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "abstract_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "publication": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "publication_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "doi": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "abstract_locator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "open_status": {
+          "enum": [
+            "opened",
+            "not_opened",
+            "unknown"
+          ]
+        },
+        "excerpt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "paraphrase": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "relevance_reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "dedup_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "failure_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "action_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "source_id",
+        "source_type",
+        "original_url",
+        "metadata_url",
+        "abstract_url",
+        "title",
+        "authors",
+        "publication",
+        "publication_date",
+        "doi",
+        "abstract_locator",
+        "open_status",
+        "excerpt",
+        "paraphrase",
+        "relevance_reason",
+        "dedup_key",
+        "limits",
+        "failure_reasons",
+        "action_ids"
       ],
       "additionalProperties": false
     }
