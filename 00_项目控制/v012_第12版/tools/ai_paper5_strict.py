@@ -289,18 +289,21 @@ def validate_v15_writer_handoff(packet_path):
             or not matrix_path.is_relative_to(framework_root)):
         raise ValueError("V15 must reference this run's reviewed analysis matrix")
     receipt_path = matrix_path.parent / "material_receipt.json"
-    if not matrix_path.is_file() or not receipt_path.is_file():
-        raise ValueError("V15 reviewed matrix or source receipt is missing")
-    matrix, receipt = read(matrix_path), read(receipt_path)
+    framework_path = matrix_path.parent / "framework.json"
+    if not matrix_path.is_file() or not receipt_path.is_file() or not framework_path.is_file():
+        raise ValueError("V15 reviewed matrix, framework or source receipt is missing")
+    matrix, receipt, framework = read(matrix_path), read(receipt_path), read(framework_path)
     matrix_sha, receipt_sha = file_sha(matrix_path), file_sha(receipt_path)
     if (request.get("analysis_matrix_sha256") != matrix_sha
             or admission.get("matrix_sha256") != matrix_sha):
         raise ValueError("V15 reviewed matrix hash mismatch")
+    request_contract = request.get("question_binding")
     if (admission.get("receipt_sha256") != receipt_sha
-            or request.get("question_binding", {}).get("receipt_sha256") != receipt_sha):
+            or not isinstance(request_contract, dict)
+            or request_contract.get("receipt_sha256") != receipt_sha):
         raise ValueError("V15 source receipt hash mismatch")
     contract = packet.get("question_binding")
-    if (not isinstance(contract, dict) or request.get("question_binding") != contract
+    if (not isinstance(contract, dict) or request_contract != contract
             or admission.get("question_binding") != contract
             or matrix.get("question_binding") != contract
             or contract.get("receipt_sha256") != receipt_sha):
@@ -315,16 +318,47 @@ def validate_v15_writer_handoff(packet_path):
     from material_adequacy import validate_reviewed_plan_sources
     from writing_plan import reviewed_dimension_sources
     if (matrix.get("collection_sha256") != evidence_digest(receipt)
-            or matrix.get("framework_sha256") != receipt.get("framework_sha256")):
+            or matrix.get("framework_sha256") != receipt.get("framework_sha256")
+            or evidence_digest(framework) != matrix.get("framework_sha256")):
         raise ValueError("V15 matrix no longer matches its source receipt or framework")
+    framework_dimensions = [
+        {"id": row["id"], "title": row["name"], "deduction": row["deduction"]}
+        for row in framework.get("dimensions", [])
+    ]
+    if (framework.get("core_question") != packet.get("core_question")
+            or framework.get("core_concept") != packet.get("framework", {}).get("core_concept")
+            or framework_dimensions != packet.get("framework", {}).get("dimensions")):
+        raise ValueError("V15 writing framework differs from the frozen 06 framework")
     eligible = admission.get("eligible_material_ids")
     materials = receipt.get("materials")
-    if (not isinstance(eligible, list) or not eligible or len(set(eligible)) != len(eligible)
-            or not isinstance(materials, list)):
+    if (not isinstance(eligible, list) or not eligible
+            or any(not isinstance(identifier, str) or not identifier.strip() for identifier in eligible)
+            or len(set(eligible)) != len(eligible) or not isinstance(materials, list)
+            or not isinstance(admission.get("review_sha256"), str) or not admission["review_sha256"]):
         raise ValueError("V15 eligible source ID set is missing or malformed")
     by_id = {row.get("material_id"): row for row in materials if isinstance(row, dict)}
     if len(by_id) != len(materials) or any(identifier not in by_id for identifier in eligible):
         raise ValueError("V15 eligible source ID is absent from the original receipt")
+    matrix_rows = matrix.get("rows")
+    if not isinstance(matrix_rows, list):
+        raise ValueError("V15 reviewed matrix rows are missing")
+    matrix_material_ids = set()
+    for row in matrix_rows:
+        if not isinstance(row, dict) or not isinstance(row.get("evidence"), list):
+            raise ValueError("V15 reviewed matrix evidence rows are malformed")
+        for item in row["evidence"]:
+            if not isinstance(item, dict):
+                raise ValueError("V15 reviewed matrix evidence item is malformed")
+            identifier = item.get("material_id")
+            original = by_id.get(identifier)
+            if original is None:
+                raise ValueError("V15 matrix source ID is absent from the original receipt")
+            for field in ("url", "locator", "kind"):
+                if item.get(field) != original.get(field) or not original.get(field):
+                    raise ValueError("V15 matrix source identity differs from original receipt")
+            matrix_material_ids.add(identifier)
+    if not set(eligible) <= matrix_material_ids:
+        raise ValueError("V15 eligible source ID is absent from the reviewed matrix")
     approved = {identifier: by_id[identifier] for identifier in eligible}
     validate_reviewed_plan_sources(packet, contract, receipt, approved)
     chapter_sources = reviewed_dimension_sources(packet, matrix, set(eligible))

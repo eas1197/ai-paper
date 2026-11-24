@@ -37,6 +37,8 @@ def make_v15_fixture(root):
     material = {"material_id": "E", "url": "https://example.org/evidence",
                 "locator": "Fixture source, paragraph 2", "kind": "official_rule"}
     receipt = {"framework_sha256": evidence_digest(framework), "materials": [material]}
+    (matrix_dir / "framework.json").write_text(
+        json.dumps(framework, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     receipt_path = matrix_dir / "material_receipt.json"
     receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     receipt_sha = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
@@ -64,6 +66,7 @@ def make_v15_fixture(root):
         },
         "framework": {"prior_explanation": "Prior", "gap": "Gap", "theory_choice": "Theory",
                       "deduction": "Deduction", "increment": "Increment", "integration": "Integration",
+                      "core_concept": "Fixture concept",
                       "dimensions": [{"id": "d0", "title": "Dimension", "deduction": "Fixture deduction"}]},
         "case": {"background": "Background", "selection": "Selection",
                  "materials": "Materials", "method": "Method"},
@@ -281,6 +284,20 @@ class StrictTests(TestCase):
             matrix_path.write_text(matrix_path.read_text(encoding="utf-8")+"\n",encoding="utf-8")
             with self.assertRaisesRegex(ValueError,"matrix hash mismatch"):
                 m.validate_v15_writer_handoff(changed_matrix)
+
+            changed_matrix_source=make_v15_fixture(root/"changed_matrix_source")
+            matrix_path=changed_matrix_source.parent.parent.parent/"qualitative_framework"/"attempt_001"/"analysis_matrix_reviewed.json"
+            matrix=json.loads(matrix_path.read_text(encoding="utf-8"))
+            matrix["rows"][0]["evidence"][0]["locator"]="Tampered matrix locator"
+            matrix_path.write_text(json.dumps(matrix,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            request_path=changed_matrix_source.parent/"writing_plan_review_request.json"
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            new_matrix_sha=__import__("hashlib").sha256(matrix_path.read_bytes()).hexdigest()
+            request["analysis_matrix_sha256"]=new_matrix_sha
+            request["material_admission"]["matrix_sha256"]=new_matrix_sha
+            request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"matrix source identity differs"):
+                m.validate_v15_writer_handoff(changed_matrix_source)
 
     def test_writer4_preflight_stops_before_v016_dispatch(self):
         with tempfile.TemporaryDirectory() as temporary:
