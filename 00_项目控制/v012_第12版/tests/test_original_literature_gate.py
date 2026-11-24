@@ -1,6 +1,7 @@
 """C21 actual original receiver runs against an explicitly synthetic fixture."""
 import json
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 import test_result_bundle_binding as binding
@@ -100,6 +101,21 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         self.assertFalse(report["stage_advanced"])
         self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"],"initial")
         self.assertTrue((self.work/"initial/literature_matrix.json").exists())
+
+    def test_c30_unified_result_delegates_to_original_v009_receipt_without_advancing(self):
+        bundle = self.sample()
+        staged, _, _ = gate._original()
+        with patch.object(staged, "receipt", wraps=staged.receipt) as original_receipt:
+            report = self.receive(bundle)
+        original_receipt.assert_called_once_with(self.work / "initial", self.journals)
+        self.assertEqual(report["original_gate_status"],
+                         "original_abstract_receipt_matched_pending_stage_review")
+        self.assertEqual(report["original_verified_rows"], 1)
+        self.assertEqual(len(report["original_abstract_eligible_ids"]), 1)
+        self.assertFalse(report["formal_eligible"])
+        self.assertFalse(report["stage_advanced"])
+        self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
+        self.assertTrue((self.work / "initial/literature_matrix.json").is_file())
 
     def test_c21_chat_and_fabricated_normalized_paper_never_enter_original_gate(self):
         bundle=self.sample()
