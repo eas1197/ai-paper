@@ -443,7 +443,9 @@ def run_autopilot(run_id, *, theme="社会生活", model=None, timeout=900, max_
             break
     from run_observation import command_observation
     checkpoint={"status":"checkpoint","result":result,"v3_stage":heritage.state_of(run_id)["status"],"formal_eligible":False}
-    return {**checkpoint,"runtime":command_observation("autopilot",checkpoint)}
+    from runtime_waiting import attach_wait
+    runtime=attach_wait(command_observation("autopilot",checkpoint),checkpoint,run_id=run_id)
+    return {**checkpoint,"runtime":runtime}
 
 
 def main(argv=None):

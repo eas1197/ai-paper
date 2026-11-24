@@ -620,7 +620,12 @@ def main(argv=None):
             doctor();result={"original_output":original_call(original_command(args.cmd,args.run_id,report=args.report)),
                              "stage":state_of(args.run_id)["status"]}
         from run_observation import command_observation
-        print(json.dumps({"status":"ok","result":result,"runtime":command_observation(args.cmd,result)},ensure_ascii=False,indent=2))
+        from runtime_waiting import attach_wait
+        runtime=command_observation(args.cmd,result)
+        task_file=args.output if args.cmd in {"chat-task","codex-task","review-task"} else None
+        runtime=attach_wait(runtime,result,run_id=getattr(args,"run_id",None),task_file=task_file,
+            persist=args.cmd not in {"status","prepare","review-counts"})
+        print(json.dumps({"status":"ok","result":result,"runtime":runtime},ensure_ascii=False,indent=2))
         return 0
     except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
         from run_observation import observation
