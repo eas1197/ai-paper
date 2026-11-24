@@ -1,4 +1,7 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D11 review result — evidence-addressable candidate decision, not gate authorization",
+  "description": "Version 2 extends D10 with file-bound evidence references, claim/dimension assessments, explicit counterexample checks and unresolved questions. The receiver must still verify all IDs, paths and hashes against the frozen D09 task snapshot; this schema does not prove independent identity or authorize an original gate.",
   "type": "object",
   "properties": {
     "schema_version": {
@@ -71,11 +74,34 @@
       "type": "string",
       "pattern": "\\S"
     },
-    "evidence_findings": {
+    "evidence_references": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/finding"
-      }
+        "$ref": "#/$defs/evidence_reference"
+      },
+      "uniqueItems": true
+    },
+    "claim_assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim_assessment"
+      },
+      "uniqueItems": true
+    },
+    "dimension_assessments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/dimension_assessment"
+      },
+      "uniqueItems": true
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unresolved_question"
+      },
+      "uniqueItems": true
     }
   },
   "required": [
@@ -86,13 +112,383 @@
     "reason",
     "issues",
     "assessment_scope",
-    "evidence_findings"
+    "evidence_references",
+    "claim_assessments",
+    "dimension_assessments",
+    "unresolved_questions"
   ],
   "additionalProperties": false,
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "D11 review result — evidence-bound proposed decision, not gate authorization",
-  "description": "Version 2 extends the D10 draft with located evidence, findings and unresolved questions. No automatic migration, independent execution proof or gate authorization.",
   "$defs": {
+    "locator": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "line_range",
+            "page",
+            "paragraph",
+            "section",
+            "table",
+            "figure",
+            "timestamp",
+            "record_id",
+            "url_fragment",
+            "other"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "counterexample_check": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "found",
+            "not_found_after_review",
+            "not_assessed",
+            "not_applicable"
+          ]
+        },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "search_scope": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "status",
+        "evidence_ref_ids",
+        "search_scope"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "found"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_ref_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not_found_after_review",
+                  "not_assessed",
+                  "not_applicable"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_ref_ids": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "evidence_reference": {
+      "type": "object",
+      "properties": {
+        "evidence_ref_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "evidence_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "artifact_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\.).+\\S$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "locator": {
+          "$ref": "#/$defs/locator"
+        },
+        "relation": {
+          "enum": [
+            "supports",
+            "counterexample",
+            "context",
+            "limits"
+          ]
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "dimension_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "support_scope": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        },
+        "verification_status": {
+          "const": "verified_in_snapshot"
+        }
+      },
+      "required": [
+        "evidence_ref_id",
+        "evidence_id",
+        "artifact_id",
+        "path",
+        "sha256",
+        "locator",
+        "relation",
+        "claim_ids",
+        "dimension_ids",
+        "support_scope",
+        "limitations",
+        "verification_status"
+      ],
+      "additionalProperties": false
+    },
+    "claim_assessment": {
+      "type": "object",
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "assessment": {
+          "enum": [
+            "supported",
+            "partially_supported",
+            "unsupported",
+            "contradicted",
+            "not_assessed"
+          ]
+        },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "counterexample_check": {
+          "$ref": "#/$defs/counterexample_check"
+        },
+        "support_scope": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "unresolved_question_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "claim_id",
+        "assessment",
+        "evidence_ref_ids",
+        "counterexample_check",
+        "support_scope",
+        "unresolved_question_ids"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "assessment": {
+                "enum": [
+                  "supported",
+                  "partially_supported"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_ref_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "dimension_assessment": {
+      "type": "object",
+      "properties": {
+        "dimension_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "assessment": {
+          "enum": [
+            "supported",
+            "partially_supported",
+            "unresolved",
+            "not_applicable",
+            "not_assessed"
+          ]
+        },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "counterexample_check": {
+          "$ref": "#/$defs/counterexample_check"
+        },
+        "support_scope": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "unresolved_question_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "dimension_id",
+        "assessment",
+        "evidence_ref_ids",
+        "counterexample_check",
+        "support_scope",
+        "unresolved_question_ids"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "assessment": {
+                "enum": [
+                  "supported",
+                  "partially_supported"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_ref_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "unresolved_question": {
+      "type": "object",
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "dimension_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "question": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "reason": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "needed_evidence": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "blocking": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "question_id",
+        "claim_ids",
+        "dimension_ids",
+        "question",
+        "reason",
+        "needed_evidence",
+        "blocking"
+      ],
+      "additionalProperties": false
+    },
     "issue": {
       "type": "object",
       "properties": {
@@ -128,6 +524,30 @@
           },
           "uniqueItems": true
         },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "counterexample_ref_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "unresolved_question_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
         "required_action": {
           "type": "string",
           "pattern": "\\S"
@@ -140,296 +560,12 @@
         "blocking",
         "detail",
         "evidence_ids",
+        "evidence_ref_ids",
+        "counterexample_ref_ids",
+        "unresolved_question_ids",
         "required_action"
       ],
       "additionalProperties": false
-    },
-    "locator": {
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "const": "lines"
-            },
-            "start": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "end": {
-              "type": "integer",
-              "minimum": 1
-            }
-          },
-          "required": [
-            "kind",
-            "start",
-            "end"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "kind": {
-              "const": "json_pointer"
-            },
-            "pointer": {
-              "type": "string",
-              "pattern": "^/(?:[^~]|~[01])*$"
-            }
-          },
-          "required": [
-            "kind",
-            "pointer"
-          ],
-          "additionalProperties": false
-        }
-      ]
-    },
-    "evidence_ref": {
-      "type": "object",
-      "properties": {
-        "evidence_id": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "artifact_id": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "path": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "sha256": {
-          "type": "string",
-          "pattern": "^[0-9a-f]{64}$"
-        },
-        "locator": {
-          "$ref": "#/$defs/locator"
-        },
-        "relation": {
-          "enum": [
-            "support",
-            "counterexample",
-            "competing",
-            "context"
-          ]
-        },
-        "support_scope": {
-          "type": "string",
-          "pattern": "\\S"
-        }
-      },
-      "required": [
-        "evidence_id",
-        "artifact_id",
-        "path",
-        "sha256",
-        "locator",
-        "relation",
-        "support_scope"
-      ],
-      "additionalProperties": false
-    },
-    "unresolved_question": {
-      "type": "object",
-      "properties": {
-        "question": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "blocking": {
-          "type": "boolean"
-        },
-        "reason": {
-          "type": "string",
-          "pattern": "\\S"
-        }
-      },
-      "required": [
-        "question",
-        "blocking",
-        "reason"
-      ],
-      "additionalProperties": false
-    },
-    "finding": {
-      "type": "object",
-      "properties": {
-        "dimension_id": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "claim_id": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "\\S"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "status": {
-          "enum": [
-            "supported",
-            "limited",
-            "contradicted",
-            "unresolved"
-          ]
-        },
-        "blocking": {
-          "type": "boolean"
-        },
-        "reason": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "scope_limit": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "evidence": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/evidence_ref"
-          },
-          "uniqueItems": true
-        },
-        "counterexample_review": {
-          "type": "string",
-          "pattern": "\\S"
-        },
-        "unresolved_questions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/unresolved_question"
-          }
-        }
-      },
-      "required": [
-        "dimension_id",
-        "claim_id",
-        "status",
-        "blocking",
-        "reason",
-        "scope_limit",
-        "evidence",
-        "counterexample_review",
-        "unresolved_questions"
-      ],
-      "additionalProperties": false,
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "status": {
-                "enum": [
-                  "supported",
-                  "limited"
-                ]
-              }
-            },
-            "required": [
-              "status"
-            ]
-          },
-          "then": {
-            "properties": {
-              "evidence": {
-                "contains": {
-                  "properties": {
-                    "relation": {
-                      "const": "support"
-                    }
-                  },
-                  "required": [
-                    "relation"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "status": {
-                "const": "contradicted"
-              }
-            },
-            "required": [
-              "status"
-            ]
-          },
-          "then": {
-            "properties": {
-              "evidence": {
-                "contains": {
-                  "properties": {
-                    "relation": {
-                      "const": "counterexample"
-                    }
-                  },
-                  "required": [
-                    "relation"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "status": {
-                "const": "unresolved"
-              }
-            },
-            "required": [
-              "status"
-            ]
-          },
-          "then": {
-            "properties": {
-              "unresolved_questions": {
-                "minItems": 1
-              }
-            }
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "blocking": {
-                "const": false
-              }
-            },
-            "required": [
-              "blocking"
-            ]
-          },
-          "then": {
-            "properties": {
-              "unresolved_questions": {
-                "items": {
-                  "properties": {
-                    "blocking": {
-                      "const": false
-                    }
-                  },
-                  "required": [
-                    "blocking"
-                  ]
-                }
-              }
-            }
-          }
-        }
-      ]
     }
   },
   "allOf": [
@@ -451,6 +587,62 @@
                 },
                 "category": {
                   "const": "suggestion"
+                }
+              }
+            }
+          },
+          "unresolved_questions": {
+            "items": {
+              "properties": {
+                "blocking": {
+                  "const": false
+                }
+              }
+            }
+          },
+          "claim_assessments": {
+            "items": {
+              "properties": {
+                "assessment": {
+                  "enum": [
+                    "supported",
+                    "partially_supported"
+                  ]
+                },
+                "counterexample_check": {
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "found",
+                        "not_found_after_review",
+                        "not_applicable"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "dimension_assessments": {
+            "items": {
+              "properties": {
+                "assessment": {
+                  "enum": [
+                    "supported",
+                    "partially_supported",
+                    "not_applicable"
+                  ]
+                },
+                "counterexample_check": {
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "found",
+                        "not_found_after_review",
+                        "not_applicable"
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -504,9 +696,7 @@
             "contains": {
               "properties": {
                 "category": {
-                  "enum": [
-                    "evidence_gap"
-                  ]
+                  "const": "evidence_gap"
                 },
                 "blocking": {
                   "const": true
@@ -514,6 +704,18 @@
               },
               "required": [
                 "category",
+                "blocking"
+              ]
+            }
+          },
+          "unresolved_questions": {
+            "contains": {
+              "properties": {
+                "blocking": {
+                  "const": true
+                }
+              },
+              "required": [
                 "blocking"
               ]
             }
@@ -535,9 +737,7 @@
             "contains": {
               "properties": {
                 "category": {
-                  "enum": [
-                    "academic_defect"
-                  ]
+                  "const": "academic_defect"
                 },
                 "blocking": {
                   "const": true
@@ -566,9 +766,7 @@
             "contains": {
               "properties": {
                 "category": {
-                  "enum": [
-                    "execution_blocker"
-                  ]
+                  "const": "execution_blocker"
                 },
                 "blocking": {
                   "const": true
@@ -603,9 +801,7 @@
               "contains": {
                 "properties": {
                   "category": {
-                    "enum": [
-                      "execution_blocker"
-                    ]
+                    "const": "execution_blocker"
                   },
                   "blocking": {
                     "const": true
@@ -640,9 +836,7 @@
               "contains": {
                 "properties": {
                   "category": {
-                    "enum": [
-                      "evidence_gap"
-                    ]
+                    "const": "evidence_gap"
                   },
                   "blocking": {
                     "const": true
@@ -653,83 +847,6 @@
                   "blocking"
                 ]
               }
-            }
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "decision": {
-            "const": "pass"
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "evidence_findings": {
-            "minItems": 1,
-            "contains": {
-              "properties": {
-                "status": {
-                  "enum": [
-                    "supported",
-                    "limited"
-                  ]
-                }
-              },
-              "required": [
-                "status"
-              ]
-            },
-            "items": {
-              "properties": {
-                "blocking": {
-                  "const": false
-                }
-              },
-              "required": [
-                "blocking"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "decision": {
-            "const": "need_evidence"
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "evidence_findings": {
-            "contains": {
-              "properties": {
-                "blocking": {
-                  "const": true
-                },
-                "unresolved_questions": {
-                  "contains": {
-                    "properties": {
-                      "blocking": {
-                        "const": true
-                      }
-                    },
-                    "required": [
-                      "blocking"
-                    ]
-                  }
-                }
-              },
-              "required": [
-                "blocking",
-                "unresolved_questions"
-              ]
             }
           }
         }
