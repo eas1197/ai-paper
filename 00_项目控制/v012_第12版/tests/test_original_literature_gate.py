@@ -194,6 +194,33 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         self.assertFalse(report["native_cli_receipt"])
         self.assertFalse(report["original_abstract_eligible_ids"])
 
+    def test_c28_hand_filled_cli_actions_without_native_web_events_stay_pending(self):
+        bundle = self.sample()
+        p = bundle["provenance"]
+        # Keep the submitted normalized search action, source action_ids, successful
+        # login, argv and zero exit code; only the original event stream lacks web events.
+        p["events"] = self.raw(
+            "initial/batch_001/events.jsonl",
+            b'{"type":"thread.started","thread_id":"fixture-thread"}\\n')
+        self.rebind_invocation(bundle)
+        report = self.receive(bundle)
+        self.assertTrue(report["command_record_matched"])
+        self.assertEqual(report["native_event_count"], 0)
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertEqual(report["acceptance_status"], "pending_candidate")
+        self.assertEqual(report["original_gate_status"], "pending_original_native_receipt")
+        self.assertFalse(report["original_abstract_eligible_ids"])
+        self.assertIsNone(report["original_verified_rows"])
+        self.assertFalse(report["stage_advanced"])
+        self.assertFalse((self.work / "initial/literature_matrix.json").exists())
+        self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
+
+        # A manually supplied pass flag is not part of the result schema.
+        bundle["native_cli_receipt"] = True
+        self.save(bundle)
+        with self.assertRaisesRegex(ValueError, "Invalid result envelope"):
+            self.receive(bundle)
+
     def test_c23_failed_execution_and_self_asserted_receipt_rejected(self):
         bundle=self.sample()
         bundle.update(execution_status="failed",execution_issues=[
