@@ -642,6 +642,30 @@ def verify_stage_artifacts(work, state, operation, *, prior_stage=None):
         verified_frozen_topic(work,state)
 
 
+def preserve_stage_report(work, command, report_path):
+    """Keep exact submitted bytes before validation; this is never gate approval."""
+    if command not in {"review", "reality", "exchange", "issue"}:
+        raise ValueError("Unsupported submitted-report stage")
+    raw = Path(report_path).read_bytes()
+    root = Path(work).resolve(strict=True)
+    folder = root / "submitted_stage_reports" / command
+    if (root / "submitted_stage_reports").is_symlink() or folder.is_symlink():
+        raise ValueError("Submitted-report archive must belong to the selected run")
+    folder.mkdir(parents=True, exist_ok=True)
+    if folder.resolve() != folder:
+        raise ValueError("Submitted-report archive escapes selected run")
+    target = folder / (hashlib.sha256(raw).hexdigest() + ".bin")
+    if target.is_symlink():
+        raise ValueError("Submitted-report archive entry is symlinked")
+    try:
+        with target.open("xb") as stream:
+            stream.write(raw)
+    except FileExistsError:
+        if not target.is_file() or target.read_bytes() != raw:
+            raise ValueError("Submitted-report archive content mismatch")
+    return json.loads(raw.decode("utf-8-sig"))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("init", "reality", "exchange", "issue", "initial", "supplemental", "advance", "review", "prepare", "status", "s08"))
@@ -680,13 +704,13 @@ def main():
         elif args.command == "advance":
             result = advance(work, state)
         elif args.command == "review":
-            review(work, state, load(args.report))
+            review(work, state, preserve_stage_report(work, args.command, args.report))
         elif args.command == "reality":
-            record_reality(work, state, load(args.report))
+            record_reality(work, state, preserve_stage_report(work, args.command, args.report))
         elif args.command == "exchange":
+            packet = preserve_stage_report(work, args.command, args.report)
             if state["status"] != "explanation_exchange":
                 raise ValueError("Record the exchange after reality and before literature")
-            packet = load(args.report)
             validate_exchange(packet)
             if state.get("issue_search"):
                 comparison = load(work / "event_comparison.json")
@@ -699,7 +723,7 @@ def main():
             state["exchange_sha256"] = digest(packet)
             state["status"] = "issue_positioning" if state.get("issue_search") else "initial"
         elif args.command == "issue":
-            record_issue_plan(work, state, load(args.report))
+            record_issue_plan(work, state, preserve_stage_report(work, args.command, args.report))
         elif args.command == "s08":
             freeze(work, state)
         elif args.command == "prepare":

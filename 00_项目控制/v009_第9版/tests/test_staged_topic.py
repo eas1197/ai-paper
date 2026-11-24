@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 from staged_topic import (ROOT, archive, digest, freeze, issue_plan, literature_next, load_reality,
-                          record_issue_plan, record_reality, review, route, search, write)
+                          record_issue_plan, record_reality, review, route, search, write, preserve_stage_report)
 
 
 class StagedTopicTest(unittest.TestCase):
@@ -18,6 +18,38 @@ class StagedTopicTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "unable_to_review"):
                 review(Path(folder), state, report)
             self.assertEqual(state, {"status": "preliminary_review", "history": []})
+
+    def test_i16_rejected_report_retains_exact_bytes_without_advancing(self):
+        import hashlib
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            work = Path(folder)
+            source = work / "submitted.json"
+            raw = b'{"outcome":"pass", "reason":"untrusted fixture"}\\n'
+            source.write_bytes(raw)
+            state = {"status": "preliminary_review", "history": []}
+            for _ in range(2):
+                with self.assertRaisesRegex(ValueError, "unable_to_review"):
+                    review(work, state, preserve_stage_report(work, "review", source))
+            archive = work / "submitted_stage_reports" / "review" / (hashlib.sha256(raw).hexdigest()+".bin")
+            self.assertEqual(archive.read_bytes(), raw)
+            self.assertEqual(source.read_bytes(), raw)
+            self.assertEqual(state, {"status": "preliminary_review", "history": []})
+            self.assertEqual(len(list(archive.parent.glob("*.bin"))), 1)
+
+    def test_i16_malformed_report_and_changed_submission_are_preserved(self):
+        import hashlib
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            work = Path(folder)
+            source = work / "submitted.json"
+            for raw in (b'not JSON', b'{"fixture": true}\\n'):
+                source.write_bytes(raw)
+                if raw == b'not JSON':
+                    with self.assertRaises(ValueError):
+                        preserve_stage_report(work, "reality", source)
+                else:
+                    self.assertEqual(preserve_stage_report(work, "reality", source), {"fixture": True})
+                self.assertEqual((work/"submitted_stage_reports"/"reality"/(hashlib.sha256(raw).hexdigest()+".bin")).read_bytes(), raw)
+            self.assertEqual(len(list((work/"submitted_stage_reports"/"reality").glob("*.bin"))), 2)
 
     def test_literature_continues_only_for_deficit_with_budget(self):
         checkpoint = {"config": {"max_batches": 2, "search_action_budget": 24},
