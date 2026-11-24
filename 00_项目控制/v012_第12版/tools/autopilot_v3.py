@@ -194,34 +194,57 @@ class Executor:
         heritage.write(task_json,SCHEMAS[stage])
         heritage.write(folder/"task.json",{"stage":stage,"instruction":task})
         # Keep a durable call reservation before trying Codex. Never erase failed calls.
-        record={"stage":stage,"attempt":attempt,"status":"started"}
+        record={"stage":stage,"attempt":attempt,"status":"started",
+                "model_call_reserved":1,"remaining_model_calls":ledger["budget"]-len(ledger["records"])-1,
+                "web_actions":None,"web_action_observation":"not_yet_observed"}
         ledger["records"].append(record);heritage.write(history,ledger)
         prompt=(task+"\nRead 3.x project rules; use native live web ONLY for needed "
                 "observations. Avoid shell/MCP/browser/plugins and never invent a source, "
                 "actor action, DOI, review identity or evidence. "
                 "Return JSON according to output schema; distinguish reported claims "
                 "from empirical outcomes and preserve uncertainty.")
+        raw=folder/"events.jsonl"
+        response=folder/"response.json"
+        def observe():
+            # Missing or unreadable evidence is unknown consumption, never zero.
+            record.update(events_sha256=checksum(raw) if raw.is_file() else None,
+                          response_sha256=checksum(response) if response.is_file() else None)
+            if not raw.is_file():
+                record.update(web_actions=None,web_action_observation="missing_events")
+                return None
+            try:
+                observed=evidence(raw)
+                record.update(web_actions=len(observed),web_action_observation="observed_original_trace")
+                return observed
+            except Exception as exc:
+                record.update(web_actions=None,web_action_observation="unreadable_events",
+                              observation_error=str(exc)[:1000])
+                return None
         try:
             code=invoke(cli(),folder,prompt,task_json,timeout=timeout,model=self.model)
         except Exception as exc:
             record.update(status="technical_block",error=str(exc)[:1000])
+            try:
+                observe()
+            finally:
+                heritage.write(history,ledger)
+            raise
+        record["rc"]=code
+        try:
+            trace=observe()
+            if code:
+                raise RuntimeError(stage+" native Codex execution failed; see local original logs")
+            if trace is None:
+                raise RuntimeError(stage+" native search provenance unreadable or absent")
+            if must_search and not trace:
+                raise RuntimeError(stage+" has no native search provenance")
+            session=transcript_session(raw)
+            packet=heritage.read(response)
+        except Exception as exc:
+            record.update(status="failed",error=str(exc)[:1000])
             heritage.write(history,ledger)
             raise
-        raw=folder/"events.jsonl"
-        record.update(rc=code,events_sha256=checksum(raw),
-                      response_sha256=checksum(folder/"response.json")
-                      if (folder/"response.json").is_file() else None)
-        heritage.write(history,ledger)
-        if code:
-            record["status"]="failed";heritage.write(history,ledger)
-            raise RuntimeError(stage+" native Codex execution failed; see local original logs")
-        trace=evidence(raw)
-        if must_search and not trace:
-            record["status"]="failed";heritage.write(history,ledger)
-            raise RuntimeError(stage+" has no native search provenance")
-        session=transcript_session(raw)
-        packet=heritage.read(folder/"response.json")
-        record.update(status="completed",thread_id=session,web_actions=len(trace))
+        record.update(status="completed",thread_id=session)
         heritage.write(history,ledger)
         return packet,folder,session,trace,url_event
 

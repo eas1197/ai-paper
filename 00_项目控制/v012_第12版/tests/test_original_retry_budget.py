@@ -25,3 +25,46 @@ class OriginalRetryBudgetTest(unittest.TestCase):
             profile=auto.heritage.read(auto.heritage.CONTROL/"v007_第7版/dev_profile.json")
             self.assertEqual(invoke.call_args.kwargs["timeout"],profile["00"]["timeout_seconds"])
             self.assertEqual(auto.heritage.read(work/"v5_native_calls.json")["records"][0]["status"],"technical_block")
+
+    def test_i03_failed_dispatch_preserves_observed_actions_and_reservation(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            def invoke(cli, attempt, *args, **kwargs):
+                (attempt/"events.jsonl").write_text("fixture trace",encoding="utf-8")
+                raise RuntimeError("Synthetic timeout")
+            with patch.object(auto,"native_modules",return_value=(lambda:"fixture",invoke,lambda path:["a","b"],Mock())):
+                with self.assertRaisesRegex(RuntimeError,"Synthetic timeout"):
+                    auto.Executor().call(work,"reality","fixture")
+            row=auto.heritage.read(work/"v5_native_calls.json")["records"][0]
+            self.assertEqual(row["status"],"technical_block")
+            self.assertEqual(row["model_call_reserved"],1)
+            self.assertEqual(row["remaining_model_calls"],5)
+            self.assertEqual(row["web_actions"],2)
+            self.assertEqual(row["web_action_observation"],"observed_original_trace")
+            self.assertEqual(row["events_sha256"],auto.checksum(work/"v5_native/reality/attempt_001/events.jsonl"))
+
+    def test_i03_no_events_is_unknown_not_zero(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            with patch.object(auto,"native_modules",return_value=(lambda:"fixture",Mock(return_value=1),Mock(),Mock())):
+                with self.assertRaisesRegex(RuntimeError,"execution failed"):
+                    auto.Executor().call(work,"reality","fixture")
+            row=auto.heritage.read(work/"v5_native_calls.json")["records"][0]
+            self.assertEqual(row["status"],"failed")
+            self.assertIsNone(row["web_actions"])
+            self.assertEqual(row["web_action_observation"],"missing_events")
+
+    def test_i03_unreadable_response_preserves_failed_call(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            def invoke(cli, attempt, *args, **kwargs):
+                (attempt/"events.jsonl").write_text('{"type":"thread.started","thread_id":"fixture"}',encoding="utf-8")
+                (attempt/"response.json").write_text("not json",encoding="utf-8")
+                return 0
+            with patch.object(auto,"native_modules",return_value=(lambda:"fixture",invoke,lambda path:["a"],Mock())):
+                with self.assertRaises(ValueError):
+                    auto.Executor().call(work,"reality","fixture")
+            row=auto.heritage.read(work/"v5_native_calls.json")["records"][0]
+            self.assertEqual(row["status"],"failed")
+            self.assertEqual(row["web_actions"],1)
+            self.assertIsNotNone(row["response_sha256"])
