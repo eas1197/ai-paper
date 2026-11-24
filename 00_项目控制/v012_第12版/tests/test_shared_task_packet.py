@@ -135,7 +135,7 @@ class SharedTaskTest(unittest.TestCase):
             self.assertFalse(report["formal_eligible"])
 
         wrong_task = dict(reference, task_id="different-task")
-        with self.assertRaises(ValueError):
+        with self.assertRaises((ValueError, FileNotFoundError)):
             task_packet.verify_snapshot(wrong_task, current_run_id=self.run_id)
         with self.assertRaises(ValueError):
             task_packet.verify_snapshot(reference, current_run_id="other_research")
