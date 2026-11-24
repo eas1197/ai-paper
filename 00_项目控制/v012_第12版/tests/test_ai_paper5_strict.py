@@ -1,8 +1,10 @@
 """Actual 3.x contracts are authoritative; no fake Chat source promotion."""
 from pathlib import Path
 import importlib.util
+import json
 import subprocess
 import sys
+import tempfile
 from unittest import TestCase, main
 from unittest.mock import patch
 
@@ -11,6 +13,86 @@ spec=importlib.util.spec_from_file_location("ai_paper5_strict",PATH)
 m=importlib.util.module_from_spec(spec)
 sys.modules[spec.name]=m
 spec.loader.exec_module(m)
+
+
+def make_v15_fixture(root):
+    import hashlib
+    import json
+    root = Path(root)
+    work = root / "fixture_g06"
+    output = work / "autonomous_writing" / "draft_0"
+    matrix_dir = work / "qualitative_framework" / "attempt_001"
+    output.mkdir(parents=True)
+    matrix_dir.mkdir(parents=True)
+    sys.path.insert(0, str(m.V32 / "tools"))
+    sys.path.insert(0, str(m.V15.parent))
+    from question_binding import evidence_digest
+    from writing_plan import reviewed_dimension_sources
+
+    core = "How is the fixture mechanism organized?"
+    specific = "How does the fixture process operate?"
+    method = "secondary_interviews"
+    framework = {"core_question": core, "core_concept": "Fixture concept",
+                 "dimensions": [{"id": "d0", "name": "Dimension", "deduction": "Fixture deduction"}]}
+    material = {"material_id": "E", "url": "https://example.org/evidence",
+                "locator": "Fixture source, paragraph 2", "kind": "official_rule"}
+    receipt = {"framework_sha256": evidence_digest(framework), "materials": [material]}
+    receipt_path = matrix_dir / "material_receipt.json"
+    receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    receipt_sha = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
+    contract = {"core_question": core, "specific_question": specific, "method": method,
+                "receipt_sha256": receipt_sha}
+    matrix = {"question_binding": contract, "collection_sha256": evidence_digest(receipt),
+              "framework_sha256": receipt["framework_sha256"],
+              "rows": [{"dimension_id": "d0", "evidence": [material]}]}
+    matrix_path = matrix_dir / "analysis_matrix_reviewed.json"
+    matrix_path.write_text(json.dumps(matrix, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    topic_path = work / "s08_topic.json"
+    topic = {"question": specific, "research_method": {"path": method}}
+    topic_path.write_text(json.dumps(topic, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    chapters = []
+    for chapter_id in ("problem", "framework", "case", "d0", "conclusion"):
+        chapters.append({"id": chapter_id, "sections": [{"source_ids": ["T", "E"]}]})
+    packet = {
+        "method": method, "core_question": core, "specific_question": specific,
+        "question_binding": contract,
+        "analysis_matrix": "qualitative_framework/attempt_001/analysis_matrix_reviewed.json",
+        "sources": {
+            "T": {"kind": "theory", "label": "Fixture theory", "locator": "Fixture literature"},
+            "E": {"kind": "empirical", "label": "Fixture evidence",
+                  "locator": material["locator"], "url": material["url"]},
+        },
+        "framework": {"prior_explanation": "Prior", "gap": "Gap", "theory_choice": "Theory",
+                      "deduction": "Deduction", "increment": "Increment", "integration": "Integration",
+                      "dimensions": [{"id": "d0", "title": "Dimension", "deduction": "Fixture deduction"}]},
+        "case": {"background": "Background", "selection": "Selection",
+                 "materials": "Materials", "method": "Method"},
+        "chapters": chapters,
+    }
+    packet_path = output / "plan_input.json"
+    packet_path.write_text(json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    plan_path = output / "论文写作方案.md"
+    plan_path.write_text("# Fixture writing plan\n", encoding="utf-8")
+    file_sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+    admission = {
+        "mode": "native_reviewed", "matrix_sha256": file_sha(matrix_path),
+        "receipt_sha256": receipt_sha, "review_sha256": "fixture-review-hash",
+        "eligible_material_ids": ["E"],
+        "chapter_empirical_source_ids": reviewed_dimension_sources(packet, matrix, {"E"}),
+        "question_binding": contract,
+    }
+    request = {
+        "run_id": work.name, "run_mode": "dev", "formal_eligible": False,
+        "method": method, "requested_deliverable": "plan", "status": "plan_prepared",
+        "input_sha256": hashlib.sha256(json.dumps(packet, sort_keys=True, ensure_ascii=False).encode()).hexdigest(),
+        "plan_sha256": file_sha(plan_path), "topic_sha256": file_sha(topic_path),
+        "analysis_matrix_sha256": file_sha(matrix_path), "review_status": "pass",
+        "independent_review": {"answer": {"decision": "pass"}},
+        "question_binding": contract, "material_admission": admission,
+    }
+    (output / "writing_plan_review_request.json").write_text(
+        json.dumps(request, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return packet_path
 
 
 class StrictTests(TestCase):
@@ -127,14 +209,16 @@ class StrictTests(TestCase):
         writing=m.original_writing_command("sample")
         self.assertEqual(Path(writing[2]),m.REVISION)
 
-        writer4=m.original_writer4_command(
-            "prepare",packet=Path("plan_input.json"),
-            workspace=Path("writer4_workspace"),mode="exploratory")
-        self.assertEqual(Path(writer4[2]),m.V16)
-        self.assertEqual(writer4[3],"prepare")
-        self.assertIn("--packet",writer4)
-        self.assertIn("--workspace",writer4)
-        self.assertIn("--mode",writer4)
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            writer4=m.original_writer4_command(
+                "prepare",packet=packet,
+                workspace=Path(temporary)/"writer4_workspace",mode="exploratory")
+            self.assertEqual(Path(writer4[2]),m.V16)
+            self.assertEqual(writer4[3],"prepare")
+            self.assertIn("--packet",writer4)
+            self.assertIn("--workspace",writer4)
+            self.assertIn("--mode",writer4)
 
         resume_source=Path(m.REVISION).read_text(encoding="utf-8-sig")
         self.assertIn("from material_adequacy import writing_material_status",resume_source)
@@ -151,14 +235,74 @@ class StrictTests(TestCase):
         original.assert_called_once_with(m.original_writing_command("g03_fixture", attempt="attempt_002"))
 
     def test_writer4_cli_dispatches_v016_through_original_adapter(self):
-        with patch.object(m,"doctor",return_value={}), \
-             patch.object(m,"original_call",return_value="writer4 complete") as original:
-            result=m.main(["writer4","--action","prepare","--packet","plan_input.json",
-                           "--workspace","writer4_workspace","--mode","exploratory"])
-        self.assertEqual(result,0)
-        command=original.call_args.args[0]
-        self.assertEqual(Path(command[2]),m.V16)
-        self.assertEqual(command[3],"prepare")
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            with patch.object(m,"doctor",return_value={}), \
+                 patch.object(m,"original_call",return_value="writer4 complete") as original:
+                result=m.main(["writer4","--action","prepare","--packet",str(packet),
+                               "--workspace",str(Path(temporary)/"writer4_workspace"),"--mode","exploratory"])
+            self.assertEqual(result,0)
+            command=original.call_args.args[0]
+            self.assertEqual(Path(command[2]),m.V16)
+            self.assertEqual(command[3],"prepare")
+
+    def test_v15_handoff_blocks_missing_outputs_bad_sources_and_hash_changes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            valid=make_v15_fixture(root/"valid")
+            receipt=m.validate_v15_writer_handoff(valid)
+            self.assertEqual(receipt["chapter_empirical_source_ids"]["d0"],["E"])
+
+            missing=make_v15_fixture(root/"missing")
+            (missing.parent/"writing_plan_review_request.json").unlink()
+            with self.assertRaisesRegex(ValueError,"output is incomplete"):
+                m.validate_v15_writer_handoff(missing)
+
+            changed_plan=make_v15_fixture(root/"changed_plan")
+            with (changed_plan.parent/"论文写作方案.md").open("a",encoding="utf-8") as stream:
+                stream.write("tampered\n")
+            with self.assertRaisesRegex(ValueError,"plan hash mismatch"):
+                m.validate_v15_writer_handoff(changed_plan)
+
+            changed_source=make_v15_fixture(root/"changed_source")
+            packet_data=json.loads(changed_source.read_text(encoding="utf-8"))
+            packet_data["sources"]["E"]["locator"]="Wrong source locator"
+            changed_source.write_text(json.dumps(packet_data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+            request_path=changed_source.parent/"writing_plan_review_request.json"
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            request["input_sha256"]=__import__("hashlib").sha256(
+                json.dumps(packet_data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+            request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"source locator differs"):
+                m.validate_v15_writer_handoff(changed_source)
+
+            changed_matrix=make_v15_fixture(root/"changed_matrix")
+            matrix_path=changed_matrix.parent.parent.parent/"qualitative_framework"/"attempt_001"/"analysis_matrix_reviewed.json"
+            matrix_path.write_text(matrix_path.read_text(encoding="utf-8")+"\n",encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"matrix hash mismatch"):
+                m.validate_v15_writer_handoff(changed_matrix)
+
+    def test_writer4_preflight_stops_before_v016_dispatch(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            data=json.loads(packet.read_text(encoding="utf-8"))
+            data["sources"]["E"]["locator"]="Tampered source"
+            packet.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+            request_path=packet.parent/"writing_plan_review_request.json"
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            request["input_sha256"]=__import__("hashlib").sha256(
+                json.dumps(data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+            request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+            with patch.object(m,"doctor",return_value={}), patch.object(m,"original_call") as original:
+                result=m.main(["writer4","--action","prepare","--packet",str(packet),
+                               "--workspace",str(Path(temporary)/"writer4_workspace"),"--mode","exploratory"])
+            self.assertEqual(result,2)
+            original.assert_not_called()
+
+    def test_archived_unreviewed_v15_output_is_not_forwarded_to_v016(self):
+        packet=m.ROOT/"handoff_runs/bike_parking_20261122/autonomous_writing/draft_0/plan_input.json"
+        with self.assertRaisesRegex(ValueError,"reviewed material admission is missing"):
+            m.validate_v15_writer_handoff(packet)
 
     def test_v016_adapter_rejects_incomplete_dispatch_arguments(self):
         with self.assertRaisesRegex(ValueError,"workspace"):

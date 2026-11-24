@@ -238,6 +238,103 @@ def original_writing_command(run_id, *, attempt="attempt_001"):
             "--attempt",attempt]
 
 
+def validate_v15_writer_handoff(packet_path):
+    """Fail closed unless V16 receives the exact, reviewed V15 output and source scope."""
+    packet_path = Path(packet_path).resolve()
+    if packet_path.name != "plan_input.json" or packet_path.parent.parent.name != "autonomous_writing":
+        raise ValueError("V16 requires the original V15 autonomous_writing plan_input.json")
+    output = packet_path.parent
+    request_path = output / "writing_plan_review_request.json"
+    plan_path = output / "论文写作方案.md"
+    if not packet_path.is_file() or not request_path.is_file() or not plan_path.is_file():
+        raise ValueError("V15 output is incomplete; refusing V16 handoff")
+    work = packet_path.parent.parent.parent
+    packet = read(packet_path)
+    request = read(request_path)
+    if request.get("run_id") != work.name or request.get("method") != packet.get("method"):
+        raise ValueError("V15 run identity or method differs")
+    if request.get("status") != "plan_prepared":
+        raise ValueError("V15 writing-plan output is not in a prepared state")
+    admission = request.get("material_admission")
+    if not isinstance(admission, dict) or admission.get("mode") != "native_reviewed":
+        raise ValueError("V15 reviewed material admission is missing")
+    if request.get("review_status") != "pass":
+        raise ValueError("V15 writing plan has not passed its original review")
+    independent = request.get("independent_review")
+    if not isinstance(independent, dict) or (independent.get("answer") or {}).get("decision") != "pass":
+        raise ValueError("V15 independent writing-plan review receipt is missing")
+    packet_sha = hashlib.sha256(json.dumps(packet, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    if request.get("input_sha256") != packet_sha:
+        raise ValueError("V15 plan input hash mismatch")
+    file_sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+    if request.get("plan_sha256") != file_sha(plan_path):
+        raise ValueError("V15 rendered plan hash mismatch")
+    topic_path = work / "s08_topic.json"
+    if not topic_path.is_file() or request.get("topic_sha256") != file_sha(topic_path):
+        raise ValueError("V15 frozen topic output is missing or its hash differs")
+    frozen = read(topic_path)
+    frozen_method = frozen.get("research_method") or {}
+    if (frozen.get("question") != packet.get("specific_question")
+            or frozen_method.get("path") != packet.get("method")):
+        raise ValueError("V15 packet differs from the frozen research question or method")
+    reference = packet.get("analysis_matrix")
+    if not isinstance(reference, str) or not reference.strip():
+        raise ValueError("V15 reviewed matrix reference is missing")
+    relative = Path(reference.replace("\\", "/"))
+    if relative.is_absolute() or ".." in relative.parts:
+        raise ValueError("V15 matrix reference escapes the current research run")
+    matrix_path = (work / relative).resolve()
+    framework_root = (work / "qualitative_framework").resolve()
+    if (matrix_path.name != "analysis_matrix_reviewed.json"
+            or not matrix_path.is_relative_to(framework_root)):
+        raise ValueError("V15 must reference this run's reviewed analysis matrix")
+    receipt_path = matrix_path.parent / "material_receipt.json"
+    if not matrix_path.is_file() or not receipt_path.is_file():
+        raise ValueError("V15 reviewed matrix or source receipt is missing")
+    matrix, receipt = read(matrix_path), read(receipt_path)
+    matrix_sha, receipt_sha = file_sha(matrix_path), file_sha(receipt_path)
+    if (request.get("analysis_matrix_sha256") != matrix_sha
+            or admission.get("matrix_sha256") != matrix_sha):
+        raise ValueError("V15 reviewed matrix hash mismatch")
+    if (admission.get("receipt_sha256") != receipt_sha
+            or request.get("question_binding", {}).get("receipt_sha256") != receipt_sha):
+        raise ValueError("V15 source receipt hash mismatch")
+    contract = packet.get("question_binding")
+    if (not isinstance(contract, dict) or request.get("question_binding") != contract
+            or admission.get("question_binding") != contract
+            or matrix.get("question_binding") != contract
+            or contract.get("receipt_sha256") != receipt_sha):
+        raise ValueError("V15 question and source bindings differ")
+    if (contract.get("core_question") != packet.get("core_question")
+            or contract.get("specific_question") != packet.get("specific_question")
+            or contract.get("method") != packet.get("method")):
+        raise ValueError("V15 packet differs from its bound research question")
+    sys.path.insert(0, str(V32 / "tools"))
+    sys.path.insert(0, str(V15.parent))
+    from question_binding import evidence_digest
+    from material_adequacy import validate_reviewed_plan_sources
+    from writing_plan import reviewed_dimension_sources
+    if (matrix.get("collection_sha256") != evidence_digest(receipt)
+            or matrix.get("framework_sha256") != receipt.get("framework_sha256")):
+        raise ValueError("V15 matrix no longer matches its source receipt or framework")
+    eligible = admission.get("eligible_material_ids")
+    materials = receipt.get("materials")
+    if (not isinstance(eligible, list) or not eligible or len(set(eligible)) != len(eligible)
+            or not isinstance(materials, list)):
+        raise ValueError("V15 eligible source ID set is missing or malformed")
+    by_id = {row.get("material_id"): row for row in materials if isinstance(row, dict)}
+    if len(by_id) != len(materials) or any(identifier not in by_id for identifier in eligible):
+        raise ValueError("V15 eligible source ID is absent from the original receipt")
+    approved = {identifier: by_id[identifier] for identifier in eligible}
+    validate_reviewed_plan_sources(packet, contract, receipt, approved)
+    chapter_sources = reviewed_dimension_sources(packet, matrix, set(eligible))
+    if admission.get("chapter_empirical_source_ids") != chapter_sources:
+        raise ValueError("V15 chapter source map differs from the reviewed 06 matrix")
+    return {"packet_sha256": packet_sha, "plan_sha256": file_sha(plan_path),
+            "matrix_sha256": matrix_sha, "receipt_sha256": receipt_sha,
+            "chapter_empirical_source_ids": chapter_sources}
+
+
 def original_writer4_command(action, *, packet, workspace=None, mode="exploratory",
                                manuscript=None, claims=None):
     """Dispatch directly to the original v016 writer; this adapter adds no writing rules."""
@@ -255,10 +352,12 @@ def original_writer4_command(action, *, packet, workspace=None, mode="explorator
     if action == "prepare":
         if manuscript is not None or claims is not None or mode not in {"exploratory", "formal"}:
             raise ValueError("Invalid original v016 prepare arguments")
+        validate_v15_writer_handoff(packet)
         cmd += ["--mode", mode]
         return cmd
     if manuscript is None or claims is None:
         raise ValueError("The original v016 submit command requires manuscript and claims")
+    validate_v15_writer_handoff(packet)
     cmd += ["--manuscript", str(Path(manuscript).resolve()),
             "--claims", str(Path(claims).resolve())]
     return cmd
