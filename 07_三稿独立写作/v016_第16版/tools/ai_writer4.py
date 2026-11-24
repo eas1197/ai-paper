@@ -269,12 +269,19 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
     record = load(workspace / "writer_manifest.json")
     packet = load(packet_path)
     validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks, argument_titles = language_resources()
+    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings, resource_versions = language_resources()
     problems = []
     if record["packet_sha256"] != hash_file(packet_path):
         problems.append("Writing packet changed since prepare")
     if record["resource_sha256"] != locks:
         problems.append("Language resource or writer mapping changed")
+    if record.get("resource_snapshot_warnings") != snapshot_warnings:
+        problems.append("Language snapshot inventory changed since prepare")
+    if (record.get("language_resource_version") != resource_versions["v005"]
+            or record.get("v003_resource_version") != resource_versions["v003"]
+            or record.get("v004_resource_version") != resource_versions["v004"]
+            or record.get("language_formal_resource_status") != snapshot["status"]):
+        problems.append("Language resource version or formal status changed")
     if record["chapter_ids"] != [c["id"] for c in packet["chapters"]]:
         problems.append("Chapter structure changed")
     if record["mode"] != "exploratory":
@@ -317,6 +324,9 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
         "manuscript_sha256": hash_file(manuscript_path),
         "claim_ledger_sha256": hash_file(claims_path),
         "packet_sha256": record["packet_sha256"],
+        "language_resource_version": resource_versions["v005"],
+        "language_formal_resource_status": snapshot["status"],
+        "resource_snapshot_warnings": snapshot_warnings,
         "style_issue_count": len(style_issues), "structural_errors": problems,
         "gate": "G7", "formal_pass": False,
         "independent_review": "pending",
