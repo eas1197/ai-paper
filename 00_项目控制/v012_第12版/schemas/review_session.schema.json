@@ -1,0 +1,585 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D14 independent review session launch and identity record",
+  "description": "Defines a separate, read-only, ephemeral Codex reviewer session and its identity record. A valid record is only a launch/identity contract; it does not authenticate a real independent session or authorize any research gate.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "task_snapshot": {
+      "type": "object",
+      "properties": {
+        "research_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "stage_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "research_id",
+        "stage_id",
+        "task_id",
+        "snapshot_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "review_type": {
+      "enum": [
+        "academic_review",
+        "independent_re_review"
+      ]
+    },
+    "review_kind": {
+      "enum": [
+        "preliminary_academic",
+        "research_design",
+        "qualitative_design",
+        "final_research",
+        "event_fact",
+        "critical_exchange",
+        "empirical_matrix",
+        "material_adequacy",
+        "writing_plan",
+        "qualitative_g7",
+        "quantitative_g7"
+      ]
+    },
+    "launch_request": {
+      "type": "object",
+      "properties": {
+        "executor": {
+          "const": "codex_cli"
+        },
+        "mode": {
+          "const": "ephemeral_process"
+        },
+        "model": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "model_source": {
+          "const": "resume_writing.REVIEWER"
+        },
+        "approval_policy": {
+          "const": "never"
+        },
+        "sandbox": {
+          "const": "read-only"
+        },
+        "ignore_user_config": {
+          "const": true
+        },
+        "ephemeral": {
+          "const": true
+        },
+        "skip_git_repo_check": {
+          "const": true
+        },
+        "input_context": {
+          "$ref": "#/$defs/file_ref"
+        },
+        "attempt_dir": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\.).+\\S$"
+        },
+        "input_scope": {
+          "const": "frozen_task_snapshot_only"
+        },
+        "write_scope": {
+          "const": "attempt_directory_only"
+        },
+        "external_search_allowed": {
+          "const": false
+        },
+        "project_state_write_allowed": {
+          "const": false
+        },
+        "gate_state_write_allowed": {
+          "const": false
+        }
+      },
+      "required": [
+        "executor",
+        "mode",
+        "model",
+        "model_source",
+        "approval_policy",
+        "sandbox",
+        "ignore_user_config",
+        "ephemeral",
+        "skip_git_repo_check",
+        "input_context",
+        "attempt_dir",
+        "input_scope",
+        "write_scope",
+        "external_search_allowed",
+        "project_state_write_allowed",
+        "gate_state_write_allowed"
+      ],
+      "additionalProperties": false
+    },
+    "reviewer_identity": {
+      "type": "object",
+      "properties": {
+        "reviewer_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "role": {
+          "const": "independent_reviewer"
+        },
+        "executor": {
+          "const": "codex_cli"
+        },
+        "provider": {
+          "const": "OpenAI"
+        },
+        "model": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "invocation_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "primary_thread_id": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "reviewer_id",
+        "role",
+        "executor",
+        "provider",
+        "model",
+        "invocation_id",
+        "primary_thread_id"
+      ],
+      "additionalProperties": false
+    },
+    "role_isolation": {
+      "type": "object",
+      "properties": {
+        "separate_process_required": {
+          "const": true
+        },
+        "ephemeral_thread_required": {
+          "const": true
+        },
+        "same_session_roleplay_allowed": {
+          "const": false
+        },
+        "researcher_hidden_context_included": {
+          "const": false
+        },
+        "project_state_write_allowed": {
+          "const": false
+        },
+        "gate_state_write_allowed": {
+          "const": false
+        },
+        "external_search_allowed": {
+          "const": false
+        },
+        "input_scope": {
+          "const": "frozen_task_snapshot_only"
+        },
+        "output_scope": {
+          "const": "attempt_directory_only"
+        }
+      },
+      "required": [
+        "separate_process_required",
+        "ephemeral_thread_required",
+        "same_session_roleplay_allowed",
+        "researcher_hidden_context_included",
+        "project_state_write_allowed",
+        "gate_state_write_allowed",
+        "external_search_allowed",
+        "input_scope",
+        "output_scope"
+      ],
+      "additionalProperties": false
+    },
+    "session_record": {
+      "type": "object",
+      "properties": {
+        "execution_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "started",
+            "completed",
+            "failed",
+            "unavailable"
+          ]
+        },
+        "thread_id": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "started_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "finished_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "events": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "response": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "login_probe": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_binding": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "independence_status": {
+          "const": "not_verified"
+        },
+        "separation_status": {
+          "enum": [
+            "not_started",
+            "pending_verification",
+            "same_session_detected"
+          ]
+        },
+        "failure_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "execution_id",
+        "status",
+        "thread_id",
+        "started_at",
+        "finished_at",
+        "events",
+        "response",
+        "login_probe",
+        "execution_binding",
+        "independence_status",
+        "separation_status",
+        "failure_reason"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "planned"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "thread_id": {
+                "type": "null"
+              },
+              "started_at": {
+                "type": "null"
+              },
+              "finished_at": {
+                "type": "null"
+              },
+              "events": {
+                "type": "null"
+              },
+              "response": {
+                "type": "null"
+              },
+              "login_probe": {
+                "type": "null"
+              },
+              "execution_binding": {
+                "type": "null"
+              },
+              "separation_status": {
+                "const": "not_started"
+              },
+              "failure_reason": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "started"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "thread_id": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "started_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "events": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "login_probe": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "separation_status": {
+                "const": "pending_verification"
+              },
+              "failure_reason": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "completed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "thread_id": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "started_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "finished_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "events": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "response": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "login_probe": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "execution_binding": {
+                "$ref": "#/$defs/file_ref"
+              },
+              "separation_status": {
+                "const": "pending_verification"
+              },
+              "failure_reason": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "failed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "failure_reason": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "separation_status": {
+                "enum": [
+                  "pending_verification",
+                  "same_session_detected",
+                  "not_started"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unavailable"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "thread_id": {
+                "type": "null"
+              },
+              "failure_reason": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "separation_status": {
+                "const": "not_started"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "separation_status": {
+                "const": "same_session_detected"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "const": "failed"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_snapshot",
+    "review_type",
+    "review_kind",
+    "launch_request",
+    "reviewer_identity",
+    "role_isolation",
+    "session_record"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "file_ref": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\.).+\\S$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "reviewer_identity": {
+          "properties": {
+            "model": {
+              "const": "gpt-6.2-sol"
+            }
+          }
+        },
+        "launch_request": {
+          "properties": {
+            "model": {
+              "const": "gpt-6.2-sol"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
