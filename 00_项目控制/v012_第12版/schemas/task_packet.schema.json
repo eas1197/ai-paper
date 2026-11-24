@@ -1,9 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "ai-paper 5.0 common task packet — C01 structural contract",
-  "description": "Transport contract only. Existing v009/v012 source policies, budgets, output schemas and gates remain authoritative. Does not authenticate execution or permit search. C02–C05 handle version/defaults, run binding, freeze and executor integration.",
+  "title": "ai-paper 5.0 common task packet — version 1",
+  "description": "Versioned transport contract. Original v009/v012 source policies, budgets, output schemas and gates remain authoritative. No execution permission or evidence authentication is implied. C03–C05 implement run binding, input freeze and executor integration.",
   "type": "object",
   "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Required explicit wire version; missing/unsupported versions are rejected, never silently upgraded."
+    },
     "research_id": {
       "type": "string",
       "minLength": 1
@@ -66,7 +71,8 @@
           }
         }
       },
-      "description": "Authorized sources from original policy; not an expanded permission grant."
+      "description": "Authorized source restrictions from original policy; optional nested fields may be omitted when inapplicable, never interpreted as permission or expanded scope.",
+      "additionalProperties": false
     },
     "quantity_budget": {
       "type": "object",
@@ -74,11 +80,12 @@
         "type": "integer",
         "minimum": 0
       },
-      "description": "Named original workload limits, e.g. target, max_batches, native_search_actions; zero is valid."
+      "description": "Named original workload limits, e.g. target, max_batches, native_search_actions; zero is valid. Explicit required value; absence is invalid, and an empty object provides no positive budget."
     },
     "time_budget_seconds": {
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "description": "Explicit seconds; no default. Zero is valid and does not grant a positive runtime."
     },
     "output_schema": {
       "oneOf": [
@@ -125,9 +132,19 @@
       },
       "minItems": 1,
       "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": [],
+      "description": "Optional explanatory notes only; omission means no notes, never authorization."
     }
   },
   "required": [
+    "schema_version",
     "research_id",
     "stage_id",
     "task_id",
@@ -160,5 +177,6 @@
       ],
       "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

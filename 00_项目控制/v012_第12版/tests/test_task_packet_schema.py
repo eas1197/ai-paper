@@ -1,5 +1,4 @@
-"""C01 common task packet structure; no executor dispatch or research side effects."""
-from copy import deepcopy
+"""C01–C02 common task packet structure; no executor dispatch or research side effects."""
 import json
 from pathlib import Path
 import unittest
@@ -11,6 +10,7 @@ SCHEMA = Path(__file__).resolve().parents[1] / "schemas/task_packet.schema.json"
 
 def packet():
     return {
+        "schema_version": 1,
         "research_id": "offline_fixture", "stage_id": "initial", "task_id": "fixture_001",
         "purpose": "Define a search task contract", "research_question": "How does coordination occur?",
         "search_levels": ["object", "issue", "theory"],
@@ -55,6 +55,27 @@ class CommonTaskSchemaTest(unittest.TestCase):
         # Transport structure does not establish execution identity or formal approval.
         self.assertNotIn("executor", sample)
         self.assertNotIn("formal_eligible", sample)
+
+    def test_c02_explicit_version_and_unknown_fields(self):
+        for value in (0, 2, "1", None):
+            with self.subTest(version=value):
+                self.assertFalse(self.validator.is_valid(dict(packet(), schema_version=value)))
+        for change in ({"unknown": True}, {"formal_eligible": True}, {"executor": "codex"},
+                       {"source_scope": {"unbounded": True}}):
+            with self.subTest(change=change):
+                self.assertFalse(self.validator.is_valid(dict(packet(), **change)))
+
+    def test_c02_optional_notes_do_not_supply_authority(self):
+        sample = packet()
+        self.validator.validate(sample)
+        self.assertNotIn("notes", sample)  # JSON Schema default is descriptive, not mutation.
+        self.assertEqual(self.schema["properties"]["notes"]["default"], [])
+        self.validator.validate(dict(sample, notes=["No execution requested"]))
+        self.assertFalse(self.validator.is_valid(dict(sample, notes=None)))
+        for key in ("source_scope", "quantity_budget", "time_budget_seconds", "stop_conditions"):
+            incomplete = packet()
+            del incomplete[key]
+            self.assertFalse(self.validator.is_valid(incomplete))
 
 
 if __name__ == "__main__":
