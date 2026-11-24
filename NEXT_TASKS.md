@@ -10,15 +10,15 @@
 
 # 当前唯一任务
 
-1. **C27（当前唯一最小任务）**：验证 Chat 结果不能冒充 CLI 原生收据。
-   - 状态：pending；允许使用离线 fixture 做身份伪装负向测试；不得宣称真实 CLI 运行。
-   - 仅需读取：`tools/chat_receiving.py`、`tools/codex_receiving.py`、`tools/original_literature_gate.py`、`schemas/result_bundle.schema.json` 与对应定向测试。
-   - 验收：Chat 结果伪装 Codex executor/native receipt/native events 时被拒绝或 pending，不生成 native_cli_receipt、原始 verified rows 或阶段推进。
-   - 完成后：新增独立定向测试，运行相关测试与完整 strict CI，提交后更新进度并转 C28。
+1. **C28（当前唯一最小任务）**：验证 CLI 结果不能只靠手填字段冒充真实网页事件。
+   - 状态：pending；允许使用离线 fixture 做原始 CLI 凭证缺失/错配负向测试；不得宣称真实 CLI 运行。
+   - 仅需读取：`tools/codex_receiving.py`、`tools/result_bundle.py`、`schemas/result_bundle.schema.json`、`tests/test_codex_receiving.py` 与 `tests/test_original_literature_gate.py`。
+   - 验收：Codex 结果仅手填字段、缺失/篡改 events/command_record/response 时拒绝或 pending，不生成 native_cli_receipt、原始 verified rows 或阶段推进。
+   - 完成后：新增独立定向测试，运行相关测试与完整 strict CI，提交后更新进度并转 C29。
 
 **暂缓策略：** C25 以及后续任何验收标准明确要求真实 Codex CLI、真实 ChatGPT 登录、真实 CLI 原生执行事件/回执的任务，标记 `deferred_by_user_instruction`，不勾选、不计完成。若某任务可用离线合同/负向测试独立证明，则继续执行该离线最小任务，但不得替代真实运行验收。
 
-**当前统计：** 原始55/253，合并57/255。C01–C24、C26 verified；C25 deferred（不计数）；C27 当前。B14-07/08 与 P 系列按原指令暂缓；GAP-F01 开放。
+**当前统计：** 原始56/253，合并58/255。C01–C24、C26–C27 verified；C25 deferred（不计数）；C28 当前。B14-07/08 与 P 系列按原指令暂缓；GAP-F01 开放。
 
 ## 用户指定暂缓（不是完成/取消）
 
