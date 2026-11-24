@@ -387,13 +387,22 @@ def original_writer4_command(action, *, packet, workspace=None, mode="explorator
         if manuscript is not None or claims is not None or mode not in {"exploratory", "formal"}:
             raise ValueError("Invalid original v016 prepare arguments")
         validate_v15_writer_handoff(packet)
+        run_root = Path(packet).resolve().parent.parent.parent
+        if not Path(workspace).resolve().is_relative_to(run_root) or Path(workspace).resolve() == run_root:
+            raise ValueError("V16 workspace must be inside the current research run")
         cmd += ["--mode", mode]
         return cmd
     if manuscript is None or claims is None:
         raise ValueError("The original v016 submit command requires manuscript and claims")
     validate_v15_writer_handoff(packet)
-    cmd += ["--manuscript", str(Path(manuscript).resolve()),
-            "--claims", str(Path(claims).resolve())]
+    run_root = Path(packet).resolve().parent.parent.parent
+    scoped = [Path(value).resolve() for value in (workspace, manuscript, claims)]
+    if any(not path.is_relative_to(run_root) or path == run_root for path in scoped):
+        raise ValueError("V16 workspace, manuscript and claims must be inside the current research run")
+    if scoped[1] == scoped[2] or not all(path.is_file() for path in scoped[1:]):
+        raise ValueError("V16 requires distinct existing manuscript and claims files")
+    cmd += ["--manuscript", str(scoped[1]),
+            "--claims", str(scoped[2]), "--require-task-binding"]
     return cmd
 
 

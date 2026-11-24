@@ -246,6 +246,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
         raise ValueError("Writing workspace exists; refusing to overwrite a prior attempt")
     workspace.mkdir(parents=True)
     tasks = []
+    task_hashes = {}
     for chapter in packet["chapters"]:
         typ = stage_type(chapter["id"])
         rulemap = rolemap["chapters"][typ]
@@ -293,15 +294,17 @@ def prepare(packet_path, workspace, mode="exploratory"):
                     "must not be logged as a CLI search or independent model response."
                 ),
             }
-            save(workspace / "tasks" / (task_id + ".json"), task)
+            task_path = workspace / "tasks" / (task_id + ".json")
+            save(task_path, task)
             tasks.append(task_id)
+            task_hashes[task_id] = hash_file(task_path)
     (workspace / "writing_plan_v15.md").write_text(rendered, encoding="utf-8")
     record = {
         "product": "ai-writer 4.0", "version": 4, "run_id": packet.get("run_id"),
         "method": packet["method"], "mode": mode,
         "packet_name": packet_path.name, "packet_sha256": hash_file(packet_path),
         "sources": packet["sources"], "chapter_ids": [c["id"] for c in packet["chapters"]],
-        "task_ids": tasks, "plan_sha256": hash_file(workspace / "writing_plan_v15.md"),
+        "task_ids": tasks, "task_sha256": task_hashes, "plan_sha256": hash_file(workspace / "writing_plan_v15.md"),
         "resource_sha256": locks, "language_profile_version": profile["profile_version"],
         "language_resource_version": profile["resource_version"],
         "language_snapshot_id": snapshot["resource_snapshot_id"],
@@ -320,7 +323,67 @@ def prepare(packet_path, workspace, mode="exploratory"):
             "language_gate": snapshot["status"], "workspace": str(workspace)}
 
 
-def review_draft(packet_path, workspace, manuscript_path, claims_path):
+def validate_draft_task_binding(packet, record, workspace, text, ledger):
+    """Bind submitted text to frozen paragraph tasks; not semantic or academic proof."""
+    expected = {}
+    hashes = record.get("task_sha256")
+    if not isinstance(hashes, dict):
+        raise ValueError("Missing frozen task hashes; prepare a new attempt")
+    for chapter in packet["chapters"]:
+        for i, section in enumerate(chapter["sections"], 1):
+            task_id = chapter["id"] + "_" + str(i).zfill(2)
+            task_path = (workspace / "tasks" / (task_id + ".json")).resolve()
+            if (not task_path.is_relative_to((workspace / "tasks").resolve())
+                    or not task_path.is_file() or hash_file(task_path) != hashes.get(task_id)):
+                raise ValueError("Frozen paragraph task changed: " + task_id)
+            task = load(task_path)
+            paragraphs = section.get("paragraphs", [section["task"]])
+            if (task.get("task_id") != task_id or task.get("paragraphs") != paragraphs
+                    or task.get("source_ids") != section["source_ids"]
+                    or task.get("sources") != {key: packet["sources"][key] for key in section["source_ids"]}):
+                raise ValueError("Frozen paragraph task differs from packet: " + task_id)
+            for number in range(1, len(paragraphs) + 1):
+                expected[(task_id, number)] = set(section["source_ids"])
+    task_ids = list(dict.fromkeys(key[0] for key in expected))
+    if task_ids != record.get("task_ids") or set(hashes) != set(task_ids):
+        raise ValueError("Frozen task inventory differs from packet")
+    rows = ledger.get("paragraph_bindings")
+    if not isinstance(rows, list) or len(rows) != len(expected):
+        raise ValueError("Every frozen paragraph task requires a submitted paragraph binding")
+    bound = {}
+    last_end = 0
+    for row, key in zip(rows, expected):
+        if not isinstance(row, dict):
+            raise ValueError("Malformed paragraph binding")
+        actual = (row.get("task_id"), row.get("paragraph_index"))
+        literal, refs = row.get("exact_text"), row.get("source_ids")
+        start, end = row.get("start"), row.get("end")
+        if (actual != key or type(actual[1]) is not int
+                or not isinstance(literal, str) or not literal.strip()
+                or type(start) is not int or type(end) is not int
+                or not last_end <= start < end <= len(text)
+                or text[start:end] != literal):
+            raise ValueError("Missing, out-of-order or unlocated paragraph binding: " + str(key))
+        if (not isinstance(refs, list) or any(not isinstance(x, str) for x in refs)
+                or len(refs) != len(set(refs)) or not set(refs) <= expected[key]):
+            raise ValueError("Paragraph source outside frozen task: " + str(key))
+        bound[key] = (literal, set(refs))
+        last_end = end
+    for claim in ledger.get("claims", []):
+        key = (claim.get("task_id"), claim.get("paragraph_index"))
+        literal = claim.get("exact_text") or claim.get("claim_text")
+        refs = claim.get("source_ids")
+        if (type(key[1]) is not int or key not in bound or not isinstance(literal, str)
+                or not literal.strip() or literal not in bound[key][0]
+                or not isinstance(refs, list) or not refs
+                or any(not isinstance(x, str) for x in refs)
+                or not set(refs) <= bound[key][1]):
+            raise ValueError("Claim not bound to a permitted paragraph and sources")
+    return {"status": "task_binding_verified", "paragraph_count": len(rows),
+            "task_sha256": hashes, "scope": "structural binding only; semantic coverage pending"}
+
+
+def review_draft(packet_path, workspace, manuscript_path, claims_path, *, require_task_binding=False):
     workspace = Path(workspace)
     record = load(workspace / "writer_manifest.json")
     packet = load(packet_path)
@@ -363,6 +426,13 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
         problems.append("Formal session cannot be submitted without a separate independent gate")
     text = Path(manuscript_path).read_text(encoding="utf-8-sig")
     claims_file = load(claims_path)
+    draft_binding = {"status": "legacy_exploratory_unbound"}
+    if require_task_binding:
+        try:
+            draft_binding = validate_draft_task_binding(packet, record, workspace, text, claims_file)
+        except (ValueError, KeyError, TypeError, OSError) as exc:
+            problems.append("Draft task binding: " + str(exc))
+            draft_binding = {"status": "pending_recheck", "reason": str(exc)}
     claims = claims_file.get("claims")
     if not isinstance(claims, list) or not claims:
         problems.append("No source-bound claims ledger")
@@ -409,6 +479,7 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
         "manuscript_sha256": hash_file(manuscript_path),
         "claim_ledger_sha256": hash_file(claims_path),
         "packet_sha256": record["packet_sha256"],
+        "draft_task_binding": draft_binding,
         "language_resource_version": resource_versions["v005"],
         "language_formal_resource_status": snapshot["status"],
         "resource_snapshot_warnings": snapshot_warnings,
@@ -446,6 +517,7 @@ def main(argv=None):
         if cmd == "submit":
             p.add_argument("--manuscript", type=Path, required=True)
             p.add_argument("--claims", type=Path, required=True)
+            p.add_argument("--require-task-binding", action="store_true")
     args = cli.parse_args(argv)
     try:
         if args.command == "route":
@@ -453,7 +525,8 @@ def main(argv=None):
         elif args.command == "prepare":
             result = prepare(args.packet, args.workspace, args.mode)
         else:
-            result = review_draft(args.packet, args.workspace, args.manuscript, args.claims)
+            result = review_draft(args.packet, args.workspace, args.manuscript, args.claims,
+                                  require_task_binding=args.require_task_binding)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0 if result.get("status") not in {"technical_revisions_needed"} else 3
     except (OSError, ValueError, KeyError, TypeError, ImportError) as exc:

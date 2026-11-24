@@ -249,6 +249,48 @@ class Writer4Test(unittest.TestCase):
         self.assertEqual(result["language_resource_status"], "pending_recheck")
         self.assertFalse((self.work / "style_review.json").exists())
 
+    def test_g16_strict_draft_binding_and_tampered_task(self):
+        writer.prepare(self.packet_path, self.work)
+        draft = self.root / "draft.md"
+        claims = self.root / "claims.json"
+        rows = []
+        text = ""
+        for chapter in self.data["chapters"]:
+            text += "## " + chapter["id"] + "\n"
+            literal = "材料涉及" + chapter["id"] + "。"
+            start = len(text)
+            text += literal
+            rows.append({"task_id": chapter["id"]+"_01", "paragraph_index": 1,
+                         "exact_text": literal, "start": start, "end": len(text),
+                         "source_ids": ["E"]})
+            text += "\n"
+        draft.write_text(text, encoding="utf-8")
+        ledger = {"paragraph_bindings": rows, "claims": [{"claim_id": "C1",
+            "task_id": "problem_01", "paragraph_index": 1,
+            "exact_text": rows[0]["exact_text"], "source_ids": ["E"]}]}
+        writer.save(claims, ledger)
+        result = writer.review_draft(self.packet_path, self.work, draft, claims,
+                                     require_task_binding=True)
+        self.assertEqual(result["status"], "exploratory_draft_awaiting_review")
+        request = writer.load(self.work / "writing_review_request.json")
+        self.assertEqual(request["draft_task_binding"]["paragraph_count"], 5)
+        self.assertEqual(request["draft_task_binding"]["status"], "task_binding_verified")
+        self.assertFalse(request["formal_pass"])
+        ledger["claims"][0]["source_ids"] = ["T"]
+        writer.save(claims, ledger)
+        self.assertEqual(writer.review_draft(self.packet_path, self.work, draft, claims,
+                         require_task_binding=True)["status"], "technical_revisions_needed")
+        ledger["claims"][0]["source_ids"] = ["E"]
+        ledger["paragraph_bindings"].pop()
+        writer.save(claims, ledger)
+        self.assertEqual(writer.review_draft(self.packet_path, self.work, draft, claims,
+                         require_task_binding=True)["status"], "technical_revisions_needed")
+        task = self.work / "tasks/problem_01.json"
+        task.write_text(task.read_text(encoding="utf-8") + " ", encoding="utf-8")
+        result = writer.review_draft(self.packet_path, self.work, draft, claims,
+                                     require_task_binding=True)
+        self.assertTrue(any("Frozen paragraph task changed" in error for error in result["errors"]))
+
     def test_rejects_missing_evidence_from_dimension(self):
         self.data["chapters"][3]["sections"][0]["source_ids"] = ["T"]
         self.packet_path.write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")

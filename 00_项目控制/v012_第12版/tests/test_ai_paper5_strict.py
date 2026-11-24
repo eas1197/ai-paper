@@ -222,7 +222,7 @@ class StrictTests(TestCase):
             packet=make_v15_fixture(Path(temporary))
             writer4=m.original_writer4_command(
                 "prepare",packet=packet,
-                workspace=Path(temporary)/"writer4_workspace",mode="exploratory")
+                workspace=packet.parent.parent.parent/"writer4_workspace",mode="exploratory")
             self.assertEqual(Path(writer4[2]),m.V16)
             self.assertEqual(writer4[3],"prepare")
             self.assertIn("--packet",writer4)
@@ -251,7 +251,7 @@ class StrictTests(TestCase):
                      json.dumps({"method":"secondary_interviews","writer":"ai-writer 4.0 / v016"}),
                      "writer4 complete"]) as original:
                 result=m.main(["writer4","--action","prepare","--packet",str(packet),
-                               "--workspace",str(Path(temporary)/"writer4_workspace"),"--mode","exploratory"])
+                               "--workspace",str(packet.parent.parent.parent/"writer4_workspace"),"--mode","exploratory"])
             self.assertEqual(result,0)
             self.assertEqual([call.args[0][3] for call in original.call_args_list],["route","prepare"])
             command=original.call_args.args[0]
@@ -263,7 +263,7 @@ class StrictTests(TestCase):
         import io
         with tempfile.TemporaryDirectory() as temporary:
             packet=make_v15_fixture(Path(temporary))
-            workspace=Path(temporary)/"writer4_workspace"
+            workspace=packet.parent.parent.parent/"writer4_workspace"
             output=io.StringIO()
             with contextlib.redirect_stdout(output):
                 self.assertEqual(m.main(["writer4","--action","prepare","--packet",str(packet),
@@ -289,6 +289,26 @@ class StrictTests(TestCase):
             self.assertEqual(manifest["plan_sha256"],m.sha(workspace/"writing_plan_v15.md"))
             self.assertFalse((workspace/"writing_review_request.json").exists())
 
+    def test_g16_adapter_requires_run_owned_draft_and_strict_task_binding(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            run=packet.parent.parent.parent
+            workspace=run/"writer4_workspace"
+            draft=run/"draft.md"
+            claims=run/"claims.json"
+            draft.write_text("Fixture",encoding="utf-8")
+            claims.write_text("{}",encoding="utf-8")
+            cmd=m.original_writer4_command("submit",packet=packet,workspace=workspace,
+                                           manuscript=draft,claims=claims)
+            self.assertIn("--require-task-binding",cmd)
+            outside=Path(temporary)/"outside.md"
+            outside.write_text("Fixture",encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"inside the current research run"):
+                m.original_writer4_command("submit",packet=packet,workspace=workspace,
+                                           manuscript=outside,claims=claims)
+            with self.assertRaisesRegex(ValueError,"inside the current research run"):
+                m.original_writer4_command("prepare",packet=packet,workspace=Path(temporary)/"outside")
+
     def test_g12_v012_route_executes_original_writer_for_all_methods(self):
         import contextlib
         import io
@@ -312,7 +332,7 @@ class StrictTests(TestCase):
                  patch.object(m,"original_call",return_value=json.dumps(
                      {"method":"quantitative","writer":"main/v014/tools/stage07.py"})) as original:
                 result=m.main(["writer4","--action","prepare","--packet",str(packet),
-                               "--workspace",str(Path(temporary)/"writer4_workspace")])
+                               "--workspace",str(packet.parent.parent.parent/"writer4_workspace")])
             self.assertEqual(result,2)
             original.assert_called_once_with(m.original_writer4_command("route",packet=packet))
 
@@ -379,7 +399,7 @@ class StrictTests(TestCase):
             request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
             with patch.object(m,"doctor",return_value={}), patch.object(m,"original_call") as original:
                 result=m.main(["writer4","--action","prepare","--packet",str(packet),
-                               "--workspace",str(Path(temporary)/"writer4_workspace"),"--mode","exploratory"])
+                               "--workspace",str(packet.parent.parent.parent/"writer4_workspace"),"--mode","exploratory"])
             self.assertEqual(result,2)
             original.assert_not_called()
 
