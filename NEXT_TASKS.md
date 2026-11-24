@@ -10,15 +10,15 @@
 
 # 当前唯一任务
 
-1. **C29（当前唯一最小任务）**：验证来源缺失、摘要无法定位、重复来源和预算耗尽均能正确进入待核/失败状态。
-   - 状态：pending；使用离线 fixture 验证缺口/冲突/预算状态；不得宣称真实检索或 CLI 运行。
-   - 仅需读取：`tools/codex_receiving.py`、`tools/result_bundle.py`、`tools/source_identity.py`、`tools/original_literature_gate.py` 与相关定向测试。
-   - 验收：来源/摘要缺口、重复身份冲突、预算耗尽分别进入 pending/rejected/blocked；原 v009 verified rows 不增长，不推进阶段。
-   - 完成后：逐项测试、运行完整 strict CI，提交后更新进度并转 C30。
+1. **C30（当前唯一最小任务）**：验证统一结果包可被 v009 原有检索门禁读取，不需要另写一套放行规则。
+   - 状态：pending；使用既有离线 original receipt fixture 核验 v012→v009 路径，不宣称真实检索或 CLI 运行。
+   - 仅需读取：`tools/original_literature_gate.py`、`tools/result_bundle.py`、v009 `staged_topic.py`/`abstract_acquisition.py` 与 `tests/test_original_literature_gate.py`。
+   - 验收：统一结果包通过接收后仍调用原 v009 receipt 重建集合；原 v009 决定摘要资格、集合、配额和阶段状态；v012 不自行生成 formal eligible，不自动推进阶段。
+   - 完成后：运行原 receiver 定向测试与完整 strict CI，提交后更新进度并转 D01。
 
 **暂缓策略：** C25 以及后续任何验收标准明确要求真实 Codex CLI、真实 ChatGPT 登录、真实 CLI 原生执行事件/回执的任务，标记 `deferred_by_user_instruction`，不勾选、不计完成。若某任务可用离线合同/负向测试独立证明，则继续执行该离线最小任务，但不得替代真实运行验收。
 
-**当前统计：** 原始57/253，合并59/255。C01–C24、C26–C28 verified；C25 deferred（不计数）；C29 当前。B14-07/08 与 P 系列按原指令暂缓；GAP-F01 开放。
+**当前统计：** 原始58/253，合并60/255。C01–C24、C26–C29 verified；C25 deferred（不计数）；C30 当前。B14-07/08 与 P 系列按原指令暂缓；GAP-F01 开放。
 
 ## 用户指定暂缓（不是完成/取消）
 
