@@ -1,0 +1,74 @@
+name: K03 bounded offline original initialization
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+    paths:
+      - '.github/workflows/k03-chat-init.yml'
+permissions:
+  contents: read
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing original test dependencies
+        run: python -m pip install beautifulsoup4 jsonschema rfc3339-validator
+      - name: Initialize original new run only (no model or live search)
+        env:
+          RESEARCH_ID: community_canteen_access_20261125
+          THEME: 城市老年食堂向全年龄社区食堂开放过程中的服务对象边界与运营规则
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, subprocess, sys
+          from pathlib import Path
+          root=Path.cwd()
+          rid=os.environ["RESEARCH_ID"]
+          work=root/"00_项目控制/v007_第7版/runs_dev"/rid
+          assert not work.exists(), "new original run directory already exists"
+          archive=json.loads((root/"handoff_runs/manifest.json").read_bytes())
+          assert all(r["run_id"] != rid for r in archive["runs"])
+          assert not (root/"handoff_runs"/rid).exists()
+          cli=root/"00_项目控制/v012_第12版/tools/ai_paper5_strict.py"
+          result=subprocess.run([sys.executable,"-B",str(cli),"init","--run-id",rid,"--theme",os.environ["THEME"]],capture_output=True,text=True,timeout=90)
+          if result.returncode:
+              print("K03 original init failed; exit", result.returncode)
+              raise SystemExit(1)
+          response=json.loads(result.stdout)
+          assert response["status"]=="ok" and response["runtime_log"]["recording_status"]=="recorded"
+          manifest=json.loads((work/"run_manifest.json").read_bytes())
+          state=json.loads((work/"staged_topic.json").read_bytes())
+          assert manifest["run_id"]==state["run_id"]==rid
+          assert manifest["theme"]==state["theme"]==os.environ["THEME"]
+          assert manifest["run_mode"]==state["mode"]=="dev" and state["status"]=="reality"
+          assert state["history"]==[] and manifest["formal_eligible"] is state["formal_eligible"] is False
+          assert all(s["status"]=="planned" for s in manifest["stages"])
+          sys.path.insert(0,str(root/".github/scripts"))
+          from check_publication import inspect_candidate
+          files={}
+          for path in sorted(work.rglob("*")):
+              if not path.is_file():
+                  continue
+              rel=path.relative_to(work).as_posix()
+              assert rel in ("run_manifest.json","staged_topic.json") or (rel.startswith("runtime_log/") and rel.endswith(".json")), "unexpected initialization output"
+              raw=path.read_bytes()
+              assert not inspect_candidate("handoff_runs/"+rid+"/"+rel,raw), "publication risk"
+              files[rel]={"sha256":hashlib.sha256(raw).hexdigest(),"raw_text":raw.decode("utf-8")}
+          assert len(files)==3 and "run_manifest.json" in files and "staged_topic.json" in files
+          print("K03_PUBLIC_SNAPSHOT="+json.dumps({"source_head":os.environ["GITHUB_SHA"],"run_id":rid,"init_exit":0,"stage":"reality","fresh_directory":True,"model_calls":0,"search_calls":0,"formal_eligible":False,"files":files},ensure_ascii=False,separators=(",",":")))
+          PY
+      - name: Retain reviewed initialization snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: community_canteen_access_20261125-init
+          path: |
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/run_manifest.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/staged_topic.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/runtime_log/*.json
+          retention-days: 14
+          if-no-files-found: error
