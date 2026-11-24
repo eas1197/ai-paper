@@ -187,6 +187,33 @@ class Writer4Test(unittest.TestCase):
         self.assertEqual(result["status"], "technical_revisions_needed")
         self.assertTrue(any("packet changed" in s for s in result["errors"]))
 
+    def test_style_review_is_diagnostic_only_and_preserves_evidence(self):
+        writer.prepare(self.packet_path, self.work)
+        draft = self.root / "draft.md"
+        draft.write_text(
+            "## 一、问题\n这一结果表明相关而非因果（来源，2022）。\n"
+            "## 二、理论\n对照理论与报道。\n"
+            "## 三、案例\n受访者原话为“尚不确定”。\n"
+            "## 四、可信性\n报道中的核验行为。\n"
+            "## 五、结论\n仅支持相关关系。\n",
+            encoding="utf-8")
+        claims = self.root / "claims.json"
+        writer.save(claims, {"claims": [{"claim_id": "C1",
+            "exact_text": "相关而非因果", "source_ids": ["E"]}]})
+        before = (draft.read_bytes(), claims.read_bytes())
+        output = writer.review_draft(self.packet_path, self.work, draft, claims)
+        self.assertGreater(output["style_issue_count"], 0)
+        self.assertEqual(before, (draft.read_bytes(), claims.read_bytes()))
+        review = writer.load(self.work / "style_review.json")
+        self.assertEqual(review["edit_policy"], "diagnostic_only")
+        self.assertEqual(review["semantic_equivalence"], "not_verified")
+        self.assertEqual(review["manuscript_sha256"], writer.hash_file(draft))
+        self.assertEqual(review["claim_ledger_sha256"], writer.hash_file(claims))
+        self.assertTrue({"research_conclusion", "source_attribution",
+                         "interview_and_quote_authenticity", "causal_strength"}
+                        <= set(review["protected_boundaries"]))
+        self.assertFalse(writer.load(self.work / "writing_review_request.json")["formal_pass"])
+
     def test_rejects_missing_evidence_from_dimension(self):
         self.data["chapters"][3]["sections"][0]["source_ids"] = ["T"]
         self.packet_path.write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")

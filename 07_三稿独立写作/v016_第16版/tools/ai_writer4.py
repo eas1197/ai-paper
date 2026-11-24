@@ -372,9 +372,19 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
         "deterministic_findings": style_issues,
         "resources_formally_passed": snapshot["status"] == "passed",
         "human_language_review": "pending",
+        "edit_policy": "diagnostic_only",
+        "manuscript_sha256": hash_file(manuscript_path),
+        "claim_ledger_sha256": hash_file(claims_path),
+        "semantic_equivalence": "not_verified",
+        "protected_boundaries": [
+            "research_conclusion", "source_attribution", "interview_and_quote_authenticity",
+            "causal_strength", "research_unit", "temporal_scope", "evidence_uncertainty",
+        ],
         "instruction": "Use v004 style and v005 qualitative task mapping, then compare before/after "
                        "meaning, research unit, temporal scope, source attribution, causal strength. "
-                       "Do not rewrite evidence to satisfy stylistic taste."
+                       "Do not change research conclusions, invent sources, interviews or quotations, "
+                       "or promote association to causality. Do not rewrite evidence to satisfy stylistic taste. "
+                       "Deterministic style findings are diagnostics only, not semantic equivalence proof."
     })
     save(workspace / "writing_review_request.json", {
         "manuscript_sha256": hash_file(manuscript_path),
