@@ -38,7 +38,7 @@ def make_v15_fixture(root):
                 "locator": "Fixture source, paragraph 2", "kind": "official_rule"}
     receipt = {"framework_sha256": evidence_digest(framework), "materials": [material]}
     (matrix_dir / "framework.json").write_text(
-        json.dumps(framework, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        json.dumps(framework, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     receipt_path = matrix_dir / "material_receipt.json"
     receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     receipt_sha = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
@@ -289,7 +289,7 @@ class StrictTests(TestCase):
             matrix_path=changed_matrix_source.parent.parent.parent/"qualitative_framework"/"attempt_001"/"analysis_matrix_reviewed.json"
             matrix=json.loads(matrix_path.read_text(encoding="utf-8"))
             matrix["rows"][0]["evidence"][0]["locator"]="Tampered matrix locator"
-            matrix_path.write_text(json.dumps(matrix,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            matrix_path.write_text(json.dumps(matrix,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
             request_path=changed_matrix_source.parent/"writing_plan_review_request.json"
             request=json.loads(request_path.read_text(encoding="utf-8"))
             new_matrix_sha=__import__("hashlib").sha256(matrix_path.read_bytes()).hexdigest()
