@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **E13（当前唯一最小任务）**：仅原3.x门禁通过后推进S08。
-   - 状态：pending；核原 v009 freeze 与 strict/autopilot 调用及 D19。
+   - 状态：已补原freeze最终记录显式检查及负向回归，待CI。
    - 仅需读取：E13、原 staged_topic.review/freeze、strict status、相关回归。
    - 验收：非s08_ready、无有效原最终审查、错误证据/设计不得冻结；实际原入口核验，不真实执行审查。
    - 完成后：提交并转 E14。

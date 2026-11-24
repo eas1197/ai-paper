@@ -115,6 +115,31 @@ class StagedTopicTest(unittest.TestCase):
             self.assertEqual(archive(case, path), archive(case, path))
             self.assertEqual(path.read_text(encoding="utf-8").count("<!-- topic:"), 1)
 
+    def test_s08_ready_label_alone_cannot_freeze(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            work = Path(folder)
+            (work / "initial").mkdir()
+            papers, theories = {"rows": []}, [{"claim": "Fixture"}]
+            write(work / "merged_literature.json", papers)
+            write(work / "initial/theories.json", theories)
+            final = {"outcome": "pass", "academic_value": "pass", "data_feasibility": "pass",
+                     "model": "gpt-6.2-sol", "invocation_id": "fixture", "reason": "fixture",
+                     "question": "fixture", "design": "fixture",
+                     "evidence_sha256": digest({"papers": papers, "theories": theories})}
+            state = {"status": "s08_ready", "review_phase": "final", "mode": "dev",
+                     "history": [final], "question": "fixture"}
+            for invalid in ({"outcome": "reject"}, {"academic_value": "blocked"},
+                            {"data_feasibility": "unknown"}, {"invocation_id": ""},
+                            {"model": "fixture"}, {"reason": ""}):
+                with self.subTest(invalid=invalid):
+                    with self.assertRaisesRegex(ValueError, "final positive"):
+                        freeze(work, dict(state, history=[dict(final, **invalid)]))
+                    self.assertFalse((work / "s08_topic.json").exists())
+            for invalid in ({"history": []}, {"review_phase": "initial"}):
+                with self.assertRaisesRegex(ValueError, "final positive"):
+                    freeze(work, dict(state, **invalid))
+                self.assertFalse((work / "s08_topic.json").exists())
+
     @patch("staged_topic.require_original_review")
     def test_search_waits_for_both_reviews_and_s08_requires_final_evidence(self, _isolated_gate):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:

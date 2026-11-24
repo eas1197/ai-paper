@@ -380,7 +380,13 @@ def freeze(work, state):
         raise ValueError("A final positive independent review is required")
     evidence_sha = evidence_hash(work, state, work / "merged_literature.json",
                                  work / "initial/theories.json")
-    final = state["history"][-1]
+    history = state.get("history", [])
+    final = history[-1] if history else {}
+    if (state.get("review_phase") != "final" or final.get("outcome") != "pass"
+            or final.get("academic_value") != "pass" or final.get("data_feasibility") != "pass"
+            or final.get("model") != "gpt-6.2-sol" or not final.get("invocation_id")
+            or not final.get("reason")):
+        raise ValueError("S08 requires the original final positive independent review record")
     if final["evidence_sha256"] != evidence_sha or final["question"] != state["question"]:
         raise ValueError("Reviewed question or evidence changed")
     design = final.get("design")
