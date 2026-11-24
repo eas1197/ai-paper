@@ -48,7 +48,7 @@ class Inputs:
 
 def _original_binding(h, work, folder):
     # Invoke the original question-binding function in a separate import context.
-    script = "import sys,json; from pathlib import Path; sys.path.insert(0,sys.argv[1]); from question_binding import binding; print(json.dumps(binding(Path(sys.argv[2]),Path(sys.argv[3]))))"
+    script = "import sys,json; from pathlib import Path; sys.path.insert(0,sys.argv[1]); import staged_topic; from question_binding import binding; print(json.dumps(binding(Path(sys.argv[2]),Path(sys.argv[3]))))"
     return json.loads(h.original_call([sys.executable, "-B", "-c", script,
         str(h.V32 / "tools"), str(work), str(folder)], timeout=30))
 
@@ -121,13 +121,7 @@ def _matrix(contract, h, inputs, path):
     conversion, receipt, ids = _receipt(contract, inputs, folder, framework=True)
     framework = inputs.read(folder + "/framework.json")
     matrix = inputs.read(path)
-    binding = _original_binding(h, inputs.root, inputs.root / folder)
-    _require(matrix.get("framework_sha256") == contract._digest(framework)
-             and matrix.get("collection_sha256") == contract._digest(receipt)
-             and (matrix.get("question_binding") is None or matrix["question_binding"] == binding),
-             "Matrix differs from original framework, collection or question binding")
-    claims, dimensions = _matrix_claims(matrix, ids)
-    # Original binding checks amended receipts. Include the complete parent lineage as well.
+    # Check parent paths and cycles before calling the original recursive binding.
     seen = {folder}
     parent = receipt.get("parent_attempt")
     while parent:
@@ -138,6 +132,12 @@ def _matrix(contract, h, inputs, path):
         _, old, _ = _receipt(contract, inputs, prior, framework=True)
         inputs.add(prior + "/framework.json")
         parent = old.get("parent_attempt")
+    binding = _original_binding(h, inputs.root, inputs.root / folder)
+    _require(matrix.get("framework_sha256") == contract._digest(framework)
+             and matrix.get("collection_sha256") == contract._digest(receipt)
+             and (matrix.get("question_binding") is None or matrix["question_binding"] == binding),
+             "Matrix differs from original framework, collection or question binding")
+    claims, dimensions = _matrix_claims(matrix, ids)
     return matrix, binding, ids, claims, dimensions
 
 
