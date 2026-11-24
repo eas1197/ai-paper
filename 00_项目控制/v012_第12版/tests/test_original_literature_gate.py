@@ -112,6 +112,30 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         self.assertEqual(report["original_gate_status"],"pending_original_native_receipt")
         self.assertIsNone(report["original_verified_rows"])
 
+    def test_c27_chat_cannot_claim_native_cli_receipt_or_executor(self):
+        chat = self.fixture()
+        report = self.receive(chat)
+        self.assertEqual(report["original_gate_status"], "pending_original_native_receipt")
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertFalse(report["original_abstract_eligible_ids"])
+        self.assertIsNone(report["original_verified_rows"])
+        self.assertFalse(report["stage_advanced"])
+
+        # A Chat payload cannot add a self-asserted native receipt field.
+        chat["native_cli_receipt"] = True
+        self.save(chat)
+        with self.assertRaisesRegex(ValueError, "Invalid result envelope"):
+            self.receive(chat)
+
+        # Nor can it relabel a Chat provenance block as a Codex executor.
+        chat.pop("native_cli_receipt")
+        chat["executor"] = "codex_cli"
+        self.save(chat)
+        with self.assertRaisesRegex(ValueError, "Invalid result envelope"):
+            self.receive(chat)
+        self.assertFalse((self.work / "initial/literature_matrix.json").exists())
+        self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
+
     def test_c21_original_scope_and_budget_remain_authoritative(self):
         bundle=self.sample()
         path=self.work/"initial/abstract_collection.json"
