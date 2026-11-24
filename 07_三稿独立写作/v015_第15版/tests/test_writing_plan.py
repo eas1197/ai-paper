@@ -62,3 +62,20 @@ class WritingPlanTest(unittest.TestCase):
                     self.assertEqual(review["requested_deliverable"], expected)
                     self.assertEqual(review["review_status"], "pending")
                     self.assertFalse(review["formal_eligible"])
+
+    def test_plan_input_persisted_and_hash_locked(self):
+        with tempfile.TemporaryDirectory(dir=run_mode.ROOT) as folder:
+            with patch.object(run_mode, "RUNS", Path(folder)):
+                work = run_mode.start("fixture_stable_plan", "Test")
+                manifest = run_mode.verified_run(work)
+                data = packet(2)
+                plan = writing_plan.produce(work, data, manifest)
+                saved = plan.parent / "plan_input.json"
+                request = run_mode.load(plan.parent / "writing_plan_review_request.json")
+                self.assertEqual(run_mode.load(saved), data)
+                self.assertEqual(request["input_sha256"], run_mode.digest(run_mode.load(saved)))
+                self.assertFalse(request["formal_eligible"])
+                old = saved.read_bytes()
+                with self.assertRaises(FileExistsError):
+                    writing_plan.produce(work, dict(data, answer_strategy="Changed"), manifest)
+                self.assertEqual(saved.read_bytes(), old)

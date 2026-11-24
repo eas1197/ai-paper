@@ -175,6 +175,8 @@ def produce(work, packet, manifest, *, output=None):
     output = output or work / "writing"
     output.mkdir(exist_ok=False)
     plan = output / "论文写作方案.md"
+    # The renderer owns the exact input consumed; publish the review request only after it exists.
+    write(output / "plan_input.json", packet)
     plan.write_text(text, encoding="utf-8")
     write(output / "writing_plan_review_request.json", {
         "run_id": manifest["run_id"], "run_mode": "dev", "formal_eligible": False,

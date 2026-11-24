@@ -385,7 +385,6 @@ def resume(work, folder, prior_review):
                 raise ValueError("Previously rendered plan or matrix changed")
         else:
             plan = produce(work, packet, manifest, output=output)
-            write(output / "plan_input.json", packet)
         if revision:
             spent += 1
             record_revision_round(work, stage="plan", round_key=str(revision), before=before_plan,
