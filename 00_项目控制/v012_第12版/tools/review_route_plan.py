@@ -63,3 +63,58 @@ def plan_candidate_pass(report_path, *, current_run_id, expected_reference, cont
             "proposed_decision": "pass", "route": route, "status": "awaiting_independent_authorization",
             "advance_gate": False, "formal_eligible": False, "independent_review_verified": False,
             "reason": "A common report cannot create native academic_value, data_feasibility, method or adequacy fields; actual authorized original report required."}
+
+
+def plan_qualitative_g7_decision(report_path, *, current_run_id, expected_reference, context_path,
+                                 target_map=None, gap_routes=None):
+    """G24: single candidate intake for the original V16 pending G7 request.
+
+    This is not a native formal gate, identity verifier or authorization adapter.
+    Reuse D23-D26 candidate contracts and leave D18/D19 authorization closed.
+    """
+    import task_packet
+    args = dict(current_run_id=current_run_id, expected_reference=expected_reference,
+                context_path=context_path)
+    _, _, _, _, _, report, context, _, audit = read_review_candidate(report_path, **args)
+    if context["review_kind"] != "qualitative_g7" or context["gate_ref"] != "V16 writing_review_request":
+        raise ValueError("G7 candidate intake requires the selected original qualitative V16 request")
+    state = task_packet.heritage.state_of(current_run_id)
+    native = pass_contract(state, context)
+    decision = report["decision"]
+    if (target_map is not None and decision != "revise") or (gap_routes is not None and decision != "need_evidence"):
+        raise ValueError("Receiver routing arguments must match the reviewed decision")
+    if decision == "pass":
+        candidate = plan_candidate_pass(report_path, **args)
+        action = "await_independent_authorization"
+    elif decision == "revise":
+        from review_repair_plan import plan_candidate_revision
+        candidate = plan_candidate_revision(report_path, **args, target_map=target_map)
+        action = "candidate_revision"
+    elif decision == "need_evidence":
+        from review_evidence_return import plan_candidate_evidence
+        candidate = plan_candidate_evidence(report_path, **args, gap_routes=gap_routes)
+        action = "candidate_evidence_return"
+    elif decision == "reject":
+        from review_reject_plan import plan_candidate_rejection
+        candidate = plan_candidate_rejection(report_path, **args)
+        action = "candidate_rejection"
+    elif decision == "unable_to_review":
+        candidate = {"task_snapshot": expected_reference, "report_sha256": audit["report_sha256"],
+                     "proposed_decision": decision, "reason": report["reason"]}
+        action = "await_independent_review"
+    else:
+        raise ValueError("Unsupported review decision")
+    if (candidate["task_snapshot"] != expected_reference
+            or candidate["report_sha256"] != audit["report_sha256"]
+            or candidate["proposed_decision"] != decision):
+        raise ValueError("Candidate changed during G7 routing")
+    task_packet.verify_snapshot(expected_reference, current_run_id=current_run_id)
+    if task_packet.heritage.state_of(current_run_id) != state:
+        raise ValueError("Original state changed during G7 routing")
+    return {"task_snapshot": expected_reference, "report_sha256": audit["report_sha256"],
+            "proposed_decision": decision, "next_action": action, "candidate": candidate,
+            "route": native, "status": "blocked_by_independent_authorization",
+            "formal_pass": False, "formal_eligible": False, "independent_review_verified": False,
+            "advance_gate": False, "execute_revision": False, "execute_search": False,
+            "search_authorized": False, "terminate_run": False, "automatic_retry": False,
+            "note": "D18/D19 retain authorization; do not treat candidate routing as a formal G7 ruling."}

@@ -67,5 +67,83 @@ class CandidatePassTests(unittest.TestCase):
             plan_candidate_pass("report.json",current_run_id=self.run.name,expected_reference=self.reference,context_path="context.json")
 
 
+class QualitativeG7IntakeTests(unittest.TestCase):
+    setUp = test_review_binding.ReviewBindingTest.setUp
+    write = test_review_binding.ReviewBindingTest.write
+    sync = test_review_binding.ReviewBindingTest.sync
+
+    def prepare(self):
+        self.context.update(review_kind="qualitative_g7", gate_ref="V16 writing_review_request")
+        self.report["review_kind"] = "qualitative_g7"
+        self.snapshot["packet"]["input_files"][0] = self.write("context.json", self.context)
+        self.sync()
+        self.task_packet.heritage.state_of = Mock(return_value={"status": "frozen"})
+
+    def plan(self, **kwargs):
+        from review_route_plan import plan_qualitative_g7_decision
+        return plan_qualitative_g7_decision("report.json", current_run_id=self.run.name,
+            expected_reference=self.reference, context_path="context.json", **kwargs)
+
+    def test_g24_pass_candidate_cannot_authorize_formal_g7(self):
+        self.prepare()
+        result = self.plan()
+        self.assertEqual(result["next_action"], "await_independent_authorization")
+        self.assertIsNone(result["route"]["native_handler"])
+        self.assertEqual(result["status"], "blocked_by_independent_authorization")
+        for key in ("formal_pass", "formal_eligible", "independent_review_verified", "advance_gate",
+                    "execute_revision", "execute_search", "search_authorized", "terminate_run", "automatic_retry"):
+            self.assertFalse(result[key])
+
+    def test_g24_revise_reuses_bound_repair_targets(self):
+        self.prepare()
+        manuscript = self.write("writer4/draft.md", {"fixture": "draft"})
+        ledger = self.write("writer4/claims.json", {"fixture": "ledger"})
+        request = self.write("writer4/writing_review_request.json",
+            {"manuscript_sha256": manuscript["sha256"], "claim_ledger_sha256": ledger["sha256"]})
+        self.context["input_binding"] = {"selected_object": request}
+        for ref in (manuscript, ledger, request):
+            self.context["input_materials"].append({"artifact_id": ref["path"], "role": "fixture", **ref})
+            self.snapshot["packet"]["input_files"].append(ref)
+        self.snapshot["packet"]["input_files"][0] = self.write("context.json", self.context)
+        self.report.update(decision="revise", evidence_findings=[], issues=[{"issue_id": "I1",
+            "dimension_id": "D1", "category": "academic_defect", "blocking": True, "detail": "Too broad",
+            "required_action": "Narrow", "evidence_ids": ["M1"]}])
+        self.sync()
+        result = self.plan(target_map={"I1": [manuscript["path"], ledger["path"]]})
+        self.assertEqual(result["next_action"], "candidate_revision")
+        self.assertEqual(result["candidate"]["repair_tasks"][0]["targets"][0]["sha256"], manuscript["sha256"])
+        self.assertFalse(result["execute_revision"])
+        self.assertFalse(result["formal_pass"])
+        with self.assertRaises(ValueError):
+            self.plan(target_map={"I1": ["receipt.json"]})
+
+    def test_g24_unable_stays_waiting(self):
+        self.prepare()
+        self.report.update(decision="unable_to_review", reviewer=None, execution_id=None, evidence_findings=[],
+            issues=[{"issue_id": "I1", "dimension_id": "D1", "category": "execution_blocker", "blocking": True,
+                     "detail": "No session", "required_action": "Stop", "evidence_ids": []}])
+        self.sync()
+        result = self.plan()
+        self.assertEqual(result["next_action"], "await_independent_review")
+        self.assertFalse(result["advance_gate"])
+        self.assertFalse(result["automatic_retry"])
+
+    def test_g24_no_wrong_gate_stale_snapshot_or_receiver_override(self):
+        self.prepare()
+        with self.assertRaises(ValueError):
+            self.plan(target_map={"I1": ["receipt.json"]})
+        self.task_packet.heritage.state_of.return_value = {"status": "design_review"}
+        with self.assertRaises(ValueError):
+            self.plan()
+        self.task_packet.heritage.state_of.return_value = {"status": "frozen"}
+        self.context["gate_ref"] = "00/v009 resume_writing.resume"
+        self.snapshot["packet"]["input_files"][0] = self.write("context.json", self.context)
+        with self.assertRaises(ValueError):
+            self.plan()
+        self.task_packet.verify_snapshot.side_effect = ValueError("Superseded snapshot")
+        with self.assertRaisesRegex(ValueError, "Superseded"):
+            self.plan()
+
+
 if __name__ == "__main__":
     unittest.main()
