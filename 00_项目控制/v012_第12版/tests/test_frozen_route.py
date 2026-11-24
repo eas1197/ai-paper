@@ -50,7 +50,10 @@ class FrozenRouteTest(unittest.TestCase):
         self.assertNotIn("writer4_dispatch",result)
 
     def test_original_qualitative_route(self):
-        for method in ("secondary_interviews","online_qualitative"):
+        for index,method in enumerate(("secondary_interviews","online_qualitative")):
+            if index:
+                # Distinct method fixtures must not overwrite an already frozen run.
+                self.setUp()
             self.freeze(method)
             result=strict.status(self.run_id)
             self.assertEqual(result["method"],method)
