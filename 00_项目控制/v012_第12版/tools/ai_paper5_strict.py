@@ -434,6 +434,7 @@ def main(argv=None):
     for action in ("chat-task", "codex-task"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("review-task");p.add_argument("--run-id",required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
     p.add_argument("--response",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-receive");p.add_argument("--run-id",required=True)
@@ -476,6 +477,9 @@ def main(argv=None):
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd=="review-task":
+            from review_task import prepare_review_task
+            result=prepare_review_task(args.run_id);write(args.output,result)
         elif args.cmd=="merge-results":
             from result_merge import merge_result_bundles, write_merge_index
             task=read(args.task)
