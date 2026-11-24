@@ -238,6 +238,7 @@ class StrictTests(TestCase):
 
     def test_resume_writing_cli_delegates_original_controller(self):
         with patch.object(m,"doctor",return_value={}), \
+             patch.object(m,"frozen_route",return_value={"method":"online_qualitative"}), \
              patch.object(m,"original_call",return_value="reviewed_plan") as original:
             result=m.main(["resume-writing","--run-id","g03_fixture","--attempt","attempt_002"])
         self.assertEqual(result,0)

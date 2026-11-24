@@ -100,6 +100,21 @@ class FrozenRouteTest(unittest.TestCase):
             strict.original_quantitative_plan(self.run_id,input_path=source,output=self.work/"stage_06"/"plan.json")
         self.assertFalse(target.exists())
 
+    def test_h06_quantitative_resume_is_rejected_at_both_entries(self):
+        import contextlib
+        import io
+        import json
+        self.freeze("quantitative")
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = strict.main(["resume-writing", "--run-id", self.run_id])
+        self.assertEqual(code, 2)
+        self.assertIn("Original qualitative method required", out.getvalue())
+        self.assertFalse((self.work / "autonomous_writing").exists())
+        with self.assertRaisesRegex(RuntimeError, "Original qualitative method required"):
+            strict.original_call(strict.original_writing_command(self.run_id))
+        self.assertFalse((self.work / "autonomous_writing").exists())
+
     def test_changed_freeze_is_rejected(self):
         self.freeze("quantitative")
         path=self.work/"s08_topic.json"

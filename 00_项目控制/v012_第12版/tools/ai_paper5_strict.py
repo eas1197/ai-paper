@@ -775,7 +775,11 @@ def main(argv=None):
         elif args.cmd=="quantitative-plan":
             doctor();result=original_quantitative_plan(args.run_id,input_path=args.input,output=args.output)
         elif args.cmd=="resume-writing":
-            doctor();result={"original_output":original_call(original_writing_command(
+            doctor()
+            route = frozen_route(args.run_id)
+            if route["method"] not in {"secondary_interviews", "online_qualitative"}:
+                raise ValueError("Original qualitative method required for resume-writing")
+            result={"original_output":original_call(original_writing_command(
                 args.run_id,attempt=args.attempt))}
         elif args.cmd=="writer4":
             doctor()

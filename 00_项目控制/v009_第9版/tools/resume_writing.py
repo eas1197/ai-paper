@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from staged_topic import ROOT, run_mode, job_lock
+from staged_topic import ROOT, run_mode, job_lock, verified_frozen_topic
 from codex_literature import cli_environment, cli_executable, login_probe
 from question_binding import artifact_lineage, binding, evidence_digest, file_hash
 from revision_routes import preflight, validate_routes
@@ -96,6 +96,9 @@ def resume(work, folder, prior_review):
     manifest = run_mode.verified_run(work)
     if run_mode.writing_policy(manifest)["deliverable"] != "plan":
         raise ValueError("This resume entry produces experimental plans only")
+    frozen = verified_frozen_topic(work, load(work / "staged_topic.json"))
+    if frozen["research_method"]["path"] not in {"secondary_interviews", "online_qualitative"}:
+        raise ValueError("Original qualitative method required for resume-writing")
     area = work / "autonomous_writing"
     area.mkdir(exist_ok=True)
     contract = binding(work, folder)
