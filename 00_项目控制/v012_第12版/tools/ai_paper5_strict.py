@@ -436,6 +436,10 @@ def main(argv=None):
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
     p.add_argument("--response",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("chat-receive");p.add_argument("--run-id",required=True)
+    p.add_argument("--task",type=Path,required=True);p.add_argument("--result",required=True)
+    p.add_argument("--execution-binding",type=Path);p.add_argument("--observed-actions",type=Path)
+    p.add_argument("--output",type=Path,required=True)
     args=parser.parse_args(argv)
     try:
         if args.cmd=="doctor": result=doctor()
@@ -462,6 +466,16 @@ def main(argv=None):
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd=="chat-receive":
+            from chat_receiving import audit_chat_records
+            task=read(args.task)
+            if task.get("source_mode") != "chat_native_web":
+                raise ValueError("Expected an independently selected Chat task")
+            result=audit_chat_records(args.result,current_run_id=args.run_id,
+                expected_reference=task["task_snapshot"],
+                expected_execution=read(args.execution_binding) if args.execution_binding else None,
+                observed_actions=read(args.observed_actions) if args.observed_actions else None)
+            write(args.output,result)
         elif args.cmd=="chat-audit":
             result=audit_chat(read(args.task),read(args.response));write(args.output,result)
         else:

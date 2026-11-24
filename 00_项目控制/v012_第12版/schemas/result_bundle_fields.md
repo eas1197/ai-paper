@@ -44,3 +44,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C18 接收裁决（独立于执行状态）
 
 接收器生成 acceptance_status/reason，提交 schema 不允许执行者自填。pending_candidate：缺独立绑定、原始记录或运行状态不明；reviewable：绑定和实际字节哈希已核、执行声明完成、有候选且无已报告缺口，仍须原始来源真实性及原学术门禁核验；needs_supplement：未运行、无结果、部分结果或存在缺口；rejected：执行失败（非法/篡改/越界/错任务等直接拒绝异常，不写通过记录）；formal_qualified：保留给原有权威学术门禁真正放行后的接收裁决，本模块禁止生成此状态，C21 后续接入。任何 C15/C18 审计返回 formal_eligible=false；不能由 reviewable 推导正式资格。真实状态、缺口与原因保留，不自动重试或扩大搜索预算。
+
+## C19 Chat 原始网页记录接收
+
+`ai_paper5_strict.py chat-receive --run-id <id> --task <独立选择的chat-task文件> --result <run相对结果路径> --output <审计文件>` 可选 `--execution-binding`（接收方独立选定的 C15 绑定）与 `--observed-actions`（接收方从真实可见工具记录独立提取的动作清单）。原始记录为实际保存的 UTF-8 可见文本/合法导出，必须有文件引用和哈希，不制造所谓 Chat 原始 API 格式。动作提取仅为接收方审计索引，字段为 action_id/action_type/record_ref/line_start/line_end/query/urls；匹配原记录所在行、URL、搜索词或目标页、来源及动作 ID。缺原始独立记录保持 pending；不得让执行模型自行生成独立绑定或提取索引。可核对的字节和可见记录不等于宿主认证，所有输出 host_authenticated/native_cli_receipt/formal_eligible 均 false。拒绝 Codex events.jsonl、原生事件流及其他执行器，不生成 CLI 记录。原 chat-audit 结构审查独立保留；C22 再专门验摘要定位与缺凭证边界。
