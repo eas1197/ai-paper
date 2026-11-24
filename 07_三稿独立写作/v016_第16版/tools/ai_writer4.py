@@ -325,7 +325,7 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path):
     record = load(workspace / "writer_manifest.json")
     packet = load(packet_path)
     validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings, resource_versions = language_resources()
+    profile, snapshot, rolemap, rules, _units, locks, _argument_rules, snapshot_warnings, resource_versions = language_resources()
     problems = []
     if record["packet_sha256"] != hash_file(packet_path):
         problems.append("Writing packet changed since prepare")
