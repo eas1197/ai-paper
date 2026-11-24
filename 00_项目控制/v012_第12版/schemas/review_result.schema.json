@@ -3,7 +3,7 @@
   "properties": {
     "schema_version": {
       "type": "integer",
-      "const": 3
+      "const": 4
     },
     "task_snapshot": {
       "type": "object",
@@ -97,6 +97,22 @@
           "type": "null"
         }
       ]
+    },
+    "review_type": {
+      "enum": [
+        "academic_review",
+        "independent_re_review"
+      ]
+    },
+    "prior_review": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/prior_review"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": [
@@ -109,12 +125,14 @@
     "assessment_scope",
     "evidence_findings",
     "reviewer",
-    "execution_id"
+    "execution_id",
+    "review_type",
+    "prior_review"
   ],
   "additionalProperties": false,
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "D12 review result — task and execution-bound proposed decision",
-  "description": "Version 3 binds review identity and an execution ID; a separately selected execution receipt binds the actual report and records. No independent or academic approval is implied.",
+  "title": "D13 review result — academic review or independent re-review candidate",
+  "description": "Version 4 separates academic review from independent re-review; technical and format checks are not review results. No independent or academic approval is implied.",
   "$defs": {
     "issue": {
       "type": "object",
@@ -638,6 +656,22 @@
         "records"
       ],
       "additionalProperties": false
+    },
+    "prior_review": {
+      "type": "object",
+      "properties": {
+        "report": {
+          "$ref": "#/$defs/file_ref"
+        },
+        "revision": {
+          "$ref": "#/$defs/file_ref"
+        }
+      },
+      "required": [
+        "report",
+        "revision"
+      ],
+      "additionalProperties": false
     }
   },
   "allOf": [
@@ -994,6 +1028,29 @@
           "execution_id": {
             "type": "string",
             "pattern": "\\S"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "review_type": {
+            "const": "academic_review"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "prior_review": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "prior_review": {
+            "$ref": "#/$defs/prior_review"
           }
         }
       }

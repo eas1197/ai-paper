@@ -28,7 +28,7 @@ class ReviewEvidenceTest(unittest.TestCase):
         evidence = {"evidence_id": "M1", "artifact_id": "receipt", "path": "receipt.json", "sha256": self.sha,
                     "locator": {"kind": "json_pointer", "pointer": "/materials/0"}, "relation": "support",
                     "support_scope": "Only the stated sample"}
-        self.report = {"schema_version": 3, "reviewer": {"executor": "codex_cli", "reviewer_id": "fixture",
+        self.report = {"schema_version": 4, "review_type": "academic_review", "prior_review": None, "reviewer": {"executor": "codex_cli", "reviewer_id": "fixture",
                        "model": "fixture-model", "invocation_id": "fixture-call"}, "execution_id": "fixture-attempt",
                        "task_snapshot": {"research_id": "r", "stage_id": "s", "task_id": "t",
                        "snapshot_sha256": "a"*64}, "review_kind": "empirical_matrix", "decision": "pass",
@@ -114,7 +114,7 @@ class ReviewEvidenceTest(unittest.TestCase):
         self.audit()
 
     def test_old_version_rejected(self):
-        self.report["schema_version"] = 2
+        self.report["schema_version"] = 3
         self.reject()
 
     def test_line_locator_out_of_bounds(self):

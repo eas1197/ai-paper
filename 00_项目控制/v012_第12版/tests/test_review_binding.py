@@ -22,6 +22,7 @@ class ReviewBindingTest(unittest.TestCase):
         self.reference = self.report["task_snapshot"]
         self.reference["research_id"] = self.run.name
         self.context["research_question"] = "Fixture question"
+        self.context.update(review_type="academic_review", prior_review=None)
         context_ref = self.write("context.json", self.context)
         self.snapshot = {"packet": {"research_question": "Fixture question",
                                     "input_files": [context_ref, {"path": "receipt.json", "sha256": fixture.sha}]}}

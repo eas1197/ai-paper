@@ -5,6 +5,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 from review_evidence import SCHEMA, audit_review_evidence
+from review_type import audit_review_type
 
 
 def _local_file(run, raw):
@@ -53,9 +54,11 @@ def audit_review_binding(report_path, *, current_run_id, expected_reference,
         raise ValueError("Review context question differs from frozen task")
     if any(inputs.get(item["path"]) != item["sha256"] for item in context["input_materials"]):
         raise ValueError("Review artifact is not in the frozen task")
+    review_type = audit_review_type(run, context, report, inputs, schema, _read_bound)
     evidence = audit_review_evidence(run, context, report)
     result = {"task_snapshot": expected_reference, "report_sha256": hashlib.sha256(raw).hexdigest(),
               "proposed_decision": report["decision"], "evidence": evidence,
+              "review_type_binding": review_type,
               "formal_eligible": False, "independent_review_verified": False}
     if expected_execution_ref is None:
         if report["decision"] != "unable_to_review":
