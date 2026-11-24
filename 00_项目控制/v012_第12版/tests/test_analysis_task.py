@@ -2,6 +2,9 @@
 import unittest
 import json
 from unittest.mock import patch
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import test_frozen_route as fixture
 import ai_paper5_strict as strict
 import task_packet as c
