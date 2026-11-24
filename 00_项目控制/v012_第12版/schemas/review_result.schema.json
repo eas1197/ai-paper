@@ -1,0 +1,368 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "task_snapshot": {
+      "type": "object",
+      "properties": {
+        "research_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "stage_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "research_id",
+        "stage_id",
+        "task_id",
+        "snapshot_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "review_kind": {
+      "enum": [
+        "preliminary_academic",
+        "research_design",
+        "qualitative_design",
+        "final_research",
+        "event_fact",
+        "critical_exchange",
+        "empirical_matrix",
+        "material_adequacy",
+        "writing_plan",
+        "qualitative_g7",
+        "quantitative_g7"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "pass",
+        "revise",
+        "need_evidence",
+        "reject",
+        "unable_to_review"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      }
+    },
+    "assessment_scope": {
+      "type": "string",
+      "pattern": "\\S"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_snapshot",
+    "review_kind",
+    "decision",
+    "reason",
+    "issues",
+    "assessment_scope"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D10 review result — proposed decision, not gate authorization",
+  "description": "Transport only; task snapshot and independent execution must be validated by the receiver. Original gates remain authoritative. D11–D13 extend evidence detail and identity/type binding.",
+  "$defs": {
+    "issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "dimension_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "category": {
+          "enum": [
+            "academic_defect",
+            "evidence_gap",
+            "execution_blocker",
+            "technical_defect",
+            "suggestion"
+          ]
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "detail": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "required_action": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "issue_id",
+        "dimension_id",
+        "category",
+        "blocking",
+        "detail",
+        "evidence_ids",
+        "required_action"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "pass"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "items": {
+              "properties": {
+                "blocking": {
+                  "const": false
+                },
+                "category": {
+                  "const": "suggestion"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "revise"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "contains": {
+              "properties": {
+                "category": {
+                  "enum": [
+                    "academic_defect",
+                    "technical_defect"
+                  ]
+                },
+                "blocking": {
+                  "const": true
+                }
+              },
+              "required": [
+                "category",
+                "blocking"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "need_evidence"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "contains": {
+              "properties": {
+                "category": {
+                  "enum": [
+                    "evidence_gap"
+                  ]
+                },
+                "blocking": {
+                  "const": true
+                }
+              },
+              "required": [
+                "category",
+                "blocking"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "reject"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "contains": {
+              "properties": {
+                "category": {
+                  "enum": [
+                    "academic_defect"
+                  ]
+                },
+                "blocking": {
+                  "const": true
+                }
+              },
+              "required": [
+                "category",
+                "blocking"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "unable_to_review"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "contains": {
+              "properties": {
+                "category": {
+                  "enum": [
+                    "execution_blocker"
+                  ]
+                },
+                "blocking": {
+                  "const": true
+                }
+              },
+              "required": [
+                "category",
+                "blocking"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "enum": [
+              "pass",
+              "revise",
+              "reject",
+              "need_evidence"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "not": {
+              "contains": {
+                "properties": {
+                  "category": {
+                    "enum": [
+                      "execution_blocker"
+                    ]
+                  },
+                  "blocking": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "category",
+                  "blocking"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "enum": [
+              "pass",
+              "revise",
+              "reject"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "not": {
+              "contains": {
+                "properties": {
+                  "category": {
+                    "enum": [
+                      "evidence_gap"
+                    ]
+                  },
+                  "blocking": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "category",
+                  "blocking"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
