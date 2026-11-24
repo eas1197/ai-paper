@@ -64,6 +64,44 @@ class ResultMergeTest(unittest.TestCase):
             result_merge.write_merge_index(index, current_run_id="offline_fixture",
                                            output="fixture/native_result.json")
 
+    def test_c26_same_source_deduplicates_but_preserves_both_raw_receipt_sets(self):
+        selections = self.samples()[:2]  # one Codex and one Chat result
+        submitted = {
+            "codex_cli": json.loads((self.work / selections[0]["result_path"]).read_text(encoding="utf-8")),
+            "chat_native_web": json.loads((self.work / selections[1]["result_path"]).read_text(encoding="utf-8")),
+        }
+        before = {path: path.read_bytes() for path in self.work.rglob("*") if path.is_file()}
+
+        index = self.merge(selections)
+
+        self.assertEqual(index["candidate_group_count"], 1)
+        members = index["groups"][0]["members"]
+        self.assertEqual(len(members), 2)
+        self.assertEqual({member["origin"]["executor"] for member in members},
+                         {"codex_cli", "chat_native_web"})
+        self.assertEqual({member["origin"]["original_source_id"] for member in members},
+                         {"fixture-source"})
+        self.assertEqual(len({member["origin"]["result_sha256"] for member in members}), 2)
+
+        by_executor = {row["executor"]: row for row in index["original_results"]}
+        self.assertEqual(set(by_executor), {"codex_cli", "chat_native_web"})
+        for executor, original in submitted.items():
+            receipt_refs = (original["provenance"]["record_refs"] if executor == "chat_native_web"
+                            else [original["provenance"][key] for key in
+                                  ("events", "response", "stderr", "prompt", "schema", "login", "command_record")])
+            checked = {(item["path"], item["sha256"])
+                       for item in by_executor[executor]["audit"]["checked_files"]}
+            expected = {(item["path"], item["sha256"]) for item in receipt_refs}
+            self.assertTrue(expected)
+            self.assertTrue(expected <= checked)
+            self.assertEqual(by_executor[executor]["provenance"], original["provenance"])
+            self.assertEqual(by_executor[executor]["result_sha256"],
+                             next(member["origin"]["result_sha256"] for member in members
+                                  if member["origin"]["executor"] == executor))
+
+        self.assertFalse(index["formal_eligible"])
+        self.assertEqual(before, {path: path.read_bytes() for path in self.work.rglob("*") if path.is_file()})
+
     def test_c24_duplicate_or_cross_task_rejected(self):
         selections = self.samples()
         with self.assertRaisesRegex(ValueError,"Duplicate result file"):
