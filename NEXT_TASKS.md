@@ -10,13 +10,13 @@
 
 # 当前唯一任务
 
-1. **K03（当前唯一最小任务）**：创建全新 research_id 和空白运行目录。
-   - 状态：implemented_unverified；原init一次性离线Actions已提交，预留ID community_canteen_access_20261125，待实测输出、原件归档与验收。不计入完成。
-   - 完成后：提交并转 K04。
+1. **K04（当前唯一最小任务）**：冻结本轮检索范围、文献数量、材料要求、执行器和审查安排。
+   - 状态：pending；同run community_canteen_access_20261125，只冻结用户授权的实验执行计划，保留原dev规则、独立审查和I03预算未明边界。
+   - 完成后：提交并转 K05。
 
-**当前统计：** 原始201/253，合并206/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K02 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K03 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
+**当前统计：** 原始202/253，合并207/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K03 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K04 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
 
-最近验收：[K02_用户确认研究范围与原预算](00_项目控制/v012_第12版/outputs/K02_用户确认研究范围与原预算.md)；K02 verified（用户明确确认K01主题、范围及原dev预算；Chat原生能力，真实Codex环境验收继续暂缓；不扩预算、不使用额外付费API、不运行Stata、不替代独立审查）。
+最近验收：[K03_真实新运行初始化](00_项目控制/v012_第12版/outputs/K03_真实新运行初始化.md)；K03 verified（原strict init实跑 Actions 45446608432/job 138631978179 success，空白新ID community_canteen_access_20261125，原状态reality、history空、13模块planned，3个实际原始文件及SHA256；artifact 14945878340；零模型调用/搜索、非正式；基线 b973877）。
 
 ## 历史与阻塞说明
 

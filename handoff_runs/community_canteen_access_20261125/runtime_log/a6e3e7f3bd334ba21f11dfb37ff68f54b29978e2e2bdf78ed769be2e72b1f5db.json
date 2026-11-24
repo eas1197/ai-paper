@@ -1,0 +1,50 @@
+{
+  "academic_approval_granted": false,
+  "budget": {
+    "actual_consumption": null,
+    "frozen_quantity": null,
+    "frozen_time_seconds": null,
+    "original_ledger_refs": []
+  },
+  "command": "init",
+  "command_success": true,
+  "complete_history_guaranteed": false,
+  "exception": null,
+  "execution_executor": null,
+  "executor": "v012_router",
+  "finished_at": null,
+  "formal_eligible": false,
+  "inputs": {},
+  "model_observed": null,
+  "model_requested": null,
+  "original_identity_refs": [
+    {
+      "path": "run_manifest.json",
+      "sha256": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03"
+    },
+    {
+      "path": "staged_topic.json",
+      "sha256": "8bc4c7f2aa060b8eeef8256197d7ae37653b4f339667df583dbe7f2c2a32402f"
+    }
+  ],
+  "outputs": {},
+  "record_kind": "command_observation",
+  "record_scope": "command boundary; original receipts remain authoritative",
+  "research_id": "community_canteen_access_20261125",
+  "review": {
+    "independent_verified": false,
+    "original_refs": []
+  },
+  "revision": {
+    "actual_rounds": null,
+    "original_refs": []
+  },
+  "runtime_status": "completed",
+  "schema_version": 1,
+  "sources": [],
+  "stage_id": "reality",
+  "started_at": null,
+  "task_id": null,
+  "task_snapshot": null,
+  "task_snapshot_status": "not_supplied"
+}

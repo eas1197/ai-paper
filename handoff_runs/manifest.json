@@ -73,6 +73,20 @@
       "root": "handoff_runs/rider_access_20261123/ai_paper5",
       "provenance": "summary_and_manuscript_only_full_stage_snapshots_in_conversation_zip",
       "formal_eligible": false
+    },
+    {
+      "run_id": "community_canteen_access_20261125",
+      "files": 3,
+      "type": "archived_run_snapshot",
+      "root": "00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125",
+      "source_run_id": "community_canteen_access_20261125",
+      "source_manifest": {
+        "path": "community_canteen_access_20261125/run_manifest.json",
+        "sha256": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03"
+      },
+      "formal_eligible": false,
+      "new_execution_proven": false,
+      "provenance": "original strict init in Actions 45446608432; archive of initial state only"
     }
   ],
   "files": {
@@ -528,7 +542,10 @@
     "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/静态核验.json": "1cf4eab06b4c4d92ae3cb6fa3618b83c83307b9a2a65a57402bd54f153b44d03",
     "rider_access_20261123/ai_paper5/论文_探索性全文.md": "f53c48130e237b888e57b92da622201d3552d7865b2a26390eff0f5a658f4063",
     "rider_access_20261123/ai_paper5/研究全过程与验收.md": "0557c146ae398a3058b8bf5d212b52f0494bc189f62612e48ec878aa36442f50",
-    "bike_parking_20261122/autonomous_writing/plan_review_0_budget_audit.json": "c88542f403a4dad63ff76c2ec0da0f056c27995056dbcefac71a84c1829dfd21"
+    "bike_parking_20261122/autonomous_writing/plan_review_0_budget_audit.json": "c88542f403a4dad63ff76c2ec0da0f056c27995056dbcefac71a84c1829dfd21",
+    "community_canteen_access_20261125/run_manifest.json": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03",
+    "community_canteen_access_20261125/runtime_log/a6e3e7f3bd334ba21f11dfb37ff68f54b29978e2e2bdf78ed769be2e72b1f5db.json": "a6e3e7f3bd334ba21f11dfb37ff68f54b29978e2e2bdf78ed769be2e72b1f5db",
+    "community_canteen_access_20261125/staged_topic.json": "8bc4c7f2aa060b8eeef8256197d7ae37653b4f339667df583dbe7f2c2a32402f"
   },
   "omitted": [
     [
