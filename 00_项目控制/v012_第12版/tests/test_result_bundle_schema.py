@@ -36,6 +36,8 @@ def source():
         "open_status": "opened", "excerpt": "Synthetic excerpt", "paraphrase": "Fixture paraphrase",
         "relevance_reason": "Fixture rationale", "dedup_key": "fixture-key",
         "limits": ["Not actual evidence"], "failure_reasons": [], "action_ids": ["open-1"],
+        "literature_stages": {"discovery_status": "discovered", "abstract_read_status": "unknown",
+                              "fulltext_read_status": "not_read", "formal_inclusion_status": "pending_original_gate"},
     }
 
 
@@ -107,6 +109,36 @@ class ResultEnvelopeTest(unittest.TestCase):
             "started_at": "yesterday", "finished_at": None})))
         self.assertFalse(self.validator.is_valid(dict(sample, search_actions=[
             dict(search_action(), action_type="invented_tool")])))
+
+    def test_c13_literature_stages_independent(self):
+        item = source()
+        stages = item["literature_stages"]
+        # Opened does not assert reading or inclusion.
+        self.validator.validate(dict(result(), sources=[item]))
+        self.assertEqual(item["open_status"], "opened")
+        self.assertEqual(stages["abstract_read_status"], "unknown")
+        self.assertEqual(stages["fulltext_read_status"], "not_read")
+        for key in stages:
+            broken = dict(stages)
+            del broken[key]
+            self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+                dict(item, literature_stages=broken)])))
+        sample = dict(stages, abstract_read_status="read", fulltext_read_status="read")
+        self.validator.validate(dict(result(), sources=[dict(item, literature_stages=sample)]))
+        self.assertEqual(sample["formal_inclusion_status"], "pending_original_gate")
+
+    def test_c13_no_executor_self_reported_inclusion(self):
+        item = source()
+        stages = dict(item["literature_stages"], formal_inclusion_status="included")
+        for kind in ("chat_native_web", "codex_cli", "manual"):
+            self.assertFalse(self.validator.is_valid(dict(result(kind), sources=[
+                dict(item, literature_stages=stages)])))
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(item, literature_stages=None)])))
+        empirical = dict(item, source_type="empirical", literature_stages=None)
+        self.validator.validate(dict(result(), sources=[empirical]))
+        self.assertFalse(self.validator.is_valid(dict(result(), sources=[
+            dict(empirical, literature_stages=item["literature_stages"])])))
 
 
 if __name__ == "__main__":

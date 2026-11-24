@@ -609,6 +609,16 @@
             "type": "string",
             "minLength": 1
           }
+        },
+        "literature_stages": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/literature_stages"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -630,7 +640,76 @@
         "dedup_key",
         "limits",
         "failure_reasons",
-        "action_ids"
+        "action_ids",
+        "literature_stages"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "const": "literature"
+              }
+            },
+            "required": [
+              "source_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "literature_stages": {
+                "$ref": "#/$defs/literature_stages"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "literature_stages": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "literature_stages": {
+      "type": "object",
+      "properties": {
+        "discovery_status": {
+          "enum": [
+            "discovered",
+            "not_discovered",
+            "unknown"
+          ]
+        },
+        "abstract_read_status": {
+          "enum": [
+            "read",
+            "not_read",
+            "unknown"
+          ]
+        },
+        "fulltext_read_status": {
+          "enum": [
+            "read",
+            "not_read",
+            "unknown"
+          ]
+        },
+        "formal_inclusion_status": {
+          "enum": [
+            "pending_original_gate",
+            "not_included"
+          ],
+          "description": "Executor submission cannot assert formal inclusion. Original gate decision belongs to a separate receiver-owned record."
+        }
+      },
+      "required": [
+        "discovery_status",
+        "abstract_read_status",
+        "fulltext_read_status",
+        "formal_inclusion_status"
       ],
       "additionalProperties": false
     }
