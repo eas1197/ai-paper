@@ -1,6 +1,8 @@
 # 运行手册
+
+**5.0 唯一用户入口（开发分支候选）：** `python "00_项目控制/v012_第12版/tools/ai_paper5_strict.py"`，先执行 `doctor` 或 `--help`。原 v009/06/07 是受控业务模块，autopilot_v3.py 是内部调度实现；v010/v011 只保留为历史实验，不用于新研究或接续正式候选。当前完整自动运行与真实独立学术验收尚未通过。见 [命令索引](00_项目控制/v012_第12版/outputs/E01_唯一用户入口与命令索引.md)。
 Python 3.11。离线运行 `python .github/scripts/verify_handoff.py`，以及 `python -m unittest discover -s "00_项目控制/v009_第9版/tests"`。06/v005、07/v015 同样使用 unittest discover。离线工作流安装 beautifulsoup4，实际研究入口的其他依赖按模块说明。Actions 仅测试与回放，产物保留 14 天。长期制品放 handoff_runs。
-本地恢复前核对运行 ID、注册表、输入和回执哈希。候选入口 staged_topic.py 的 prepare/advance/status 用于选题接续；定性材料和框架走 06/v005 qual_materials.py；冻结后定性写作走 resume_writing.py。需要实际网页调用时依赖已授权 Codex CLI、订阅、网络及本地配置；定量使用相应数据和 Stata 等所需工具。归档中脱敏条目不能直接替换原始凭证，严格校验需要在合法保有原件的环境按原路径恢复。Actions 不继承本地登录、Windows 工具和个案数据。
+本地恢复前核对运行 ID、注册表、输入和回执哈希。从 v012 strict 的 status/advance 接续；原 staged_topic.py 的 prepare/advance/status、06/v005 qual_materials.py、resume_writing.py 是受控内部业务模块。需要实际网页调用时依赖已授权 Codex CLI、订阅、网络及本地配置；定量使用相应数据和 Stata 等所需工具。归档中脱敏条目不能直接替换原始凭证，严格校验需要在合法保有原件的环境按原路径恢复。Actions 不继承本地登录、Windows 工具和个案数据。
 
 数字互助读取 handoff_runs/digital_mutual_aid_20261122。真实试跑的子会话启动异常属工具限制，提交独立反诘必须使用真实可执行会话及原有研究包。脱敏归档仅可读取和回放，直接恢复需要受控环境中的原凭证。
 
@@ -11,16 +13,16 @@ Python 3.11。离线运行 `python .github/scripts/verify_handoff.py`，以及 `
 4. 本对话不能以同一上下文自审代替独立反诘或独立学术审查；若缺独立执行凭证，保留运行状态与待办并标记工具能力限制，不触发后续正式关卡。新增成果只追加归档，更新 manifest 与根交接；归档原始已核查来源，测试与科研质量验收分别标记。
 5. Chat 模式不意味着 GitHub Actions 可以直接调用本聊天搜索。后续原 CLI 运行及其形式化接收器继续适用自身原生凭证校验；没有真实对应凭证的 Chat 成果需保持待衔接状态。
 
-## ai-writer 4.0定性写作候选
-当前入口 `07_三稿独立写作/v016_第16版/tools/ai_writer4.py`，完整说明见模块说明。以V15写作任务JSON为输入，执行 `route --packet 文件`、`prepare --packet 文件 --workspace 新空目录 --mode exploratory`、`submit --packet 文件 --workspace 同目录 --manuscript 正文.md --claims 主张证据台账.json`。本次用户现有示例位于 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/`。离线测试 `python -m unittest discover -s '07_三稿独立写作/v016_第16版/tests' -v`，无模型调用；GitHub Actions `.github/workflows/ai-writer4-offline.yml` 只进行离线检查。两个来源都要保留原始哈希及现有审查状态；源码提交不等于自动起草与正式G7运行。本聊天写作仅作探索性A稿和样本语言修订，不接管原研究冻结检查点。
+## 原写作模块接口（内部/历史调用记录）
+原内部实现 `07_三稿独立写作/v016_第16版/tools/ai_writer4.py`（用户统一走 v012 writer4 --action），完整说明见模块说明。以V15写作任务JSON为输入，执行 `route --packet 文件`、`prepare --packet 文件 --workspace 新空目录 --mode exploratory`、`submit --packet 文件 --workspace 同目录 --manuscript 正文.md --claims 主张证据台账.json`。本次用户现有示例位于 `handoff_runs/digital_mutual_aid_20261122/chat_native_20261122/writing/`。离线测试 `python -m unittest discover -s '07_三稿独立写作/v016_第16版/tests' -v`，无模型调用；GitHub Actions `.github/workflows/ai-writer4-offline.yml` 只进行离线检查。两个来源都要保留原始哈希及现有审查状态；源码提交不等于自动起草与正式G7运行。本聊天写作仅作探索性A稿和样本语言修订，不接管原研究冻结检查点。
 
 ai-writer 4.0现也通过实验总控显式入口 `run_mode.py --mode dev --run-id <有效实验> --writer4 route|prepare|submit <对应参数>` 调用。该添加仅针对定性writer4试验，其他`--topic`、`--writing-plan`、定量及formal逻辑保持原样。真实实验运行目录不得用脱敏GitHub归档冒名替换。
 
 ## ai-paper 5.0 操作与回放
-从`00_项目控制/v010_第10版/模块说明.md`开始，调用`tools/ai_paper5.py init --work <新实验目录> --run-id <id>`，依14个固定阶段`ingest --stage <阶段> --input <真实研究记录.json>`，`status --work`校验全部阶段文件及哈希。由ChatGPT内置联网工具检索并在真实输入记录来源；Python不得冒充网页调用。完成定性写作包并取得实际文稿后，`writer-prepare`/`writer-submit`会调用真正V16写作接口（必须在全仓库环境）。本轮本地5/5单测通过、运行真实记录14/14；**完整仓库上的V16调用与GitHub Actions成功尚未确认**。正式学术审查仍是not_passed，不得以内部自审代替。代码只提交开发分支，main保持不变。
+历史实验曾从`00_项目控制/v010_第10版/模块说明.md`开始，调用`tools/ai_paper5.py init --work <新实验目录> --run-id <id>`，依14个固定阶段`ingest --stage <阶段> --input <真实研究记录.json>`，`status --work`校验全部阶段文件及哈希。由ChatGPT内置联网工具检索并在真实输入记录来源；Python不得冒充网页调用。完成定性写作包并取得实际文稿后，`writer-prepare`/`writer-submit`会调用真正V16写作接口（必须在全仓库环境）。本轮本地5/5单测通过、运行真实记录14/14；**完整仓库上的V16调用与GitHub Actions成功尚未确认**。正式学术审查仍是not_passed，不得以内部自审代替。代码只提交开发分支，main保持不变。
 
-## 单 AI 启动（候选 v011）
-先用 00/v011/tools/ai_paper5_auto.py doctor 检查环境，然后 run --work <不存在的新实验目录> --run-id <唯一ID>。重新运行同一条命令只接续未冻结阶段；自动检索走 Codex CLI --search，不会调用 ChatGPT 当前会话的网页工具。详情见 00/v011/模块说明.md。未认证实跑不算全流程验收。
+## 历史单 AI 启动记录（v011，不作为当前入口）
+历史实验曾用 00/v011/tools/ai_paper5_auto.py doctor 检查环境，然后 run --work <不存在的新实验目录> --run-id <唯一ID>。重新运行同一条命令只接续未冻结阶段；自动检索走 Codex CLI --search，不会调用 ChatGPT 当前会话的网页工具。详情见 00/v011/模块说明.md。未认证实跑不算全流程验收。
 
-## 严格3.x入口
+## 当前唯一用户入口：严格3.x兼容 v012
 python 00_项目控制/v012_第12版/tools/ai_paper5_strict.py doctor；后续init/status/advance路由原00/v009，Chat用chat-task/chat-audit按九刊、三层定位、真实摘要规范生成候选。无独立来源回执或学术审查时应保留待核，不能冒充原CLI搜索验收。
