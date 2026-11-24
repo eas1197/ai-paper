@@ -84,7 +84,38 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def doctor():
+def probe_codex_login():
+    """Explicit opt-in login diagnostic using the original collector, never a web search."""
+    script = """import json, sys
+sys.path.insert(0, sys.argv[1])
+import staged_topic
+from codex_literature import cli_executable, cli_environment, login_probe
+try:
+    executable = cli_executable()
+except Exception:
+    print(json.dumps({"executable": "unavailable", "subscription_login": "not_checked"}))
+else:
+    try:
+        login = login_probe(executable, cli_environment())
+        status = "reported_chatgpt_login" if login.get("chatgpt") is True else "not_verified"
+    except Exception:
+        status = "probe_failed"
+    print(json.dumps({"executable": "found", "subscription_login": status}))
+"""
+    try:
+        value = json.loads(original_call([sys.executable, "-B", "-c", script,
+                                          str(V3_TOPIC.parent)], timeout=60))
+        if (value.get("executable") == "found"
+                and value.get("subscription_login") in {"reported_chatgpt_login", "not_verified", "probe_failed"}):
+            return {"executable": "found", "subscription_login": value["subscription_login"]}
+        if value == {"executable": "unavailable", "subscription_login": "not_checked"}:
+            return value
+    except (OSError, ValueError, RuntimeError, TypeError, AttributeError, subprocess.TimeoutExpired):
+        pass
+    return {"executable": "probe_failed", "subscription_login": "not_verified"}
+
+
+def doctor(*, probe_executor=False):
     missing = [name for name, path in REQUIRED.items() if not path.is_file()]
     if missing:
         raise RuntimeError("Missing original 3.x modules: " + ", ".join(missing))
@@ -100,7 +131,13 @@ def doctor():
               "abstract_excerpt", "abstract_summary", "relevance", "relevance_reason"}
     if required != fields:
         raise RuntimeError("Original v3 native literature fields changed")
+    environment = (probe_codex_login() if probe_executor else
+                   {"executable": "not_checked", "subscription_login": "not_checked"})
     return {"status": "original_v3_contracts_present",
+            "check_scope": "static_and_explicit_login_probe" if probe_executor else "static_only",
+            "static_contracts": "passed",
+            "runtime_environment": {**environment, "live_search": "not_checked",
+                                    "live_search_verified": False, "executor_ready_verified": False},
             "journals": policy["journals"], "dev": policy["dev"], "formal": policy["formal"],
             "sha256": {name: sha(path) for name, path in REQUIRED.items()},
             "formal_eligible": False}
@@ -662,7 +699,8 @@ def audit_chat(task, bundle):
 def build_parser():
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest="cmd",required=True)
-    sub.add_parser("doctor",help="Verify original module and policy contracts")
+    p=sub.add_parser("doctor",help="Verify static original contracts; login probe is explicit, live search not checked")
+    p.add_argument("--probe-executor",action="store_true",help="Run original Codex executable/login status diagnostic only; no search")
     sub.add_parser("commands",help="List the actual supported CLI subcommands without running research")
     p=sub.add_parser("prepare",help="Read original v009 pending task and input contract");p.add_argument("--run-id",required=True)
     p=sub.add_parser("autopilot",help="Explicitly invoke the original bounded internal scheduler")
@@ -746,7 +784,7 @@ def main(argv=None):
         if hasattr(args,"output") and args.cmd!="merge-results":
             args.output=cli_output_path(args.output,run_id=getattr(args,"run_id",None))
         if args.cmd=="commands": result=command_index(parser)
-        elif args.cmd=="doctor": result=doctor()
+        elif args.cmd=="doctor": result=doctor(probe_executor=args.probe_executor)
         elif args.cmd=="prepare":
             doctor();result=json.loads(original_call(original_command("prepare",args.run_id)))
         elif args.cmd=="autopilot":

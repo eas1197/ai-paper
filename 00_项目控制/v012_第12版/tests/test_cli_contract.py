@@ -17,6 +17,42 @@ class CLIContractTests(unittest.TestCase):
             code=strict.main(args)
         return code,json.loads(out.getvalue())
 
+    def test_i17_default_doctor_is_static_and_never_probes_host(self):
+        with patch.object(strict,"probe_codex_login") as probe, patch.object(strict,"original_call") as call:
+            rc,body=self.invoke(["doctor"])
+        self.assertEqual(rc,0)
+        probe.assert_not_called()
+        call.assert_not_called()
+        value=body["result"]
+        self.assertEqual(value["check_scope"],"static_only")
+        self.assertEqual(value["static_contracts"],"passed")
+        self.assertEqual(value["runtime_environment"]["subscription_login"],"not_checked")
+        self.assertFalse(value["runtime_environment"]["executor_ready_verified"])
+        self.assertFalse(value["runtime_environment"]["live_search_verified"])
+
+    def test_i17_opt_in_login_does_not_verify_live_search(self):
+        for login in ("reported_chatgpt_login","not_verified","probe_failed"):
+            with self.subTest(login=login), patch.object(strict,"original_call",return_value=json.dumps({
+                    "executable":"found","subscription_login":login})) as call:
+                rc,body=self.invoke(["doctor","--probe-executor"])
+            self.assertEqual(rc,0)
+            call.assert_called_once()
+            value=body["result"]
+            self.assertEqual(value["check_scope"],"static_and_explicit_login_probe")
+            self.assertEqual(value["runtime_environment"]["subscription_login"],login)
+            self.assertEqual(value["runtime_environment"]["live_search"],"not_checked")
+            self.assertFalse(value["runtime_environment"]["executor_ready_verified"])
+            self.assertFalse(value["formal_eligible"])
+
+    def test_i17_probe_failure_does_not_disclose_raw_diagnostic_or_claim_login(self):
+        with patch.object(strict,"original_call",side_effect=RuntimeError("fixture private diagnostic")):
+            rc,body=self.invoke(["doctor","--probe-executor"])
+        self.assertEqual(rc,0)
+        self.assertNotIn("fixture private diagnostic",json.dumps(body))
+        self.assertEqual(body["result"]["runtime_environment"]["executable"],"probe_failed")
+        self.assertEqual(body["result"]["runtime_environment"]["subscription_login"],"not_verified")
+        self.assertFalse(body["result"]["runtime_environment"]["live_search_verified"])
+
     def test_every_command_help_and_required_arguments(self):
         parser=strict.build_parser()
         sub=next(a for a in parser._actions if isinstance(a,argparse._SubParsersAction))
