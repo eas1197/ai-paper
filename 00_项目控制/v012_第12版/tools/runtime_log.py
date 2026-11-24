@@ -5,7 +5,7 @@ from pathlib import Path
 
 from review_execution import file_ref
 
-READ_ONLY = frozenset({"status", "prepare", "commands", "doctor", "review-counts"})
+READ_ONLY = frozenset({"status", "prepare", "commands", "doctor", "review-counts", "run-summary"})
 INPUT_ARGS = ("report", "task", "result", "execution_binding", "observed_actions",
               "conversion", "review", "matrix", "framework", "framework_revision",
               "input", "packet", "manuscript", "claims", "events_jsonl",

@@ -748,6 +748,7 @@ def build_parser():
     for action in ("chat-task", "codex-task"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("run-summary",help="Export existing run observation manifest and readable summary; no execution");p.add_argument("--run-id",required=True)
     p=sub.add_parser("review-counts");p.add_argument("--run-id",required=True)
     p=sub.add_parser("review-task");p.add_argument("--run-id",required=True);p.add_argument("--output",type=Path,required=True)
     p.add_argument("--review-object");p.add_argument("--packet");p.add_argument("--manuscript");p.add_argument("--claims")
@@ -792,6 +793,9 @@ def main(argv=None):
             args.output=cli_output_path(args.output,run_id=getattr(args,"run_id",None))
         if args.cmd=="commands": result=command_index(parser)
         elif args.cmd=="doctor": result=doctor(probe_executor=args.probe_executor)
+        elif args.cmd=="run-summary":
+            from run_summary import export_summary
+            result=export_summary(args.run_id)
         elif args.cmd=="prepare":
             doctor();result=json.loads(original_call(original_command("prepare",args.run_id)))
         elif args.cmd=="autopilot":

@@ -283,7 +283,7 @@ def command_observation(command,result):
     elif command=="prepare":
         state="queued"
     elif command in {"commands","doctor","init","event-compare","materials","resume-writing",
-                    "writer4","review-counts","reality","exchange","issue","review"}:
+                    "writer4","review-counts","run-summary","reality","exchange","issue","review"}:
         state="completed"
     else:
         state="blocked"

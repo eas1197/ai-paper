@@ -58,7 +58,7 @@ class CLIContractTests(unittest.TestCase):
         sub=next(a for a in parser._actions if isinstance(a,argparse._SubParsersAction))
         catalog=strict.command_index(parser)
         self.assertEqual(set(catalog["commands"]),set(catalog["parameters"]))
-        self.assertEqual(len(sub.choices),25)
+        self.assertEqual(len(sub.choices),26)
         for name,command in sub.choices.items():
             with self.subTest(name=name),contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
                 with self.assertRaises(SystemExit) as e: parser.parse_args([name,"--help"])
