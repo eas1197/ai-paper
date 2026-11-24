@@ -148,6 +148,8 @@ def audit_codex_records(result_path, *, current_run_id, expected_reference,
                         else "pending_native_source_receipt"})
     missing = sorted(set(missing))
     complete = (not missing and command_matched and p["exit_code"] == 0 and bool(trace)
+                and report["status"] == "records_hash_bound_pending_source_verification"
+                and bundle["execution_status"] in {"completed", "partial_results"}
                 and bool(sources) and all(row["status"] == "matched_native_urls_pending_original_gate" for row in sources))
     if report["acceptance_status"] != "rejected" and not complete:
         report["acceptance_status"] = "pending_candidate"

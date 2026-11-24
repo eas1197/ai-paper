@@ -60,3 +60,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C22 Chat 摘要缺失待核
 
 文学候选须存在独立对应的实际摘要 URL 打开记录、摘要定位、8–90 字符原文短摘、80–160 字符转述、摘要已读声明，且定位与短摘实际出现在独立提取的该打开记录行范围内。仅搜索命中、打开题录页、缺定位/短摘/转述、摘要未读或自报独立凭证均保持 pending_candidate，并逐来源保留 gaps。即使可见文本匹配也只是待进一步来源复核，host_authenticated/native_cli_receipt/formal_eligible 不变；不得推导正式学术资格。遵守原 v3 结构边界，不执行真实搜索。
+
+## C23 Codex 负向验收
+
+缺原 events 引用、实际文件缺失、只有 thread.started 无 web_search、来源 action ID 不匹配、失败/未执行/未知运行、自报 native_cli_receipt 均拒绝或保持 pending，不进入原 v009 receiver；不得写原矩阵或授予正式资格。即便退出码 0，只要本次结果明确 failed 也不能获得 native_cli_receipt。测试在合成 fixture 中验证，不是真实搜索。

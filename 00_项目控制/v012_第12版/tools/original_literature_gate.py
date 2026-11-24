@@ -62,7 +62,7 @@ def audit_unified_literature(result_path, *, current_run_id, expected_reference,
     report.update(original_gate_status="pending_original_native_receipt",
                   original_abstract_eligible_ids=[], original_verified_rows=None,
                   formal_eligible=False, stage_advanced=False)
-    if kind != "codex_cli" or not report.get("native_cli_receipt"):
+    if kind != "codex_cli" or not report.get("native_cli_receipt") or report["acceptance_status"] == "rejected":
         return report
     staged, clean_doi, web_url = _original()
     state = task_packet.heritage.state_of(current_run_id)

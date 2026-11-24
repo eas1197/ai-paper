@@ -125,6 +125,64 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"target or workload"):
             self.receive(bundle)
 
+    def rebind_invocation(self, bundle):
+        p=bundle["provenance"]
+        record={"task_snapshot":self.ref,"argv":p["command"],"exit_code":p["exit_code"],
+                "thread_id":p["thread_id"],"files":{key:p.get(key) for key in
+                    ("events","response","stderr","prompt","schema","login")}}
+        p["command_record"]=self.raw("initial/batch_001/invocation.json",json.dumps(record).encode())
+        self.save(bundle)
+
+    def test_c23_missing_event_reference_or_log_cannot_enter_original_gate(self):
+        bundle=self.sample()
+        p=bundle["provenance"]
+        saved=p["events"]
+        p["events"]=None
+        p.pop("command_record")
+        self.save(bundle)
+        report=self.receive(bundle)
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertFalse(report["original_abstract_eligible_ids"])
+        self.assertIsNone(report["original_verified_rows"])
+        self.assertFalse((self.work/"initial/literature_matrix.json").exists())
+        p["events"]=saved
+        self.rebind_invocation(bundle)
+        (self.work/saved["path"]).unlink()
+        with self.assertRaisesRegex(ValueError,"Missing or out-of-namespace"):
+            self.receive(bundle)
+
+    def test_c23_thread_without_web_events_and_wrong_source_id_pending(self):
+        bundle=self.sample()
+        p=bundle["provenance"]
+        old=p["events"]
+        raw=(self.work/old["path"]).read_bytes()
+        p["events"]=self.raw(old["path"],b'{"type":"thread.started","thread_id":"fixture-thread"}\n')
+        self.rebind_invocation(bundle)
+        report=self.receive(bundle)
+        self.assertEqual(report["native_event_count"],0)
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertIsNone(report["original_verified_rows"])
+        p["events"]=self.raw(old["path"],raw)
+        bundle["sources"][0]["action_ids"]=["nonexistent-event"]
+        self.rebind_invocation(bundle)
+        report=self.receive(bundle)
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertFalse(report["original_abstract_eligible_ids"])
+
+    def test_c23_failed_execution_and_self_asserted_receipt_rejected(self):
+        bundle=self.sample()
+        bundle.update(execution_status="failed",execution_issues=[
+            {"code":"timeout","scope":"run","target_id":None,"detail":"Fixture failed","original_status":"failed"}])
+        self.save(bundle)
+        report=self.receive(bundle)
+        self.assertEqual(report["acceptance_status"],"rejected")
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertIsNone(report["original_verified_rows"])
+        bundle["native_cli_receipt"]=True
+        self.save(bundle)
+        with self.assertRaisesRegex(ValueError,"Invalid result envelope"):
+            self.receive(bundle)
+
 
 if __name__=="__main__":
     unittest.main()
