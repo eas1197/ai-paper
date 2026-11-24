@@ -328,6 +328,36 @@ class Writer4Test(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "omits"):
             writer.validate_claim_coverage(self.data, manifest, data)
 
+    def test_g18_unsupported_claims_block_without_rewriting(self):
+        writer.prepare(self.packet_path, self.work)
+        draft = self.root / "draft.md"
+        text = "".join("## " + chapter["id"] + "\n材料尚待核验。\n" for chapter in self.data["chapters"])
+        draft.write_text(text, encoding="utf-8")
+        claims = self.root / "claims.json"
+        ledger = {"claims": [{"claim_id": "C1", "exact_text": "材料尚待核验。", "source_ids": ["E"]}],
+                  "unsupported_claims": [
+                      {"claim_id": "gap" + str(i), "task_id": "problem_01", "paragraph_index": 1,
+                       "exact_text": "材料尚待核验。", "reason": "Fixture missing support", "action": action}
+                      for i, action in enumerate(("weaken", "delete", "request_material"))]}
+        writer.save(claims, ledger)
+        before = (draft.read_bytes(), claims.read_bytes())
+        result = writer.review_draft(self.packet_path, self.work, draft, claims)
+        self.assertEqual(result["status"], "technical_revisions_needed")
+        revision = writer.load(self.work / "evidence_revision_request.json")
+        self.assertEqual(revision["status"], "revision_required")
+        self.assertEqual({x["action"] for x in revision["actions"]}, {"weaken", "delete", "request_material"})
+        self.assertEqual(before, (draft.read_bytes(), claims.read_bytes()))
+        request = writer.load(self.work / "writing_review_request.json")
+        self.assertEqual(request["unresolved_evidence_gap_count"], 3)
+        self.assertFalse(request["formal_pass"])
+        ledger["unsupported_claims"] = []
+        ledger["claims"][0]["source_ids"] = []
+        writer.save(claims, ledger)
+        result = writer.review_draft(self.packet_path, self.work, draft, claims)
+        self.assertEqual(result["status"], "technical_revisions_needed")
+        revision = writer.load(self.work / "evidence_revision_request.json")
+        self.assertEqual(revision["actions"][0]["action"], "choose_weaken_delete_or_request_material")
+
     def test_rejects_missing_evidence_from_dimension(self):
         self.data["chapters"][3]["sections"][0]["source_ids"] = ["T"]
         self.packet_path.write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")

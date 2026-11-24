@@ -293,7 +293,9 @@ def prepare(packet_path, workspace, mode="exploratory"):
                     "from style examples. Keep original uncertainty and evidence limits. A Chat-generated draft "
                     "must not be logged as a CLI search or independent model response. "
                     "Register every substantive empirical, theoretical and literature claim with exact text, "
-                    "paragraph task, frozen source locators and scope; declare paragraphs without claims explicitly."
+                    "paragraph task, frozen source locators and scope; declare paragraphs without claims explicitly. "
+                    "Report unsupported claims separately, with their text and task location, and choose "
+                    "weaken, delete, or request_material. Never add unsupported prose to meet a word target."
                 ),
             }
             task_path = workspace / "tasks" / (task_id + ".json")
@@ -331,6 +333,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
             for number in range(1, len(load(workspace / "tasks" / (task_id + ".json"))["paragraphs"]) + 1)
         ],
         "claim_types": ["empirical", "theoretical", "literature"],
+        "unsupported_claims": [],
         "instruction": "Record every substantive empirical, theoretical and literature claim in the actual draft. "
                        "Use exact text, task and paragraph IDs, source IDs, source-specific locators and inference scope. "
                        "Every paragraph requires an inventory disposition; never invent a claim or citation. "
@@ -443,6 +446,45 @@ def validate_claim_coverage(packet, record, ledger):
             "paragraph_count": len(rows), "substantive_completeness": "pending_independent_review"}
 
 
+def evidence_gap_actions(packet, ledger, text):
+    """Generate revision instructions from declared gaps and invalid evidence references."""
+    tasks = {chapter["id"] + "_" + str(i).zfill(2): section
+             for chapter in packet["chapters"] for i, section in enumerate(chapter["sections"], 1)}
+    gaps = ledger.get("unsupported_claims", [])
+    if not isinstance(gaps, list):
+        raise ValueError("Unsupported claims must be a list")
+    actions = []
+    seen = set()
+    for row in gaps:
+        if not isinstance(row, dict):
+            raise ValueError("Malformed unsupported claim")
+        cid, tid = row.get("claim_id"), row.get("task_id")
+        literal, number = row.get("exact_text"), row.get("paragraph_index")
+        reason, choice = row.get("reason"), row.get("action")
+        section = tasks.get(tid)
+        if (not isinstance(cid, str) or not cid.strip() or cid in seen or section is None
+                or type(number) is not int or not 1 <= number <= len(section.get("paragraphs", [section["task"]]))
+                or not isinstance(literal, str) or not literal.strip() or literal not in text
+                or not isinstance(reason, str) or not reason.strip()
+                or choice not in {"weaken", "delete", "request_material"}):
+            raise ValueError("Unsupported claim requires location, reason and revision action")
+        seen.add(cid)
+        actions.append({"claim_id": cid, "task_id": tid, "paragraph_index": number,
+                        "exact_text": literal, "reason": reason, "action": choice,
+                        "status": "unresolved"})
+    for claim in ledger.get("claims") or []:
+        if not isinstance(claim, dict):
+            continue
+        refs = claim.get("source_ids")
+        if not isinstance(refs, list) or not refs or any(not isinstance(i, str) or i not in packet["sources"] for i in refs):
+            actions.append({"claim_id": claim.get("claim_id"), "task_id": claim.get("task_id"),
+                            "paragraph_index": claim.get("paragraph_index"),
+                            "exact_text": claim.get("exact_text") or claim.get("claim_text"),
+                            "reason": "No valid frozen evidence IDs",
+                            "action": "choose_weaken_delete_or_request_material", "status": "unresolved"})
+    return actions
+
+
 def review_draft(packet_path, workspace, manuscript_path, claims_path, *, require_task_binding=False):
     workspace = Path(workspace)
     record = load(workspace / "writer_manifest.json")
@@ -510,6 +552,23 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path, *, requir
         seen.add(cid)
         if not isinstance(refs, list) or not refs or any(i not in packet["sources"] for i in refs):
             problems.append("Claim lacks valid evidence IDs: " + str(cid))
+    evidence_gaps = []
+    try:
+        evidence_gaps = evidence_gap_actions(packet, claims_file, text)
+    except (ValueError, KeyError, TypeError) as exc:
+        problems.append("Invalid evidence-gap report: " + str(exc))
+    if evidence_gaps:
+        problems.append("Unresolved evidence gaps; weaken, delete or request material before resubmit")
+    save(workspace / "evidence_revision_request.json", {
+        "status": "revision_required" if evidence_gaps else "no_declared_gaps",
+        "manuscript_sha256": hash_file(manuscript_path),
+        "claim_ledger_sha256": hash_file(claims_path),
+        "packet_sha256": hash_file(packet_path), "actions": evidence_gaps,
+        "scope": "Declared or structurally detected gaps only; independent substantive review pending",
+        "instruction": "Do not invent evidence or add prose to meet a word target. Weaken only to a genuinely supported scope, "
+                       "delete the unsupported statement, or return to the original material gate. Submit revised text and ledger; "
+                       "this request does not edit the manuscript, admit materials or approve a claim."
+    })
     headings = re.findall(r"^##\s+(?!摘要|参考文献|附录)(.+)$", text, re.M)
     if len(headings) != len(packet["chapters"]):
         problems.append("Body chapter count does not match v015 packet")
@@ -544,6 +603,8 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path, *, requir
         "packet_sha256": record["packet_sha256"],
         "draft_task_binding": draft_binding,
         "claim_coverage": claim_coverage,
+        "evidence_revision_request_sha256": hash_file(workspace / "evidence_revision_request.json"),
+        "unresolved_evidence_gap_count": len(evidence_gaps),
         "language_resource_version": resource_versions["v005"],
         "language_formal_resource_status": snapshot["status"],
         "resource_snapshot_warnings": snapshot_warnings,
