@@ -18,8 +18,8 @@ class UnifiedEntrypointTests(unittest.TestCase):
         with patch.object(strict,"doctor") as doctor, patch.object(strict,"original_call") as original:
             code,body=self.invoke(["commands"])
         self.assertEqual(code,0)
-        self.assertEqual(len(body["result"]["commands"]),24)
-        self.assertTrue({"init","status","advance","review","materials","resume-writing","writer4","prepare","autopilot","commands"} <= set(body["result"]["commands"]))
+        self.assertEqual(len(body["result"]["commands"]),25)
+        self.assertTrue({"init","status","advance","review","materials","quantitative-plan","resume-writing","writer4","prepare","autopilot","commands"} <= set(body["result"]["commands"]))
         doctor.assert_not_called()
         original.assert_not_called()
 
