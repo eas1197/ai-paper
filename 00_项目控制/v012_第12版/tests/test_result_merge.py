@@ -31,9 +31,11 @@ class ResultMergeTest(unittest.TestCase):
         row.update(title="Education and family", publication="社会学研究",
                    authors=["Alice Zhang"], publication_date="2024", doi="10.1234/example")
         native_selection = self.selection(native_bundle, "fixture/native_result.json")
+        self.result_path = "fixture/result.json"
         chat = self.fixture()
         chat["sources"] = [deepcopy(row)]
         chat_selection = self.selection(chat, "fixture/chat_result.json")
+        self.result_path = "fixture/result.json"
         manual = self.fixture("manual")
         manual["sources"] = [deepcopy(row)]
         manual_selection = self.selection(manual, "fixture/manual_result.json")
