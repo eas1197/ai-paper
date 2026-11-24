@@ -23,6 +23,8 @@ LANGUAGE_V3_SNAPSHOT = ROOT / "03_学术语言学习/v003_第3版/outputs/resour
 LANGUAGE_V4_PROFILE = ROOT / "03_学术语言学习/v004_第4版/outputs/style_profile.json"
 LANGUAGE_V4_SNAPSHOT = ROOT / "03_学术语言学习/v004_第4版/outputs/resource_snapshot.json"
 WRITING_RULES = ROOT / "07_三稿独立写作/v014_第14版/templates/文字要求.md"
+sys.path.insert(0, str(ROOT / "00_项目控制/v012_第12版/tools"))
+from artifact_history import write_json_preserving_history
 STYLE_MAP = MODULE / "assets/qualitative_style.json"
 QUALITATIVE = {"secondary_interviews", "online_qualitative"}
 STATUSES = {"independent_review_verified", "strict_literature_complete",
@@ -35,9 +37,8 @@ def load(path):
 
 
 def save(path, value):
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    """Save a working JSON artifact while retaining every superseded byte version."""
+    return write_json_preserving_history(path, value)
 
 
 def hash_file(path):

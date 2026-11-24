@@ -21,7 +21,35 @@ sys.path.insert(0, str(ROOT / "07_三稿独立写作/v015_第15版/tools"))
 from writing_plan import produce, reviewed_material_admission
 
 REVIEWER = "gpt-6.2-sol"
-load, write = run_mode.load, run_mode.write
+load = run_mode.load
+sys.path.insert(0, str(ROOT / "00_项目控制/v012_第12版/tools"))
+from artifact_history import write_json_preserving_history
+
+
+def write(path, value):
+    """Update a working pointer only after archiving its previous exact bytes."""
+    return write_json_preserving_history(path, value)
+
+
+def plan_output(area, revision, packet):
+    """Reuse an exact plan version; append a content-addressed directory otherwise."""
+    base = area / f"draft_{revision}"
+    if not base.exists():
+        return base
+    if base.is_symlink() or not base.is_dir():
+        raise ValueError("Existing plan output is not a regular directory")
+    prior = base / "plan_input.json"
+    if prior.is_file() and load(prior) == packet:
+        return base
+    suffix = evidence_digest(packet)[:16]
+    candidate = area / f"draft_{revision}_{suffix}"
+    if candidate.exists():
+        if candidate.is_symlink() or not candidate.is_dir():
+            raise ValueError("Versioned plan output is not a regular directory")
+        saved = candidate / "plan_input.json"
+        if not saved.is_file() or load(saved) != packet:
+            raise ValueError("Content-addressed plan version conflicts with existing history")
+    return candidate
 
 
 def normalize_plan_prose(packet):
@@ -160,7 +188,7 @@ def resume(work, folder, prior_review):
                 key = record.parent.parent.name.removeprefix("rebuilt_matrix_review_")
                 request = load(record.parent / "request.json")
                 reviewed_matrix = request["inputs"]["matrix"]
-                for artifact in sorted(folder.parent.glob(f"*/analysis_matrix_rebuilt_{key}.json")):
+                for artifact in sorted(folder.parent.glob(f"*/analysis_matrix_rebuilt_{key}*.json")):
                     candidate = load(artifact)
                     if {k: v for k, v in candidate.items() if k != "question_binding"} != reviewed_matrix:
                         continue
@@ -320,7 +348,7 @@ def resume(work, folder, prior_review):
         current = revised
         spent += int(academic)
         local_rounds += int(any(row.get("severity") == "local" for row in checks))
-        rebuilt = folder / f"analysis_matrix_rebuilt_{route_id}.json"
+        rebuilt = folder / f"analysis_matrix_rebuilt_{route_id}_{evidence_digest(revised)[:12]}.json"
         write(rebuilt, {**current, "question_binding": contract})
         if academic or any(row.get("severity") == "local" for row in checks):
             record_revision_round(work, stage="matrix", round_key=route_id, before=before_revision,
@@ -354,7 +382,7 @@ def resume(work, folder, prior_review):
         return {"status": gate, "stage": "matrix", "material_adequacy": adequacy, "revisions": spent}
     approved = approved_matrix_materials(adequacy, receipt, current)
     current["question_binding"] = contract
-    matrix_path = folder / "analysis_matrix_reviewed.json"
+    matrix_path = folder / f"analysis_matrix_reviewed_{evidence_digest(current)[:16]}.json"
     write(matrix_path, current)
     context.update(matrix=current, approved_empirical_materials=approved, literature=load(work / "merged_literature.json"),
                    theories=load(work / "initial/theories.json"))
@@ -390,7 +418,7 @@ def resume(work, folder, prior_review):
                     raise ValueError("Every section requires distinct nonempty paragraph-level tasks")
         validate_reviewed_plan_sources(packet, contract, receipt, approved)
         admission = reviewed_material_admission(work, packet, matrix_review)
-        output = area / f"draft_{revision}"
+        output = plan_output(area, revision, packet)
         if (output / "plan_input.json").is_file() and load(output / "plan_input.json") == packet:
             plan = output / "论文写作方案.md"
             request = load(output / "writing_plan_review_request.json")
