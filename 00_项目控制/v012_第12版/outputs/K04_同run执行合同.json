@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "run_id": "community_canteen_access_20261125",
+  "contract_kind": "operator_confirmed_execution_scope_not_original_gate",
+  "source_head": "278a16975fbff45c389767525dfc6f2b6cb1ac8d",
+  "authorization": "K02_用户确认研究范围与原预算.md",
+  "original_manifest": {
+    "path": "handoff_runs/community_canteen_access_20261125/run_manifest.json",
+    "sha256": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03",
+    "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+    "registry_sha256": "80853e5a7bff2488b5c9e78199206725da6c1153d49e6e4b380e212a69ae3c85",
+    "writing_policy_sha256": "e39ddd7d682bfd6ec2fb5b90d241d001ec7fb3191750371b42d0d6f77b6d9666"
+  },
+  "theme": "城市老年食堂向全年龄社区食堂开放过程中的服务对象边界与运营规则",
+  "scope": {
+    "places": [
+      "上海",
+      "广州"
+    ],
+    "period": [
+      2024,
+      2026
+    ],
+    "case_count_range": [
+      2,
+      4
+    ],
+    "unit": "可识别食堂场所与规则变化",
+    "background_policy_year": 2023,
+    "method_candidate": "secondary_interviews",
+    "alternative": "online_qualitative_public_text",
+    "method_frozen": false
+  },
+  "literature": {
+    "original_policy": "00_项目控制/v009_第9版/search_policy.json",
+    "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+    "dev": {
+      "initial": 5,
+      "supplemental": 5
+    },
+    "core_journals": [
+      "中国社会科学",
+      "社会学研究",
+      "社会",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界",
+      "American Sociological Review",
+      "American Journal of Sociology"
+    ],
+    "specialist_journals": "按原议题适配证据核验，不预先放行",
+    "three_layer": "对象、议题、理论；原议题定位后再确定",
+    "batch_limit": 3,
+    "original_native_actions_per_batch": 24,
+    "original_timeout_seconds": 480,
+    "required": "打开真实题录与摘要、可核验作者题名期刊年份、原规则去重；理论线索与文献数分开"
+  },
+  "materials": {
+    "requirements": [
+      "来源URL、日期、场所、对象、定位、类型、相关性与边界",
+      "公开访问与使用权限分别核实",
+      "区分行动者陈述、记者转述、规则、实际行为及研究者推论",
+      "交叉核实并保留反例；同媒体转载不作独立来源",
+      "原06搜索回执、事件、独立适足性另验"
+    ],
+    "original_material_batches": 1,
+    "missing": "unknown until genuine review",
+    "candidate_only": true
+  },
+  "executor": {
+    "selected": "chat_native_web",
+    "original_codex_live": "deferred_by_user_instruction",
+    "real_codex_receipt": false,
+    "chat_actions": "按实际调用记录查询、打开、时间和可核验URL；无真实精确平台消耗则unknown，不按Codex事件虚假折算",
+    "budget_stop": "I03适用范围未明，不扩额度；需要新增授权或无法验证消耗时停止；不能从开发总限推断全流程可用",
+    "extra_paid_api": false,
+    "stata": false
+  },
+  "original_budget": {
+    "10": {},
+    "11": {
+      "max_batches": 1,
+      "topic_batches_per_phase": 3,
+      "timeout_seconds": 480,
+      "native_search_actions": 24
+    },
+    "12": {
+      "migration_jobs": 1
+    },
+    "00": {
+      "attempts": 2,
+      "model_calls": 6,
+      "timeout_seconds": 720
+    },
+    "01": {
+      "cssci_journals": 2,
+      "pku_journals": 2,
+      "distinct_journals": 4
+    },
+    "02": {
+      "fulltext_style_min": 2
+    },
+    "03": {
+      "source_papers": 2,
+      "examples": 4
+    },
+    "04": {
+      "abstract_target": 10,
+      "core_fulltext_target": 2,
+      "views": 2,
+      "context_searches": 2
+    },
+    "05": {
+      "candidates": 2,
+      "explanations": 2,
+      "follow_up_searches": 1,
+      "iterations": 2,
+      "independent_reviews": 1
+    },
+    "06": {
+      "primary_models": 1,
+      "robustness_models": 1,
+      "references_per_method_min": 1,
+      "repetitions": 1,
+      "sample_max": 500,
+      "maxiter": 80
+    },
+    "07": {
+      "drafts": 1,
+      "max_words": 2500,
+      "revisions": 1,
+      "independent_reviews": 1
+    },
+    "08": {
+      "review_rounds": 1,
+      "independent_reviews": 1
+    },
+    "09": {
+      "cssci_candidates": 1,
+      "pku_candidates": 1,
+      "send": false
+    }
+  },
+  "review": {
+    "independent_exchange": "required_not_obtained",
+    "preliminary_design_final": "required_not_obtained",
+    "material_adequacy": "required_not_obtained",
+    "writing_review": "required_not_obtained",
+    "same_model_roleplay_eligible": false,
+    "formal_eligible": false
+  },
+  "writing_policy": {
+    "deliverable": "plan",
+    "explicit_full_paper": false
+  },
+  "submission": false,
+  "approved_scope_only": true,
+  "new_search_executed": false
+}
