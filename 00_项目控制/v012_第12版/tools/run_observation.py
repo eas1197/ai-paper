@@ -1,4 +1,9 @@
-"""E17: runtime observations, never a parallel academic state machine."""
+"""E17/I12: runtime observations and typed failure taxonomy; never academic approval."""
+import socket
+import subprocess
+from urllib.error import URLError
+
+from jsonschema import ValidationError
 
 STATES = frozenset({"queued","running","waiting_for_chat","waiting_for_codex",
     "waiting_for_review","waiting_for_user","blocked","failed","completed"})
@@ -7,10 +12,65 @@ class OriginalBudgetExhausted(RuntimeError):
     """A known original budget has no remaining allowance, not a launch failure."""
 
 
+OUTCOME_KINDS = frozenset({
+    "network_failure", "executor_unavailable", "model_timeout", "schema_error",
+    "evidence_missing", "academic_failure", "budget_exhausted", "user_cancelled",
+    # Backward-compatible labels for older receipts.
+    "technical_failure", "research_failure", "review_failure",
+})
+
+
+def classify_failure_message(message):
+    """Classify explicit failure evidence; never infer budget exhaustion from vague quota wording."""
+    value = str(message or "").casefold()
+    if not value:
+        return "technical_failure"
+    if "original 3.x global model-call allowance exhausted" in value or "budget_exhausted" in value or "original budget exhausted" in value:
+        return "budget_exhausted"
+    if any(token in value for token in ("timed out", "timeout", "deadline exceeded")):
+        return "model_timeout"
+    if any(token in value for token in ("codex cli not found", "codex subscription login unavailable",
+                                        "needs the existing chatgpt login", "not logged in",
+                                        "executable not found", "permission denied")):
+        return "executor_unavailable"
+    if any(token in value for token in ("network", "connection refused", "connection reset",
+                                        "dns", "name resolution", "proxy error", "tls handshake")):
+        return "network_failure"
+    if any(token in value for token in ("json schema", "schema validation", "invalid schema",
+                                        "schema_error", "validationerror")):
+        return "schema_error"
+    if any(token in value for token in ("missing original", "missing source", "missing evidence",
+                                        "missing receipt", "no such file", "file not found",
+                                        "out-of-namespace", "evidence missing")):
+        return "evidence_missing"
+    if any(token in value for token in ("academic_stop", "academic failure", "research eliminated",
+                                        "topic eliminated", "academic rejection")):
+        return "academic_failure"
+    return "technical_failure"
+
+
+def classify_failure(error):
+    """Map typed host failures first, then narrowly recognized original diagnostics."""
+    if isinstance(error, OriginalBudgetExhausted):
+        return "budget_exhausted"
+    if isinstance(error, (subprocess.TimeoutExpired, TimeoutError)):
+        return "model_timeout"
+    if isinstance(error, ValidationError):
+        return "schema_error"
+    if isinstance(error, (ConnectionError, URLError, socket.gaierror)):
+        return "network_failure"
+    if isinstance(error, PermissionError):
+        return "executor_unavailable"
+    if isinstance(error, FileNotFoundError):
+        filename = str(getattr(error, "filename", "") or "").casefold()
+        return "executor_unavailable" if "codex" in filename else "evidence_missing"
+    return classify_failure_message(error)
+
+
 def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None):
     if status not in STATES:
         raise ValueError("Unknown runtime observation")
-    if outcome_kind not in {None,"research_failure","technical_failure","review_failure","budget_exhausted","user_cancelled"}:
+    if outcome_kind not in {None, *OUTCOME_KINDS}:
         raise ValueError("Unknown runtime outcome")
     return {"runtime_status":status,"outcome_kind":outcome_kind,"scope":scope,"original_stage":original_stage,
         "reason":reason,"academic_approval_granted":False,"formal_eligible":False}
@@ -22,8 +82,11 @@ def attempt_observation(record):
         return observation("queued",scope="native_attempt")
     status={"started":"running","completed":"completed","failed":"failed",
             "technical_block":"failed"}.get(record.get("status"),"blocked")
+    failure = record.get("failure_kind")
+    if failure not in OUTCOME_KINDS:
+        failure = classify_failure_message(record.get("failure") or record.get("reason"))
     return observation(status,scope="native_attempt",reason=record.get("status"),
-                       outcome_kind="technical_failure" if status=="failed" else None)
+                       outcome_kind=failure if status=="failed" else None)
 
 
 def command_observation(command,result):
@@ -40,23 +103,34 @@ def command_observation(command,result):
     reason=status or action
     outcome=None
     wait=view.get("wait") if isinstance(view.get("wait"),dict) else {}
+    explicit=view.get("failure_kind") or view.get("outcome_kind")
+    def failure_kind(fallback="technical_failure"):
+        if explicit in OUTCOME_KINDS:
+            return explicit
+        detail=view.get("failure") or view.get("reason") or view.get("error")
+        if isinstance(detail,list):
+            detail=" ".join(str(item) for item in detail)
+        return classify_failure_message(detail) if detail else fallback
     if status=="cancelled_by_user":
         state="blocked";outcome="user_cancelled"
     elif stage=="literature_budget_exhausted" or view.get("original_gate_status")=="blocked_original_budget":
         state="waiting_for_user" if status=="waiting_for_user" else "blocked";outcome="budget_exhausted"
-    elif stage in {"archived","eliminated","academic_stop"}:
-        state="failed";outcome="research_failure"
-    elif wait.get("reason_code") in {"invalid_or_incomplete_records","review_execution_incomplete","independent_session_unavailable"}:
+    elif stage in {"archived","eliminated","academic_stop"} or status=="academic_stop":
+        state="failed";outcome="academic_failure"
+    elif wait.get("reason_code")=="invalid_or_incomplete_records":
+        state="waiting_for_review";outcome="evidence_missing"
+    elif wait.get("reason_code") in {"review_execution_incomplete","independent_session_unavailable"}:
         state="waiting_for_review";outcome="review_failure"
-    elif view.get("execution_status")=="failed" or status=="execution_failed":
-        state="failed";outcome="technical_failure"
+    elif status in {"awaiting_original_independent_material_and_writing_receipts","awaiting_material_adequacy","needs_supplement"}:
+        state="waiting_for_review";outcome="evidence_missing"
+    elif status in {"network_failure","executor_unavailable","model_timeout","schema_error","evidence_missing"} or view.get("execution_status")=="failed" or status=="execution_failed":
+        outcome=failure_kind()
+        state="blocked" if outcome=="evidence_missing" else "failed"
     elif command=="chat-task":
         state="waiting_for_chat"
     elif command=="codex-task":
         state="waiting_for_codex"
     elif command=="review-task" or action=="await_independent_review" or status=="unable_to_review":
-        state="waiting_for_review"
-    elif status=="awaiting_original_independent_material_and_writing_receipts":
         state="waiting_for_review"
     elif status in {"waiting_for_user","awaiting_original_quantitative_inputs"}:
         state="waiting_for_user"

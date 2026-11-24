@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **I12（当前唯一最小任务）**：区分网络失败、执行器不可用、模型超时、schema错误、证据缺失、学术不通过、预算耗尽和用户取消。
-   - 状态：pending；核对原状态/异常观察枚举及实际原入口映射，补齐未区分的分类，不改变原学术门禁。
+   - 状态：implemented_unverified；I12 新增8类失败分类（network_failure、executor_unavailable、model_timeout、schema_error、evidence_missing、academic_failure、budget_exhausted、user_cancelled），保留旧标签兼容；严格CLI异常按类型分类，状态观察区分学术失败与技术故障。新增2项离线测试待CI，不计完成。
    - 完成后：提交并转 I13。
 
 I11 已验收：[跨Chat与Codex同研究任务身份恢复](00_项目控制/v012_第12版/outputs/I11_跨Chat与Codex同研究任务身份恢复.md)；I11 verified（跨Chat/Codex同research_id、stage_id、task_id及snapshot恢复；strict `45424209600` success，新增1项，349+46+10+4+7+17=433项去重；Handoff `45424209446` success；最终代码 `ef793d2`）。

@@ -8,10 +8,10 @@ from run_observation import command_observation,attempt_observation
 class StopOutcomesTest(unittest.TestCase):
     def test_five_distinct_outcomes(self):
         cases=[
-            ({"stage":"eliminated"},"research_failure"),
+            ({"stage":"eliminated"},"academic_failure"),
             ({"status":"execution_failed"},"technical_failure"),
             ({"status":"blocked_by_original_v3_gate","action":"await_independent_review",
-              "wait":{"reason_code":"invalid_or_incomplete_records"}},"review_failure"),
+              "wait":{"reason_code":"invalid_or_incomplete_records"}},"evidence_missing"),
             ({"stage":"literature_budget_exhausted","status":"waiting_for_user"},"budget_exhausted"),
             ({"status":"cancelled_by_user","stage":"initial"},"user_cancelled"),
         ]

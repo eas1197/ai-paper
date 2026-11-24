@@ -886,13 +886,12 @@ def main(argv=None):
         print(json.dumps(envelope,ensure_ascii=False,indent=2))
         return 0
     except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
-        from run_observation import observation, OriginalBudgetExhausted
-        if isinstance(exc, OriginalBudgetExhausted):
-            kind, outcome = "blocked", "budget_exhausted"
-        else:
-            kind = "failed" if isinstance(exc,(RuntimeError,OSError,subprocess.TimeoutExpired)) else "blocked"
-            outcome = "technical_failure" if kind == "failed" else None
-        print(json.dumps({"status":"blocked","reason":str(exc),"runtime":observation(kind,reason=str(exc),outcome_kind=outcome)},ensure_ascii=False))
+        from run_observation import observation, classify_failure
+        outcome = classify_failure(exc)
+        kind = "failed" if outcome in {"network_failure","executor_unavailable","model_timeout",
+                                      "schema_error","academic_failure","technical_failure"} else "blocked"
+        print(json.dumps({"status":"blocked","reason":str(exc),"failure_kind":outcome,
+            "runtime":observation(kind,reason=str(exc),outcome_kind=outcome)},ensure_ascii=False))
         return 2
 
 
