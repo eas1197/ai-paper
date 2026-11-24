@@ -35,7 +35,12 @@ def analysis_matrix(framework, receipt, findings):
             or receipt.get("framework_sha256") != digest(framework)
             or receipt.get("status") != "pending_independent_review"):
         raise ValueError("Use the collection bound to this version of the framework")
-    materials = {row["material_id"]: row for row in receipt["materials"]}
+    material_rows = receipt["materials"]
+    material_ids = [row["material_id"] for row in material_rows]
+    if (any(not isinstance(key,str) or not key.strip() for key in material_ids)
+            or len(material_ids)!=len(set(material_ids))):
+        raise ValueError("Duplicate or invalid original material ID")
+    materials = {row["material_id"]: row for row in material_rows}
     rows = {}
     for finding in findings:
         key = finding["dimension_id"]
@@ -54,8 +59,15 @@ def analysis_matrix(framework, receipt, findings):
             require_text(item, ("reason",))
             seen.add(identifier)
             material = materials[identifier]
-            bound.append({**item, "url": material["url"], "locator": material["locator"],
-                          "kind": material["kind"]})
+            source_fields = {name:material[name] for name in ("url","locator","kind")}
+            # event_id is the native tool-action ID, not a social event identity.
+            # Its scope is the original material receipt, including parent lineage.
+            if "event_id" in material:
+                source_fields["event_id"] = material["event_id"]
+            for name in ("url","locator","kind","event_id"):
+                if name in item and (name not in source_fields or item[name]!=source_fields[name]):
+                    raise ValueError("Matrix source identity differs from original material: "+name)
+            bound.append({**item, **source_fields})
         if not bound and finding.get("status") != "unresolved":
             raise ValueError("A dimension without usable evidence remains unresolved")
         if finding.get("status") not in {"tentative", "unresolved"}:

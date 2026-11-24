@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **F04（当前唯一最小任务）**：保证研究问题、理论概念、经验维度、事件 ID 和来源 ID 在各阶段一致。
-   - 状态：pending；核原 question_binding、framework、材料原始回执及ID映射。
+   - 状态：implemented_unverified；新增原材料ID唯一性及矩阵来源字段冲突校验，待CI。
    - 仅需读取：F04、原06 framework/qual_materials/repair、v009 question_binding 与相关测试。
    - 验收：保留原各类ID语义和来源映射，冲突/变更停止；不虚构事件身份。
    - 完成后：提交并转 F05。

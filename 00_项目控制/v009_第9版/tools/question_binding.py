@@ -48,6 +48,10 @@ def binding(work, directory):
     framework = load(directory / "framework.json")
     conversion = load(directory / "conversion.json")
     receipt = load(directory / "material_receipt.json")
+    ids = [row["material_id"] for row in receipt["materials"]]
+    if (any(not isinstance(key,str) or not key.strip() for key in ids)
+            or len(ids)!=len(set(ids))):
+        raise ValueError("Duplicate or invalid original material ID")
     if receipt.get("parent_attempt"):
         parent = directory.parent / receipt["parent_attempt"]
         if (parent.parent.resolve() != directory.parent or parent == directory

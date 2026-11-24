@@ -29,3 +29,28 @@ class FrameworkTest(unittest.TestCase):
         self.assertEqual(matrix["theoretical_increment_status"], "proposed")
         with self.assertRaisesRegex(ValueError, "unresolved"):
             analysis_matrix(framework, receipt, [dict(finding, evidence=[])])
+
+    def test_duplicate_original_material_id_rejected(self):
+        framework = dict.fromkeys(FRAMEWORK_CONTEXT, "fixture")
+        framework["dimensions"] = [dict(id="d1",name="fixture",deduction="fixture",
+            proposition="fixture",needed_material="fixture",relationship="fixture")]
+        receipt = {"phase":"framework_collection","framework_sha256":digest(framework),
+            "status":"pending_independent_review","materials":[{"material_id":"M"},{"material_id":"M"}]}
+        with self.assertRaisesRegex(ValueError,"Duplicate or invalid"):
+            analysis_matrix(framework,receipt,[])
+
+    def test_native_action_and_source_fields_cannot_be_relabelled(self):
+        framework = dict.fromkeys(FRAMEWORK_CONTEXT, "fixture")
+        framework["dimensions"] = [dict(id="d1",name="fixture",deduction="fixture",
+            proposition="fixture",needed_material="fixture",relationship="fixture")]
+        receipt = {"phase":"framework_collection","framework_sha256":digest(framework),
+            "status":"pending_independent_review","materials":[{"material_id":"M","url":"https://example.org",
+            "locator":"fixture","kind":"actor_statement","event_id":"native-action-1"}]}
+        base = dict(dimension_id="d1",status="tentative",conclusion="fixture",
+            boundary="fixture",unresolved="fixture",alternatives="fixture")
+        source={"material_id":"M","relation":"support","reason":"fixture"}
+        result=analysis_matrix(framework,receipt,[dict(base,evidence=[source])])
+        self.assertEqual(result["rows"][0]["evidence"][0]["event_id"],"native-action-1")
+        for name,value in (("event_id","wrong"),("url","https://example.net"),("locator","wrong"),("kind","official_rule")):
+            with self.subTest(name=name), self.assertRaisesRegex(ValueError,"source identity differs"):
+                analysis_matrix(framework,receipt,[dict(base,evidence=[dict(source,**{name:value})])])
