@@ -102,6 +102,13 @@ class ResultMergeTest(unittest.TestCase):
         self.assertFalse(index["formal_eligible"])
         self.assertEqual(before, {path: path.read_bytes() for path in self.work.rglob("*") if path.is_file()})
 
+    def test_c29_duplicate_source_id_within_one_executor_result_is_rejected(self):
+        bundle = self.sample()
+        bundle["sources"].append(deepcopy(bundle["sources"][0]))
+        selection = self.selection(bundle, "fixture/duplicate_source_result.json")
+        with self.assertRaisesRegex(ValueError, "Duplicate source ID within original result"):
+            self.merge([selection])
+
     def test_c24_duplicate_or_cross_task_rejected(self):
         selections = self.samples()
         with self.assertRaisesRegex(ValueError,"Duplicate result file"):

@@ -158,6 +158,34 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         p["command_record"]=self.raw("initial/batch_001/invocation.json",json.dumps(record).encode())
         self.save(bundle)
 
+    def test_c29_missing_sources_or_unlocatable_abstract_stay_pending(self):
+        # An otherwise well-formed CLI run with no normalized source rows is not a receipt.
+        bundle = self.sample()
+        bundle["sources"] = []
+        self.rebind_invocation(bundle)
+        report = self.receive(bundle)
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertEqual(report["original_gate_status"], "pending_original_native_receipt")
+        self.assertIsNone(report["original_verified_rows"])
+        self.assertFalse(report["original_abstract_eligible_ids"])
+        self.assertFalse(report["stage_advanced"])
+
+        # A CLI event may exist, but missing locator/excerpt cannot match the original
+        # v009 observation and therefore cannot create an eligible abstract row.
+        for field in ("abstract_locator", "excerpt"):
+            bundle = self.sample()
+            bundle["sources"][0][field] = None
+            self.rebind_invocation(bundle)
+            report = self.receive(bundle)
+            self.assertTrue(report["native_cli_receipt"])
+            self.assertEqual(report["original_gate_status"], "pending_unmatched_original_observations")
+            self.assertFalse(report["original_abstract_eligible_ids"])
+            self.assertEqual(report["unmatched_source_ids"], ["fixture-source"])
+            self.assertEqual(report["original_verified_rows"], 1)
+            self.assertFalse(report["formal_eligible"])
+            self.assertFalse(report["stage_advanced"])
+            self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
+
     def test_c23_missing_event_reference_or_log_cannot_enter_original_gate(self):
         bundle=self.sample()
         p=bundle["provenance"]
