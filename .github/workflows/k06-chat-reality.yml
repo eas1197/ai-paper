@@ -1,0 +1,105 @@
+name: K06 bounded offline original reality submission
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+    paths:
+      - '.github/workflows/k06-chat-reality.yml'
+permissions:
+  contents: read
+jobs:
+  reality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing original test dependencies
+        run: python -m pip install beautifulsoup4 jsonschema rfc3339-validator
+      - name: Restore K03 original files and run only reality submission
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, subprocess, sys
+          from pathlib import Path
+          root=Path.cwd()
+          rid="community_canteen_access_20261125"
+          work=root/"00_项目控制/v007_第7版/runs_dev"/rid
+          assert not work.exists(), "do not overwrite a live run"
+          archive=root/"handoff_runs"
+          index=json.loads((archive/"manifest.json").read_bytes())
+          source=archive/rid
+          baseline=json.loads((root/"00_项目控制/v012_第12版/outputs/K05_初始运行基线.json").read_bytes())
+          assert baseline["run_id"]==rid
+          for row in baseline["initial_source_files"]:
+              oid=subprocess.run(["git","hash-object",row["path"]],check=True,capture_output=True,text=True).stdout.strip()
+              assert oid==row["git_blob_sha1"], "original source baseline changed"
+          originals={}
+          for rel in ["run_manifest.json","staged_topic.json",*[p.relative_to(source).as_posix() for p in (source/"runtime_log").glob("*.json")]]:
+              raw=(source/rel).read_bytes()
+              assert hashlib.sha256(raw).hexdigest()==index["files"][rid+"/"+rel]
+              dst=work/rel
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              with dst.open("xb") as f: f.write(raw)
+              originals[rel]=raw
+          assert len(originals)==3
+          state=json.loads(originals["staged_topic.json"])
+          assert state["run_id"]==rid and state["status"]=="reality" and state["history"]==[]
+          cli=root/"00_项目控制/v012_第12版/tools/ai_paper5_strict.py"
+          def call(*args):
+              p=subprocess.run([sys.executable,"-B",str(cli),*args],capture_output=True,text=True,timeout=90)
+              if p.returncode:
+                  print("K06 original command blocked; exit",p.returncode)
+                  raise SystemExit(1)
+              return json.loads(p.stdout)
+          prepared=call("prepare","--run-id",rid)
+          assert prepared["status"]=="ok" and prepared["result"]["status"]=="reality" and prepared["result"]["reality_task"]
+          report=root/"00_项目控制/v012_第12版/outputs/K06_Chat现实观察输入.json"
+          raw_report=report.read_bytes()
+          packet=json.loads(raw_report)
+          assert packet["run_id"]==rid and packet["acquisition_mode"]=="chat_native_web" and packet["formal_eligible"] is False
+          result=call("reality","--run-id",rid,"--report",str(report))
+          assert result["status"]=="ok" and result["result"]["stage"]=="explanation_exchange"
+          assert result["runtime_log"]["recording_status"]=="recorded"
+          updated=json.loads((work/"staged_topic.json").read_bytes())
+          assert updated["run_id"]==rid and updated["status"]=="explanation_exchange" and updated["formal_eligible"] is False
+          assert json.loads((work/"reality.json").read_bytes())==packet
+          assert (work/"run_manifest.json").read_bytes()==originals["run_manifest.json"]
+          sys.path.insert(0,str(root/".github/scripts"))
+          from check_publication import inspect_candidate
+          files={}
+          omitted=[]
+          for path in sorted(work.rglob("*")):
+              if not path.is_file(): continue
+              rel=path.relative_to(work).as_posix()
+              raw=path.read_bytes()
+              if rel in originals and raw==originals[rel]: continue
+              digest=hashlib.sha256(raw).hexdigest()
+              if rel==".lock":
+                  omitted.append({"path":rel,"sha256":digest,"reason":"transient runtime lock not public"})
+                  continue
+              if rel.startswith("submitted_stage_reports/reality/") and rel.endswith(".bin"):
+                  assert raw==raw_report and path.stem==digest
+                  public="submitted_reality_report.json"
+              else:
+                  assert rel in ("staged_topic.json","reality.json") or (rel.startswith("runtime_log/") and rel.endswith(".json")), "unexpected output"
+                  public=rel
+              assert not inspect_candidate("handoff_runs/"+rid+"/checkpoints/K06/"+public,raw), "publication risk"
+              files[public]={"original_path":rel,"sha256":digest,"raw_text":raw.decode("utf-8")}
+          assert len(files)==4 and "reality.json" in files and "staged_topic.json" in files and "submitted_reality_report.json" in files
+          print("K06_PUBLIC_SNAPSHOT="+json.dumps({"source_head":os.environ["GITHUB_SHA"],"run_id":rid,"prior_stage":"reality","stage":updated["status"],"reality_sha256":updated["reality_sha256"],"model_calls_in_actions":0,"search_calls_in_actions":0,"chat_provenance":"external_real_chat_native_web","formal_eligible":False,"files":files,"omitted":omitted},ensure_ascii=False,separators=(",",":")))
+          PY
+      - name: Retain original reality checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: community_canteen_access_20261125-reality
+          path: |
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/run_manifest.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/staged_topic.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/reality.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/runtime_log/*.json
+            00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125/submitted_stage_reports/reality/*.bin
+          retention-days: 14
+          if-no-files-found: error
