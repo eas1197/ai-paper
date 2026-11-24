@@ -491,6 +491,7 @@ def build_parser():
         p.add_argument("--"+option,type=Path)
     p.add_argument("--preliminary-attempt",default="attempt_001")
     p.add_argument("--event-focus",action="store_true")
+    p.add_argument("--task-output",type=Path,help="Prepare only: frozen material task, no search")
     p=sub.add_parser("resume-writing");p.add_argument("--run-id",required=True)
     p.add_argument("--attempt",default="attempt_001")
     p=sub.add_parser("writer4")
@@ -568,6 +569,13 @@ def main(argv=None):
                 result=status(args.run_id,progress=args.cmd=="advance")
         elif args.cmd=="event-compare":
             doctor();result={"original_output":original_call(original_event_command(args.run_id,args.report,events_jsonl=args.events_jsonl))}
+        elif args.cmd=="materials" and args.task_output:
+            if any((args.conversion,args.review,args.matrix,args.framework,args.framework_revision,args.event_focus)):
+                raise ValueError("Material task preparation cannot execute or change reviewed inputs")
+            from material_task import prepare_material_task
+            output=cli_output_path(args.task_output,run_id=args.run_id)
+            result=prepare_material_task(args.run_id)
+            write_cli_output(output,result)
         elif args.cmd=="materials":
             doctor();result={"original_output":original_call(original_material_command(
                 args.run_id,attempt=args.attempt,conversion=args.conversion,review=args.review,
