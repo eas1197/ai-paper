@@ -31,9 +31,8 @@ def _read_bound(run, ref):
     return path, raw
 
 
-def audit_review_binding(report_path, *, current_run_id, expected_reference,
-                         context_path, expected_execution_ref=None, expected_identity_ref=None, expected_isolation=None):
-    """The receiver selects context and receipt independently; no identity authentication here."""
+def read_review_candidate(report_path, *, current_run_id, expected_reference, context_path):
+    """Internal candidate audit, never an independent execution receipt or authorization."""
     import task_packet
 
     # C04 owns version validity, run ownership, dependency invalidation and input hashes.
@@ -62,6 +61,14 @@ def audit_review_binding(report_path, *, current_run_id, expected_reference,
               "proposed_decision": report["decision"], "evidence": evidence,
               "review_type_binding": review_type,
               "formal_eligible": False, "independent_review_verified": False}
+    return run, path, context_file, packet, inputs, report, context, schema, result
+
+
+def audit_review_binding(report_path, *, current_run_id, expected_reference,
+                         context_path, expected_execution_ref=None, expected_identity_ref=None, expected_isolation=None):
+    """The receiver selects context and receipt independently; no identity authentication here."""
+    run, path, context_file, packet, inputs, report, context, schema, result = read_review_candidate(
+        report_path, current_run_id=current_run_id, expected_reference=expected_reference, context_path=context_path)
     if expected_execution_ref is None:
         if report["decision"] != "unable_to_review":
             raise ValueError("Missing independently selected execution binding")
