@@ -370,6 +370,7 @@ def resume(work, folder, prior_review):
                           "title,task,argument,evidence_use,source_ids and paragraphs (nonempty array of distinct paragraph tasks). "
                           "Each analytic chapter uses theory and empirical sources. For empirical sources use ONLY original material IDs "
                           "and exact locators in approved_empirical_materials; other receipt materials remain excluded. "
+                          "In each analytic chapter use only empirical IDs referenced by its own matrix dimension. "
                           "Preserve uncertain findings and evidence limits.",
                           {**context, "previous_plan": packet, "review": review, "remaining_revisions": 2 - spent})
         packet = normalize_plan_prose(answer["answer"])

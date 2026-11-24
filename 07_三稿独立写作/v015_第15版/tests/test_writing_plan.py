@@ -96,7 +96,7 @@ class WritingPlanTest(unittest.TestCase):
                         "method": "secondary_interviews",
                         "receipt_sha256": file_hash(folder / "material_receipt.json")}
             matrix = {"question_binding": contract, "collection_sha256": evidence_digest(receipt),
-                      "framework_sha256": receipt["framework_sha256"], "rows": [{"evidence": [material]}]}
+                      "framework_sha256": receipt["framework_sha256"], "rows": [{"dimension_id": "d0", "evidence": [material]}]}
             run_mode.write(folder / "analysis_matrix_reviewed.json", matrix)
             data = dict(packet(1), question_binding=contract, specific_question="S08",
                         analysis_matrix="qualitative_framework/attempt_001/analysis_matrix_reviewed.json")
@@ -184,3 +184,31 @@ class WritingPlanTest(unittest.TestCase):
                 self.assertEqual(request["material_admission"]["eligible_material_ids"], ["E"])
                 self.assertEqual(request["input_sha256"], run_mode.digest(saved))
                 self.assertFalse(request["formal_eligible"])
+
+
+    def test_reviewed_dimension_sources_reject_cross_dimension_substitution(self):
+        data = packet(2)
+        data["sources"]["E2"] = {"kind": "empirical", "label": "Second fixture", "locator": "test index E2"}
+        data["chapters"][4]["sections"][0]["source_ids"] = ["T", "E2"]
+        matrix = {"rows": [
+            {"dimension_id": "d0", "evidence": [{"material_id": "E"}]},
+            {"dimension_id": "d1", "evidence": [{"material_id": "E2"}]},
+        ]}
+        approved = {"E": {}, "E2": {}}
+        scoped = writing_plan.reviewed_dimension_sources(data, matrix, approved)
+        self.assertEqual(scoped["d0"], ["E"])
+        self.assertEqual(scoped["d1"], ["E2"])
+        data["chapters"][4]["sections"][0]["source_ids"] = ["T", "E"]
+        with self.assertRaisesRegex(ValueError, "outside its reviewed matrix dimension"):
+            writing_plan.reviewed_dimension_sources(data, matrix, approved)
+
+    def test_reviewed_dimension_sources_reject_changed_order_and_empty_scope(self):
+        data = packet(1)
+        matrix = {"rows": [{"dimension_id": "d0", "evidence": [{"material_id": "E"}]}]}
+        with self.assertRaisesRegex(ValueError, "dimensions differ"):
+            writing_plan.reviewed_dimension_sources(data, {"rows": []}, {"E": {}})
+        with self.assertRaisesRegex(ValueError, "outside its reviewed matrix dimension"):
+            writing_plan.reviewed_dimension_sources(data, matrix, {})
+        data["chapters"][3]["sections"][0]["source_ids"] = ["T"]
+        with self.assertRaisesRegex(ValueError, "no admitted matrix evidence"):
+            writing_plan.reviewed_dimension_sources(data, matrix, {"E": {}})

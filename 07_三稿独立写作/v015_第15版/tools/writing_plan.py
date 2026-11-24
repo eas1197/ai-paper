@@ -132,6 +132,36 @@ def render(packet):
     return "\n".join(lines) + "\n"
 
 
+def reviewed_dimension_sources(packet, matrix, approved):
+    """Restrict empirical chapter references to their reviewed matrix dimension.
+
+    Non-analytic chapters may synthesize across dimensions, but all empirical
+    IDs must still pass the original material admission gate.
+    """
+    rows = matrix["rows"]
+    ids = [row["dimension_id"] for row in rows]
+    dimensions = packet["framework"]["dimensions"]
+    if len(set(ids)) != len(ids) or ids != [row["id"] for row in dimensions]:
+        raise ValueError("Writing dimensions differ from reviewed matrix")
+    scope = {row["dimension_id"]: {item["material_id"] for item in row["evidence"]} & set(approved)
+             for row in rows}
+    order = ["problem", "framework", "case", *ids, "conclusion"]
+    if [chapter["id"] for chapter in packet["chapters"]] != order:
+        raise ValueError("Writing chapters differ from reviewed matrix dimensions")
+    chapter_sources = {}
+    for chapter in packet["chapters"]:
+        key = chapter["id"]
+        refs = {ref for section in chapter["sections"] for ref in section["source_ids"]
+                if packet["sources"][ref]["kind"] == "empirical"}
+        permitted = scope[key] if key in scope else set(approved)
+        if not refs <= permitted:
+            raise ValueError("Empirical chapter source is outside its reviewed matrix dimension")
+        if key in scope and not refs:
+            raise ValueError("Analytic chapter has no admitted matrix evidence")
+        chapter_sources[key] = sorted(refs)
+    return chapter_sources
+
+
 def reviewed_material_admission(work, packet, review):
     """Recheck the original reviewed route; this is not an independent review.
 
@@ -157,10 +187,12 @@ def reviewed_material_admission(work, packet, review):
         raise ValueError("Reviewed V15 matrix binding differs")
     approved = approved_matrix_materials(review.get("material_adequacy"), receipt, matrix)
     validate_reviewed_plan_sources(packet, contract, receipt, approved)
+    chapter_sources = reviewed_dimension_sources(packet, matrix, approved)
     return {"mode": "native_reviewed", "matrix_sha256": file_hash(path),
             "receipt_sha256": contract["receipt_sha256"],
             "review_sha256": evidence_digest(review),
             "eligible_material_ids": sorted(approved),
+            "chapter_empirical_source_ids": chapter_sources,
             "question_binding": contract}
 
 
