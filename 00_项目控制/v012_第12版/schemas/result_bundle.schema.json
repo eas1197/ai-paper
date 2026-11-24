@@ -100,6 +100,22 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "execution_status": {
+      "enum": [
+        "not_executed",
+        "unknown",
+        "no_results",
+        "partial_results",
+        "completed",
+        "failed"
+      ]
+    },
+    "execution_issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/execution_issue"
+      }
     }
   },
   "required": [
@@ -110,7 +126,9 @@
     "execution_time",
     "search_actions",
     "sources",
-    "failure_reasons"
+    "failure_reasons",
+    "execution_status",
+    "execution_issues"
   ],
   "additionalProperties": false,
   "allOf": [
@@ -167,6 +185,126 @@
         "properties": {
           "provenance": {
             "$ref": "#/$defs/manual_provenance"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "enum": [
+              "not_executed",
+              "no_results"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sources": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "const": "partial_results"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sources": {
+            "minItems": 1
+          },
+          "execution_issues": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "const": "failed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution_issues": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "const": "no_results"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution_issues": {
+            "contains": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "const": "no_results"
+                }
+              },
+              "required": [
+                "code"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution_issues": {
+            "not": {
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "scope": {
+                    "const": "run"
+                  },
+                  "code": {
+                    "enum": [
+                      "no_results",
+                      "partial_results",
+                      "timeout",
+                      "budget_exhausted",
+                      "login_failed",
+                      "permission_denied",
+                      "tool_unavailable"
+                    ]
+                  }
+                },
+                "required": [
+                  "scope",
+                  "code"
+                ]
+              }
+            }
           }
         }
       }
@@ -885,6 +1023,87 @@
         "unsupported_judgments"
       ],
       "additionalProperties": false
+    },
+    "execution_issue": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "enum": [
+            "no_results",
+            "partial_results",
+            "abstract_missing",
+            "access_failed",
+            "login_wall",
+            "timeout",
+            "source_conflict",
+            "budget_exhausted",
+            "login_failed",
+            "permission_denied",
+            "tool_unavailable",
+            "missing_record",
+            "other"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "run",
+            "source",
+            "action"
+          ]
+        },
+        "target_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1
+        },
+        "original_status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "code",
+        "scope",
+        "target_id",
+        "detail",
+        "original_status"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "run"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "target_id": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "target_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

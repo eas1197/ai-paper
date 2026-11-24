@@ -24,7 +24,8 @@ def result(kind="chat_native_web"):
                               "task_id": "fixture_001", "snapshot_sha256": "a" * 64},
             "executor": kind, "provenance": provenance(kind),
             "execution_time": {"started_at": None, "finished_at": None},
-            "search_actions": [], "sources": [], "failure_reasons": ["Offline fixture"]}
+            "search_actions": [], "sources": [], "failure_reasons": ["Offline fixture"],
+            "execution_status": "unknown", "execution_issues": []}
 
 def source():
     return {
@@ -185,6 +186,38 @@ class ResultEnvelopeTest(unittest.TestCase):
         self.validator.validate(dict(result(), sources=[dict(item, empirical_material=missing)]))
         self.assertFalse(self.validator.is_valid(dict(result(), sources=[
             dict(source(), empirical_material=material)])))
+
+    def test_c17_distinct_issue_codes_and_partial_outcome(self):
+        codes = ("no_results", "partial_results", "abstract_missing", "access_failed",
+                 "login_wall", "timeout", "source_conflict", "budget_exhausted")
+        issues = [{"code": code, "scope": "run", "target_id": None,
+                   "detail": "Offline fixture: " + code, "original_status": None}
+                  for code in codes]
+        self.validator.validate(dict(result(), sources=[source()],
+                      execution_status="partial_results", execution_issues=issues))
+        self.validator.validate(dict(result(), execution_status="no_results",
+                      execution_issues=[issues[0]]))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_status="no_results",
+                      execution_issues=[])))
+
+    def test_c17_run_failures_cannot_claim_completion(self):
+        issue = {"code": "timeout", "scope": "run", "target_id": None,
+                 "detail": "Timed out", "original_status": "failed"}
+        self.validator.validate(dict(result(), execution_status="failed", execution_issues=[issue]))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_status="completed",
+                       execution_issues=[issue])))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_status="partial_results",
+                       execution_issues=[issue])))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_status="failed")))
+
+    def test_c17_scoped_issues_require_target(self):
+        issue = {"code": "abstract_missing", "scope": "source", "target_id": "fixture-source",
+                 "detail": "Abstract not accessible", "original_status": None}
+        self.validator.validate(dict(result(), sources=[source()], execution_issues=[issue]))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_issues=[
+            dict(issue, target_id=None)])))
+        self.assertFalse(self.validator.is_valid(dict(result(), execution_issues=[
+            dict(issue, code="fabricated_success")])))
 
 
 if __name__ == "__main__":

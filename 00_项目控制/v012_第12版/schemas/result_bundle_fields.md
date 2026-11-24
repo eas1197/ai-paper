@@ -34,3 +34,9 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 - tools/source_identity.py：文献候选沿用原 11/v006 verified_identity.resolve/MATCH；同 DOI 必须复核刊物、作者、年份和题名，同题不同年份/DOI 不自动归并；身份冲突及不兼容桥接隔离。归一化 DOI 及原题录身份生成稳定候选 ID，保留原始成员和 action_ids。
 - 经验来源按保守 HTTPS URL 规范化（仅去 utm、fragment、默认端口；保留内容参数及顺序），同 URL 可聚为同报道候选。转载/多 URL 只在接收方独立核对并提供 reviewed_report_aliases 时合并；同事件或标题相同不自动合并、不等同独立报道。没有身份信息的材料保持独立候选。
 - 输出为候选分组、冲突、隔离成员，保留各原记录及索引；不覆盖执行者原始凭证，不改原文献 group/事件接收器，不授予正式资格。跨执行器合并/原始凭证持久化留 C24。
+
+## C17 执行状态及问题编码
+
+- execution_status：not_executed/unknown/no_results/partial_results/completed/failed；completed 仅指执行器报告本次工作结束，不表示资料达标、接收通过或正式资格。no_results 必须没有来源并记录同名问题；partial_results 有候选且保留问题；failed 必须有失败原因。运行级超时、预算耗尽、登录失败等不得同时声明 completed。
+- execution_issues：code（无结果、部分结果、摘要缺失、访问失败、登录墙、超时、来源冲突、预算耗尽、登录/权限/工具失败、缺原始记录及 other）、scope（run/source/action）、target_id、detail、original_status。保留真实旧状态及失败原文；不强行从未知状态推断成功。原 11/v007 verification_pending/incomplete/experimental_budget_exceeded、技术异常和原始状态仍独立保存；C18 另定义接收裁决。原 B14 真实采集仍暂停。
+- 接收器报告保留执行状态与问题，failed 不可升级为正式资格；所有 C15 返回仍 formal_eligible=false。

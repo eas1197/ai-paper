@@ -102,7 +102,10 @@ def audit_result_bundle(result_path, *, current_run_id, expected_reference,
         if roles["events"].parent != roles["response"].parent:
             raise ValueError("Codex events and response belong to different attempts")
     missing = _missing(provenance)
-    if missing:
+    # Execution outcome is a separate declaration, never an eligibility verdict.
+    if bundle["execution_status"] == "failed":
+        status = "execution_failed"
+    elif missing:
         status = "pending_missing_original_records"
     elif expected_execution is None:
         status = "pending_independent_execution_binding"
@@ -113,5 +116,7 @@ def audit_result_bundle(result_path, *, current_run_id, expected_reference,
     return {"task_snapshot": expected_reference, "executor": bundle["executor"],
             "result_path": result_path, "result_sha256": digest, "checked_files": checked,
             "missing_fields": missing, "status": status,
+            "execution_status": bundle["execution_status"],
+            "execution_issues": bundle["execution_issues"],
             "independent_binding_matched": expected_execution is not None,
             "formal_eligible": False}
