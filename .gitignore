@@ -20,3 +20,23 @@
 
 # GitHub 阅读快照保留目录占位及一份阶段验收摘要
 !**/.gitkeep
+
+# I21: new raw runs and local authentication material stay local.
+**/runs_dev/
+**/.codex/
+**/.ssh/
+**/.aws/
+**/.gnupg/
+**/auth.json
+**/login.json
+**/credentials.json
+**/token.json
+**/tokens.json
+**/secrets.json
+**/events.jsonl
+**/stderr.log
+**/stdout.log
+*.pem
+*.key
+*.p12
+*.pfx

@@ -1,0 +1,28 @@
+name: Publication boundary check
+on:
+  push:
+    branches: [dev/v3.1-abstract-acquisition]
+  pull_request:
+    branches: [dev/v3.1-abstract-acquisition]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Synthetic privacy boundary tests
+        run: python -m unittest discover -s .github/scripts -p test_check_publication.py -v
+      - name: Inspect changed publication candidates
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: python .github/scripts/check_publication.py --base "$BASE_SHA" --head "$HEAD_SHA"
