@@ -265,9 +265,17 @@ class Writer4Test(unittest.TestCase):
                          "source_ids": ["E"]})
             text += "\n"
         draft.write_text(text, encoding="utf-8")
-        ledger = {"paragraph_bindings": rows, "claims": [{"claim_id": "C1",
-            "task_id": "problem_01", "paragraph_index": 1,
-            "exact_text": rows[0]["exact_text"], "source_ids": ["E"]}]}
+        manifest = writer.load(self.work / "writer_manifest.json")
+        ledger = {"packet_sha256": manifest["packet_sha256"], "task_sha256": manifest["task_sha256"],
+                  "paragraph_bindings": rows, "claims": [{"claim_id": "C1",
+            "task_id": "problem_01", "paragraph_index": 1, "claim_type": "empirical",
+            "exact_text": rows[0]["exact_text"], "source_ids": ["E"],
+            "source_locators": {"E": self.data["sources"]["E"]["locator"]}, "scope": "Fixture only"}],
+            "coverage_inventory": [
+                {"task_id": row["task_id"], "paragraph_index": 1,
+                 "status": "claims_registered" if i == 0 else "no_substantive_claim_declared",
+                 "claim_ids": ["C1"] if i == 0 else [], "reason": "Fixture transition"}
+                for i, row in enumerate(rows)]}
         writer.save(claims, ledger)
         result = writer.review_draft(self.packet_path, self.work, draft, claims,
                                      require_task_binding=True)
@@ -290,6 +298,35 @@ class Writer4Test(unittest.TestCase):
         result = writer.review_draft(self.packet_path, self.work, draft, claims,
                                      require_task_binding=True)
         self.assertTrue(any("Frozen paragraph task changed" in error for error in result["errors"]))
+
+    def test_g17_typed_claim_inventory_and_locators(self):
+        writer.prepare(self.packet_path, self.work)
+        manifest = writer.load(self.work / "writer_manifest.json")
+        template = writer.load(self.work / "claim_ledger_template.json")
+        self.assertEqual(template["status"], "awaiting_actual_claims")
+        self.assertEqual(template["claims"], [])
+        self.assertEqual(len(template["coverage_inventory"]), 5)
+        data = {"packet_sha256": manifest["packet_sha256"], "task_sha256": manifest["task_sha256"],
+                "paragraph_bindings": [{"task_id": "problem_01", "paragraph_index": 1}],
+                "coverage_inventory": [{"task_id": "problem_01", "paragraph_index": 1,
+                                        "status": "claims_registered", "claim_ids": ["C1", "C2", "C3"]}],
+                "claims": []}
+        for cid, kind, ref in (("C1", "empirical", "E"), ("C2", "theoretical", "T"),
+                               ("C3", "literature", "T")):
+            data["claims"].append({"claim_id": cid, "claim_type": kind, "task_id": "problem_01",
+                                   "paragraph_index": 1, "source_ids": [ref],
+                                   "source_locators": {ref: self.data["sources"][ref]["locator"]},
+                                   "scope": "Fixture only"})
+        result = writer.validate_claim_coverage(self.data, manifest, data)
+        self.assertEqual(result["counts"], {"empirical": 1, "theoretical": 1, "literature": 1})
+        self.assertEqual(result["substantive_completeness"], "pending_independent_review")
+        data["claims"][0]["source_locators"]["E"] = "invented locator"
+        with self.assertRaisesRegex(ValueError, "locator"):
+            writer.validate_claim_coverage(self.data, manifest, data)
+        data["claims"][0]["source_locators"]["E"] = self.data["sources"]["E"]["locator"]
+        data["coverage_inventory"][0]["claim_ids"].pop()
+        with self.assertRaisesRegex(ValueError, "omits"):
+            writer.validate_claim_coverage(self.data, manifest, data)
 
     def test_rejects_missing_evidence_from_dimension(self):
         self.data["chapters"][3]["sections"][0]["source_ids"] = ["T"]

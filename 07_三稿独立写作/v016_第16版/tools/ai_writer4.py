@@ -291,7 +291,9 @@ def prepare(packet_path, workspace, mode="exploratory"):
                     "Apply V003 argument rules to check scope, inference, source attribution and evidence strength; "
                     "their skeletons are reasoning aids, not sentences to copy. Do not borrow empirical findings "
                     "from style examples. Keep original uncertainty and evidence limits. A Chat-generated draft "
-                    "must not be logged as a CLI search or independent model response."
+                    "must not be logged as a CLI search or independent model response. "
+                    "Register every substantive empirical, theoretical and literature claim with exact text, "
+                    "paragraph task, frozen source locators and scope; declare paragraphs without claims explicitly."
                 ),
             }
             task_path = workspace / "tasks" / (task_id + ".json")
@@ -319,6 +321,21 @@ def prepare(packet_path, workspace, mode="exploratory"):
         "quantitative_writer": "unchanged main/v014/tools/stage07.py",
     }
     save(workspace / "writer_manifest.json", record)
+    # Empty inventory is a drafting aid, never a submitted or verified ledger.
+    save(workspace / "claim_ledger_template.json", {
+        "status": "awaiting_actual_claims", "packet_sha256": record["packet_sha256"],
+        "task_sha256": task_hashes, "claims": [], "paragraph_bindings": [],
+        "coverage_inventory": [
+            {"task_id": task_id, "paragraph_index": number, "status": "pending"}
+            for task_id in tasks
+            for number in range(1, len(load(workspace / "tasks" / (task_id + ".json"))["paragraphs"]) + 1)
+        ],
+        "claim_types": ["empirical", "theoretical", "literature"],
+        "instruction": "Record every substantive empirical, theoretical and literature claim in the actual draft. "
+                       "Use exact text, task and paragraph IDs, source IDs, source-specific locators and inference scope. "
+                       "Every paragraph requires an inventory disposition; never invent a claim or citation. "
+                       "Only independent review can judge substantive completeness."
+    })
     return {"status": "awaiting_draft", "mode": mode, "task_count": len(tasks),
             "language_gate": snapshot["status"], "workspace": str(workspace)}
 
@@ -383,6 +400,49 @@ def validate_draft_task_binding(packet, record, workspace, text, ledger):
             "task_sha256": hashes, "scope": "structural binding only; semantic coverage pending"}
 
 
+def validate_claim_coverage(packet, record, ledger):
+    """Check declared claim inventory, not whether all substantive claims were detected."""
+    if ledger.get("packet_sha256") != record["packet_sha256"] or ledger.get("task_sha256") != record["task_sha256"]:
+        raise ValueError("Claim ledger must bind the frozen packet and tasks")
+    claims = ledger.get("claims")
+    rows = ledger.get("coverage_inventory")
+    bindings = ledger["paragraph_bindings"]
+    if not isinstance(claims, list) or not claims or not isinstance(rows, list) or len(rows) != len(bindings):
+        raise ValueError("Missing substantive claim inventory or paragraph coverage")
+    by_paragraph = {(row["task_id"], row["paragraph_index"]): [] for row in bindings}
+    seen = set()
+    counts = {"empirical": 0, "theoretical": 0, "literature": 0}
+    allowed_kinds = {"empirical": {"empirical"}, "theoretical": {"theory"}, "literature": {"literature", "theory"}}
+    for claim in claims:
+        cid, kind = claim.get("claim_id"), claim.get("claim_type")
+        refs, locators = claim.get("source_ids"), claim.get("source_locators")
+        if not isinstance(cid, str) or not cid.strip() or cid in seen or kind not in counts:
+            raise ValueError("Invalid or duplicate typed claim")
+        if not isinstance(claim.get("scope"), str) or not claim["scope"].strip():
+            raise ValueError("Claim requires an explicit inference scope")
+        if (not isinstance(refs, list) or not refs or len(set(refs)) != len(refs)
+                or not isinstance(locators, dict) or set(locators) != set(refs)
+                or any(locators[ref] != packet["sources"][ref]["locator"] for ref in refs)
+                or not any(packet["sources"][ref]["kind"] in allowed_kinds[kind] for ref in refs)):
+            raise ValueError("Claim type or locator differs from its frozen source")
+        key = (claim["task_id"], claim["paragraph_index"])
+        by_paragraph[key].append(cid)
+        seen.add(cid)
+        counts[kind] += 1
+    for row, key in zip(rows, by_paragraph):
+        if (row.get("task_id"), row.get("paragraph_index")) != key:
+            raise ValueError("Coverage inventory differs from paragraph order")
+        ids = by_paragraph[key]
+        if ids:
+            if row.get("status") != "claims_registered" or row.get("claim_ids") != ids:
+                raise ValueError("Coverage inventory omits or misassigns registered claims")
+        elif (row.get("status") != "no_substantive_claim_declared" or row.get("claim_ids") != []
+                or not isinstance(row.get("reason"), str) or not row["reason"].strip()):
+            raise ValueError("Unregistered paragraph requires explicit no-claim reason")
+    return {"status": "declared_inventory_verified", "counts": counts,
+            "paragraph_count": len(rows), "substantive_completeness": "pending_independent_review"}
+
+
 def review_draft(packet_path, workspace, manuscript_path, claims_path, *, require_task_binding=False):
     workspace = Path(workspace)
     record = load(workspace / "writer_manifest.json")
@@ -427,12 +487,15 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path, *, requir
     text = Path(manuscript_path).read_text(encoding="utf-8-sig")
     claims_file = load(claims_path)
     draft_binding = {"status": "legacy_exploratory_unbound"}
+    claim_coverage = {"status": "legacy_exploratory_unverified"}
     if require_task_binding:
         try:
             draft_binding = validate_draft_task_binding(packet, record, workspace, text, claims_file)
+            claim_coverage = validate_claim_coverage(packet, record, claims_file)
         except (ValueError, KeyError, TypeError, OSError) as exc:
             problems.append("Draft task binding: " + str(exc))
             draft_binding = {"status": "pending_recheck", "reason": str(exc)}
+            claim_coverage = {"status": "pending_recheck", "reason": str(exc)}
     claims = claims_file.get("claims")
     if not isinstance(claims, list) or not claims:
         problems.append("No source-bound claims ledger")
@@ -480,6 +543,7 @@ def review_draft(packet_path, workspace, manuscript_path, claims_path, *, requir
         "claim_ledger_sha256": hash_file(claims_path),
         "packet_sha256": record["packet_sha256"],
         "draft_task_binding": draft_binding,
+        "claim_coverage": claim_coverage,
         "language_resource_version": resource_versions["v005"],
         "language_formal_resource_status": snapshot["status"],
         "resource_snapshot_warnings": snapshot_warnings,
