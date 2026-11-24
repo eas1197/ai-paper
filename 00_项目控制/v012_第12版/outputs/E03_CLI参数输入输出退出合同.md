@@ -1,6 +1,6 @@
 # E03：逐命令 CLI 参数、输入输出、退出与副作用合同
 
-状态：implemented_unverified（待CI）。依据 E02 的实际24个命令、原调用构建器及原接口 smoke。参数列表以 `commands` 的实时 `parameters` 字段和逐命令 --help 为准（由实际 argparse 生成，不维护第二套参数表）。
+状态：verified（离线接口合同）。依据 E02 的实际24个命令、原调用构建器及原接口 smoke。参数列表以 `commands` 的实时 `parameters` 字段和逐命令 --help 为准（由实际 argparse 生成，不维护第二套参数表）。
 
 | 命令 | 输入/必要参数 | 输出与状态副作用 |
 |---|---|---|
@@ -22,3 +22,5 @@
 | merge-results | run-id/task/selection/output，可选aliases | 原C合并索引，不覆盖旧文件；run内相对路径 |
 
 退出0仅代表该技术命令成功执行（结果可能为等待、checkpoint或候选），不得理解为原学术pass。argparse缺参数/非法参数退出2；原模块阻断或已知输入/Schema/文件异常返回 blocked JSON、退出2。未知编程异常不伪装成功。修复候选输出覆盖风险：外部新文件或所选run的cli_outputs/新文件，先校验再执行，exclusive create；merge保留原独立exclusive合同。暴露原 event_protocol 可选原始events-jsonl；不改变事件核验规则。新增4项测试，覆盖24个命令的help/必填参数、输出保护、Schema错误和实际原路由。未运行真实AI。
+
+实际验收：[strict CI 45340479289](https://github.com/eas1197/ai-paper/actions/runs/45340479289)，job 138262663527 success；新增4/4，v012 265/265，原模块63/63，共328项。24个命令的help和必填参数均覆盖，未运行真实模型。
