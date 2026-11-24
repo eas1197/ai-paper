@@ -24,7 +24,7 @@ class StagedTopicTest(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             work = Path(folder)
             source = work / "submitted.json"
-            raw = b'{"outcome":"pass", "reason":"untrusted fixture"}\\n'
+            raw = b'{"outcome":"pass", "reason":"untrusted fixture"}\n'
             source.write_bytes(raw)
             state = {"status": "preliminary_review", "history": []}
             for _ in range(2):
@@ -41,7 +41,7 @@ class StagedTopicTest(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             work = Path(folder)
             source = work / "submitted.json"
-            for raw in (b'not JSON', b'{"fixture": true}\\n'):
+            for raw in (b'not JSON', b'{"fixture": true}\n'):
                 source.write_bytes(raw)
                 if raw == b'not JSON':
                     with self.assertRaises(ValueError):
