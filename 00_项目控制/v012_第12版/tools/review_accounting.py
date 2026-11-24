@@ -56,6 +56,7 @@ def _attempt_observations(work):
             continue
         previous_failed = False
         previous_attempt = None
+        previous_request = None
         for attempt in sorted(label.glob("attempt_[0-9][0-9][0-9]")):
             if not attempt.is_dir() or not attempt.resolve().is_relative_to(work):
                 continue
@@ -68,7 +69,7 @@ def _attempt_observations(work):
                 starts = [e for e in events if e.get("type") == "thread.started"]
                 started = len(starts) == 1 and bool(starts[0].get("thread_id"))
                 failed = login.get("chatgpt") is False or any(e.get("type") == "turn.failed" for e in events)
-                if previous_failed and started:
+                if previous_failed and started and login.get("chatgpt") is True and request == previous_request:
                     retries.append({"attempt":relative, "previous_failed_attempt":previous_attempt,
                         "events":file_ref(work,event_path.relative_to(work))})
                 if (attempt / "validated.json").is_file():
@@ -88,10 +89,12 @@ def _attempt_observations(work):
                     unresolved.append(relative)
                 previous_failed = failed
                 previous_attempt = relative
+                previous_request = request
             except (OSError, ValueError, TypeError, KeyError, AttributeError):
                 unresolved.append(relative)
                 previous_failed = False
                 previous_attempt = None
+                previous_request = None
     return rounds,retries,unresolved
 
 

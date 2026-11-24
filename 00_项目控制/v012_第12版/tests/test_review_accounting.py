@@ -56,6 +56,13 @@ class ReviewAccountingTest(unittest.TestCase):
         self.attempt(3,True,events,True)
         self.assertEqual(len(_attempt_observations(self.work)[0]),1)
 
+    def test_changed_request_is_not_retry(self):
+        self.attempt(1,False,[])
+        path=self.attempt(2,True,[{"type":"thread.started","thread_id":"fixture"},{"type":"turn.completed"}],True)
+        (path/"request.json").write_text(json.dumps({"model":"gpt-6.2-sol","inputs":"new request"}))
+        rounds,retries,_=_attempt_observations(self.work)
+        self.assertEqual((len(rounds),len(retries)),(1,0))
+
     def test_bad_original_record_not_counted(self):
         path=self.attempt(1,True,[{"type":"thread.started","thread_id":"fixture"},{"type":"turn.completed"}],True)
         (path/"response.json").write_text("{}")
