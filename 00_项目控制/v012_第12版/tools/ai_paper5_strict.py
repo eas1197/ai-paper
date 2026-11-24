@@ -247,6 +247,13 @@ def original_quantitative_plan(run_id, *, input_path, output):
 
 
 def status(run_id, *, progress=False):
+    if progress:
+        from advance_trace import observe_advance
+        return observe_advance(run_id,"strict_progress",lambda: _status(run_id,progress=True))
+    return _status(run_id,progress=False)
+
+
+def _status(run_id, *, progress=False):
     doctor()
     state = state_of(run_id)
     stage = state["status"]

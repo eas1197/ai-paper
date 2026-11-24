@@ -348,6 +348,11 @@ def event_preflight(work,state,*,comparison_required):
 
 
 def step(run_id, *, executor=None):
+    from advance_trace import observe_advance
+    return observe_advance(run_id,"autopilot_step",lambda: _step(run_id,executor=executor))
+
+
+def _step(run_id, *, executor=None):
     heritage.doctor()
     work=heritage.RUNS/heritage.run_id_guard(run_id)
     state=heritage.state_of(run_id)
