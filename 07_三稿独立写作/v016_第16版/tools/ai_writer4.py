@@ -111,8 +111,6 @@ def language_resources():
                     profile["paragraph_style"]["mapping"], profile["paragraph_style"]["rules"]]
     v003_required = {relative(LANGUAGE_V3)}
     v004_required = {relative(LANGUAGE_V4_PROFILE)}
-    v004_required.update(item["path"] for item in profile_refs
-                         if item["path"].startswith("03_学术语言学习/v004_第4版/"))
     v005_required = {relative(STYLE_PROFILE), profile["paragraph_style"]["mapping"]["path"]}
     v005_required.update(item["path"] for item in profile_refs)
     snapshot_warnings = []
