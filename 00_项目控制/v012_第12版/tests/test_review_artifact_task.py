@@ -123,6 +123,18 @@ class ArtifactReviewTaskTests(unittest.TestCase):
         self.put(self.matrix_path,dict(self.matrix,collection_sha256="changed"))
         with self.assertRaises(ValueError): self.task(self.matrix_path)
 
+    def test_matrix_rereview_with_historical_lineage(self):
+        from test_review_revision_task import revision_fixture
+        self.freeze()
+        old,_=self.task(self.matrix_path)
+        shutil.copyfile(self.work/self.matrix_path,self.work/"matrix_archive.json")
+        self.matrix["rows"][0]["conclusion"]="Revised synthetic finding"
+        self.put(self.matrix_path,self.matrix)
+        revision_fixture(self.work,old,"empirical_matrix","matrix_archive.json",self.matrix_path,self.put)
+        result,ctx=self.task(self.matrix_path,prior_report="fixture_prior.json",revision_record="fixture_revision.json")
+        self.assertEqual(ctx["review_type"],"independent_re_review")
+        self.assertNotEqual(result["task_snapshot"],old["task_snapshot"])
+
     def test_v15_candidate_pending_unresolved_source(self):
         self.plan()
         result,ctx=self.task(self.plan_req)

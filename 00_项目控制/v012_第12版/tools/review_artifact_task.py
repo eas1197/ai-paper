@@ -180,7 +180,8 @@ def _plan(contract, h, inputs, request_path, *, require_pending):
     return packet, binding, ids, claims, dims, pending
 
 
-def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, manuscript_path=None, claims_path=None):
+def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, manuscript_path=None, claims_path=None,
+                                 prior_report=None, revision_record=None):
     import task_packet as contract
     h = contract.heritage
     h.doctor()
@@ -189,6 +190,8 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
     manifest = contract.run_mode.verified_run(work)
     state = h.state_of(run_id)
     _require(manifest.get("run_id") == run_id and state.get("run_id") == run_id, "Original research identity mismatch")
+    from review_revision_task import select_lineage, attach_lineage, revision_task_id
+    lineage = select_lineage(contract, work, prior_report, revision_record)
     inputs = Inputs(work, h)
     original = _base_inputs(run_id, h, contract, work, state, inputs)
     question = state.get("question")
@@ -220,7 +223,8 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
         kind, gate, dims = "qualitative_design", "06/v005 qual_materials.record_review", ["question_continuity", "three_method_paths", "material_access"]
     elif selected.name == "analysis_matrix.json":
         _require(frozen, "Empirical matrix review requires original S08 freeze")
-        _require(not (work / "matrix_independent_review.json").exists(), "Existing matrix review requires explicit re-review lineage")
+        _require(lineage is not None or not (work / "matrix_independent_review.json").exists(), "Existing matrix review requires explicit re-review lineage")
+        inputs.optional("matrix_independent_review.json")
         matrix, binding, ids, claims, dims = _matrix(contract, h, inputs, review_object)
         _require(matrix.get("status") == "pending_independent_review", "Matrix is not pending review")
         kind, gate, dims = "empirical_matrix", "00/v009 resume_writing.resume", dims + ["material_adequacy", "theoretical_increment"]
@@ -282,17 +286,17 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
         "prohibitions": ["No additional search", "No source invention", "No original state mutation", "No formal approval"],
         "prior_review": None, "input_binding": {"original_evidence_sha256": original["evidence_sha256"],
             "selected_object": inputs.add(review_object)}}
+    refs = attach_lineage(contract, work, context, [{"path": a["path"], "sha256": a["sha256"]} for a in artifacts], lineage, stage_id=kind)
     context_path = work / "review_tasks" / (contract._digest(context) + ".json")
     _require(context_path.resolve().is_relative_to(work), "Review context outside run")
     if context_path.exists():
         _require(h.read(context_path) == context, "Existing review context changed")
     else:
         contract._atomic_json(context_path, context)
-    refs = [{"path": a["path"], "sha256": a["sha256"]} for a in artifacts]
     refs.append(inputs.add(context_path.relative_to(work).as_posix()))
     schema = Path(__file__).resolve().parents[1] / "schemas/review_result.schema.json"
     packet = {"schema_version": 1, "research_id": run_id, "stage_id": kind,
-        "task_id": "original_artifact_review_" + contract._digest(review_object)[:24],
+        "task_id": revision_task_id(contract, "original_artifact_review_" + contract._digest(review_object)[:24], lineage),
         "purpose": purpose, "research_question": question, "search_levels": [], "input_files": refs,
         "source_scope": {"policy_refs": policy}, "quantity_budget": {}, "time_budget_seconds": 0,
         "output_schema": {"kind": "file", "file": {"path": schema.relative_to(h.ROOT).as_posix(), "sha256": h.sha(schema)}},

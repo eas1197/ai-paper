@@ -436,6 +436,7 @@ def main(argv=None):
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("review-task");p.add_argument("--run-id",required=True);p.add_argument("--output",type=Path,required=True)
     p.add_argument("--review-object");p.add_argument("--packet");p.add_argument("--manuscript");p.add_argument("--claims")
+    p.add_argument("--prior-report");p.add_argument("--revision-record")
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
     p.add_argument("--response",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-receive");p.add_argument("--run-id",required=True)
@@ -482,12 +483,12 @@ def main(argv=None):
             if args.review_object:
                 from review_artifact_task import prepare_artifact_review_task
                 result=prepare_artifact_review_task(args.run_id,args.review_object,packet_path=args.packet,
-                    manuscript_path=args.manuscript,claims_path=args.claims)
+                    manuscript_path=args.manuscript,claims_path=args.claims,prior_report=args.prior_report,revision_record=args.revision_record)
             else:
                 if any((args.packet,args.manuscript,args.claims)):
                     raise ValueError("Select the original review object before draft inputs")
                 from review_task import prepare_review_task
-                result=prepare_review_task(args.run_id)
+                result=prepare_review_task(args.run_id,prior_report=args.prior_report,revision_record=args.revision_record)
             write(args.output,result)
         elif args.cmd=="merge-results":
             from result_merge import merge_result_bundles, write_merge_index

@@ -10,15 +10,24 @@ STAGES = {
 }
 
 
-def prepare_review_task(run_id):
+def prepare_review_task(run_id, *, prior_report=None, revision_record=None):
     import task_packet as contract
     h = contract.heritage
     h.doctor()
     state = h.state_of(run_id)
     stage = state["status"]
-    if stage in {"S02", "S03", "S05", "S06"}:
-        raise ValueError("Original revision state requires a frozen prior-review lineage")
-    if stage == "materials_pending":
+    work = (h.RUNS / run_id).resolve(strict=True)
+    from review_revision_task import select_lineage, attach_lineage, revision_task_id
+    selected = select_lineage(contract, work, prior_report, revision_record)
+    revision_state = stage in {"S02", "S03", "S05", "S06"}
+    if revision_state:
+        if selected is None:
+            raise ValueError("Original revision state requires a frozen prior-review lineage")
+        candidates = [key for key, value in STAGES.items() if value[0] == selected["prior"]["review_kind"]]
+        if len(candidates) != 1 or state.get("review_phase") not in {"initial", "final"} or (candidates[0] == "final_review") != (state["review_phase"] == "final"):
+            raise ValueError("Prior review does not match original revision phase")
+        review_stage = candidates[0]
+    elif stage == "materials_pending":
         phase = state.get("review_phase")
         if phase not in {"initial", "final"}:
             raise ValueError("Original material wait has no review phase")
@@ -27,7 +36,6 @@ def prepare_review_task(run_id):
         review_stage = stage
     else:
         raise ValueError("No supported original academic review is due")
-    work = (h.RUNS / run_id).resolve(strict=True)
     manifest = contract.run_mode.verified_run(work)
     if manifest.get("run_id") != run_id:
         raise ValueError("Original research identity mismatch")
@@ -80,6 +88,8 @@ def prepare_review_task(run_id):
     review_scope = original["review_scope"]
     if stage == "materials_pending":
         review_scope = "Reassess unresolved material availability under the original " + review_stage + " gate; unknown is not missing."
+    elif revision_state:
+        review_scope = "Re-review the original " + review_stage + " after " + stage + " revision; retain the original gate."
     context = {
         "context_version": 1, "review_kind": kind, "review_type": "academic_review",
         "gate_ref": "00/v009 staged_topic.review:" + stage, "research_question": question,
@@ -93,6 +103,13 @@ def prepare_review_task(run_id):
         "prohibitions": ["No search or source invention", "No state mutation or independent identity claims", "No empirical conclusion or formal approval"],
         "prior_review": None, "input_binding": {"original_evidence_sha256": original["evidence_sha256"], "state_sha256": state_sha},
     }
+    packet_stage = stage
+    if selected is not None:
+        old_stage = selected["old"]["stage_id"]
+        if old_stage != stage and not ((revision_state or stage == "materials_pending") and old_stage in {review_stage, "materials_pending"}):
+            raise ValueError("Prior review stage differs from original current gate")
+        packet_stage = old_stage
+    input_refs = attach_lineage(contract, work, context, [{"path": a["path"], "sha256": a["sha256"]} for a in artifacts], selected, stage_id=packet_stage)
     # Content-addressed context keeps older task inputs intact after revisions.
     context_path = work / "review_tasks" / (contract._digest(context) + ".json")
     if not context_path.resolve().is_relative_to(work):
@@ -102,9 +119,9 @@ def prepare_review_task(run_id):
             raise ValueError("Existing review context differs")
     else:
         contract._atomic_json(context_path, context)
-    packet = {"schema_version": 1, "research_id": run_id, "stage_id": stage,
-        "task_id": "original_review_" + stage, "purpose": review_scope, "research_question": question,
-        "search_levels": [], "input_files": [{"path": a["path"], "sha256": a["sha256"]} for a in artifacts] + [ref(work, context_path)],
+    packet = {"schema_version": 1, "research_id": run_id, "stage_id": packet_stage,
+        "task_id": revision_task_id(contract, "original_review_" + packet_stage, selected), "purpose": review_scope, "research_question": question,
+        "search_levels": [], "input_files": input_refs + [ref(work, context_path)],
         "source_scope": {"policy_refs": policy}, "quantity_budget": {}, "time_budget_seconds": 0,
         "output_schema": {"kind": "file", "file": ref(h.ROOT, Path(__file__).resolve().parents[1] / "schemas/review_result.schema.json")},
         "stop_conditions": ["Input or original state changed", "Independent execution unavailable", "No separate execution authorization"],

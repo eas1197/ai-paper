@@ -12,13 +12,21 @@ def audit_review_type(run, context, report, inputs, schema, read_bound):
     if report["review_type"] == "academic_review":
         return {"review_type": "academic_review", "prior_review": None}
 
+    return audit_revision_lineage(run, context, lineage=report["prior_review"], inputs=inputs, schema=schema,
+        read_bound=read_bound, research_id=report["task_snapshot"]["research_id"],
+        stage_id=report["task_snapshot"]["stage_id"], review_kind=report["review_kind"],
+        new_snapshot_sha=report["task_snapshot"]["snapshot_sha256"], new_execution_id=report["execution_id"])
+
+
+def audit_revision_lineage(run, context, *, lineage, inputs, schema, read_bound,
+                           research_id, stage_id, review_kind, new_snapshot_sha=None, new_execution_id=None):
+    """Validate the same lineage before task freeze or after actual review receipt."""
     def load_frozen(ref):
         Draft202012Validator(schema["$defs"]["file_ref"]).validate(ref)
         if inputs.get(ref["path"]) != ref["sha256"]:
             raise ValueError("Revision lineage is not in the current frozen task")
         return read_bound(run, ref)[1]
 
-    lineage = report["prior_review"]
     if lineage["report"]["path"] == lineage["revision"]["path"]:
         raise ValueError("Prior report and revision record must be distinct")
     prior = json.loads(load_frozen(lineage["report"]))
@@ -33,13 +41,13 @@ def audit_review_type(run, context, report, inputs, schema, read_bound):
             previous_schema["required"].remove(field)
         previous_schema["allOf"].pop()
     Draft202012Validator(previous_schema).validate(prior)
-    old, new = prior["task_snapshot"], report["task_snapshot"]
-    if (old["research_id"] != new["research_id"] or old["stage_id"] != new["stage_id"]
-            or old["snapshot_sha256"] == new["snapshot_sha256"]
-            or prior["review_kind"] != report["review_kind"]
+    old = prior["task_snapshot"]
+    if (old["research_id"] != research_id or old["stage_id"] != stage_id
+            or (new_snapshot_sha is not None and old["snapshot_sha256"] == new_snapshot_sha)
+            or prior["review_kind"] != review_kind
             or prior["decision"] not in {"revise", "need_evidence"}):
         raise ValueError("Prior report is not an applicable earlier revision decision")
-    if report["execution_id"] is not None and prior["execution_id"] == report["execution_id"]:
+    if new_execution_id is not None and prior["execution_id"] == new_execution_id:
         raise ValueError("Re-review cannot reuse the prior execution ID")
     if (not isinstance(revision, dict) or set(revision) != {"prior_report", "issues", "changes"}
             or revision["prior_report"] != lineage["report"]):
