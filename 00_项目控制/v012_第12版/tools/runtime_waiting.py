@@ -44,8 +44,9 @@ def attach_wait(runtime,result,*,run_id=None,task_file=None,persist=True):
         candidate={}
     reference=candidate.get("task_snapshot")
     freeze=view.get("freeze_sha256")
+    user_state=view.get("state_sha256") if runtime.get("runtime_status")=="waiting_for_user" else None
     result_view={**runtime,"waiting":contract}
-    if run_id is None or (reference is None and freeze is None):
+    if run_id is None or (reference is None and freeze is None and user_state is None):
         return {**result_view,"wait_record_status":"unbound_observation_only"}
     import task_packet
     h=task_packet.heritage
@@ -59,10 +60,19 @@ def attach_wait(runtime,result,*,run_id=None,task_file=None,persist=True):
     if reference is not None:
         snap=task_packet.verify_snapshot(reference,current_run_id=run_id)
         timeout=snap["packet"]["time_budget_seconds"]
-    else:
+    elif freeze is not None:
         if state["status"]!="frozen" or h.sha(work/"s08_topic.json")!=freeze:
             raise ValueError("Wait frozen input changed")
         timeout=0
+    else:
+        from user_wait import checkpoint
+        if user_state!=state_hash or checkpoint(run_id,state)!=view:
+            raise ValueError("Original user wait changed")
+        timeout=0
+        contract["user_action"]=view["user_action"]
+        contract["user_hold_id"]=view["user_hold_id"]
+        if view["user_hold_id"]:
+            contract["resume_argv_template"]=["python",ENTRY,"advance","--run-id",run_id,"--user-decision-file","<explicit user acknowledgement JSON>"]
     contract={**contract,"original_stage":state["status"],"state_sha256":state_hash,
         "task_snapshot":reference,"freeze_sha256":freeze,
         "timeout_policy":{**contract["timeout_policy"],"frozen_task_time_budget_seconds":timeout}}

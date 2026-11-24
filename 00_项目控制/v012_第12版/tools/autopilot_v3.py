@@ -276,6 +276,10 @@ def step(run_id, *, executor=None):
     work=heritage.RUNS/heritage.run_id_guard(run_id)
     state=heritage.state_of(run_id)
     phase=state["status"]
+    from user_wait import checkpoint
+    waiting=checkpoint(run_id,state)
+    if waiting is not None:
+        return waiting
     engine=executor or Executor()
     if phase=="reality":
         instructions=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))

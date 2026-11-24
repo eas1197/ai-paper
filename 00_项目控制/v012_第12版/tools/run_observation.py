@@ -39,7 +39,7 @@ def command_observation(command,result):
         state="waiting_for_review"
     elif status=="awaiting_original_independent_material_and_writing_receipts":
         state="waiting_for_review"
-    elif status=="awaiting_original_quantitative_inputs":
+    elif status in {"waiting_for_user","awaiting_original_quantitative_inputs"}:
         state="waiting_for_user"
     elif view.get("execution_status")=="failed" or status=="execution_failed":
         state="failed"
@@ -51,7 +51,9 @@ def command_observation(command,result):
     elif status=="blocked_by_original_v3_gate" or stage in {"archived","eliminated","literature_budget_exhausted"}:
         state="blocked"
     elif command in {"status","advance","autopilot"}:
-        if action in {"original_native_literature_search","original_s08_freeze"} and "after" not in view:
+        if status=="queued" and action=="user_hold_acknowledged":
+            state="queued"
+        elif action in {"original_native_literature_search","original_s08_freeze"} and "after" not in view:
             state="queued"
         elif action=="original_v3_requires_staged_evidence_or_independent_review":
             state="blocked"

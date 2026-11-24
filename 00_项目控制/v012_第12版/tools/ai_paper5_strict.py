@@ -174,6 +174,10 @@ def status(run_id, *, progress=False):
     doctor()
     state = state_of(run_id)
     stage = state["status"]
+    from user_wait import checkpoint
+    waiting=checkpoint(run_id,state)
+    if waiting is not None:
+        return waiting
     if stage in PHASES:
         if progress:
             # Dispatch to ORIGINAL v009, which owns original v012/11-v007
@@ -472,6 +476,10 @@ def build_parser():
     p=sub.add_parser("init"); p.add_argument("--run-id",required=True); p.add_argument("--theme",required=True)
     for action in ("status","advance"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
+        if action=="advance":
+            group=p.add_mutually_exclusive_group()
+            group.add_argument("--wait-for-user",choices=("question","materials","budget"))
+            group.add_argument("--user-decision-file",type=Path)
     for action in ("reality","exchange","issue","review"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
     p=sub.add_parser("event-compare");p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
@@ -545,7 +553,15 @@ def main(argv=None):
             result=run_autopilot(args.run_id,theme=args.theme,model=args.model,timeout=args.timeout,max_steps=args.max_steps)
         elif args.cmd=="init":
             doctor(); result={"original_output":original_call(original_command("init",args.run_id,theme=args.theme))}
-        elif args.cmd in ("status","advance"): result=status(args.run_id,progress=args.cmd=="advance")
+        elif args.cmd in ("status","advance"):
+            if args.cmd=="advance" and args.wait_for_user:
+                from user_wait import request_hold
+                result=request_hold(args.run_id,args.wait_for_user)
+            elif args.cmd=="advance" and args.user_decision_file:
+                from user_wait import acknowledge_hold
+                result=acknowledge_hold(args.run_id,args.user_decision_file)
+            else:
+                result=status(args.run_id,progress=args.cmd=="advance")
         elif args.cmd=="event-compare":
             doctor();result={"original_output":original_call(original_event_command(args.run_id,args.report,events_jsonl=args.events_jsonl))}
         elif args.cmd=="materials":
