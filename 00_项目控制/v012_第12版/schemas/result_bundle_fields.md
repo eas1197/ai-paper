@@ -20,3 +20,11 @@ C12 首次 CI 45316989400 发现 jsonschema 默认未安装 RFC3339 日期校验
 ## C14 经验材料独立字段
 
 empirical 来源必须具有 empirical_material：来源说明、事件或对象、事件日期/时间（保留原始精度）、具体定位、内容类型、情境、采集路径、访问边界、可核实事实候选、研究者解释及不能支持的判断。公共 source 中仍保留原始 URL、作者/媒介、打开声明、行动 ID 和失败原因。内容类型沿用原 06/v005 的 actor_statement/reporter_account/official_rule/documented_action；other/unknown 仅为统一候选承载，不能替代原 06 资格，researcher_inference 只能放解释字段。事实候选独立包含 statement/locator/status/limits，status 只允许 reported/needs_verification/contradicted，不得自报 verified；实际事实级凭证和独立核验仍由原 event_protocol/06 接收及后续 C19–C24 判断。未知值显式 null/空数组，保留失败和不能支持的判断，不补造材料。非经验来源 empirical_material 为 null。
+
+## C15 原始记录与当前结果绑定
+
+- 新接收器 tools/result_bundle.py 的 audit_result_bundle 读取当前运行内的实际 result 文件，计算原始字节 SHA-256；先核 C04 当前快照，再核共用结果 schema 与身份。
+- 每个原始记录引用必须在同一 run 内真实存在，哈希重新计算；拒绝路径越界、符号链接越界、缺文件、重复/自引用、篡改、Codex events/response 跨 attempt。原始结果及记录文件均不改写。
+- expected_execution 由独立接收器/调度器选取，包含 task_snapshot、executor、provenance、result_sha256；与提交的包严格对照。不能由模型自己提交此参数或自动从模型自述生成。当前任务只定义和验收该接收合同，真实执行器提供独立记录的接入仍待 C19–C24。
+- 未取得原始文件/字段为 pending_missing_original_records；仅自报且哈希相符为 pending_independent_execution_binding；独立选取记录且文件哈希匹配仍为 records_hash_bound_pending_source_verification，非零退出记录为 execution_failed。所有返回 formal_eligible=false，实际工具真实性、来源打开/内容定位、原学术门禁均须后续核验。
+- 该模块不会创建原始事件，不把合成 fixture 或哈希一致当真实检索。采用单任务串行合同；真实接入及防并发状态处理后续完成。
