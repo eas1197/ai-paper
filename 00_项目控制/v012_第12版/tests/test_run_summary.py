@@ -3,14 +3,14 @@ import io
 import json
 import unittest
 from unittest.mock import patch
-from test_advance_trace import AdvanceTraceTests as fixture
+import test_advance_trace as fixture
 import ai_paper5_strict as strict
 from advance_trace import observe_advance
 from run_summary import export_summary
 
 
 class RunSummaryTests(unittest.TestCase):
-    setUp=fixture.setUp
+    setUp=fixture.AdvanceTraceTests.setUp
 
     def test_i20_cli_exports_same_manifest_and_summary_without_replay(self):
         observe_advance("fixture","strict_progress",lambda:{"status":"blocked_by_original_v3_gate"})
