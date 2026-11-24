@@ -132,7 +132,41 @@ def render(packet):
     return "\n".join(lines) + "\n"
 
 
-def produce(work, packet, manifest, *, output=None):
+def reviewed_material_admission(work, packet, review):
+    """Recheck the original reviewed route; this is not an independent review.
+
+    Only the native resume controller supplies its already-accepted review.
+    The standalone CLI does not grant this admission from packet fields.
+    """
+    if not isinstance(review, dict) or review.get("decision") != "pass":
+        raise ValueError("Reviewed V15 requires original matrix review pass")
+    reference = packet.get("analysis_matrix")
+    if not isinstance(reference, str):
+        raise ValueError("Reviewed V15 requires the original reviewed matrix")
+    path = (work / reference).resolve()
+    if (path.name != "analysis_matrix_reviewed.json"
+            or path.parent.parent != (work / "qualitative_framework").resolve()):
+        raise ValueError("Reviewed V15 requires the original reviewed matrix")
+    contract = binding(work, path.parent)
+    matrix, receipt = load(path), load(path.parent / "material_receipt.json")
+    from material_adequacy import approved_matrix_materials, validate_reviewed_plan_sources
+    from question_binding import evidence_digest, file_hash
+    if (matrix.get("question_binding") != contract
+            or matrix.get("collection_sha256") != evidence_digest(receipt)
+            or matrix.get("framework_sha256") != receipt.get("framework_sha256")):
+        raise ValueError("Reviewed V15 matrix binding differs")
+    approved = approved_matrix_materials(review.get("material_adequacy"), receipt, matrix)
+    validate_reviewed_plan_sources(packet, contract, receipt, approved)
+    return {"mode": "native_reviewed", "matrix_sha256": file_hash(path),
+            "receipt_sha256": contract["receipt_sha256"],
+            "review_sha256": evidence_digest(review),
+            "eligible_material_ids": sorted(approved),
+            "question_binding": contract}
+
+
+def produce(work, packet, manifest, *, output=None, material_review=None):
+    admission = (reviewed_material_admission(work, packet, material_review)
+                 if material_review is not None else {"mode": "exploratory_unverified"})
     frozen_path = work / "s08_topic.json"
     question_binding = packet.get("question_binding")
     if frozen_path.is_file():
@@ -185,7 +219,7 @@ def produce(work, packet, manifest, *, output=None):
         "topic_sha256": hashlib.sha256(frozen_path.read_bytes()).hexdigest() if frozen_path.is_file() else None,
         "analysis_matrix_sha256": hashlib.sha256(matrix_path.read_bytes()).hexdigest() if matrix_path else None,
         "review_criteria": REVIEW_CRITERIA, "review_status": "pending",
-        "question_binding": question_binding,
+        "question_binding": question_binding, "material_admission": admission,
         "full_draft_entry": ("existing_quantitative_with_upstream_gates"
                              if mode == "full" and packet["method"] == "quantitative"
                              else "planned" if mode == "full" else "not_requested"),

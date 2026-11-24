@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "06_数据方法与分析/v005_第5版/tools"))
 from framework import analysis_matrix
 from repair_materials import REPAIR_BATCH_LIMIT, rebind_requirements, repair
 sys.path.insert(0, str(ROOT / "07_三稿独立写作/v015_第15版/tools"))
-from writing_plan import produce
+from writing_plan import produce, reviewed_material_admission
 
 REVIEWER = "gpt-6.2-sol"
 load, write = run_mode.load, run_mode.write
@@ -355,6 +355,7 @@ def resume(work, folder, prior_review):
     write(matrix_path, current)
     context.update(matrix=current, approved_empirical_materials=approved, literature=load(work / "merged_literature.json"),
                    theories=load(work / "initial/theories.json"))
+    matrix_review = review
     packet, review = None, None
     for revision in range(3):
         if revision and spent == 2:
@@ -381,14 +382,17 @@ def resume(work, folder, prior_review):
         if any(not section.get("paragraphs") for chapter in packet["chapters"] for section in chapter["sections"]):
             raise ValueError("Every section requires paragraph-level tasks")
         validate_reviewed_plan_sources(packet, contract, receipt, approved)
+        admission = reviewed_material_admission(work, packet, matrix_review)
         output = area / f"draft_{revision}"
         if (output / "plan_input.json").is_file() and load(output / "plan_input.json") == packet:
             plan = output / "论文写作方案.md"
             request = load(output / "writing_plan_review_request.json")
-            if file_hash(plan) != request["plan_sha256"] or request["analysis_matrix_sha256"] != file_hash(matrix_path):
+            if (file_hash(plan) != request["plan_sha256"]
+                    or request["analysis_matrix_sha256"] != file_hash(matrix_path)
+                    or request.get("material_admission") != admission):
                 raise ValueError("Previously rendered plan or matrix changed")
         else:
-            plan = produce(work, packet, manifest, output=output)
+            plan = produce(work, packet, manifest, output=output, material_review=matrix_review)
         if revision:
             spent += 1
             record_revision_round(work, stage="plan", round_key=str(revision), before=before_plan,

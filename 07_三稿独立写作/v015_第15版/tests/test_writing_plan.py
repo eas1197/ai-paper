@@ -62,6 +62,7 @@ class WritingPlanTest(unittest.TestCase):
                     self.assertEqual(review["requested_deliverable"], expected)
                     self.assertEqual(review["review_status"], "pending")
                     self.assertFalse(review["formal_eligible"])
+                    self.assertEqual(review["material_admission"]["mode"], "exploratory_unverified")
 
     def test_plan_input_persisted_and_hash_locked(self):
         with tempfile.TemporaryDirectory(dir=run_mode.ROOT) as folder:
@@ -79,3 +80,39 @@ class WritingPlanTest(unittest.TestCase):
                 with self.assertRaises(FileExistsError):
                     writing_plan.produce(work, dict(data, answer_strategy="Changed"), manifest)
                 self.assertEqual(saved.read_bytes(), old)
+
+
+    def test_reviewed_admission_requires_original_bound_adequate_matrix(self):
+        from question_binding import evidence_digest, file_hash
+        with tempfile.TemporaryDirectory(dir=run_mode.ROOT) as temporary:
+            work = Path(temporary)
+            folder = work / "qualitative_framework" / "attempt_001"
+            folder.mkdir(parents=True)
+            material = {"material_id": "E", "url": "https://example.org",
+                        "locator": "test index E", "kind": "official_rule"}
+            receipt = {"framework_sha256": "fixture-framework", "materials": [material]}
+            run_mode.write(folder / "material_receipt.json", receipt)
+            contract = {"core_question": "Fixture question?", "specific_question": "S08",
+                        "method": "secondary_interviews",
+                        "receipt_sha256": file_hash(folder / "material_receipt.json")}
+            matrix = {"question_binding": contract, "collection_sha256": evidence_digest(receipt),
+                      "framework_sha256": receipt["framework_sha256"], "rows": [{"evidence": [material]}]}
+            run_mode.write(folder / "analysis_matrix_reviewed.json", matrix)
+            data = dict(packet(1), question_binding=contract, specific_question="S08",
+                        analysis_matrix="qualitative_framework/attempt_001/analysis_matrix_reviewed.json")
+            adequate = {"decision": "pass", "material_adequacy": {
+                "support": "sufficient", "reason": "Synthetic only", "eligible_event_ids": ["E"]}}
+            with patch.object(writing_plan, "binding", return_value=contract):
+                admission = writing_plan.reviewed_material_admission(work, data, adequate)
+                self.assertEqual(admission["mode"], "native_reviewed")
+                self.assertEqual(admission["eligible_material_ids"], ["E"])
+                self.assertEqual(admission["review_sha256"], evidence_digest(adequate))
+                for review in ({}, {"decision": "pass"}, dict(adequate, decision="revise")):
+                    with self.subTest(review=review), self.assertRaises(ValueError):
+                        writing_plan.reviewed_material_admission(work, data, review)
+                with self.assertRaisesRegex(ValueError, "original reviewed matrix"):
+                    writing_plan.reviewed_material_admission(work, dict(data,
+                        analysis_matrix="qualitative_framework/attempt_001/analysis_matrix.json"), adequate)
+                run_mode.write(folder / "analysis_matrix_reviewed.json", dict(matrix, collection_sha256="changed"))
+                with self.assertRaisesRegex(ValueError, "binding differs"):
+                    writing_plan.reviewed_material_admission(work, data, adequate)
