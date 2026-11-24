@@ -917,7 +917,9 @@ def main(argv=None):
         task_file=args.output if args.cmd in {"chat-task","codex-task","review-task"} else None
         runtime=attach_wait(runtime,result,run_id=getattr(args,"run_id",None),task_file=task_file,
             persist=args.cmd not in {"status","prepare","review-counts"})
-        envelope={"status":"ok","result":result,"runtime":runtime}
+        from runtime_log import attach_command_record
+        envelope={"status":"ok","result":result,"runtime":runtime,
+                  "runtime_log":attach_command_record(args,result,runtime,success=True)}
         if args.cmd=="status" and (RUNS / run_id_guard(args.run_id) / "task_contracts").exists():
             from task_packet import observe_active_snapshots
             envelope["snapshot_validity"]=observe_active_snapshots(args.run_id)
@@ -928,8 +930,10 @@ def main(argv=None):
         outcome = classify_failure(exc)
         kind = "failed" if outcome in {"network_failure","executor_unavailable","model_timeout",
                                       "schema_error","academic_failure","technical_failure"} else "blocked"
+        from runtime_log import attach_command_record
+        runtime=observation(kind,reason=str(exc),outcome_kind=outcome,error_text=str(exc))
         print(json.dumps({"status":"blocked","reason":str(exc),"failure_kind":outcome,
-            "runtime":observation(kind,reason=str(exc),outcome_kind=outcome,error_text=str(exc))},ensure_ascii=False))
+            "runtime":runtime,"runtime_log":attach_command_record(args,{},runtime,success=False)},ensure_ascii=False))
         return 2
 
 
