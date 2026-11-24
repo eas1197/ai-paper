@@ -4,6 +4,7 @@ import unittest
 import uuid
 import ai_paper5_strict as strict
 import task_packet
+from unittest.mock import patch
 
 
 class FrozenRouteTest(unittest.TestCase):
@@ -59,6 +60,45 @@ class FrozenRouteTest(unittest.TestCase):
             self.assertEqual(result["method"],method)
             self.assertEqual(result["action"],"original_06_adequacy_then_v15_v16")
             self.assertFalse(result["automatic_execution"])
+
+    def test_h03_actual_original_plan_only(self):
+        self.freeze("quantitative")
+        source=self.work/"quantitative_input.json"
+        strict.write(source, {"06":{"phase":"prepare"}})
+        target=self.work/"cli_outputs"/"quantitative_plan.json"
+        state=(self.work/"staged_topic.json").read_bytes()
+        result=strict.original_quantitative_plan(self.run_id,input_path=source,output=target)
+        self.assertEqual(result["status"],"original_quantitative_plan_only")
+        self.assertEqual(strict.read(target)["stage_id"],"06")
+        self.assertEqual(strict.read(target)["run_id"],self.run_id)
+        self.assertFalse(result["analysis_executed"])
+        self.assertFalse(result["stata_executed"])
+        self.assertFalse(result["formal_eligible"])
+        self.assertEqual((self.work/"staged_topic.json").read_bytes(),state)
+        self.assertFalse((self.work/"stage_06").exists())
+        self.assertFalse((strict.ROOT/"00_项目控制/v002_第2版/runs"/self.run_id).exists())
+
+    def test_h03_qualitative_rejected_before_native_plan(self):
+        self.freeze("online_qualitative")
+        source=self.work/"quantitative_input.json"
+        strict.write(source, {"06":{"phase":"prepare"}})
+        target=self.work/"cli_outputs"/"quantitative_plan.json"
+        with self.assertRaisesRegex(ValueError,"does not authorize"):
+            strict.original_quantitative_plan(self.run_id,input_path=source,output=target)
+        self.assertFalse(target.exists())
+
+    def test_h03_analyze_approve_and_outside_output_rejected(self):
+        self.freeze("quantitative")
+        source=self.work/"quantitative_input.json"
+        target=self.work/"cli_outputs"/"quantitative_plan.json"
+        for phase in ("analyze","approve"):
+            strict.write(source, {"06":{"phase":phase}})
+            with self.assertRaisesRegex(ValueError,"prepare only"):
+                strict.original_quantitative_plan(self.run_id,input_path=source,output=target)
+        strict.write(source, {"06":{"phase":"prepare"}})
+        with self.assertRaises(ValueError):
+            strict.original_quantitative_plan(self.run_id,input_path=source,output=self.work/"stage_06"/"plan.json")
+        self.assertFalse(target.exists())
 
     def test_changed_freeze_is_rejected(self):
         self.freeze("quantitative")

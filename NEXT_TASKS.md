@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **H03（当前唯一最小任务）**：v012 根据原冻结方法调用 06/v004，不误入 06/v005 定性材料路径。
-   - 状态：pending；仅核对/接通原06/v004入口，禁止运行实际估计或Stata。
+   - 状态：implemented_unverified；H03 原06/v004 prepare plan显式接续及3项测试已实现，待CI；不运行估计或Stata，不计完成。
    - 完成后：提交并转 H04。
 
 H02 已验收：[S08原定量判定与分流合同](00_项目控制/v012_第12版/outputs/H02_S08原定量判定与分流合同.md)；H02 verified（原select_method/verified_frozen_topic与v012 frozen_route静态核对；无实际分析）。

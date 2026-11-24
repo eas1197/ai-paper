@@ -170,6 +170,45 @@ def frozen_route(run_id):
     raise ValueError("Unsupported original frozen method")
 
 
+def original_quantitative_plan(run_id, *, input_path, output):
+    """H03: only compile the original 06/v004 prepare plan, never execute it."""
+    route = frozen_route(run_id)
+    if route["method"] != "quantitative" or route["action"] != "original_quantitative_handoff":
+        raise ValueError("Original frozen method does not authorize quantitative 06")
+    work = (RUNS / run_id_guard(run_id)).resolve(strict=True)
+    raw = Path(input_path)
+    source = raw.resolve(strict=True)
+    if raw.is_symlink() or not source.is_file() or not source.is_relative_to(work):
+        raise ValueError("Quantitative input must belong to the selected frozen run")
+    data = read(source)
+    if not isinstance(data, dict) or not isinstance(data.get("06", data), dict):
+        raise ValueError("Expected original 06 input object")
+    packet = data.get("06", data)
+    if packet.get("phase", "prepare") != "prepare":
+        raise ValueError("Quantitative plan bridge permits prepare only, not analyze or approve")
+    target = cli_output_path(output, run_id=run_id)
+    if not target.is_relative_to(work / "cli_outputs"):
+        raise ValueError("Original plan output must be in the selected run's cli_outputs")
+    source_sha = sha(source)
+    module = ROOT / "06_数据方法与分析/v004_第4版/tools/stage06.py"
+    if Path(route["modules"][0]).resolve() != module.resolve():
+        raise ValueError("Original quantitative module changed")
+    original = json.loads(original_call([sys.executable, "-B", str(module), "plan",
+        "--run-id", run_id, "--input", str(source), "--output", str(target)], timeout=120))
+    plan = read(target)
+    if (original.get("status") != "planned" or Path(original.get("path", "")).resolve() != target
+            or plan.get("run_id") != run_id or plan.get("stage_id") != "06"
+            or plan.get("inputs", {}).get("phase") != "prepare"
+            or sha(source) != source_sha or frozen_route(run_id) != route):
+        raise ValueError("Original quantitative candidate plan or frozen input changed")
+    return {"status": "original_quantitative_plan_only", "research_id": run_id,
+            "method": route["method"], "freeze_sha256": route["freeze_sha256"],
+            "module": str(module), "plan_path": str(target), "plan_sha256": sha(target),
+            "input_sha256": source_sha, "formal_eligible": False, "advance_gate": False,
+            "automatic_execution": False, "stata_executed": False, "analysis_executed": False,
+            "note": "Native prepare plan only; original G5/G6 inputs and authorization still required."}
+
+
 def status(run_id, *, progress=False):
     doctor()
     state = state_of(run_id)
@@ -635,6 +674,9 @@ def build_parser():
     p.add_argument("--event-focus",action="store_true")
     p.add_argument("--task-output",type=Path,help="Prepare only: frozen material task, no search")
     p.add_argument("--analysis-kind",choices=("framework","matrix"),help="With --task-output, prepare original analysis inputs")
+    p=sub.add_parser("quantitative-plan",help="Compile original 06/v004 prepare plan only; no estimation")
+    p.add_argument("--run-id",required=True);p.add_argument("--input",type=Path,required=True)
+    p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("resume-writing");p.add_argument("--run-id",required=True)
     p.add_argument("--attempt",default="attempt_001")
     p=sub.add_parser("writer4")
@@ -730,6 +772,8 @@ def main(argv=None):
                 args.run_id,attempt=args.attempt,conversion=args.conversion,review=args.review,
                 matrix=args.matrix,framework=args.framework,framework_revision=args.framework_revision,
                 preliminary_attempt=args.preliminary_attempt,event_focus=args.event_focus))}
+        elif args.cmd=="quantitative-plan":
+            doctor();result=original_quantitative_plan(args.run_id,input_path=args.input,output=args.output)
         elif args.cmd=="resume-writing":
             doctor();result={"original_output":original_call(original_writing_command(
                 args.run_id,attempt=args.attempt))}
