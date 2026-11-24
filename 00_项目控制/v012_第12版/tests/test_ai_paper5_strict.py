@@ -241,13 +241,43 @@ class StrictTests(TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             packet=make_v15_fixture(Path(temporary))
             with patch.object(m,"doctor",return_value={}), \
-                 patch.object(m,"original_call",return_value="writer4 complete") as original:
+                 patch.object(m,"original_call",side_effect=[
+                     json.dumps({"method":"secondary_interviews","writer":"ai-writer 4.0 / v016"}),
+                     "writer4 complete"]) as original:
                 result=m.main(["writer4","--action","prepare","--packet",str(packet),
                                "--workspace",str(Path(temporary)/"writer4_workspace"),"--mode","exploratory"])
             self.assertEqual(result,0)
+            self.assertEqual([call.args[0][3] for call in original.call_args_list],["route","prepare"])
             command=original.call_args.args[0]
             self.assertEqual(Path(command[2]),m.V16)
             self.assertEqual(command[3],"prepare")
+
+    def test_g12_v012_route_executes_original_writer_for_all_methods(self):
+        import contextlib
+        import io
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=Path(temporary)/"route.json"
+            for method, expected in (("secondary_interviews","ai-writer 4.0 / v016"),
+                                     ("online_qualitative","ai-writer 4.0 / v016"),
+                                     ("quantitative","main/v014/tools/stage07.py")):
+                packet.write_text(json.dumps({"method":method}),encoding="utf-8")
+                output=io.StringIO()
+                with contextlib.redirect_stdout(output):
+                    self.assertEqual(m.main(["writer4","--action","route","--packet",str(packet)]),0)
+                route=json.loads(output.getvalue())["result"]["writer_route"]
+                self.assertEqual(route["method"],method)
+                self.assertEqual(route["writer"],expected)
+
+    def test_g12_wrong_original_route_stops_before_prepare(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            with patch.object(m,"doctor",return_value={}), \
+                 patch.object(m,"original_call",return_value=json.dumps(
+                     {"method":"quantitative","writer":"main/v014/tools/stage07.py"})) as original:
+                result=m.main(["writer4","--action","prepare","--packet",str(packet),
+                               "--workspace",str(Path(temporary)/"writer4_workspace")])
+            self.assertEqual(result,2)
+            original.assert_called_once_with(m.original_writer4_command("route",packet=packet))
 
     def test_v15_handoff_blocks_missing_outputs_bad_sources_and_hash_changes(self):
         with tempfile.TemporaryDirectory() as temporary:

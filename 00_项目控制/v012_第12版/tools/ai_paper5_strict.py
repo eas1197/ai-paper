@@ -729,8 +729,23 @@ def main(argv=None):
             command=original_writer4_command(
                 args.action,packet=args.packet,workspace=args.workspace,mode=args.mode,
                 manuscript=args.manuscript,claims=args.claims)
-            result={"original_output":original_call(command),"module":str(V16),
-                    "action":args.action,"formal_eligible":False}
+            # For a reviewed V15 handoff, ask the original writer to classify
+            # the method before either preparing or accepting qualitative work.
+            if args.action == "route":
+                route_output = original_call(command)
+                route = json.loads(route_output)
+                result={"original_output":route_output,"module":str(V16),
+                        "action":args.action,"writer_route":route,"formal_eligible":False}
+            else:
+                packet_sha = sha(args.packet)
+                route = json.loads(original_call(original_writer4_command("route",packet=args.packet)))
+                if (route.get("method") != read(args.packet).get("method")
+                        or route.get("method") not in {"secondary_interviews","online_qualitative"}
+                        or route.get("writer") != "ai-writer 4.0 / v016"
+                        or sha(args.packet) != packet_sha):
+                    raise ValueError("Original V16 route does not authorize qualitative dispatch")
+                result={"original_output":original_call(command),"module":str(V16),
+                        "action":args.action,"writer_route":route,"formal_eligible":False}
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write_cli_output(args.output,result)
