@@ -7,6 +7,7 @@ from jsonschema import Draft202012Validator
 from review_evidence import SCHEMA, audit_review_evidence
 from review_type import audit_review_type
 from review_invocation import audit_invocation
+from review_isolation import audit_isolation
 
 
 def _local_file(run, raw):
@@ -31,7 +32,7 @@ def _read_bound(run, ref):
 
 
 def audit_review_binding(report_path, *, current_run_id, expected_reference,
-                         context_path, expected_execution_ref=None, expected_identity_ref=None):
+                         context_path, expected_execution_ref=None, expected_identity_ref=None, expected_isolation=None):
     """The receiver selects context and receipt independently; no identity authentication here."""
     import task_packet
 
@@ -98,4 +99,11 @@ def audit_review_binding(report_path, *, current_run_id, expected_reference,
             "execution_status": receipt["status"], "execution_binding": expected_execution_ref}
     if expected_identity_ref is not None:
         bound["invocation_audit"] = audit_invocation(run, bound, expected_identity_ref)
+    if expected_isolation is not None:
+        if "invocation_audit" not in bound or set(expected_isolation) != {"permitted_inputs", "researcher_event_refs"}:
+            raise ValueError("Missing independently selected isolation inputs")
+        bound["isolation_audit"] = audit_isolation(
+            run, bound["invocation_audit"], snapshot=expected_reference,
+            context_ref={"path": context_path, "sha256": inputs[context_path]},
+            frozen_inputs=packet["input_files"], **expected_isolation)
     return bound
