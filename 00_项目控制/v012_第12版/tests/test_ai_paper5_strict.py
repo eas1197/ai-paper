@@ -54,9 +54,15 @@ def make_v15_fixture(root):
     topic_path.write_text(json.dumps(topic, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     chapters = []
     for chapter_id in ("problem", "framework", "case", "d0", "conclusion"):
-        chapters.append({"id": chapter_id, "sections": [{"source_ids": ["T", "E"]}]})
+        chapters.append({"id": chapter_id, "task": "Fixture chapter task",
+                         "bridge": "Fixture chapter bridge", "sections": [{
+                             "title": "Fixture section", "task": "Compare evidence",
+                             "argument": "A tentative interpretation", "evidence_use": "Check source scope",
+                             "source_ids": ["T", "E"], "paragraphs": ["Describe evidence", "Limit inference"]
+                         }]})
     packet = {
         "method": method, "core_question": core, "specific_question": specific,
+        "answer_strategy": "Compare bounded fixture observations",
         "question_binding": contract,
         "analysis_matrix": "qualitative_framework/attempt_001/analysis_matrix_reviewed.json",
         "sources": {
@@ -251,6 +257,37 @@ class StrictTests(TestCase):
             command=original.call_args.args[0]
             self.assertEqual(Path(command[2]),m.V16)
             self.assertEqual(command[3],"prepare")
+
+    def test_g13_v012_prepare_real_writer_artifacts(self):
+        import contextlib
+        import io
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            workspace=Path(temporary)/"writer4_workspace"
+            output=io.StringIO()
+            with contextlib.redirect_stdout(output):
+                self.assertEqual(m.main(["writer4","--action","prepare","--packet",str(packet),
+                                         "--workspace",str(workspace)]),0)
+            result=json.loads(output.getvalue())["result"]
+            prepared=json.loads(result["original_output"])
+            self.assertEqual(prepared["status"],"awaiting_draft")
+            manifest=json.loads((workspace/"writer_manifest.json").read_text(encoding="utf-8"))
+            original=json.loads(packet.read_text(encoding="utf-8"))
+            self.assertEqual(manifest["packet_sha256"],m.sha(packet))
+            self.assertFalse(manifest["formal_eligible"])
+            self.assertEqual(len(manifest["resource_sha256"]),13)
+            self.assertEqual(len(manifest["task_ids"]),5)
+            for task_id, chapter in zip(manifest["task_ids"], original["chapters"]):
+                task=json.loads((workspace/"tasks"/(task_id+".json")).read_text(encoding="utf-8"))
+                section=chapter["sections"][0]
+                self.assertEqual(task["source_ids"],section["source_ids"])
+                self.assertEqual(task["sources"],{key:original["sources"][key] for key in section["source_ids"]})
+                self.assertEqual(task["paragraphs"],section["paragraphs"])
+                self.assertTrue(task["style_rules"])
+                self.assertTrue(task["v003_argument_rules"])
+                self.assertTrue(task["instruction"])
+            self.assertEqual(manifest["plan_sha256"],m.sha(workspace/"writing_plan_v15.md"))
+            self.assertFalse((workspace/"writing_review_request.json").exists())
 
     def test_g12_v012_route_executes_original_writer_for_all_methods(self):
         import contextlib
