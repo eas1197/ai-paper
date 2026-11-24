@@ -879,7 +879,11 @@ def main(argv=None):
         task_file=args.output if args.cmd in {"chat-task","codex-task","review-task"} else None
         runtime=attach_wait(runtime,result,run_id=getattr(args,"run_id",None),task_file=task_file,
             persist=args.cmd not in {"status","prepare","review-counts"})
-        print(json.dumps({"status":"ok","result":result,"runtime":runtime},ensure_ascii=False,indent=2))
+        envelope={"status":"ok","result":result,"runtime":runtime}
+        if args.cmd=="status" and (RUNS / run_id_guard(args.run_id) / "task_contracts").exists():
+            from task_packet import observe_active_snapshots
+            envelope["snapshot_validity"]=observe_active_snapshots(args.run_id)
+        print(json.dumps(envelope,ensure_ascii=False,indent=2))
         return 0
     except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
         from run_observation import observation, OriginalBudgetExhausted

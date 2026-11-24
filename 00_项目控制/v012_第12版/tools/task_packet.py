@@ -11,7 +11,7 @@ import tempfile
 from pathlib import Path
 import sys
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, ValidationError
 
 import ai_paper5_strict as heritage
 
@@ -225,3 +225,39 @@ def validate_result_snapshot(result, *, current_run_id, expected_reference):
     if not isinstance(result, dict) or result.get("task_snapshot") != expected_reference:
         raise ValueError("Result does not belong to the selected task snapshot")
     return verify_snapshot(expected_reference, current_run_id=current_run_id)
+
+
+def observe_active_snapshots(current_run_id):
+    """I09: read-only validity of active task/result/review references."""
+    heritage.run_id_guard(current_run_id)
+    work = (heritage.RUNS / current_run_id).resolve(strict=True)
+    manifest = run_mode.verified_run(work)
+    state = heritage.state_of(current_run_id)
+    if manifest.get("run_id") != current_run_id or state.get("run_id") != current_run_id:
+        raise ValueError("Original research identity mismatch")
+    root = work / "task_contracts"
+    rows = []
+    if root.exists():
+        if root.is_symlink() or not root.is_dir() or root.resolve() != root:
+            raise ValueError("Task-contract namespace escapes original run")
+        for slot in sorted(root.iterdir()):
+            if not re.fullmatch(r"[0-9a-f]{64}", slot.name):
+                continue
+            ref = None
+            try:
+                if slot.is_symlink() or not slot.is_dir():
+                    raise ValueError("Invalid task slot")
+                path = slot / "active.json"
+                if path.is_symlink():
+                    raise ValueError("Invalid active reference path")
+                ref = heritage.read(path)
+                if not isinstance(ref, dict) or _slot(work, ref["stage_id"], ref["task_id"]) != slot:
+                    raise ValueError("Active reference does not match task slot")
+                verify_snapshot(ref, current_run_id=current_run_id)
+                status, reason = "current", None
+            except (OSError, ValueError, KeyError, TypeError, ValidationError) as exc:
+                status, reason = "stale", str(exc)
+            rows.append({"slot":slot.name, "task_snapshot":ref, "status":status,
+                         "reason":reason, "bound_results_and_reviews_usable":False if status=="stale" else None})
+    return {"research_id":current_run_id,"active_snapshots":rows,"read_only":True,
+            "academic_approval_granted":False,"formal_eligible":False}

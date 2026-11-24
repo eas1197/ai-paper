@@ -83,6 +83,32 @@ class SnapshotTest(unittest.TestCase):
             task_packet.freeze_packet(self.make_packet(task_id="another_revision"),
                 current_run_id="offline_fixture", supersedes=[old])
 
+    def test_i09_status_marks_transitive_dependents_stale_read_only(self):
+        import contextlib
+        import io
+        from unittest.mock import patch
+        parent = self.freeze(self.make_packet())
+        child = self.freeze(self.make_packet(task_id="child"), [parent])
+        grandchild = self.freeze(self.make_packet(task_id="grandchild"), [child])
+        unrelated = self.freeze(self.make_packet(task_id="unrelated"))
+        revised = self.freeze(self.make_packet(research_question="Revised question"))
+        work = self.root / "offline_fixture"
+        before = {p.relative_to(work).as_posix(): p.read_bytes() for p in work.rglob("*") if p.is_file()}
+        output = io.StringIO()
+        with patch.object(task_packet.heritage,"doctor",return_value={}), contextlib.redirect_stdout(output):
+            code = task_packet.heritage.main(["status","--run-id","offline_fixture"])
+        self.assertEqual(code,0)
+        view=json.loads(output.getvalue())["snapshot_validity"]
+        rows={row["task_snapshot"]["snapshot_sha256"]:row for row in view["active_snapshots"]}
+        for ref in (child, grandchild):
+            self.assertEqual(rows[ref["snapshot_sha256"]]["status"],"stale")
+            self.assertFalse(rows[ref["snapshot_sha256"]]["bound_results_and_reviews_usable"])
+        for ref in (revised, unrelated):
+            self.assertEqual(rows[ref["snapshot_sha256"]]["status"],"current")
+            self.assertIsNone(rows[ref["snapshot_sha256"]]["bound_results_and_reviews_usable"])
+        self.assertFalse(view["academic_approval_granted"])
+        self.assertEqual(before,{p.relative_to(work).as_posix():p.read_bytes() for p in work.rglob("*") if p.is_file()})
+
     def test_original_question_change_requires_new_snapshot(self):
         sample = self.make_packet()
         ref = self.freeze(sample)
