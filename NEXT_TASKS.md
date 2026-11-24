@@ -10,13 +10,13 @@
 
 # 当前唯一任务
 
-1. **K05（当前唯一最小任务）**：记录初始代码 HEAD、模块版本、配置哈希和预算。
-   - 状态：pending；核对K03实际执行HEAD和同run原manifest及原依赖版本/配置，禁止用当前HEAD替代。
-   - 完成后：提交并转 K06。
+1. **K06（当前唯一最小任务）**：由 v012 启动原 3.x 现实观察。
+   - 状态：pending；使用同run真实Chat原生网页观察，核原reality合同；恢复原初始化文件，必要时离线执行原提交入口，不调用Codex，不伪造事件。
+   - 完成后：提交并转 K07。
 
-**当前统计：** 原始203/253，合并208/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K04 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K05 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
+**当前统计：** 原始204/253，合并209/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K05 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K06 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
 
-最近验收：[K04_同run执行范围与预算冻结](00_项目控制/v012_第12版/outputs/K04_同run执行范围与预算冻结.md)；K04 verified（同run授权执行合同冻结，绑定原run_manifest SHA256 aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03；原dev 5+5、九刊、三层定位、3批/24动作原规则；Chat/Codex来源与独立审查分离；I03不扩大；写作plan保持原政策；不执行检索或S08）。
+最近验收：[K05_初始运行代码与配置基线](00_项目控制/v012_第12版/outputs/K05_初始运行代码与配置基线.md)；K05 verified（K03实跑初始HEAD b973877，Actions 45446608432 success；18个指定原入口/配置Git blob及大小，原manifest字节与原workload/registry/policy/writing_policy SHA256，保留原预算和零模型/搜索初始化观察；无额外执行）。
 
 ## 历史与阻塞说明
 

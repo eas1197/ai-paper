@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "run_id": "community_canteen_access_20261125",
+  "initial_execution_head": "b973877f9df49d6f517fa1ec605a7c7ce49b1f7f",
+  "initial_execution_run": 45446608432,
+  "initial_execution_job": 138631978179,
+  "initial_source_files": [
+    {
+      "path": "00_项目控制/v012_第12版/tools/ai_paper5_strict.py",
+      "git_blob_sha1": "781e67508c13e2a5669b11875f7ca6cc03e2bc4b",
+      "size": 55484
+    },
+    {
+      "path": "00_项目控制/v009_第9版/tools/staged_topic.py",
+      "git_blob_sha1": "878a999250f7cfd4a7096c0b75296ea4e9d15b4a",
+      "size": 41147
+    },
+    {
+      "path": "00_项目控制/v009_第9版/tools/event_protocol.py",
+      "git_blob_sha1": "d2ed91315a46678df3a1dec21711bcb1a24b4319",
+      "size": 14990
+    },
+    {
+      "path": "00_项目控制/v009_第9版/tools/method_paths.py",
+      "git_blob_sha1": "90915cae0d74172a19859178a01901b1f671c519",
+      "size": 5489
+    },
+    {
+      "path": "00_项目控制/v009_第9版/tools/resume_writing.py",
+      "git_blob_sha1": "ecf8394d1f1c494c6b37b1b847ff527fbc60138b",
+      "size": 30926
+    },
+    {
+      "path": "00_项目控制/v009_第9版/search_policy.json",
+      "git_blob_sha1": "019228b8a343621b2c76290508e7760505b388f4",
+      "size": 578
+    },
+    {
+      "path": "00_项目控制/v009_第9版/search_prompt.txt",
+      "git_blob_sha1": "992a392027090ec049b4b0c62f54acc0b0355725",
+      "size": 1186
+    },
+    {
+      "path": "00_项目控制/v007_第7版/dev_profile.json",
+      "git_blob_sha1": "ac9366529639e1e474245ce7e3a3c3aef2704024",
+      "size": 859
+    },
+    {
+      "path": "00_项目控制/v007_第7版/tools/run_mode.py",
+      "git_blob_sha1": "2dfd9387a0a258b35df512e90c2b252679fc6e62",
+      "size": 7718
+    },
+    {
+      "path": "00_项目控制/v005_第5版/module_registry.json",
+      "git_blob_sha1": "5e5da4737cc9b5fabfbc2ede09b94ced9a523a7e",
+      "size": 4477
+    },
+    {
+      "path": "04_议题文献与现实/v012_第12版/tools/native_library.py",
+      "git_blob_sha1": "ea162e1b8f2471417cad5627cc0b77a0f5698ea5",
+      "size": 7248
+    },
+    {
+      "path": "04_议题文献与现实/v012_第12版/templates/native_response.schema.json",
+      "git_blob_sha1": "62ef69b49e664edc41c5967f1d2855db63cb6fcb",
+      "size": 3246
+    },
+    {
+      "path": "04_议题文献与现实/v012_第12版/templates/search_prompt.txt",
+      "git_blob_sha1": "e242546f015e2c6a845af1f8c388c891cc579f1b",
+      "size": 3037
+    },
+    {
+      "path": "11_文献采集适配/v007_第7版/tools/codex_literature.py",
+      "git_blob_sha1": "0cb88aead58a21a27935037f638abbba240e44ce",
+      "size": 19942
+    },
+    {
+      "path": "06_数据方法与分析/v005_第5版/tools/qual_materials.py",
+      "git_blob_sha1": "7aae6278450f215a461ce4c960a7996100a52c3f",
+      "size": 17227
+    },
+    {
+      "path": "06_数据方法与分析/v005_第5版/tools/repair_materials.py",
+      "git_blob_sha1": "e5402f0aad3ab38ea943027f71fd0785f0903202",
+      "size": 6274
+    },
+    {
+      "path": "07_三稿独立写作/v015_第15版/tools/writing_plan.py",
+      "git_blob_sha1": "9a530c76d7f6a6d4c7260783c0d37e1622d1b827",
+      "size": 14919
+    },
+    {
+      "path": "07_三稿独立写作/v016_第16版/tools/ai_writer4.py",
+      "git_blob_sha1": "fc987dedbe5b93de27085d59128f588b47d94289",
+      "size": 38369
+    }
+  ],
+  "configuration": {
+    "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+    "registry_sha256": "80853e5a7bff2488b5c9e78199206725da6c1153d49e6e4b380e212a69ae3c85",
+    "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+    "writing_policy_sha256": "e39ddd7d682bfd6ec2fb5b90d241d001ec7fb3191750371b42d0d6f77b6d9666",
+    "run_manifest_bytes_sha256": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03",
+    "initial_staged_topic_bytes_sha256": "8bc4c7f2aa060b8eeef8256197d7ae37653b4f339667df583dbe7f2c2a32402f"
+  },
+  "budget": {
+    "10": {},
+    "11": {
+      "max_batches": 1,
+      "topic_batches_per_phase": 3,
+      "timeout_seconds": 480,
+      "native_search_actions": 24
+    },
+    "12": {
+      "migration_jobs": 1
+    },
+    "00": {
+      "attempts": 2,
+      "model_calls": 6,
+      "timeout_seconds": 720
+    },
+    "01": {
+      "cssci_journals": 2,
+      "pku_journals": 2,
+      "distinct_journals": 4
+    },
+    "02": {
+      "fulltext_style_min": 2
+    },
+    "03": {
+      "source_papers": 2,
+      "examples": 4
+    },
+    "04": {
+      "abstract_target": 10,
+      "core_fulltext_target": 2,
+      "views": 2,
+      "context_searches": 2
+    },
+    "05": {
+      "candidates": 2,
+      "explanations": 2,
+      "follow_up_searches": 1,
+      "iterations": 2,
+      "independent_reviews": 1
+    },
+    "06": {
+      "primary_models": 1,
+      "robustness_models": 1,
+      "references_per_method_min": 1,
+      "repetitions": 1,
+      "sample_max": 500,
+      "maxiter": 80
+    },
+    "07": {
+      "drafts": 1,
+      "max_words": 2500,
+      "revisions": 1,
+      "independent_reviews": 1
+    },
+    "08": {
+      "review_rounds": 1,
+      "independent_reviews": 1
+    },
+    "09": {
+      "cssci_candidates": 1,
+      "pku_candidates": 1,
+      "send": false
+    }
+  },
+  "writing_policy": {
+    "deliverable": "plan",
+    "explicit_full_paper": false
+  },
+  "initial_observed_model_calls": 0,
+  "initial_observed_search_calls": 0,
+  "formal_eligible": false,
+  "source_hash_scope": "Git blob object SHA1 for selected exact source bytes; original canonical SHA256 fields from run artifacts, not mislabeled raw SHA256",
+  "review_scope": "initial identity only"
+}
