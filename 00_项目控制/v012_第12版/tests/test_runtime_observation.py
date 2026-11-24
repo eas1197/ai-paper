@@ -87,6 +87,11 @@ class RuntimeObservationTest(unittest.TestCase):
             self.assertFalse(retry_decision("network_failure", **values)["allowed"])
         self.assertFalse(retry_decision("budget_exhausted", **kwargs)["allowed"])
         self.assertFalse(retry_decision("academic_failure", **kwargs)["allowed"])
+        exhausted = retry_decision("network_failure", **{**kwargs, "remaining_budget": 0})
+        self.assertEqual(exhausted["disposition"], "terminate")
+        for invalid_budget in (float("nan"), float("inf"), True):
+            self.assertFalse(retry_decision("network_failure",
+                **{**kwargs, "remaining_budget": invalid_budget})["allowed"])
 
     def test_cli_exit_zero_can_be_waiting(self):
         result={"action":"await_independent_review","status":"blocked_by_original_v3_gate"}

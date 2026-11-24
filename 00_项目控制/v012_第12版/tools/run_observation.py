@@ -1,4 +1,5 @@
 """E17/I12: runtime observations and typed failure taxonomy; never academic approval."""
+import math
 import socket
 import subprocess
 from urllib.error import URLError
@@ -149,8 +150,12 @@ def retry_decision(outcome_kind, *, remaining_budget=None, task_snapshot_current
                 "reason": "Outcome is not eligible for retry", "automatic_retry": False}
     if task_snapshot_current is not True:
         reason = "Current task snapshot is not verified"
-    elif type(remaining_budget) not in (int, float) or remaining_budget <= 0:
-        reason = "Original remaining budget is unknown or exhausted"
+    elif type(remaining_budget) not in (int, float) or not math.isfinite(float(remaining_budget)):
+        reason = "Original remaining budget is unknown or non-finite"
+    elif remaining_budget <= 0:
+        return {"allowed": False, "disposition": "terminate",
+                "reason": "Original remaining budget is exhausted; no retry without a newly authorized budget.",
+                "automatic_retry": False}
     elif previous_attempt_preserved is not True:
         reason = "Previous attempt and receipts are not preserved"
     elif new_attempt_identity is not True:
