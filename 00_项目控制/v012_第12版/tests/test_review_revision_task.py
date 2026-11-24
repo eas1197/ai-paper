@@ -12,22 +12,24 @@ import task_packet
 from review_task import prepare_review_task
 
 
-def revision_fixture(work, result, kind, before_path, after_path, write):
-    old = next(row for row in result["task_packet"]["input_files"] if row["path"] == after_path)
+def revision_fixture(work, result, kind, before_path, after_path, write, suffix=""):
+    old_context=strict.read(work/result["context_path"])
+    report_name="fixture_prior"+suffix+".json"
+    revision_name="fixture_revision"+suffix+".json"
     before = {"path":before_path,"sha256":strict.sha(work/before_path)}
     prior = {"schema_version":4,"task_snapshot":result["task_snapshot"],"review_kind":kind,
         "decision":"revise","reason":"SYNTHETIC TEST ONLY","assessment_scope":"Fixture",
-        "issues":[{"issue_id":"I1","dimension_id":"academic_value","category":"academic_defect","blocking":True,
+        "issues":[{"issue_id":"I1","dimension_id":old_context["review_dimensions"][0]["dimension_id"],"category":"academic_defect","blocking":True,
             "detail":"Fixture scope","evidence_ids":[],"required_action":"Fixture revision"}],
         "evidence_findings":[],"reviewer":{"executor":"manual","reviewer_id":"fixture-not-real",
             "model":None,"invocation_id":"fixture-not-real"},"execution_id":"fixture-not-real",
-        "review_type":"academic_review","prior_review":None}
-    write("fixture_prior.json",prior)
-    report_ref={"path":"fixture_prior.json","sha256":strict.sha(work/"fixture_prior.json")}
+        "review_type":old_context["review_type"],"prior_review":old_context["prior_review"]}
+    write(report_name,prior)
+    report_ref={"path":report_name,"sha256":strict.sha(work/report_name)}
     after={"path":after_path,"sha256":strict.sha(work/after_path)}
     record={"prior_report":report_ref,"issues":[{"issue_id":"I1","response":"Fixture response"}],
             "changes":[{"before":before,"after":after}]}
-    write("fixture_revision.json",record)
+    write(revision_name,record)
     return record
 
 
@@ -72,8 +74,8 @@ class RevisionPreparationTests(unittest.TestCase):
         shutil.copyfile(self.work/"initial/literature_matrix.json",self.work/"archive_round2.json")
         self.write("initial/literature_matrix.json",{"rows":[],"revised":2})
         self.revision=revision_fixture(self.work,first,"preliminary_academic","archive_round2.json",
-            "initial/literature_matrix.json",self.write)
-        second=self.task()
+            "initial/literature_matrix.json",self.write,suffix="_round2")
+        second=prepare_review_task(self.run_id,prior_report="fixture_prior_round2.json",revision_record="fixture_revision_round2.json")
         self.assertNotEqual(first["task_snapshot"],second["task_snapshot"])
         context=strict.read(self.work/second["context_path"])
         self.assertEqual(context["input_binding"]["historical_task_snapshot"],first["task_snapshot"])

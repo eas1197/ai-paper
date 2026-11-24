@@ -63,7 +63,9 @@ def select_lineage(contract, work, prior_report, revision_record):
     if Path(current_context["path"]).stem != contract._digest(old_context):
         raise ValueError("Historical context content address differs")
     if (old_context["review_kind"] != prior.get("review_kind")
-            or old_context["research_question"] != snapshot["packet"]["research_question"]):
+            or old_context["research_question"] != snapshot["packet"]["research_question"]
+            or old_context.get("review_type") != prior.get("review_type", "academic_review")
+            or old_context.get("prior_review") != prior.get("prior_review")):
         raise ValueError("Prior report differs from historical review context")
     return {"prior": prior, "old": old, "old_context": old_context, "old_packet": snapshot["packet"],
             "lineage": {"report": report_ref, "revision": revision_ref},
