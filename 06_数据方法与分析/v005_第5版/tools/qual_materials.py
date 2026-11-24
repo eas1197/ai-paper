@@ -21,6 +21,7 @@ from abstract_acquisition import job_lock
 from framework import analysis_matrix, validate_framework
 sys.path.append(str(ROOT / "00_项目控制/v012_第12版/tools"))
 from review_gate_guard import require_original_review
+from material_identity import identity_candidates
 
 KINDS = {"actor_statement", "reporter_account", "official_rule", "documented_action", "researcher_inference"}
 PATHS = {"secondary_interviews", "online_qualitative"}
@@ -33,7 +34,8 @@ FIELDS = ("url", "date", "subject", "context", "kind", "path", "locator", "relat
 def schema():
     item = {"type": "object", "required": list(FIELDS), "additionalProperties": False,
             "properties": {key: {"type": "string"} for key in FIELDS}}
-    item["required"].append("source_type")
+    item["required"].extend(["source_type","event_identity_claim"])
+    item["properties"]["event_identity_claim"]={"type":"string"}
     item["properties"]["source_type"] = {"type":"string","enum":sorted(WEB_SOURCE_TYPES)}
     item["properties"]["kind"]["enum"] = sorted(KINDS - {"researcher_inference"})
     item["properties"]["path"]["enum"] = sorted(PATHS)
@@ -80,8 +82,9 @@ def read_materials(folder, budget):
     if not trace or len(trace) > budget:
         raise ValueError("Missing native search receipts or event budget exceeded")
     result = load(folder / "response.json")
-    candidates, excluded, pending_type = [], [], []
-    for row in result["materials"]:
+    candidates, excluded, pending_type, duplicate_rows = [], [], [], []
+    seen = {}
+    for index,row in enumerate(result["materials"]):
         missing = [key for key in FIELDS if not isinstance(row.get(key), str) or not row[key].strip()]
         if missing:
             excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete",
@@ -96,12 +99,21 @@ def read_materials(folder, budget):
             excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete"})
             continue
         material = dict(row, event_id=event, material_id=digest(row)[:16])
+        mid=material["material_id"]
+        if mid in seen:
+            prior, first_index=seen[mid]
+            if prior!=material:
+                raise ValueError("Original material ID collision")
+            duplicate_rows.append({"material_id":mid,"first_raw_index":first_index,"duplicate_raw_index":index})
+            continue
+        seen[mid]=(material,index)
         candidates.append(material)
         if row.get("source_type","unknown") == "unknown":
             pending_type.append(material["material_id"])
     return {"status": "pending_independent_review", "events_sha256": sha(events),
             "response_sha256": sha(folder / "response.json"), "tool_events": len(trace),
-            "materials": candidates, "excluded": excluded, "source_types_pending": pending_type, "notes": result["search_notes"], "gaps": result["gaps"]}
+            "materials": candidates, "excluded": excluded, "source_types_pending": pending_type,
+            "duplicate_raw_rows":duplicate_rows,"identity_candidates":identity_candidates(candidates), "notes": result["search_notes"], "gaps": result["gaps"]}
 
 
 def record_review(work, folder, report, *, review_intake=None):
@@ -239,6 +251,8 @@ def main():
         "source_type 单独记录来源形式：公开转载访谈是 secondary_interview，报道是 media_report，"
         "公开文件是 public_document，社交媒体是 social_media；不明填 unknown。网页搜索不产生研究者一手访谈。"
         "kind 仍表示证据内容类型，不把研究者推断当材料。"
+        "event_identity_claim 是材料所指事件的非识别性描述，不是已验证的独立事件ID；不明填 unknown。"
+        "同一事件的重复报道/转载/多版本保留出处并标注，不得当多个独立事件。"
         "仅概述公开内容，不提供个人姓名、账号或可识别未成年人的信息；不抄写原文。"
         "不把规则或研究者推测当行为。说明不符合预期、来源差异和缺失。"
         "输出最多八条材料，区分可公开阅览和研究用途许可尚待核实。记录两路径的搜索词、"

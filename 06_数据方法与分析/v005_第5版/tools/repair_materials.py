@@ -4,6 +4,7 @@ import json
 import shutil
 
 from qual_materials import cli_executable, invoke, read_materials, schema
+from material_identity import identity_candidates
 from question_binding import evidence_digest, file_hash
 from run_mode import load, write
 
@@ -73,7 +74,7 @@ def repair(work, parent, framework, items, budget, review_key):
         f"Use at most {budget['native_search_actions']} native web actions. Verify ONLY the independent review gaps. "
         "Open primary sources, locate the passage, distinguish source claims from inference, and preserve unknowns. "
         "Record source_type separately from kind: secondary_interview, media_report, public_document, social_media, or unknown; web search never creates firsthand interviews. "
-        "One discrete event per entry. Do not present reprints as independent events. "
+        "One discrete event per entry; record non-identifying event_identity_claim or unknown. Do not present reprints as independent events. "
         "Mark appropriate existing material IDs in supersedes to retire a wrong record; use an empty list for a new event. "
         "For each entry identify the original issue_index. Prefer sources already named by the review. "
         "Do not add materials for unverified facts; report them in gaps. Do not copy personal identifiers. "
@@ -98,5 +99,7 @@ def repair(work, parent, framework, items, budget, review_key):
                  retired_material_ids=sorted(retired), added_material_ids=[r["material_id"] for r in fresh["materials"]],
                  covered_issue_indices=sorted({r["issue_index"] for r in fresh["materials"]}),
                  review_key=review_key, materials=list(merged.values()))
+    fresh["identity_candidates"]=identity_candidates(fresh["materials"])
+    fresh["source_types_pending"]=[row["material_id"] for row in fresh["materials"] if row.get("source_type","unknown")=="unknown"]
     write(path / "material_receipt.json", fresh)
     return path
