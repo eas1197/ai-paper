@@ -49,6 +49,26 @@ def validate_conversion(packet):
         raise ValueError("State the method-specific qualitative question")
 
 
+def verify_frozen_conversion(work, packet, *, framework=None):
+    """Before post-S08 acquisition, require the original reviewed conversion."""
+    state = load(work / "staged_topic.json")
+    if state["status"] != "frozen":
+        return None  # original preliminary feasibility search
+    from staged_topic import verified_frozen_topic
+    frozen = verified_frozen_topic(work, state)
+    path = frozen["research_method"]["path"]
+    if path not in PATHS or packet["new_question"] != frozen["question"]:
+        raise ValueError("Changing the frozen question or method requires original review and freeze")
+    reviewed = state["history"][-1]["method_assessment"]["paths"][path]
+    verify_material_review(work, path, reviewed, frozen["question"])
+    original = load(work / "qualitative" / reviewed["search_attempt"] / "conversion.json")
+    if original != packet:
+        raise ValueError("Changing the reviewed conversion requires original review and freeze")
+    if framework is not None and framework["core_question"] != packet["core_question"]:
+        raise ValueError("Framework must retain the reviewed core question")
+    return frozen
+
+
 def read_materials(folder, budget):
     events = folder / "events.jsonl"
     trace = evidence(events)
@@ -125,6 +145,10 @@ def main():
     folder = area / args.attempt
     if args.matrix:
         framework = load(folder / "framework.json")
+        frozen = verify_frozen_conversion(args.dev_run, load(folder / "conversion.json"), framework=framework)
+        if frozen is not None:
+            from question_binding import binding
+            binding(args.dev_run, folder)
         receipt = load(folder / "material_receipt.json")
         if (sha(folder / "events.jsonl") != receipt["events_sha256"]
                 or sha(folder / "response.json") != receipt["response_sha256"]):
@@ -139,6 +163,9 @@ def main():
                     or not isinstance(revision.get("reason"), str) or not revision["reason"].strip()
                     or revised.get("core_question") != framework["core_question"]):
                 raise ValueError("Bind the revision to the source framework and explain the material-led change")
+            if frozen is not None:
+                from question_binding import require_same_theoretical_design
+                require_same_theoretical_design(framework, revised)
             suffix = f"_{digest(revised)[:12]}"
             result = analysis_matrix(revised, dict(receipt, framework_sha256=digest(revised)), load(args.matrix))
             result.update(prior_framework_sha256=digest(framework), revision_reason=revision["reason"],
@@ -160,6 +187,7 @@ def main():
     packet = load(args.conversion)
     validate_conversion(packet)
     framework = load(args.framework) if args.framework else None
+    verify_frozen_conversion(args.dev_run, packet, framework=framework)
     if framework:
         validate_framework(framework)
         first = args.dev_run / "qualitative" / args.preliminary_attempt

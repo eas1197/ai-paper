@@ -39,6 +39,16 @@ def artifact_lineage(work, directory):
         directory = directory.parent / receipt["parent_attempt"]
 
 
+def require_same_theoretical_design(original, revised):
+    """Evidence requirements may change; theoretical design needs original review."""
+    def theory(value):
+        return {**{key:val for key,val in value.items() if key!="dimensions"},
+            "dimensions":[{key:val for key,val in row.items() if key!="needed_material"}
+                          for row in value["dimensions"]]}
+    if theory(original)!=theory(revised):
+        raise ValueError("Changing the frozen theoretical design requires original review and freeze")
+
+
 def binding(work, directory):
     work, directory = Path(work).resolve(), Path(directory).resolve()
     if directory.parent != work / "qualitative_framework":
@@ -59,6 +69,9 @@ def binding(work, directory):
             raise ValueError("Parent material receipt changed")
         binding(work, parent)
         earlier = load(parent / "material_receipt.json")
+        if load(parent / "conversion.json") != conversion:
+            raise ValueError("Changing the reviewed conversion requires original review and freeze")
+        require_same_theoretical_design(load(parent / "framework.json"), framework)
         prior_rows = {row["material_id"]: row for row in earlier["materials"]}
         active = {row["material_id"]: row for row in receipt["materials"]}
         added, retired = set(receipt["added_material_ids"]), set(receipt["retired_material_ids"])
