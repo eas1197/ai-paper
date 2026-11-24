@@ -182,6 +182,10 @@ class WritingPlanTest(unittest.TestCase):
                 self.assertEqual(saved["specific_question"], contract["specific_question"])
                 self.assertEqual(saved["framework"]["dimensions"][0]["id"], "d0")
                 self.assertEqual(request["material_admission"]["eligible_material_ids"], ["E"])
+                self.assertEqual(request["material_admission"]["chapter_empirical_source_ids"], {
+                    "problem": ["E"], "framework": ["E"], "case": ["E"],
+                    "d0": ["E"], "conclusion": ["E"],
+                })
                 self.assertEqual(request["input_sha256"], run_mode.digest(saved))
                 self.assertFalse(request["formal_eligible"])
 
@@ -203,6 +207,13 @@ class WritingPlanTest(unittest.TestCase):
             writing_plan.reviewed_dimension_sources(data, matrix, approved)
 
     def test_reviewed_dimension_sources_reject_changed_order_and_empty_scope(self):
+        reordered = packet(2)
+        reversed_matrix = {"rows": [
+            {"dimension_id": "d1", "evidence": [{"material_id": "E2"}]},
+            {"dimension_id": "d0", "evidence": [{"material_id": "E"}]},
+        ]}
+        with self.assertRaisesRegex(ValueError, "dimensions differ"):
+            writing_plan.reviewed_dimension_sources(reordered, reversed_matrix, {"E": {}, "E2": {}})
         data = packet(1)
         matrix = {"rows": [{"dimension_id": "d0", "evidence": [{"material_id": "E"}]}]}
         with self.assertRaisesRegex(ValueError, "dimensions differ"):
