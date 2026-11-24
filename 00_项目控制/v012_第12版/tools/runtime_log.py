@@ -38,6 +38,14 @@ def _ref(work, path):
         return None
 
 
+def _argument_ref(work, path, *, output=False):
+    # argparse Path values and CLI output paths are relative to the process CWD.
+    # String input references in receivers are relative to the selected run.
+    if path is None:
+        return None
+    return _ref(work, Path(path).absolute() if isinstance(path, Path) or output else path)
+
+
 def _snapshot(work, run_id, result):
     import task_packet
     view = result.get("result", result) if isinstance(result, dict) else {}
@@ -80,9 +88,9 @@ def record_command(args, result, runtime, *, success):
                 for key, names in CONTEXT_FILES.items()}
     # Record only supplied run-local input paths or frozen inputs, not external path strings.
     inputs = {name: item for name in INPUT_ARGS
-              if (item := _ref(work, getattr(args, name, None))) is not None}
+              if (item := _argument_ref(work, getattr(args, name, None))) is not None}
     outputs = {name: item for name in ("output", "task_output")
-               if success and (item := _ref(work, getattr(args, name, None))) is not None}
+               if success and (item := _argument_ref(work, getattr(args, name, None), output=True)) is not None}
     if packet is not None:
         inputs["frozen_inputs"] = packet["input_files"]
     exception = runtime.get("outcome_kind")

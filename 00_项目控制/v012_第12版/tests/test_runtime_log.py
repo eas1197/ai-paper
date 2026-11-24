@@ -63,6 +63,14 @@ class RuntimeLogTests(unittest.TestCase):
         self.assertFalse(row["command_success"])
         self.assertEqual(row["inputs"],{})
 
+    def test_i18_cwd_relative_path_is_not_misattributed_to_run(self):
+        name="fixture_relative_report.json"
+        strict.write(self.work/name,{"different":"run-owned file"})
+        args=argparse.Namespace(cmd="review",run_id="fixture",report=Path(name))
+        ref=record_command(args,{},observation("blocked"),success=False)["record_ref"]
+        row=strict.read(self.work/ref["path"])
+        self.assertNotIn("report",row["inputs"])
+
     def test_i18_read_only_and_wrong_run_never_create_records(self):
         for args,expected in ((argparse.Namespace(cmd="status",run_id="fixture"),"read_only"),
                               (argparse.Namespace(cmd="advance",run_id="other"),"unbound_invalid_run"),
