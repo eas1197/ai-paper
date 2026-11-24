@@ -19,6 +19,9 @@ V14_TOOLS = ROOT / "07_三稿独立写作/v014_第14版/tools"
 STYLE_PROFILE = ROOT / "03_学术语言学习/v005_第5版/outputs/style_profile.json"
 STYLE_SNAPSHOT = ROOT / "03_学术语言学习/v005_第5版/outputs/resource_snapshot.json"
 LANGUAGE_V3 = ROOT / "03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_handbook.md"
+LANGUAGE_V3_SNAPSHOT = ROOT / "03_学术语言学习/v003_第3版/outputs/resource_snapshot.json"
+LANGUAGE_V4_PROFILE = ROOT / "03_学术语言学习/v004_第4版/outputs/style_profile.json"
+LANGUAGE_V4_SNAPSHOT = ROOT / "03_学术语言学习/v004_第4版/outputs/resource_snapshot.json"
 WRITING_RULES = ROOT / "07_三稿独立写作/v014_第14版/templates/文字要求.md"
 STYLE_MAP = MODULE / "assets/qualitative_style.json"
 QUALITATIVE = {"secondary_interviews", "online_qualitative"}
@@ -48,11 +51,71 @@ def relative(path):
         return path.name
 
 
+def verify_resource_snapshot(snapshot, label, module_version, resource_version, profile=None):
+    if (snapshot.get("module_id") != "03"
+            or snapshot.get("module_version") != module_version
+            or snapshot.get("resource_version") != resource_version):
+        raise ValueError("Language resource version mismatch: " + label)
+    status = snapshot.get("status")
+    if status not in {"needs_review", "passed"}:
+        raise ValueError("Unknown language resource status: " + label)
+    available = snapshot.get("resource_available_for_formal_writing")
+    if ((status == "needs_review" and available is not False)
+            or (status == "passed" and available is not True)):
+        raise ValueError("Language resource availability contradicts its status: " + label)
+    gate_path = snapshot.get("business_gate_report")
+    if not gate_path or not (ROOT / gate_path).is_file():
+        raise ValueError("Missing language business gate report: " + label)
+    gate = load(ROOT / gate_path)
+    if gate.get("status") != status or gate.get("passed") is not (status == "passed"):
+        raise ValueError("Language snapshot and business gate disagree: " + label)
+    if profile is not None and (
+            profile.get("resource_version") != resource_version
+            or profile.get("formal_resource_gate_status") != status):
+        raise ValueError("Language profile and resource snapshot disagree: " + label)
+    files = snapshot.get("files")
+    if not isinstance(files, list) or not files:
+        raise ValueError("Language resource snapshot has no file inventory: " + label)
+    seen = set()
+    for item in files:
+        if not isinstance(item, dict) or not item.get("path") or not item.get("sha256"):
+            raise ValueError("Malformed language resource inventory: " + label)
+        path = item["path"]
+        if path in seen:
+            raise ValueError("Duplicate language resource inventory path: " + label)
+        seen.add(path)
+        source = ROOT / path
+        if not source.is_file() or hash_file(source) != item["sha256"]:
+            raise ValueError("Language snapshot resource changed: " + label + ":" + path)
+    return gate
+
+
 def language_resources():
     """Read originals, verify published content hashes and preserve unpublished-G3 status."""
     profile = load(STYLE_PROFILE)
     snapshot = load(STYLE_SNAPSHOT)
     rolemap = load(STYLE_MAP)
+    v003_snapshot = load(LANGUAGE_V3_SNAPSHOT)
+    v004_profile = load(LANGUAGE_V4_PROFILE)
+    v004_snapshot = load(LANGUAGE_V4_SNAPSHOT)
+    verify_resource_snapshot(v003_snapshot, "v003", 3, 1)
+    verify_resource_snapshot(v004_snapshot, "v004", 4, 2, v004_profile)
+    verify_resource_snapshot(snapshot, "v005", 5, 3, profile)
+    if (profile.get("profile_version") != "3.0"
+            or v004_profile.get("profile_version") != "2.0"
+            or set(profile.get("style_ids", [])) != set(v004_profile.get("style_ids", []))):
+        raise ValueError("Published v003/v004/v005 language profile versions disagree")
+    snapshot_index = {item["path"]: item["sha256"] for item in snapshot["files"]}
+    profile_refs = [profile["guide"], profile["examples"], profile["application"],
+                    profile["paragraph_style"]["mapping"], profile["paragraph_style"]["rules"]]
+    if any(snapshot_index.get(item["path"]) != item["sha256"] for item in profile_refs):
+        raise ValueError("v005 snapshot does not bind every published language profile resource")
+    v003_index = {item["path"]: item["sha256"] for item in v003_snapshot["files"]}
+    if v003_index.get(relative(LANGUAGE_V3)) != hash_file(LANGUAGE_V3):
+        raise ValueError("v003 argument handbook is not bound by its resource snapshot")
+    v004_index = {item["path"]: item["sha256"] for item in v004_snapshot["files"]}
+    if v004_index.get(relative(LANGUAGE_V4_PROFILE)) != hash_file(LANGUAGE_V4_PROFILE):
+        raise ValueError("v004 style profile is not bound by its resource snapshot")
     locks = {}
     for label, item in {
         "guide": profile["guide"], "examples": profile["examples"],
@@ -65,6 +128,9 @@ def language_resources():
         locks[label] = {"path": item["path"], "sha256": item["sha256"]}
     for label, path in [("profile", STYLE_PROFILE), ("snapshot", STYLE_SNAPSHOT),
                         ("v003_argument_handbook", LANGUAGE_V3),
+                        ("v003_resource_snapshot", LANGUAGE_V3_SNAPSHOT),
+                        ("v004_style_profile", LANGUAGE_V4_PROFILE),
+                        ("v004_resource_snapshot", LANGUAGE_V4_SNAPSHOT),
                         ("v014_writing_rules", WRITING_RULES), ("v016_qual_style_map", STYLE_MAP)]:
         if not path.is_file():
             raise ValueError("Missing language source: " + str(path))
@@ -163,7 +229,11 @@ def prepare(packet_path, workspace, mode="exploratory"):
         "sources": packet["sources"], "chapter_ids": [c["id"] for c in packet["chapters"]],
         "task_ids": tasks, "plan_sha256": hash_file(workspace / "writing_plan_v15.md"),
         "resource_sha256": locks, "language_profile_version": profile["profile_version"],
+        "language_resource_version": profile["resource_version"],
+        "language_snapshot_id": snapshot["resource_snapshot_id"],
         "language_formal_resource_status": snapshot["status"],
+        "v003_resource_version": v003_snapshot["resource_version"],
+        "v004_resource_version": v004_snapshot["resource_version"],
         "formal_eligible": False, "independent_review_verified": False,
         "stage": "awaiting_draft", "full_paper_status": "exploratory_only",
         "quantitative_writer": "unchanged main/v014/tools/stage07.py",

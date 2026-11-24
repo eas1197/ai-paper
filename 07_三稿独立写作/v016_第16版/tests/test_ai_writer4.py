@@ -75,11 +75,44 @@ class Writer4Test(unittest.TestCase):
         manifest = writer.load(self.work / "writer_manifest.json")
         self.assertEqual(manifest["language_formal_resource_status"], "needs_review")
         self.assertFalse(manifest["formal_eligible"])
-        self.assertEqual(len(manifest["resource_sha256"]), 10)
+        self.assertEqual(len(manifest["resource_sha256"]), 13)
+        self.assertEqual(manifest["language_resource_version"], 3)
+        self.assertEqual(manifest["language_snapshot_id"], "language_style_r3_paragraph_units_candidate")
+        self.assertEqual(manifest["v003_resource_version"], 1)
+        self.assertEqual(manifest["v004_resource_version"], 2)
         self.assertIn("how_to_write", (writer.load(self.work / "tasks/d1_01.json"))["style_rules"][0])
         self.assertIn("分析框架", (self.work / "writing_plan_v15.md").read_text(encoding="utf-8"))
         with self.assertRaisesRegex(ValueError, "exists"):
             writer.prepare(self.packet_path, self.work)
+
+    def test_language_snapshots_bind_versions_status_and_all_files(self):
+        profile, snapshot, rolemap, rules, locks, argument_titles = writer.language_resources()
+        self.assertEqual(profile["profile_version"], "3.0")
+        self.assertEqual(profile["resource_version"], 3)
+        self.assertEqual(profile["formal_resource_gate_status"], "needs_review")
+        self.assertEqual(snapshot["status"], "needs_review")
+        self.assertFalse(snapshot["resource_available_for_formal_writing"])
+        self.assertIn("v003_resource_snapshot", locks)
+        self.assertIn("v004_style_profile", locks)
+        self.assertIn("v004_resource_snapshot", locks)
+
+    def test_unreferenced_snapshot_file_hash_change_is_rejected(self):
+        original_hash = writer.hash_file
+        target = writer.ROOT / "03_学术语言学习/v004_第4版/outputs/language_audit.csv"
+        def altered_hash(path):
+            if Path(path).resolve() == target.resolve():
+                return "0" * 64
+            return original_hash(path)
+        with patch.object(writer, "hash_file", side_effect=altered_hash):
+            with self.assertRaisesRegex(ValueError, "snapshot resource changed"):
+                writer.language_resources()
+
+    def test_needs_review_resource_blocks_formal_mode_even_with_upstream_flags(self):
+        self.data["gate_status"] = {key: True for key in writer.STATUSES}
+        self.packet_path.write_text(json.dumps(self.data, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Formal G3 language resource has not passed business review"):
+            writer.prepare(self.packet_path, self.work, mode="formal")
+        self.assertFalse(self.work.exists())
 
     def test_routes_quantitative_to_existing_v014_without_change(self):
         self.data["method"] = "quantitative"
