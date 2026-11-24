@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ai-paper 5.0 common task packet — C01 structural contract",
+  "description": "Transport contract only. Existing v009/v012 source policies, budgets, output schemas and gates remain authoritative. Does not authenticate execution or permit search. C02–C05 handle version/defaults, run binding, freeze and executor integration.",
+  "type": "object",
+  "properties": {
+    "research_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "search_levels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "description": "Original authorized search layers; empty for non-search tasks. Do not infer authorization."
+    },
+    "input_files": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file"
+      },
+      "description": "Input paths and SHA-256 values; runtime binding and freeze checks are subsequent tasks."
+    },
+    "source_scope": {
+      "type": "object",
+      "properties": {
+        "journals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "source_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "policy_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        }
+      },
+      "description": "Authorized sources from original policy; not an expanded permission grant."
+    },
+    "quantity_budget": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "description": "Named original workload limits, e.g. target, max_batches, native_search_actions; zero is valid."
+    },
+    "time_budget_seconds": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "output_schema": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "file"
+            },
+            "file": {
+              "$ref": "#/$defs/file"
+            }
+          },
+          "required": [
+            "kind",
+            "file"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "inline"
+            },
+            "schema": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "kind",
+            "schema"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Original output contract, as a locked file reference or inline schema."
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "research_id",
+    "stage_id",
+    "task_id",
+    "purpose",
+    "research_question",
+    "search_levels",
+    "input_files",
+    "source_scope",
+    "quantity_budget",
+    "time_budget_seconds",
+    "output_schema",
+    "stop_conditions"
+  ],
+  "$defs": {
+    "file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
