@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 from staged_topic import (ROOT, archive, digest, freeze, issue_plan, literature_next, load_reality,
@@ -9,6 +10,15 @@ from staged_topic import (ROOT, archive, digest, freeze, issue_plan, literature_
 
 
 class StagedTopicTest(unittest.TestCase):
+    def test_untrusted_legacy_review_never_advances(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            state = {"status": "preliminary_review", "history": []}
+            report = {"model": "gpt-6.2-sol", "invocation_id": "self-asserted",
+                      "outcome": "pass", "formal_eligible": True}
+            with self.assertRaisesRegex(ValueError, "unable_to_review"):
+                review(Path(folder), state, report)
+            self.assertEqual(state, {"status": "preliminary_review", "history": []})
+
     def test_literature_continues_only_for_deficit_with_budget(self):
         checkpoint = {"config": {"max_batches": 2, "search_action_budget": 24},
                       "batches": [{"batch": "batch_001", "search_events": 6}]}
@@ -72,7 +82,8 @@ class StagedTopicTest(unittest.TestCase):
         self.assertEqual(route([*history, {"outcome": "depth"}], "increment"), "eliminated")
         self.assertEqual(route(history, "technical"), "retry_technical")
 
-    def test_reality_first_review_keeps_question_and_expectations_bound(self):
+    @patch("staged_topic.require_original_review")
+    def test_reality_first_review_keeps_question_and_expectations_bound(self, _isolated_gate):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             work = Path(folder)
             state = {"status": "reality", "reality_first": True, "history": []}
@@ -104,7 +115,8 @@ class StagedTopicTest(unittest.TestCase):
             self.assertEqual(archive(case, path), archive(case, path))
             self.assertEqual(path.read_text(encoding="utf-8").count("<!-- topic:"), 1)
 
-    def test_search_waits_for_both_reviews_and_s08_requires_final_evidence(self):
+    @patch("staged_topic.require_original_review")
+    def test_search_waits_for_both_reviews_and_s08_requires_final_evidence(self, _isolated_gate):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             work = Path(folder)
             state = {"status": "initial", "history": [], "mode": "dev"}

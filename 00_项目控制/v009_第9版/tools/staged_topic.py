@@ -23,6 +23,8 @@ from collect_common import digest, load, normalize, write
 from native_receiving import receive
 from method_paths import PATHS, select_method, verify_material_review
 from event_protocol import OBSERVATION, validate_exchange
+sys.path.append(str(CONTROL / "v012_第12版/tools"))
+from review_gate_guard import require_original_review
 
 POLICY = load(VERSION / "search_policy.json")
 SCHEMA = ROOT / REGISTRY["modules"]["04"] / "templates/native_response.schema.json"
@@ -311,7 +313,8 @@ def advance(work, state):
     return decision
 
 
-def review(work, state, report):
+def review(work, state, report, *, review_intake=None):
+    require_original_review(work, intake=review_intake)
     if state["status"] not in {"preliminary_review", "design_review", "final_review", "materials_pending", *ACADEMIC.values()}:
         raise ValueError("No academic review is due")
     final = state["status"] == "final_review" or state.get("review_phase") == "final"

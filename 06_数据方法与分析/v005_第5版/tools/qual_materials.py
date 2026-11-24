@@ -19,6 +19,8 @@ from codex_literature import cli_executable, evidence, invoke, url_event
 from collect_common import digest, load, sha, write
 from abstract_acquisition import job_lock
 from framework import analysis_matrix, validate_framework
+sys.path.append(str(ROOT / "00_项目控制/v012_第12版/tools"))
+from review_gate_guard import require_original_review
 
 KINDS = {"actor_statement", "reporter_account", "official_rule", "documented_action", "researcher_inference"}
 PATHS = {"secondary_interviews", "online_qualitative"}
@@ -67,7 +69,8 @@ def read_materials(folder, budget):
             "materials": candidates, "excluded": excluded, "notes": result["search_notes"], "gaps": result["gaps"]}
 
 
-def record_review(work, folder, report):
+def record_review(work, folder, report, *, review_intake=None):
+    require_original_review(work, intake=review_intake)
     packet = load(folder / "conversion.json")
     if (report.get("model") != "gpt-6.2-sol" or not report.get("invocation_id")
             or not report.get("reason") or report.get("conversion_sha256") != digest(packet)
