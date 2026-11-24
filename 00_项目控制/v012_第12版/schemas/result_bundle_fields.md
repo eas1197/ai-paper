@@ -56,3 +56,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C21 原 v009 权威文献接收
 
 `literature-receive` 只将统一候选映射到现有 v009 原阶段的已完成真实批次；不生成 collection/checkpoint 或以统一包替代原始材料。先核当前快照和 C19/C20 原始凭证，再核原 policy、期刊、数量、阶段、workload、实际批次哈希、原预算状态；调用原 staged_topic.receipt -> 04/v012 native_receiving.receive 重建原摘要矩阵。仅当候选字段及原 event ID 与原矩阵中该批次 observation 一致才记录原摘要级身份。Chat/manual、无原批次、身份不匹配、预算超限均不提升。原计数来自原矩阵，不由统一包自报；不触发搜索、推进阶段、正式门禁或独立审查。正式资格仍由原 3.x 流程负责，dev 结果始终 formal_eligible=false。兼容原 v009 使用仓库内原 schema 的实际 CLI 参数（独立保存的 schema 副本须哈希一致）。
+
+## C22 Chat 摘要缺失待核
+
+文学候选须存在独立对应的实际摘要 URL 打开记录、摘要定位、8–90 字符原文短摘、80–160 字符转述、摘要已读声明，且定位与短摘实际出现在独立提取的该打开记录行范围内。仅搜索命中、打开题录页、缺定位/短摘/转述、摘要未读或自报独立凭证均保持 pending_candidate，并逐来源保留 gaps。即使可见文本匹配也只是待进一步来源复核，host_authenticated/native_cli_receipt/formal_eligible 不变；不得推导正式学术资格。遵守原 v3 结构边界，不执行真实搜索。

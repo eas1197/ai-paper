@@ -109,14 +109,40 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                 found.append(key)
             elif action["original_url"] in urls:
                 opened.append(key)
+        abstract_matches = []
+        gaps = []
+        if not opened:
+            gaps.append("missing_independent_open_record")
+        if row["source_type"] == "literature":
+            locator, excerpt, summary = (row["abstract_locator"], row["excerpt"], row["paraphrase"])
+            if not row["abstract_url"] or not locator or not locator.strip():
+                gaps.append("missing_abstract_location")
+            if not excerpt or not 8 <= len(excerpt.strip()) <= 90:
+                gaps.append("missing_or_invalid_abstract_excerpt")
+            if not summary or not 80 <= len(summary.strip()) <= 160:
+                gaps.append("missing_or_invalid_abstract_summary")
+            if row["literature_stages"]["abstract_read_status"] != "read":
+                gaps.append("abstract_read_not_claimed")
+            if not gaps:
+                for key in opened:
+                    item = matched[key]
+                    if actions[key]["original_url"] != row["abstract_url"]:
+                        continue
+                    lines = raw[item["record_ref"]["path"]][1]
+                    span = " ".join("\n".join(lines[item["line_start"]-1:item["line_end"]]).split())
+                    if " ".join(locator.split()) in span and " ".join(excerpt.split()) in span:
+                        abstract_matches.append(key)
+                if not abstract_matches:
+                    gaps.append("abstract_locator_or_excerpt_not_visible_in_open_record")
         receipts.append({"source_id": source_id, "discovery_action_ids": found,
-                         "opened_action_ids": opened,
-                         "status": "record_matched_pending_source_review" if opened
-                         else "pending_original_open_record"})
-    missing = not matched or any(not row["opened_action_ids"] for row in receipts)
+                         "opened_action_ids": opened, "abstract_matched_action_ids": abstract_matches,
+                         "gaps": gaps,
+                         "status": "record_matched_pending_source_review" if not gaps
+                         else "pending_original_source_or_abstract_record"})
+    missing = not matched or any(row["gaps"] for row in receipts)
     if report["acceptance_status"] != "rejected" and missing:
         report["acceptance_status"] = "pending_candidate"
-        report["acceptance_reason"] = "No independently matched Chat page-open records for all candidates"
+        report["acceptance_reason"] = "Missing independently matched Chat source-open or abstract records"
     report.update(chat_record_status="pending_original_chat_records" if missing
                   else "matched_visible_records_pending_authentication",
                   matched_action_ids=sorted(matched), chat_source_receipts=receipts,

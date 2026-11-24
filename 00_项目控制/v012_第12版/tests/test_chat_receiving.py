@@ -71,6 +71,53 @@ class ChatReceivingTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Only chat_native_web"):
             self.receive(native)
 
+    def test_c22_missing_locator_or_excerpt_stays_pending(self):
+        bundle, observed = self.sample()
+        for key in ("abstract_locator", "excerpt"):
+            original = bundle["sources"][0][key]
+            bundle["sources"][0][key] = None
+            self.save(bundle)
+            report = self.receive(bundle, observed)
+            self.assertEqual(report["acceptance_status"], "pending_candidate")
+            self.assertFalse(report["chat_source_receipts"][0]["abstract_matched_action_ids"])
+            self.assertFalse(report["formal_eligible"])
+            bundle["sources"][0][key] = original
+
+    def test_c22_search_hit_is_not_open_or_abstract_read(self):
+        bundle, observed = self.sample()
+        action = bundle["search_actions"][0]
+        action.update(action_type="search", query="fixture query", original_url=None)
+        ref = self.raw("fixture/chat_visible.txt", b"fixture query\nhttps://example.org/abstract\n")
+        bundle["provenance"]["record_refs"] = [ref]
+        observed[0].update(action_type="search", query="fixture query", record_ref=ref,
+                           line_start=1, line_end=2)
+        self.save(bundle)
+        report = self.receive(bundle, observed)
+        receipt = report["chat_source_receipts"][0]
+        self.assertEqual(receipt["discovery_action_ids"], ["open-1"])
+        self.assertFalse(receipt["opened_action_ids"])
+        self.assertEqual(report["acceptance_status"], "pending_candidate")
+
+    def test_c22_abstract_must_be_visible_at_independently_observed_open_location(self):
+        bundle, observed = self.sample()
+        row = bundle["sources"][0]
+        row["literature_stages"]["abstract_read_status"] = "read"
+        row["paraphrase"] = "Fixture summary " * 7
+        self.save(bundle)
+        report = self.receive(bundle, observed)
+        self.assertIn("abstract_locator_or_excerpt_not_visible_in_open_record",
+                      report["chat_source_receipts"][0]["gaps"])
+        ref = self.raw("fixture/chat_visible.txt",
+            ("https://example.org/abstract\n"+row["abstract_locator"]+"\n"+row["excerpt"]+"\n").encode())
+        bundle["provenance"]["record_refs"] = [ref]
+        observed[0].update(record_ref=ref, line_start=1, line_end=3)
+        self.save(bundle)
+        report = self.receive(bundle, observed)
+        self.assertEqual(report["chat_source_receipts"][0]["abstract_matched_action_ids"], ["open-1"])
+        self.assertFalse(report["host_authenticated"])
+        self.assertFalse(report["formal_eligible"])
+        self.assertEqual(self.receive(bundle, observed, independent=False)["acceptance_status"], "pending_candidate")
+
 
 if __name__ == "__main__":
     unittest.main()
