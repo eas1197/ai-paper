@@ -34,8 +34,8 @@ def _file_refs(provenance):
     if kind == "manual":
         return [("manual_original", ref) for ref in provenance["original_files"]]
     return [(key, provenance[key]) for key in
-            ("events", "response", "stderr", "prompt", "schema", "login")
-            if provenance[key] is not None]
+            ("events", "response", "stderr", "prompt", "schema", "login", "command_record")
+            if provenance.get(key) is not None]
 
 
 def _missing(provenance):

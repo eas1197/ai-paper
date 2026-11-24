@@ -48,3 +48,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C19 Chat 原始网页记录接收
 
 `ai_paper5_strict.py chat-receive --run-id <id> --task <独立选择的chat-task文件> --result <run相对结果路径> --output <审计文件>` 可选 `--execution-binding`（接收方独立选定的 C15 绑定）与 `--observed-actions`（接收方从真实可见工具记录独立提取的动作清单）。原始记录为实际保存的 UTF-8 可见文本/合法导出，必须有文件引用和哈希，不制造所谓 Chat 原始 API 格式。动作提取仅为接收方审计索引，字段为 action_id/action_type/record_ref/line_start/line_end/query/urls；匹配原记录所在行、URL、搜索词或目标页、来源及动作 ID。缺原始独立记录保持 pending；不得让执行模型自行生成独立绑定或提取索引。可核对的字节和可见记录不等于宿主认证，所有输出 host_authenticated/native_cli_receipt/formal_eligible 均 false。拒绝 Codex events.jsonl、原生事件流及其他执行器，不生成 CLI 记录。原 chat-audit 结构审查独立保留；C22 再专门验摘要定位与缺凭证边界。
+
+## C20 Codex 原始凭证接收
+
+`codex-receive` 使用独立选定的 codex-task、run 相对 result 与可选独立 execution-binding。沿用 C15 文件/快照绑定；核真实 thread.started、原 11/v007 evidence/proof/web_url、原日志与响应、登录诊断原文和退出码、来源 URL 与动作/事件 ID 对应。原调用未持久化完整实际 argv 时，command_record 必须缺失，不根据模板事后补造。可选 command_record 指向真实外部执行记录，内容绑定 task_snapshot、argv、exit_code、thread_id 及六类原文件引用；核对实际只读原生命令、工作目录、输出路径。只有独立选取且完整匹配才标记 native_cli_receipt；即使如此仍 formal_eligible=false，原学术资格另由 C21。无记录、无登录、来源不匹配或缺少事件保持待核；不执行真实 CLI，不改变原 collector。合成 fixture 仅用于离线测试。
