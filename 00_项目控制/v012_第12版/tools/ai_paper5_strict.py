@@ -447,6 +447,9 @@ def main(argv=None):
     p.add_argument("--task",type=Path,required=True);p.add_argument("--result",required=True)
     p.add_argument("--execution-binding",type=Path);p.add_argument("--observed-actions",type=Path)
     p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("merge-results");p.add_argument("--run-id",required=True)
+    p.add_argument("--task",type=Path,required=True);p.add_argument("--selection",type=Path,required=True)
+    p.add_argument("--aliases",type=Path);p.add_argument("--output",required=True)
     args=parser.parse_args(argv)
     try:
         if args.cmd=="doctor": result=doctor()
@@ -473,6 +476,13 @@ def main(argv=None):
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd=="merge-results":
+            from result_merge import merge_result_bundles, write_merge_index
+            task=read(args.task)
+            result=merge_result_bundles(read(args.selection),current_run_id=args.run_id,
+                expected_reference=task["task_snapshot"],
+                reviewed_report_aliases=read(args.aliases) if args.aliases else None)
+            write_merge_index(result,current_run_id=args.run_id,output=args.output)
         elif args.cmd=="literature-receive":
             from original_literature_gate import audit_unified_literature
             task=read(args.task)

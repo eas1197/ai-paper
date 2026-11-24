@@ -64,3 +64,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C23 Codex 负向验收
 
 缺原 events 引用、实际文件缺失、只有 thread.started 无 web_search、来源 action ID 不匹配、失败/未执行/未知运行、自报 native_cli_receipt 均拒绝或保持 pending，不进入原 v009 receiver；不得写原矩阵或授予正式资格。即便退出码 0，只要本次结果明确 failed 也不能获得 native_cli_receipt。测试在合成 fixture 中验证，不是真实搜索。
+
+## C24 多执行器候选合并
+
+`merge-results --run-id <id> --task <独立任务文件> --selection <接收方选择列表> --output <run相对新索引路径>`。每个 selection 含 result_path、可选独立 expected_execution/observed_actions；分别调用各执行器接收器及 C15，核当前统一快照和真实原文件；按 C16 来源分组但保留每个原始结果路径、原始字节 SHA、原 provenance、动作及逐来源成员的执行器/原 source ID/索引/结果 SHA。不同执行器不得复用同原记录路径为不同身份；拒绝重复提交、跨任务、篡改或覆盖，输出只创建新索引。冲突及 rejected 记录保留，不计候选组。候选组数不是原 v009 文献计数、独立证据数量或正式资格，formal_eligible=false。可选 reviewed_report_aliases 必须独立确认，不能由执行器自行提供。
