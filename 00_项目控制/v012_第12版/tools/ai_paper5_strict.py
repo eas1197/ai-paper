@@ -57,6 +57,29 @@ def write(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def cli_output_path(raw, *, run_id=None):
+    """Candidate output must not overwrite source files or create native gate artifacts."""
+    path=Path(raw)
+    if path.is_symlink():
+        raise ValueError("CLI output cannot be a symbolic link")
+    path=path.resolve()
+    if path.exists():
+        raise ValueError("CLI output exists; choose a new output file")
+    base=RUNS.resolve()
+    if path.is_relative_to(base):
+        rel=path.relative_to(base)
+        if len(rel.parts)<3 or rel.parts[1]!="cli_outputs" or (run_id is not None and rel.parts[0]!=run_id):
+            raise ValueError("Run-local candidate outputs must use the selected run's cli_outputs directory")
+    return path
+
+
+def write_cli_output(path, value):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    with path.open("x",encoding="utf-8") as stream:
+        json.dump(value,stream,ensure_ascii=False,indent=2)
+        stream.write("\n")
+
+
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -209,10 +232,13 @@ def original_writer4_command(action, *, packet, workspace=None, mode="explorator
     return cmd
 
 
-def original_event_command(run_id, report):
+def original_event_command(run_id, report, *, events_jsonl=None):
     """Use the original v3.x fact-level event comparison contract."""
-    return [sys.executable,"-B",str(V3_EVENTS),"--dev-run",
+    command=[sys.executable,"-B",str(V3_EVENTS),"--dev-run",
             str(RUNS/run_id_guard(run_id)),"--input",str(Path(report).resolve())]
+    if events_jsonl is not None:
+        command += ["--events-jsonl",str(Path(events_jsonl).resolve())]
+    return command
 
 
 def common_literature_task(run_id, phase):
@@ -421,6 +447,7 @@ def build_parser():
     for action in ("reality","exchange","issue","review"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
     p=sub.add_parser("event-compare");p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
+    p.add_argument("--events-jsonl",type=Path)
     p=sub.add_parser("materials");p.add_argument("--run-id",required=True)
     p.add_argument("--attempt",default="attempt_001")
     for option in ("conversion","review","matrix","framework","framework-revision"):
@@ -465,14 +492,22 @@ def build_parser():
 def command_index(parser):
     sub=next(action for action in parser._actions if isinstance(action,argparse._SubParsersAction))
     return {"entry":"00_项目控制/v012_第12版/tools/ai_paper5_strict.py",
-            "commands":sorted(sub.choices),"discovery":"Use <command> --help for the exact parser",
+            "commands":sorted(sub.choices),
+            "parameters":{name:[{"options":a.option_strings,"required":a.required,
+                "choices":list(a.choices) if a.choices is not None else None,
+                "default":a.default if isinstance(a.default,(str,int,bool,type(None))) else None}
+                for a in cmd._actions if a.dest!="help"] for name,cmd in sorted(sub.choices.items())},
+            "discovery":"Use <command> --help for the exact parser",
             "formal_eligible":False}
 
 
 def main(argv=None):
     parser=build_parser()
     args=parser.parse_args(argv)
+    from jsonschema.exceptions import ValidationError
     try:
+        if hasattr(args,"output") and args.cmd!="merge-results":
+            args.output=cli_output_path(args.output,run_id=getattr(args,"run_id",None))
         if args.cmd=="commands": result=command_index(parser)
         elif args.cmd=="doctor": result=doctor()
         elif args.cmd=="prepare":
@@ -484,7 +519,7 @@ def main(argv=None):
             doctor(); result={"original_output":original_call(original_command("init",args.run_id,theme=args.theme))}
         elif args.cmd in ("status","advance"): result=status(args.run_id,progress=args.cmd=="advance")
         elif args.cmd=="event-compare":
-            doctor();result={"original_output":original_call(original_event_command(args.run_id,args.report))}
+            doctor();result={"original_output":original_call(original_event_command(args.run_id,args.report,events_jsonl=args.events_jsonl))}
         elif args.cmd=="materials":
             doctor();result={"original_output":original_call(original_material_command(
                 args.run_id,attempt=args.attempt,conversion=args.conversion,review=args.review,
@@ -502,7 +537,7 @@ def main(argv=None):
                     "action":args.action,"formal_eligible":False}
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
-            result=generator(args.run_id,args.phase);write(args.output,result)
+            result=generator(args.run_id,args.phase);write_cli_output(args.output,result)
         elif args.cmd=="review-counts":
             from review_accounting import observed_counts
             result=observed_counts(args.run_id)
@@ -516,7 +551,7 @@ def main(argv=None):
                     raise ValueError("Select the original review object before draft inputs")
                 from review_task import prepare_review_task
                 result=prepare_review_task(args.run_id,prior_report=args.prior_report,revision_record=args.revision_record)
-            write(args.output,result)
+            write_cli_output(args.output,result)
         elif args.cmd=="merge-results":
             from result_merge import merge_result_bundles, write_merge_index
             task=read(args.task)
@@ -531,7 +566,7 @@ def main(argv=None):
                 expected_reference=task["task_snapshot"],
                 expected_execution=read(args.execution_binding) if args.execution_binding else None,
                 observed_actions=read(args.observed_actions) if args.observed_actions else None)
-            write(args.output,result)
+            write_cli_output(args.output,result)
         elif args.cmd=="codex-receive":
             from codex_receiving import audit_codex_records
             task=read(args.task)
@@ -540,7 +575,7 @@ def main(argv=None):
             result=audit_codex_records(args.result,current_run_id=args.run_id,
                 expected_reference=task["task_snapshot"],
                 expected_execution=read(args.execution_binding) if args.execution_binding else None)
-            write(args.output,result)
+            write_cli_output(args.output,result)
         elif args.cmd=="chat-receive":
             from chat_receiving import audit_chat_records
             task=read(args.task)
@@ -550,15 +585,15 @@ def main(argv=None):
                 expected_reference=task["task_snapshot"],
                 expected_execution=read(args.execution_binding) if args.execution_binding else None,
                 observed_actions=read(args.observed_actions) if args.observed_actions else None)
-            write(args.output,result)
+            write_cli_output(args.output,result)
         elif args.cmd=="chat-audit":
-            result=audit_chat(read(args.task),read(args.response));write(args.output,result)
+            result=audit_chat(read(args.task),read(args.response));write_cli_output(args.output,result)
         else:
             doctor();result={"original_output":original_call(original_command(args.cmd,args.run_id,report=args.report)),
                              "stage":state_of(args.run_id)["status"]}
         print(json.dumps({"status":"ok","result":result},ensure_ascii=False,indent=2))
         return 0
-    except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired) as exc:
+    except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
         print(json.dumps({"status":"blocked","reason":str(exc)},ensure_ascii=False))
         return 2
 
