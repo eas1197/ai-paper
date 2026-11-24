@@ -65,3 +65,39 @@ class RepeatedDispatchTest(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,"Preserve completed call"):
                     auto.call_once(engine,work,"reality","same",must_search=True)
                 native[1].assert_called_once()
+
+    def test_i15_failed_started_and_unknown_attempts_never_auto_retry(self):
+        for status in ("failed","technical_block","started","unknown"):
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as tmp:
+                work=Path(tmp)
+                history=work/"v5_native_calls.json"
+                strict.write(history,{"records":[{"stage":"reality","status":status,"attempt":1}]})
+                before=history.read_bytes()
+                engine=Mock()
+                with patch.object(auto,"completed_call",return_value=None):
+                    for _ in range(3):
+                        with self.assertRaisesRegex(RuntimeError,"automatic retry is disabled"):
+                            auto.call_once(engine,work,"reality","same")
+                engine.call.assert_not_called()
+                with patch.object(auto,"native_modules") as native:
+                    with self.assertRaisesRegex(RuntimeError,"automatic retry is disabled"):
+                        auto.Executor().call(work,"reality","same")
+                native.assert_not_called()
+                self.assertEqual(history.read_bytes(),before)
+
+    def test_i15_other_stage_not_a_retry_and_budget_still_authoritative(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            work=Path(tmp)
+            history=work/"v5_native_calls.json"
+            strict.write(history,{"records":[{"stage":"events","status":"failed"}]})
+            engine=Mock()
+            with patch.object(auto,"completed_call",return_value=None):
+                auto.call_once(engine,work,"reality","fixture")
+            engine.call.assert_called_once_with(work,"reality","fixture")
+            strict.write(history,{"records":[{"stage":"events","status":"failed"}]*6})
+            before=history.read_bytes()
+            with patch.object(auto,"native_modules") as native:
+                with self.assertRaises(auto.OriginalBudgetExhausted):
+                    auto.Executor().call(work,"reality","fixture")
+            native.assert_not_called()
+            self.assertEqual(history.read_bytes(),before)

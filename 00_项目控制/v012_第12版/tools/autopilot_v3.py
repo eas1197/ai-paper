@@ -129,6 +129,15 @@ def completed_call(work, stage, task, *, exclude_thread_id=None):
     return None
 
 
+def require_no_unresolved_attempt(records, stage):
+    """A prior attempt may be reused by completed_call, but never silently rerun."""
+    previous = [row for row in records if row.get("stage") == stage]
+    if any(row.get("status") == "completed" for row in previous):
+        raise ValueError("Preserve completed call: exact task or original receipt no longer matches")
+    if previous:
+        raise RuntimeError("Prior native attempt requires explicit recovery; automatic retry is disabled")
+
+
 def call_once(engine,work,stage,task,*,must_search=False,exclude_thread_id=None):
     """Recover a completed original call; never spend a second reservation on it."""
     result=completed_call(work,stage,task,exclude_thread_id=exclude_thread_id)
@@ -137,9 +146,8 @@ def call_once(engine,work,stage,task,*,must_search=False,exclude_thread_id=None)
             raise ValueError("Completed call lacks required original search provenance")
         return result
     history=work/"v5_native_calls.json"
-    if history.is_file() and any(row.get("stage")==stage and row.get("status")=="completed"
-                                for row in heritage.read(history).get("records",[])):
-        raise ValueError("Preserve completed call: exact task or original receipt no longer matches")
+    if history.is_file():
+        require_no_unresolved_attempt(heritage.read(history).get("records",[]),stage)
     return engine.call(work,stage,task,**({"must_search":True} if must_search else {}))
 
 
@@ -198,6 +206,7 @@ class Executor:
         timeout=min(self.timeout,profile["00"]["timeout_seconds"])
         if len(ledger["records"])>=ledger["budget"]:
             raise OriginalBudgetExhausted("Original 3.x global model-call allowance exhausted")
+        require_no_unresolved_attempt(ledger["records"],stage)
         cli,invoke,evidence,url_event=native_modules()
         attempt=sum(1 for row in ledger["records"] if row["stage"]==stage)+1
         folder=work/"v5_native"/stage/("attempt_%03d"%attempt)
