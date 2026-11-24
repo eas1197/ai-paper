@@ -163,7 +163,10 @@ def language_resources():
            or any(arg not in argument_titles for arg in x["argument_audit"])
            for x in rolemap["chapters"].values()):
         raise ValueError("Invalid qualitative map or v005 unit reference")
-    return profile, snapshot, rolemap, by_id, locks, argument_titles, snapshot_warnings
+    resource_versions = {"v003": v003_snapshot["resource_version"],
+                         "v004": v004_snapshot["resource_version"],
+                         "v005": snapshot["resource_version"]}
+    return profile, snapshot, rolemap, by_id, locks, argument_titles, snapshot_warnings, resource_versions
 
 
 def validate_packet(packet):
@@ -196,7 +199,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
     packet_path, workspace = Path(packet_path), Path(workspace)
     packet = load(packet_path)
     rendered = validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings = language_resources()
+    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings, resource_versions = language_resources()
     if mode != "exploratory":
         formal_gates(packet, snapshot)
     if workspace.exists():
@@ -250,8 +253,8 @@ def prepare(packet_path, workspace, mode="exploratory"):
         "language_snapshot_id": snapshot["resource_snapshot_id"],
         "language_formal_resource_status": snapshot["status"],
         "resource_snapshot_warnings": snapshot_warnings,
-        "v003_resource_version": v003_snapshot["resource_version"],
-        "v004_resource_version": v004_snapshot["resource_version"],
+        "v003_resource_version": resource_versions["v003"],
+        "v004_resource_version": resource_versions["v004"],
         "formal_eligible": False, "independent_review_verified": False,
         "stage": "awaiting_draft", "full_paper_status": "exploratory_only",
         "quantitative_writer": "unchanged main/v014/tools/stage07.py",

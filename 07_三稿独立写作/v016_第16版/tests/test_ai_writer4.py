@@ -88,9 +88,10 @@ class Writer4Test(unittest.TestCase):
             writer.prepare(self.packet_path, self.work)
 
     def test_language_snapshots_bind_versions_status_and_all_files(self):
-        profile, snapshot, rolemap, rules, locks, argument_titles, warnings = writer.language_resources()
+        profile, snapshot, rolemap, rules, locks, argument_titles, warnings, versions = writer.language_resources()
         self.assertEqual(profile["profile_version"], "3.0")
         self.assertEqual(profile["resource_version"], 3)
+        self.assertEqual(versions, {"v003": 1, "v004": 2, "v005": 3})
         self.assertEqual(profile["formal_resource_gate_status"], "needs_review")
         self.assertEqual(snapshot["status"], "needs_review")
         self.assertFalse(snapshot["resource_available_for_formal_writing"])
@@ -108,7 +109,7 @@ class Writer4Test(unittest.TestCase):
                 return "0" * 64
             return original_hash(path)
         with patch.object(writer, "hash_file", side_effect=altered_hash):
-            profile, snapshot, rolemap, rules, locks, argument_titles, warnings = writer.language_resources()
+            profile, snapshot, rolemap, rules, locks, argument_titles, warnings, versions = writer.language_resources()
         self.assertIn("03_学术语言学习/v004_第4版/outputs/language_audit.csv",
                       {item["path"] for item in warnings})
 
