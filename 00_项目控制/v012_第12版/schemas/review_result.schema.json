@@ -3,7 +3,7 @@
   "properties": {
     "schema_version": {
       "type": "integer",
-      "const": 2
+      "const": 3
     },
     "task_snapshot": {
       "type": "object",
@@ -76,6 +76,27 @@
       "items": {
         "$ref": "#/$defs/finding"
       }
+    },
+    "reviewer": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/reviewer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "execution_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   },
   "required": [
@@ -86,12 +107,14 @@
     "reason",
     "issues",
     "assessment_scope",
-    "evidence_findings"
+    "evidence_findings",
+    "reviewer",
+    "execution_id"
   ],
   "additionalProperties": false,
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "D11 review result — evidence-bound proposed decision, not gate authorization",
-  "description": "Version 2 extends the D10 draft with located evidence, findings and unresolved questions. No automatic migration, independent execution proof or gate authorization.",
+  "title": "D12 review result — task and execution-bound proposed decision",
+  "description": "Version 3 binds review identity and an execution ID; a separately selected execution receipt binds the actual report and records. No independent or academic approval is implied.",
   "$defs": {
     "issue": {
       "type": "object",
@@ -430,6 +453,191 @@
           }
         }
       ]
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "research_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "stage_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "research_id",
+        "stage_id",
+        "task_id",
+        "snapshot_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "file_ref": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "reviewer": {
+      "type": "object",
+      "properties": {
+        "executor": {
+          "enum": [
+            "chat_native_web",
+            "codex_cli",
+            "manual"
+          ]
+        },
+        "reviewer_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "model": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "invocation_id": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "executor",
+        "reviewer_id",
+        "model",
+        "invocation_id"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "executor": {
+                "enum": [
+                  "chat_native_web",
+                  "codex_cli"
+                ]
+              }
+            },
+            "required": [
+              "executor"
+            ]
+          },
+          "then": {
+            "properties": {
+              "model": {
+                "type": "string",
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "execution_record": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "enum": [
+            "response",
+            "events",
+            "invocation",
+            "session_record",
+            "manual_record",
+            "prompt",
+            "login",
+            "stderr"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "role",
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "execution_binding": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "integer",
+          "const": 1
+        },
+        "execution_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "task_snapshot": {
+          "$ref": "#/$defs/snapshot"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/reviewer"
+        },
+        "report": {
+          "$ref": "#/$defs/file_ref"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "failed"
+          ]
+        },
+        "records": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/execution_record"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "execution_id",
+        "task_snapshot",
+        "reviewer",
+        "report",
+        "status",
+        "records"
+      ],
+      "additionalProperties": false
     }
   },
   "allOf": [
@@ -731,6 +939,61 @@
                 "unresolved_questions"
               ]
             }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "enum": [
+              "pass",
+              "revise",
+              "need_evidence",
+              "reject"
+            ]
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reviewer": {
+            "$ref": "#/$defs/reviewer"
+          },
+          "execution_id": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "reviewer"
+        ]
+      },
+      "then": {
+        "properties": {
+          "execution_id": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "execution_id": {
+            "type": "string",
+            "pattern": "\\S"
           }
         }
       }
