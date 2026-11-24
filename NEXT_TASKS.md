@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **I20（当前唯一最小任务）**：生成可读运行摘要与机器可读 manifest。
-   - 状态：implemented_unverified；新增 run-summary 生成同run内容寻址manifest/summary，核对I18/I19、保留缺失及损坏证据，不重跑；3项离线测试待CI。
+   - 状态：implemented_unverified；新增 run-summary 生成同run内容寻址manifest/summary，核对I18/I19、保留缺失及损坏证据，不重跑；新增3/3通过；strict 45435128687因旧入口数量断言25/26失败，已同步测试契约，等待重新验收。
    - 完成后：提交并转 I21。
 
 I19 已验收：[自动推进触发与门禁观察](00_项目控制/v012_第12版/outputs/I19_自动推进触发与门禁观察.md)；I19 verified（真实推进前后trace；strict `45434442846` success，新增3/3，368+48+10+4+7+17=454项去重；Handoff `45434442709` success；代码 `6053880`，夹具修复 `6ae7d3b`、`520485e`）。
