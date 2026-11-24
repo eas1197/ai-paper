@@ -28,3 +28,9 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 - expected_execution 由独立接收器/调度器选取，包含 task_snapshot、executor、provenance、result_sha256；与提交的包严格对照。不能由模型自己提交此参数或自动从模型自述生成。当前任务只定义和验收该接收合同，真实执行器提供独立记录的接入仍待 C19–C24。
 - 未取得原始文件/字段为 pending_missing_original_records；仅自报且哈希相符为 pending_independent_execution_binding；独立选取记录且文件哈希匹配仍为 records_hash_bound_pending_source_verification，非零退出记录为 execution_failed。所有返回 formal_eligible=false，实际工具真实性、来源打开/内容定位、原学术门禁均须后续核验。
 - 该模块不会创建原始事件，不把合成 fixture 或哈希一致当真实检索。采用单任务串行合同；真实接入及防并发状态处理后续完成。
+
+## C16 来源候选身份与去重
+
+- tools/source_identity.py：文献候选沿用原 11/v006 verified_identity.resolve/MATCH；同 DOI 必须复核刊物、作者、年份和题名，同题不同年份/DOI 不自动归并；身份冲突及不兼容桥接隔离。归一化 DOI 及原题录身份生成稳定候选 ID，保留原始成员和 action_ids。
+- 经验来源按保守 HTTPS URL 规范化（仅去 utm、fragment、默认端口；保留内容参数及顺序），同 URL 可聚为同报道候选。转载/多 URL 只在接收方独立核对并提供 reviewed_report_aliases 时合并；同事件或标题相同不自动合并、不等同独立报道。没有身份信息的材料保持独立候选。
+- 输出为候选分组、冲突、隔离成员，保留各原记录及索引；不覆盖执行者原始凭证，不改原文献 group/事件接收器，不授予正式资格。跨执行器合并/原始凭证持久化留 C24。
