@@ -68,3 +68,41 @@ class OriginalRetryBudgetTest(unittest.TestCase):
             self.assertEqual(row["status"],"failed")
             self.assertEqual(row["web_actions"],1)
             self.assertIsNotNone(row["response_sha256"])
+
+    def test_i04_exhausted_cli_is_blocked_without_touching_prior_artifacts(self):
+        import contextlib
+        import io
+        import json
+        import ai_paper5_strict as strict
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            ledger=work/"v5_native_calls.json"
+            auto.heritage.write(ledger,{"budget":6,"records":[{"stage":"reality","status":"failed"}]*6})
+            prior=work/"prior_response.json"
+            prior.write_bytes(b"retained evidence")
+            before={path.name:path.read_bytes() for path in work.iterdir()}
+            def run(*args, **kwargs):
+                return auto.Executor().call(work,"reality","fixture")
+            out=io.StringIO()
+            with patch.object(auto,"run_autopilot",side_effect=run), \
+                 patch.object(auto,"native_modules") as native, \
+                 contextlib.redirect_stdout(out):
+                rc=strict.main(["autopilot","--run-id","fixture"])
+            self.assertEqual(rc,2)
+            result=json.loads(out.getvalue())
+            self.assertEqual(result["runtime"]["runtime_status"],"blocked")
+            self.assertEqual(result["runtime"]["outcome_kind"],"budget_exhausted")
+            self.assertFalse(result["runtime"]["academic_approval_granted"])
+            native.assert_not_called()
+            self.assertEqual({path.name:path.read_bytes() for path in work.iterdir()},before)
+
+    def test_i04_similar_technical_error_is_not_budget_exhaustion(self):
+        import contextlib
+        import io
+        import json
+        import ai_paper5_strict as strict
+        out=io.StringIO()
+        with patch.object(auto,"run_autopilot",side_effect=RuntimeError("external allowance exhausted")), \
+             contextlib.redirect_stdout(out):
+            self.assertEqual(strict.main(["autopilot","--run-id","fixture"]),2)
+        self.assertEqual(json.loads(out.getvalue())["runtime"]["outcome_kind"],"technical_failure")

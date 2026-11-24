@@ -3,6 +3,10 @@
 STATES = frozenset({"queued","running","waiting_for_chat","waiting_for_codex",
     "waiting_for_review","waiting_for_user","blocked","failed","completed"})
 
+class OriginalBudgetExhausted(RuntimeError):
+    """A known original budget has no remaining allowance, not a launch failure."""
+
+
 def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None):
     if status not in STATES:
         raise ValueError("Unknown runtime observation")

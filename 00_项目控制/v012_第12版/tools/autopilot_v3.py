@@ -15,6 +15,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ai_paper5_strict as heritage
+from run_observation import OriginalBudgetExhausted
 
 
 def checksum(path):
@@ -177,7 +178,6 @@ class Executor:
         self.timeout,self.model=timeout,model
 
     def call(self, work, stage, task, *, must_search=False):
-        cli,invoke,evidence,url_event=native_modules()
         history=work/"v5_native_calls.json"
         ledger=heritage.read(history) if history.is_file() else {"records":[],"budget":6}
         profile=heritage.read(heritage.CONTROL/"v007_第7版/dev_profile.json")
@@ -186,7 +186,8 @@ class Executor:
             raise ValueError("Positive original native timeout required")
         timeout=min(self.timeout,profile["00"]["timeout_seconds"])
         if len(ledger["records"])>=ledger["budget"]:
-            raise RuntimeError("Original 3.x global model-call allowance exhausted")
+            raise OriginalBudgetExhausted("Original 3.x global model-call allowance exhausted")
+        cli,invoke,evidence,url_event=native_modules()
         attempt=sum(1 for row in ledger["records"] if row["stage"]==stage)+1
         folder=work/"v5_native"/stage/("attempt_%03d"%attempt)
         folder.mkdir(parents=True,exist_ok=False)

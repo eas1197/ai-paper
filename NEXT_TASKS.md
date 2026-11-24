@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **I04（当前唯一最小任务）**：预算耗尽时保存已有产物并进入 blocked/budget_exhausted，不自动放宽限制。
-   - 状态：pending；核对原耗尽分支、统一状态及回归，不绕过未明确额度的原派发。
+   - 状态：implemented_unverified；I04 已修正原autopilot预算耗尽的类型化blocked/budget_exhausted观察及前置检查，新增2项离线测试待CI；保留原账本/产物，不扩大预算，不计完成。
    - 完成后：提交并转 I05。
 
 I03a 已验收：[启动预算与实际支出](00_项目控制/v012_第12版/outputs/I03_原启动预算与实际支出接续.md)；I03a verified（原autopilot预留及实际支出观测；strict `45416457150` success，新增3/3，341+46+10+4+7+17=425项去重；Handoff `45416457162` success；代码 `d60ec7e`）。原始 I03 保留 blocked（原写作独立启动额度、07/08适用关系未明确），不计原始完成；继续独立合同。
