@@ -117,6 +117,20 @@ def completed_call(work, stage, task, *, exclude_thread_id=None):
     return None
 
 
+def call_once(engine,work,stage,task,*,must_search=False,exclude_thread_id=None):
+    """Recover a completed original call; never spend a second reservation on it."""
+    result=completed_call(work,stage,task,exclude_thread_id=exclude_thread_id)
+    if result is not None:
+        if must_search and not result[3]:
+            raise ValueError("Completed call lacks required original search provenance")
+        return result
+    history=work/"v5_native_calls.json"
+    if history.is_file() and any(row.get("stage")==stage and row.get("status")=="completed"
+                                for row in heritage.read(history).get("records",[])):
+        raise ValueError("Preserve completed call: exact task or original receipt no longer matches")
+    return engine.call(work,stage,task,**({"must_search":True} if must_search else {}))
+
+
 def saved_critical_input(work):
     """Load a saved critic task only when its embedded snapshots match this run."""
     candidates=[work/"critical_input.txt",
@@ -290,7 +304,7 @@ def step(run_id, *, executor=None):
     engine=executor or Executor()
     if phase=="reality":
         instructions=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
-        packet,folder,session,trace,url_event=engine.call(
+        packet,folder,session,trace,url_event=call_once(engine,
             work,"reality",json.dumps(instructions,ensure_ascii=False),must_search=True)
         source_proof(packet,trace,url_event)
         report=folder/"response.json"
@@ -302,7 +316,7 @@ def step(run_id, *, executor=None):
         if state.get("issue_search"):
             event_preflight(work,state,comparison_required=comparison.is_file())
         if not comparison.is_file():
-            packet,folder,session,trace,url_event=engine.call(
+            packet,folder,session,trace,url_event=call_once(engine,
                 work,"events","Compare at least two distinct independently identified "
                 "real events from the frozen reality.json at "+str(work)+
                 ". Sources is an ID-to-HTTPS-URL map; open each cited source page "
@@ -327,12 +341,7 @@ def step(run_id, *, executor=None):
             "may be treated as verified empirical support. Treat uncertain_facts, pending_sources, "
             "and pending source_verification_status as unresolved gaps; do not cite or promote them "
             "as established facts.")
-        research_call=completed_call(work,"research_exchange",research_task)
-        if research_call is None:
-            researcher,ra,rs,rt,ref=engine.call(
-                work,"research_exchange",research_task)
-        else:
-            researcher,ra,rs,rt,ref=research_call
+        researcher,ra,rs,rt,ref=call_once(engine,work,"research_exchange",research_task)
 
         saved_input,input_path=saved_critical_input(work)
         researcher_json=json.dumps(researcher,ensure_ascii=False)
@@ -349,13 +358,8 @@ def step(run_id, *, executor=None):
                 ". Critique the strongest assumption, counterexample and competing explanation. "
                 "Do not assert an independent academic gate pass.\nResearcher response:\n"+
                 researcher_json)
-        critic_call=completed_call(work,"critical_exchange",critic_task,
-                                   exclude_thread_id=rs)
-        if critic_call is None:
-            critic,ca,cs,ct,ref=engine.call(
-                work,"critical_exchange",critic_task)
-        else:
-            critic,ca,cs,ct,ref=critic_call
+        critic,ca,cs,ct,ref=call_once(engine,work,"critical_exchange",critic_task,
+                                         exclude_thread_id=rs)
         if rs==cs:
             raise RuntimeError("Independent critical receipt must be a separate actual session")
         if not isinstance(critic.get("challenge"),str) or not critic["challenge"].strip():
@@ -420,7 +424,7 @@ def step(run_id, *, executor=None):
         task=prepare_issue_task(run_id)
         if state.get("issue_search"):
             event_preflight(work,state,comparison_required=True)
-        packet,folder,session,trace,url_event=engine.call(work,"issue",task["instruction"])
+        packet,folder,session,trace,url_event=call_once(engine,work,"issue",task["instruction"])
         verify_snapshot(task["task_snapshot"],current_run_id=run_id)
         heritage.original_call(heritage.original_command("issue",run_id,
                                                         report=folder/"response.json"))

@@ -124,7 +124,7 @@ def record_issue_plan(work, state, plan):
                 or not row["publisher_url"].startswith("https://") or row["name"] in names):
             raise ValueError("Added journals need separate standing, topical fit and official publisher evidence")
         names.add(row["name"])
-    write(work / "issue_plan.json", plan)
+    write_stage_once(work / "issue_plan.json", plan)
     state.update(status="initial", issue_plan_sha256=digest(plan))
 
 
@@ -454,7 +454,7 @@ def _reviewed_freeze_payload(work, state):
 def freeze(work, state):
     if state["status"] != "s08_ready":
         raise ValueError("A final positive independent review is required")
-    write(work / "s08_topic.json", _reviewed_freeze_payload(work, state))
+    write_stage_once(work / "s08_topic.json", _reviewed_freeze_payload(work, state))
     state["status"] = "frozen"
 
 
@@ -480,6 +480,15 @@ def load_reality(work, state):
     return packet
 
 
+def write_stage_once(path, value):
+    """Preserve an original single-stage product across interrupted state publication."""
+    if path.exists():
+        if path.is_symlink() or load(path)!=value:
+            raise ValueError("Preserve existing original stage artifact: "+path.name)
+    else:
+        write(path,value)
+
+
 def record_reality(work, state, packet):
     if state["status"] != "reality":
         raise ValueError("Reality evidence is already recorded for this run")
@@ -488,7 +497,7 @@ def record_reality(work, state, packet):
     for source in packet["sources"]:
         if not all(source.get(key) for key in ("url", "kind", "supports", "limits")):
             raise ValueError("Record the source and its limits")
-    write(work / "reality.json", packet)
+    write_stage_once(work / "reality.json", packet)
     state["reality_sha256"] = digest(packet)
     state["status"] = "explanation_exchange" if state.get("explanation_first") else "initial"
 
@@ -686,7 +695,7 @@ def main():
                 state["event_comparison_sha256"] = digest(comparison)
             if not isinstance(packet.get("search_focus"), str) or not packet["search_focus"].strip():
                 raise ValueError("State the literature search focus")
-            write(work / "explanation_exchange.json", packet)
+            write_stage_once(work / "explanation_exchange.json", packet)
             state["exchange_sha256"] = digest(packet)
             state["status"] = "issue_positioning" if state.get("issue_search") else "initial"
         elif args.command == "issue":
