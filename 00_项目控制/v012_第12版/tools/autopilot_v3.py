@@ -83,6 +83,12 @@ def transcript_session(path):
     raise RuntimeError("Codex session has no authentic thread.started id")
 
 
+def execution_task_id(work, stage, attempt, task_sha256):
+    """Native attempt identity; separate from the stable C04 logical task slot."""
+    return text_checksum(json.dumps([Path(work).name, stage, attempt, task_sha256],
+                                    ensure_ascii=False, separators=(",", ":")))
+
+
 def completed_call(work, stage, task, *, exclude_thread_id=None):
     """Reuse only a completed call whose exact task and raw receipts still match."""
     history=work/"v5_native_calls.json"
@@ -101,8 +107,13 @@ def completed_call(work, stage, task, *, exclude_thread_id=None):
             saved_task=heritage.read(folder/"task.json")
             raw=folder/"events.jsonl"
             response=folder/"response.json"
-            if saved_task.get("instruction") != task:
+            if saved_task.get("instruction") != task or saved_task.get("stage") != stage:
                 continue
+            if "execution_task_id" in record or "task_sha256" in record:
+                task_sha = checksum(folder/"task.json")
+                if (record.get("task_sha256") != task_sha
+                        or record.get("execution_task_id") != execution_task_id(work,stage,attempt,task_sha)):
+                    continue
             if not raw.is_file() or not response.is_file():
                 continue
             if (record.get("events_sha256") != checksum(raw)
@@ -195,7 +206,10 @@ class Executor:
         heritage.write(task_json,SCHEMAS[stage])
         heritage.write(folder/"task.json",{"stage":stage,"instruction":task})
         # Keep a durable call reservation before trying Codex. Never erase failed calls.
+        task_sha=checksum(folder/"task.json")
         record={"stage":stage,"attempt":attempt,"status":"started",
+                "task_sha256":task_sha,
+                "execution_task_id":execution_task_id(work,stage,attempt,task_sha),
                 "model_call_reserved":1,"remaining_model_calls":ledger["budget"]-len(ledger["records"])-1,
                 "web_actions":None,"web_action_observation":"not_yet_observed"}
         ledger["records"].append(record);heritage.write(history,ledger)

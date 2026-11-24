@@ -103,7 +103,11 @@ def record_attempt(run, *, launch_ref, runtime_ref, attempt_dir, fixture=False):
               'status': runtime['status'], 'records': records, 'missing_or_issues': sorted(set(issues)),
               'fixture': fixture, 'independent_review_verified': False, 'formal_eligible': False}
     target = folder / 'review_execution.json'
-    with target.open('x', encoding='utf-8') as stream:
-        json.dump(record, stream, ensure_ascii=False, sort_keys=True, indent=2)
-        stream.write('\n')
+    raw = (json.dumps(record, ensure_ascii=False, sort_keys=True, indent=2) + '\n').encode('utf-8')
+    try:
+        with target.open('xb') as stream:
+            stream.write(raw)
+    except FileExistsError:
+        if target.is_symlink() or not target.is_file() or target.read_bytes() != raw:
+            raise FileExistsError('Existing review execution differs; preserve original record')
     return file_ref(run, (attempt / target.name).as_posix())

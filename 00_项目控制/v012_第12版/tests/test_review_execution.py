@@ -78,9 +78,15 @@ class ExecutionTest(unittest.TestCase):
             self.record()
 
     def test_no_rewrite(self):
-        self.record()
+        first = self.record()
+        path = self.root / 'attempt/review_execution.json'
+        before = path.read_bytes()
+        self.assertEqual(first, self.record())
+        self.assertEqual(path.read_bytes(), before)
+        self.runtime['exit_code'] = 1
         with self.assertRaises(FileExistsError):
             self.record()
+        self.assertEqual(path.read_bytes(), before)
 
     def test_chat_no_host_authentication(self):
         self.launch['executor'] = self.runtime['executor'] = 'chat_native_web'

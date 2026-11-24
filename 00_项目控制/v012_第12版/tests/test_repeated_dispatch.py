@@ -36,3 +36,32 @@ class RepeatedDispatchTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"Preserve existing"):
                 write_stage_once(path,{"fixture":False})
             self.assertEqual(path.read_bytes(),before)
+
+    def test_i07_native_attempt_identity_and_repeated_completed_result(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            work=Path(tmp)
+            def invoke(cli, attempt, *args, **kwargs):
+                (attempt/"events.jsonl").write_text(json.dumps({"type":"thread.started","thread_id":"fixture"})+"\n",encoding="utf-8")
+                strict.write(attempt/"response.json",{"fixture":True})
+                return 0
+            native=(lambda:"fixture",Mock(side_effect=invoke),lambda path:["fixture"],None)
+            with patch.object(auto,"native_modules",return_value=native):
+                engine=auto.Executor()
+                first=auto.call_once(engine,work,"reality","same",must_search=True)
+                second=auto.call_once(engine,work,"reality","same",must_search=True)
+                self.assertEqual(first,second)
+                native[1].assert_called_once()
+                history=work/"v5_native_calls.json"
+                ledger=strict.read(history)
+                self.assertEqual(len(ledger["records"]),1)
+                row=ledger["records"][0]
+                self.assertEqual(row["task_sha256"],auto.checksum(first[1]/"task.json"))
+                self.assertEqual(row["execution_task_id"],auto.execution_task_id(work,"reality",1,row["task_sha256"]))
+                self.assertNotEqual(row["execution_task_id"],auto.execution_task_id(work,"reality",2,row["task_sha256"]))
+                self.assertNotEqual(row["execution_task_id"],auto.execution_task_id(work,"issue",1,row["task_sha256"]))
+                row["execution_task_id"]="tampered"
+                strict.write(history,ledger)
+                with self.assertRaisesRegex(ValueError,"Preserve completed call"):
+                    auto.call_once(engine,work,"reality","same",must_search=True)
+                native[1].assert_called_once()
