@@ -63,6 +63,30 @@ class SharedTaskTest(unittest.TestCase):
         self.assertEqual(calls[0], m.original_command("initial", self.run_id))
         self.assertEqual(result["task_snapshot"], m.codex_task(self.run_id, "initial")["task_snapshot"])
 
+    def test_same_supplemental_packet_binds_previous_evidence(self):
+        from staged_topic import digest
+        matrix = {"rows": [{"title": "Previously accepted fixture paper"}]}
+        theories = []
+        comparison = {"fixture_only": True}
+        for name, data in (("initial/literature_matrix.json", matrix),
+                           ("initial/theories.json", theories),
+                           ("event_comparison.json", comparison)):
+            m.write(self.work / name, data)
+        state = m.state_of(self.run_id)
+        state.update(status="supplemental", question="Revised fixture question",
+                     initial_sha256=digest(matrix),
+                     event_comparison_sha256=digest(comparison))
+        m.write(self.work / "staged_topic.json", state)
+        chat = m.chat_task(self.run_id, "supplemental")
+        codex = m.codex_task(self.run_id, "supplemental")
+        self.assertEqual(chat["task_packet"], codex["task_packet"])
+        self.assertEqual(chat["task_snapshot"], codex["task_snapshot"])
+        self.assertEqual(chat["accepted"], ["Previously accepted fixture paper"])
+        paths = {row["path"] for row in chat["task_packet"]["input_files"]}
+        self.assertTrue({"initial/literature_matrix.json", "initial/theories.json",
+                         "event_comparison.json"} <= paths)
+        task_packet.verify_snapshot(chat["task_snapshot"], current_run_id=self.run_id)
+
     def test_phase_change_and_wrong_phase_rejected(self):
         with self.assertRaisesRegex(ValueError, "not authorized"):
             m.codex_task(self.run_id, "supplemental")

@@ -236,7 +236,7 @@ def common_literature_task(run_id, phase):
     journals = list(rules["journals"])
     plan = prepared.get("issue_plan")
     files = ["run_manifest.json"]
-    for name in ("reality.json", "explanation_exchange.json"):
+    for name in ("reality.json", "event_comparison.json", "explanation_exchange.json"):
         if (work / name).is_file():
             files.append(name)
     if state.get("issue_search") or plan is not None:
