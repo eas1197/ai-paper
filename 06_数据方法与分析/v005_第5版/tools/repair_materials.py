@@ -72,6 +72,7 @@ def repair(work, parent, framework, items, budget, review_key):
     prompt = (
         f"Use at most {budget['native_search_actions']} native web actions. Verify ONLY the independent review gaps. "
         "Open primary sources, locate the passage, distinguish source claims from inference, and preserve unknowns. "
+        "Record source_type separately from kind: secondary_interview, media_report, public_document, social_media, or unknown; web search never creates firsthand interviews. "
         "One discrete event per entry. Do not present reprints as independent events. "
         "Mark appropriate existing material IDs in supersedes to retire a wrong record; use an empty list for a new event. "
         "For each entry identify the original issue_index. Prefer sources already named by the review. "

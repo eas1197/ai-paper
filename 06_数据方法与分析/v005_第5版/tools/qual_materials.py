@@ -24,12 +24,17 @@ from review_gate_guard import require_original_review
 
 KINDS = {"actor_statement", "reporter_account", "official_rule", "documented_action", "researcher_inference"}
 PATHS = {"secondary_interviews", "online_qualitative"}
+SOURCE_TYPES = {"firsthand_interview", "secondary_interview", "media_report", "public_document",
+                "social_media", "researcher_interpretation", "unknown"}
+WEB_SOURCE_TYPES = SOURCE_TYPES - {"firsthand_interview", "researcher_interpretation"}
 FIELDS = ("url", "date", "subject", "context", "kind", "path", "locator", "relation", "limits", "access")
 
 
 def schema():
     item = {"type": "object", "required": list(FIELDS), "additionalProperties": False,
             "properties": {key: {"type": "string"} for key in FIELDS}}
+    item["required"].append("source_type")
+    item["properties"]["source_type"] = {"type":"string","enum":sorted(WEB_SOURCE_TYPES)}
     item["properties"]["kind"]["enum"] = sorted(KINDS - {"researcher_inference"})
     item["properties"]["path"]["enum"] = sorted(PATHS)
     return {"type": "object", "required": ["materials", "search_notes", "gaps"],
@@ -75,22 +80,28 @@ def read_materials(folder, budget):
     if not trace or len(trace) > budget:
         raise ValueError("Missing native search receipts or event budget exceeded")
     result = load(folder / "response.json")
-    candidates, excluded = [], []
+    candidates, excluded, pending_type = [], [], []
     for row in result["materials"]:
         missing = [key for key in FIELDS if not isinstance(row.get(key), str) or not row[key].strip()]
         if missing:
             excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete",
                              "missing_fields": missing})
             continue
+        if "source_type" in row and row["source_type"] not in WEB_SOURCE_TYPES:
+            excluded.append({"url":row["url"],"reason":"Native web cannot create firsthand interviews or researcher interpretation as empirical material"})
+            continue
         event = url_event(row["url"], trace)
         if (not event or row.get("kind") not in KINDS - {"researcher_inference"}
                 or row.get("path") not in PATHS):
             excluded.append({"url": row.get("url"), "reason": "receipt or context incomplete"})
             continue
-        candidates.append(dict(row, event_id=event, material_id=digest(row)[:16]))
+        material = dict(row, event_id=event, material_id=digest(row)[:16])
+        candidates.append(material)
+        if row.get("source_type","unknown") == "unknown":
+            pending_type.append(material["material_id"])
     return {"status": "pending_independent_review", "events_sha256": sha(events),
             "response_sha256": sha(folder / "response.json"), "tool_events": len(trace),
-            "materials": candidates, "excluded": excluded, "notes": result["search_notes"], "gaps": result["gaps"]}
+            "materials": candidates, "excluded": excluded, "source_types_pending": pending_type, "notes": result["search_notes"], "gaps": result["gaps"]}
 
 
 def record_review(work, folder, report, *, review_intake=None):
@@ -225,6 +236,9 @@ def main():
         f"场域：{packet['context']}。最多 {budget['native_search_actions']} 次工具动作。"
         "分别检索公开深度报道与二手访谈、公开网络互动及可核验的制度和事件资料。"
         "优先查行动过程并找反例，记录访问边界。报道中的行动者陈述、记者转述、规则和实际行为分开。"
+        "source_type 单独记录来源形式：公开转载访谈是 secondary_interview，报道是 media_report，"
+        "公开文件是 public_document，社交媒体是 social_media；不明填 unknown。网页搜索不产生研究者一手访谈。"
+        "kind 仍表示证据内容类型，不把研究者推断当材料。"
         "仅概述公开内容，不提供个人姓名、账号或可识别未成年人的信息；不抄写原文。"
         "不把规则或研究者推测当行为。说明不符合预期、来源差异和缺失。"
         "输出最多八条材料，区分可公开阅览和研究用途许可尚待核实。记录两路径的搜索词、"
