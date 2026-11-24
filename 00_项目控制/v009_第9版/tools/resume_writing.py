@@ -10,7 +10,7 @@ from staged_topic import ROOT, run_mode, job_lock
 from codex_literature import cli_environment, cli_executable, login_probe
 from question_binding import artifact_lineage, binding, evidence_digest, file_hash
 from revision_routes import preflight, validate_routes
-from material_adequacy import writing_material_status
+from material_adequacy import writing_material_status, approved_matrix_materials, validate_reviewed_plan_sources
 from technical_review import close_binding_review, local_matrix_context
 from review_accounting import record_revision_round
 
@@ -349,10 +349,11 @@ def resume(work, folder, prior_review):
     gate = writing_material_status(adequacy, (row["material_id"] for row in receipt["materials"]))
     if gate != "ready":
         return {"status": gate, "stage": "matrix", "material_adequacy": adequacy, "revisions": spent}
+    approved = approved_matrix_materials(adequacy, receipt, current)
     current["question_binding"] = contract
     matrix_path = folder / "analysis_matrix_reviewed.json"
     write(matrix_path, current)
-    context.update(matrix=current, literature=load(work / "merged_literature.json"),
+    context.update(matrix=current, approved_empirical_materials=approved, literature=load(work / "merged_literature.json"),
                    theories=load(work / "initial/theories.json"))
     packet, review = None, None
     for revision in range(3):
@@ -366,7 +367,9 @@ def resume(work, folder, prior_review):
                           "case fields background,selection,materials,method; chapters in order problem,framework,case, "
                           "each framework dimension ID,conclusion. Each chapter has id,task,bridge,sections. Each section has "
                           "title,task,argument,evidence_use,source_ids and paragraphs (nonempty array of distinct paragraph tasks). "
-                          "Each analytic chapter uses theory and empirical sources. Preserve uncertain findings and evidence limits.",
+                          "Each analytic chapter uses theory and empirical sources. For empirical sources use ONLY original material IDs "
+                          "and exact locators in approved_empirical_materials; other receipt materials remain excluded. "
+                          "Preserve uncertain findings and evidence limits.",
                           {**context, "previous_plan": packet, "review": review, "remaining_revisions": 2 - spent})
         packet = normalize_plan_prose(answer["answer"])
         packet.update(question_binding=contract, core_question=contract["core_question"],
@@ -377,6 +380,7 @@ def resume(work, folder, prior_review):
                                                for row in framework["dimensions"]])
         if any(not section.get("paragraphs") for chapter in packet["chapters"] for section in chapter["sections"]):
             raise ValueError("Every section requires paragraph-level tasks")
+        validate_reviewed_plan_sources(packet, contract, receipt, approved)
         output = area / f"draft_{revision}"
         if (output / "plan_input.json").is_file() and load(output / "plan_input.json") == packet:
             plan = output / "论文写作方案.md"
