@@ -65,6 +65,24 @@ class SnapshotTest(unittest.TestCase):
         task_packet.validate_result_snapshot({"task_snapshot": revised},
                 current_run_id="offline_fixture", expected_reference=revised)
 
+    def test_revision_retires_old_slot_even_if_original_bytes_restored(self):
+        first = self.make_packet()
+        old = self.freeze(first)
+        child = self.freeze(self.make_packet(task_id="dependent"), [old])
+        replacement = task_packet.freeze_packet(self.make_packet(task_id="rereview"),
+            current_run_id="offline_fixture", supersedes=[old])
+        self.verify(replacement)
+        for ref in (old, child):
+            with self.assertRaisesRegex(ValueError, "Retired"):
+                self.verify(ref)
+        with self.assertRaisesRegex(ValueError, "Retired"):
+            self.freeze(first)
+        self.assertEqual(replacement, task_packet.freeze_packet(self.make_packet(task_id="rereview"),
+            current_run_id="offline_fixture", supersedes=[old]))
+        with self.assertRaisesRegex(ValueError, "already retired"):
+            task_packet.freeze_packet(self.make_packet(task_id="another_revision"),
+                current_run_id="offline_fixture", supersedes=[old])
+
     def test_original_question_change_requires_new_snapshot(self):
         sample = self.make_packet()
         ref = self.freeze(sample)

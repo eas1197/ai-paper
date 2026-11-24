@@ -303,7 +303,8 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
         "stop_conditions": ["Original artifacts or state changed", "No independent execution authorization", "Missing required evidence"]}
     _require(h.state_of(run_id) == state and json.loads(h.original_call(h.original_command("prepare", run_id))) == original,
              "Original state or evidence changed during review preparation")
-    snapshot = contract.freeze_packet(packet, current_run_id=run_id)
+    snapshot = contract.freeze_packet(packet, current_run_id=run_id,
+        **({"supersedes": [lineage["old"]]} if lineage is not None else {}))
     contract.verify_snapshot(snapshot, current_run_id=run_id)
     return {"task_packet": packet, "task_snapshot": snapshot, "context_path": context_path.relative_to(work).as_posix(),
             "dispatch_authorized": False, "formal_eligible": False}

@@ -118,6 +118,8 @@ def verify_snapshot(reference, *, current_run_id, _seen=None):
     if slot in seen:
         raise ValueError("Cyclic task dependency")
     version = reference["snapshot_sha256"]
+    if (slot / "retired" / (version + ".json")).exists():
+        raise ValueError("Retired task snapshot")
     active = heritage.read(slot / "active.json")
     if active != reference:
         raise ValueError("Superseded task snapshot")
@@ -132,7 +134,43 @@ def verify_snapshot(reference, *, current_run_id, _seen=None):
     return snapshot
 
 
-def freeze_packet(packet, *, current_run_id, dependencies=()):
+def _historical_version(work, reference):
+    """Check a historical C04 record without requiring its revised inputs to remain unchanged."""
+    if (not isinstance(reference, dict)
+            or set(reference) != {"research_id", "stage_id", "task_id", "snapshot_sha256"}
+            or reference["research_id"] != work.name
+            or any(not isinstance(v, str) or not v for v in reference.values())
+            or not re.fullmatch(r"[0-9a-f]{64}", reference["snapshot_sha256"])):
+        raise ValueError("Invalid historical reference")
+    slot = _slot(work, reference["stage_id"], reference["task_id"])
+    version = reference["snapshot_sha256"]
+    historical = heritage.read(slot / "versions" / (version + ".json"))
+    if (_digest(historical) != version or _ref(historical, version) != reference
+            or heritage.read(slot / "activated" / (version + ".json")) != reference):
+        raise ValueError("Historical snapshot integrity mismatch")
+    return slot
+
+
+def _retire_snapshot(work, old, replacement):
+    slot = _historical_version(work, old)
+    if old == replacement:
+        raise ValueError("Cannot retire the replacement itself")
+    marker = slot / "retired" / (old["snapshot_sha256"] + ".json")
+    payload = {"retired": old, "replacement": replacement}
+    marker.parent.mkdir(exist_ok=True)
+    if marker.parent.resolve() != marker.parent:
+        raise ValueError("Retirement directory outside task slot")
+    if not marker.exists() and heritage.read(slot / "active.json") != old:
+        raise ValueError("Cannot retire a superseded historical version")
+    try:
+        with marker.open("x", encoding="utf-8") as stream:
+            json.dump(payload, stream, ensure_ascii=False, sort_keys=True)
+    except FileExistsError:
+        if marker.is_symlink() or heritage.read(marker) != payload:
+            raise ValueError("Historical version already retired by another replacement")
+
+
+def freeze_packet(packet, *, current_run_id, dependencies=(), supersedes=()):
     """Freeze a new content-addressed version and activate it for this task.
 
     Old versions are retained. Dependent snapshots become invalid on verification,
@@ -149,8 +187,19 @@ def freeze_packet(packet, *, current_run_id, dependencies=()):
         raise ValueError("Duplicate task dependency")
     snapshot = {"packet": packet, "context": _context(packet, work),
                 "dependencies": references}
+    retired = sorted(list(supersedes), key=_digest)
+    if len({_digest(row) for row in retired}) != len(retired):
+        raise ValueError("Duplicate retired reference")
+    for old in retired:
+        _historical_version(work, old)
+        if old in references:
+            raise ValueError("Cannot depend on a retired snapshot")
+    if retired:
+        snapshot["supersedes"] = retired
     version = _digest(snapshot)
     reference = _ref(snapshot, version)
+    if (slot / "retired" / (version + ".json")).exists():
+        raise ValueError("Retired snapshot cannot be reactivated")
     path = slot / "versions" / (version + ".json")
     if path.exists():
         if heritage.read(path) != snapshot:
@@ -163,6 +212,9 @@ def freeze_packet(packet, *, current_run_id, dependencies=()):
         # An earlier activation is marked by an immutable receipt.
         if (slot / "activated" / (version + ".json")).exists():
             raise ValueError("Historical snapshot cannot be reactivated")
+    # Retire before activation so an interrupted replacement cannot authorize stale results.
+    for old in retired:
+        _retire_snapshot(work, old, reference)
     _atomic_json(slot / "activated" / (version + ".json"), reference)
     _atomic_json(active, reference)
     return reference

@@ -130,6 +130,7 @@ def prepare_review_task(run_id, *, prior_report=None, revision_record=None):
         raise ValueError("Original review preparation changed")
     if h.sha(state_path) != state_sha or any(a["sha256"] != h.sha(work / a["path"]) for a in artifacts):
         raise ValueError("Original review inputs changed during preparation")
-    snapshot = contract.freeze_packet(packet, current_run_id=run_id)
+    snapshot = contract.freeze_packet(packet, current_run_id=run_id,
+        **({"supersedes": [selected["old"]]} if selected is not None else {}))
     contract.verify_snapshot(snapshot, current_run_id=run_id)
     return {"task_packet": packet, "task_snapshot": snapshot, "context_path": context_path.relative_to(work).as_posix(), "formal_eligible": False, "dispatch_authorized": False}
