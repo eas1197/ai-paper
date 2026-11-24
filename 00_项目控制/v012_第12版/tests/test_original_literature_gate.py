@@ -201,7 +201,7 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         # login, argv and zero exit code; only the original event stream lacks web events.
         p["events"] = self.raw(
             "initial/batch_001/events.jsonl",
-            b'{"type":"thread.started","thread_id":"fixture-thread"}\\n')
+            b'{"type":"thread.started","thread_id":"fixture-thread"}\n')
         self.rebind_invocation(bundle)
         report = self.receive(bundle)
         self.assertTrue(report["command_record_matched"])
