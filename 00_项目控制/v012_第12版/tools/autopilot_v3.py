@@ -441,7 +441,9 @@ def run_autopilot(run_id, *, theme="社会生活", model=None, timeout=900, max_
         result=step(run_id,executor=engine)
         if result.get("status")=="blocked_by_original_v3_gate" or result.get("actions") is None and result.get("action")!="original_s08_freeze":
             break
-    return {"status":"checkpoint","result":result,"v3_stage":heritage.state_of(run_id)["status"],"formal_eligible":False}
+    from run_observation import command_observation
+    checkpoint={"status":"checkpoint","result":result,"v3_stage":heritage.state_of(run_id)["status"],"formal_eligible":False}
+    return {**checkpoint,"runtime":command_observation("autopilot",checkpoint)}
 
 
 def main(argv=None):

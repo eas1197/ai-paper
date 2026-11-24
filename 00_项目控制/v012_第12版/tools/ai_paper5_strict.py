@@ -619,10 +619,13 @@ def main(argv=None):
         else:
             doctor();result={"original_output":original_call(original_command(args.cmd,args.run_id,report=args.report)),
                              "stage":state_of(args.run_id)["status"]}
-        print(json.dumps({"status":"ok","result":result},ensure_ascii=False,indent=2))
+        from run_observation import command_observation
+        print(json.dumps({"status":"ok","result":result,"runtime":command_observation(args.cmd,result)},ensure_ascii=False,indent=2))
         return 0
     except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
-        print(json.dumps({"status":"blocked","reason":str(exc)},ensure_ascii=False))
+        from run_observation import observation
+        kind="failed" if isinstance(exc,(RuntimeError,OSError,subprocess.TimeoutExpired)) else "blocked"
+        print(json.dumps({"status":"blocked","reason":str(exc),"runtime":observation(kind,reason=str(exc))},ensure_ascii=False))
         return 2
 
 

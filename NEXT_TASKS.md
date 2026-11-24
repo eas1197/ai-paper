@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **E17（当前唯一最小任务）**：定义 queued、running、waiting_for_chat、waiting_for_codex、waiting_for_review、waiting_for_user、blocked、failed、completed 等运行状态。
-   - 状态：pending；只定义运行观察层状态，不复制原 v009 研究状态机。
+   - 状态：已定义9类运行观察状态及4项测试，待CI。
    - 仅需读取：E17、strict/autopilot 输出、原候选等待与接收状态、对应测试。
    - 验收：状态分类显式、技术完成与学术通过分离、未知不假完成；离线测试。
    - 完成后：提交并转 E18。
