@@ -25,3 +25,7 @@ JSON Schema 的 `default` 是描述性注解，验证不自动注入字段。关
 - 每个 (research_id, stage_id, task_id) 保留不可覆盖的版本记录和当前指针；相同输入幂等；变更生成新版本，旧版本不可重新激活。受影响的下游由显式依赖链递归拒绝，独立任务不受无关任务变更影响；原问题或政策改变则共同失效。
 - validate_result_snapshot 要求结果引用独立指定的当前版本；旧结果保留但不能被接收为当前结果。该函数不验证执行者或学术资格。
 - 本合同采用单任务串行写入；并发调度及原模块状态路由待后续整合。C05 接入前不宣称旧执行器已执行这些校验。
+
+## C05 共用入口
+
+`ai_paper5_strict.py chat-task` 与 `codex-task` 接收同一个 run-id/phase，使用同一 `common_literature_task`、原 v009 prepare、原 workload 与源文件哈希，生成相同 task_packet/task_snapshot。旧 Chat prompt 与非正式 provenance 标签保留；native `advance` 在原 v009 CLI 派发前冻结同一个任务包，实际文献检索仍由原 CLI 执行。此项覆盖当前 initial/supplemental 文献任务生成，不宣称完成 pre-literature Chat 对接、独立凭证接收或真实在线双路验收；这些由后续 C06–C11 等继续完成。

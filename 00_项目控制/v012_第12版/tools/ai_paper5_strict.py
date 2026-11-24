@@ -124,9 +124,11 @@ def status(run_id, *, progress=False):
         if progress:
             # Dispatch to ORIGINAL v009, which owns original v012/11-v007
             # batches, deduplication, abstract provenance and source quota.
+            task = codex_task(run_id, stage)
             output = original_call(original_command(stage, run_id))
             return {"action": "original_native_literature_search", "before": stage,
-                    "after": state_of(run_id)["status"], "output": output[-1300:]}
+                    "after": state_of(run_id)["status"], "output": output[-1300:],
+                    "task_snapshot": task["task_snapshot"]}
         return {"action": "original_native_literature_search", "stage": stage,
                 "command": original_command(stage, run_id)}
     if stage == "s08_ready":
@@ -213,38 +215,116 @@ def original_event_command(run_id, report):
             str(RUNS/run_id_guard(run_id)),"--input",str(Path(report).resolve())]
 
 
-def chat_task(run_id, phase):
-    """Exact active 3.x journal scope and original native-search instructions."""
+def common_literature_task(run_id, phase):
+    """Build a single frozen phase packet for both v012 executor routes.
+
+    Original v009 prepare and workload stay authoritative. This function only
+    packages inputs; it cannot execute search or grant an academic pass.
+    """
+    import task_packet as contract
+
     doctor()
     if phase not in PHASES or state_of(run_id)["status"] != phase:
-        raise ValueError("Chat search not authorized by original v3.2 state")
+        raise ValueError("Search not authorized by original v3.2 state")
     state = state_of(run_id)
     work = RUNS / run_id
-    # Verify the original phase, source hashes and 3-level plan first.
-    # Chat uses the same frozen task; never silently accept a changed plan.
-    original_call(original_command("prepare", run_id))
+    prepared = json.loads(original_call(original_command("prepare", run_id)))
+    if prepared.get("status") != phase:
+        raise ValueError("Original prepare returned another phase")
+    manifest = contract.run_mode.verified_run(work)
     rules = read(V3_POLICY)
     journals = list(rules["journals"])
-    plan = read(work / "issue_plan.json")
-    if not all(isinstance(plan.get(k), str) and plan[k].strip()
-               for k in ("issue", "why", "object_search", "issue_search", "theory_search")):
+    plan = prepared.get("issue_plan")
+    files = ["run_manifest.json"]
+    for name in ("reality.json", "explanation_exchange.json"):
+        if (work / name).is_file():
+            files.append(name)
+    if state.get("issue_search") or plan is not None:
+        if (not isinstance(plan, dict)
+                or plan != read(work / "issue_plan.json")
+                or not all(isinstance(plan.get(k), str) and plan[k].strip()
+                           for k in ("issue", "why", "object_search", "issue_search", "theory_search"))):
+            raise ValueError("Original object/issue/theory positioning is incomplete")
+        files.append("issue_plan.json")
+        for item in plan.get("specialist_journals", []):
+            if not all(isinstance(item.get(k), str) and item[k].strip()
+                       for k in ("name", "publisher_url", "standing", "fit")) or not item["publisher_url"].startswith("https://"):
+                raise ValueError("Unverified specialist-journal addition")
+            journals.append(item["name"])
+    else:
+        # Preserve the direct original legacy route. The existing Chat prompt
+        # still requires the current three-layer issue plan.
+        plan = None
+    accepted = []
+    if phase == "supplemental":
+        matrix = "initial/literature_matrix.json"
+        accepted = [row["title"] for row in read(work / matrix)["rows"]]
+        files.append(matrix)
+        if (work / "initial/theories.json").is_file():
+            files.append("initial/theories.json")
+    budget = manifest["workload"]["11"]
+    current_profile = read(CONTROL / "v007_第7版/dev_profile.json")
+    target = rules["dev"][phase]
+    question = state.get("question") or state["theme"]
+    def file_ref(path, root):
+        return {"path": path.relative_to(root).as_posix(), "sha256": sha(path)}
+    packet = {
+        "schema_version": 1, "research_id": run_id, "stage_id": phase,
+        "task_id": "original_v3_literature_" + phase,
+        "purpose": "Original v3.2 literature phase: " + phase,
+        "research_question": question,
+        "search_levels": ["object", "issue", "theory"] if plan is not None else [],
+        "input_files": [file_ref(work / name, work) for name in files],
+        "source_scope": {
+            "journals": journals,
+            "source_types": ["journal_abstract", "separate_theory_note"],
+            "policy_refs": [file_ref(path, ROOT) for path in (
+                V3_POLICY, V3_SEARCH_PROMPT, NATIVE_PROMPT,
+                CONTROL / "v007_第7版/dev_profile.json")],
+        },
+        "quantity_budget": {"target": target,
+                            "max_batches": current_profile["11"]["topic_batches_per_phase"],
+                            "native_search_actions": budget["native_search_actions"]},
+        "time_budget_seconds": budget["timeout_seconds"],
+        "output_schema": {"kind": "file", "file": file_ref(NATIVE_SCHEMA, ROOT)},
+        "stop_conditions": [
+            "Original v009 phase gate or sufficient eligible evidence",
+            "Original v009 deficit/batch/action/timeout rules require stopping",
+            "Input, policy or research identity changes",
+        ],
+        "notes": ["Time and native search action budgets are per original batch; "
+                  "max_batches is per original phase. Original receiver controls eligibility."],
+    }
+    reference = contract.freeze_packet(packet, current_run_id=run_id)
+    contract.verify_snapshot(reference, current_run_id=run_id)
+    return {"task_packet": packet, "task_snapshot": reference,
+            "plan": plan, "accepted": accepted}
+
+
+def codex_task(run_id, phase):
+    """Export the same frozen packet used for Chat; do not invoke Codex here."""
+    shared = common_literature_task(run_id, phase)
+    return {"task_packet": shared["task_packet"], "task_snapshot": shared["task_snapshot"]}
+
+
+def chat_task(run_id, phase):
+    """Existing Chat prompt plus the shared executor-neutral task contract."""
+    shared = common_literature_task(run_id, phase)
+    packet, plan = shared["task_packet"], shared["plan"]
+    if plan is None:
         raise ValueError("Original object/issue/theory positioning is incomplete")
-    for item in plan.get("specialist_journals", []):
-        if not all(isinstance(item.get(k), str) and item[k].strip()
-                   for k in ("name", "publisher_url", "standing", "fit")) or not item["publisher_url"].startswith("https://"):
-            raise ValueError("Unverified specialist-journal addition")
-        journals.append(item["name"])
-    previous = (read(work / "initial/literature_matrix.json")["rows"]
-                if phase == "supplemental" else [])
-    accepted = [p["title"] for p in previous]
-    theme = state.get("question") or state["theme"]
+    work = RUNS / run_id
+    journals = packet["source_scope"]["journals"]
+    accepted = shared["accepted"]
+    theme = packet["research_question"]
     if phase == "initial":
         theme += "; 现实: " + read(work / "reality.json")["search_focus"]
         theme += "; 反诘: " + read(work / "explanation_exchange.json")["search_focus"]
     else:
         theme = "补查: " + theme
+    target = packet["quantity_budget"]["target"]
     prompt = NATIVE_PROMPT.read_text(encoding="utf-8-sig").format(
-        theme=theme, desired=rules["dev"][phase],
+        theme=theme, desired=target,
         journals="、".join(journals), accepted=json.dumps(accepted, ensure_ascii=False))
     prompt += ("\n原v3.2议题三层定位和自适应搜索策略:\n"
                + json.dumps(plan, ensure_ascii=False)
@@ -255,7 +335,8 @@ def chat_task(run_id, phase):
             "profile": "original_v3.2", "policy_sha256": sha(V3_POLICY),
             "prompt_sha256": sha(NATIVE_PROMPT), "schema_sha256": sha(NATIVE_SCHEMA),
             "journals": journals, "accepted": accepted,
-            "target": rules["dev"][phase], "prompt": prompt}
+            "target": target, "prompt": prompt,
+            "task_packet": packet, "task_snapshot": shared["task_snapshot"]}
 
 
 def clean_title(text):
@@ -350,8 +431,9 @@ def main(argv=None):
     p.add_argument("--mode",choices=("exploratory","formal"),default="exploratory")
     p.add_argument("--manuscript",type=Path)
     p.add_argument("--claims",type=Path)
-    p=sub.add_parser("chat-task");p.add_argument("--run-id",required=True)
-    p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
+    for action in ("chat-task", "codex-task"):
+        p=sub.add_parser(action);p.add_argument("--run-id",required=True)
+        p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
     p.add_argument("--response",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     args=parser.parse_args(argv)
@@ -377,8 +459,9 @@ def main(argv=None):
                 manuscript=args.manuscript,claims=args.claims)
             result={"original_output":original_call(command),"module":str(V16),
                     "action":args.action,"formal_eligible":False}
-        elif args.cmd=="chat-task":
-            result=chat_task(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd in ("chat-task", "codex-task"):
+            generator=chat_task if args.cmd=="chat-task" else codex_task
+            result=generator(args.run_id,args.phase);write(args.output,result)
         elif args.cmd=="chat-audit":
             result=audit_chat(read(args.task),read(args.response));write(args.output,result)
         else:

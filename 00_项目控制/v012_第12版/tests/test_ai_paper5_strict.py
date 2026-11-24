@@ -29,8 +29,10 @@ class StrictTests(TestCase):
 
     def test_search_route_calls_authoritative_v3(self):
         with patch.object(m,"state_of",side_effect=[{"status":"initial"},{"status":"preliminary_review"}]):
-            with patch.object(m,"original_call",return_value="original research output") as fn:
+            with patch.object(m,"original_call",return_value="original research output") as fn, \
+                 patch.object(m,"codex_task",return_value={"task_snapshot":{"snapshot_sha256":"fixture"}}) as packet:
                 result=m.status("paper_a",progress=True)
+                packet.assert_called_once_with("paper_a","initial")
         self.assertEqual(result["action"],"original_native_literature_search")
         self.assertEqual(result["after"],"preliminary_review")
         self.assertEqual(fn.call_args.args[0][3],"initial")
