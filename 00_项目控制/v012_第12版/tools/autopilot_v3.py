@@ -271,6 +271,13 @@ def prepare_issue_task(run_id):
             "dispatch_authorized":False,"formal_eligible":False}
 
 
+def event_preflight(work,state,*,comparison_required):
+    """Use original read-only evidence reconstruction before a new model call."""
+    sys.path.insert(0,str(heritage.V32/"tools"))
+    from staged_topic import verify_automatic_event_inputs
+    verify_automatic_event_inputs(work,state,comparison_required=comparison_required)
+
+
 def step(run_id, *, executor=None):
     heritage.doctor()
     work=heritage.RUNS/heritage.run_id_guard(run_id)
@@ -292,6 +299,8 @@ def step(run_id, *, executor=None):
                 "actions":"source-verified reality via original v3.2"}
     if phase=="explanation_exchange":
         comparison=work/"event_comparison.json"
+        if state.get("issue_search"):
+            event_preflight(work,state,comparison_required=comparison.is_file())
         if not comparison.is_file():
             packet,folder,session,trace,url_event=engine.call(
                 work,"events","Compare at least two distinct independently identified "
@@ -309,6 +318,8 @@ def step(run_id, *, executor=None):
                  "--dev-run",str(work),"--input",str(path),
                  "--events-jsonl",str(events_path)]
             heritage.original_call(cmd)
+            if state.get("issue_search"):
+                event_preflight(work,state,comparison_required=True)
         task=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
         research_task=json.dumps(task,ensure_ascii=False)+(
             "\nRecord original explanation and what evidence would distinguish it. "
@@ -407,6 +418,8 @@ def step(run_id, *, executor=None):
     if phase=="issue_positioning":
         from task_packet import verify_snapshot
         task=prepare_issue_task(run_id)
+        if state.get("issue_search"):
+            event_preflight(work,state,comparison_required=True)
         packet,folder,session,trace,url_event=engine.call(work,"issue",task["instruction"])
         verify_snapshot(task["task_snapshot"],current_run_id=run_id)
         heritage.original_call(heritage.original_command("issue",run_id,

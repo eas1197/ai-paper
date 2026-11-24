@@ -144,10 +144,57 @@ def theories(folder, state):
     return accepted
 
 
+def verify_automatic_event_inputs(work, state, *, comparison_required=True):
+    """Read-only preflight for automation; retain pending facts, never promote them."""
+    from event_protocol import (relative_receipt_path, validate_same_attempt,
+                                build_source_receipts, compare_events)
+    from codex_literature import web_url
+    load_reality(work,state)
+    if not comparison_required:
+        return
+    saved=load(work/"event_comparison.json")
+    if saved.get("run_id")!=state["run_id"] or saved.get("reality_sha256")!=state["reality_sha256"]:
+        raise ValueError("Original event comparison is bound to another run or reality")
+    if state.get("event_comparison_sha256") and digest(saved)!=state["event_comparison_sha256"]:
+        raise ValueError("Original pre-search evidence changed: event_comparison.json")
+    execution=saved.get("execution_receipt",{})
+    for key in ("response_path","events_path","response_sha256","events_sha256","thread_id"):
+        if not execution.get(key):
+            raise ValueError("Original event source receipts incomplete: "+key)
+    response=work/execution["response_path"]
+    events=work/execution["events_path"]
+    relative_receipt_path(response,work)
+    relative_receipt_path(events,work)
+    validate_same_attempt(response,events)
+    if (hashlib.sha256(response.read_bytes()).hexdigest()!=execution["response_sha256"]
+            or hashlib.sha256(events.read_bytes()).hexdigest()!=execution["events_sha256"]):
+        raise ValueError("Original event raw receipt changed")
+    threads=[row.get("thread_id") for row in
+             (json.loads(line) for line in events.read_text(encoding="utf-8-sig").splitlines())
+             if row.get("type")=="thread.started"]
+    if threads!=[execution["thread_id"]]:
+        raise ValueError("Original event thread receipt changed")
+    packet=load(response)
+    if digest(packet)!=saved.get("input_sha256"):
+        raise ValueError("Original event input digest changed")
+    trace=evidence(events)
+    receipts=build_source_receipts(packet,trace,work=work,events_path=events,response_path=response,
+        thread_id=threads[0],url_event_fn=url_event,canonicalize=web_url)
+    rebuilt=compare_events(packet,receipts,canonicalize=web_url,execution=execution)
+    if any(saved.get(key)!=value for key,value in rebuilt.items()):
+        raise ValueError("Original event comparison differs from raw receipts")
+    if rebuilt["event_count"]<2 or rebuilt["source_verification_status"]!="verified":
+        raise ValueError("Original event source receipts incomplete; stop automatic advancement")
+
+
 def search(work, state, phase, resume, *, budget_migration=None):
     allowed = "initial" if phase == "initial" else "supplemental"
     if state["status"] != allowed:
         raise ValueError("Search not authorized in this state; reuse existing evidence during revisions")
+    if state.get("issue_search"):
+        verify_automatic_event_inputs(work,state)
+        if digest(load(work/"explanation_exchange.json"))!=state.get("exchange_sha256"):
+            raise ValueError("Original pre-search explanation or challenge changed")
     first = work / "initial"
     initial = load(first / "literature_matrix.json") if phase == "supplemental" else None
     folder = work / phase
