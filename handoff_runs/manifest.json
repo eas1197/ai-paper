@@ -2,7 +2,7 @@
   "runs": [
     {
       "run_id": "bike_parking_20261122",
-      "files": 230,
+      "files": 231,
       "type": "historical",
       "root": "00_项目控制/v007_第7版/runs_dev/bike_parking_20261122"
     },
@@ -64,7 +64,7 @@
       "run_id": "digital_mutual_aid_20261122",
       "type": "historical",
       "root": "00_项目控制/v007_第7版/runs_dev/digital_mutual_aid_20261122",
-      "files": 12
+      "files": 25
     },
     {
       "run_id": "rider_access_20261123",
@@ -527,7 +527,8 @@
     "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/逐段语言修订记录.json": "a39b6f5ca5de4cbe695b31064522945603c029ac3133214e34b76f7f4c29b264",
     "digital_mutual_aid_20261122/chat_native_20261122/writing/ai_writer4_0/静态核验.json": "1cf4eab06b4c4d92ae3cb6fa3618b83c83307b9a2a65a57402bd54f153b44d03",
     "rider_access_20261123/ai_paper5/论文_探索性全文.md": "f53c48130e237b888e57b92da622201d3552d7865b2a26390eff0f5a658f4063",
-    "rider_access_20261123/ai_paper5/研究全过程与验收.md": "0557c146ae398a3058b8bf5d212b52f0494bc189f62612e48ec878aa36442f50"
+    "rider_access_20261123/ai_paper5/研究全过程与验收.md": "0557c146ae398a3058b8bf5d212b52f0494bc189f62612e48ec878aa36442f50",
+    "bike_parking_20261122/autonomous_writing/plan_review_0_budget_audit.json": "c88542f403a4dad63ff76c2ec0da0f056c27995056dbcefac71a84c1829dfd21"
   },
   "omitted": [
     [
@@ -1796,5 +1797,7 @@
       "8aabff383df1e2dcd7cfbebd7b7c894c176be09a9a0861f6ffabddcf4201a1cf",
       "raw output or sensitive diagnostic; local original retained"
     ]
-  ]
+  ],
+  "archive_scope": "existing_records_only",
+  "new_execution_proven": false
 }

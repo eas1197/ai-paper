@@ -1,16 +1,12 @@
-import hashlib
 import json
 from pathlib import Path
+from archive_provenance import load_manifest, verify_archive
 
 root = Path(__file__).resolve().parents[2] / "handoff_runs"
-manifest = json.loads((root / "manifest.json").read_bytes())
-for name, digest in manifest["files"].items():
-    path = (root / name).resolve()
-    if not path.is_relative_to(root) or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
-        raise ValueError(name)
-    if path.suffix == ".json":
-        json.loads(path.read_bytes())
-print(f"Verified {len(manifest['files'])} archived files")
+manifest = load_manifest(root / "manifest.json")
+result = verify_archive(root,manifest)
+print(f"Verified {result['archived_files']} archived files in {result['archived_runs']} runs; {result['omitted_files']} local-only omissions")
+print("Archive is not proof of a new execution or formal authorization")
 
 # Replay the actual archived plan input, with no model or workspace mounts.
 import sys
