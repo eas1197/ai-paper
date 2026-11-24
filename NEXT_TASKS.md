@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **H06（当前唯一最小任务）**：验证定性研究不会误入定量分析，定量研究不会误入定性矩阵写作。
-   - 状态：implemented_unverified；H06 原定量plan、定性材料/矩阵分流已有回归；新增 unified resume-writing 与原v009 resume 冻结方法前置保护，新增双入口负向测试待CI，未计完成。
+   - 状态：implemented_unverified；H06 新增双入口负向测试两轮均通过；strict `45414111192` 与 Handoff `45414111166` 因原V15正向模拟夹具缺 staged_topic.json 失败，已补明确模拟冻结校验和调用断言，真实门禁不改；待完整CI，不计完成。
    - 完成后：提交并转 H07。
 
 H05 已验收：[原V14定量写作分流](00_项目控制/v012_第12版/outputs/H05_原V14定量写作分流验收.md)；H05 verified（原V14定量写作路由；strict `45413173999` success，4项对应已有回归；不执行真实写作）。

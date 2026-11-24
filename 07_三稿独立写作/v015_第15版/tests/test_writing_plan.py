@@ -159,7 +159,13 @@ class WritingPlanTest(unittest.TestCase):
                           "material_adequacy": {"support": "sufficient", "reason": "Synthetic only",
                                                 "eligible_event_ids": ["E"]}}
                 run_mode.write(prior, dict(review, material_adequacy=dict(review["material_adequacy"], support="unknown")))
-                with patch.object(resume_writing, "binding", return_value=contract), \
+                # The original freeze verifier is a separate contract (real S08
+                # verification is exercised by v012 test_frozen_route).
+                state = {"status": "frozen", "run_id": work.name, "fixture": True}
+                run_mode.write(work / "staged_topic.json", state)
+                with patch.object(resume_writing, "verified_frozen_topic",
+                                  return_value=run_mode.load(work / "s08_topic.json")) as verify, \
+                     patch.object(resume_writing, "binding", return_value=contract), \
                      patch.object(writing_plan, "binding", return_value=contract), \
                      patch.object(resume_writing, "dispatch") as dispatch:
                     self.assertEqual(resume_writing.resume(work, folder, prior)["status"],
@@ -172,6 +178,8 @@ class WritingPlanTest(unittest.TestCase):
                     self.assertEqual([call.args[1] for call in dispatch.call_args_list],
                                      ["plan_0", "plan_review_0"])
                     self.assertTrue(dispatch.call_args_list[1].kwargs["reviewer"])
+                    self.assertEqual(verify.call_count, 2)
+                    verify.assert_called_with(work, state)
                 output = work / "autonomous_writing/draft_0"
                 plan = (output / "论文写作方案.md").read_text(encoding="utf-8")
                 saved = run_mode.load(output / "plan_input.json")
