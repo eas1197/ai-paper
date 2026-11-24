@@ -51,6 +51,43 @@ class RepairPlanTests(unittest.TestCase):
         for paths in ([self.target,self.target],["other.json"]):
             with self.assertRaises(ValueError): self.plan({"I1":paths})
 
+    def test_g22_five_g7_issue_types_produce_bound_revision_tasks(self):
+        from review_repair_plan import G7_REPAIR_GUIDANCE
+        manuscript = "writer4/draft.md"
+        claims = "writer4/claims.json"
+        request = "writer4/writing_review_request.json"
+        draft_ref = self.write(manuscript, {"fixture": "draft"})
+        claims_ref = self.write(claims, {"fixture": "claims"})
+        req_ref = self.write(request, {"manuscript_sha256": draft_ref["sha256"],
+                                       "claim_ledger_sha256": claims_ref["sha256"]})
+        self.context.update(review_kind="qualitative_g7", gate_ref="V16 writing_review_request",
+                            input_binding={"selected_object": req_ref},
+                            review_dimensions=[{"dimension_id": key} for key in G7_REPAIR_GUIDANCE])
+        for item in (draft_ref, claims_ref, req_ref):
+            self.context["input_materials"].append({"artifact_id": item["path"], "role": "fixture", **item})
+            self.snapshot["packet"]["input_files"].append(item)
+        self.snapshot["packet"]["input_files"][0] = self.write("context.json", self.context)
+        issues = [{"issue_id": "I"+str(i), "dimension_id": key, "category": "academic_defect",
+                   "blocking": True, "detail": "Fixture defect "+key,
+                   "required_action": "Revise stated defect", "evidence_ids": ["M1"]}
+                  for i, key in enumerate(G7_REPAIR_GUIDANCE)]
+        self.report.update(review_kind="qualitative_g7", decision="revise", evidence_findings=[], issues=issues)
+        self.sync()
+        self.task_packet.heritage.state_of=Mock(return_value={"status":"frozen"})
+        result=self.plan({issue["issue_id"]:[manuscript,claims] for issue in issues})
+        self.assertEqual(len(result["repair_tasks"]),5)
+        for task in result["repair_tasks"]:
+            self.assertEqual(task["revision_guidance"],G7_REPAIR_GUIDANCE[task["dimension_id"]])
+            self.assertTrue(task["resubmit_required"])
+            self.assertTrue(task["independent_re_review_required"])
+            self.assertEqual([item["sha256"] for item in task["targets"]],
+                             [draft_ref["sha256"],claims_ref["sha256"]])
+        self.assertFalse(result["execute_revision"])
+        self.assertFalse(result["advance_gate"])
+        self.assertFalse(result["formal_eligible"])
+        with self.assertRaises(ValueError):
+            self.plan({issue["issue_id"]:["receipt.json"] for issue in issues})
+
     def test_pass_is_not_revision(self):
         self.prepare()
         self.report.update(decision="pass",issues=[])

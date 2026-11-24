@@ -4,6 +4,15 @@ from review_binding import read_review_candidate
 from review_route_plan import pass_contract
 
 
+G7_REPAIR_GUIDANCE = {
+    "argument_progression": "Identify the failed inferential step; revise the argument and its transitions against the frozen question and evidence.",
+    "material_scope": "Narrow or remove claims exceeding the admitted material, population, event or time scope; request new material through the original gate if necessary.",
+    "literature_neighbour": "Compare the claimed contribution with the nearest available literature; distinguish existing explanation from the actual increment. Do not invent citations.",
+    "concept_boundary": "Disambiguate concepts, define their referents and apply the same definition across sections; revise affected claims.",
+    "causal_overreach": "Remove unsupported causal language or narrow the inference to the evidence; state rival explanations and limits.",
+}
+
+
 def revision_targets(run, context):
     """Identify editable/proposable objects from the frozen inputs, not source logs."""
     kind = context["review_kind"]
@@ -68,10 +77,16 @@ def plan_candidate_revision(report_path, *, current_run_id, expected_reference, 
         if (not isinstance(targets, list) or not targets or not all(isinstance(p, str) and p in allowed for p in targets)
                 or len(set(targets)) != len(targets)):
             raise ValueError("Revision target is not an allowed current artifact")
-        tasks.append({"issue_id": key, "dimension_id": issue["dimension_id"], "problem": issue["detail"],
-                      "required_action": issue["required_action"], "category": issue["category"],
-                      "evidence_ids": issue["evidence_ids"],
-                      "targets": [{**artifacts[p], "repair_mode": allowed[p]} for p in targets]})
+        task = {"issue_id": key, "dimension_id": issue["dimension_id"], "problem": issue["detail"],
+                "required_action": issue["required_action"], "category": issue["category"],
+                "evidence_ids": issue["evidence_ids"],
+                "targets": [{**artifacts[p], "repair_mode": allowed[p]} for p in targets]}
+        if context["review_kind"] == "qualitative_g7":
+            task["revision_guidance"] = G7_REPAIR_GUIDANCE.get(issue["dimension_id"],
+                "Resolve the identified issue using only current admitted evidence; record any remaining limits.")
+            task["resubmit_required"] = True
+            task["independent_re_review_required"] = True
+        tasks.append(task)
     return {"task_snapshot": expected_reference, "report_sha256": audit["report_sha256"],
             "proposed_decision": "revise", "status": "candidate_revision_waiting_authorization",
             "native_handler": native["native_handler"], "repair_tasks": tasks,

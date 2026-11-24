@@ -162,6 +162,9 @@ class ArtifactReviewTaskTests(unittest.TestCase):
         kwargs={"packet_path":self.packet_path,"manuscript_path":manuscript,"claims_path":claims}
         result,ctx=self.task(request,**kwargs)
         self.assertEqual(ctx["review_kind"],"qualitative_g7")
+        self.assertTrue({"argument_progression","material_scope","literature_neighbour",
+                         "concept_boundary","causal_overreach"} <=
+                        {row["dimension_id"] for row in ctx["review_dimensions"]})
         self.assertEqual(ctx["key_claims"][0]["claim_id"],"C1")
         self.assertEqual(result["task_packet"]["time_budget_seconds"],0)
         self.put(claims,{"claims":[]})

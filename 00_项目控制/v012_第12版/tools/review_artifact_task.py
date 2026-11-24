@@ -267,7 +267,8 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
             claims.append({"claim_id": key, "statement": literal, "type": "draft_claim",
                            "evidence_ids": refs, "scope": "Candidate claim, semantic support requires independent review."})
         _require(claims, "V16 claim ledger is empty")
-        kind, gate, dims = "qualitative_g7", "V16 writing_review_request", ["claim_support", "counterevidence", "argument_progression", "language_and_scope"]
+        kind, gate, dims = "qualitative_g7", "V16 writing_review_request", ["claim_support", "counterevidence", "argument_progression", "language_and_scope",
+            "material_scope", "literature_neighbour", "concept_boundary", "causal_overreach"]
     else:
         raise ValueError("Unrecognized original pending review object")
     artifacts = list(inputs.artifacts.values())
@@ -275,13 +276,14 @@ def prepare_artifact_review_task(run_id, review_object, *, packet_path=None, man
     pending = sorted(pending - set(allowed))
     _require(len({c["claim_id"] for c in claims}) == len(claims), "Duplicate review claim")
     purpose = "Candidate review of " + kind + "; original gate retains authority."
+    from review_repair_plan import G7_REPAIR_GUIDANCE
     context = {"context_version": 1, "review_kind": kind, "review_type": "academic_review",
         "gate_ref": gate, "research_question": question, "design": design, "input_materials": artifacts,
         "key_claims": claims, "claims_scope": "Only the selected original artifacts; no established mechanism or formal pass is implied.",
         "evidence_scope": {"allowed_ids": allowed, "excluded_or_pending_ids": pending,
             "limitations": ["Candidate material IDs are not authenticated semantic support.",
                             "Prior review/adequacy and G3 flags are not independent authorization."], "policy_refs": policy},
-        "review_dimensions": [{"dimension_id": d, "question": d, "evidence_ids": allowed,
+        "review_dimensions": [{"dimension_id": d, "question": G7_REPAIR_GUIDANCE.get(d, d) if kind == "qualitative_g7" else d, "evidence_ids": allowed,
             "failure_condition": "Insufficient traceable evidence or unresolved scope."} for d in dict.fromkeys(dims)],
         "prohibitions": ["No additional search", "No source invention", "No original state mutation", "No formal approval"],
         "prior_review": None, "input_binding": {"original_evidence_sha256": original["evidence_sha256"],
