@@ -139,6 +139,37 @@ def state_of(run_id):
     return state
 
 
+def frozen_route(run_id):
+    """Delegate freeze verification to the original v009 and describe the selected path."""
+    work=(RUNS/run_id_guard(run_id)).resolve(strict=True)
+    script=("import json,sys; from pathlib import Path; sys.path.insert(0,sys.argv[1]); "
+            "from staged_topic import verified_frozen_topic,load,run_mode; "
+            "work=Path(sys.argv[2]); run_mode.verified_run(work); "
+            "print(json.dumps(verified_frozen_topic(work,load(work/'staged_topic.json'))))")
+    before=sha(work/"s08_topic.json")
+    frozen=json.loads(original_call([sys.executable,"-B","-c",script,str(V3_TOPIC.parent),str(work)],timeout=60))
+    if sha(work/"s08_topic.json")!=before or state_of(run_id)["status"]!="frozen":
+        raise ValueError("Frozen topic changed during route selection")
+    method=frozen["research_method"]["path"]
+    base={"stage":"frozen","method":method,"freeze_sha256":before,
+        "research_id":run_id,"formal_eligible":False,"automatic_execution":False}
+    if method=="quantitative":
+        modules=[ROOT/"06_数据方法与分析/v004_第4版/tools/stage06.py",
+                 ROOT/"07_三稿独立写作/v014_第14版/tools/stage07.py"]
+        if any(not path.is_file() for path in modules):
+            raise ValueError("Original quantitative modules are missing")
+        return {**base,"action":"original_quantitative_handoff",
+            "status":"awaiting_original_quantitative_inputs",
+            "modules":[str(path) for path in modules],"stata_executed":False}
+    if method in {"secondary_interviews","online_qualitative"}:
+        return {**base,"action":"original_06_adequacy_then_v15_v16",
+            "status":"awaiting_original_independent_material_and_writing_receipts",
+            "modules":[str(MATERIAL),str(MATERIAL_REPAIR),str(MATERIAL_ADEQUACY),str(REVISION),str(V15),str(V16)],
+            "writer4_dispatch":"writer4 --action prepare --packet <reviewed V15 plan_input.json> --workspace <new workspace> --mode exploratory",
+            "writer4_formal_status":"blocked_until_original_independent_receipts"}
+    raise ValueError("Unsupported original frozen method")
+
+
 def status(run_id, *, progress=False):
     doctor()
     state = state_of(run_id)
@@ -165,15 +196,7 @@ def status(run_id, *, progress=False):
             return {"action": "original_s08_freeze", "after": state_of(run_id)["status"]}
         return {"action": "original_s08_freeze", "command": original_command("s08", run_id)}
     if stage == "frozen":
-        return {"action": "original_06_adequacy_then_v15_v16",
-                "status": "awaiting_original_independent_material_and_writing_receipts",
-                "modules": [str(MATERIAL), str(MATERIAL_REPAIR), str(MATERIAL_ADEQUACY),
-                            str(REVISION), str(V15), str(V16)],
-                "writer4_dispatch": (
-                    "writer4 --action prepare --packet <reviewed V15 plan_input.json> "
-                    "--workspace <new workspace> --mode exploratory"
-                ),
-                "writer4_formal_status": "blocked_until_original_independent_receipts"}
+        return frozen_route(run_id)
     return {"action": "original_v3_requires_staged_evidence_or_independent_review",
             "stage": stage,
             "prepare": original_command("prepare", run_id),

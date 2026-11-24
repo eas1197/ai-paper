@@ -375,9 +375,8 @@ def review(work, state, report, *, review_intake=None):
         state["status"] = result
 
 
-def freeze(work, state):
-    if state["status"] != "s08_ready":
-        raise ValueError("A final positive independent review is required")
+def _reviewed_freeze_payload(work, state):
+    """Single original source for the reviewed freeze payload."""
     evidence_sha = evidence_hash(work, state, work / "merged_literature.json",
                                  work / "initial/theories.json")
     history = state.get("history", [])
@@ -398,12 +397,33 @@ def freeze(work, state):
     if state.get("qual_search_receipts") and method["path"] != "quantitative":
         path = method["path"]
         verify_material_review(work, path, final["method_assessment"]["paths"][path], final["question"])
-    write(work / "s08_topic.json", {"stage": "S08", "question": final["question"], "design": design,
+    return {"stage": "S08", "question": final["question"], "design": design,
           "research_case": final.get("research_case"),
           "research_method": method,
           "evidence_sha256": evidence_sha, "review_sha256": digest(final), "mode": state["mode"],
-          "formal_eligible": False, "scope": "experimental" if state["mode"] == "dev" else "formal_candidate"})
+          "formal_eligible": False, "scope": "experimental" if state["mode"] == "dev" else "formal_candidate"}
+
+
+def freeze(work, state):
+    if state["status"] != "s08_ready":
+        raise ValueError("A final positive independent review is required")
+    write(work / "s08_topic.json", _reviewed_freeze_payload(work, state))
     state["status"] = "frozen"
+
+
+def verified_frozen_topic(work, state):
+    """Read-only original freeze verification for the post-S08 handoff."""
+    if state["status"] != "frozen":
+        raise ValueError("Original S08 is not frozen")
+    if state.get("run_id") != work.name or state.get("policy_sha256") != digest(POLICY):
+        raise ValueError("Frozen run identity or policy changed")
+    frozen = load(work / "s08_topic.json")
+    if frozen != _reviewed_freeze_payload(work, state):
+        raise ValueError("Original S08 frozen payload differs from reviewed inputs")
+    method = frozen.get("research_method")
+    if not isinstance(method, dict) or method.get("path") not in PATHS:
+        raise ValueError("Frozen method missing or unsupported")
+    return frozen
 
 
 def load_reality(work, state):
