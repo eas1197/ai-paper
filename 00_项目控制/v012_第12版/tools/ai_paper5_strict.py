@@ -223,9 +223,23 @@ def status(run_id, *, progress=False):
             # batches, deduplication, abstract provenance and source quota.
             task = codex_task(run_id, stage)
             output = original_call(original_command(stage, run_id))
-            return {"action": "original_native_literature_search", "before": stage,
-                    "after": state_of(run_id)["status"], "output": output[-1300:],
-                    "task_snapshot": task["task_snapshot"]}
+            after = state_of(run_id)["status"]
+            result = {"action": "original_native_literature_search", "before": stage,
+                      "after": after, "output": output[-1300:],
+                      "task_snapshot": task["task_snapshot"]}
+            # The original collector can return exit 0 with a technical-stop
+            # decision; that is not a completed research step or rejected paper.
+            if after == stage:
+                try:
+                    decision = json.loads(output)
+                except (ValueError, TypeError):
+                    decision = None
+                if (isinstance(decision, dict) and decision.get("origin") == "controller"
+                        and decision.get("phase") == stage and decision.get("action") == "retry_technical"
+                        and isinstance(decision.get("failure"), str) and decision["failure"]):
+                    result.update(status="execution_failed", execution_status="failed",
+                                  original_decision=decision, automatic_retry=False)
+            return result
         return {"action": "original_native_literature_search", "stage": stage,
                 "command": original_command(stage, run_id)}
     if progress:

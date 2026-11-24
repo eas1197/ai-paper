@@ -128,6 +128,27 @@ class StrictTests(TestCase):
         self.assertEqual(result["after"],"preliminary_review")
         self.assertEqual(fn.call_args.args[0][3],"initial")
 
+    def test_i05_original_technical_stop_is_not_literature_failure(self):
+        from run_observation import command_observation
+        for phase in ("initial", "supplemental"):
+            for failure in ("Codex subscription login unavailable", "native network timeout"):
+                with self.subTest(phase=phase, failure=failure):
+                    decision = {"origin":"controller","phase":phase,"action":"retry_technical",
+                                "failure":failure,"count":2,"target":5,
+                                "checkpoint_sha256":"fixture"}
+                    with patch.object(m,"state_of",side_effect=[{"status":phase},{"status":phase}]), \
+                         patch.object(m,"original_call",return_value=json.dumps(decision)) as call, \
+                         patch.object(m,"codex_task",return_value={"task_snapshot":{"snapshot_sha256":"fixture"}}):
+                        result=m.status("paper_a",progress=True)
+                    self.assertEqual(result["before"],result["after"])
+                    self.assertEqual(result["original_decision"],decision)
+                    self.assertFalse(result["automatic_retry"])
+                    call.assert_called_once()
+                    runtime=command_observation("advance",result)
+                    self.assertEqual(runtime["runtime_status"],"failed")
+                    self.assertEqual(runtime["outcome_kind"],"technical_failure")
+                    self.assertFalse(runtime["academic_approval_granted"])
+
     def test_original_06_07_and_events_are_not_reimplemented(self):
         cmd=m.original_material_command("audit_run",conversion="conversion.json")
         self.assertIn("v005_第5版/tools/qual_materials.py"," ".join(cmd))
