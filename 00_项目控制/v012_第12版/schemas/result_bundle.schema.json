@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ai-paper shared result envelope, C11",
+  "description": "Executor-neutral identity with mutually exclusive native provenance. Structure never authenticates execution or establishes eligibility.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "task_snapshot": {
+      "type": "object",
+      "properties": {
+        "research_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stage_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "research_id",
+        "stage_id",
+        "task_id",
+        "snapshot_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "executor": {
+      "enum": [
+        "chat_native_web",
+        "codex_cli",
+        "manual"
+      ]
+    },
+    "provenance": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/chat_provenance"
+        },
+        {
+          "$ref": "#/$defs/codex_provenance"
+        },
+        {
+          "$ref": "#/$defs/manual_provenance"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_snapshot",
+    "executor",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "executor": {
+            "const": "chat_native_web"
+          }
+        },
+        "required": [
+          "executor"
+        ]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "$ref": "#/$defs/chat_provenance"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "executor": {
+            "const": "codex_cli"
+          }
+        },
+        "required": [
+          "executor"
+        ]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "$ref": "#/$defs/codex_provenance"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "executor": {
+            "const": "manual"
+          }
+        },
+        "required": [
+          "executor"
+        ]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "$ref": "#/$defs/manual_provenance"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "chat_provenance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "chat_native_web"
+        },
+        "record_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        },
+        "citation_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "record_refs",
+        "citation_refs",
+        "missing_fields"
+      ],
+      "additionalProperties": false
+    },
+    "codex_provenance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "codex_cli"
+        },
+        "command": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "thread_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "exit_code": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "events": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "response": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stderr": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "prompt": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "schema": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "login": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "command",
+        "thread_id",
+        "exit_code",
+        "events",
+        "response",
+        "stderr",
+        "prompt",
+        "schema",
+        "login",
+        "missing_fields"
+      ],
+      "additionalProperties": false
+    },
+    "manual_provenance": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "manual"
+        },
+        "submitter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "submitted_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "source_type": {
+          "enum": [
+            "uploaded_file",
+            "public_url",
+            "interview_transcript",
+            "manual_excerpt",
+            "other"
+          ]
+        },
+        "verification_status": {
+          "enum": [
+            "unverified",
+            "pending",
+            "verified",
+            "rejected"
+          ]
+        },
+        "original_files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "submitter",
+        "submitted_at",
+        "source_type",
+        "verification_status",
+        "original_files",
+        "missing_fields"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
