@@ -289,6 +289,79 @@ class StrictTests(TestCase):
             self.assertEqual(manifest["plan_sha256"],m.sha(workspace/"writing_plan_v15.md"))
             self.assertFalse((workspace/"writing_review_request.json").exists())
 
+    def test_g19_v012_submit_real_original_writer(self):
+        import contextlib
+        import io
+        with tempfile.TemporaryDirectory() as temporary:
+            packet=make_v15_fixture(Path(temporary))
+            run=packet.parent.parent.parent
+            workspace=run/"writer4_workspace"
+            draft=run/"draft.md"
+            claims=run/"claims.json"
+            base=["writer4","--packet",str(packet),"--workspace",str(workspace)]
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(m.main(base+["--action","prepare"]),0)
+            manifest=json.loads((workspace/"writer_manifest.json").read_text(encoding="utf-8"))
+            original=json.loads(packet.read_text(encoding="utf-8"))
+            text=""
+            paragraphs=[]
+            coverage=[]
+            entries=[]
+            for task_id,chapter in zip(manifest["task_ids"],original["chapters"]):
+                text+="## "+chapter["id"]+"\n\n"
+                for number, _ in enumerate(chapter["sections"][0]["paragraphs"],1):
+                    literal="测试材料："+task_id+"-"+str(number)+"。"
+                    start=len(text)
+                    text+=literal
+                    cid=task_id+"-"+str(number)
+                    paragraphs.append({"task_id":task_id,"paragraph_index":number,
+                                       "exact_text":literal,"start":start,"end":len(text),"source_ids":["E"]})
+                    coverage.append({"task_id":task_id,"paragraph_index":number,
+                                     "status":"claims_registered","claim_ids":[cid]})
+                    entries.append({"claim_id":cid,"task_id":task_id,"paragraph_index":number,
+                                    "claim_type":"empirical","exact_text":literal,"source_ids":["E"],
+                                    "source_locators":{"E":original["sources"]["E"]["locator"]},
+                                    "scope":"Synthetic fixture only"})
+                    text+="\n\n"
+            draft.write_text(text,encoding="utf-8")
+            ledger={"packet_sha256":manifest["packet_sha256"],"task_sha256":manifest["task_sha256"],
+                    "paragraph_bindings":paragraphs,"coverage_inventory":coverage,
+                    "claims":entries,"unsupported_claims":[]}
+            def save_ledger():
+                claims.write_text(json.dumps(ledger,ensure_ascii=False),encoding="utf-8")
+            save_ledger()
+            args=base+["--action","submit","--manuscript",str(draft),"--claims",str(claims)]
+            output=io.StringIO()
+            with contextlib.redirect_stdout(output):
+                self.assertEqual(m.main(args),0)
+            result=json.loads(output.getvalue())["result"]
+            self.assertEqual(json.loads(result["original_output"])["status"],"exploratory_draft_awaiting_review")
+            request_path=workspace/"writing_review_request.json"
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertEqual(request["manuscript_sha256"],m.sha(draft))
+            self.assertEqual(request["claim_ledger_sha256"],m.sha(claims))
+            self.assertEqual(request["draft_task_binding"]["paragraph_count"],10)
+            self.assertEqual(request["claim_coverage"]["counts"]["empirical"],10)
+            self.assertFalse(request["formal_pass"])
+            self.assertEqual(request["independent_review"],"pending")
+            self.assertTrue((workspace/"style_review.json").is_file())
+            ledger["claims"][0]["source_locators"]["E"]="invented"
+            save_ledger()
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(m.main(args),2)
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertEqual(request["status"],"technical_revisions_needed")
+            self.assertTrue(any("locator" in x for x in request["structural_errors"]))
+            ledger["claims"][0]["source_locators"]["E"]=original["sources"]["E"]["locator"]
+            save_ledger()
+            # Remove a heading without moving the frozen paragraph offsets.
+            draft.write_text(text.replace("## problem","-- problem",1),encoding="utf-8")
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(m.main(args),2)
+            request=json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertTrue(any("chapter count" in x for x in request["structural_errors"]))
+            self.assertFalse(request["formal_pass"])
+
     def test_g16_adapter_requires_run_owned_draft_and_strict_task_binding(self):
         with tempfile.TemporaryDirectory() as temporary:
             packet=make_v15_fixture(Path(temporary))
