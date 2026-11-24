@@ -61,3 +61,15 @@ def receive_review_or_wait(report_path, *, current_run_id, expected_reference, c
                              'Execution or proposed review is incomplete', bound)
     return _persist_wait(run, expected_reference, 'independent_authorization_pending',
                          'Record matching alone cannot verify independent host access or authorize the original gate', bound)
+
+
+def prepare_independent_wait(run_id):
+    """E12: connect existing D21 preparation to D18, without launching a review."""
+    from review_task import prepare_review_task
+    candidate = prepare_review_task(run_id)
+    wait = receive_review_or_wait(None, current_run_id=run_id,
+        expected_reference=candidate["task_snapshot"], context_path=candidate["context_path"])
+    return {"status":"blocked_by_original_v3_gate",
+        "action":"await_independent_review","next":candidate["task_packet"]["stage_id"],
+        "candidate":candidate,"wait":wait,"advance_gate":False,
+        "automatic_retry":False,"formal_eligible":False}

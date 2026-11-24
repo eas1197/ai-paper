@@ -154,6 +154,11 @@ def status(run_id, *, progress=False):
                     "task_snapshot": task["task_snapshot"]}
         return {"action": "original_native_literature_search", "stage": stage,
                 "command": original_command(stage, run_id)}
+    if progress:
+        from review_task import STAGES
+        if stage in STAGES:
+            from review_wait import prepare_independent_wait
+            return prepare_independent_wait(run_id)
     if stage == "s08_ready":
         if progress:
             original_call(original_command("s08", run_id))

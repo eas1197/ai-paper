@@ -409,8 +409,15 @@ def step(run_id, *, executor=None):
                                                         report=folder/"response.json"))
         return {"next":heritage.state_of(run_id)["status"],
                 "actions":"original v3.2 three-layer issue positioning"}
-    if phase in heritage.PHASES or phase=="s08_ready":
+    from review_task import STAGES
+    if phase in STAGES:
         return heritage.status(run_id,progress=True)
+    if phase in heritage.PHASES or phase=="s08_ready":
+        result=heritage.status(run_id,progress=True)
+        if result.get("after") in STAGES:
+            wait=heritage.status(run_id,progress=True)
+            return {**wait,"original_transition":result}
+        return result
     return {"next":phase,"status":"blocked_by_original_v3_gate",
             "reason":"Use authentic independent academic review / 06 material adequacy "
                      "and 07 writing receipts; no internal same-model promotion.",
