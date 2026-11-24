@@ -360,6 +360,26 @@ def step(run_id, *, executor=None):
             "originals":heritage.status(run_id)}
 
 
+def run_autopilot(run_id, *, theme="社会生活", model=None, timeout=900, max_steps=8):
+    """Shared implementation; original gates and bounded step loop are unchanged."""
+    heritage.doctor()
+    path=heritage.RUNS/heritage.run_id_guard(run_id)
+    if not path.exists():
+        saved_checkpoint=heritage.ROOT/"handoff_runs"/run_id/"staged_topic.json"
+        if saved_checkpoint.is_file():
+            raise RuntimeError(
+                "Saved handoff checkpoint exists but the original v3 run directory is missing; "
+                "restore the exact original run before resuming. Refusing to initialize a fresh run.")
+        heritage.original_call(heritage.original_command("init",run_id,theme=theme))
+    engine=Executor(timeout=timeout,model=model)
+    result=None
+    for _ in range(max(1,min(max_steps,20))):
+        result=step(run_id,executor=engine)
+        if result.get("status")=="blocked_by_original_v3_gate" or result.get("actions") is None and result.get("action")!="original_s08_freeze":
+            break
+    return {"status":"checkpoint","result":result,"v3_stage":heritage.state_of(run_id)["status"],"formal_eligible":False}
+
+
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--run-id",required=True)
@@ -369,24 +389,8 @@ def main(argv=None):
     p.add_argument("--max-steps",type=int,default=8)
     args=p.parse_args(argv)
     try:
-        heritage.doctor()
-        path=heritage.RUNS/heritage.run_id_guard(args.run_id)
-        if not path.exists():
-            saved_checkpoint=heritage.ROOT/"handoff_runs"/args.run_id/"staged_topic.json"
-            if saved_checkpoint.is_file():
-                raise RuntimeError(
-                    "Saved handoff checkpoint exists but the original v3 run directory is missing; "
-                    "restore the exact original run before resuming. Refusing to initialize a fresh run.")
-            heritage.original_call(heritage.original_command("init",args.run_id,theme=args.theme))
-        engine=Executor(timeout=args.timeout,model=args.model)
-        result=None
-        for _ in range(max(1,min(args.max_steps,20))):
-            result=step(args.run_id,executor=engine)
-            if result.get("status")=="blocked_by_original_v3_gate" or result.get("actions") is None and result.get("action")!="original_s08_freeze":
-                break
-        print(json.dumps({"status":"checkpoint","result":result,
-                          "v3_stage":heritage.state_of(args.run_id)["status"],
-                          "formal_eligible":False},ensure_ascii=False,indent=2))
+        print(json.dumps(run_autopilot(args.run_id,theme=args.theme,model=args.model,
+            timeout=args.timeout,max_steps=args.max_steps),ensure_ascii=False,indent=2))
         return 0
     except (OSError,RuntimeError,ValueError,KeyError,TypeError,TimeoutError) as exc:
         print(json.dumps({"status":"blocked","reason":str(exc)},ensure_ascii=False))

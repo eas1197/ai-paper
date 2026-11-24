@@ -406,10 +406,15 @@ def audit_chat(task, bundle):
             "note": "Structure checked under original 3.x rules; self-reported Chat tools cannot substitute for native CLI URLs/events or independent academic review."}
 
 
-def main(argv=None):
+def build_parser():
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest="cmd",required=True)
-    sub.add_parser("doctor")
+    sub.add_parser("doctor",help="Verify original module and policy contracts")
+    sub.add_parser("commands",help="List the actual supported CLI subcommands without running research")
+    p=sub.add_parser("prepare",help="Read original v009 pending task and input contract");p.add_argument("--run-id",required=True)
+    p=sub.add_parser("autopilot",help="Explicitly invoke the original bounded internal scheduler")
+    p.add_argument("--run-id",required=True);p.add_argument("--theme",default="社会生活")
+    p.add_argument("--model");p.add_argument("--timeout",type=int,default=900);p.add_argument("--max-steps",type=int,default=8)
     p=sub.add_parser("init"); p.add_argument("--run-id",required=True); p.add_argument("--theme",required=True)
     for action in ("status","advance"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
@@ -454,9 +459,27 @@ def main(argv=None):
     p=sub.add_parser("merge-results");p.add_argument("--run-id",required=True)
     p.add_argument("--task",type=Path,required=True);p.add_argument("--selection",type=Path,required=True)
     p.add_argument("--aliases",type=Path);p.add_argument("--output",required=True)
+    return parser
+
+
+def command_index(parser):
+    sub=next(action for action in parser._actions if isinstance(action,argparse._SubParsersAction))
+    return {"entry":"00_项目控制/v012_第12版/tools/ai_paper5_strict.py",
+            "commands":sorted(sub.choices),"discovery":"Use <command> --help for the exact parser",
+            "formal_eligible":False}
+
+
+def main(argv=None):
+    parser=build_parser()
     args=parser.parse_args(argv)
     try:
-        if args.cmd=="doctor": result=doctor()
+        if args.cmd=="commands": result=command_index(parser)
+        elif args.cmd=="doctor": result=doctor()
+        elif args.cmd=="prepare":
+            doctor();result=json.loads(original_call(original_command("prepare",args.run_id)))
+        elif args.cmd=="autopilot":
+            from autopilot_v3 import run_autopilot
+            result=run_autopilot(args.run_id,theme=args.theme,model=args.model,timeout=args.timeout,max_steps=args.max_steps)
         elif args.cmd=="init":
             doctor(); result={"original_output":original_call(original_command("init",args.run_id,theme=args.theme))}
         elif args.cmd in ("status","advance"): result=status(args.run_id,progress=args.cmd=="advance")

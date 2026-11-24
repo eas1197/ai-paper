@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **E02（当前唯一最小任务）**：将分散的 init/status/advance/review/materials/writing 调用统一为 v012 可发现、可检查的任务入口。
-   - 状态：pending；以 E01 唯一 strict CLI 为基线，接入内部调度及任务查询。
+   - 状态：已接入 commands/prepare/autopilot，新增4项测试，待CI。
    - 仅需读取：E02、strict/autopilot_v3、E01 命令索引及相关入口测试。
    - 验收：单一 CLI 可发现原入口与内部调度，保留原命令参数和原门禁，离线测试不启动真实模型。
    - 完成后：提交并转 E03。
