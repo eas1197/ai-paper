@@ -80,13 +80,15 @@ class Writer4Test(unittest.TestCase):
         self.assertEqual(manifest["language_snapshot_id"], "language_style_r3_paragraph_units_candidate")
         self.assertEqual(manifest["v003_resource_version"], 1)
         self.assertEqual(manifest["v004_resource_version"], 2)
+        self.assertIn("03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_evidence.jsonl",
+                      {item["path"] for item in manifest["resource_snapshot_warnings"]})
         self.assertIn("how_to_write", (writer.load(self.work / "tasks/d1_01.json"))["style_rules"][0])
         self.assertIn("分析框架", (self.work / "writing_plan_v15.md").read_text(encoding="utf-8"))
         with self.assertRaisesRegex(ValueError, "exists"):
             writer.prepare(self.packet_path, self.work)
 
     def test_language_snapshots_bind_versions_status_and_all_files(self):
-        profile, snapshot, rolemap, rules, locks, argument_titles = writer.language_resources()
+        profile, snapshot, rolemap, rules, locks, argument_titles, warnings = writer.language_resources()
         self.assertEqual(profile["profile_version"], "3.0")
         self.assertEqual(profile["resource_version"], 3)
         self.assertEqual(profile["formal_resource_gate_status"], "needs_review")
@@ -95,8 +97,10 @@ class Writer4Test(unittest.TestCase):
         self.assertIn("v003_resource_snapshot", locks)
         self.assertIn("v004_style_profile", locks)
         self.assertIn("v004_resource_snapshot", locks)
+        warning_paths = {item["path"] for item in warnings}
+        self.assertIn("03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_evidence.jsonl", warning_paths)
 
-    def test_unreferenced_snapshot_file_hash_change_is_rejected(self):
+    def test_unreferenced_snapshot_file_hash_change_is_recorded(self):
         original_hash = writer.hash_file
         target = writer.ROOT / "03_学术语言学习/v004_第4版/outputs/language_audit.csv"
         def altered_hash(path):
@@ -104,7 +108,19 @@ class Writer4Test(unittest.TestCase):
                 return "0" * 64
             return original_hash(path)
         with patch.object(writer, "hash_file", side_effect=altered_hash):
-            with self.assertRaisesRegex(ValueError, "snapshot resource changed"):
+            profile, snapshot, rolemap, rules, locks, argument_titles, warnings = writer.language_resources()
+        self.assertIn("03_学术语言学习/v004_第4版/outputs/language_audit.csv",
+                      {item["path"] for item in warnings})
+
+    def test_active_language_handbook_hash_mismatch_is_rejected(self):
+        original_hash = writer.hash_file
+        target = writer.LANGUAGE_V3.resolve()
+        def altered_hash(path):
+            if Path(path).resolve() == target:
+                return "0" * 64
+            return original_hash(path)
+        with patch.object(writer, "hash_file", side_effect=altered_hash):
+            with self.assertRaisesRegex(ValueError, "dependency changed: v003"):
                 writer.language_resources()
 
     def test_needs_review_resource_blocks_formal_mode_even_with_upstream_flags(self):

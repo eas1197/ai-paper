@@ -51,7 +51,8 @@ def relative(path):
         return path.name
 
 
-def verify_resource_snapshot(snapshot, label, module_version, resource_version, profile=None):
+def verify_resource_snapshot(snapshot, label, module_version, resource_version,
+                             required_paths, profile=None):
     if (snapshot.get("module_id") != "03"
             or snapshot.get("module_version") != module_version
             or snapshot.get("resource_version") != resource_version):
@@ -76,7 +77,8 @@ def verify_resource_snapshot(snapshot, label, module_version, resource_version, 
     files = snapshot.get("files")
     if not isinstance(files, list) or not files:
         raise ValueError("Language resource snapshot has no file inventory: " + label)
-    seen = set()
+    required = set(required_paths) | {gate_path}
+    seen, warnings = set(), []
     for item in files:
         if not isinstance(item, dict) or not item.get("path") or not item.get("sha256"):
             raise ValueError("Malformed language resource inventory: " + label)
@@ -85,9 +87,16 @@ def verify_resource_snapshot(snapshot, label, module_version, resource_version, 
             raise ValueError("Duplicate language resource inventory path: " + label)
         seen.add(path)
         source = ROOT / path
-        if not source.is_file() or hash_file(source) != item["sha256"]:
-            raise ValueError("Language snapshot resource changed: " + label + ":" + path)
-    return gate
+        actual = hash_file(source) if source.is_file() else None
+        if actual != item["sha256"]:
+            if path in required:
+                raise ValueError("Language snapshot dependency changed: " + label + ":" + path)
+            warnings.append({"snapshot": label, "path": path,
+                             "expected_sha256": item["sha256"], "actual_sha256": actual})
+    missing = sorted(required - seen)
+    if missing:
+        raise ValueError("Language snapshot omits required dependencies: " + label + ":" + ", ".join(missing))
+    return warnings
 
 
 def language_resources():
@@ -98,16 +107,26 @@ def language_resources():
     v003_snapshot = load(LANGUAGE_V3_SNAPSHOT)
     v004_profile = load(LANGUAGE_V4_PROFILE)
     v004_snapshot = load(LANGUAGE_V4_SNAPSHOT)
-    verify_resource_snapshot(v003_snapshot, "v003", 3, 1)
-    verify_resource_snapshot(v004_snapshot, "v004", 4, 2, v004_profile)
-    verify_resource_snapshot(snapshot, "v005", 5, 3, profile)
+    profile_refs = [profile["guide"], profile["examples"], profile["application"],
+                    profile["paragraph_style"]["mapping"], profile["paragraph_style"]["rules"]]
+    v003_required = {relative(LANGUAGE_V3)}
+    v004_required = {relative(LANGUAGE_V4_PROFILE)}
+    v004_required.update(item["path"] for item in profile_refs
+                         if item["path"].startswith("03_学术语言学习/v004_第4版/"))
+    v005_required = {relative(STYLE_PROFILE), profile["paragraph_style"]["mapping"]["path"]}
+    v005_required.update(item["path"] for item in profile_refs)
+    snapshot_warnings = []
+    snapshot_warnings.extend(verify_resource_snapshot(
+        v003_snapshot, "v003", 3, 1, v003_required))
+    snapshot_warnings.extend(verify_resource_snapshot(
+        v004_snapshot, "v004", 4, 2, v004_required, v004_profile))
+    snapshot_warnings.extend(verify_resource_snapshot(
+        snapshot, "v005", 5, 3, v005_required, profile))
     if (profile.get("profile_version") != "3.0"
             or v004_profile.get("profile_version") != "2.0"
             or set(profile.get("style_ids", [])) != set(v004_profile.get("style_ids", []))):
         raise ValueError("Published v003/v004/v005 language profile versions disagree")
     snapshot_index = {item["path"]: item["sha256"] for item in snapshot["files"]}
-    profile_refs = [profile["guide"], profile["examples"], profile["application"],
-                    profile["paragraph_style"]["mapping"], profile["paragraph_style"]["rules"]]
     if any(snapshot_index.get(item["path"]) != item["sha256"] for item in profile_refs):
         raise ValueError("v005 snapshot does not bind every published language profile resource")
     v003_index = {item["path"]: item["sha256"] for item in v003_snapshot["files"]}
@@ -146,7 +165,7 @@ def language_resources():
            or any(arg not in argument_titles for arg in x["argument_audit"])
            for x in rolemap["chapters"].values()):
         raise ValueError("Invalid qualitative map or v005 unit reference")
-    return profile, snapshot, rolemap, by_id, locks, argument_titles
+    return profile, snapshot, rolemap, by_id, locks, argument_titles, snapshot_warnings
 
 
 def validate_packet(packet):
@@ -179,7 +198,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
     packet_path, workspace = Path(packet_path), Path(workspace)
     packet = load(packet_path)
     rendered = validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks, argument_titles = language_resources()
+    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings = language_resources()
     if mode != "exploratory":
         formal_gates(packet, snapshot)
     if workspace.exists():
@@ -232,6 +251,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
         "language_resource_version": profile["resource_version"],
         "language_snapshot_id": snapshot["resource_snapshot_id"],
         "language_formal_resource_status": snapshot["status"],
+        "resource_snapshot_warnings": snapshot_warnings,
         "v003_resource_version": v003_snapshot["resource_version"],
         "v004_resource_version": v004_snapshot["resource_version"],
         "formal_eligible": False, "independent_review_verified": False,
