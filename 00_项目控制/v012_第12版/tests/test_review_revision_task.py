@@ -67,6 +67,17 @@ class RevisionPreparationTests(unittest.TestCase):
         self.assertFalse(result["dispatch_authorized"])
         task_packet.verify_snapshot(result["task_snapshot"],current_run_id=self.run_id)
 
+    def test_consecutive_rereviews_keep_current_context(self):
+        first=self.task()
+        shutil.copyfile(self.work/"initial/literature_matrix.json",self.work/"archive_round2.json")
+        self.write("initial/literature_matrix.json",{"rows":[],"revised":2})
+        self.revision=revision_fixture(self.work,first,"preliminary_academic","archive_round2.json",
+            "initial/literature_matrix.json",self.write)
+        second=self.task()
+        self.assertNotEqual(first["task_snapshot"],second["task_snapshot"])
+        context=strict.read(self.work/second["context_path"])
+        self.assertEqual(context["input_binding"]["historical_task_snapshot"],first["task_snapshot"])
+
     def test_missing_issue_and_unrelated_before_rejected(self):
         self.revision["issues"]=[]
         self.write("fixture_revision.json",self.revision)

@@ -54,17 +54,20 @@ def select_lineage(contract, work, prior_report, revision_record):
     activated = json.loads(_bound(work, activated_ref, h)[1])
     if contract._digest(snapshot) != version or contract._ref(snapshot, version) != old or activated != old:
         raise ValueError("Historical task snapshot integrity mismatch")
-    contexts = [row for row in snapshot["packet"]["input_files"]
-                if re.fullmatch(r"review_tasks/[0-9a-f]{64}\.json", row["path"])]
-    if len(contexts) != 1:
-        raise ValueError("Historical task lacks an unambiguous frozen review context")
-    old_context = json.loads(_bound(work, contexts[0], h)[1])
+    # Both review-task builders append the current context last; historical
+    # contexts may also be locked inputs on later rounds.
+    current_context = snapshot["packet"]["input_files"][-1]
+    if not re.fullmatch(r"review_tasks/[0-9a-f]{64}\.json", current_context["path"]):
+        raise ValueError("Historical task lacks its final frozen review context")
+    old_context = json.loads(_bound(work, current_context, h)[1])
+    if Path(current_context["path"]).stem != contract._digest(old_context):
+        raise ValueError("Historical context content address differs")
     if (old_context["review_kind"] != prior.get("review_kind")
             or old_context["research_question"] != snapshot["packet"]["research_question"]):
         raise ValueError("Prior report differs from historical review context")
     return {"prior": prior, "old": old, "old_context": old_context, "old_packet": snapshot["packet"],
             "lineage": {"report": report_ref, "revision": revision_ref},
-            "history_refs": [version_ref, activated_ref, contexts[0]]}
+            "history_refs": [version_ref, activated_ref, current_context]}
 
 
 def attach_lineage(contract, work, context, current_refs, selected, *, stage_id):
