@@ -15,7 +15,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ai_paper5_strict as heritage
-from run_observation import OriginalBudgetExhausted
+from run_observation import OriginalBudgetExhausted, classify_failure, failure_evidence
 
 
 def checksum(path):
@@ -208,7 +208,7 @@ class Executor:
         # Keep a durable call reservation before trying Codex. Never erase failed calls.
         task_sha=checksum(folder/"task.json")
         record={"stage":stage,"attempt":attempt,"status":"started",
-                "task_sha256":task_sha,
+                "task_sha256":task_sha, "executor":"codex_cli",
                 "execution_task_id":execution_task_id(work,stage,attempt,task_sha),
                 "model_call_reserved":1,"remaining_model_calls":ledger["budget"]-len(ledger["records"])-1,
                 "web_actions":None,"web_action_observation":"not_yet_observed"}
@@ -235,10 +235,15 @@ class Executor:
                 record.update(web_actions=None,web_action_observation="unreadable_events",
                               observation_error=str(exc)[:1000])
                 return None
+        def record_failure(exc, status):
+            kind=classify_failure(exc)
+            record.update(status=status,error=str(exc)[:1000],failure_kind=kind,
+                          failure_evidence=failure_evidence(kind,raw_error=str(exc),stage=stage,
+                                                            input_sha256=task_sha,executor="codex_cli"))
         try:
             code=invoke(cli(),folder,prompt,task_json,timeout=timeout,model=self.model)
         except Exception as exc:
-            record.update(status="technical_block",error=str(exc)[:1000])
+            record_failure(exc,"technical_block")
             try:
                 observe()
             finally:
@@ -256,7 +261,7 @@ class Executor:
             session=transcript_session(raw)
             packet=heritage.read(response)
         except Exception as exc:
-            record.update(status="failed",error=str(exc)[:1000])
+            record_failure(exc,"failed")
             heritage.write(history,ledger)
             raise
         record.update(status="completed",thread_id=session)

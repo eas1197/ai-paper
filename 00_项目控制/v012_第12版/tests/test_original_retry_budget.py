@@ -106,3 +106,26 @@ class OriginalRetryBudgetTest(unittest.TestCase):
              contextlib.redirect_stdout(out):
             self.assertEqual(strict.main(["autopilot","--run-id","fixture"]),2)
         self.assertEqual(json.loads(out.getvalue())["runtime"]["outcome_kind"],"technical_failure")
+
+    def test_i14_failure_ledger_retains_full_original_error_and_input_identity(self):
+        from run_observation import attempt_observation
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            message="network reset\\n"+"x"*1200
+            def invoke(cli, attempt, *args, **kwargs):
+                (attempt/"events.jsonl").write_text("original trace",encoding="utf-8")
+                raise ConnectionError(message)
+            with patch.object(auto,"native_modules",return_value=(lambda:"fixture",invoke,lambda path:["a"],Mock())):
+                with self.assertRaises(ConnectionError):
+                    auto.Executor().call(work,"reality","fixture")
+            row=auto.heritage.read(work/"v5_native_calls.json")["records"][0]
+            evidence=row["failure_evidence"]
+            attempt=work/"v5_native/reality/attempt_001"
+            self.assertEqual(evidence["raw_error"],message)
+            self.assertEqual(evidence["stage"],"reality")
+            self.assertEqual(evidence["input_sha256"],auto.checksum(attempt/"task.json"))
+            self.assertEqual(evidence["executor"],"codex_cli")
+            self.assertEqual(evidence["outcome_kind"],"network_failure")
+            self.assertTrue(evidence["recovery_suggestion"])
+            self.assertEqual((attempt/"events.jsonl").read_text(),"original trace")
+            self.assertEqual(attempt_observation(row)["failure_evidence"],evidence)

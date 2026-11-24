@@ -891,7 +891,7 @@ def main(argv=None):
         kind = "failed" if outcome in {"network_failure","executor_unavailable","model_timeout",
                                       "schema_error","academic_failure","technical_failure"} else "blocked"
         print(json.dumps({"status":"blocked","reason":str(exc),"failure_kind":outcome,
-            "runtime":observation(kind,reason=str(exc),outcome_kind=outcome)},ensure_ascii=False))
+            "runtime":observation(kind,reason=str(exc),outcome_kind=outcome,error_text=str(exc))},ensure_ascii=False))
         return 2
 
 

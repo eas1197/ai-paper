@@ -1,5 +1,6 @@
 """E17/I12: runtime observations and typed failure taxonomy; never academic approval."""
 import math
+import re
 import socket
 import subprocess
 from urllib.error import URLError
@@ -170,13 +171,28 @@ def retry_decision(outcome_kind, *, remaining_budget=None, task_snapshot_current
             "automatic_retry": False}
 
 
-def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None):
+def failure_evidence(outcome_kind, *, raw_error=None, stage=None, input_sha256=None, executor=None):
+    """Record only supplied evidence; missing context stays null, never guessed."""
+    policy = recovery_policy(outcome_kind)
+    if policy is None:
+        return None
+    valid_hash = (input_sha256 if isinstance(input_sha256, str)
+                  and re.fullmatch(r"[0-9a-f]{64}", input_sha256) else None)
+    return {"raw_error": raw_error, "stage": stage, "input_sha256": valid_hash,
+            "executor": executor, "recovery_suggestion": policy["next_action"],
+            "outcome_kind": outcome_kind, "formal_eligible": False}
+
+
+def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None,
+                error_text=None, input_sha256=None, executor=None):
     if status not in STATES:
         raise ValueError("Unknown runtime observation")
     if outcome_kind not in {None, *OUTCOME_KINDS}:
         raise ValueError("Unknown runtime outcome")
     return {"runtime_status":status,"outcome_kind":outcome_kind,"scope":scope,"original_stage":original_stage,
         "reason":reason,"recovery_policy":recovery_policy(outcome_kind),
+        "failure_evidence":failure_evidence(outcome_kind,raw_error=error_text,stage=original_stage,
+                                            input_sha256=input_sha256,executor=executor),
         "academic_approval_granted":False,"formal_eligible":False}
 
 
@@ -188,9 +204,15 @@ def attempt_observation(record):
             "technical_block":"failed"}.get(record.get("status"),"blocked")
     failure = record.get("failure_kind")
     if failure not in OUTCOME_KINDS:
-        failure = classify_failure_message(record.get("failure") or record.get("reason"))
+        failure = classify_failure_message(record.get("failure") or record.get("error") or record.get("reason"))
+    original = record.get("failure_evidence")
+    original = original if isinstance(original, dict) else {}
+    raw_error = original.get("raw_error", record.get("failure") or record.get("error") or record.get("reason"))
     return observation(status,scope="native_attempt",reason=record.get("status"),
-                       outcome_kind=failure if status=="failed" else None)
+                       original_stage=record.get("stage"),
+                       outcome_kind=failure if status=="failed" else None,
+                       error_text=raw_error,input_sha256=record.get("task_sha256"),
+                       executor=record.get("executor"))
 
 
 def command_observation(command,result):
@@ -265,4 +287,7 @@ def command_observation(command,result):
         state="completed"
     else:
         state="blocked"
-    return observation(state,original_stage=stage,scope="command",reason=reason,outcome_kind=outcome)
+    return observation(state,original_stage=stage,scope="command",reason=reason,outcome_kind=outcome,
+                       error_text=view.get("error") or view.get("failure") or view.get("reason"),
+                       input_sha256=view.get("input_sha256") or view.get("task_sha256"),
+                       executor=view.get("executor"))

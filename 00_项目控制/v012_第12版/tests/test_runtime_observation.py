@@ -93,6 +93,33 @@ class RuntimeObservationTest(unittest.TestCase):
             self.assertFalse(retry_decision("network_failure",
                 **{**kwargs, "remaining_budget": invalid_budget})["allowed"])
 
+    def test_i14_native_observation_preserves_original_error_and_known_context(self):
+        message="network reset\\n"+"x"*1200
+        row={"status":"technical_block","stage":"events","task_sha256":"a"*64,
+             "executor":"codex_cli","failure_kind":"network_failure","error":message[:1000],
+             "failure_evidence":{"raw_error":message}}
+        value=attempt_observation(row)["failure_evidence"]
+        self.assertEqual(value["raw_error"],message)
+        self.assertEqual(value["stage"],"events")
+        self.assertEqual(value["input_sha256"],"a"*64)
+        self.assertEqual(value["executor"],"codex_cli")
+        self.assertTrue(value["recovery_suggestion"])
+        self.assertFalse(value["formal_eligible"])
+        legacy=attempt_observation({"status":"failed","error":"network reset"})["failure_evidence"]
+        self.assertEqual(legacy["outcome_kind"],"network_failure")
+        self.assertIsNone(legacy["input_sha256"])
+        self.assertIsNone(legacy["executor"])
+
+    def test_i14_command_failure_does_not_invent_context(self):
+        result={"status":"execution_failed","error":"network reset","stage":"events",
+                "input_sha256":"not-a-hash"}
+        value=command_observation("advance",result)["failure_evidence"]
+        self.assertEqual(value["raw_error"],"network reset")
+        self.assertEqual(value["stage"],"events")
+        self.assertIsNone(value["input_sha256"])
+        self.assertIsNone(value["executor"])
+        self.assertIsNone(command_observation("prepare",{})["failure_evidence"])
+
     def test_cli_exit_zero_can_be_waiting(self):
         result={"action":"await_independent_review","status":"blocked_by_original_v3_gate"}
         output=io.StringIO()
