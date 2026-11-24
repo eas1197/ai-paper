@@ -6,6 +6,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 from review_evidence import SCHEMA, audit_review_evidence
 from review_type import audit_review_type
+from review_invocation import audit_invocation
 
 
 def _local_file(run, raw):
@@ -30,7 +31,7 @@ def _read_bound(run, ref):
 
 
 def audit_review_binding(report_path, *, current_run_id, expected_reference,
-                         context_path, expected_execution_ref=None):
+                         context_path, expected_execution_ref=None, expected_identity_ref=None):
     """The receiver selects context and receipt independently; no identity authentication here."""
     import task_packet
 
@@ -92,6 +93,9 @@ def audit_review_binding(report_path, *, current_run_id, expected_reference,
         raise ValueError("Missing executor-specific original records")
     if "events" in roles and "response" in roles and roles["events"].parent != roles["response"].parent:
         raise ValueError("Events and response are from different attempts")
-    return {**result, "status": "review_records_hash_bound_pending_independence",
+    bound = {**result, "status": "review_records_hash_bound_pending_independence",
             "execution_id": receipt["execution_id"], "reviewer": receipt["reviewer"],
             "execution_status": receipt["status"], "execution_binding": expected_execution_ref}
+    if expected_identity_ref is not None:
+        bound["invocation_audit"] = audit_invocation(run, bound, expected_identity_ref)
+    return bound
