@@ -3,10 +3,12 @@
 STATES = frozenset({"queued","running","waiting_for_chat","waiting_for_codex",
     "waiting_for_review","waiting_for_user","blocked","failed","completed"})
 
-def observation(status, *, original_stage=None, scope="command", reason=None):
+def observation(status, *, original_stage=None, scope="command", reason=None, outcome_kind=None):
     if status not in STATES:
         raise ValueError("Unknown runtime observation")
-    return {"runtime_status":status,"scope":scope,"original_stage":original_stage,
+    if outcome_kind not in {None,"research_failure","technical_failure","review_failure","budget_exhausted","user_cancelled"}:
+        raise ValueError("Unknown runtime outcome")
+    return {"runtime_status":status,"outcome_kind":outcome_kind,"scope":scope,"original_stage":original_stage,
         "reason":reason,"academic_approval_granted":False,"formal_eligible":False}
 
 
@@ -16,7 +18,8 @@ def attempt_observation(record):
         return observation("queued",scope="native_attempt")
     status={"started":"running","completed":"completed","failed":"failed",
             "technical_block":"failed"}.get(record.get("status"),"blocked")
-    return observation(status,scope="native_attempt",reason=record.get("status"))
+    return observation(status,scope="native_attempt",reason=record.get("status"),
+                       outcome_kind="technical_failure" if status=="failed" else None)
 
 
 def command_observation(command,result):
@@ -31,7 +34,19 @@ def command_observation(command,result):
     action=view.get("action")
     status=view.get("status")
     reason=status or action
-    if command=="chat-task":
+    outcome=None
+    wait=view.get("wait") if isinstance(view.get("wait"),dict) else {}
+    if status=="cancelled_by_user":
+        state="blocked";outcome="user_cancelled"
+    elif stage=="literature_budget_exhausted" or view.get("original_gate_status")=="blocked_original_budget":
+        state="waiting_for_user" if status=="waiting_for_user" else "blocked";outcome="budget_exhausted"
+    elif stage in {"archived","eliminated","academic_stop"}:
+        state="failed";outcome="research_failure"
+    elif wait.get("reason_code") in {"invalid_or_incomplete_records","review_execution_incomplete","independent_session_unavailable"}:
+        state="waiting_for_review";outcome="review_failure"
+    elif view.get("execution_status")=="failed" or status=="execution_failed":
+        state="failed";outcome="technical_failure"
+    elif command=="chat-task":
         state="waiting_for_chat"
     elif command=="codex-task":
         state="waiting_for_codex"
@@ -68,4 +83,4 @@ def command_observation(command,result):
         state="completed"
     else:
         state="blocked"
-    return observation(state,original_stage=stage,scope="command",reason=reason)
+    return observation(state,original_stage=stage,scope="command",reason=reason,outcome_kind=outcome)

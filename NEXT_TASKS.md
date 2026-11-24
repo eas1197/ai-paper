@@ -11,7 +11,7 @@
 # 当前唯一任务
 
 1. **E21（当前唯一最小任务）**：区分研究失败、技术失败、审查失败、预算耗尽和用户取消。
-   - 状态：pending；检查运行观察状态及原失败证据。
+   - 状态：implemented_unverified；已实现五类 outcome_kind 与显式取消，等待CI。
    - 仅需读取：E21、run_observation、user_wait、strict/autopilot 原失败及停止路径。
    - 验收：五类分别标记；用户取消须明确，原学术状态不被观察状态改写。
    - 完成后：提交并转 E22。

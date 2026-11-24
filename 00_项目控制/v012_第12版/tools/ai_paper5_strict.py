@@ -480,6 +480,7 @@ def build_parser():
             group=p.add_mutually_exclusive_group()
             group.add_argument("--wait-for-user",choices=("question","materials","budget"))
             group.add_argument("--user-decision-file",type=Path)
+            group.add_argument("--cancel",metavar="REASON",help="Explicit operator cancellation; preserve original research")
     for action in ("reality","exchange","issue","review"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
     p=sub.add_parser("event-compare");p.add_argument("--run-id",required=True);p.add_argument("--report",type=Path,required=True)
@@ -554,7 +555,10 @@ def main(argv=None):
         elif args.cmd=="init":
             doctor(); result={"original_output":original_call(original_command("init",args.run_id,theme=args.theme))}
         elif args.cmd in ("status","advance"):
-            if args.cmd=="advance" and args.wait_for_user:
+            if args.cmd=="advance" and args.cancel is not None:
+                from user_wait import cancel_run
+                result=cancel_run(args.run_id,args.cancel)
+            elif args.cmd=="advance" and args.wait_for_user:
                 from user_wait import request_hold
                 result=request_hold(args.run_id,args.wait_for_user)
             elif args.cmd=="advance" and args.user_decision_file:
@@ -646,7 +650,7 @@ def main(argv=None):
     except (ValueError,KeyError,TypeError,RuntimeError,OSError,subprocess.TimeoutExpired,ValidationError) as exc:
         from run_observation import observation
         kind="failed" if isinstance(exc,(RuntimeError,OSError,subprocess.TimeoutExpired)) else "blocked"
-        print(json.dumps({"status":"blocked","reason":str(exc),"runtime":observation(kind,reason=str(exc))},ensure_ascii=False))
+        print(json.dumps({"status":"blocked","reason":str(exc),"runtime":observation(kind,reason=str(exc),outcome_kind="technical_failure" if kind=="failed" else None)},ensure_ascii=False))
         return 2
 
 

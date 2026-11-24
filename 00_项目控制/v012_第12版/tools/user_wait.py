@@ -55,6 +55,17 @@ def checkpoint(run_id,state):
     import task_packet as c
     work=(c.heritage.RUNS/run_id).resolve()
     root=_root(work)
+    cancelled=root/"cancelled.json"
+    if cancelled.exists():
+        c,work=_work(run_id)
+        record=c.heritage.read(cancelled)
+        if (cancelled.is_symlink() or record.get("research_id")!=run_id
+                or record.get("action")!="explicit_user_cancel"
+                or not isinstance(record.get("reason"),str) or not record["reason"].strip()):
+            raise ValueError("Invalid cancellation record")
+        return {"action":"stop_user_cancelled","status":"cancelled_by_user",
+            "stage":state["status"],"cancellation_sha256":c.heritage.sha(cancelled),
+            "advance_gate":False,"automatic_retry":False,"formal_eligible":False}
     active=_read_active(c,work) if (root/"active.json").is_file() else None
     if active is None and state["status"] not in NATIVE:
         return None
@@ -82,6 +93,8 @@ def request_hold(run_id,reason):
     c,work=_work(run_id)
     state=c.heritage.state_of(run_id)
     prior=checkpoint(run_id,state)
+    if prior and prior.get("status")=="cancelled_by_user":
+        raise ValueError("Original run has been cancelled")
     if prior and prior.get("user_hold_id"):
         if prior["user_wait_reason"]!=reason:
             raise ValueError("A different explicit user hold is active")
@@ -122,3 +135,23 @@ def acknowledge_hold(run_id,decision_path):
     return {"action":"user_hold_acknowledged","status":"queued","stage":state["status"],
         "acknowledgement_sha256":c.heritage.sha(target),"advance_gate":False,
         "budget_changed":False,"formal_eligible":False}
+
+
+def cancel_run(run_id, reason):
+    """Explicit operator request; stop orchestration, preserve original academic state."""
+    if not isinstance(reason,str) or not reason.strip():
+        raise ValueError("Explicit user cancellation reason required")
+    c,work=_work(run_id)
+    state=c.heritage.state_of(run_id)
+    root=_root(work)
+    root.mkdir(exist_ok=True)
+    target=root/"cancelled.json"
+    record={"research_id":run_id,"action":"explicit_user_cancel","reason":reason.strip(),
+            "state_sha256":c.heritage.sha(work/"staged_topic.json")}
+    try:
+        with target.open("x",encoding="utf-8") as stream:
+            json.dump(record,stream,ensure_ascii=False,sort_keys=True)
+    except FileExistsError:
+        if target.is_symlink() or c.heritage.read(target)!=record:
+            raise ValueError("Preserve existing cancellation record")
+    return checkpoint(run_id,state)
