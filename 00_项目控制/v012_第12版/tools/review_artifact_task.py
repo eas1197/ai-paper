@@ -55,7 +55,7 @@ def _original_binding(h, work, folder):
 
 def _language_refs(h):
     # Original V16 checks resource locks and G3 status; do not duplicate its rules.
-    script = "import sys,json; sys.path.insert(0,sys.argv[1]); from ai_writer4 import language_resources; p,s,r,b,l,a=language_resources(); print(json.dumps({'locks':l,'g3_status':s['status']}))"
+    script = "import sys,json; sys.path.insert(0,sys.argv[1]); from ai_writer4 import language_resources; p,s,r,b,u,l,a,w,v=language_resources(); print(json.dumps({'locks':l,'g3_status':s['status']}))"
     return json.loads(h.original_call([sys.executable, "-B", "-c", script,
         str(h.V16.parent)], timeout=30))
 
