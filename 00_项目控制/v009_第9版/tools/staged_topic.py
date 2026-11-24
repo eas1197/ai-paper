@@ -512,6 +512,80 @@ def prepare(work, state):
     return task
 
 
+def verify_stage_artifacts(work, state, operation, *, prior_stage=None):
+    """Check actual native products before publishing an original stage transition.
+
+    Integrity only: neither pending source receipts nor a technical result is a
+    scholarly pass. Uses the original canonical digest and native receiver.
+    """
+    def checked(name, key):
+        value=load(work/name)
+        if digest(value)!=state.get(key):
+            raise ValueError("Original stage artifact hash changed: "+name)
+        return value
+    if operation=="reality":
+        checked("reality.json","reality_sha256")
+        if state["status"]!=("explanation_exchange" if state.get("explanation_first") else "initial"):
+            raise ValueError("Original reality transition inconsistent")
+    elif operation=="exchange":
+        checked("reality.json","reality_sha256")
+        validate_exchange(checked("explanation_exchange.json","exchange_sha256"))
+        if state.get("issue_search"):
+            comparison=checked("event_comparison.json","event_comparison_sha256")
+            if (comparison.get("run_id")!=work.name or comparison.get("reality_sha256")!=state["reality_sha256"]
+                    or comparison.get("event_count",0)<2):
+                raise ValueError("Original event comparison is inconsistent")
+            for path_key,sha_key in (("input_path","response_sha256"),("events_path","events_sha256")):
+                if comparison.get(sha_key) is not None:
+                    raw=(work/comparison[path_key]).resolve(strict=True)
+                    if not raw.is_relative_to(work.resolve()) or hashlib.sha256(raw.read_bytes()).hexdigest()!=comparison[sha_key]:
+                        raise ValueError("Original event raw receipt changed")
+        if state["status"]!=("issue_positioning" if state.get("issue_search") else "initial"):
+            raise ValueError("Original exchange transition inconsistent")
+    elif operation=="issue":
+        issue_plan(work,state)
+        if state["status"]!="initial":
+            raise ValueError("Original issue transition inconsistent")
+    elif operation in {"initial","supplemental","advance"}:
+        phase=operation if operation!="advance" else prior_stage
+        latest=state.get("latest_search",{})
+        if phase=="literature_budget_exhausted":
+            phase=latest.get("phase")
+        if phase not in {"initial","supplemental"}:
+            return
+        if latest.get("phase")!=phase:
+            raise ValueError("Original literature phase result missing or inconsistent")
+        folder=work/phase
+        checkpoint=load(folder/"checkpoint.json")
+        matrix=receive(folder,checkpoint["config"]["journals"],persist=False)
+        if (matrix!=load(folder/"literature_matrix.json")
+                or matrix["collection_sha256"]!=latest.get("collection_sha256")):
+            raise ValueError("Original literature matrix or collection changed")
+        expected="preliminary_review" if phase=="initial" else "final_review"
+        if state["status"] not in {phase,expected,"literature_budget_exhausted"}:
+            raise ValueError("Original literature transition inconsistent")
+        if phase=="initial":
+            if load(folder/"theories.json")!=theories(folder,checkpoint):
+                raise ValueError("Original theory receipt changed")
+        if phase=="supplemental" and state["status"]==expected:
+            initial_folder=work/"initial"
+            initial=receive(initial_folder,checkpoint["config"]["journals"],persist=False)
+            if (initial!=load(initial_folder/"literature_matrix.json") or digest(initial)!=state.get("initial_sha256")):
+                raise ValueError("Original initial literature changed")
+            original=load(initial_folder/"checkpoint.json")
+            ids={row["observation_id"] for paper in initial["rows"][:POLICY[state["mode"]]["initial"]]
+                 for row in paper["provenance"]}
+            rows=[row for row in original["observations"] if row["observation_id"] in ids]
+            scoped=[dict(row,observation_id="supplemental:"+row["observation_id"]) for row in checkpoint["observations"]]
+            merged,conflicts=group([*rows,*scoped])
+            expected_merged={"rows":merged,"conflicts":conflicts,"initial_sha256":digest(initial),
+                             "supplemental_sha256":digest(matrix)}
+            if load(work/"merged_literature.json")!=expected_merged:
+                raise ValueError("Original merged literature changed")
+    elif operation=="s08":
+        verified_frozen_topic(work,state)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("init", "reality", "exchange", "issue", "initial", "supplemental", "advance", "review", "prepare", "status", "s08"))
@@ -540,6 +614,7 @@ def main():
         state = load(state_path)
         if state["policy_sha256"] != digest(POLICY) or state["mode"] != args.mode or state["run_id"] != args.run_id:
             raise ValueError("Staged policy or run identity changed")
+        prior_stage = state["status"]
         result = None
         if args.command in ("initial", "supplemental"):
             if state["mode"] == "dev" and state["status"] == args.command:
@@ -574,6 +649,7 @@ def main():
         elif args.command == "prepare":
             result = prepare(work, state)
         if args.command not in {"status", "prepare"}:
+            verify_stage_artifacts(work,state,args.command,prior_stage=prior_stage)
             write(state_path, state)
     print(json.dumps(result or state, ensure_ascii=True, indent=2))
 

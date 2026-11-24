@@ -4,7 +4,7 @@ from codex_literature import ENGINE, evidence, group, observation, web_url
 from collect_common import digest, load, normalize, sha, write
 
 
-def receive(work, journals):
+def receive(work, journals, *, persist=True):
     state = load(work / "checkpoint.json")
     bundle = load(work / "abstract_collection.json")
     if (bundle.get("engine"), bundle.get("schema_version"), bundle.get("journals")) != (
@@ -59,7 +59,8 @@ def receive(work, journals):
     if bundle.get("run_mode") == "dev":
         matrix.update(run_mode="dev", formal_eligible=False,
                       workload_sha256=bundle["workload_sha256"])
-    write(work / "literature_matrix.json", matrix)
+    if persist:
+        write(work / "literature_matrix.json", matrix)
     return matrix
 
 
