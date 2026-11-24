@@ -348,7 +348,7 @@ def resume(work, folder, prior_review):
         current = revised
         spent += int(academic)
         local_rounds += int(any(row.get("severity") == "local" for row in checks))
-        rebuilt = folder / f"analysis_matrix_rebuilt_{route_id}_{evidence_digest(revised)[:12]}.json"
+        rebuilt = folder / f"analysis_matrix_rebuilt_{route_id}.json"
         write(rebuilt, {**current, "question_binding": contract})
         if academic or any(row.get("severity") == "local" for row in checks):
             record_revision_round(work, stage="matrix", round_key=route_id, before=before_revision,
@@ -382,7 +382,7 @@ def resume(work, folder, prior_review):
         return {"status": gate, "stage": "matrix", "material_adequacy": adequacy, "revisions": spent}
     approved = approved_matrix_materials(adequacy, receipt, current)
     current["question_binding"] = contract
-    matrix_path = folder / f"analysis_matrix_reviewed_{evidence_digest(current)[:16]}.json"
+    matrix_path = folder / "analysis_matrix_reviewed.json"
     write(matrix_path, current)
     context.update(matrix=current, approved_empirical_materials=approved, literature=load(work / "merged_literature.json"),
                    theories=load(work / "initial/theories.json"))
