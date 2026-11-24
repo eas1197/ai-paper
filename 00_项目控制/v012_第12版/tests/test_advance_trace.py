@@ -6,9 +6,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
-import ai_paper5_strict as strict
+# Initialize the same canonical modules as the pre-existing discovery suite.
+# These legacy test modules explicitly register their imports in sys.modules.
+from test_ai_paper5_strict import m as strict
+from test_autopilot_v3 import m as autopilot_v3
 import task_packet
-import autopilot_v3
 from advance_trace import observe_advance
 
 
