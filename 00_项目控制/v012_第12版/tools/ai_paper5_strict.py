@@ -443,6 +443,10 @@ def main(argv=None):
     p=sub.add_parser("codex-receive");p.add_argument("--run-id",required=True)
     p.add_argument("--task",type=Path,required=True);p.add_argument("--result",required=True)
     p.add_argument("--execution-binding",type=Path);p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("literature-receive");p.add_argument("--run-id",required=True)
+    p.add_argument("--task",type=Path,required=True);p.add_argument("--result",required=True)
+    p.add_argument("--execution-binding",type=Path);p.add_argument("--observed-actions",type=Path)
+    p.add_argument("--output",type=Path,required=True)
     args=parser.parse_args(argv)
     try:
         if args.cmd=="doctor": result=doctor()
@@ -469,6 +473,14 @@ def main(argv=None):
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd=="literature-receive":
+            from original_literature_gate import audit_unified_literature
+            task=read(args.task)
+            result=audit_unified_literature(args.result,current_run_id=args.run_id,
+                expected_reference=task["task_snapshot"],
+                expected_execution=read(args.execution_binding) if args.execution_binding else None,
+                observed_actions=read(args.observed_actions) if args.observed_actions else None)
+            write(args.output,result)
         elif args.cmd=="codex-receive":
             from codex_receiving import audit_codex_records
             task=read(args.task)

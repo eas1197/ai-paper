@@ -52,3 +52,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 ## C20 Codex 原始凭证接收
 
 `codex-receive` 使用独立选定的 codex-task、run 相对 result 与可选独立 execution-binding。沿用 C15 文件/快照绑定；核真实 thread.started、原 11/v007 evidence/proof/web_url、原日志与响应、登录诊断原文和退出码、来源 URL 与动作/事件 ID 对应。原调用未持久化完整实际 argv 时，command_record 必须缺失，不根据模板事后补造。可选 command_record 指向真实外部执行记录，内容绑定 task_snapshot、argv、exit_code、thread_id 及六类原文件引用；核对实际只读原生命令、工作目录、输出路径。只有独立选取且完整匹配才标记 native_cli_receipt；即使如此仍 formal_eligible=false，原学术资格另由 C21。无记录、无登录、来源不匹配或缺少事件保持待核；不执行真实 CLI，不改变原 collector。合成 fixture 仅用于离线测试。
+
+## C21 原 v009 权威文献接收
+
+`literature-receive` 只将统一候选映射到现有 v009 原阶段的已完成真实批次；不生成 collection/checkpoint 或以统一包替代原始材料。先核当前快照和 C19/C20 原始凭证，再核原 policy、期刊、数量、阶段、workload、实际批次哈希、原预算状态；调用原 staged_topic.receipt -> 04/v012 native_receiving.receive 重建原摘要矩阵。仅当候选字段及原 event ID 与原矩阵中该批次 observation 一致才记录原摘要级身份。Chat/manual、无原批次、身份不匹配、预算超限均不提升。原计数来自原矩阵，不由统一包自报；不触发搜索、推进阶段、正式门禁或独立审查。正式资格仍由原 3.x 流程负责，dev 结果始终 formal_eligible=false。兼容原 v009 使用仓库内原 schema 的实际 CLI 参数（独立保存的 schema 副本须哈希一致）。

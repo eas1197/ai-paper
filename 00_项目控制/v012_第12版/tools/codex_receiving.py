@@ -42,7 +42,15 @@ def _command_matches(argv, run_id, refs):
         normalized = raw.replace("\\", "/").rstrip("/")
         return normalized.endswith("/" + run_id + "/" + suffix) or normalized == run_id + "/" + suffix
     folder = Path(refs["events"]["path"]).parent.as_posix()
-    if not ends(argv[11], folder) or not ends(argv[14], refs["schema"]["path"]) or not ends(argv[16], refs["response"]["path"]):
+    # Original v009 supplies its repository schema, not a generated run file.
+    # A receiver-owned copy must still bind the actual original schema bytes.
+    schema_path = argv[14].replace("\\", "/")
+    original_schema = task_packet.heritage.NATIVE_SCHEMA
+    original_suffix = original_schema.relative_to(task_packet.heritage.ROOT).as_posix()
+    schema_matches = ends(argv[14], refs["schema"]["path"]) or (
+        (schema_path.endswith("/" + original_suffix) or schema_path == original_suffix)
+        and refs["schema"]["sha256"] == task_packet.heritage.sha(original_schema))
+    if not ends(argv[11], folder) or not schema_matches or not ends(argv[16], refs["response"]["path"]):
         raise ValueError("Actual command paths do not match original attempt files")
 
 
