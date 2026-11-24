@@ -182,6 +182,9 @@ class Executor:
         ledger=heritage.read(history) if history.is_file() else {"records":[],"budget":6}
         profile=heritage.read(heritage.CONTROL/"v007_第7版/dev_profile.json")
         ledger["budget"]=profile["00"]["model_calls"]
+        if type(self.timeout) is not int or self.timeout<=0:
+            raise ValueError("Positive original native timeout required")
+        timeout=min(self.timeout,profile["00"]["timeout_seconds"])
         if len(ledger["records"])>=ledger["budget"]:
             raise RuntimeError("Original 3.x global model-call allowance exhausted")
         attempt=sum(1 for row in ledger["records"] if row["stage"]==stage)+1
@@ -199,7 +202,7 @@ class Executor:
                 "Return JSON according to output schema; distinguish reported claims "
                 "from empirical outcomes and preserve uncertainty.")
         try:
-            code=invoke(cli(),folder,prompt,task_json,timeout=self.timeout,model=self.model)
+            code=invoke(cli(),folder,prompt,task_json,timeout=timeout,model=self.model)
         except Exception as exc:
             record.update(status="technical_block",error=str(exc)[:1000])
             heritage.write(history,ledger)
