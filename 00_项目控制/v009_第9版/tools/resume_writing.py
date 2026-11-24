@@ -379,8 +379,11 @@ def resume(work, folder, prior_review):
         packet["framework"].update(core_concept=framework["core_concept"],
                                    dimensions=[{"id": row["id"], "title": row["name"], "deduction": row["deduction"]}
                                                for row in framework["dimensions"]])
-        if any(not section.get("paragraphs") for chapter in packet["chapters"] for section in chapter["sections"]):
-            raise ValueError("Every section requires paragraph-level tasks")
+        for chapter in packet["chapters"]:
+            for section in chapter["sections"]:
+                paragraphs = [task.strip() for task in section["paragraphs"]]
+                if not paragraphs or not all(paragraphs) or len(set(paragraphs)) != len(paragraphs):
+                    raise ValueError("Every section requires distinct nonempty paragraph-level tasks")
         validate_reviewed_plan_sources(packet, contract, receipt, approved)
         admission = reviewed_material_admission(work, packet, matrix_review)
         output = area / f"draft_{revision}"

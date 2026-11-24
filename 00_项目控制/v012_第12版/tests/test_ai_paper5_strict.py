@@ -143,6 +143,13 @@ class StrictTests(TestCase):
         writer_source=Path(m.V16).read_text(encoding="utf-8-sig")
         self.assertIn("from writing_plan import render",writer_source)
 
+    def test_resume_writing_cli_delegates_original_controller(self):
+        with patch.object(m,"doctor",return_value={}), \
+             patch.object(m,"original_call",return_value="reviewed_plan") as original:
+            result=m.main(["resume-writing","--run-id","g03_fixture","--attempt","attempt_002"])
+        self.assertEqual(result,0)
+        original.assert_called_once_with(m.original_writing_command("g03_fixture", attempt="attempt_002"))
+
     def test_writer4_cli_dispatches_v016_through_original_adapter(self):
         with patch.object(m,"doctor",return_value={}), \
              patch.object(m,"original_call",return_value="writer4 complete") as original:

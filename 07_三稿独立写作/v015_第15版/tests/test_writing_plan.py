@@ -116,3 +116,71 @@ class WritingPlanTest(unittest.TestCase):
                 run_mode.write(folder / "analysis_matrix_reviewed.json", dict(matrix, collection_sha256="changed"))
                 with self.assertRaisesRegex(ValueError, "binding differs"):
                     writing_plan.reviewed_material_admission(work, data, adequate)
+
+
+    def test_native_resume_renders_paragraph_plan_after_adequacy(self):
+        # Actual native resume + V15 renderer; only model calls and the already
+        # verified S08 binding are synthetic. Never dispatch an actual review.
+        import resume_writing
+        from question_binding import evidence_digest, file_hash
+        with tempfile.TemporaryDirectory(dir=run_mode.ROOT) as temporary:
+            with patch.object(run_mode, "RUNS", Path(temporary)):
+                work = run_mode.start("fixture_g03", "Synthetic test only")
+                folder = work / "qualitative_framework" / "attempt_001"
+                folder.mkdir(parents=True)
+                (work / "initial").mkdir()
+                data = packet(1)
+                for ch in data["chapters"]:
+                    for sec in ch["sections"]:
+                        sec["paragraphs"] = ["Describe evidence", "Specify inference limit"]
+                core = data["core_question"]
+                framework = {"core_question": core, "core_concept": "Fixture concept",
+                             "dimensions": [{"id": "d0", "name": "维度 0", "deduction": "Deduction for this fixture"}]}
+                material = {"material_id": "E", "kind": "official_rule",
+                            "url": "https://example.org", "locator": "test index E"}
+                receipt = {"framework_sha256": evidence_digest(framework), "materials": [material]}
+                matrix = {"framework_sha256": receipt["framework_sha256"],
+                          "collection_sha256": evidence_digest(receipt),
+                          "rows": [{"dimension_id": "d0", "evidence": [material]}]}
+                run_mode.write(folder / "framework.json", framework)
+                run_mode.write(folder / "material_receipt.json", receipt)
+                run_mode.write(folder / "analysis_matrix.json", matrix)
+                run_mode.write(work / "s08_topic.json", {"question": "S08 fixture",
+                    "research_method": {"path": "secondary_interviews"}})
+                run_mode.write(work / "merged_literature.json", {"rows": []})
+                run_mode.write(work / "initial/theories.json", [])
+                contract = {"core_question": core, "specific_question": "S08 fixture",
+                            "method": "secondary_interviews",
+                            "receipt_sha256": file_hash(folder / "material_receipt.json")}
+                prior = work / "matrix_independent_review.json"
+                review = {"decision": "pass", "reason": "Synthetic only",
+                          "reviewer": resume_writing.REVIEWER, "invocation_id": "fixture-not-real",
+                          "matrix_sha256": file_hash(folder / "analysis_matrix.json"),
+                          "material_adequacy": {"support": "sufficient", "reason": "Synthetic only",
+                                                "eligible_event_ids": ["E"]}}
+                run_mode.write(prior, dict(review, material_adequacy=dict(review["material_adequacy"], support="unknown")))
+                with patch.object(resume_writing, "binding", return_value=contract), \
+                     patch.object(writing_plan, "binding", return_value=contract), \
+                     patch.object(resume_writing, "dispatch") as dispatch:
+                    self.assertEqual(resume_writing.resume(work, folder, prior)["status"],
+                                     "awaiting_material_adequacy")
+                    dispatch.assert_not_called()
+                    run_mode.write(prior, review)
+                    dispatch.side_effect = [{"answer": data}, {"answer": {"decision": "pass", "reason": "Fixture only"}}]
+                    result = resume_writing.resume(work, folder, prior)
+                    self.assertEqual(result["status"], "reviewed_plan")
+                    self.assertEqual([call.args[1] for call in dispatch.call_args_list],
+                                     ["plan_0", "plan_review_0"])
+                    self.assertTrue(dispatch.call_args_list[1].kwargs["reviewer"])
+                output = work / "autonomous_writing/draft_0"
+                plan = (output / "论文写作方案.md").read_text(encoding="utf-8")
+                saved = run_mode.load(output / "plan_input.json")
+                request = run_mode.load(output / "writing_plan_review_request.json")
+                self.assertIn("第 1 段 Describe evidence", plan)
+                self.assertIn("第 2 段 Specify inference limit", plan)
+                self.assertIn("test index E", plan)
+                self.assertEqual(saved["specific_question"], contract["specific_question"])
+                self.assertEqual(saved["framework"]["dimensions"][0]["id"], "d0")
+                self.assertEqual(request["material_admission"]["eligible_material_ids"], ["E"])
+                self.assertEqual(request["input_sha256"], run_mode.digest(saved))
+                self.assertFalse(request["formal_eligible"])
