@@ -19,7 +19,7 @@ class UnifiedEntrypointTests(unittest.TestCase):
             code,body=self.invoke(["commands"])
         self.assertEqual(code,0)
         self.assertEqual(len(body["result"]["commands"]),26)
-            self.assertIn("run-summary",body["result"]["commands"])
+        self.assertIn("run-summary",body["result"]["commands"])
         self.assertTrue({"init","status","advance","review","materials","quantitative-plan","resume-writing","writer4","prepare","autopilot","commands"} <= set(body["result"]["commands"]))
         doctor.assert_not_called()
         original.assert_not_called()
