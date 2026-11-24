@@ -168,7 +168,7 @@ class ReviewSessionContractTest(unittest.TestCase):
         record = planned_record()
         expected = copy.deepcopy(record["reviewer_identity"])
         expected["reviewer_id"] = "other-reviewer"
-        with self.assertRaisesRegex(ValueError, "reviewer identity"):
+        with self.assertRaisesRegex(ValueError, "(?i)reviewer identity"):
             validate_review_session_record(record, record["task_snapshot"], record["launch_request"]["input_context"], expected)
 
     def test_primary_thread_must_match_dispatcher_selection(self):
