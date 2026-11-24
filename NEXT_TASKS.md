@@ -10,13 +10,13 @@
 
 # 当前唯一任务
 
-1. **J14（当前唯一最小任务）**：更新 RUNBOOK.md，统一 v012 运行入口、Chat/Codex 交接方式、测试和续跑方式。
-   - 状态：pending；仅核对RUNBOOK、strict parser及执行/接续合同。
-   - 完成后：提交并转 J15。
+1. **J15（当前唯一最小任务）**：检查 README、模块说明、manifest、版本索引和工作流文档是否相互矛盾。
+   - 状态：pending；仅核对指定现行入口、生产候选边界与实际状态段落。
+   - 完成后：提交并转 J16。
 
-**当前统计：** 原始192/253，合并197/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J13 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；J14 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
+**当前统计：** 原始193/253，合并198/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J14 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；J15 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
 
-最近验收：[J13_WORKFLOW原状态机一致](00_项目控制/v012_第12版/outputs/J13_WORKFLOW原状态机一致.md)；J13 verified（按B01/B02/E22及J08调用图核对默认原状态序列、各门禁/回退/停止、双方法分流；基线 50f40fb；无代码变更）。
+最近验收：[J14_RUNBOOK统一运行接续](00_项目控制/v012_第12版/outputs/J14_RUNBOOK统一运行接续.md)；J14 verified（按实际parser核对命令、参数、同run输出/等待/摘要/双宿主交接、离线测试与真实验收分离；基线 aa9faed）。
 
 ## 历史与阻塞说明
 
