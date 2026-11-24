@@ -40,3 +40,7 @@ empirical 来源必须具有 empirical_material：来源说明、事件或对象
 - execution_status：not_executed/unknown/no_results/partial_results/completed/failed；completed 仅指执行器报告本次工作结束，不表示资料达标、接收通过或正式资格。no_results 必须没有来源并记录同名问题；partial_results 有候选且保留问题；failed 必须有失败原因。运行级超时、预算耗尽、登录失败等不得同时声明 completed。
 - execution_issues：code（无结果、部分结果、摘要缺失、访问失败、登录墙、超时、来源冲突、预算耗尽、登录/权限/工具失败、缺原始记录及 other）、scope（run/source/action）、target_id、detail、original_status。保留真实旧状态及失败原文；不强行从未知状态推断成功。原 11/v007 verification_pending/incomplete/experimental_budget_exceeded、技术异常和原始状态仍独立保存；C18 另定义接收裁决。原 B14 真实采集仍暂停。
 - 接收器报告保留执行状态与问题，failed 不可升级为正式资格；所有 C15 返回仍 formal_eligible=false。
+
+## C18 接收裁决（独立于执行状态）
+
+接收器生成 acceptance_status/reason，提交 schema 不允许执行者自填。pending_candidate：缺独立绑定、原始记录或运行状态不明；reviewable：绑定和实际字节哈希已核、执行声明完成、有候选且无已报告缺口，仍须原始来源真实性及原学术门禁核验；needs_supplement：未运行、无结果、部分结果或存在缺口；rejected：执行失败（非法/篡改/越界/错任务等直接拒绝异常，不写通过记录）；formal_qualified：保留给原有权威学术门禁真正放行后的接收裁决，本模块禁止生成此状态，C21 后续接入。任何 C15/C18 审计返回 formal_eligible=false；不能由 reviewable 推导正式资格。真实状态、缺口与原因保留，不自动重试或扩大搜索预算。

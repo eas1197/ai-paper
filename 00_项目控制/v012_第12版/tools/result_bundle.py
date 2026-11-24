@@ -54,6 +54,27 @@ def _missing(provenance):
     return sorted(missing)
 
 
+# The formal state is reserved for the original gate; this receiver cannot emit it.
+ACCEPTANCE_STATES = frozenset({"pending_candidate", "reviewable", "formal_qualified",
+                               "rejected", "needs_supplement"})
+
+
+def _acceptance(binding_status, bundle):
+    outcome = bundle["execution_status"]
+    if binding_status == "execution_failed":
+        return "rejected", "Execution failed; preserve original records and failure reasons"
+    if binding_status != "records_hash_bound_pending_source_verification":
+        return "pending_candidate", "Missing independently bound original execution records"
+    if outcome in {"not_executed", "no_results", "partial_results"} or not bundle["sources"]:
+        return "needs_supplement", "Execution or candidate source collection is incomplete"
+    if outcome != "completed":
+        return "pending_candidate", "Execution outcome is unknown"
+    if bundle["execution_issues"] or bundle["failure_reasons"] or any(
+            row["failure_reasons"] for row in bundle["sources"]):
+        return "needs_supplement", "Reported source or execution gaps require resolution"
+    return "reviewable", "Bytes and task binding checked; source and original gate review still pending"
+
+
 def audit_result_bundle(result_path, *, current_run_id, expected_reference,
                         expected_execution=None):
     """Read a run-relative result file and audit its binding.
@@ -113,9 +134,11 @@ def audit_result_bundle(result_path, *, current_run_id, expected_reference,
         status = "execution_failed"
     else:
         status = "records_hash_bound_pending_source_verification"
+    acceptance_status, acceptance_reason = _acceptance(status, bundle)
     return {"task_snapshot": expected_reference, "executor": bundle["executor"],
             "result_path": result_path, "result_sha256": digest, "checked_files": checked,
             "missing_fields": missing, "status": status,
+            "acceptance_status": acceptance_status, "acceptance_reason": acceptance_reason,
             "execution_status": bundle["execution_status"],
             "execution_issues": bundle["execution_issues"],
             "independent_binding_matched": expected_execution is not None,

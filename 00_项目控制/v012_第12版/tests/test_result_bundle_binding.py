@@ -156,6 +156,47 @@ class ResultBindingTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "binding does not match"):
             self.audit(expected)
 
+    def test_c18_receiver_status_is_distinct_from_execution_claim(self):
+        self.setup_ref()
+        bundle = self.fixture()
+        bundle.update(execution_status="completed", failure_reasons=[])
+        self.save(bundle)
+        self.assertEqual(self.audit()["acceptance_status"], "pending_candidate")
+        reviewed = self.audit(self.expected(bundle))
+        self.assertEqual(reviewed["acceptance_status"], "reviewable")
+        self.assertFalse(reviewed["formal_eligible"])
+        self.assertIn("formal_qualified", result_bundle.ACCEPTANCE_STATES)
+        bundle["acceptance_status"] = "formal_qualified"
+        self.save(bundle)
+        with self.assertRaises(ValidationError):
+            self.audit()
+
+    def test_c18_partial_no_result_and_unknown_remain_unqualified(self):
+        self.setup_ref()
+        bundle = self.fixture()
+        self.assertEqual(self.audit(self.expected(bundle))["acceptance_status"], "pending_candidate")
+        issue = {"code": "partial_results", "scope": "run", "target_id": None,
+                 "detail": "Incomplete", "original_status": "incomplete"}
+        bundle.update(execution_status="partial_results", execution_issues=[issue])
+        self.save(bundle)
+        self.assertEqual(self.audit(self.expected(bundle))["acceptance_status"], "needs_supplement")
+        bundle.update(execution_status="no_results", sources=[],
+                      execution_issues=[dict(issue, code="no_results")])
+        self.save(bundle)
+        self.assertEqual(self.audit(self.expected(bundle))["acceptance_status"], "needs_supplement")
+
+    def test_c18_failed_and_source_gaps_not_promoted(self):
+        self.setup_ref()
+        bundle = self.fixture("codex_cli")
+        bundle["provenance"]["exit_code"] = 1
+        self.save(bundle)
+        self.assertEqual(self.audit(self.expected(bundle))["acceptance_status"], "rejected")
+        bundle = self.fixture()
+        bundle.update(execution_status="completed", failure_reasons=[])
+        bundle["sources"][0]["failure_reasons"] = ["abstract missing"]
+        self.save(bundle)
+        self.assertEqual(self.audit(self.expected(bundle))["acceptance_status"], "needs_supplement")
+
 
 if __name__ == "__main__":
     unittest.main()
