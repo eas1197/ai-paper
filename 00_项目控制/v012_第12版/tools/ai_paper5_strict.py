@@ -435,6 +435,7 @@ def main(argv=None):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("review-task");p.add_argument("--run-id",required=True);p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--review-object");p.add_argument("--packet");p.add_argument("--manuscript");p.add_argument("--claims")
     p=sub.add_parser("chat-audit");p.add_argument("--task",type=Path,required=True)
     p.add_argument("--response",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("chat-receive");p.add_argument("--run-id",required=True)
@@ -478,8 +479,16 @@ def main(argv=None):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
         elif args.cmd=="review-task":
-            from review_task import prepare_review_task
-            result=prepare_review_task(args.run_id);write(args.output,result)
+            if args.review_object:
+                from review_artifact_task import prepare_artifact_review_task
+                result=prepare_artifact_review_task(args.run_id,args.review_object,packet_path=args.packet,
+                    manuscript_path=args.manuscript,claims_path=args.claims)
+            else:
+                if any((args.packet,args.manuscript,args.claims)):
+                    raise ValueError("Select the original review object before draft inputs")
+                from review_task import prepare_review_task
+                result=prepare_review_task(args.run_id)
+            write(args.output,result)
         elif args.cmd=="merge-results":
             from result_merge import merge_result_bundles, write_merge_index
             task=read(args.task)
