@@ -213,6 +213,64 @@ def relative_path(path, base):
     return Path(path).resolve().relative_to(Path(base).resolve()).as_posix()
 
 
+def prepare_issue_task(run_id):
+    """Freeze original issue-positioning inputs, without dispatch or new search allowance."""
+    import task_packet as contract
+    heritage.doctor()
+    state=heritage.state_of(run_id)
+    if state["status"]!="issue_positioning" or not state.get("issue_search"):
+        raise ValueError("Original issue positioning is not due")
+    work=(heritage.RUNS/run_id).resolve(strict=True)
+    manifest=contract.run_mode.verified_run(work)
+    if manifest.get("run_id")!=run_id:
+        raise ValueError("Original run mismatch")
+    names=("run_manifest.json","staged_topic.json","reality.json",
+           "event_comparison.json","explanation_exchange.json")
+    def ref(root,path):
+        resolved=path.resolve(strict=True)
+        if not resolved.is_file() or not resolved.is_relative_to(root.resolve()):
+            raise ValueError("Input outside original namespace")
+        return {"path":path.relative_to(root).as_posix(),"sha256":heritage.sha(resolved)}
+    refs=[ref(work,work/name) for name in names]
+    # Native collect_common.digest uses the same canonical JSON encoding as C04.
+    for name,key in (("reality.json","reality_sha256"),("event_comparison.json","event_comparison_sha256"),
+                     ("explanation_exchange.json","exchange_sha256")):
+        if contract._digest(heritage.read(work/name))!=state.get(key):
+            raise ValueError("Original pre-search evidence changed: "+name)
+    comparison=heritage.read(work/"event_comparison.json")
+    exchange=heritage.read(work/"explanation_exchange.json")
+    if (comparison.get("run_id")!=run_id or comparison.get("reality_sha256")!=state["reality_sha256"]
+            or comparison.get("event_count",0)<2):
+        raise ValueError("Original event comparison is not bound to this run")
+    original=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
+    if (original.get("status")!="issue_positioning" or not original.get("issue_positioning_instruction")
+            or original.get("exchange")!=exchange or original.get("reality")!=heritage.read(work/"reality.json")):
+        raise ValueError("Original issue task differs from frozen inputs")
+    question=exchange.get("candidate_question")
+    if not isinstance(question,str) or not question.strip():
+        raise ValueError("Missing candidate question in original exchange")
+    journals=heritage.read(heritage.V3_POLICY)["journals"]
+    instruction=json.dumps({"original_prepare":original,"event_comparison":comparison,
+        "original_journals":journals},ensure_ascii=False)+(
+        "\nCreate issue, why, object_search, issue_search, theory_search. "
+        "Only include specialist_journals with publisher URL, verified standing and topical fit. "
+        "Pending sources and uncertain facts are not established evidence. "
+        "Plan the three levels; do not collect literature or grant a research gate.")
+    packet={"schema_version":1,"research_id":run_id,"stage_id":"issue_positioning",
+        "task_id":"original_issue_positioning","purpose":instruction,"research_question":question,
+        "search_levels":[],"input_files":refs,
+        "source_scope":{"journals":journals,"policy_refs":[ref(heritage.ROOT,heritage.V3_POLICY),
+            ref(heritage.ROOT,heritage.V3_SEARCH_PROMPT)]},
+        "quantity_budget":{},"time_budget_seconds":0,
+        "output_schema":{"kind":"inline","schema":SCHEMAS["issue"]},
+        "stop_conditions":["Original input or state changed","No original executor allowance"],
+        "notes":["Three-layer planning only; original Executor reserves its own budget before execution."]}
+    snapshot=contract.freeze_packet(packet,current_run_id=run_id)
+    contract.verify_snapshot(snapshot,current_run_id=run_id)
+    return {"task_packet":packet,"task_snapshot":snapshot,"instruction":instruction,
+            "dispatch_authorized":False,"formal_eligible":False}
+
+
 def step(run_id, *, executor=None):
     heritage.doctor()
     work=heritage.RUNS/heritage.run_id_guard(run_id)
@@ -343,11 +401,10 @@ def step(run_id, *, executor=None):
         return {"next":heritage.state_of(run_id)["status"],
                 "actions":"original event and independent-session exchange with raw receipts"}
     if phase=="issue_positioning":
-        instructions=json.loads(heritage.original_call(heritage.original_command("prepare",run_id)))
-        packet,folder,session,trace,url_event=engine.call(
-            work,"issue",json.dumps(instructions,ensure_ascii=False)+
-            "\nCreate issue, why, object_search, issue_search, theory_search. "
-            "Only include specialist_journals with publisher URL and verified standing.")
+        from task_packet import verify_snapshot
+        task=prepare_issue_task(run_id)
+        packet,folder,session,trace,url_event=engine.call(work,"issue",task["instruction"])
+        verify_snapshot(task["task_snapshot"],current_run_id=run_id)
         heritage.original_call(heritage.original_command("issue",run_id,
                                                         report=folder/"response.json"))
         return {"next":heritage.state_of(run_id)["status"],
