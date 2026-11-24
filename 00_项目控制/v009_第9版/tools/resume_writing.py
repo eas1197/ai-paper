@@ -12,6 +12,7 @@ from question_binding import artifact_lineage, binding, evidence_digest, file_ha
 from revision_routes import preflight, validate_routes
 from material_adequacy import writing_material_status
 from technical_review import close_binding_review, local_matrix_context
+from review_accounting import record_revision_round
 
 sys.path.insert(0, str(ROOT / "06_数据方法与分析/v005_第5版/tools"))
 from framework import analysis_matrix
@@ -312,11 +313,16 @@ def resume(work, folder, prior_review):
         if not all(row["completed"] for row in completion):
             return {"status": "revision_incomplete", "stage": "matrix",
                     "items": completion, "revisions": spent}
+        before_revision = current
         current = revised
         spent += int(academic)
         local_rounds += int(any(row.get("severity") == "local" for row in checks))
-        write(folder / f"analysis_matrix_rebuilt_{route_id}.json",
-              {**current, "question_binding": contract})
+        rebuilt = folder / f"analysis_matrix_rebuilt_{route_id}.json"
+        write(rebuilt, {**current, "question_binding": contract})
+        if academic or any(row.get("severity") == "local" for row in checks):
+            record_revision_round(work, stage="matrix", round_key=route_id, before=before_revision,
+                after=current, output=rebuilt, substantive=bool(academic),
+                local=any(row.get("severity") == "local" for row in checks))
         review = dispatch(area, f"rebuilt_matrix_review_{route_id}",
                           "Independently review the revised matrix against the sources, freeze and unresolved findings. "
                           "Review only the listed changes and their impact unless a new material error is found. "
@@ -352,6 +358,7 @@ def resume(work, folder, prior_review):
     for revision in range(3):
         if revision and spent == 2:
             break
+        before_plan = packet
         answer = dispatch(area, f"plan_{revision}",
                           "Create or revise a detailed paragraph-level writing PLAN, not a full paper. Output JSON only. "
                           "Include answer_strategy; sources mapping evidence IDs to kind (theory/literature/empirical), "
@@ -381,6 +388,8 @@ def resume(work, folder, prior_review):
             write(output / "plan_input.json", packet)
         if revision:
             spent += 1
+            record_revision_round(work, stage="plan", round_key=str(revision), before=before_plan,
+                after=packet, output=output/"plan_input.json", substantive=True, local=False)
         record = dispatch(area, f"plan_review_{revision}",
                           "Independently review this paragraph-level plan against the actual design and evidence. "
                           "Check logical progression, source traceability and inference limits. Return JSON only: "

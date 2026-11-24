@@ -434,6 +434,7 @@ def main(argv=None):
     for action in ("chat-task", "codex-task"):
         p=sub.add_parser(action);p.add_argument("--run-id",required=True)
         p.add_argument("--phase",choices=sorted(PHASES),required=True);p.add_argument("--output",type=Path,required=True)
+    p=sub.add_parser("review-counts");p.add_argument("--run-id",required=True)
     p=sub.add_parser("review-task");p.add_argument("--run-id",required=True);p.add_argument("--output",type=Path,required=True)
     p.add_argument("--review-object");p.add_argument("--packet");p.add_argument("--manuscript");p.add_argument("--claims")
     p.add_argument("--prior-report");p.add_argument("--revision-record")
@@ -479,6 +480,9 @@ def main(argv=None):
         elif args.cmd in ("chat-task", "codex-task"):
             generator=chat_task if args.cmd=="chat-task" else codex_task
             result=generator(args.run_id,args.phase);write(args.output,result)
+        elif args.cmd=="review-counts":
+            from review_accounting import observed_counts
+            result=observed_counts(args.run_id)
         elif args.cmd=="review-task":
             if args.review_object:
                 from review_artifact_task import prepare_artifact_review_task
