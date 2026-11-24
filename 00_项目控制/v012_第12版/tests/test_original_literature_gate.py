@@ -113,6 +113,7 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         self.assertIsNone(report["original_verified_rows"])
 
     def test_c27_chat_cannot_claim_native_cli_receipt_or_executor(self):
+        self.setup_ref()
         chat = self.fixture()
         report = self.receive(chat)
         self.assertEqual(report["original_gate_status"], "pending_original_native_receipt")
