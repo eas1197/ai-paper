@@ -295,7 +295,7 @@ class StrictTests(TestCase):
             new_matrix_sha=__import__("hashlib").sha256(matrix_path.read_bytes()).hexdigest()
             request["analysis_matrix_sha256"]=new_matrix_sha
             request["material_admission"]["matrix_sha256"]=new_matrix_sha
-            request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            request_path.write_text(json.dumps(request,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
             with self.assertRaisesRegex(ValueError,"matrix source identity differs"):
                 m.validate_v15_writer_handoff(changed_matrix_source)
 
