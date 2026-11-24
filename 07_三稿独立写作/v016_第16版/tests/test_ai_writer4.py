@@ -82,13 +82,31 @@ class Writer4Test(unittest.TestCase):
         self.assertEqual(manifest["v004_resource_version"], 2)
         self.assertIn("03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_evidence.jsonl",
                       {item["path"] for item in manifest["resource_snapshot_warnings"]})
-        self.assertIn("how_to_write", (writer.load(self.work / "tasks/d1_01.json"))["style_rules"][0])
+        task = writer.load(self.work / "tasks/d1_01.json")
+        self.assertIn("how_to_write", task["style_rules"][0])
+        self.assertTrue(task["v005_unit_details_as_style_hints_only"][0]["purpose"])
+        self.assertTrue(task["v003_argument_rules"][0]["principle"])
+        self.assertTrue(task["v003_argument_rules"][0]["syntax_and_information_order"])
+        self.assertTrue(task["v003_argument_rules"][0]["usage_condition"])
+        self.assertTrue(task["v003_argument_rules"][0]["project_constraint"])
+        self.assertEqual(task["language_resource_versions"], {"v003": 1, "v004": 2, "v005": 3})
+        self.assertEqual(manifest["v003_argument_rule_count"], 27)
+        self.assertEqual(manifest["v005_function_unit_count"], 52)
+        rolemap = writer.language_resources()[2]["chapters"]
+        for chapter in self.data["chapters"]:
+            expected = rolemap[writer.stage_type(chapter["id"])]
+            chapter_task = writer.load(self.work / "tasks" / (chapter["id"] + "_01.json"))
+            self.assertEqual(chapter_task["style_rule_ids"], expected["style_ids"])
+            self.assertEqual([x["id"] for x in chapter_task["v005_unit_details_as_style_hints_only"]],
+                             expected["v005_units"])
+            self.assertEqual([x["id"] for x in chapter_task["v003_argument_rules"]],
+                             expected["argument_audit"])
         self.assertIn("分析框架", (self.work / "writing_plan_v15.md").read_text(encoding="utf-8"))
         with self.assertRaisesRegex(ValueError, "exists"):
             writer.prepare(self.packet_path, self.work)
 
     def test_language_snapshots_bind_versions_status_and_all_files(self):
-        profile, snapshot, rolemap, rules, locks, argument_titles, warnings, versions = writer.language_resources()
+        profile, snapshot, rolemap, rules, units, locks, argument_rules, warnings, versions = writer.language_resources()
         self.assertEqual(profile["profile_version"], "3.0")
         self.assertEqual(profile["resource_version"], 3)
         self.assertEqual(versions, {"v003": 1, "v004": 2, "v005": 3})
@@ -100,6 +118,10 @@ class Writer4Test(unittest.TestCase):
         self.assertIn("v004_resource_snapshot", locks)
         warning_paths = {item["path"] for item in warnings}
         self.assertIn("03_学术语言学习/v003_第3版/outputs/资源建设_attempt001/language_evidence.jsonl", warning_paths)
+        self.assertEqual(len(argument_rules), 27)
+        self.assertTrue(all(rule["principle"] and rule["project_constraint"]
+                            for rule in argument_rules.values()))
+        self.assertEqual(len(units), 52)
 
     def test_unreferenced_snapshot_file_hash_change_is_recorded(self):
         original_hash = writer.hash_file
@@ -109,7 +131,7 @@ class Writer4Test(unittest.TestCase):
                 return "0" * 64
             return original_hash(path)
         with patch.object(writer, "hash_file", side_effect=altered_hash):
-            profile, snapshot, rolemap, rules, locks, argument_titles, warnings, versions = writer.language_resources()
+            profile, snapshot, rolemap, rules, units, locks, argument_rules, warnings, versions = writer.language_resources()
         self.assertIn("03_学术语言学习/v004_第4版/outputs/language_audit.csv",
                       {item["path"] for item in warnings})
 

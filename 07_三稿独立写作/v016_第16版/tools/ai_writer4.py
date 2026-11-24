@@ -99,6 +99,41 @@ def verify_resource_snapshot(snapshot, label, module_version, resource_version,
     return warnings
 
 
+def parse_argument_rules():
+    text = LANGUAGE_V3.read_text(encoding="utf-8-sig")
+    sections = re.split(r"(?=^## )", text, flags=re.M)
+    parsed = {}
+    for section in sections:
+        heading = re.match(r"^## (L\d{2}) ([^\r\n]+)\r?\n", section)
+        if not heading:
+            continue
+        rule_id, title = heading.group(1), heading.group(2).strip()
+        body = section[heading.end():]
+        principle = body.split("\n\n**", 1)[0].strip()
+
+        def field(label):
+            match = re.search(
+                r"^\*\*" + re.escape(label) + r"：\*\*\s*(.*?)(?=^\*\*[^*\n]+：\*\*|\Z)",
+                body, re.M | re.S)
+            return " ".join(match.group(1).split()) if match else ""
+
+        parsed[rule_id] = {
+            "id": rule_id,
+            "title": title,
+            "principle": principle,
+            "syntax_and_information_order": field("句法及信息顺序"),
+            "expression_skeleton": field("表达骨架"),
+            "usage_condition": field("使用条件"),
+            "project_constraint": field("本项目新增约束"),
+        }
+    required = ("principle", "syntax_and_information_order", "expression_skeleton",
+                "usage_condition", "project_constraint")
+    if len(parsed) != 27 or any(not all(rule.get(key) for key in required)
+                                for rule in parsed.values()):
+        raise ValueError("V003 argument handbook is incomplete or its rule structure changed")
+    return parsed
+
+
 def language_resources():
     """Read originals, verify published content hashes and preserve unpublished-G3 status."""
     profile = load(STYLE_PROFILE)
@@ -154,19 +189,24 @@ def language_resources():
         locks[label] = {"path": relative(path), "sha256": hash_file(path)}
     rules = load(ROOT / profile["paragraph_style"]["rules"]["path"])
     units = load(ROOT / profile["paragraph_style"]["mapping"]["path"])["units"]
-    argument_titles = dict(re.findall(r"^## (L\d\d) (.+)$", LANGUAGE_V3.read_text(encoding="utf-8-sig"), re.M))
+    argument_rules = parse_argument_rules()
     by_id = {item["id"]: item for item in rules}
     if len(by_id) != 15 or set(profile["style_ids"]) != set(by_id):
         raise ValueError("Language pattern IDs no longer match v005 resource")
+    if len(units) != 52 or any(
+            not isinstance(unit, dict) or not unit.get("purpose")
+            or any(style_id not in by_id for style_id in unit.get("style_ids", []))
+            for unit in units.values()):
+        raise ValueError("V005 paragraph-function mapping is incomplete or references unknown ST rules")
     if any(not x.get("style_ids") or any(s not in by_id for s in x["style_ids"])
            or any(unit not in units for unit in x["v005_units"])
-           or any(arg not in argument_titles for arg in x["argument_audit"])
+           or any(arg not in argument_rules for arg in x["argument_audit"])
            for x in rolemap["chapters"].values()):
-        raise ValueError("Invalid qualitative map or v005 unit reference")
+        raise ValueError("Invalid qualitative map or v005/V003 rule reference")
     resource_versions = {"v003": v003_snapshot["resource_version"],
                          "v004": v004_snapshot["resource_version"],
                          "v005": snapshot["resource_version"]}
-    return profile, snapshot, rolemap, by_id, locks, argument_titles, snapshot_warnings, resource_versions
+    return profile, snapshot, rolemap, by_id, units, locks, argument_rules, snapshot_warnings, resource_versions
 
 
 def validate_packet(packet):
@@ -199,7 +239,7 @@ def prepare(packet_path, workspace, mode="exploratory"):
     packet_path, workspace = Path(packet_path), Path(workspace)
     packet = load(packet_path)
     rendered = validate_packet(packet)
-    profile, snapshot, rolemap, rules, locks, argument_titles, snapshot_warnings, resource_versions = language_resources()
+    profile, snapshot, rolemap, rules, units, locks, argument_rules, snapshot_warnings, resource_versions = language_resources()
     if mode != "exploratory":
         formal_gates(packet, snapshot)
     if workspace.exists():
@@ -221,21 +261,35 @@ def prepare(packet_path, workspace, mode="exploratory"):
                 "sources": {i: packet["sources"][i] for i in section["source_ids"]},
                 "qualitative_language_role": typ,
                 "reused_v005_units_as_style_hints_only": rulemap["v005_units"],
+                "v005_unit_details_as_style_hints_only": [
+                    {"id": unit_id, **units[unit_id]} for unit_id in rulemap["v005_units"]
+                ],
+                "style_rule_ids": selected,
                 "style_rules": [
                     {k: rules[i][k] for k in ("id", "name", "how_to_write", "condition", "anti_pattern")}
                     for i in selected
                 ],
                 "v003_argument_audit": [
-                    {"id": arg, "purpose": argument_titles[arg]}
+                    {"id": arg, "purpose": argument_rules[arg]["title"]}
                     for arg in rulemap["argument_audit"]
                 ],
+                "v003_argument_rules": [argument_rules[arg] for arg in rulemap["argument_audit"]],
+                "language_resource_versions": resource_versions,
+                "resource_provenance": {
+                    "v003_argument_handbook": locks["v003_argument_handbook"],
+                    "v004_style_rules": locks["rules"],
+                    "v005_function_mapping": locks["mapping"],
+                },
                 "instruction": (
                     "Write Chinese sociological prose answering THIS section task, not a generic overview. "
                     "Use only the cited, located sources. Distinguish interviewee claims, reported events, "
                     "literature synthesis and your inference. Bind source IDs and author-year citations. "
                     "Do not invent incidents, quotes, frequencies, participant outcomes or independent checks. "
-                    "Use academic syntax without copying sentences or borrowing empirical findings from "
-                    "style examples. Keep original uncertainty and evidence limits. A Chat-generated draft "
+                    "Use V004 ST rules as conditional expression choices, not fixed templates. "
+                    "Use V005 units only as paragraph-function/style hints, never as research methods. "
+                    "Apply V003 argument rules to check scope, inference, source attribution and evidence strength; "
+                    "their skeletons are reasoning aids, not sentences to copy. Do not borrow empirical findings "
+                    "from style examples. Keep original uncertainty and evidence limits. A Chat-generated draft "
                     "must not be logged as a CLI search or independent model response."
                 ),
             }
@@ -255,6 +309,8 @@ def prepare(packet_path, workspace, mode="exploratory"):
         "resource_snapshot_warnings": snapshot_warnings,
         "v003_resource_version": resource_versions["v003"],
         "v004_resource_version": resource_versions["v004"],
+        "v003_argument_rule_count": len(argument_rules),
+        "v005_function_unit_count": len(units),
         "formal_eligible": False, "independent_review_verified": False,
         "stage": "awaiting_draft", "full_paper_status": "exploratory_only",
         "quantitative_writer": "unchanged main/v014/tools/stage07.py",
