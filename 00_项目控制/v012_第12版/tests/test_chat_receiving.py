@@ -65,6 +65,7 @@ class ChatReceivingTest(unittest.TestCase):
         self.assertFalse(report["formal_eligible"])
 
     def test_p01_04_original_record_hash_applies_to_exact_read_bytes(self):
+        self.setup_ref()
         from unittest.mock import patch
         from pathlib import Path
         import hashlib
