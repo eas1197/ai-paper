@@ -38,6 +38,40 @@ def _matches(row, item, batch, clean_doi, web_url):
             and {item["metadata_event_id"], item["abstract_event_id"]} <= set(row["action_ids"]))
 
 
+def _phase_scope(staged, work, run_id, phase, packet, *, allow_reviewed=False):
+    """Derive scope from original v009 state and workload, never submitted claims."""
+    state = task_packet.heritage.state_of(run_id)
+    manifest = task_packet.run_mode.verified_run(work)
+    next_review = "preliminary_review" if phase == "initial" else "final_review"
+    if state.get("policy_sha256") != staged.digest(staged.POLICY):
+        raise ValueError("Original v009 policy binding changed")
+    if state["status"] != phase and not (
+            allow_reviewed and state["status"] == next_review
+            and state.get("latest_search", {}).get("phase") == phase):
+        raise ValueError("Original literature phase is not current")
+    plan = staged.issue_plan(work, state) if state.get("issue_search") else None
+    journals = [*staged.POLICY["journals"],
+                *(row["name"] for row in plan.get("specialist_journals", []))] if plan else staged.POLICY["journals"]
+    limit = staged.POLICY["dev"][phase]
+    if packet["source_scope"].get("journals") != journals or packet["quantity_budget"].get("target") != limit:
+        raise ValueError("Unified task scope or quantity differs from original v009")
+    return state, manifest, next_review, journals, limit
+
+
+def _validate_chat_phase_budget(staged, work, run_id, phase, packet):
+    """A Chat candidate cannot reuse a closed phase or widen a frozen budget."""
+    _, manifest, _, _, limit = _phase_scope(staged, work, run_id, phase, packet)
+    limits = manifest["workload"]["11"]
+    profile = task_packet.run_mode.load(task_packet.run_mode.CONTROL / "dev_profile.json")
+    expected = {"target": limit,
+                "max_batches": profile["11"]["topic_batches_per_phase"],
+                "native_search_actions": limits["native_search_actions"]}
+    if (packet["quantity_budget"] != expected
+            or packet["time_budget_seconds"] != limits["timeout_seconds"]):
+        raise ValueError("Chat frozen quantity or time budget differs from original v009")
+    # This does not attest consumption, source authenticity or academic approval.
+
+
 def audit_unified_literature(result_path, *, current_run_id, expected_reference,
                              expected_execution=None, observed_actions=None):
     snapshot = task_packet.verify_snapshot(expected_reference, current_run_id=current_run_id)
@@ -62,23 +96,14 @@ def audit_unified_literature(result_path, *, current_run_id, expected_reference,
     report.update(original_gate_status="pending_original_native_receipt",
                   original_abstract_eligible_ids=[], original_verified_rows=None,
                   formal_eligible=False, stage_advanced=False)
+    if kind == "chat_native_web":
+        staged, _, _ = _original()
+        _validate_chat_phase_budget(staged, work, current_run_id, phase, packet)
     if kind != "codex_cli" or not report.get("native_cli_receipt") or report["acceptance_status"] == "rejected":
         return report
     staged, clean_doi, web_url = _original()
-    state = task_packet.heritage.state_of(current_run_id)
-    manifest = task_packet.run_mode.verified_run(work)
-    next_review = "preliminary_review" if phase == "initial" else "final_review"
-    if state.get("policy_sha256") != staged.digest(staged.POLICY):
-        raise ValueError("Original v009 policy binding changed")
-    if state["status"] != phase and not (
-            state["status"] == next_review and state.get("latest_search", {}).get("phase") == phase):
-        raise ValueError("Original literature phase is not current")
-    plan = staged.issue_plan(work, state) if state.get("issue_search") else None
-    journals = [*staged.POLICY["journals"],
-                *(row["name"] for row in plan.get("specialist_journals", []))] if plan else staged.POLICY["journals"]
-    limit = staged.POLICY["dev"][phase]
-    if packet["source_scope"].get("journals") != journals or packet["quantity_budget"].get("target") != limit:
-        raise ValueError("Unified task scope or quantity differs from original v009")
+    state, manifest, next_review, journals, limit = _phase_scope(
+        staged, work, current_run_id, phase, packet, allow_reviewed=True)
     provenance = bundle["provenance"]
     events = Path(provenance["events"]["path"])
     answer = Path(provenance["response"]["path"])

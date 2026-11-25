@@ -25,10 +25,15 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         state.update(status="initial", policy_sha256=staged.digest(staged.POLICY))
         task_packet.heritage.write(self.work/"staged_topic.json", state)
         self.journals = staged.POLICY["journals"]
+        manifest = task_packet.run_mode.verified_run(self.work)
+        limits = manifest["workload"]["11"]
         self.ref = task_packet.freeze_packet(self.make_packet(
             task_id="original_v3_literature_initial",
             source_scope={"journals": self.journals, "policy_refs":[]},
-            quantity_budget={"target":staged.POLICY["dev"]["initial"]}),
+            quantity_budget={"target":staged.POLICY["dev"]["initial"],
+                             "max_batches":limits["topic_batches_per_phase"],
+                             "native_search_actions":limits["native_search_actions"]},
+            time_budget_seconds=limits["timeout_seconds"]),
             current_run_id="offline_fixture")
         self.result_path = "fixture/result.json"
 
@@ -91,6 +96,35 @@ class OriginalLiteratureGateTest(unittest.TestCase):
     def receive(self, bundle):
         return gate.audit_unified_literature(self.result_path,current_run_id="offline_fixture",
             expected_reference=self.ref,expected_execution=self.expected(bundle))
+
+    def test_p01_03_chat_intake_rejects_closed_phase_even_without_native_receipt(self):
+        self.setup_ref()
+        bundle = self.fixture()
+        self.assertEqual(self.receive(bundle)["original_gate_status"], "pending_original_native_receipt")
+        state = task_packet.heritage.state_of("offline_fixture")
+        state["status"] = "supplemental"
+        task_packet.heritage.write(self.work / "staged_topic.json", state)
+        with self.assertRaisesRegex(ValueError, "phase is not current"):
+            self.receive(bundle)
+        self.assertFalse((self.work / "initial/literature_matrix.json").exists())
+
+    def test_p01_03_chat_intake_rejects_nonoriginal_scope_and_budget(self):
+        self.setup_ref()
+        packet = task_packet.verify_snapshot(self.ref, current_run_id="offline_fixture")["packet"]
+        for change, message in (
+                ({"source_scope": {"journals": ["Fixture Extra Journal"], "policy_refs": []}}, "scope or quantity"),
+                ({"quantity_budget": dict(packet["quantity_budget"], target=6)}, "scope or quantity"),
+                ({"quantity_budget": dict(packet["quantity_budget"], max_batches=4)}, "quantity or time"),
+                ({"quantity_budget": dict(packet["quantity_budget"], native_search_actions=25)}, "quantity or time"),
+                ({"time_budget_seconds": packet["time_budget_seconds"] + 1}, "quantity or time")):
+            with self.subTest(change=change):
+                self.ref = task_packet.freeze_packet(dict(packet, **change),
+                    current_run_id="offline_fixture")
+                bundle = self.fixture()
+                with self.assertRaisesRegex(ValueError, message):
+                    self.receive(bundle)
+        self.assertFalse((self.work / "initial/literature_matrix.json").exists())
+        self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
 
     def test_c21_original_receiver_rebuilds_and_does_not_advance(self):
         bundle=self.sample()
