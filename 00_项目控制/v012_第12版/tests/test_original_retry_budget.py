@@ -129,3 +129,43 @@ class OriginalRetryBudgetTest(unittest.TestCase):
             self.assertTrue(evidence["recovery_suggestion"])
             self.assertEqual((attempt/"events.jsonl").read_text(),"original trace")
             self.assertEqual(attempt_observation(row)["failure_evidence"],evidence)
+
+    def test_p0505_crash_after_reservation_cannot_launch_again(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            invoke=Mock(side_effect=KeyboardInterrupt())
+            with patch.object(auto,"native_modules",return_value=(lambda:"fixture",invoke,Mock(),Mock())):
+                with self.assertRaises(KeyboardInterrupt):
+                    auto.Executor().call(work,"reality","fixture")
+                before=(work/"v5_native_calls.json").read_bytes()
+                row=auto.heritage.read(work/"v5_native_calls.json")["records"][0]
+                self.assertEqual(row["status"],"started")
+                self.assertEqual(row["model_call_reserved"],1)
+                self.assertIsNone(row["web_actions"])
+                with self.assertRaisesRegex(RuntimeError,"explicit recovery"):
+                    auto.call_once(auto.Executor(),work,"reality","fixture")
+                self.assertEqual(invoke.call_count,1)
+                self.assertEqual((work/"v5_native_calls.json").read_bytes(),before)
+
+    def test_p0505_atomic_publish_failure_retains_previous_ledger(self):
+        with tempfile.TemporaryDirectory() as folder:
+            history=Path(folder)/"v5_native_calls.json"
+            auto.write_native_ledger(history,{"records":[{"status":"started"}]})
+            before=history.read_bytes()
+            with patch.object(auto.os,"replace",side_effect=OSError("fixture replace failure")):
+                with self.assertRaisesRegex(OSError,"fixture replace failure"):
+                    auto.write_native_ledger(history,{"records":[{"status":"completed"}]})
+            self.assertEqual(history.read_bytes(),before)
+            self.assertEqual(list(history.parent.iterdir()),[history])
+
+    def test_p0505_stale_dispatch_lock_blocks_other_stage_without_spend(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work=Path(folder)
+            lock=work/".native-call.lock"
+            lock.write_text("fixture prior process")
+            with patch.object(auto,"native_modules") as native:
+                with self.assertRaisesRegex(RuntimeError,"lock requires explicit recovery"):
+                    auto.Executor().call(work,"events","fixture")
+                native.assert_not_called()
+            self.assertFalse((work/"v5_native_calls.json").exists())
+            self.assertEqual(lock.read_text(),"fixture prior process")

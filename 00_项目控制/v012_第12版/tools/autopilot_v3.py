@@ -10,6 +10,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import tempfile
 from pathlib import Path
 import sys
 
@@ -192,11 +194,43 @@ def source_proof(packet, trace, url_event):
             raise ValueError("Reality source %d not bound to an actual original native web event"%index)
 
 
+def write_native_ledger(history, ledger):
+    """Atomically publish a full reservation/receipt update on the same filesystem."""
+    history = Path(history)
+    if history.is_symlink():
+        raise ValueError("Original native ledger cannot be a symbolic link")
+    fd, name = tempfile.mkstemp(prefix=".native-ledger-", dir=history.parent)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as stream:
+            json.dump(ledger, stream, ensure_ascii=False, indent=2, allow_nan=False)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(name, history)
+    finally:
+        if os.path.exists(name):
+            os.unlink(name)
+
+
 class Executor:
     def __init__(self, *, timeout=900, model=None):
         self.timeout,self.model=timeout,model
 
     def call(self, work, stage, task, *, must_search=False):
+        # An interrupted process may leave this lock. Do not assume its call
+        # did not launch or automatically reclaim its reservation.
+        lock = work / ".native-call.lock"
+        try:
+            with lock.open("x", encoding="utf-8") as stream:
+                stream.write(str(os.getpid()) + "\n")
+        except FileExistsError as exc:
+            raise RuntimeError("Prior native dispatch lock requires explicit recovery") from exc
+        try:
+            return self._call_locked(work, stage, task, must_search=must_search)
+        finally:
+            lock.unlink()
+
+    def _call_locked(self, work, stage, task, *, must_search=False):
         history=work/"v5_native_calls.json"
         ledger=heritage.read(history) if history.is_file() else {"records":[],"budget":6}
         profile=heritage.read(heritage.CONTROL/"v007_第7版/dev_profile.json")
@@ -221,7 +255,7 @@ class Executor:
                 "execution_task_id":execution_task_id(work,stage,attempt,task_sha),
                 "model_call_reserved":1,"remaining_model_calls":ledger["budget"]-len(ledger["records"])-1,
                 "web_actions":None,"web_action_observation":"not_yet_observed"}
-        ledger["records"].append(record);heritage.write(history,ledger)
+        ledger["records"].append(record);write_native_ledger(history,ledger)
         prompt=(task+"\nRead 3.x project rules; use native live web ONLY for needed "
                 "observations. Avoid shell/MCP/browser/plugins and never invent a source, "
                 "actor action, DOI, review identity or evidence. "
@@ -256,7 +290,7 @@ class Executor:
             try:
                 observe()
             finally:
-                heritage.write(history,ledger)
+                write_native_ledger(history,ledger)
             raise
         record["rc"]=code
         try:
@@ -271,10 +305,10 @@ class Executor:
             packet=heritage.read(response)
         except Exception as exc:
             record_failure(exc,"failed")
-            heritage.write(history,ledger)
+            write_native_ledger(history,ledger)
             raise
         record.update(status="completed",thread_id=session)
-        heritage.write(history,ledger)
+        write_native_ledger(history,ledger)
         return packet,folder,session,trace,url_event
 
 
