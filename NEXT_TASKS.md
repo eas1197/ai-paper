@@ -10,10 +10,10 @@
 
 # 当前唯一任务
 
-1. **P0-5.01（当前唯一最小任务）**：查明原resume_writing预算归属。
-   - 状态：pending；核I03未解07/08适用及原dispatch，权威来源、计量单位与缺项；不自行赋值。
-   - P0-4.06 blocked_missing_authoritative_qualitative_g7_contract；原定性正式授权处理器、可信审查身份与权限未取得，G3仍needs_review；P0-4.07/.08/.10/.12暂缓，G24a候选安全合同保留。 [恢复](00_项目控制/v012_第12版/outputs/P0-4.06_定性G7权威裁决合同阻塞.md)
-   - P0-4.02、P0-3.04及其依赖、P0-1/P0-2原阻塞保留；K07暂停、K06保留。
+1. **P0-5.04（当前唯一最小任务）**：补齐真实Chat动作及失败支出记录。
+   - 状态：pending；保留实际可观察动作、失败、原记录与单位，未知token/计费不写零，禁止伪造CLI。
+   - P0-5.01 blocked_missing_original_writing_budget_mapping；07/08指标与原dispatch的实际派发计量无权威映射，P0-5.02/.03暂缓；不将00六次、07/08单项或原局部返修次数强行套用。 [恢复](00_项目控制/v012_第12版/outputs/P0-5.01_resume_writing原预算归属阻塞.md)
+   - 原P0-1至P0-4阻塞/暂缓保留，K07暂停、K06保留。
 
 **当前统计：** 原始205/253，合并210/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K06 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K07 暂停待接口闭环。B14-07/08 与 P 系列暂缓；GAP-F01 开放。；六项优先施工索引11/81，不计原分母。
 
