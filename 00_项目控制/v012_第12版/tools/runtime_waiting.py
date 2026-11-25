@@ -60,6 +60,24 @@ def attach_wait(runtime,result,*,run_id=None,task_file=None,persist=True):
     if reference is not None:
         snap=task_packet.verify_snapshot(reference,current_run_id=run_id)
         timeout=snap["packet"]["time_budget_seconds"]
+        if view.get("action")=="original_06_material_task":
+            if (snap["packet"]["stage_id"]!="qualitative_materials"
+                    or candidate.get("task_packet")!=snap["packet"]
+                    or state["status"]!="frozen"
+                    or not freeze or h.sha(work/"s08_topic.json")!=freeze
+                    or candidate.get("dispatch_authorized") is not False
+                    or candidate.get("formal_eligible") is not False):
+                raise ValueError("Original 06 waiting task binding mismatch")
+            contract["waiting_on"]=("original independent scope decision" if candidate.get("unresolved_scope")
+                                    else "authorized original 06 material executor and independent receiver")
+            contract["expected_deliverables"]=(["original reviewed missing scope; do not expand the frozen research question"]
+                if candidate.get("unresolved_scope") else
+                ["actual material acquisition and access records", "original 06 receipt and material IDs",
+                 "independently verified source/use permission and execution authorization"])
+            contract["resume_argv_template"]=["python",ENTRY,"advance","--run-id",run_id]
+            contract["resume_precondition"]=("Revalidate the same original 06 task and budget; original material reception "
+                "must be available before accepting results. Do not use literature-receive or fabricate a native receipt.")
+            contract["dispatch_authorized"]=False
     elif freeze is not None:
         if state["status"]!="frozen" or h.sha(work/"s08_topic.json")!=freeze:
             raise ValueError("Wait frozen input changed")

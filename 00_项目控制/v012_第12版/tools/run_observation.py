@@ -252,6 +252,8 @@ def command_observation(command,result):
     elif status in {"network_failure","executor_unavailable","model_timeout","schema_error","evidence_missing"} or view.get("execution_status")=="failed" or status=="execution_failed":
         outcome=failure_kind()
         state="blocked" if outcome=="evidence_missing" else "failed"
+    elif action=="original_06_material_task" and status=="awaiting_original_material_results":
+        state="waiting_for_chat"
     elif command=="chat-task":
         state="waiting_for_chat"
     elif command=="codex-task":

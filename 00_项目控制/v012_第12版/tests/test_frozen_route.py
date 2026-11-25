@@ -19,7 +19,7 @@ class FrozenRouteTest(unittest.TestCase):
         strict.write(self.work/"merged_literature.json",self.papers)
         strict.write(self.work/"initial/theories.json",self.theory)
 
-    def freeze(self, method, *, reviewed_receipt=False):
+    def freeze(self, method, *, reviewed_receipt=False, reviewed_scope=None):
         paths={k:{"status":"not_applicable","reason":"Synthetic fixture"}
             for k in ("quantitative","secondary_interviews","online_qualitative")}
         paths[method]={"status":"ready","reason":"Fixture","access":"verified","materials":["fixture"]}
@@ -53,11 +53,56 @@ class FrozenRouteTest(unittest.TestCase):
             "question":"Synthetic question","design":"Synthetic design",
             "evidence_sha256":task_packet._digest({"papers":self.papers,"theories":self.theory}),
             "method_assessment":{"selected":method,"paths":paths}}
+        if reviewed_scope is not None:
+            report["material_scope"]=reviewed_scope
         self.state.update(status="s08_ready",review_phase="final",reality_first=False,
             explanation_first=False,issue_search=False,qual_search_receipts=False,
             method_paths=True,question=report["question"],history=[report],research_method=selection)
         strict.write(self.work/"staged_topic.json",self.state)
         strict.original_call(strict.original_command("s08",self.run_id))
+
+
+    def test_p0303_auto_material_task_waits_for_reviewed_scope(self):
+        self.freeze("online_qualitative",reviewed_receipt=True)
+        result=strict.status(self.run_id,progress=True)
+        self.assertEqual(result["action"],"original_06_material_task")
+        self.assertEqual(result["status"],"waiting_for_user")
+        candidate=result["candidate"]
+        self.assertEqual(candidate["task_packet"]["research_question"],"Synthetic question")
+        self.assertEqual(len(candidate["unresolved_scope"]),5)
+        self.assertEqual(candidate["task_packet"]["quantity_budget"],{})
+        self.assertFalse(result["dispatch_authorized"])
+        self.assertFalse(result["search_dispatched"])
+        self.assertEqual(task_packet.verify_snapshot(candidate["task_snapshot"],current_run_id=self.run_id)["packet"],candidate["task_packet"])
+        from run_observation import command_observation
+        from runtime_waiting import attach_wait
+        runtime=command_observation("advance",result)
+        wait=attach_wait(runtime,result,run_id=self.run_id)
+        self.assertEqual(wait["runtime_status"],"waiting_for_user")
+        self.assertIn("advance",wait["waiting"]["resume_argv_template"])
+        self.assertNotIn("literature-receive",wait["waiting"]["resume_argv_template"])
+        self.assertEqual(strict.status(self.run_id,progress=True),result)
+
+    def test_p0303_complete_scope_waits_without_launch(self):
+        self.freeze("secondary_interviews",reviewed_receipt=True,reviewed_scope={
+            "target_objects":["fixture"],"events":["fixture"],"time_range":"fixture",
+            "material_types":["fixture"],"exclusions":["fixture"]})
+        result=strict.status(self.run_id,progress=True)
+        self.assertEqual(result["status"],"awaiting_original_material_results")
+        self.assertEqual(result["candidate"]["unresolved_scope"],[])
+        import json
+        purpose=json.loads(result["candidate"]["task_packet"]["purpose"])
+        manifest=strict.read(self.work/"run_manifest.json")
+        self.assertEqual(purpose["original_limits"]["max_batches"],manifest["workload"]["11"]["max_batches"])
+        from run_observation import command_observation
+        from runtime_waiting import attach_wait
+        runtime=command_observation("advance",result)
+        self.assertEqual(runtime["runtime_status"],"waiting_for_chat")
+        wait=attach_wait(runtime,result,run_id=self.run_id)
+        self.assertFalse(wait["waiting"]["dispatch_authorized"])
+        self.assertNotIn("literature-receive",wait["waiting"]["resume_argv_template"])
+        self.assertFalse((self.work/"qualitative/attempt_002").exists())
+        self.assertFalse(result["advance_gate"])
 
     def test_original_quantitative_route_never_writer4(self):
         self.freeze("quantitative")

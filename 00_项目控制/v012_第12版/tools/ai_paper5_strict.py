@@ -247,11 +247,27 @@ def frozen_progress(run_id):
             or any(sha(folder / name) != value for name, value in inputs.items())
             or frozen_route(run_id) != route):
         raise ValueError("Original 06 handoff changed during preflight")
-    return {**route, "action": "original_06_preflight",
-            "status": "awaiting_original_independent_material_and_writing_receipts",
+    from material_task import prepare_material_task
+    from task_packet import verify_snapshot
+    candidate = prepare_material_task(run_id)
+    snapshot = verify_snapshot(candidate["task_snapshot"], current_run_id=run_id)
+    packet = snapshot["packet"]
+    if (packet != candidate["task_packet"]
+            or packet["stage_id"] != "qualitative_materials"
+            or packet["research_question"] != verified["question"]
+            or candidate["dispatch_authorized"] is not False
+            or candidate["formal_eligible"] is not False
+            or sha(work / "staged_topic.json") != state_sha
+            or any(sha(folder / name) != value for name, value in inputs.items())
+            or frozen_route(run_id) != route):
+        raise ValueError("Original 06 material task changed during preparation")
+    return {**route, "action": "original_06_material_task",
+            "status": ("waiting_for_user" if candidate["unresolved_scope"]
+                       else "awaiting_original_material_results"),
+            "candidate": candidate,
             "reviewed_attempt": attempt, "reviewed_input_hashes": inputs,
             "original_06_preflight_completed": True, "search_dispatched": False,
-            "advance_gate": False, "automatic_retry": False}
+            "dispatch_authorized": False, "advance_gate": False, "automatic_retry": False}
 
 
 def original_quantitative_plan(run_id, *, input_path, output):
