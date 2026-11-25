@@ -1,4 +1,5 @@
 """C19: Chat native record intake. No Codex event synthesis or host attestation."""
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -12,9 +13,10 @@ def _raw_record(work, ref):
     path = result_bundle._local_file(work, ref["path"])
     if path.name.lower() == "events.jsonl":
         raise ValueError("Codex events.jsonl is not a Chat web record")
-    text = path.read_text(encoding="utf-8-sig")
-    if task_packet.heritage.sha(path) != ref["sha256"]:
+    raw = path.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != ref["sha256"]:
         raise ValueError("Chat original record changed")
+    text = raw.decode("utf-8-sig")
     for line in text.splitlines():
         try:
             item = json.loads(line)
@@ -139,12 +141,16 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                          "gaps": gaps,
                          "status": "record_matched_pending_source_review" if not gaps
                          else "pending_original_source_or_abstract_record"})
-    missing = not matched or any(row["gaps"] for row in receipts)
+    # Report every claimed action not independently indexed. A partial action
+    # index must not be described as a fully matched visible record.
+    unmatched_action_ids = sorted(set(actions) - set(matched))
+    missing = not matched or bool(unmatched_action_ids) or any(row["gaps"] for row in receipts)
     if report["acceptance_status"] != "rejected" and missing:
         report["acceptance_status"] = "pending_candidate"
         report["acceptance_reason"] = "Missing independently matched Chat source-open or abstract records"
     report.update(chat_record_status="pending_original_chat_records" if missing
                   else "matched_visible_records_pending_authentication",
-                  matched_action_ids=sorted(matched), chat_source_receipts=receipts,
+                  matched_action_ids=sorted(matched), unmatched_action_ids=unmatched_action_ids,
+                  chat_source_receipts=receipts,
                   native_cli_receipt=False, host_authenticated=False, formal_eligible=False)
     return report

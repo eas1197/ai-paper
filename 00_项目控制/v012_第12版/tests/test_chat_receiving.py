@@ -34,6 +34,48 @@ class ChatReceivingTest(unittest.TestCase):
             expected_reference=self.ref, expected_execution=self.expected(bundle) if independent else None,
             observed_actions=observed)
 
+    def test_p01_04_partial_independent_action_index_remains_pending(self):
+        bundle, observed = self.sample()
+        row = bundle["sources"][0]
+        row["literature_stages"]["abstract_read_status"] = "read"
+        row["paraphrase"] = "Fixture summary " * 7
+        ref = self.raw("fixture/chat_visible.txt",
+            ("https://example.org/abstract\n" + row["abstract_locator"] + "\n"
+             + row["excerpt"] + "\nfixture query\nhttps://example.org/abstract\n").encode())
+        bundle["provenance"]["record_refs"] = [ref]
+        observed[0].update(record_ref=ref, line_start=1, line_end=3)
+        action = dict(bundle["search_actions"][0], action_id="search-2",
+                      action_type="search", query="fixture query", original_url=None)
+        bundle["search_actions"].append(action)
+        row["action_ids"].append("search-2")
+        self.save(bundle)
+        report = self.receive(bundle, observed)
+        self.assertEqual(report["unmatched_action_ids"], ["search-2"])
+        self.assertEqual(report["acceptance_status"], "pending_candidate")
+        self.assertEqual(report["chat_record_status"], "pending_original_chat_records")
+        self.assertFalse(report["formal_eligible"])
+        observed.append({"action_id": "search-2", "action_type": "search",
+            "record_ref": ref, "line_start": 4, "line_end": 5,
+            "query": "fixture query", "urls": ["https://example.org/abstract"]})
+        report = self.receive(bundle, observed)
+        self.assertEqual(report["unmatched_action_ids"], [])
+        self.assertEqual(report["chat_record_status"], "matched_visible_records_pending_authentication")
+        self.assertFalse(report["host_authenticated"])
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertFalse(report["formal_eligible"])
+
+    def test_p01_04_original_record_hash_applies_to_exact_read_bytes(self):
+        from unittest.mock import patch
+        from pathlib import Path
+        import hashlib
+        ref = self.raw("fixture/chat_visible.txt", b"original record")
+        with patch.object(Path, "read_bytes", return_value=b"changed record"):
+            with self.assertRaisesRegex(ValueError, "Chat original record changed"):
+                chat_receiving._raw_record(self.root / "offline_fixture", ref)
+        self.assertEqual(ref["sha256"], hashlib.sha256(b"original record").hexdigest())
+        self.assertEqual(chat_receiving._raw_record(self.root / "offline_fixture", ref),
+                         ["original record"])
+
     def test_c19_original_record_and_open_match_not_formal(self):
         bundle, observed = self.sample()
         report = self.receive(bundle, observed)
