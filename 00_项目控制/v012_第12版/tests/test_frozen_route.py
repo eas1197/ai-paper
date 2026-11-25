@@ -19,11 +19,29 @@ class FrozenRouteTest(unittest.TestCase):
         strict.write(self.work/"merged_literature.json",self.papers)
         strict.write(self.work/"initial/theories.json",self.theory)
 
-    def freeze(self, method):
+    def freeze(self, method, *, reviewed_receipt=False):
         paths={k:{"status":"not_applicable","reason":"Synthetic fixture"}
             for k in ("quantitative","secondary_interviews","online_qualitative")}
         paths[method]={"status":"ready","reason":"Fixture","access":"verified","materials":["fixture"]}
         if method=="online_qualitative": paths[method]["approach"]="public_text"
+        if reviewed_receipt:
+            folder=self.work/"qualitative"/"attempt_001"
+            conversion={k:"Synthetic offline fixture" for k in
+                ("core_question","prior_question","theoretical_concern","reason_for_conversion",
+                 "framework","literature","context")}
+            conversion["new_question"]="Synthetic question"
+            strict.write(folder/"conversion.json",conversion)
+            strict.write(folder/"events.jsonl",{"fixture":True})
+            strict.write(folder/"response.json",{"fixture":True})
+            receipt={"fixture":True,"status":"pending_independent_review","run_id":self.run_id,
+                "tool_events":[{"fixture":True}],
+                "conversion_sha256":task_packet._digest(conversion),
+                "events_sha256":strict.sha(folder/"events.jsonl"),
+                "response_sha256":strict.sha(folder/"response.json"),
+                "materials":[{"material_id":"fixture","path":method}]}
+            strict.write(folder/"material_receipt.json",receipt)
+            paths[method].update(search_attempt="attempt_001",
+                receipt_sha256=strict.sha(folder/"material_receipt.json"))
         selection={"path":method,"approach":paths[method].get("approach"),
             "entry06":"existing_quantitative" if method=="quantitative" else "planned",
             "writing07":"existing_quantitative" if method=="quantitative" else "planned",
@@ -114,6 +132,44 @@ class FrozenRouteTest(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "Original qualitative method required"):
             strict.original_call(strict.original_writing_command(self.run_id))
         self.assertFalse((self.work / "autonomous_writing").exists())
+
+    def test_p0302_real_original_06_preflight_offline(self):
+        self.freeze("online_qualitative",reviewed_receipt=True)
+        state=(self.work/"staged_topic.json").read_bytes()
+        frozen=(self.work/"s08_topic.json").read_bytes()
+        self.assertFalse(strict.status(self.run_id)["automatic_execution"])
+        result=strict.status(self.run_id,progress=True)
+        self.assertTrue(result["original_06_preflight_completed"])
+        self.assertEqual(result["research_id"],self.run_id)
+        self.assertEqual(result["reviewed_attempt"],"attempt_001")
+        self.assertFalse(result["search_dispatched"])
+        self.assertFalse(result["advance_gate"])
+        self.assertEqual((self.work/"staged_topic.json").read_bytes(),state)
+        self.assertEqual((self.work/"s08_topic.json").read_bytes(),frozen)
+        self.assertFalse((self.work/"qualitative/attempt_002").exists())
+        import autopilot_v3
+        second=autopilot_v3.step(self.run_id)
+        self.assertEqual(second,result)
+
+    def test_p0302_quantitative_does_not_call_06(self):
+        self.freeze("quantitative")
+        result=strict.status(self.run_id,progress=True)
+        self.assertEqual(result["action"],"original_quantitative_handoff")
+        self.assertFalse(result["stata_executed"])
+        self.assertNotIn("original_06_preflight_completed",result)
+
+    def test_p0302_missing_receipt_and_wrong_state_rejected(self):
+        with self.assertRaises(Exception):
+            strict.frozen_progress(self.run_id)
+        self.freeze("online_qualitative")
+        with self.assertRaisesRegex(ValueError,"reviewed material attempt"):
+            strict.status(self.run_id,progress=True)
+
+    def test_p0302_changed_raw_receipt_rejected(self):
+        self.freeze("secondary_interviews",reviewed_receipt=True)
+        strict.write(self.work/"qualitative/attempt_001/response.json",{"changed":True})
+        with self.assertRaisesRegex(RuntimeError,"search receipt or raw evidence has changed"):
+            strict.status(self.run_id,progress=True)
 
     def test_changed_freeze_is_rejected(self):
         self.freeze("quantitative")

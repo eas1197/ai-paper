@@ -207,6 +207,53 @@ def frozen_route(run_id):
     raise ValueError("Unsupported original frozen method")
 
 
+def frozen_progress(run_id):
+    """Run the original qualitative entry preflight, never start acquisition here.
+
+    A verified S08 and original reviewed 06 conversion are prerequisites.
+    Quantitative remains the original handoff, without Stata or writer4.
+    """
+    route = frozen_route(run_id)
+    if route["method"] == "quantitative":
+        return route
+    work = (RUNS / run_id_guard(run_id)).resolve(strict=True)
+    if work.parent != RUNS.resolve() or work.name != run_id:
+        raise ValueError("Original run path mismatch")
+    state = state_of(run_id)
+    decision = state["history"][-1]["method_assessment"]["paths"][route["method"]]
+    attempt = decision.get("search_attempt", "")
+    if not re.fullmatch(r"attempt_[0-9]{3}", attempt):
+        raise ValueError("Original reviewed material attempt required")
+    folder = work / "qualitative" / attempt
+    names = ("conversion.json", "material_receipt.json", "events.jsonl", "response.json")
+    inputs = {}
+    for name in names:
+        path = folder / name
+        actual = path.resolve(strict=True)
+        if actual != path or not actual.is_file():
+            raise ValueError("Original 06 input escapes the reviewed attempt")
+        inputs[name] = sha(actual)
+    state_sha = sha(work / "staged_topic.json")
+    script = ("import json,sys; from pathlib import Path; sys.path.insert(0,sys.argv[1]); "
+              "from qual_materials import validate_conversion,verify_frozen_conversion; "
+              "from collect_common import load; work=Path(sys.argv[2]); "
+              "packet=load(Path(sys.argv[3])); validate_conversion(packet); "
+              "print(json.dumps(verify_frozen_conversion(work,packet)))")
+    verified = json.loads(original_call([sys.executable, "-B", "-c", script,
+        str(MATERIAL.parent), str(work), str(folder / "conversion.json")], timeout=60))
+    if (not isinstance(verified, dict)
+            or verified.get("research_method", {}).get("path") != route["method"]
+            or sha(work / "staged_topic.json") != state_sha
+            or any(sha(folder / name) != value for name, value in inputs.items())
+            or frozen_route(run_id) != route):
+        raise ValueError("Original 06 handoff changed during preflight")
+    return {**route, "action": "original_06_preflight",
+            "status": "awaiting_original_independent_material_and_writing_receipts",
+            "reviewed_attempt": attempt, "reviewed_input_hashes": inputs,
+            "original_06_preflight_completed": True, "search_dispatched": False,
+            "advance_gate": False, "automatic_retry": False}
+
+
 def original_quantitative_plan(run_id, *, input_path, output):
     """H03: only compile the original 06/v004 prepare plan, never execute it."""
     route = frozen_route(run_id)
@@ -297,7 +344,7 @@ def _status(run_id, *, progress=False):
             return {"action": "original_s08_freeze", "after": state_of(run_id)["status"]}
         return {"action": "original_s08_freeze", "command": original_command("s08", run_id)}
     if stage == "frozen":
-        return frozen_route(run_id)
+        return frozen_progress(run_id) if progress else frozen_route(run_id)
     return {"action": "original_v3_requires_staged_evidence_or_independent_review",
             "stage": stage,
             "prepare": original_command("prepare", run_id),

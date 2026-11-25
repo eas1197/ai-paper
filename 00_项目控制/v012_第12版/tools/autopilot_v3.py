@@ -491,7 +491,7 @@ def _step(run_id, *, executor=None):
         return {"next":heritage.state_of(run_id)["status"],
                 "actions":"original v3.2 three-layer issue positioning"}
     from review_task import STAGES
-    if phase in STAGES:
+    if phase in STAGES or phase=="frozen":
         return heritage.status(run_id,progress=True)
     if phase in heritage.PHASES or phase=="s08_ready":
         result=heritage.status(run_id,progress=True)
