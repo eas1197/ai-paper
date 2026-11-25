@@ -2,7 +2,7 @@
 
 唯一开发分支：`dev/v3.1-abstract-acquisition`；唯一5.0开发候选00/v012 strict。v009原研究引擎权威，v005生产不变。
 
-[详细待完成事项总清单](00_项目控制/v012_第12版/待完成事项总清单.md) · [交接](HANDOFF.md) · [状态快照](CURRENT_STATE.md) · [运行规范](RUNBOOK.md)
+[六项优先接口闭环清单](00_项目控制/v012_第12版/优先接口闭环施工清单.md) · [原详细待完成事项总清单](00_项目控制/v012_第12版/待完成事项总清单.md) · [交接](HANDOFF.md) · [状态快照](CURRENT_STATE.md) · [运行规范](RUNBOOK.md)
 
 每次刷新远端HEAD，仅执行当前任务；按实测证据独立验收、提交、同步总清单和下一指针。用户授权连续数量时逐项推进；遇阻塞如实记录，不计未验收。
 
@@ -10,11 +10,12 @@
 
 # 当前唯一任务
 
-1. **K07（当前唯一最小任务）**：完成真实事件比较和来源凭证绑定。
-   - 状态：pending；同run community_canteen_access_20261125，恢复K03及K06原检查点，严格保留原来源合同，不伪造CLI事件。
-   - 完成后：提交并转 K08。
+1. **P0-1.01（当前唯一最小任务）**：核对 Chat 原生搜索正式接入 3.x 文献库的唯一真实准入断点。
+   - 状态：pending；只读 C21/C30 报告、original_literature_gate.py 的 Chat/Codex 分支与原 receipt 相关函数，输出具体缺口及可复用接口，不重新全仓审计。
+   - 完成后：独立提交、更新六项优先施工清单和原接续卡，转 P0-1.02。
+   - [当前优先施工清单](00_项目控制/v012_第12版/优先接口闭环施工清单.md)；原 K07 暂停，同run K06 已验收并归档，不能重跑。
 
-**当前统计：** 原始205/253，合并210/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K06 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K07 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
+**当前统计：** 原始205/253，合并210/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K06 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K07 暂停待接口闭环。B14-07/08 与 P 系列暂缓；GAP-F01 开放。；六项优先施工索引0/81，不计原分母。
 
 最近验收：[K06_原现实观察](00_项目控制/v012_第12版/outputs/K06_原现实观察.md)；K06 verified（Chat实际观察输入；原strict prepare/reality实跑 Actions 45447424123/job 138634921563 success，reality→explanation_exchange；4个增量原件及哈希、artifact 14945704350；原init未覆盖，非正式学术通过；Actions无模型/搜索）。
 
