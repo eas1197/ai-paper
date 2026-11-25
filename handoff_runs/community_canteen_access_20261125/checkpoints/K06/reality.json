@@ -1,0 +1,69 @@
+{
+  "run_id": "community_canteen_access_20261125",
+  "acquisition_mode": "chat_native_web",
+  "observation_date": "2026-11-25",
+  "phenomenon": "上海与广州部分老年助餐或社区食堂面向更多年龄和职业群体，但同时保留老年人优先安排。不同场所使用错峰供餐、分类价格、预订、规模化后厨等安排，形成服务开放与原目标群体保障、可持续运营之间的现实张力。现有报道不能证明所有场所曾经历同一开放转变，也不能证明经营改善或福利效果。",
+  "search_focus": "围绕公共服务对象边界、福利资格与资源分配、基层公共服务多元经营和服务可持续性的待解释差异；后续原反诘与三层定位应区分开放进入、分类优惠、时段规则和实际效果，不先冻结机制。",
+  "sources": [
+    {
+      "source_id": "R01",
+      "url": "https://www.shanghai.gov.cn/nw4411/20260507/13f7d1cc54884f0abe0349d8d1f82935.html",
+      "kind": "媒体实地走访与运营者访谈（政府网站转载）",
+      "publisher": "解放日报",
+      "date": "2026-05-07",
+      "locator": "老年空间也是公共空间：蝴蝶食坊、排队、运营方陈述（正文16–28行）；顾城社区食堂运营（75–80行）",
+      "supports": "记者观察多类顾客共用空间；运营方报告老年人较早到访，其他群体较晚。顾城食堂店长称收支仅勉强平衡、装修成本未收回，提供运营压力对照线索。",
+      "limits": "记者观察限定于走访时点，经营和客群比例为受访者报告；非财务审计或全样本，不据此推断因果和普遍福利效果。"
+    },
+    {
+      "source_id": "R02",
+      "url": "https://huacheng.gz-cmc.com/pages/2024/10/29/SF12835610b682867ce5534dde85f054.html?channel=weixin",
+      "kind": "记者调查及公开经营者、社区受访信息",
+      "publisher": "广州日报",
+      "date": "2024-10-29",
+      "locator": "案例2南石头街为民饭堂（40–51行）；案例3天河悦景社区（57–67行）",
+      "supports": "为民饭堂在面向社会人士的同时保留长者补贴，运营者报告错峰就餐与集中后厨；悦景对不同户籍及年龄群体实行不同价格，年轻顾客提前预订，并有场地和人力支持。",
+      "limits": "同一篇调查包含不同场所，不等同于多个独立媒体旁证；叙述并未独立核算营收或老人可及性。"
+    },
+    {
+      "source_id": "R03",
+      "url": "https://paper.people.com.cn/zgcsb/pc/content/202611/16/content_30191496.html",
+      "kind": "记者现场报道与负责人公开访谈",
+      "publisher": "中国城市报",
+      "date": "2026-11-16",
+      "locator": "第11版，开门共用、问需定供、聚贤共治，网页142–168行",
+      "supports": "报道观察蝴蝶食坊排队，并记载老人优先及分时提供不同餐品、面向不同群体的折扣。另一时点重复出现同一地点，可与R01交叉核对规则；亦提供顾城社区食堂经营者陈述。",
+      "limits": "另一媒体同场所报道不是新事件，部分受访者或数字可能相同；不确认实际老人等待时间、优惠资金流向、利润或前后变化的因果结果。"
+    }
+  ],
+  "observed_web_actions": {
+    "tool_invocations": 2,
+    "query_count": 2,
+    "queries": [
+      "上海 社区食堂 全龄 老年人 年轻人 运营 2025 2026 采访 蝴蝶食坊 新里137",
+      "广州 长者饭堂 社区饭堂 全龄 2024 2025 运营 采访 南石头 悦景"
+    ],
+    "open_requests": 3,
+    "opened_source_ids": [
+      "R01",
+      "R02",
+      "R03"
+    ],
+    "native_codex_search_events": null,
+    "thread_id": null,
+    "invocation_id": null,
+    "exact_platform_token_and_billing": null,
+    "original_cli_action_equivalence": "not_asserted",
+    "scope": "new actual Chat searches and HTML opens on this turn; no earlier K01 results counted",
+    "excluded": "duplicate reposts and un-opened search snippets not used as independent evidence"
+  },
+  "case_candidates": [
+    "上海静安蝴蝶食坊",
+    "上海宝山顾城社区长者食堂",
+    "广州海珠南石头街为民饭堂",
+    "广州天河悦景社区长者饭堂"
+  ],
+  "independent_review_status": "not_obtained",
+  "formal_eligible": false,
+  "academic_gate_approved": false
+}

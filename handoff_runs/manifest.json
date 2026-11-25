@@ -76,7 +76,7 @@
     },
     {
       "run_id": "community_canteen_access_20261125",
-      "files": 3,
+      "files": 7,
       "type": "archived_run_snapshot",
       "root": "00_项目控制/v007_第7版/runs_dev/community_canteen_access_20261125",
       "source_run_id": "community_canteen_access_20261125",
@@ -86,7 +86,7 @@
       },
       "formal_eligible": false,
       "new_execution_proven": false,
-      "provenance": "original strict init in Actions 45446608432; archive of initial state only"
+      "provenance": "original strict init in Actions 45446608432; archive of initial state only; K06 actual reality submission in Actions 45447424123, checkpoint only"
     }
   ],
   "files": {
@@ -545,7 +545,11 @@
     "bike_parking_20261122/autonomous_writing/plan_review_0_budget_audit.json": "c88542f403a4dad63ff76c2ec0da0f056c27995056dbcefac71a84c1829dfd21",
     "community_canteen_access_20261125/run_manifest.json": "aa125a3a43aac8eb972ea77b3370b30bc8ba22db58a83d2c696143c54df20d03",
     "community_canteen_access_20261125/runtime_log/a6e3e7f3bd334ba21f11dfb37ff68f54b29978e2e2bdf78ed769be2e72b1f5db.json": "a6e3e7f3bd334ba21f11dfb37ff68f54b29978e2e2bdf78ed769be2e72b1f5db",
-    "community_canteen_access_20261125/staged_topic.json": "8bc4c7f2aa060b8eeef8256197d7ae37653b4f339667df583dbe7f2c2a32402f"
+    "community_canteen_access_20261125/staged_topic.json": "8bc4c7f2aa060b8eeef8256197d7ae37653b4f339667df583dbe7f2c2a32402f",
+    "community_canteen_access_20261125/checkpoints/K06/reality.json": "86875b6ad73c790dc0b5db9e0088603d892ec8a9b55c5b3e279df8a5f3473004",
+    "community_canteen_access_20261125/checkpoints/K06/runtime_log/bdaf35a5b3fbf04f8fa9982eb58fdf76bcbe2a2a8955ad9fa8a704a8a8d4e9c9.json": "bdaf35a5b3fbf04f8fa9982eb58fdf76bcbe2a2a8955ad9fa8a704a8a8d4e9c9",
+    "community_canteen_access_20261125/checkpoints/K06/staged_topic.json": "794bcd91e9be3b8f163fe4b9527d4333ba5edc5d7bef33d2096ac0114dd814dd",
+    "community_canteen_access_20261125/checkpoints/K06/submitted_reality_report.json": "86875b6ad73c790dc0b5db9e0088603d892ec8a9b55c5b3e279df8a5f3473004"
   },
   "omitted": [
     [

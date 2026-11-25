@@ -10,13 +10,13 @@
 
 # 当前唯一任务
 
-1. **K06（当前唯一最小任务）**：由 v012 启动原 3.x 现实观察。
-   - 状态：implemented_unverified；本轮Chat真实两条查询/三次打开，报告已提交；一次性离线Actions恢复K03真实初始快照并执行原prepare/reality，待实际验收，未计完成。
-   - 完成后：提交并转 K07。
+1. **K07（当前唯一最小任务）**：完成真实事件比较和来源凭证绑定。
+   - 状态：pending；同run community_canteen_access_20261125，恢复K03及K06原检查点，严格保留原来源合同，不伪造CLI事件。
+   - 完成后：提交并转 K08。
 
-**当前统计：** 原始204/253，合并209/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K05 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K06 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
+**当前统计：** 原始205/253，合并210/258。A01–A06、B01–B13、B15–B25、C01–C24、C26–C30、D01–D14、D16–D21、D23–D29、E01–E06、E08、E10–E26、F01–F06、F08–F16、F18、F20–F23、G01–G13、G15–G20、G22、G25、H01–H08、I01–I02、I04–I16、I18–I22、J01–J20、K01–K06 verified；C25、D15、D22、D30、E07、E09、F07、F17、F19、G14、G21、G23、H09、I17 真实验收 deferred_by_user_instruction（不计数）；G24 正式授权 blocked（保留未完成）；G24a 补充离线任务 verified；I03 原始预算适用范围 blocked；I03a、I17a 补充离线任务 verified；K07 当前。B14-07/08 与 P 系列暂缓；GAP-F01 开放。
 
-最近验收：[K05_初始运行代码与配置基线](00_项目控制/v012_第12版/outputs/K05_初始运行代码与配置基线.md)；K05 verified（K03实跑初始HEAD b973877，Actions 45446608432 success；18个指定原入口/配置Git blob及大小，原manifest字节与原workload/registry/policy/writing_policy SHA256，保留原预算和零模型/搜索初始化观察；无额外执行）。
+最近验收：[K06_原现实观察](00_项目控制/v012_第12版/outputs/K06_原现实观察.md)；K06 verified（Chat实际观察输入；原strict prepare/reality实跑 Actions 45447424123/job 138634921563 success，reality→explanation_exchange；4个增量原件及哈希、artifact 14945704350；原init未覆盖，非正式学术通过；Actions无模型/搜索）。
 
 ## 历史与阻塞说明
 

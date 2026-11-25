@@ -1,0 +1,15 @@
+{
+  "run_id": "community_canteen_access_20261125",
+  "mode": "dev",
+  "theme": "城市老年食堂向全年龄社区食堂开放过程中的服务对象边界与运营规则",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [],
+  "status": "explanation_exchange",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "issue_search": true,
+  "reality_sha256": "990511d79ad48db82e95a15542b974bce38c7dad2242af18508e3f722faeeb31"
+}
