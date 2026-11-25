@@ -126,6 +126,83 @@ class OriginalLiteratureGateTest(unittest.TestCase):
         self.assertFalse((self.work / "initial/literature_matrix.json").exists())
         self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
 
+    def chat_abstract_fixture(self):
+        self.setup_ref()
+        bundle = self.fixture()
+        url = "https://example.org/abstract"
+        row = bundle["sources"][0]
+        summary = "Fixture summary of the design and findings describing coordination across two settings. " * 1
+        abstract = ("Synthetic excerpt describing coordination and evidence in the two settings. "
+                    "The fixture has sufficient text to exercise the original abstract content rule.")
+        row.update(original_url=url, metadata_url=url, abstract_url=url, publication=self.journals[0],
+                   paraphrase=summary)
+        row["literature_stages"]["abstract_read_status"] = "read"
+        bundle.update(search_actions=[search_action()], execution_status="completed", failure_reasons=[])
+        original = self.raw("fixture/chat_record.txt",
+            (url + "\n" + row["abstract_locator"] + "\n" + row["excerpt"] + "\n").encode())
+        bundle["provenance"]["record_refs"] = [original]
+        self.save(bundle)
+        observed = [{"action_id": "open-1", "action_type": "open_page", "record_ref": original,
+                     "line_start": 1, "line_end": 3, "query": None, "urls": [url]}]
+        page = self.raw("fixture/receiver_page.txt",
+            (url + "\n" + row["title"] + "\n" + row["authors"][0] + "\n"
+             + row["publication"] + "\n" + row["publication_date"] + "\n"
+             + row["abstract_locator"] + "\n" + abstract + "\n").encode())
+        selection = {"url": url, "record_ref": page, "line_start": 1, "line_end": 7}
+        checks = {"task_snapshot": self.ref, "result_sha256": self.expected(bundle)["result_sha256"],
+                  "sources": [{"source_id": row["source_id"], "metadata": selection,
+                               "abstract": dict(selection), "abstract_text": abstract,
+                               "checked_paraphrase": summary, "relevance": "direct",
+                               "relevance_reason": row["relevance_reason"]}]}
+        return bundle, observed, checks
+
+    def chat_abstract_receive(self, bundle, observed, checks):
+        return gate.audit_unified_literature(self.result_path, current_run_id="offline_fixture",
+            expected_reference=self.ref, expected_execution=self.expected(bundle),
+            observed_actions=observed, abstract_checks=checks)
+
+    def test_p01_05_independent_abstract_content_match_still_pending_authentication(self):
+        bundle, observed, checks = self.chat_abstract_fixture()
+        absent = self.chat_abstract_receive(bundle, observed, None)
+        self.assertIn("missing_receiver_selected_page_records", absent["chat_abstract_checks"][0]["gaps"])
+        report = self.chat_abstract_receive(bundle, observed, checks)
+        self.assertEqual(report["chat_abstract_checks"][0]["gaps"], [])
+        self.assertEqual(report["chat_abstract_checks"][0]["status"],
+                         "content_matched_pending_receiver_authentication")
+        self.assertFalse(report["chat_abstract_checks"][0]["receiver_authenticated"])
+        self.assertFalse(report["native_cli_receipt"])
+        self.assertFalse(report["original_abstract_eligible_ids"])
+        self.assertFalse(report["formal_eligible"])
+        self.assertFalse((self.work / "initial/literature_matrix.json").exists())
+        self.assertEqual(task_packet.heritage.state_of("offline_fixture")["status"], "initial")
+
+    def test_p01_05_title_only_wrong_scope_or_unchecked_paraphrase_stay_pending(self):
+        bundle, observed, checks = self.chat_abstract_fixture()
+        item = checks["sources"][0]
+        item["abstract"]["line_end"] = 5
+        report = self.chat_abstract_receive(bundle, observed, checks)
+        self.assertIn("independent_abstract_or_locator_mismatch", report["chat_abstract_checks"][0]["gaps"])
+        item["abstract"]["line_end"] = 7
+        item["checked_paraphrase"] = "Unmatched paraphrase"
+        bundle["sources"][0]["publication"] = "Unregistered fixture journal"
+        self.save(bundle)
+        checks["result_sha256"] = self.expected(bundle)["result_sha256"]
+        report = self.chat_abstract_receive(bundle, observed, checks)
+        self.assertIn("original_bibliography_or_journal_scope_failed", report["chat_abstract_checks"][0]["gaps"])
+        self.assertIn("independent_paraphrase_or_relevance_not_matched", report["chat_abstract_checks"][0]["gaps"])
+        self.assertEqual(report["acceptance_status"], "pending_candidate")
+        self.assertFalse(report["original_abstract_eligible_ids"])
+
+    def test_p01_05_rejects_wrong_result_or_reused_submitter_record(self):
+        bundle, observed, checks = self.chat_abstract_fixture()
+        checks["result_sha256"] = "a" * 64
+        with self.assertRaisesRegex(ValueError, "bind current result"):
+            self.chat_abstract_receive(bundle, observed, checks)
+        checks["result_sha256"] = self.expected(bundle)["result_sha256"]
+        checks["sources"][0]["metadata"]["record_ref"] = bundle["provenance"]["record_refs"][0]
+        with self.assertRaisesRegex(ValueError, "separate from submitted"):
+            self.chat_abstract_receive(bundle, observed, checks)
+
     def test_c21_original_receiver_rebuilds_and_does_not_advance(self):
         bundle=self.sample()
         report=self.receive(bundle)

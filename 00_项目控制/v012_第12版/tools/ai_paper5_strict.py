@@ -765,6 +765,7 @@ def build_parser():
     p=sub.add_parser("literature-receive");p.add_argument("--run-id",required=True)
     p.add_argument("--task",type=Path,required=True);p.add_argument("--result",required=True)
     p.add_argument("--execution-binding",type=Path);p.add_argument("--observed-actions",type=Path)
+    p.add_argument("--abstract-checks",type=Path)
     p.add_argument("--output",type=Path,required=True)
     p=sub.add_parser("merge-results");p.add_argument("--run-id",required=True)
     p.add_argument("--task",type=Path,required=True);p.add_argument("--selection",type=Path,required=True)
@@ -896,7 +897,8 @@ def main(argv=None):
             result=audit_unified_literature(args.result,current_run_id=args.run_id,
                 expected_reference=task["task_snapshot"],
                 expected_execution=read(args.execution_binding) if args.execution_binding else None,
-                observed_actions=read(args.observed_actions) if args.observed_actions else None)
+                observed_actions=read(args.observed_actions) if args.observed_actions else None,
+                abstract_checks=read(args.abstract_checks) if args.abstract_checks else None)
             write_cli_output(args.output,result)
         elif args.cmd=="codex-receive":
             from codex_receiving import audit_codex_records
