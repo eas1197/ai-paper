@@ -161,6 +161,45 @@ class ChatReceivingTest(unittest.TestCase):
         self.assertFalse(report["formal_eligible"])
         self.assertEqual(self.receive(bundle, observed, independent=False)["acceptance_status"], "pending_candidate")
 
+    def test_p0504_visible_action_accounting_is_not_platform_usage(self):
+        bundle, observed = self.sample()
+        report = self.receive(bundle, observed)["chat_action_observation"]
+        self.assertEqual(report["matched_counts"], {"search": 0, "open_page": 1, "find_in_page": 0})
+        self.assertEqual(report["matched_success_records"], observed)
+        for key in ("actual_host_action_total", "actual_model_calls", "actual_tokens",
+                    "actual_fee", "formal_budget_charge"):
+            self.assertIsNone(report[key])
+        self.assertFalse(report["host_authenticated"])
+        pending = self.receive(bundle, observed, independent=False)["chat_action_observation"]
+        self.assertEqual(pending["matched_success_records"], [])
+        self.assertEqual(pending["unmatched_claimed_action_ids"], ["open-1"])
+        self.assertIsNone(pending["actual_host_action_total"])
+
+    def test_p0504_failed_search_without_results_preserved_without_source_receipt(self):
+        bundle, observed = self.sample()
+        bundle.update(execution_status="failed", failure_reasons=["Timed out"], sources=[],
+            execution_issues=[{"code":"timeout", "scope":"run", "target_id":None,
+                               "detail":"Timed out", "original_status":"failed"}])
+        bundle["search_actions"][0].update(action_type="search", query="fixture query",
+            original_url=None, source_ids=[], failure_reason="Timed out")
+        ref = self.raw("fixture/chat_visible.txt", b"fixture query\nTimed out\n")
+        bundle["provenance"]["record_refs"] = [ref]
+        observed[0].update(action_type="search", query="fixture query", urls=[],
+                           record_ref=ref, line_start=1, line_end=2)
+        self.save(bundle)
+        report = self.receive(bundle, observed)
+        obs = report["chat_action_observation"]
+        self.assertEqual(report["acceptance_status"], "rejected")
+        self.assertEqual(obs["matched_counts"]["search"], 1)
+        self.assertEqual(obs["matched_failure_records"][0]["failure_reason"], "Timed out")
+        self.assertEqual(obs["matched_success_records"], [])
+        self.assertEqual(report["chat_source_receipts"], [])
+        self.assertIsNone(obs["formal_budget_charge"])
+        bundle["search_actions"][0]["failure_reason"] = "Fabricated reason"
+        self.save(bundle)
+        with self.assertRaisesRegex(ValueError, "failure is absent"):
+            self.receive(bundle, observed)
+
 
 if __name__ == "__main__":
     unittest.main()

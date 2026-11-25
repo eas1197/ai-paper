@@ -62,6 +62,7 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
             raise ValueError("Duplicate Chat source ID")
         sources[row["source_id"]] = row
     matched = {}
+    failed_observations = {}
     if observed_actions is not None and not isinstance(observed_actions, list):
         raise ValueError("Observed actions must be a receiver-selected list")
     if expected_execution is not None:
@@ -71,7 +72,7 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
             if not isinstance(item, dict) or set(item) != required:
                 raise ValueError("Invalid independently observed Chat action")
             key = item["action_id"]
-            if key in matched or key not in actions:
+            if key in matched or key in failed_observations or key not in actions:
                 raise ValueError("Observed Chat action does not match submitted action")
             action = actions[key]
             if item["action_type"] not in {"search", "open_page", "find_in_page"} or action["action_type"] != item["action_type"]:
@@ -85,7 +86,8 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                 raise ValueError("Invalid original Chat record location")
             span = "\n".join(lines[start-1:end])
             urls = item["urls"]
-            if not isinstance(urls, list) or not urls or not all(
+            failure = action["failure_reason"]
+            if not isinstance(urls, list) or (not urls and not failure) or not all(
                     isinstance(url, str) and task_packet.heritage.valid_https(url) for url in urls):
                 raise ValueError("Observed action needs actual HTTPS source URLs")
             tokens = set(re.findall(r'https://[^\s<>"\'\]\)]+', span))
@@ -97,7 +99,12 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                     raise ValueError("Observed search query not found in original record")
             elif not action["original_url"] or action["original_url"] not in urls:
                 raise ValueError("Observed page target differs from submitted action")
-            matched[key] = item
+            if failure:
+                if not failure.strip() or failure not in span:
+                    raise ValueError("Observed Chat failure is absent from original record")
+                failed_observations[key] = item
+            else:
+                matched[key] = item
     receipts = []
     for source_id, row in sources.items():
         urls = {row[key] for key in ("original_url", "metadata_url", "abstract_url") if row[key]}
@@ -143,8 +150,8 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                          else "pending_original_source_or_abstract_record"})
     # Report every claimed action not independently indexed. A partial action
     # index must not be described as a fully matched visible record.
-    unmatched_action_ids = sorted(set(actions) - set(matched))
-    missing = not matched or bool(unmatched_action_ids) or any(row["gaps"] for row in receipts)
+    unmatched_action_ids = sorted(set(actions) - set(matched) - set(failed_observations))
+    missing = not matched or bool(unmatched_action_ids) or bool(failed_observations) or any(row["gaps"] for row in receipts)
     if report["acceptance_status"] != "rejected" and missing:
         report["acceptance_status"] = "pending_candidate"
         report["acceptance_reason"] = "Missing independently matched Chat source-open or abstract records"
@@ -152,5 +159,20 @@ def audit_chat_records(result_path, *, current_run_id, expected_reference,
                   else "matched_visible_records_pending_authentication",
                   matched_action_ids=sorted(matched), unmatched_action_ids=unmatched_action_ids,
                   chat_source_receipts=receipts,
+                  chat_action_observation={
+                      "unit": "receiver_matched_action_record",
+                      "matched_success_records": [matched[k] for k in sorted(matched)],
+                      "matched_failure_records": [dict(failed_observations[k],
+                          failure_reason=actions[k]["failure_reason"]) for k in sorted(failed_observations)],
+                      "matched_counts": {kind: sum(item["action_type"] == kind
+                          for item in list(matched.values()) + list(failed_observations.values()))
+                          for kind in ("search", "open_page", "find_in_page")},
+                      "unmatched_claimed_action_ids": unmatched_action_ids,
+                      "reported_execution_issues": bundle["execution_issues"],
+                      "reported_failure_reasons": bundle["failure_reasons"],
+                      "actual_host_action_total": None, "actual_model_calls": None,
+                      "actual_tokens": None, "actual_fee": None,
+                      "formal_budget_charge": None, "host_authenticated": False,
+                  },
                   native_cli_receipt=False, host_authenticated=False, formal_eligible=False)
     return report
