@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path[:0] = [str(ROOT / "04_议题文献与现实/v012_第12版/tools"),
                 str(ROOT / "00_项目控制/v007_第7版/tools"),
                 str(ROOT / "00_项目控制/v009_第9版/tools")]
+from event_protocol import PUBLIC_EVENT_SOURCES
 from method_paths import select_method, verify_material_review
 from native_library import registry
 from run_mode import verified_run
@@ -199,11 +200,9 @@ def main():
         needs = [f"{item['name']}：{item['needed_material']}" for item in framework["dimensions"]]
         prompt += (f"本轮是框架形成后的定向材料收集。核心概念：{framework['core_concept']}。"
                    f"各维度所需材料：{'；'.join(needs)}。优先找反例与竞争机制，不限于初查材料。")
+    prompt += PUBLIC_EVENT_SOURCES
     if args.event_focus:
-        prompt += ("优先在豆瓣、小红书、知乎、百度贴吧、小黑盒和微博寻找公开亲历事件，"
-                   "按主题选择平台，在检索备注中写下实际查询、命中和访问失败。逐项区分自述、证实事实、"
-                   "矛盾和推断；记录互动、决策、理由及结果，缺失写明。同一事件的转述合并。"
-                   "官方材料只核实背景，除非研究问题本身针对制度设计。")
+        prompt += "本轮集中追查亲历事件的互动、决策、理由与结果，缺失写明。"
     try:
         code = invoke(cli_executable(), folder, prompt, folder / "response.schema.json",
                       timeout=budget["timeout_seconds"])

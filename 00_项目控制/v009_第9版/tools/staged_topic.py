@@ -22,18 +22,19 @@ from codex_literature import collect, evidence, group, url_event
 from collect_common import digest, load, normalize, write
 from native_receiving import receive
 from method_paths import PATHS, select_method, verify_material_review
-from event_protocol import OBSERVATION, validate_exchange
+from event_protocol import OBSERVATION, PUBLIC_EVENT_SOURCES, validate_exchange
 
 POLICY = load(VERSION / "search_policy.json")
 SCHEMA = ROOT / REGISTRY["modules"]["04"] / "templates/native_response.schema.json"
 LIBRARY = ROOT / "潜在研究选题库.md"
 ACADEMIC = {"concept": "S02", "value": "S03", "depth": "S06", "increment": "S05"}
-REALITY_TASK = (
+REALITY_TASK = PUBLIC_EVENT_SOURCES + (
     "先用原生网页搜索观察日常社会生活。从新闻、公开讨论、采访、调查或文化现象比较线索；"
     "官方统计与政策用于核实，不以政策目标代替事实。标明个案、舆论、调查及可推广范围，"
     "提炼待解释的矛盾，再把探索线索交给学术初查。"
 )
 RESEARCH_TASK = (
+    "从多个独立真实行动事件出发，比较共同条件、行动过程和结果差异，先明确有依据的预期，再提出研究问题。"
     "用一个概念准确的问句提出核心问题。把研究情境、机制、假设或命题、实证设计分别陈述。"
     "从文献解释与理论反诘推导预期，说明作用条件、竞争解释、支持证据和反证。"
     "描述性或探索性研究可用命题或子问题。独立审查应核对现实来源、社会矛盾、问题单一性、"
