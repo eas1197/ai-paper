@@ -161,7 +161,10 @@ def search(work, state, phase, resume, *, budget_migration=None):
     else:
         if state.get("reality_first"):
             observation = load_reality(work, state)
-            theme += "；现实线索：" + observation["search_focus"]
+            focus = observation["search_focus"]
+            if not isinstance(focus, str):
+                focus = json.dumps(focus, ensure_ascii=False)
+            theme += "；现实线索：" + focus
         if state.get("explanation_first"):
             exchange = load(work / "explanation_exchange.json")
             if digest(exchange) != state["exchange_sha256"]:
