@@ -133,3 +133,104 @@ def independent_review(intake, response, receipt, prior_invocations):
         if errors:
             raise ValueError('; '.join(errors))
     return signoff
+
+
+def obj(properties):
+    return {'type': 'object', 'properties': properties, 'required': list(properties), 'additionalProperties': False}
+
+
+STRING = {'type': 'string'}
+def array(items):
+    return {'type': 'array', 'items': items}
+
+
+DRAFT_SCHEMA = obj({'pack_id': STRING, 'authorship': STRING, 'manuscript': STRING,
+                    'references': array(obj({'source_id': STRING, 'marker': STRING, 'entry': STRING})),
+                    'claims': array(obj({'claim_id': STRING, 'section': STRING, 'text': STRING,
+                                         'claim_type': STRING, 'scope_limit': STRING, 'source_ids': array(STRING),
+                                         'dimension_id': STRING}))})
+REVIEW_SCHEMA = obj({'content_sha256': STRING, 'decision': STRING, 'assessment': STRING,
+                     'checks': obj({k: obj({'status': STRING, 'reason': STRING}) for k in REVIEW_CHECKS}),
+                     'issues': array(obj({'location': STRING, 'reason': STRING, 'action': STRING}))})
+
+
+def native_provider(role, request, folder):
+    """Use the original separate, ephemeral Codex invocation adapter."""
+    from codex_literature import cli_executable, invoke
+    folder.mkdir(parents=True, exist_ok=False)
+    schema = folder / 'schema.json'
+    write(schema, REVIEW_SCHEMA if role == 'review' else DRAFT_SCHEMA)
+    instruction = ('独立审稿。逐项核对源证据、理论增量、竞争解释、论证和语言；不得为通过而放宽标准。'
+                   '仅全部实质检查通过时 accepted；否则 revise（给出具体定位和动作）或 rejected。'
+                   if role == 'review' else
+                   '依据冻结材料和原语言规则撰写完整定性论文；六节标题使用一、至六、的顺序，'
+                   '摘要和结果、结论绑定真实矩阵。提供逐条主张及来源定位台账，不得虚构。'
+                   '若有返修任务，按其逐项修改整个稿件，不得改变冻结结论与证据强度。')
+    prompt = instruction + '\n' + json.dumps(request, ensure_ascii=False)
+    code = invoke(cli_executable(), folder, prompt, schema, timeout=1800, model='gpt-6.2-sol')
+    if code != 0:
+        raise RuntimeError(f'Codex {role} 退出码 {code}；保存原始日志')
+    response = load(folder / 'response.json')
+    return response, native_receipt(folder)
+
+
+def author_context(task):
+    from s08_inputs07 import ROOT
+    return {**task, 'pack_id': value_hash(task), 'language_texts': {
+        name: (ROOT / rec['path']).read_text(encoding='utf-8-sig')
+        for name, rec in task['language_style']['resources'].items() if name != 'profile'}}
+
+
+def run_loop(task, work, provider=native_provider, context=None):
+    """One initial draft plus at most two corrections; never accept on machine checks alone."""
+    work = Path(work)
+    work.mkdir(parents=True, exist_ok=False)
+    write(work / 'writing_task.json', task)
+    context = author_context(task) if context is None else context
+    used = set(task.get('prior_invocations', [])) | {task.get('matrix_review', {}).get('invocation_id')}
+    history, previous, feedback = [], None, None
+    final_status = 'needs_review'
+    try:
+        for number in range(1, 4):
+            folder = work / f'attempt_{number:03d}'
+            folder.mkdir()
+            request = {'task': context, 'previous_draft': previous, 'revision_requirements': feedback}
+            draft, author_receipt = provider('draft', request, folder / 'author')
+            ident = author_receipt['invocation_id']
+            if (not ident or ident in used or verify_locks(author_receipt['files'])
+                    or native_receipt(folder / 'author') != author_receipt
+                    or load(folder / 'author/response.json') != draft):
+                raise ValueError('起草调用重复或凭证已变化')
+            used.add(ident)
+            intake = receive(task, draft)
+            write(folder / 'intake.json', intake)
+            write(folder / 'author_receipt.json', author_receipt)
+            (folder / 'manuscript.md').write_text(draft['manuscript'], encoding='utf-8')
+            row = {'attempt': number, 'intake': intake['status'], 'author_invocation': ident}
+            history.append(row)
+            previous = draft
+            if intake['errors']:
+                feedback = {'machine_errors': intake['errors']}
+            else:
+                response, receipt = provider('review', {'task': context, 'draft': draft,
+                    'content_sha256': intake['content_sha256']}, folder / 'reviewer')
+                signoff = independent_review(intake, response, receipt, used)
+                used.add(signoff['invocation_id'])
+                write(folder / 'quality_review.json', signoff)
+                row.update(review=signoff['decision'], review_invocation=signoff['invocation_id'])
+                if signoff['decision'] == 'accepted':
+                    final_status = 'passed'
+                    break
+                if signoff['decision'] == 'rejected':
+                    final_status = 'rejected'
+                    break
+                feedback = {'independent_review': signoff['issues']}
+            write(work / 'checkpoint.json', {'status': 'needs_revision', 'history': history, 'feedback': feedback})
+    except (OSError, RuntimeError, ValueError, KeyError, TypeError) as exc:
+        final_status = 'blocked'
+        feedback = {'error': str(exc)}
+    report = {'status': final_status, 'scope': 'experimental', 'formal_eligible': False,
+              'pack_id': value_hash(task), 'history': history, 'feedback': feedback,
+              'business_quality_automatic': False, 'submission_enabled': False}
+    write(work / 'qualitative_gate.json', report)
+    return {**report, 'attempt_path': str(work)}

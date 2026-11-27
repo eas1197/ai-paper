@@ -73,3 +73,29 @@ class ReviewTest(unittest.TestCase):
             response['assessment'] = 'changed'
             with self.assertRaises(ValueError):
                 qual.independent_review(intake, response, receipt, set())
+
+
+class LoopTest(unittest.TestCase):
+    def test_review_revision_and_fresh_recheck(self):
+        task, draft = fixture()
+        calls = []
+        def provider(role, request, folder):
+            calls.append((role, request))
+            ident = f'fixture-{len(calls)}'
+            if role == 'review':
+                return review_fixture(folder, request, 'revise' if len(calls) == 2 else 'accepted', ident)
+            folder.mkdir(parents=True)
+            response = copy.deepcopy(draft)
+            if request['revision_requirements']:
+                response['manuscript'] = response['manuscript'].replace('制度规则比较', '制度规则与条件比较')
+            (folder / 'response.json').write_text(json.dumps(response), encoding='utf-8')
+            (folder / 'prompt.txt').write_text('fixture only', encoding='utf-8')
+            (folder / 'events.jsonl').write_text('\n'.join(map(json.dumps, [{'type': 'thread.started', 'thread_id': ident},
+                                                 {'type': 'turn.completed'}])), encoding='utf-8')
+            return response, qual.native_receipt(folder)
+        with tempfile.TemporaryDirectory() as folder:
+            result = qual.run_loop(task, Path(folder) / 'run', provider, context=task)
+            self.assertEqual(result['status'], 'passed', result)
+            self.assertEqual([r['review'] for r in result['history']], ['revise', 'accepted'])
+            self.assertIn('independent_review', calls[2][1]['revision_requirements'])
+            self.assertNotEqual(result['history'][0]['review_invocation'], result['history'][1]['review_invocation'])

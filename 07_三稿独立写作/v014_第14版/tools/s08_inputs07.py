@@ -123,6 +123,7 @@ def qualitative(source, attempt):
                 research_case=freeze["research_case"], language_style=language, matrix=matrix,
                 framework=framework, writing_requirements=requirements.read_text(encoding="utf-8-sig"),
                 findings=findings, materials=receipt["materials"], matrix_review=review,
+                prior_invocations=[r["invocation_id"] for r in load(run / "staged_topic.json")["history"]],
                 literature=literature, theories=theories,
                 front_matter={"title": "明确研究对象与核心关系", "abstract": "问题、资料方法、发现和理论意义与正文一致", "keywords": "4—6个"},
                 sections=[
