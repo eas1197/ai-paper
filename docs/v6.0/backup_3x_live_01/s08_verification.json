@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "scope": "experimental",
+  "method": "online_qualitative",
+  "s08_sha256": "5e3684ab606a8188f3b772d03325fba3f40641b0fa1d18958c682d80c3cb70c2",
+  "evidence_sha256": "f3af822c74c049882956af3e5893a94591973fefe513d68df53291f084bae170",
+  "review_sha256": "b9e2a8fbb842007f863ea9756cec0ae84429203e191d2a652c5f914586f86f47",
+  "literature_count": 10,
+  "distinct_thread_count": 6
+}

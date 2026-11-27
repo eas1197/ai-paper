@@ -1,0 +1,126 @@
+{
+  "status": "pending_independent_review",
+  "events_sha256": "f1b52c01fd025035f574165526d6c236bbbe62320afa5064127d9b4b89888fd4",
+  "response_sha256": "d00e3ecf6ca529cfabf9cf4c1d85c4fc3a089322440d6801e9b804d367017d76",
+  "tool_events": 6,
+  "materials": [
+    {
+      "url": "https://www.aboutamazon.com/news/company-news/ceo-andy-jassy-latest-update-on-amazon-return-to-office-manager-team-ratio",
+      "date": "2024-09-16",
+      "subject": "Amazon 五天返岗备忘录",
+      "context": "公司宣布自 2025 年 1 月 2 日起原则上每周到岗五天，保留临时特殊情形和已经获批的远程办公例外。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "正文末段，连续三段分别说明特殊情形、高管审批的既有例外和生效日。",
+      "relation": "既有正式远程例外由高级领导团队的负责人批准。临时特殊情形包括生病、家庭紧急情况和短期需要安静环境完成任务。",
+      "limits": "公告未交代临时情形的最终批准人、新增长期例外的流程或实际使用天数。公告的离开办公室情形还包括外出见客户或合作方。",
+      "access": "公司官网可公开阅览。研究再利用许可待核实。",
+      "event_id": "exec-0a4e0afc-c957-44a2-9367-ebf57c586637",
+      "material_id": "540a6c62fc60ecd2"
+    },
+    {
+      "url": "https://blogs.microsoft.com/blog/2025/09/09/flexible-work-update/",
+      "date": "2025-09-09",
+      "subject": "Microsoft 分阶段返岗公告",
+      "context": "首阶段要求居住在办公室 50 英里范围内的普吉特海湾地区员工在 2026 年 2 月底前达到每周现场三天。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "正文分别面向普吉特海湾员工、主管和全体员工的三段。",
+      "relation": "员工可在 2025 年 9 月 19 日前提出例外申请，并向主管和团队了解安排。公告允许部分业务团队偏离公司基准。",
+      "limits": "50 英里是首阶段适用范围。公开正文未披露个人例外的核准条件或最终签批人。团队安排与个人例外属于不同层次，主管操作细节指向内部资源。",
+      "access": "公司官网公告可公开阅览。个性化邮件和主管内部资源未核。研究再利用许可待核实。",
+      "event_id": "exec-07524522-de98-45f9-9f8a-30cbfb69e8f6",
+      "material_id": "f7c06334b149f4b8"
+    },
+    {
+      "url": "https://www.opm.gov/chcoc/latest-memos/agency-return-to-office-implementation-plans.pdf",
+      "date": "2025-01-27",
+      "subject": "美国联邦行政机构返岗实施备忘录",
+      "context": "联邦官方文件要求行政机构提交全时现场办公实施计划，可作为公部门对照。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "第 II 节及第 1 页脚注 1。",
+      "relation": "脚注列出残障、符合条件的医疗状况及其他迫切理由，写明机构负责人和员工主管的认证要求，并另列依法远程办公的军人配偶。",
+      "limits": "文件规定适用范围、例外和计划要求。机构实批个案及员工每周在家工作天数未知。",
+      "access": "联邦官网 PDF 可公开阅览。研究再利用条件待核实。",
+      "event_id": "exec-07524522-de98-45f9-9f8a-30cbfb69e8f6",
+      "material_id": "16697ca370c8361f"
+    },
+    {
+      "url": "https://www.dol.gov/agencies/owcp/procedure-manual/owcpBulletins",
+      "date": "2025-08-27",
+      "subject": "美国劳工部工伤赔偿项目办公室情境性远程办公公告",
+      "context": "OWCP 第 25-06 号公告细化联邦返岗后的短期远程办公流程。网页注明该公告于 2026 年 6 月纳入程序手册。",
+      "kind": "official_rule",
+      "path": "online_qualitative",
+      "locator": "第 25-06 号公告 A、B、审批程序及通用要求，网页第 839 至 919 行。",
+      "relation": "短期康复、符合条件的预约前后工作等可由主管审批并通知行政官员，主管须判断业务需要。无替代工位或天气安全等情形由行政官员批准。多数非病情形通常限一天，超过一天须咨询部门领导。规则还要求已有远程协议并登记工时。",
+      "limits": "这是特定机构的条件性授权。合理便利有单独渠道。审批、登记和季度审计条款只证明制度设计，实际执行记录未见。",
+      "access": "劳工部公告可公开阅览。内部记录未访问。研究再利用条件待核实。",
+      "event_id": "exec-8c02781e-3dc9-4077-af10-7c78ab2a64ae",
+      "material_id": "0478a97cf22999a0"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/jpmorgan-asks-staff-to-return-to-office-five-days-a-week-prompting-complaints-3808150",
+      "date": "2025-01-12",
+      "subject": "Reuters 对 JPMorgan Chase 返岗内部备忘录的报道",
+      "context": "转载页日期为 1 月 12 日，报道所述内部通知于 1 月 10 日发出，要求混合办公员工自 3 月起陆续每周到岗五天。",
+      "kind": "reporter_account",
+      "path": "secondary_interviews",
+      "locator": "正文第 43 至 64 行，重点为通知期、延期批准及内部常见问题三段。",
+      "relation": "记者查阅备忘录，公司发言人确认其内容。报道指员工如需更多准备时间，应向主管申请。备忘录另指向包含特殊远程例外、个人灵活安排和考勤信息的内部页面。",
+      "limits": "可确认的主管权限涉及返岗延期。长期例外的最终签批人及具体条件仍缺证。内网评论和页面锁定来自消息人士转述。",
+      "access": "Investing.com 的 Reuters 转载正文可公开阅览。内部备忘录全文、常见问题及评论未直接访问。研究再利用许可待核实。",
+      "event_id": "exec-0a4e0afc-c957-44a2-9367-ebf57c586637",
+      "material_id": "d58909633a62dfd6"
+    },
+    {
+      "url": "https://fortune.com/2025/02/15/jpmorgan-chase-firing-rto-work-from-home-technology-zoom-welch/",
+      "date": "2025-02-15",
+      "subject": "Fortune 对 JPMorgan Chase 员工的署名访谈及员工大会报道",
+      "context": "一位技术员工在 2 月 12 日员工大会提出，由主管判断其跨地点团队是否需要到场。报道结合本人采访、会议录音、记者看过的讯息和公司回应。",
+      "kind": "actor_statement",
+      "path": "secondary_interviews",
+      "locator": "正文第 67 至 72 行的提问和回应，第 78 至 92 行的会后经过与公司回应，及第 81 行的当时远程频率。",
+      "relation": "员工描述团队分散办公，首席执行官在会上拒绝把团队到岗要求交由主管决定。报道记载该员工当时每周远程两天，其办公地点当时尚无五天制生效日期。会后员工称曾被要求离开，雇主称劳动关系未曾中断。",
+      "limits": "两天频率属于新规则在该地点落实前的安排，后续频率及正式例外决定未知。大会回应涉及团队返岗要求，无法据此判定主管对单日申请的权限。",
+      "access": "报道正文可公开阅览。录音和私人讯息通过记者的核阅获取信息。研究再利用许可待核实。",
+      "event_id": "exec-07524522-de98-45f9-9f8a-30cbfb69e8f6",
+      "material_id": "6e55ad4186b88c4a"
+    },
+    {
+      "url": "https://www.reddit.com/r/JPMorganChase/comments/1nq7o7v/so_can_we_use_the_allotted_wfh_days_or_not/",
+      "date": "2025-09-25",
+      "subject": "JPMorgan Chase 相关公开讨论中的单日居家申请",
+      "context": "发帖者称所在办公室刚转为全现场办公。评论者描述了不同的审批和登记做法。",
+      "kind": "actor_statement",
+      "path": "online_qualitative",
+      "locator": "主帖第 17 至 24 行，评论第 298 至 304、346 至 351、385 至 407 行。",
+      "relation": "发帖者称当日通知主管后被告知须预批，是否最终居家工作未交代。一名评论者称先获书面同意再登记，另一名自述因车辆维修实际用过一次。还有评论者称自己的申请被要求改用假期，但同队有人偶尔获准。",
+      "limits": "匿名自述的身份、团队职责和具体规则版本无法核实。最后一例仍处于混合安排。评论对额度和预批要求的说法冲突，无法确定全行规则。",
+      "access": "主帖及所述评论可公开阅览。研究采集、存档及再利用许可待核实。",
+      "event_id": "exec-07524522-de98-45f9-9f8a-30cbfb69e8f6",
+      "material_id": "e597d0a3657e6d8c"
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://fortune.com/2025/03/06/jpmorgan-chase-jamie-dimon-union-rto-wall-street/",
+      "reason": "receipt or context incomplete"
+    }
+  ],
+  "notes": [
+    "2026-11-25 核验。使用原生网页搜索和打开，共 6 次工具调用。若将批量调用里的每条查询和每次打开分别计数，则共 25 项，比 24 项上限多 1 项。",
+    "公开网页路径。搜索词包括 Amazon five days office exceptions approved S team official memo、Microsoft flexible work exceptions manager 50 miles、federal OPM return to office、JPMorgan exception approved denied actual days。打开核对了 Amazon、Microsoft、OMB／OPM、劳工部 OWCP 及 JPMorgan Chase 相关 Reddit 主帖。两条用于追查 Amazon 例外撤回及 JPMorgan Chase 拒批的论坛结果打开时返回缓存缺失，只见搜索摘要，未纳入材料。这一路径是公开文档和网络讨论阅读。",
+    "二手访谈与报道路径。搜索词包括 Amazon JPMorgan five days employee interview remote exception office capacity、JPMorgan remote exceptions office space work from home、Reuters JPMorgan January 2025 manager approval。核对 Reuters 转载与 Fortune 两篇报道。Yahoo 的 Reuters 转载打开时返回 429，改用可阅览的 Investing.com 转载。JPMorgan Chase 的内部常见问题和 Microsoft 的主管操作材料仍缺公开正文。访谈材料来自记者公开发表的采访。"
+  ],
+  "gaps": [
+    "规则比较显示，Amazon 的既有正式远程例外由高级领导层批准。联邦总体文件写明主管与机构负责人的认证要求。OWCP 则明确给主管一部分短期批准权，并按情形、业务需要和期限划界。Microsoft 公开了申请时限和业务团队的变通空间，个人最终审批权仍未知。JPMorgan Chase 可核实的主管权限包括准备期延期，正式远程例外权限仍待证。",
+    "核心问题的关联方向和大小仍未知。公开材料缺少在同一返岗规则下、岗位任务和团队现场职责相近、持续在同一雇主任职的可比员工，以及能与申请理由、审批层级、决定日期相连的逐周实际居家工作记录。",
+    "现有反例限制了简单推断。现场网络故障可触发临时回家工作的指令。办公点延迟实施期间，员工可以继续原有混合安排。公开讨论中也出现须事先审批、获准登记和被要求改用假期等不同经历。这些材料支持追查审批和现场条件如何影响单次安排，尚无足够记录判断这些机制对稳定的每周居家工作天数有何关联。"
+  ],
+  "run_id": "backup_3x_live_01",
+  "conversion_sha256": "796ba6feadbbacfddec8f8a4fb29c1c58b9f6ac00138c894d22faa61968b1ae1",
+  "formal_eligible": false,
+  "material_kind": "qualitative_empirical"
+}

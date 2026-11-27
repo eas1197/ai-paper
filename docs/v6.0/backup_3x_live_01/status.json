@@ -1,0 +1,17 @@
+{
+  "run_id": "backup_3x_live_01",
+  "method": "online_qualitative",
+  "scope": "experimental",
+  "formal_eligible": false,
+  "material_count": 7,
+  "status": "needs_review",
+  "missing": [
+    "framework.json",
+    "conversion.json",
+    "material_receipt.json",
+    "events.jsonl",
+    "response.json",
+    "analysis_matrix.json",
+    "matrix_review.json"
+  ]
+}
