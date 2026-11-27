@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import re
+import sys
 import tempfile
 from pathlib import Path
 
@@ -36,24 +37,55 @@ def write_new(path, value):
         pending.unlink(missing_ok=True)
 
 
+def experiment(run_id):
+    path = os.environ.get("AI_PAPER_DEV_RUN")
+    if not path:
+        return None
+    sys.path.insert(0, str(ROOT / "00_项目控制/v007_第7版/tools"))
+    try:
+        from run_mode import verified_run
+    finally:
+        sys.path.pop(0)
+    manifest = verified_run(path)
+    if run_id != manifest["run_id"] or Path(path).resolve().name != run_id:
+        raise ValueError("Topic run must match the experimental run ID")
+    return manifest
+
+
 def run_path(run_id):
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}", run_id):
         raise ValueError("Invalid run_id")
+    if experiment(run_id):
+        return Path(os.environ["AI_PAPER_DEV_RUN"]).resolve() / "topic"
     return STORE / run_id
 
 
 def initialize(run_id, limits, theme=None):
+    dev = experiment(run_id)
+    if dev:
+        workload = dev["workload"]
+        limits = {
+            "model_calls": workload["00"]["model_calls"],
+            "search_calls": workload["04"]["context_searches"] + workload["05"]["follow_up_searches"],
+        }
+        theme = dev["theme"]
     if not validate_counts(limits) or min(limits.values()) < 1:
         raise ValueError("Set positive per-run model and search call limits")
     path = run_path(run_id)
     path.mkdir(parents=True, exist_ok=False)
-    write_new(path / "config.json", {"run_id": run_id, "limits": limits, "theme": theme, "review_model": REVIEW_MODEL})
+    config = {"run_id": run_id, "limits": limits, "theme": theme, "review_model": REVIEW_MODEL}
+    if dev:
+        config.update(run_mode="dev", formal_eligible=False, workload_sha256=dev["workload_sha256"])
+    write_new(path / "config.json", config)
     return status(run_id)
 
 
 def status(run_id):
     path = run_path(run_id)
     config = read(path / "config.json")
+    dev = experiment(run_id)
+    if dev and config.get("workload_sha256") != dev["workload_sha256"]:
+        raise ValueError("Topic checkpoint does not match the experimental policy")
     rounds = sorted(path.glob("round-*.json"))
     previous = read(rounds[-1]) if rounds else {}
     if previous and previous["config_sha256"] != content_hash(config):
@@ -93,6 +125,14 @@ def record(run_id, bundle, review, usage):
     if stage not in {"opportunity", "question", "deepening"}:
         raise ValueError(f"Run is not accepting exploratory reviews: {stage}")
     validate_bundle(bundle, ROOT)
+    dev = experiment(run_id)
+    if dev:
+        limits = dev["workload"]["05"]
+        for key in ("opportunities", "questions", "evolution"):
+            if len(bundle[key]) > limits["candidates"]:
+                raise ValueError(f"{key} exceeds the experimental candidate cap")
+        if len(bundle["explanations"]) > limits["explanations"]:
+            raise ValueError("Explanations exceed the experimental cap")
     validate_review(review, bundle, stage, current["config"]["review_model"])
     approved = review.get("selected_ids", [])
     if review["verdict"] in {"PASS", "READY"}:
@@ -118,6 +158,12 @@ def record(run_id, bundle, review, usage):
         next_stage, reason = "stopped", "budget_exceeded"
     else:
         next_stage, reason = allowed_action(stage, review, remaining)
+    if dev and reason in {"branch", "targeted_revision", "return_for_new_lead"}:
+        prior = (read(checkpoint) for checkpoint in run_path(run_id).glob("round-*.json"))
+        revisions = sum(entry["reason"] in {"branch", "targeted_revision", "return_for_new_lead"}
+                        for entry in prior)
+        if revisions >= limits["iterations"]:
+            next_stage, reason = "stopped", "experimental_iteration_budget_exhausted"
     if next_stage == stage and stage == "deepening" and (approved or review["verdict"] == "BRANCH"):
         options = {row["next_question_id"] for row in bundle["evolution"] if row["disposition"] == "retained"
                    and row["question_id"] in current["approved_ids"]}
@@ -139,7 +185,8 @@ def main():
     init.add_argument("run_id")
     init.add_argument("--theme")
     for counter in COUNTERS:
-        init.add_argument("--" + counter.replace("_", "-"), type=int, required=True)
+        init.add_argument("--" + counter.replace("_", "-"), type=int,
+                          required=not os.environ.get("AI_PAPER_DEV_RUN"))
     commands.add_parser("status").add_argument("run_id")
     commands.add_parser("formal-init").add_argument("run_id")
     final = commands.add_parser("final-gate")
@@ -157,6 +204,10 @@ def main():
     for name in ("bundle", "review", "usage"):
         submit.add_argument(name)
     args = parser.parse_args()
+    if experiment(args.run_id) and (run_path(args.run_id) / "topic_version.json").exists():
+        parser.error("Use the experimental topic version's own entry point")
+    if args.command in {"formal-init", "final-gate"} and experiment(args.run_id):
+        parser.error("An experimental run is ineligible for formal initialization or freeze")
     if args.command == "init":
         result = initialize(args.run_id, {key: getattr(args, key) for key in COUNTERS}, args.theme)
     elif args.command == "record":

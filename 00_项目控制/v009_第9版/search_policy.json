@@ -1,0 +1,9 @@
+{
+  "profile": "topic_v32_staged",
+  "enabled_by_default": false,
+  "candidate_registry": "00_项目控制/v006_第6版/v3.1_Codex检索候选注册表.json",
+  "formal": {"initial": 5, "supplemental": 35},
+  "dev": {"initial": 5, "supplemental": 5},
+  "journals": ["中国社会科学", "社会学研究", "社会", "探索与争鸣", "中国青年研究", "经济研究", "管理世界", "American Sociological Review", "American Journal of Sociology"],
+  "preferred_platforms": ["https://journals.sagepub.com/home/asr", "https://www.journals.uchicago.edu/toc/ajs/current"]
+}

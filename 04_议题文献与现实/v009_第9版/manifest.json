@@ -1,0 +1,15 @@
+{
+  "module_id": "04",
+  "version": 9,
+  "status": "candidate",
+  "profile": "paper_autonomous_v31",
+  "scope": "abstract_collection_receive_only",
+  "entrypoint": "tools/abstract_library.py",
+  "depends_on": {
+    "11": 4
+  },
+  "config": "templates/abstract_request.json",
+  "outputs": [
+    "literature_matrix.json"
+  ]
+}

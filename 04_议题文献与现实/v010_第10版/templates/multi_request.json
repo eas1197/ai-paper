@@ -1,0 +1,42 @@
+{
+  "acquisition_mode": "abstract_only",
+  "theme": "教育分流",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界"
+  ],
+  "abstract_target": 100,
+  "download_scope": "none",
+  "download_pdf": false,
+  "download_fulltext": false,
+  "require_fulltext_reading": false,
+  "require_subscription": false,
+  "sources": [
+    "vip_public",
+    "journal_shxyj_public",
+    "cnki_normal_selenium"
+  ],
+  "max_queries": 5,
+  "max_pages": 2,
+  "max_retries": 1,
+  "request_budget": 240,
+  "first_pass_from_year": 2000,
+  "public_journal": {
+    "interval_seconds": 1,
+    "timeout_seconds": 10
+  },
+  "browser": {
+    "headless": true,
+    "min_interval_seconds": 3,
+    "element_timeout_seconds": 10,
+    "page_timeout_seconds": 15
+  },
+  "vip": {
+    "interval_seconds": 1,
+    "timeout_seconds": 9
+  }
+}

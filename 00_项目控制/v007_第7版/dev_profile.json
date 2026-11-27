@@ -1,0 +1,15 @@
+{
+  "00":{"attempts":2,"model_calls":6,"timeout_seconds":720},
+  "01":{"cssci_journals":2,"pku_journals":2,"distinct_journals":4},
+  "02":{"fulltext_style_min":2},
+  "03":{"source_papers":2,"examples":4},
+  "04":{"abstract_target":10,"core_fulltext_target":2,"views":2,"context_searches":2},
+  "05":{"candidates":2,"explanations":2,"follow_up_searches":1,"iterations":2,"independent_reviews":1},
+  "06":{"primary_models":1,"robustness_models":1,"references_per_method_min":1,"repetitions":1,"sample_max":500,"maxiter":80},
+  "07":{"drafts":1,"max_words":2500,"revisions":1,"independent_reviews":1},
+  "08":{"review_rounds":1,"independent_reviews":1},
+  "09":{"cssci_candidates":1,"pku_candidates":1,"send":false},
+  "10":{},
+  "11":{"max_batches":1,"topic_batches_per_phase":3,"timeout_seconds":480,"native_search_actions":24},
+  "12":{"migration_jobs":1}
+}
