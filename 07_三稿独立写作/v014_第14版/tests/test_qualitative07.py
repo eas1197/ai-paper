@@ -1,5 +1,8 @@
 """Synthetic contract tests only; no research or model execution."""
 import copy
+import json
+import tempfile
+from pathlib import Path
 import unittest
 from test_stage07 import stage07
 from runtime import value_hash
@@ -44,3 +47,29 @@ class IntakeTest(unittest.TestCase):
         draft['pack_id'] = 'wrong'
         draft['manuscript'] = draft['manuscript'].replace('## 五、经验发现', '## 删除')
         self.assertEqual(qual.receive(task, draft)['status'], 'needs_revision')
+
+
+def review_fixture(folder, subject, decision='accepted', thread='fixture-review'):
+    folder.mkdir(parents=True, exist_ok=True)
+    result = {'content_sha256': subject['content_sha256'], 'decision': decision,
+              'assessment': 'fixture only', 'checks': {k: {'status': 'pass', 'reason': 'fixture'} for k in qual.REVIEW_CHECKS},
+              'issues': [] if decision == 'accepted' else [{'location': '摘要', 'reason': 'fixture', 'action': 'revise'}]}
+    (folder / 'response.json').write_text(json.dumps(result), encoding='utf-8')
+    (folder / 'prompt.txt').write_text(subject['content_sha256'], encoding='utf-8')
+    (folder / 'events.jsonl').write_text('\n'.join(map(json.dumps, [{'type': 'thread.started', 'thread_id': thread},
+                                    {'type': 'turn.completed'}])), encoding='utf-8')
+    return result, qual.native_receipt(folder)
+
+
+class ReviewTest(unittest.TestCase):
+    def test_independent_review_and_reject_reused_or_tampered_receipt(self):
+        task, draft = fixture()
+        intake = qual.receive(task, draft)
+        with tempfile.TemporaryDirectory() as folder:
+            response, receipt = review_fixture(Path(folder), intake)
+            self.assertEqual(qual.independent_review(intake, response, receipt, set())['decision'], 'accepted')
+            with self.assertRaises(ValueError):
+                qual.independent_review(intake, response, receipt, {'fixture-review'})
+            response['assessment'] = 'changed'
+            with self.assertRaises(ValueError):
+                qual.independent_review(intake, response, receipt, set())
