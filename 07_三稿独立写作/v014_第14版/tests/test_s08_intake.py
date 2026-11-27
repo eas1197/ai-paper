@@ -94,6 +94,54 @@ class S08IntakeTest(unittest.TestCase):
             self.assertIn("自动论文文字要求", task["writing_requirements"])
             self.assertIn("abstract", task["front_matter"])
             self.assertIn("references", task["end_matter"])
+            contract = intake.binding(run, folder)
+            state = load(run / "staged_topic.json")
+            state["topic_reasoning_required"] = True
+            write(run / "staged_topic.json", state)
+            self.assertEqual(stage07.plan(inputs)["status"], "needs_review")
+            reviewed_matrix = folder / "analysis_matrix_reviewed.json"
+            write(reviewed_matrix, dict(load(matrix_path), question_binding=contract))
+            draft = run / "autonomous_writing/draft_0"
+            draft.mkdir(parents=True)
+            plan = draft / "reviewed.md"
+            plan.write_text("A reviewed paragraph task.", encoding="utf-8")
+            packet = {"analysis_matrix": str(reviewed_matrix.relative_to(run)),
+                      "question_binding": contract, "chapters": [{"task": "fixture task"}]}
+            write(draft / "plan_input.json", packet)
+            native = run / "autonomous_writing/plan_review_0/attempt_001"
+            response = {"decision": "pass", "reason": "fixture review"}
+            write(native / "response.json", response)
+            record = {"answer": response, "thread_id": "fixture-plan-review",
+                      "response_sha256": sha(native / "response.json"), "model": "gpt-6.2-sol"}
+            write(native / "validated.json", record)
+            write(native / "login.json", {"chatgpt": True})
+            write(native / "request.json", {"model": record["model"], "inputs": {
+                "question_binding": contract, "matrix": load(reviewed_matrix),
+                "plan_sha256": sha(plan), "plan": plan.read_text(encoding="utf-8")}})
+            (native / "events.jsonl").write_text(
+                json.dumps({"type": "thread.started", "thread_id": record["thread_id"]}) + "\n"
+                + json.dumps({"type": "turn.completed"}) + "\n", encoding="utf-8")
+            write(draft / "writing_plan_review_request.json", {
+                "plan_sha256": sha(plan), "input_sha256": intake.staged_topic.run_mode.digest(packet),
+                "analysis_matrix_sha256": sha(reviewed_matrix), "review_status": "pass",
+                "independent_review": record, "question_binding": contract})
+            status = run / "autonomous_writing_status.json"
+            write(status, {"status": "reviewed_plan", "plan": str(plan.relative_to(run)),
+                           "plan_sha256": sha(plan), "review": record, "revisions": 2})
+            write(run / "run_manifest.json", {"workload": {
+                "11": {"native_search_actions": 24}, "07": {"revisions": 1}}})
+            planned = stage07.plan(inputs)
+            self.assertEqual(planned["status"], "ready")
+            with patch.object(stage07, "ROOT", run):
+                task = load(stage07.prepare(planned)["writing_task"])
+            self.assertEqual(task["reviewed_writing_plan"], packet)
+            self.assertEqual(task["writing_budget"]["revisions"], 0)
+            plan.write_text("Changed after review.", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "writing plan"):
+                stage07.plan(inputs)
+            status.unlink()
+            state.pop("topic_reasoning_required")
+            write(run / "staged_topic.json", state)
             matrix = load(matrix_path)
             matrix["rows"][0]["evidence"][0]["locator"] = "altered"
             write(matrix_path, matrix)

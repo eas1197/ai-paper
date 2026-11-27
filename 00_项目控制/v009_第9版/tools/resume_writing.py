@@ -67,8 +67,7 @@ def dispatch(area, label, instruction, inputs, *, reviewer=False):
 
 def resume(work, folder, prior_review):
     manifest = run_mode.verified_run(work)
-    if run_mode.writing_policy(manifest)["deliverable"] != "plan":
-        raise ValueError("This resume entry produces experimental plans only")
+    run_mode.writing_policy(manifest)
     area = work / "autonomous_writing"
     area.mkdir(exist_ok=True)
     contract = binding(work, folder)
