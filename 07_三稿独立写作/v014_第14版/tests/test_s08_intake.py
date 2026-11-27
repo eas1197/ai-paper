@@ -89,6 +89,11 @@ class S08IntakeTest(unittest.TestCase):
             self.assertEqual(task["findings"][0]["evidence"][0]["locator"], "section 2")
             self.assertEqual(task["language_style"]["profile_id"], "corpus20_language_style")
             self.assertIn("经验发现", {row["section"] for row in task["sections"]})
+            self.assertEqual(len(task["sections"]), 6)
+            self.assertEqual(task["framework"], framework)
+            self.assertIn("自动论文文字要求", task["writing_requirements"])
+            self.assertIn("abstract", task["front_matter"])
+            self.assertIn("references", task["end_matter"])
             matrix = load(matrix_path)
             matrix["rows"][0]["evidence"][0]["locator"] = "altered"
             write(matrix_path, matrix)

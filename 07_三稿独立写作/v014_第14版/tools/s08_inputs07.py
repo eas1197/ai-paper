@@ -117,16 +117,23 @@ def qualitative(source, attempt):
             or not review["reason"].strip()):
         raise ValueError("矩阵缺少独立通过记录或记录未绑定当前矩阵")
     language, language_locks = main_language()
+    requirements = Path(__file__).resolve().parents[1] / "templates/文字要求.md"
+    language_locks.append(file_lock(requirements))
     task = dict(base, research_question=freeze["question"], design=freeze["design"],
                 research_case=freeze["research_case"], language_style=language, matrix=matrix,
+                framework=framework, writing_requirements=requirements.read_text(encoding="utf-8-sig"),
                 findings=findings, materials=receipt["materials"], matrix_review=review,
                 literature=literature, theories=theories,
+                front_matter={"title": "明确研究对象与核心关系", "abstract": "问题、资料方法、发现和理论意义与正文一致", "keywords": "4—6个"},
                 sections=[
-                    {"section": "问题与文献", "task": "说明研究问题、最近研究与可由制度文本比较回答的增量。"},
+                    {"section": "问题的提出", "task": "从真实事件与问题出发，明确研究对象和核心问题。"},
+                    {"section": "文献回顾", "task": "比较近邻研究解释、差异和未回答的问题，区分摘要与全文证据。"},
+                    {"section": "理论分析框架", "task": "使用冻结框架，说明核心概念、维度推演与命题，区分理论主张和经验发现。"},
                     {"section": "资料与方法", "task": "说明文本选取、比较单位、编码维度、来源和访问边界。"},
                     {"section": "经验发现", "task": "按矩阵维度展开比较。每项主张引用材料 ID 并保留定位，呈现反例和其他解释。"},
                     {"section": "讨论与结论", "task": "回应命题，说明适用边界、未解决问题和替代解释。区分规则文本与实际行为。"},
                 ],
+                end_matter={"references": "仅列正文实际使用且可核验的来源", "appendix": "材料定位、编码与主张证据台账"},
                 input_files=locks + language_locks + [file_lock(path) for path in files.values()]
                 + [file_lock(Path(__file__)),
                    file_lock(Path(__file__).with_name("stage07.py"))])
