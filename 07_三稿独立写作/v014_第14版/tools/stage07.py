@@ -1,4 +1,4 @@
-"""定量社会学写作入口。离线准备证据包、接收作者稿件、验收并交付。"""
+"""社会学写作入口。离线准备证据包，沿既有定量流程接收和验收稿件。"""
 from __future__ import annotations
 
 import argparse
@@ -31,13 +31,42 @@ CHECKLIST = MODULE / "templates/architecture_self_check.csv"
 
 
 def plan(inputs, config=None):
+    if inputs.get("s08_run"):
+        from s08_inputs07 import frozen_source, qualitative
+        source = frozen_source(inputs["s08_run"])
+        if source[1]["research_method"]["path"] != "quantitative":
+            if inputs.get("run_id"):
+                raise ValueError("定性 S08 使用自己的运行目录")
+            ready, _ = qualitative(source, inputs.get("analysis_attempt", "attempt_001"))
+            return dict(ready, inputs=dict(inputs))
+        if not inputs.get("run_id"):
+            return {"run_id": source[0].name, "status": "needs_review", "method": "quantitative",
+                    "errors": ["指定完成 G4–G6 校验并绑定本 S08 的 main 运行 --run-id"]}
     run = run_directory(inputs["run_id"])
     data = load(run / "run_manifest.json")
-    errors, pack, _ = collect(run, data, MODULE, VERSION)
+    errors, pack, _ = collect_for_plan(run, data, inputs)
     return {"run_id": run.name, "stage_id": "07", "status": "needs_review" if errors else "ready",
             "errors": errors, "pack_id": value_hash(pack) if pack else None, "inputs": dict(inputs),
             "writing_mode": data.get("writing_mode"), "draft_labels": data.get("draft_labels"),
             "submission_enabled": False}
+
+
+def collect_for_plan(run, data, inputs):
+    errors, pack, bundles = collect(run, data, MODULE, VERSION)
+    if errors or not inputs.get("s08_run"):
+        return errors, pack, bundles
+    from s08_inputs07 import frozen_source
+    source, freeze, _, _, _, locks = frozen_source(inputs["s08_run"])
+    manifest_path, manifest = stage_input(run, next(row for row in data["stages"] if row["stage_id"] == "05"), "05")
+    design = load(locked_output(manifest_path.parent, manifest, "analysis_design.json"))
+    frozen_sha = next(row["sha256"] for row in locks if row["path"] == str(source / "s08_topic.json"))
+    if (freeze["research_method"]["path"] != "quantitative" or design.get("s08_sha256") != frozen_sha
+            or design.get("question") != freeze["question"]):
+        return ["G5 未绑定同一量化 S08 和研究问题"], None, {}
+    pack["s08"] = {"sha256": frozen_sha, "scope": freeze["scope"], "formal_eligible": False,
+                   "question": freeze["question"]}
+    pack["input_files"].extend(locks)
+    return errors, pack, bundles
 
 
 @contextmanager
@@ -60,6 +89,18 @@ def freeze_json(path, data):
 
 
 def prepare(planned, paragraph_plan=None):
+    if planned.get("method") in {"secondary_interviews", "online_qualitative"}:
+        from s08_inputs07 import frozen_source, qualitative
+        if paragraph_plan:
+            raise ValueError("定性写作任务按经验矩阵组织")
+        inputs = planned["inputs"]
+        current, task = qualitative(frozen_source(inputs["s08_run"]), inputs.get("analysis_attempt", "attempt_001"))
+        if not task or current["pack_id"] != planned["pack_id"]:
+            raise ValueError("定性分析未就绪或已变化")
+        work = inside(ROOT, Path("runs/v6-s08") / current["run_id"] / current["pack_id"])
+        output = work / "writing_task.json"
+        freeze_json(output, task)
+        return dict(planned, writing_task=str(output))
     run = run_directory(planned["run_id"])
     with research_lock(run):
         return prepare_locked(planned, run, paragraph_plan)
@@ -67,7 +108,7 @@ def prepare(planned, paragraph_plan=None):
 
 def prepare_locked(planned, run, paragraph_plan):
     data = load(run / "run_manifest.json")
-    errors, pack, bundles = collect(run, data, MODULE, VERSION)
+    errors, pack, bundles = collect_for_plan(run, data, planned["inputs"])
     if errors or value_hash(pack) != planned["pack_id"]:
         raise ValueError(f"上游未就绪或已变化: {errors}")
     pack_id = planned["pack_id"]
@@ -99,6 +140,9 @@ def prepare_locked(planned, run, paragraph_plan):
             "instruction": "读取锁定的写作架构、03语言手册和原文风格练习。先提交段落提纲，根据生成的逐段任务起草并核实事实、引用及数字。"
                            "逐节应用与当前论证任务相符的可用范例。范例提供结构和语言，研究事实与数字来自当前冻结证据。实证段以研究对象、比较、量级和条件直接展开，避免在正文转述统计学提醒。"
                            "三稿模式分别在独立上下文写作，各稿只读同一冻结包。"}
+    if "s08" in pack:
+        task["s08"] = pack["s08"]
+        task["research_question"] = pack["s08"]["question"]
     task_path = work / "writing_task.json"
     freeze_json(task_path, task)
     ready = dict(planned, frozen_manifest=str(manifest), writing_task=str(task_path),
@@ -217,10 +261,12 @@ def execute(planned, context=None):
 
 def execute_locked(planned, run):
     data = load(run / "run_manifest.json")
-    errors, pack, bundles = collect(run, data, MODULE, VERSION)
+    errors, pack, bundles = collect_for_plan(run, data, planned["inputs"])
     pack_id = planned["pack_id"]
     if errors or value_hash(pack) != pack_id:
         raise ValueError(f"上游未就绪或已变化: {errors}")
+    if "s08" in pack:
+        raise ValueError("候选 S08 写作任务保留原资格，不能登记为 main 正式稿件")
     frozen = run / "frozen" / pack_id / "frozen_manifest.json"
     if load(frozen) != pack:
         raise ValueError("冻结包不匹配，先运行 prepare")
@@ -313,7 +359,9 @@ def main(argv=None):
     commands = cli.add_subparsers(dest="command", required=True)
     for command in ("status", "prepare", "run"):
         sub = commands.add_parser(command)
-        sub.add_argument("--run-id", required=True)
+        sub.add_argument("--run-id")
+        sub.add_argument("--s08-run")
+        sub.add_argument("--analysis-attempt", default="attempt_001")
         if command == "run":
             sub.add_argument("--input", required=True)
         elif command == "prepare":
@@ -325,12 +373,19 @@ def main(argv=None):
         if args.command in ("validate", "export"):
             result = (validate if args.command == "validate" else export)(args.attempt)
         else:
-            planned = plan({"run_id": args.run_id, "input": getattr(args, "input", None)})
+            if args.run_id is None and args.s08_run is None:
+                raise ValueError("指定 --run-id 或 --s08-run")
+            inputs = {"run_id": args.run_id, "input": getattr(args, "input", None)}
+            if args.s08_run:
+                inputs.update(s08_run=args.s08_run, analysis_attempt=args.analysis_attempt)
+            planned = plan(inputs)
             result = planned
             if planned["status"] == "ready":
                 if args.command == "prepare":
                     result = prepare(planned, args.paragraph_plan)
                 elif args.command == "run":
+                    if planned.get("method") in {"secondary_interviews", "online_qualitative"}:
+                        raise ValueError("定性入口当前交付离线写作任务，请用 prepare")
                     result = execute(planned)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0 if result["status"] in ("passed", "ready") else 3

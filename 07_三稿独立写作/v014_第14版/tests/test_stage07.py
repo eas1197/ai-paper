@@ -232,7 +232,7 @@ class WritingTest(unittest.TestCase):
                          "our_question": "比较两个结局"}}})
         return path
 
-    def fixture(self, run):
+    def fixture(self, run, s08=None):
         architecture = load(MODULE / "manifest.json")["writing_architecture"]
         profile = ROOT / "03_学术语言学习/v005_第5版/outputs/style_profile.json"
         style_binding = file_lock(profile)
@@ -269,7 +269,8 @@ class WritingTest(unittest.TestCase):
                 gate["phase"] = "approve"
             write(report, gate)
             if mid == "05":
-                write(work / "analysis_design.json", {"frozen": True, "pre_analysis": True, "design_sha256": "fixture"})
+                write(work / "analysis_design.json", {"frozen": True, "pre_analysis": True,
+                                                       "design_sha256": "fixture", **(s08 or {})})
                 stage05 = {"upstream": {"manifest_sha256": rows[-1]["manifest_sha256"]},
                            "metadata_documents": [], "measurement_evidence": []}
             if mid == "06":
