@@ -19,3 +19,15 @@
 - "explanation_exchange.json" SHA-256 "86d642f30f44ea0432261c329d5f6d783f0e84b5456106c7358e32a46ee859f7"
 - "critical_events.jsonl" SHA-256 "5d15862c946107885b338703175e9c769b87163a2ae7cf69941b40e2f9e1526b"
 - "issue_plan.json" SHA-256 "9b26a0f8f473ab932b0a440adbc35fd34fcd279479b0c0a707c457d0ef8eeaf9"
+
+## 文献初查与独立学术初审
+
+初查使用 2 批，首批 4 条，补查后达到 5 条并进入 preliminary_review。独立 gpt-6.2-sol 初审要求返修。现有两案的辖区、年份、初拒理由和文书审查深度同时变化，无法支持援助工具影响例外裁定的解释。审查建议在同辖区、同政策期及相近初拒理由下找准驳案例，并追溯裁决前可用的援助形式。
+
+将原审查 revise 按证据深度不足映射到现有 depth 枚举，保留原始响应，正式入口记录 S06。advance 返回 wait_for_stage_input。恢复点为 S06，需补可比公开材料并重做独立审查。S08、定向采集、矩阵、写作及复验未完成。
+
+- "initial/checkpoint.json" SHA-256 "1d19ee6d41355fdacb56323e1d26c62883c6cbc71f16294a4ae6110bca2a5d54"
+- "initial/literature_matrix.json" SHA-256 "dba2cbe680a0edceee5932f7ddd9312557b453001cd9fc036644996925caaca0"
+- "preliminary_report.json" SHA-256 "19c51eb84a04b9a4f781754a5d2a3a8cd309dab8f5c151f5f957c6fcc48195e2"
+- "preliminary_events.jsonl" SHA-256 "dd649e1744bfdf2e64850196cadfca685d4d9c28c2780e8d106fd32c7157d4d3"
+- "staged_topic.json" SHA-256 "40341c608832b50fdd7163f20d8004033f097b071b2b79b9dcfd2e1cbaaa7f74"
