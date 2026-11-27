@@ -14,7 +14,7 @@ sys.path[:0] = [str(CONTROL / "v007_第7版/tools"),
                 str(ROOT / "04_议题文献与现实/v012_第12版/tools")]
 from native_library import registry
 import run_mode
-from topic32 import TASKS
+from topic32 import TASKS, check as check_topic_reasoning
 
 REGISTRY = registry()
 from abstract_acquisition import job_lock
@@ -94,7 +94,7 @@ def init(run_id, mode, theme, *, full_paper=False):
     write(work / "staged_topic.json", {"run_id": run_id, "mode": mode, "theme": theme,
           "policy_sha256": digest(POLICY), "history": [], "status": "reality", "formal_eligible": False,
           "reality_first": True, "method_paths": True, "qual_search_receipts": True,
-          "explanation_first": True, "issue_search": True})
+          "explanation_first": True, "issue_search": True, "topic_reasoning_required": True})
     return work
 
 
@@ -328,6 +328,10 @@ def review(work, state, report):
     if any(row["invocation_id"] == report["invocation_id"] for row in state["history"]):
         raise ValueError("Duplicate review invocation")
     outcome = report["outcome"]
+    if state.get("topic_reasoning_required") and outcome in {"academic_pass", "pass", "missing_data", "materials_pending"}:
+        bundles = report.get("topic_reasoning", {})
+        for stage in TASKS:
+            check_topic_reasoning(stage, bundles.get(stage, {}), {"verdict": "READY"})
     if outcome in {"pass", "academic_pass", "missing_data", "materials_pending"} and report.get("academic_value") != "pass":
         raise ValueError("An explicit academic value pass is required")
     if state.get("reality_first") and outcome in {"pass", "missing_data"}:
@@ -479,6 +483,11 @@ def prepare(work, state):
             "先按问题选择方法，可直接选择定性。分别说明三条路径的适用性与材料状况。"
             "定性使用理论框架、命题、案例与材料设计；定量使用假设和统计设计。"
             "量化不可行时检查适用的访谈与网络材料。所有适用路径材料确实不足才归档。"
+        )
+    if state.get("topic_reasoning_required"):
+        task["topic_reasoning_instruction"] = (
+            "独立正向审查须提交 topic_reasoning，按 opportunity、question、deepening 分别记录 reasoning。"
+            "deepening 须记录 change_kind，只有 academic 可作正向判断。依各阶段任务交代概念、情境与理论增量。"
         )
     if path.is_file() and theory.is_file():
         task["evidence_sha256"] = evidence_hash(work, state, path, theory)
