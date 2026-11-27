@@ -31,3 +31,15 @@
 - "preliminary_report.json" SHA-256 "19c51eb84a04b9a4f781754a5d2a3a8cd309dab8f5c151f5f957c6fcc48195e2"
 - "preliminary_events.jsonl" SHA-256 "dd649e1744bfdf2e64850196cadfca685d4d9c28c2780e8d106fd32c7157d4d3"
 - "staged_topic.json" SHA-256 "40341c608832b50fdd7163f20d8004033f097b071b2b79b9dcfd2e1cbaaa7f74"
+
+## S06 首轮返修与独立复审
+
+真实补查覆盖斯温登、萨里、莱斯特郡、雷德布里奇。独立复审复核公开决定并补查斯塔福德郡线索，符合全部条件的配对为 0。斯温登 25-014-325 与 25-016-259 为同辖区、同月二阶段的一准一驳，驳回案公开文书第14至19段缺初拒实质理由、适用版本和例外审议结果。
+
+正式 review 入口登记第二个 depth，advance 返回 S06 / wait_for_stage_input。共两次学术退回，已完成第一次返修，尚余最后一次返修。现阶段缺斯温登 25-016-259 去标识化初拒通知及二阶段裁决理由，或其他满足全部条件的可核验配对。拿到新证据后才复审；若下一次学术审查仍退回，现有规则转 eliminated。未发起 S08 或写作，Stata 暂缓。原始凭证保留在运行目录 s06_repair_001，下面是文件哈希。
+
+- "events.jsonl" SHA-256 "24a235011e472412486e058cdb0be385508c388b5f1a520329c858b2bda6a81b"
+- "response.json" SHA-256 "8374f8445cfd621496809d1680392eae6723d829cd1c50cc99027b3c884fe503"
+- "review_events.jsonl" SHA-256 "3180cc5a64eb4dd01e849dc2535c2018c5a8c2d5f3609aef4b8e1b482392bc68"
+- "review_response.json" SHA-256 "c08fd5cee5957678c708d06309c6f04c7673854a58f692e45cb9611c5a013746"
+- "review_report.json" SHA-256 "1bab90e544c94fc2ae3a456643b0b27a8ceb668d3bdb8fb42eb0c6882d56024a"
