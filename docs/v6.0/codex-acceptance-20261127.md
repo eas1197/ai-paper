@@ -43,3 +43,13 @@
 - "review_events.jsonl" SHA-256 "3180cc5a64eb4dd01e849dc2535c2018c5a8c2d5f3609aef4b8e1b482392bc68"
 - "review_response.json" SHA-256 "c08fd5cee5957678c708d06309c6f04c7673854a58f692e45cb9611c5a013746"
 - "review_report.json" SHA-256 "1bab90e544c94fc2ae3a456643b0b27a8ceb668d3bdb8fb42eb0c6882d56024a"
+
+## 按恢复规则续跑最后一次 S06 返修
+
+沿用两次退回及原课题。真实搜集使用 6 次联网动作，取得 5 条亲历线索，独立复审使用 3 次联网动作，确认合格配对 0 组。各线索缺少相同政策期、可比初拒理由或可核验的最终决定。原 review 入口登记第三次 depth 并转 eliminated，未进入 S08、经验矩阵或论文交付。凭证目录 s06_repair_002。
+
+- events.jsonl 6983de93ccffc4fdfd5cbddcc70aa847f663ad7f134a72958999d1efd0147f31
+- response.json 2aee8d4a121ec26b2d1defcd9b34af37ae92e6c5ce2c43745f355aded204dd46
+- review_events.jsonl 4235ab28708693f0271d5518c122b16d3c9e007042cae44b99e6b266736aebec
+- review_response.json 2cbc4364de40f000a131eb8331fad01eeaf5bb9c3accbed19f0a19e94b08f2cc
+- review_report.json a321914fcff1eb370401d747a2b0d6ce5fd6b00508666b6562aacd01b3d82d1f
