@@ -117,11 +117,13 @@ def qualitative(source, attempt):
             or not review["reason"].strip()):
         raise ValueError("矩阵缺少独立通过记录或记录未绑定当前矩阵")
     language, language_locks = main_language()
+    writing_policy = load(inside(run, "run_manifest.json")).get("workload", {}).get("07", {})
     requirements = Path(__file__).resolve().parents[1] / "templates/文字要求.md"
     language_locks.append(file_lock(requirements))
     task = dict(base, research_question=freeze["question"], design=freeze["design"],
                 research_case=freeze["research_case"], language_style=language, matrix=matrix,
                 framework=framework, writing_requirements=requirements.read_text(encoding="utf-8-sig"),
+                writing_budget=writing_policy,
                 findings=findings, materials=receipt["materials"], matrix_review=review,
                 prior_invocations=[r["invocation_id"] for r in load(run / "staged_topic.json")["history"]],
                 literature=literature, theories=theories,
@@ -137,6 +139,7 @@ def qualitative(source, attempt):
                 end_matter={"references": "仅列正文实际使用且可核验的来源", "appendix": "材料定位、编码与主张证据台账"},
                 input_files=locks + language_locks + [file_lock(path) for path in files.values()]
                 + [file_lock(Path(__file__)),
+                   file_lock(Path(__file__).with_name("qualitative07.py")),
                    file_lock(Path(__file__).with_name("stage07.py"))])
     if verify_locks(task["input_files"]):
         raise ValueError("准备期间定性写作输入发生变化")

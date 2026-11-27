@@ -3,6 +3,7 @@ import copy
 import json
 import tempfile
 from pathlib import Path
+from unittest.mock import patch
 import unittest
 from test_stage07 import stage07
 from runtime import value_hash
@@ -55,6 +56,7 @@ def review_fixture(folder, subject, decision='accepted', thread='fixture-review'
               'assessment': 'fixture only', 'checks': {k: {'status': 'pass', 'reason': 'fixture'} for k in qual.REVIEW_CHECKS},
               'issues': [] if decision == 'accepted' else [{'location': '摘要', 'reason': 'fixture', 'action': 'revise'}]}
     (folder / 'response.json').write_text(json.dumps(result), encoding='utf-8')
+    (folder / 'login_status.json').write_text('{"chatgpt": true}', encoding='utf-8')
     (folder / 'prompt.txt').write_text(subject['content_sha256'], encoding='utf-8')
     (folder / 'events.jsonl').write_text('\n'.join(map(json.dumps, [{'type': 'thread.started', 'thread_id': thread},
                                     {'type': 'turn.completed'}])), encoding='utf-8')
@@ -89,13 +91,49 @@ class LoopTest(unittest.TestCase):
             if request['revision_requirements']:
                 response['manuscript'] = response['manuscript'].replace('制度规则比较', '制度规则与条件比较')
             (folder / 'response.json').write_text(json.dumps(response), encoding='utf-8')
+            (folder / 'login_status.json').write_text('{"chatgpt": true}', encoding='utf-8')
             (folder / 'prompt.txt').write_text('fixture only', encoding='utf-8')
             (folder / 'events.jsonl').write_text('\n'.join(map(json.dumps, [{'type': 'thread.started', 'thread_id': ident},
                                                  {'type': 'turn.completed'}])), encoding='utf-8')
             return response, qual.native_receipt(folder)
         with tempfile.TemporaryDirectory() as folder:
-            result = qual.run_loop(task, Path(folder) / 'run', provider, context=task)
+            work = Path(folder) / 'run'
+            result = qual.run_loop(task, work, provider, context=task)
             self.assertEqual(result['status'], 'passed', result)
             self.assertEqual([r['review'] for r in result['history']], ['revise', 'accepted'])
             self.assertIn('independent_review', calls[2][1]['revision_requirements'])
             self.assertNotEqual(result['history'][0]['review_invocation'], result['history'][1]['review_invocation'])
+            qual.publish_current(work)
+            self.assertEqual(qual.validate_delivery(work)['status'], 'passed')
+            final = Path(qual.export_delivery(work)['files']['manuscript.md'])
+            with patch.object(stage07, 'ROOT', Path(folder)):
+                self.assertEqual(stage07.validate(work)['status'], 'passed')
+                self.assertEqual(stage07.export(work)['files']['manuscript.md'], str(final))
+            self.assertIn('制度规则与条件比较', final.read_text(encoding='utf-8'))
+            final.write_text('tampered', encoding='utf-8')
+            with self.assertRaises(ValueError):
+                qual.export_delivery(work)
+
+    def test_exhausted_machine_revision_cannot_export(self):
+        task, draft = fixture()
+        task['writing_budget'] = {'revisions': 1}
+        calls = []
+        def provider(role, request, folder):
+            calls.append(role)
+            self.assertEqual(role, 'draft')
+            folder.mkdir(parents=True)
+            (folder / 'response.json').write_text(json.dumps(draft), encoding='utf-8')
+            (folder / 'login_status.json').write_text('{"chatgpt": true}', encoding='utf-8')
+            (folder / 'prompt.txt').write_text('fixture only', encoding='utf-8')
+            (folder / 'events.jsonl').write_text('\n'.join(map(json.dumps, [{'type': 'thread.started', 'thread_id': str(len(calls))},
+                                                 {'type': 'turn.completed'}])), encoding='utf-8')
+            return draft, qual.native_receipt(folder)
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder) / 'run'
+            result = qual.run_loop(task, work, provider, context=task)
+            self.assertEqual(result['status'], 'needs_revision')
+            self.assertEqual(calls, ['draft', 'draft'])
+            qual.publish_current(work)
+            self.assertEqual(qual.validate_delivery(work)['status'], 'needs_revision')
+            with self.assertRaises(ValueError):
+                qual.export_delivery(work)

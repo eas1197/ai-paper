@@ -15,7 +15,7 @@ def catalog(task):
         theories = theories.get('rows', theories.get('theories', []))
     for row in theories:
         if isinstance(row, dict):
-            key = row.get('theory_id') or row.get('id')
+            key = row.get('theory_id') or row.get('id') or ('T_' + value_hash(row)[:20])
             if key:
                 sources[key] = row
     return sources
@@ -32,6 +32,9 @@ def receive(task, draft):
     profile = {'sections': [{'id': str(i), 'title': row['section']}
                             for i, row in enumerate(task['sections'], 1)]}
     sections, structure, counts, abstract_count = parse_structure(text, None, profile, errors)
+    limit = task.get('writing_budget', {}).get('max_words')
+    if limit is not None and sum(counts.values()) > limit:
+        errors.append(f'正文超出本实验冻结篇幅上限 {limit}')
     sources = catalog(task)
     refs = draft.get('references', [])
     refmap = {r['source_id']: r for r in refs}
@@ -95,8 +98,10 @@ def native_receipt(folder):
         raise ValueError('未见完整独立 Codex 调用')
     if any(r.get('type') in {'turn.failed', 'error'} for r in events):
         raise ValueError('Codex 调用失败')
+    if load(folder / 'login_status.json') != {'chatgpt': True}:
+        raise ValueError('缺原生 ChatGPT 登录检查记录')
     return {'invocation_id': threads[0], 'files': [file_lock(folder / n) for n in
-            ('events.jsonl', 'response.json', 'prompt.txt')]}
+            ('events.jsonl', 'response.json', 'prompt.txt', 'login_status.json')]}
 
 
 def independent_review(intake, response, receipt, prior_invocations):
@@ -107,7 +112,7 @@ def independent_review(intake, response, receipt, prior_invocations):
     if not ident or ident in prior_invocations or verify_locks(receipt['files']):
         raise ValueError('审查调用重复或原始记录已变化')
     paths = {Path(r['path']).name: Path(r['path']) for r in receipt['files']}
-    if set(paths) != {'events.jsonl', 'response.json', 'prompt.txt'} or native_receipt(paths['events.jsonl'].parent) != receipt:
+    if set(paths) != {'events.jsonl', 'response.json', 'prompt.txt', 'login_status.json'} or native_receipt(paths['events.jsonl'].parent) != receipt:
         raise ValueError('审查缺完整原生凭证')
     if load(paths['response.json']) != response or intake['content_sha256'] not in paths['prompt.txt'].read_text(encoding='utf-8-sig'):
         raise ValueError('审查响应或提示与当前稿件不一致')
@@ -176,7 +181,7 @@ def native_provider(role, request, folder):
 
 def author_context(task):
     from s08_inputs07 import ROOT
-    return {**task, 'pack_id': value_hash(task), 'language_texts': {
+    return {**task, 'pack_id': value_hash(task), 'source_catalog': catalog(task), 'language_texts': {
         name: (ROOT / rec['path']).read_text(encoding='utf-8-sig')
         for name, rec in task['language_style']['resources'].items() if name != 'profile'}}
 
@@ -190,8 +195,11 @@ def run_loop(task, work, provider=native_provider, context=None):
     used = set(task.get('prior_invocations', [])) | {task.get('matrix_review', {}).get('invocation_id')}
     history, previous, feedback = [], None, None
     final_status = 'needs_review'
+    revisions = task.get('writing_budget', {}).get('revisions', 2)
+    if type(revisions) is not int or not 0 <= revisions <= 2:
+        raise ValueError('定性返修预算超出原研究规则')
     try:
-        for number in range(1, 4):
+        for number in range(1, 2 + revisions):
             folder = work / f'attempt_{number:03d}'
             folder.mkdir()
             request = {'task': context, 'previous_draft': previous, 'revision_requirements': feedback}
@@ -203,6 +211,9 @@ def run_loop(task, work, provider=native_provider, context=None):
                 raise ValueError('起草调用重复或凭证已变化')
             used.add(ident)
             intake = receive(task, draft)
+            if previous is not None and draft['manuscript'] == previous['manuscript']:
+                intake['errors'].append('返修稿未实际修改正文')
+                intake['status'] = 'needs_revision'
             write(folder / 'intake.json', intake)
             write(folder / 'author_receipt.json', author_receipt)
             (folder / 'manuscript.md').write_text(draft['manuscript'], encoding='utf-8')
@@ -220,17 +231,77 @@ def run_loop(task, work, provider=native_provider, context=None):
                 row.update(review=signoff['decision'], review_invocation=signoff['invocation_id'])
                 if signoff['decision'] == 'accepted':
                     final_status = 'passed'
+                    feedback = None
                     break
                 if signoff['decision'] == 'rejected':
                     final_status = 'rejected'
                     break
                 feedback = {'independent_review': signoff['issues']}
             write(work / 'checkpoint.json', {'status': 'needs_revision', 'history': history, 'feedback': feedback})
+        else:
+            final_status = 'needs_revision'
     except (OSError, RuntimeError, ValueError, KeyError, TypeError) as exc:
         final_status = 'blocked'
         feedback = {'error': str(exc)}
     report = {'status': final_status, 'scope': 'experimental', 'formal_eligible': False,
               'pack_id': value_hash(task), 'history': history, 'feedback': feedback,
-              'business_quality_automatic': False, 'submission_enabled': False}
+              'business_quality_automatic': False, 'submission_enabled': False,
+              'output_files': [file_lock(p) for p in sorted(work.rglob('*')) if p.is_file()]}
     write(work / 'qualitative_gate.json', report)
     return {**report, 'attempt_path': str(work)}
+
+
+def publish_current(work):
+    work = Path(work).resolve()
+    write(work.parent / 'current_qualitative.json', {'attempt': work.name,
+                                                    'gate': file_lock(work / 'qualitative_gate.json')})
+
+
+def validate_delivery(work):
+    work = Path(work).resolve()
+    current = load(work.parent / 'current_qualitative.json')
+    if current['attempt'] != work.name or current['gate'] != file_lock(work / 'qualitative_gate.json'):
+        raise ValueError('只允许当前有效的定性稿件')
+    if work.name.startswith('attempt_') and any(p.is_dir() and p.name > work.name for p in work.parent.glob('attempt_*')):
+        raise ValueError('已有更新尝试，旧稿交付失效')
+    report = load(work / 'qualitative_gate.json')
+    task = load(work / 'writing_task.json')
+    if report['pack_id'] != value_hash(task) or verify_locks(task['input_files'] + report['output_files']):
+        raise ValueError('定性论文证据或产物已变化')
+    if report['status'] != 'passed':
+        return report
+    if not report['history'] or report['history'][-1].get('review') != 'accepted':
+        raise ValueError('缺最终独立通过记录')
+    latest = report['history'][-1]
+    folder = work / f"attempt_{latest['attempt']:03d}"
+    draft = load(folder / 'author/response.json')
+    intake = receive(task, draft)
+    if intake != load(folder / 'intake.json') or draft['manuscript'] != (folder / 'manuscript.md').read_text(encoding='utf-8'):
+        raise ValueError('最终稿件与技术门禁记录不一致')
+    prior = set(task.get('prior_invocations', [])) | {task.get('matrix_review', {}).get('invocation_id')}
+    for row in report['history']:
+        for field in ('author_invocation', 'review_invocation'):
+            ident = row.get(field)
+            if ident and not (row == latest and field == 'review_invocation'):
+                if ident in prior:
+                    raise ValueError('独立调用重复')
+                prior.add(ident)
+    response = load(folder / 'reviewer/response.json')
+    signoff = load(folder / 'quality_review.json')
+    receipt = native_receipt(folder / 'reviewer')
+    check = independent_review(intake, response, receipt, prior)
+    # Validation may occur after the review date; preserve the original date.
+    check['reviewed_at'] = signoff['reviewed_at']
+    if check != signoff or signoff['decision'] != 'accepted':
+        raise ValueError('最终独立审查与稿件不一致')
+    return report
+
+
+def export_delivery(work):
+    report = validate_delivery(work)
+    if report['status'] != 'passed':
+        raise ValueError('未通过独立审查，不得交付论文')
+    final = Path(work) / f"attempt_{report['history'][-1]['attempt']:03d}"
+    return {'status': 'passed', 'destination': 'experimental_single_delivery', 'scope': 'experimental',
+            'formal_eligible': False, 'submission_enabled': False,
+            'files': {name: str(final / name) for name in ('manuscript.md', 'intake.json', 'quality_review.json')}}

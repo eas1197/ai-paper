@@ -252,6 +252,21 @@ def record(run, data, work, manifest):
 
 
 def execute(planned, context=None):
+    if planned.get("method") in {"secondary_interviews", "online_qualitative"}:
+        from qualitative07 import run_loop, publish_current
+        if planned.get("status") != "ready":
+            raise ValueError("定性写作计划尚未就绪")
+        run = inside(ROOT, planned["inputs"]["s08_run"])
+        with research_lock(run):
+            prepared = prepare(planned)
+            task_path = Path(prepared["writing_task"])
+            root = task_path.parent / "stage_07"
+            root.mkdir(exist_ok=True)
+            numbers = [int(p.name[8:]) for p in root.glob("attempt_*") if re.fullmatch(r"attempt_\d+", p.name)]
+            work = root / f"attempt_{max(numbers, default=0) + 1:03d}"
+            result = run_loop(load(task_path), work)
+            publish_current(work)
+            return result
     if planned.get("stage_id") != "07" or planned.get("status") != "ready":
         raise ValueError("第7步计划尚未就绪")
     run = run_directory(planned["run_id"])
@@ -331,6 +346,9 @@ def execute_locked(planned, run):
 
 def validate(artifacts, evidence=None):
     work = inside(ROOT, artifacts)
+    if (work / "qualitative_gate.json").is_file():
+        from qualitative07 import validate_delivery
+        return validate_delivery(work)
     manifest = load(work / "stage_manifest.json")
     run = run_directory(manifest["run_id"])
     data = load(run / "run_manifest.json")
@@ -342,6 +360,9 @@ def validate(artifacts, evidence=None):
 
 
 def export(artifacts, target_profile=None):
+    if (inside(ROOT, artifacts) / "qualitative_gate.json").is_file():
+        from qualitative07 import export_delivery
+        return export_delivery(inside(ROOT, artifacts))
     report = validate(artifacts)
     work = inside(ROOT, artifacts)
     mode = report["writing_mode"]
@@ -363,7 +384,7 @@ def main(argv=None):
         sub.add_argument("--s08-run")
         sub.add_argument("--analysis-attempt", default="attempt_001")
         if command == "run":
-            sub.add_argument("--input", required=True)
+            sub.add_argument("--input")
         elif command == "prepare":
             sub.add_argument("--paragraph-plan")
     for command in ("validate", "export"):
@@ -384,8 +405,8 @@ def main(argv=None):
                 if args.command == "prepare":
                     result = prepare(planned, args.paragraph_plan)
                 elif args.command == "run":
-                    if planned.get("method") in {"secondary_interviews", "online_qualitative"}:
-                        raise ValueError("定性入口当前交付离线写作任务，请用 prepare")
+                    if planned.get("method") not in {"secondary_interviews", "online_qualitative"} and not args.input:
+                        raise ValueError("定量写作须指定 --input")
                     result = execute(planned)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0 if result["status"] in ("passed", "ready") else 3
