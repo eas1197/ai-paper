@@ -15,3 +15,9 @@
 | main 第七步 | 两路使用同一写作入口和 main 语言库。按方法生成写作任务，完成正文、独立审查、返修和复验。 |
 
 现有 V14 的正式入口按定量证据检查，要求 G4–G6、模型结果和表图。接入定性时，由同一个第七步接收定性材料与经验矩阵，并按定性规则检查写作证据。S08 提供冻结设计与方法，写作仍需对应的分析产物和门禁证据。
+
+## 非 Codex 通用可追溯提供方适配（方案 B）
+
+在 100% 保留原有 Codex 原生路径兼容的前提下，已增加可替换的通用可追溯凭据层（`provider_receipts.py`、`codex_literature.py`、`staged_topic.py`、`qualitative07.py`、`stage07.py`、`s08_inputs07.py`）：
+- **文献采集（`external_snapshot_v1`）**：支持通过 `--external-batch` 导入外部抓取的网页/PDF 原文快照批次，强制核验 HTTPS 来源、文件 SHA-256 及摘要短摘在归档快照中的真实存在性，与原九刊去重和矩阵门禁完全一致。
+- **独立反诘与独立审查（`provider_receipt.json`）**：支持由隔离的独立子代理签发 `external_agent` 凭据，强制校对请求/响应 SHA-256 哈希锁并禁止 `invocation_id` 复用（防自审），与 V14 交付防篡改校验无缝衔接。

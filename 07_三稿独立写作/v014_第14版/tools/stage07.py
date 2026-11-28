@@ -264,7 +264,8 @@ def execute(planned, context=None):
             root.mkdir(exist_ok=True)
             numbers = [int(p.name[8:]) for p in root.glob("attempt_*") if re.fullmatch(r"attempt_\d+", p.name)]
             work = root / f"attempt_{max(numbers, default=0) + 1:03d}"
-            result = run_loop(load(task_path), work)
+            provider = (context or {}).get("provider")
+            result = run_loop(load(task_path), work, provider=provider) if provider else run_loop(load(task_path), work)
             publish_current(work)
             return result
     if planned.get("stage_id") != "07" or planned.get("status") != "ready":

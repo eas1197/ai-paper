@@ -39,6 +39,8 @@ def frozen_source(directory):
             or method != state["research_method"]):
         raise ValueError("S08、终审或原始证据绑定不一致")
     locks = [file_lock(inside(run, name)) for name in names if inside(run, name).is_file()]
+    locks.extend(file_lock(path) for path in staged_topic.verify_external_literature(
+        run, state, literature, inside(run, names[3])))
     if method["path"] != "quantitative":
         decision = final["method_assessment"]["paths"][method["path"]]
         verify_material_review(run, method["path"], decision, freeze["question"])
@@ -95,7 +97,7 @@ def reviewed_plan(run, status_file, locks):
             or review["input_sha256"] != staged_topic.run_mode.digest(packet)
             or review["analysis_matrix_sha256"] != sha(matrix)
             or review["review_status"] != "pass" or review["independent_review"] != record
-            or record["answer"]["decision"] != "pass" or record["model"] != "gpt-6.2-sol"
+            or record["answer"]["decision"] != "pass"
             or not record["answer"]["reason"].strip()
             or packet["question_binding"] != contract or review["question_binding"] != contract
             or load(matrix)["question_binding"] != contract):
@@ -107,20 +109,34 @@ def reviewed_plan(run, status_file, locks):
     receipt_dir = candidates[0].parent
     request = load(inside(run, receipt_dir / "request.json"))
     response = inside(run, receipt_dir / "response.json")
-    events_file = inside(run, receipt_dir / "events.jsonl")
-    events = [json.loads(line) for line in events_file.read_text(encoding="utf-8").splitlines()]
-    if (not load(inside(run, receipt_dir / "login.json"))["chatgpt"]
-            or request["model"] != record["model"]
+    paths = [status_file, plan, packet_file, review_file, matrix, candidates[0], response,
+             receipt_dir / "request.json"]
+    if (request["model"] != record["model"]
             or request["inputs"]["question_binding"] != contract
             or request["inputs"]["matrix"] != load(matrix)
             or request["inputs"]["plan_sha256"] != sha(plan)
             or request["inputs"]["plan"] != plan.read_text(encoding="utf-8")
-            or load(response) != record["answer"] or sha(response) != record["response_sha256"]
-            or [row["thread_id"] for row in events if row["type"] == "thread.started"] != [record["thread_id"]]
-            or not any(row["type"] == "turn.completed" for row in events)):
-        raise ValueError("3.x independent plan review lacks matching native evidence")
-    paths = [status_file, plan, packet_file, review_file, matrix, candidates[0], response, events_file,
-             receipt_dir / "request.json", receipt_dir / "login.json"]
+            or load(response) != record["answer"] or sha(response) != record["response_sha256"]):
+        raise ValueError("3.x independent plan review differs from the frozen request")
+    if "provider_receipt_sha256" in record:
+        from provider_receipts import external_receipt
+
+        receipt_file = inside(run, receipt_dir / "provider_receipt.json")
+        external, prompt, _ = external_receipt(receipt_dir, "writing_plan_review")
+        if (prompt != inside(run, receipt_dir / "request.json")
+                or sha(receipt_file) != record["provider_receipt_sha256"]
+                or external["model"] != record["model"] or external["invocation_id"] != record["thread_id"]):
+            raise ValueError("3.x independent plan review lacks matching external evidence")
+        paths.append(receipt_file)
+    else:
+        events_file = inside(run, receipt_dir / "events.jsonl")
+        login = inside(run, receipt_dir / "login.json")
+        events = [json.loads(line) for line in events_file.read_text(encoding="utf-8").splitlines()]
+        if (record["model"] != "gpt-6.2-sol" or not load(login)["chatgpt"]
+                or [row["thread_id"] for row in events if row["type"] == "thread.started"] != [record["thread_id"]]
+                or not any(row["type"] == "turn.completed" for row in events)):
+            raise ValueError("3.x independent plan review lacks matching native evidence")
+        paths.extend([events_file, login])
     for entry in artifact_lineage(run, matrix.parent):
         folder = inside(run, entry["receipt_path"]).parent
         paths.extend(folder / name for name in ("framework.json", "material_receipt.json",
@@ -176,9 +192,23 @@ def qualitative(source, attempt):
                 and any(ref["relation"] != "context" for ref in row["evidence"])]
     if not findings:
         raise ValueError("矩阵缺少可定位经验材料支持的主要发现")
-    if (review["decision"] != "pass" or review["reviewer"] != "gpt-6.2-sol"
+    topic = load(run / "staged_topic.json")
+    prior = [r["invocation_id"] for r in topic["history"]]
+    if topic.get("research_route") == "B":
+        exchange_file = inside(run, "explanation_exchange.json")
+        exchange = load(exchange_file)
+        if staged_topic.digest(exchange) != topic["exchange_sha256"]:
+            raise ValueError("Critical exchange changed")
+        if staged_topic.verify_external_critical(run, exchange):
+            from provider_receipts import external_receipt
+
+            critical_file = inside(run, exchange["critical_receipt"]["provider_receipt"])
+            _, prompt, response = external_receipt(critical_file.parent, "critical")
+            locks.extend(file_lock(path) for path in (exchange_file, critical_file, prompt, response))
+            prior.extend([exchange["research_actor"], exchange["critical_actor"]])
+    if (review["decision"] != "pass" or (not plan and review["reviewer"] != "gpt-6.2-sol")
             or not review["invocation_id"] or review["invocation_id"] in
-            {row["invocation_id"] for row in load(run / "staged_topic.json")["history"]}
+            set(prior)
             or (not plan and review["matrix_sha256"] != sha(files["analysis_matrix.json"]))
             or not review["reason"].strip()):
         raise ValueError("矩阵缺少独立通过记录或记录未绑定当前矩阵")
@@ -191,7 +221,7 @@ def qualitative(source, attempt):
                 framework=framework, writing_requirements=requirements.read_text(encoding="utf-8-sig"),
                 writing_budget=writing_policy,
                 findings=findings, materials=receipt["materials"], matrix_review=review,
-                prior_invocations=[r["invocation_id"] for r in load(run / "staged_topic.json")["history"]],
+                prior_invocations=prior,
                 literature=literature, theories=theories,
                 front_matter={"title": "明确研究对象与核心关系", "abstract": "问题、资料方法、发现和理论意义与正文一致", "keywords": "4—6个"},
                 sections=[

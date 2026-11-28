@@ -69,7 +69,7 @@ def url_event(url, trace):
                  if proof(url, event["id"], [event])), None)
 
 
-def observation(row, trace, journals, batch, position):
+def observation(row, trace, journals, batch, position, *, external=False):
     if row["journal"] not in journals or not normalize(row["title"]):
         raise ValueError("out_of_scope")
     authors = [name.strip() for name in row["authors"] if isinstance(name, str) and name.strip()]
@@ -85,12 +85,94 @@ def observation(row, trace, journals, batch, position):
     abstract_event = url_event(row["abstract_url"], trace)
     if not identity_event or not abstract_event:
         raise ValueError("missing_native_tool_receipt")
+    if external and not any(event["id"] == abstract_event and excerpt in event["results"][0]["snippet"]
+                            for event in trace):
+        raise ValueError("Abstract excerpt is absent from the archived snapshot")
     return dict(row, authors=authors, doi=clean_doi(row["doi"]), year=str(row["year"]),
-                status="valid_abstract", provider="codex_native_web", url=row["abstract_url"],
+                status="valid_abstract", provider="external_snapshot" if external else "codex_native_web", url=row["abstract_url"],
                 abstract_summary=summary, abstract_hash=text_hash(summary),
                 excerpt_sha256=text_hash(excerpt), searched_at=now(), batch=batch,
                 observation_id=f"{batch}:{position}",
                 metadata_event_id=identity_event, abstract_event_id=abstract_event)
+
+
+EXTERNAL_ENGINE = "external_snapshot_v1"
+PRE_ADAPTER_COLLECTOR = "f46fe4d3af92995ef6da50beb4ef758172721e4d6c8bee38dfc4fc097212c15c"
+
+
+def external_batch(path, archive=None):
+    from provider_receipts import contained
+
+    data = load(path)
+    if (not isinstance(data, dict) or any(not isinstance(data.get(k), list)
+            for k in ("papers", "unverified", "search_notes", "snapshots"))
+            or not data["snapshots"] or not all(isinstance(row, dict) for k in ("papers", "unverified", "snapshots")
+                                                for row in data[k])
+            or not all(isinstance(note, str) for note in data["search_notes"])):
+        raise ValueError("Invalid external batch shape")
+    trace = []
+    seen = set()
+    for item in data["snapshots"]:
+        url = item["url"]
+        parsed = urlsplit(url)
+        snapshot = contained(path.parent, item["file"])
+        if (parsed.scheme != "https" or parsed.username is not None or not web_url(url)
+                or web_url(url) in seen or sha(snapshot) != item["sha256"]):
+            raise ValueError("Invalid, duplicate or changed web snapshot")
+        seen.add(web_url(url))
+        snippet = snapshot.read_text(encoding="utf-8-sig")
+        if not snippet.strip():
+            raise ValueError("Empty web snapshot")
+        if archive is not None:
+            destination = archive / snapshot.relative_to(path.parent.resolve())
+            if destination == archive / "external_batch.json":
+                raise ValueError("Snapshot conflicts with batch manifest")
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(snapshot, destination)
+        trace.append({"id": digest(item), "results": [{"url": url, "snippet": snippet}]})
+    return data, trace
+
+
+def receive_external(work, journals, *, publish=True):
+    from provider_receipts import contained
+
+    state = load(work / "checkpoint.json")
+    bundle = load(work / "abstract_collection.json")
+    if (bundle["schema_version"] != 2 or bundle["engine"] != EXTERNAL_ENGINE
+            or state["engine"] != EXTERNAL_ENGINE or bundle["journals"] != journals
+            or state["config"]["journals"] != journals or state["collection_id"] != bundle["collection_id"]
+            or state["batches"] != bundle["batches"]):
+        raise ValueError("Wrong external abstract collection")
+    observations = []
+    for batch in bundle["batches"]:
+        if batch["status"] != "completed":
+            continue
+        name = batch["batch"]
+        path = contained(work, Path(name) / "external_batch.json")
+        if batch["response_sha256"] != sha(path):
+            raise ValueError("External batch manifest changed")
+        data, trace = external_batch(path)
+        for position, row in enumerate(data["papers"], 1):
+            try:
+                restored = observation(row, trace, journals, name, position, external=True)
+            except (ValueError, KeyError, TypeError):
+                continue
+            observations.append(dict(restored, searched_at=batch["finished_at"]))
+    papers, conflicts = group(observations)
+    if (observations != state["observations"] or papers != bundle["articles"]
+            or conflicts != bundle["conflicts"] or len(papers) != bundle["count"]):
+        raise ValueError("External observations or identity groups changed")
+    rows = [dict(paper, evidence_id="E_" + digest([paper["article_id"], paper["abstract_hash"]])[:24],
+                 excerpt_visible_in_logged_result=True, analysis_status="not_analyzed") for paper in papers]
+    matrix = dict(schema_version=2, mode="abstract_only", engine=EXTERNAL_ENGINE,
+                  collection_id=bundle["collection_id"], collection_sha256=digest(bundle),
+                  theme=bundle["theme"], journals=journals, verified_rows=len(rows),
+                  excerpt_visible_count=len(rows), rows=rows, conflicts=conflicts)
+    if bundle.get("run_mode") == "dev":
+        matrix.update(run_mode="dev", formal_eligible=False, workload_sha256=bundle["workload_sha256"])
+    if publish:
+        write(work / "literature_matrix.json", matrix)
+    return matrix
 
 
 def group(rows):
@@ -209,7 +291,7 @@ def invoke(executable, work, prompt, schema, *, timeout, model=None):
 
 
 def collect(config, work, template, schema, *, resume=False, pilot=None, budget_migration=None,
-            initial_observations=()):
+            initial_observations=(), external=None):
     work = work.resolve()
     work.mkdir(parents=True, exist_ok=True)
     phase = config.get("topic_search_phase")
@@ -223,15 +305,23 @@ def collect(config, work, template, schema, *, resume=False, pilot=None, budget_
         raise ValueError("Invalid theme or target")
     if not 1 <= config["max_batches"] <= 8 or not 60 <= config["timeout_seconds"] <= 1800:
         raise ValueError("Invalid execution budget")
-    identity = digest([ENGINE, config, sha(template), sha(schema), sha(__file__)])
+    engine = ENGINE if external is None else EXTERNAL_ENGINE
+    identity = digest([engine, config, sha(template), sha(schema), sha(__file__)])
     with job_lock(work):
         checkpoint = work / "checkpoint.json"
         if checkpoint.exists() != resume:
             raise ValueError("Choose an unused work path or use --resume")
         state = load(checkpoint) if resume else dict(
             config_sha256=identity, collection_id="COL_" + digest([identity, str(work), now()])[:24],
-            engine=ENGINE, config=config, batches=[], observations=[], rejected=[],
+            engine=engine, config=config, batches=[], observations=[], rejected=[],
         )
+        if state["engine"] != engine:
+            raise ValueError("Resume with the original collection engine")
+        if resume and external is not None:
+            receive_external(work, config["journals"], publish=False)
+        if resume and external is None and state["config_sha256"] == digest(
+                [ENGINE, config, sha(template), sha(schema), PRE_ADAPTER_COLLECTOR]):
+            state["config_sha256"] = identity
         if resume and not config.get("topic_batch_budget") and state["config"] == config:
             previous = digest([ENGINE, config, sha(template), sha(schema), UNCHANGED_COLLECTOR_CONTRACT])
             if state["config_sha256"] == previous:
@@ -261,6 +351,8 @@ def collect(config, work, template, schema, *, resume=False, pilot=None, budget_
             state["previous_config_sha256"] = state["config_sha256"]
             state["config_sha256"] = identity
             state["login_preflight_only_batches"] = [batch["batch"] for batch in state["batches"]]
+        if external is not None and pilot:
+            raise ValueError("External batches cannot import a native pilot")
         if not resume and pilot:
             pilot_dir, review = pilot
             original = load(pilot_dir / "checkpoint.json")
@@ -275,8 +367,8 @@ def collect(config, work, template, schema, *, resume=False, pilot=None, budget_
                 name = batch["batch"]
                 shutil.copytree(pilot_dir / name, work / name)
         write(checkpoint, state)
-        executable = cli_executable()
-        for _ in range(1 if config.get("topic_batch_budget") else config["max_batches"]):
+        executable = cli_executable() if external is None else None
+        for _ in range(1 if external is not None or config.get("topic_batch_budget") else config["max_batches"]):
             papers, _ = group(state["observations"])
             effective_count = len(papers)
             if initial_observations:
@@ -285,7 +377,7 @@ def collect(config, work, template, schema, *, resume=False, pilot=None, budget_
                           for row in state["observations"]]
                 combined, _ = group([*initial_observations, *scoped])
                 effective_count = len(combined) - len(prior)
-            if effective_count >= config["target"]:
+            if effective_count >= config["target"] and external is None:
                 break
             if len(state["batches"]) - len(state.get("login_preflight_only_batches", [])) >= config["max_batches"]:
                 break
@@ -317,32 +409,46 @@ def collect(config, work, template, schema, *, resume=False, pilot=None, budget_
                            "说明跳转和最终卷期；若入口没有返回可核实摘要，标为未核实。不要提交仅在答复中出现的镜像网址。"
                            "检索词和打开动作均记成本，分别报告发现、核实题录和获得摘要的数量。")
             try:
-                code = invoke(executable, directory, prompt, schema,
-                              timeout=config["timeout_seconds"], model=config.get("model"))
-                if code:
-                    raise RuntimeError(f"Codex process exit {code}")
-                trace = evidence(directory / "events.jsonl")
-                if not trace:
-                    raise ValueError("No native web_search events")
-                data = load(directory / "response.json")
-            except (OSError, ValueError, RuntimeError, subprocess.TimeoutExpired) as exc:
+                if external is not None:
+                    source = Path(external).resolve()
+                    shutil.copyfile(source, directory / "external_batch.json")
+                    external_batch(source, directory)
+                    data, trace = external_batch(directory / "external_batch.json")
+                    response_path = directory / "external_batch.json"
+                    if any(b.get("response_sha256") == sha(response_path) for b in state["batches"]):
+                        raise ValueError("External batch already ingested")
+                else:
+                    code = invoke(executable, directory, prompt, schema,
+                                  timeout=config["timeout_seconds"], model=config.get("model"))
+                    if code:
+                        raise RuntimeError(f"Codex process exit {code}")
+                    trace = evidence(directory / "events.jsonl")
+                    if not trace:
+                        raise ValueError("No native web_search events")
+                    data = load(directory / "response.json")
+                    response_path = directory / "response.json"
+            except (OSError, ValueError, KeyError, TypeError, RuntimeError, subprocess.TimeoutExpired) as exc:
                 entry.update(status="failed", failure=str(exc), finished_at=now())
                 write(checkpoint, state)
                 break
+            finished_at = now()
             for position, row in enumerate(data["papers"], 1):
                 try:
-                    state["observations"].append(observation(row, trace, config["journals"],
-                                                            batch, position))
+                    item = observation(row, trace, config["journals"], batch, position,
+                                       external=external is not None)
+                    state["observations"].append(item if external is None else dict(item, searched_at=finished_at))
                 except (ValueError, KeyError, TypeError) as exc:
                     state["rejected"].append({"title": row.get("title"), "reason": str(exc), "batch": batch})
             state["rejected"].extend(dict(row, batch=batch) for row in data["unverified"])
-            entry.update(status="completed", search_events=len(trace), finished_at=now(),
-                         event_sha256=sha(directory / "events.jsonl"),
-                         response_sha256=sha(directory / "response.json"), notes=data["search_notes"])
+            entry.update(status="completed", search_events=len(trace),
+                         finished_at=now() if external is None else finished_at,
+                         response_sha256=sha(response_path), notes=data["search_notes"])
+            if external is None:
+                entry["event_sha256"] = sha(directory / "events.jsonl")
             write(checkpoint, state)
         papers, conflicts = group(state["observations"])
         bundle = {
-            "engine": ENGINE, "schema_version": 2, "acquisition_mode": "abstract_only",
+            "engine": engine, "schema_version": 2, "acquisition_mode": "abstract_only",
             "collection_id": state["collection_id"], "theme": config["theme"], "journals": config["journals"],
             "target": config["target"], "count": len(papers), "articles": papers, "conflicts": conflicts,
             "batches": state["batches"], "unverified": state["rejected"],

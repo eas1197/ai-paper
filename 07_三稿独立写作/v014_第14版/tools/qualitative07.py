@@ -104,6 +104,18 @@ def native_receipt(folder):
             ('events.jsonl', 'response.json', 'prompt.txt', 'login_status.json')]}
 
 
+def invocation_receipt(folder, role, request=None):
+    path = folder / 'provider_receipt.json'
+    if not path.exists():
+        return native_receipt(folder)
+    from provider_receipts import external_receipt
+    record, prompt, response = external_receipt(folder, role)
+    if request is not None and (prompt.name != 'request.json' or load(prompt) != request):
+        raise ValueError('External request differs from the current task')
+    return {'invocation_id': record['invocation_id'], 'model': record['model'],
+            'files': [file_lock(p) for p in (path, prompt, response)]}
+
+
 def independent_review(intake, response, receipt, prior_invocations):
     """Reuse V14 signoff; an independent verdict must bind the current draft."""
     if intake['status'] != 'needs_review':
@@ -112,9 +124,13 @@ def independent_review(intake, response, receipt, prior_invocations):
     if not ident or ident in prior_invocations or verify_locks(receipt['files']):
         raise ValueError('审查调用重复或原始记录已变化')
     paths = {Path(r['path']).name: Path(r['path']) for r in receipt['files']}
-    if set(paths) != {'events.jsonl', 'response.json', 'prompt.txt', 'login_status.json'} or native_receipt(paths['events.jsonl'].parent) != receipt:
-        raise ValueError('审查缺完整原生凭证')
-    if load(paths['response.json']) != response or intake['content_sha256'] not in paths['prompt.txt'].read_text(encoding='utf-8-sig'):
+    anchor = paths.get('provider_receipt.json') or paths['events.jsonl']
+    if invocation_receipt(anchor.parent, 'review') != receipt:
+        raise ValueError('Incomplete review receipt')
+    prompt = paths.get('request.json') or paths['prompt.txt']
+    bound = (load(prompt).get('content_sha256') == intake['content_sha256'] if prompt.name == 'request.json'
+             else intake['content_sha256'] in prompt.read_text(encoding='utf-8-sig'))
+    if load(paths['response.json']) != response or not bound:
         raise ValueError('审查响应或提示与当前稿件不一致')
     if response.get('content_sha256') != intake['content_sha256']:
         raise ValueError('审查未绑定当前稿件')
@@ -131,7 +147,7 @@ def independent_review(intake, response, receipt, prior_invocations):
     if verdict == 'revise' and (not issues or any(not isinstance(v, dict) or not v.get('location')
             or not v.get('reason') or not v.get('action') for v in issues)):
         raise ValueError('返修必须有定位、原因和具体动作')
-    signoff = dict(response, reviewer='gpt-6.2-sol', reviewed_at=now()[:10], invocation_id=ident, receipt=receipt)
+    signoff = dict(response, reviewer=receipt.get('model', 'gpt-6.2-sol'), reviewed_at=now()[:10], invocation_id=ident, receipt=receipt)
     if verdict == 'accepted':
         errors = []
         review(intake['subject'], signoff, errors)
@@ -206,7 +222,7 @@ def run_loop(task, work, provider=native_provider, context=None):
             draft, author_receipt = provider('draft', request, folder / 'author')
             ident = author_receipt['invocation_id']
             if (not ident or ident in used or verify_locks(author_receipt['files'])
-                    or native_receipt(folder / 'author') != author_receipt
+                    or invocation_receipt(folder / 'author', 'draft', request) != author_receipt
                     or load(folder / 'author/response.json') != draft):
                 raise ValueError('起草调用重复或凭证已变化')
             used.add(ident)
@@ -223,8 +239,11 @@ def run_loop(task, work, provider=native_provider, context=None):
             if intake['errors']:
                 feedback = {'machine_errors': intake['errors']}
             else:
-                response, receipt = provider('review', {'task': context, 'draft': draft,
-                    'content_sha256': intake['content_sha256']}, folder / 'reviewer')
+                request = {'task': context, 'draft': draft, 'content_sha256': intake['content_sha256']}
+                response, receipt = provider('review', request, folder / 'reviewer')
+                if any(Path(item['path']).name == 'provider_receipt.json' for item in receipt['files']):
+                    if invocation_receipt(folder / 'reviewer', 'review', request) != receipt:
+                        raise ValueError('External review request differs from the current task')
                 signoff = independent_review(intake, response, receipt, used)
                 used.add(signoff['invocation_id'])
                 write(folder / 'quality_review.json', signoff)
@@ -280,7 +299,11 @@ def validate_delivery(work):
         raise ValueError('最终稿件与技术门禁记录不一致')
     prior = set(task.get('prior_invocations', [])) | {task.get('matrix_review', {}).get('invocation_id')}
     for row in report['history']:
-        for field in ('author_invocation', 'review_invocation'):
+        attempt = work / f"attempt_{row['attempt']:03d}"
+        for field, role, subdir in (('author_invocation', 'draft', 'author'),
+                                    ('review_invocation', 'review', 'reviewer')):
+            if row.get(field) and invocation_receipt(attempt / subdir, role)['invocation_id'] != row[field]:
+                raise ValueError('Invocation differs from the attempt history')
             ident = row.get(field)
             if ident and not (row == latest and field == 'review_invocation'):
                 if ident in prior:
@@ -288,7 +311,7 @@ def validate_delivery(work):
                 prior.add(ident)
     response = load(folder / 'reviewer/response.json')
     signoff = load(folder / 'quality_review.json')
-    receipt = native_receipt(folder / 'reviewer')
+    receipt = invocation_receipt(folder / 'reviewer', 'review')
     check = independent_review(intake, response, receipt, prior)
     # Validation may occur after the review date; preserve the original date.
     check['reviewed_at'] = signoff['reviewed_at']

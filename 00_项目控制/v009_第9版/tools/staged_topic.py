@@ -18,7 +18,9 @@ from topic32 import TASKS, check as check_topic_reasoning
 
 REGISTRY = registry()
 from abstract_acquisition import job_lock
-from codex_literature import collect, evidence, group, url_event
+from codex_literature import (EXTERNAL_ENGINE, collect, evidence, external_batch, group,
+                              receive_external, url_event)
+from provider_receipts import contained, external_receipt
 from collect_common import digest, load, normalize, write
 from native_receiving import receive
 from method_paths import PATHS, select_method, verify_material_review
@@ -106,8 +108,9 @@ def init(run_id, mode, theme, *, full_paper=False, research_route="A"):
 
 
 def receipt(folder, journals=None):
-    matrix = receive(folder, journals or POLICY["journals"])
-    return matrix, load(folder / "checkpoint.json")
+    state = load(folder / "checkpoint.json")
+    receiver = receive_external if state.get("engine") == EXTERNAL_ENGINE else receive
+    return receiver(folder, journals or POLICY["journals"]), state
 
 
 def issue_plan(work, state):
@@ -143,12 +146,17 @@ def theories(folder, state):
     for batch in state["batches"]:
         if batch["status"] != "completed":
             continue
-        trace = evidence(folder / batch["batch"] / "events.jsonl")
+        directory = folder / batch["batch"]
+        external = state.get("engine") == EXTERNAL_ENGINE
+        trace = external_batch(directory / "external_batch.json")[1] if external else evidence(directory / "events.jsonl")
         for note in batch["notes"]:
             parts = note.split("|", 3)
             if len(parts) == 4 and parts[0].strip() == "THEORY":
                 _, title, url, claim = (s.strip() for s in parts)
                 event = url_event(url, trace)
+                if external and not any(row["id"] == event and title in row["results"][0]["snippet"]
+                                        and claim in row["results"][0]["snippet"] for row in trace):
+                    continue
                 if not event and title and url.startswith("https://doi.org/"):
                     # A reported DOI may refer to a publisher page actually returned by the tool.
                     prefix = normalize(title)
@@ -166,7 +174,7 @@ def theories(folder, state):
     return accepted
 
 
-def search(work, state, phase, resume, *, budget_migration=None):
+def search(work, state, phase, resume, *, budget_migration=None, external=None):
     allowed = "initial" if phase == "initial" else "supplemental"
     if state["status"] != allowed:
         raise ValueError("Search not authorized in this state; reuse existing evidence during revisions")
@@ -190,6 +198,8 @@ def search(work, state, phase, resume, *, budget_migration=None):
             theme += "；现实线索：" + focus
         if state.get("explanation_first"):
             exchange = load(work / "explanation_exchange.json")
+            if state.get("research_route") == "B":
+                verify_external_critical(work, exchange)
             if digest(exchange) != state["exchange_sha256"]:
                 raise ValueError("Pre-search explanation or challenge changed")
             theme += "；比较候选解释与反诘提出的机制：" + exchange["search_focus"]
@@ -217,7 +227,7 @@ def search(work, state, phase, resume, *, budget_migration=None):
                for row in paper["provenance"]}
         original_rows = [row for row in original["observations"] if row["observation_id"] in ids]
     bundle = collect(config, folder, VERSION / "search_prompt.txt", SCHEMA, resume=resume,
-                     budget_migration=budget_migration,
+                     budget_migration=budget_migration, external=external,
                      initial_observations=original_rows if config.get("topic_batch_budget") else ())
     matrix, checkpoint = receipt(folder, journals)
     if plan:
@@ -293,6 +303,9 @@ def advance(work, state):
             return result
     checkpoint = load(checkpoint_path)
     config = checkpoint["config"]
+    if checkpoint.get("engine") == EXTERNAL_ENGINE:
+        receipt(folder, config["journals"])
+        return {"action": "wait_for_external_batch", "status": phase}
     if state["mode"] == "dev" and not config.get("topic_batch_budget"):
         migration = state.get("budget_resume", {}).get("prior_stop", {})
         if migration.get("checkpoint_sha256") != digest(checkpoint):
@@ -451,8 +464,40 @@ def record_reality(work, state, packet):
     state["status"] = "explanation_exchange" if state.get("explanation_first") else "initial"
 
 
+def verify_external_literature(work, state, papers, theory):
+    locks = []
+    for phase in ("initial", "supplemental"):
+        folder = work / phase
+        checkpoint = folder / "checkpoint.json"
+        if not checkpoint.is_file():
+            continue
+        saved = load(checkpoint)
+        if saved.get("engine") != EXTERNAL_ENGINE:
+            continue
+        plan = issue_plan(work, state) if state.get("issue_search") else {}
+        journals = [*POLICY["journals"], *(row["name"] for row in plan.get("specialist_journals", []))]
+        matrix = receive_external(folder, journals, publish=False)
+        locks.extend([checkpoint, folder / "abstract_collection.json"])
+        for batch in saved["batches"]:
+            if batch["status"] != "completed":
+                continue
+            manifest = contained(folder, Path(batch["batch"]) / "external_batch.json")
+            locks.append(manifest)
+            locks.extend(contained(manifest.parent, row["file"]) for row in load(manifest)["snapshots"])
+        if phase == "initial" and (theories(folder, saved) != load(theory)
+                                   or state.get("initial_sha256", digest(matrix)) != digest(matrix)):
+            raise ValueError("External initial literature or theory changed")
+        expected = papers.get("supplemental_sha256") if phase == "supplemental" else papers.get("initial_sha256")
+        if expected is not None and expected != digest(matrix):
+            raise ValueError("External literature changed after merge")
+        if papers.get("mode") == "abstract_only" and phase == "initial" and matrix != papers:
+            raise ValueError("External evidence matrix changed")
+    return locks
+
+
 def evidence_hash(work, state, path, theory):
     evidence = {"papers": load(path), "theories": load(theory)}
+    verify_external_literature(work, state, evidence["papers"], theory)
     if state.get("reality_first"):
         evidence["reality"] = load_reality(work, state)
     if state.get("explanation_first"):
@@ -470,8 +515,24 @@ def evidence_hash(work, state, path, theory):
         research = load(work / "research_packet.json")
         if digest(research) != state["research_packet_sha256"]:
             raise ValueError("Autonomous research packet changed")
+        verify_external_critical(work, research["exchange"])
         evidence["research_packet"] = research
     return digest(evidence)
+
+
+def verify_external_critical(work, exchange):
+    receipt = exchange["critical_receipt"]
+    if "provider_receipt" not in receipt:
+        return False
+    file = contained(work, receipt["provider_receipt"])
+    if file.name != "provider_receipt.json" or hashlib.sha256(file.read_bytes()).hexdigest() != receipt["provider_receipt_sha256"]:
+        raise ValueError("Independent challenge receipt changed")
+    record, request, response = external_receipt(file.parent, "critical")
+    if (record["invocation_id"] != exchange["critical_actor"]
+            or record["invocation_id"] == exchange["research_actor"]
+            or load(response) != {k: v for k, v in exchange.items() if k != "critical_receipt"}):
+        raise ValueError("Independent challenge does not match the exchange")
+    return True
 
 
 def record_research(work, state, packet):
@@ -483,18 +544,19 @@ def record_research(work, state, packet):
         raise ValueError("Compare independent action events before the evidence handoff")
     exchange = packet["exchange"]
     validate_exchange(exchange)
-    receipt = exchange["critical_receipt"]
-    for kind in ("events", "response"):
-        file = (work / receipt[kind]).resolve()
-        if not file.is_relative_to(work.resolve()):
-            raise ValueError("Independent challenge files must belong to this run")
-        if hashlib.sha256(file.read_bytes()).hexdigest() != receipt[f"{kind}_sha256"]:
-            raise ValueError("Independent challenge receipt changed")
-    calls = [json.loads(line) for line in (work / receipt["events"]).read_text(
-        encoding="utf-8-sig").splitlines()]
-    if ([row["thread_id"] for row in calls if row["type"] == "thread.started"] != [exchange["critical_actor"]]
-            or not any(row["type"] == "turn.completed" for row in calls)):
-        raise ValueError("Independent challenge lacks a completed Codex invocation")
+    if not verify_external_critical(work, exchange):
+        receipt = exchange["critical_receipt"]
+        for kind in ("events", "response"):
+            file = (work / receipt[kind]).resolve()
+            if not file.is_relative_to(work.resolve()):
+                raise ValueError("Independent challenge files must belong to this run")
+            if hashlib.sha256(file.read_bytes()).hexdigest() != receipt[f"{kind}_sha256"]:
+                raise ValueError("Independent challenge receipt changed")
+        calls = [json.loads(line) for line in (work / receipt["events"]).read_text(
+            encoding="utf-8-sig").splitlines()]
+        if ([row["thread_id"] for row in calls if row["type"] == "thread.started"] != [exchange["critical_actor"]]
+                or not any(row["type"] == "turn.completed" for row in calls)):
+            raise ValueError("Independent challenge lacks a completed Codex invocation")
     if not isinstance(exchange.get("search_focus"), str) or not exchange["search_focus"].strip():
         raise ValueError("State the literature search focus")
     for stage in TASKS:
@@ -591,7 +653,10 @@ def main():
     parser.add_argument("--full-paper", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--report", type=Path)
+    parser.add_argument("--external-batch", type=Path)
     args = parser.parse_args()
+    if args.external_batch and args.command not in {"initial", "supplemental"}:
+        parser.error("--external-batch requires initial or supplemental")
     if args.full_paper and (args.command != "init" or args.mode != "dev"):
         parser.error("--full-paper is only accepted when initializing an experimental run")
     if args.command == "init":
@@ -612,7 +677,9 @@ def main():
             raise ValueError("Staged policy or run identity changed")
         result = None
         if args.command in ("initial", "supplemental"):
-            if state["mode"] == "dev" and state["status"] == args.command:
+            if args.external_batch:
+                result = search(work, state, args.command, args.resume, external=args.external_batch)
+            elif state["mode"] == "dev" and state["status"] == args.command:
                 result = advance(work, state)
             else:
                 result = search(work, state, args.command, args.resume)
