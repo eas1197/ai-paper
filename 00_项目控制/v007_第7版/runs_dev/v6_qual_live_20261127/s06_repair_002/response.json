@@ -1,0 +1,121 @@
+{
+  "search_log": {
+    "scope": "Final S06 evidence repair for the existing English school transport appeals question",
+    "checked_on": "2026-11-27",
+    "native_search_queries_used": 16,
+    "query_limit": 24,
+    "queries": [
+      "Mumsnet Swindon school transport appeal refused won lost",
+      "Mumsnet Surrey school transport appeal refused upheld won",
+      "Mumsnet Staffordshire school transport appeal refused won",
+      "Reddit England council school transport appeal refused successful parent",
+      "site:mumsnet.com/talk \"school transport\" \"appeal\" \"won\"",
+      "site:mumsnet.com/talk \"school transport\" \"appeal\" \"unsuccessful\"",
+      "\"school transport\" \"appeal\" \"Surrey\" parent forum refused",
+      "\"school transport\" \"appeal\" \"Staffordshire\" parent forum won",
+      "Kent \"school transport\" \"appeal\" \"refused\" parents said failed",
+      "site:mumsnet.com Kent \"transport\" \"appeal\" \"refused\" school",
+      "Surrey parent \"school transport\" \"appeal\" \"we won\" OR \"we lost\"",
+      "Swindon OR Staffordshire \"school transport\" \"appeal\" \"we appealed\" OR \"our appeal\"",
+      "Kent school transport appeal \"we lost\" OR \"appeal was rejected\" parent taxi 2024",
+      "Surrey \"school transport\" \"appeal\" \"successful\" parents interview",
+      "Swindon Staffordshire school transport appeal family parent interview rejected overturned",
+      "site:mumsnet.com \"school transport\" \"appeal was refused\" OR \"lost our appeal\""
+    ]
+  },
+  "firsthand_events": [
+    {
+      "id": "S06-E01",
+      "council": "Kent County Council",
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://www.mumsnet.com/talk/special_educational_needs/4994748-sen-school-transport-we-won-appeal-but",
+      "source_locator": "Opening post, 27 January 2024",
+      "initial_decision": "School transport application refused twice. The post gives the parent's case for assistance and does not state the council's reasons for refusal.",
+      "procedure": "Parent took the refusals to appeal. The appeal stage is unspecified.",
+      "final_decision": "Appeal succeeded and daily taxi transport was awarded. The panel's reasoning is unspecified.",
+      "decision_date": "2024-01-26",
+      "date_basis": "Parent reports receiving the result the day before posting. The date is the notification date."
+    },
+    {
+      "id": "S06-E02",
+      "council": "Swindon Borough Council",
+      "policy_period": null,
+      "source_type": "Public parent interview with a contemporaneous chronology supplied by the reporter",
+      "source_url": "https://swindonlink.com/education/send-transport-crisis/",
+      "source_locator": "Parent interview and accompanying chronology, lines 80–86",
+      "initial_decision": "Transport for a new school was refused the day after the request. The council's reason is unspecified.",
+      "procedure": "Parent repeatedly asked how to appeal. The article reports that instructions arrived after the deadline had elapsed.",
+      "final_decision": null,
+      "decision_date": null,
+      "date_basis": "The article gives 26 July for the request, the next day for refusal and 4 September for receipt of appeal instructions. These are procedural dates.",
+      "status_at_source": "Initial refusal remained in effect and no appeal determination was reported."
+    },
+    {
+      "id": "S06-E03",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/4853903-to-ask-if-anyone-else-has-won-a-school-transport-appeal",
+      "source_locator": "Opening post, 21 July 2023",
+      "initial_decision": "School bus place refused because the distance was under the applicable two-mile threshold.",
+      "procedure": "Parent said they intended to appeal on walking-route safety grounds.",
+      "final_decision": null,
+      "decision_date": null,
+      "date_basis": "The post date anchors the report of refusal and intention to appeal."
+    },
+    {
+      "id": "S06-E04",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://supportsendkids.org/question/1767710346523",
+      "source_locator": "Parent's account, lines 33–39",
+      "initial_decision": "Existing solo transport was changed to shared transport. The parent reports that no new risk assessment preceded the change.",
+      "procedure": "First appeal submitted in August 2024 and refused. The parent gathered professional evidence for stage two and reports initiating pre-action correspondence in October 2024.",
+      "final_decision": "The transport appeal succeeded and the authority concluded that solo transport was required. A separate reimbursement request was refused.",
+      "decision_date": null,
+      "date_basis": "August 2025 is the reported reimbursement complaint outcome date. The transport appeal decision date is unspecified."
+    },
+    {
+      "id": "S06-E05",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent update",
+      "source_url": "https://www.reddit.com/r/LegalAdviceUK/comments/1pko1es/update_council_are_giving_me_the_school_taxi_back/",
+      "source_locator": "Update, lines 24–29",
+      "initial_decision": "Existing school taxi provision was withdrawn.",
+      "procedure": "Parent wrote to the council citing the statutory transport duty. The council investigated. A formal appeal stage is unspecified.",
+      "final_decision": "The council overturned the withdrawal and said taxi provision would resume in January.",
+      "decision_date": null,
+      "date_basis": "Parent reports receiving the reversal letter on the day of the update."
+    }
+  ],
+  "matched_pairs": [],
+  "gaps": [
+    {
+      "council": "Swindon Borough Council",
+      "finding": "The identifiable parent interview documents a refusal and an obstacle to filing an appeal. The same article reports successful appeals in aggregate without individual refusal reasons, decisions or dates. The council's procedure describes senior-officer review followed by a subcommittee hearing.",
+      "corroboration_url": "https://www.swindon.gov.uk/info/20032/schools_and_education/414/school_travel_support/5"
+    },
+    {
+      "council": "Surrey County Council",
+      "finding": "An Ombudsman decision dated 28 September 2023 records that the council maintained a distance-based refusal after considering discretionary grounds. The public parent-testimony compilation could not be checked for a comparable firsthand event because targeted lookups timed out.",
+      "corroboration_url": "https://www.lgo.org.uk/decisions/education/school-transport/23-008-047"
+    },
+    {
+      "council": "Staffordshire County Council",
+      "finding": "Search results surfaced official appeal cases and council guidance. The two candidate Ombudsman ruling pages timed out on opening. No firsthand account with an explicit Staffordshire council identification and a final decision was verified.",
+      "corroboration_url": "https://www.staffordshire.gov.uk/roads-parking-and-transport/school-and-college-travel/under-16-education-travel-policy/school-0"
+    },
+    {
+      "council": "Kent County Council",
+      "finding": "The January 2024 parent-reported award lacks the council's initial refusal reasons and the applicable policy version. No opposite firsthand outcome with comparable initial grounds was verified for the same policy period.",
+      "corroboration_url": "https://www.kent.gov.uk/__data/assets/pdf_file/0006/195801/Home-to-school-transport-guidance-booklet.pdf"
+    },
+    {
+      "council": null,
+      "finding": "The additional accounts document distinct procedures and endpoints, including a planned safety appeal, a successful challenge to the mode of transport, and a withdrawal reversed after correspondence. Missing council identification or final appeal evidence prevents same-council pairing."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "papers": [
+    {
+      "title": "996在职青年的超时工作及社会心理后果研究——基于CLDS数据的实证分析",
+      "authors": ["聂伟", "风笑天"],
+      "journal": "中国青年研究",
+      "year": 2020,
+      "doi": "",
+      "metadata_url": "https://journal.psych.ac.cn/xlkxjz/cn/y2022/v30/i12/2666",
+      "abstract_url": "https://www.36kr.com/p/703068356377479",
+      "abstract_locator": "《中国青年研究》2020年第5期。期刊公众号授权转载页第58行注明来源，第60至61行为摘要。",
+      "abstract_excerpt": "工作自主性对减少主观加班和强化自愿加班发挥积极作用",
+      "abstract_summary": "作者基于全国劳动力动态调查发现，逾半数在职青年存在客观加班，近三分之一被迫加班。工作自主性与较少感知到加班、较多自愿加班相关，工作与生活空间一体化也与自愿延长工时相关。对本题的推论是，即使留岗时长相近，员工对离岗时点的支配程度仍可能不同。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“员工留下就说明组织要求在场”的反诘，因为工作自主性较高时也可能出现自愿加班。迁移到常规下班情境，需要分别确认员工当时能否离岗、岗位是否仍需有人承接，以及个人是否有意继续工作。摘要未观测下班时点的等待，也无法识别主管要求和同事先行的独立作用。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "程序员工作的性别化——以中国信息技术产业为例",
+      "reason": "题录可核至李晓天、《社会学研究》2023年第3期。人大社会学视野网的搜索结果显示内容提要，指出科技企业加班文化与性别角色期待共同加剧工作家庭冲突。打开人大网页超时，打开原刊卷期入口也未返回摘要，缺少成功打开的摘要页。"
+    },
+    {
+      "title": "加班依赖体制：再探青年农民工过度加班问题",
+      "reason": "题录可核至孙中伟、黄婧玮、《中国青年研究》2021年第8期。打开的转载页提供编辑导读，介绍低基本工资、加班报酬和议价能力对加班的影响。原刊摘要仍待核实。"
+    },
+    {
+      "title": "加班劳动与社会不平等——基于CGSS 2006年的实证研究",
+      "reason": "已打开社科文献出版社数据库页面并核对摘要。出版项为《社会发展研究（第二期）》，超出九刊范围。"
+    },
+    {
+      "title": "Overwork and the Persistence of Gender Segregation in Occupations",
+      "reason": "SAGE 搜索结果指向 Gender & Society，超出九刊范围。"
+    }
+  ],
+  "search_notes": [
+    "本轮按初查处理。使用 Codex 原生实时网页工具共24个动作，含16条搜索式和8次打开，失败打开计入预算。未下载全文。按进入逐篇筛选的九刊研究计，发现3篇、核实题录3篇、成功打开并取得可定位摘要1篇、纳入1篇，距目标差4篇。李晓天一文在搜索结果中显示的提要未计入成功打开数。",
+    "检索顺序先查议题并打开优先候选，再扩展到对象和理论。议题层实际使用“加班 职场 在场 加班文化 员工”“加班 时间 劳动过程 下班 程序员 组织”“workplace long hours work devotion face time employees work hours norms”，配合中英文目标刊名。英文检索再收窄到 Professional Work、Blair Loy、physicians、overwork、Cha、shift handoff、peer effects 和 coworker departures。随后按命中题名回查程序员、996青年和加班依赖体制，并用 CNKI、万方、期刊域名及 DOI 词补查。最终找到组织加班规范和工作自主性的证据，未核实九刊内直接观测同事先行或岗位交接的论文。",
+    "对象层实际查询“通勤时间 工作时间 经济研究 OR 管理世界 通勤 劳动供给”。命中通勤与绩效、家庭时间分配、劳动参与等近邻研究，未核实同时观察通勤缩短、继续到岗及下班离岗选择的九刊论文。",
+    "理论层实际查询“passive face time Elsbach Cable Sherman abstract perceived dependability commitment”，并打开 SAGE 摘要。以“shift handoff”“peer effects”“coworker departures”扩展时，搜索结果发现同伴在场与结束工作时间同步的场域实验线索。",
+    "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/abs/10.1177/0018726709353139|Human Relations 第63卷第6期。办公室人员研究和实验发现，正常工时内被看见与可靠性评价相联系，正常工时外被看见与投入度评价相联系。这一解释适用于员工的在场可被观察且观察者据此评价的场景。用于解释主管要求留岗时，还需要查明主管是否把在场作为评价依据。",
+    "THEORY|Employer expectations, peer effects and productivity: Evidence from a series of field experiments|https://www.academia.edu/2887738/Employer_expectations_peer_effects_and_productivity_Evidence_from_a_series_of_field_experiments|搜索结果中的实验摘要显示，完成强制工作阶段后可自行离开的参与者，与一名同伴共处时结束工作的时点更接近。适用条件是已有离开选择权且同伴共处。同步结果仍留有方向缺口，无法据此判断先走者是否使他人提前离开。该线索来自搜索结果中的研究原文片段，未另开出版商摘要页。",
+    "纳入论文使用《心理科学进展》参考文献核对原题与刊期，使用明确标注期刊公众号授权的网页核对摘要。本轮未遇到成功返回同篇摘要的出版商跳转。证据缺口集中在责任何时算完成交接、主管要求如何改变离岗决定，以及共同任务能否解释同事之间的离岗同步。"
+  ]
+}

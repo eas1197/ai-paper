@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "reasoning": "候选概念是纠纷进入第三方程序后，双方继续谈判的条件是否改变。观察指标为递交材料前后对方由拒绝退款转为重新联络和提出撤诉条件，不把递交材料等同于法院介入，也不把愿退等同于到账。两案的出租关系和程序节点不同，尚不能推断诉讼促成退款；共同点限于行动序列。",
+  "opportunities": [
+    {
+      "social_process": "私人租赁纠纷的程序化与重新协商",
+      "observation": "两名住宅租客均自述提前一个月告知不续租，交房时出租方以房屋或家具状况为由拒退押金。租客随后分别尝试线上调解或向其他部门求助，最终都向法院递交材料。进入法院程序后，出租方重新联系租客并要求撤诉。其中一名租客明确说已收到押金转账，另一名只写明出租方愿意退款、自己寄出了撤诉材料。",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "opportunity_id": "O1"
+    }
+  ],
+  "questions": [],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "source_id": "S1",
+      "document_id": "DOC1",
+      "excerpt": "https://www.v2ex.com/t/1133419",
+      "path": "00_项目控制\\v007_第7版\\runs_dev\\v6_qual_open_20261128_001\\reality_response.json",
+      "sha256": "d295b7679255c51dfb9b7823bd3b900e020b3b7030b9d819a3c46acd25e6fbe9",
+      "kind": "context",
+      "locator": {
+        "section": "第92楼，网页正文第252—260行。可定位提前告知、交房拒退、线上立案受阻、调解未果、线下立案及寄出撤诉材料的顺序。"
+      }
+    },
+    {
+      "evidence_id": "E2",
+      "source_id": "S2",
+      "document_id": "DOC2",
+      "excerpt": "https://www.jiemian.com/article/5151522.html",
+      "path": "00_项目控制\\v007_第7版\\runs_dev\\v6_qual_open_20261128_001\\reality_response.json",
+      "sha256": "d295b7679255c51dfb9b7823bd3b900e020b3b7030b9d819a3c46acd25e6fbe9",
+      "kind": "context",
+      "locator": {
+        "section": "文章中段关于租客起诉后收到退款的第一人称小节，网页正文第264—332行。第284—305行记录先前的退押金条件与交房争议，第307—332行记录求助、递交材料、对方再联系及转账。页面后段重复刊载同一叙述，按一个事件计。"
+      }
+    }
+  ],
+  "explanations": [],
+  "critiques": [],
+  "evolution": []
+}

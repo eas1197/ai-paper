@@ -1,0 +1,349 @@
+{
+  "engine": "codex_native_v1",
+  "schema_version": 2,
+  "acquisition_mode": "abstract_only",
+  "collection_id": "COL_02faa9a380e3e428f41994f2",
+  "theme": "开放观察公开网络亲历事件，自主选题，主题待定",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ],
+  "target": 5,
+  "count": 5,
+  "articles": [
+    {
+      "title": "为伤害“定价”：医疗损害纠纷中的通约实践",
+      "authors": [
+        "张龙"
+      ],
+      "journal": "社会",
+      "year": "2023",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+      "abstract_locator": "第43卷第5期，112–138页。官网第36–38行中文摘要",
+      "abstract_excerpt": "技术（测量的精准）",
+      "abstract_summary": "作者依据中国北方某市一家三甲医院纠纷处理科室的田野调查，指出医疗损害赔偿要将不同性质的损失转成可比较的金额，涉及价值整合、信息简化和测量精度，具体做法随处理渠道和损害属性而变。本轮推论是，检测结果可能先改变双方对争议事实的判断，再影响退款和费用承担。",
+      "relevance": "substantive",
+      "relevance_reason": "能回应同一检测读数为何可能对应不同退租报价。若双方认可检测口径，并能把测量结果同租约义务和费用项目连接起来，医疗赔偿中的量化机制可供比较。报告是否独立可信、哪一方有权修改报价，以及报告本身能否促成让步，仍需租赁个案证据。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+      "abstract_hash": "9a1e983687dee744ec15db620ed1c039347bca4ebd5ca4fc1f3823e961cb9c55",
+      "excerpt_sha256": "223e184ce49ec80c5f169fd682d0cd664abe4cdf980a4a2e0830d3ec5f928a4f",
+      "searched_at": "2026-11-27T23:44:28.211125+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+      "abstract_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+      "article_id": "A_1947188daac77f2045e6c035",
+      "provenance": [
+        {
+          "title": "为伤害“定价”：医疗损害纠纷中的通约实践",
+          "authors": [
+            "张龙"
+          ],
+          "journal": "社会",
+          "year": "2023",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+          "abstract_locator": "第43卷第5期，112–138页。官网第36–38行中文摘要",
+          "abstract_excerpt": "技术（测量的精准）",
+          "abstract_summary": "作者依据中国北方某市一家三甲医院纠纷处理科室的田野调查，指出医疗损害赔偿要将不同性质的损失转成可比较的金额，涉及价值整合、信息简化和测量精度，具体做法随处理渠道和损害属性而变。本轮推论是，检测结果可能先改变双方对争议事实的判断，再影响退款和费用承担。",
+          "relevance": "substantive",
+          "relevance_reason": "能回应同一检测读数为何可能对应不同退租报价。若双方认可检测口径，并能把测量结果同租约义务和费用项目连接起来，医疗赔偿中的量化机制可供比较。报告是否独立可信、哪一方有权修改报价，以及报告本身能否促成让步，仍需租赁个案证据。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/abstract/abstract20051.shtml",
+          "abstract_hash": "9a1e983687dee744ec15db620ed1c039347bca4ebd5ca4fc1f3823e961cb9c55",
+          "excerpt_sha256": "223e184ce49ec80c5f169fd682d0cd664abe4cdf980a4a2e0830d3ec5f928a4f",
+          "searched_at": "2026-11-27T23:44:28.211125+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+          "abstract_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287"
+        }
+      ]
+    },
+    {
+      "title": "Aiding Peace, Abetting Violence: Third Parties and the Management of Conflict",
+      "authors": [
+        "Scott Phillips",
+        "Mark Cooney"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2005",
+      "doi": "10.1177/000312240507000207",
+      "metadata_url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+      "abstract_locator": "第70卷第2期，334–354页。SAGE 第30–33行 Abstract",
+      "abstract_excerpt": "partisan or settlement agent or remain uninvolved",
+      "abstract_summary": "作者结合对一百名因袭击或杀人入狱男性的访谈资料，检验第三方同争议双方的联系能否预测其偏向一方、促成和解或保持旁观，以及第三方的整体构成能否预测冲突升级。多数理论预期得到支持。本轮推论是，中介对房东或租客的关系与利益依赖，可能影响它如何传递或采纳核验结果。",
+      "relevance": "substantive",
+      "relevance_reason": "能回应为什么有第三方介入仍可能谈不拢。若中介与双方的关系可观察，并且中介能决定如何转交报告、安排复检或组织谈判，这一解释可迁移。检测机构的技术可信度、报告内容和退款幅度仍要另行查证。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+      "abstract_hash": "b6a499c6059d5cef35348143b59cccbb588dcbd8d6de9bd9aa7923d47dbb0236",
+      "excerpt_sha256": "8d76d10a11b37e3ba6c078d1bcffef835f8da30dbf1540b121a14de705f34c93",
+      "searched_at": "2026-11-27T23:44:28.212124+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+      "abstract_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+      "article_id": "A_04228503c045a0b463421dc3",
+      "provenance": [
+        {
+          "title": "Aiding Peace, Abetting Violence: Third Parties and the Management of Conflict",
+          "authors": [
+            "Scott Phillips",
+            "Mark Cooney"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2005",
+          "doi": "10.1177/000312240507000207",
+          "metadata_url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+          "abstract_url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+          "abstract_locator": "第70卷第2期，334–354页。SAGE 第30–33行 Abstract",
+          "abstract_excerpt": "partisan or settlement agent or remain uninvolved",
+          "abstract_summary": "作者结合对一百名因袭击或杀人入狱男性的访谈资料，检验第三方同争议双方的联系能否预测其偏向一方、促成和解或保持旁观，以及第三方的整体构成能否预测冲突升级。多数理论预期得到支持。本轮推论是，中介对房东或租客的关系与利益依赖，可能影响它如何传递或采纳核验结果。",
+          "relevance": "substantive",
+          "relevance_reason": "能回应为什么有第三方介入仍可能谈不拢。若中介与双方的关系可观察，并且中介能决定如何转交报告、安排复检或组织谈判，这一解释可迁移。检测机构的技术可信度、报告内容和退款幅度仍要另行查证。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/10.1177/000312240507000207",
+          "abstract_hash": "b6a499c6059d5cef35348143b59cccbb588dcbd8d6de9bd9aa7923d47dbb0236",
+          "excerpt_sha256": "8d76d10a11b37e3ba6c078d1bcffef835f8da30dbf1540b121a14de705f34c93",
+          "searched_at": "2026-11-27T23:44:28.212124+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+          "abstract_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8"
+        }
+      ]
+    },
+    {
+      "title": "农村民间纠纷调解中的公平建构与公平逻辑",
+      "authors": [
+        "王汉生",
+        "王迪"
+      ],
+      "journal": "社会",
+      "year": "2012",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_locator": "第32卷第2期。官网第32–36行中文摘要",
+      "abstract_excerpt": "调解人的角色定位、道德背景及其权威性",
+      "abstract_summary": "作者通过当代农村民间调解考察公平协议如何形成，指出调解者的角色和权威、上门等沟通策略、维持关系的目标，以及提案是否符合当地公认的公平原则，都会影响协议达成。本轮推论是，即使检测资料相同，双方认可的协调者和退款方案仍可能改变协商进程。",
+      "relevance": "substantive",
+      "relevance_reason": "能回应让步是否来自协调者促成的可接受提案。迁移到租赁纠纷，需要中介或调解人获双方认可，且退租方案存在调整空间。熟人关系的延续在一次性租约中可能较弱。该摘要也无法识别检测报告的独立作用。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_hash": "a058144399dd62a154cd7b1c35963da2c6e2865c447693d6c9c37cc995bfe253",
+      "excerpt_sha256": "8ade6b0323c1fbc6cb6d1beb4cfb71d6257b2ad59ad3d14f8df7a57b52c8ef82",
+      "searched_at": "2026-11-27T23:44:28.212124+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+      "abstract_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+      "article_id": "A_db445605d6ec0163d1bb892d",
+      "provenance": [
+        {
+          "title": "农村民间纠纷调解中的公平建构与公平逻辑",
+          "authors": [
+            "王汉生",
+            "王迪"
+          ],
+          "journal": "社会",
+          "year": "2012",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_locator": "第32卷第2期。官网第32–36行中文摘要",
+          "abstract_excerpt": "调解人的角色定位、道德背景及其权威性",
+          "abstract_summary": "作者通过当代农村民间调解考察公平协议如何形成，指出调解者的角色和权威、上门等沟通策略、维持关系的目标，以及提案是否符合当地公认的公平原则，都会影响协议达成。本轮推论是，即使检测资料相同，双方认可的协调者和退款方案仍可能改变协商进程。",
+          "relevance": "substantive",
+          "relevance_reason": "能回应让步是否来自协调者促成的可接受提案。迁移到租赁纠纷，需要中介或调解人获双方认可，且退租方案存在调整空间。熟人关系的延续在一次性租约中可能较弱。该摘要也无法识别检测报告的独立作用。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_hash": "a058144399dd62a154cd7b1c35963da2c6e2865c447693d6c9c37cc995bfe253",
+          "excerpt_sha256": "8ade6b0323c1fbc6cb6d1beb4cfb71d6257b2ad59ad3d14f8df7a57b52c8ef82",
+          "searched_at": "2026-11-27T23:44:28.212124+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287",
+          "abstract_event_id": "exec-559c52ef-e3fb-45e6-9400-1e09f2de1287"
+        }
+      ]
+    },
+    {
+      "title": "拆“穿”的家庭：住居史、再分家与边界之争货币化征迁的伦理政治化",
+      "authors": [
+        "林叶"
+      ],
+      "journal": "社会",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+      "abstract_locator": "第40卷第6期，92–131页。官网第12及44行原题，第30–32行中文摘要",
+      "abstract_excerpt": "判定“前史”的辅助工具",
+      "abstract_summary": "作者以一起城市大家庭征迁纠纷说明，货币补偿触发再分家，既往居住安排和家庭边界又反过来塑造补偿分割。基层征迁代理者借助谈判技术和法律依据判断过往事实，引导成员调整补偿目标。本轮推论是，租赁核验材料也可能经由中介解释，改变协商中的责任认定和要价。",
+      "relevance": "substantive",
+      "relevance_reason": "能回应为什么同一份材料经过中介解释后可能产生不同谈判效果。迁移条件是既往事实存在争议，且中介能够把材料与责任和补偿方案连接。征迁代理者的制度权限与租赁中介的合同位置不同，家庭内部的补偿分割也无法直接说明押金、租金或违约金如何调整。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+      "abstract_hash": "12be1ba09a9a13cc2481c6ac1ef2368ecd673d0c662873b42a4f1063cb71be5f",
+      "excerpt_sha256": "f68b12450ae946eee5388170686b00a710424dc457ebe455f538bf21d5e91347",
+      "searched_at": "2026-11-27T23:44:28.213124+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:4",
+      "metadata_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+      "abstract_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+      "article_id": "A_2feab438ebbdb06fd0fae98c",
+      "provenance": [
+        {
+          "title": "拆“穿”的家庭：住居史、再分家与边界之争货币化征迁的伦理政治化",
+          "authors": [
+            "林叶"
+          ],
+          "journal": "社会",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+          "abstract_locator": "第40卷第6期，92–131页。官网第12及44行原题，第30–32行中文摘要",
+          "abstract_excerpt": "判定“前史”的辅助工具",
+          "abstract_summary": "作者以一起城市大家庭征迁纠纷说明，货币补偿触发再分家，既往居住安排和家庭边界又反过来塑造补偿分割。基层征迁代理者借助谈判技术和法律依据判断过往事实，引导成员调整补偿目标。本轮推论是，租赁核验材料也可能经由中介解释，改变协商中的责任认定和要价。",
+          "relevance": "substantive",
+          "relevance_reason": "能回应为什么同一份材料经过中介解释后可能产生不同谈判效果。迁移条件是既往事实存在争议，且中介能够把材料与责任和补偿方案连接。征迁代理者的制度权限与租赁中介的合同位置不同，家庭内部的补偿分割也无法直接说明押金、租金或违约金如何调整。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/abstract/abstract17787.shtml",
+          "abstract_hash": "12be1ba09a9a13cc2481c6ac1ef2368ecd673d0c662873b42a4f1063cb71be5f",
+          "excerpt_sha256": "f68b12450ae946eee5388170686b00a710424dc457ebe455f538bf21d5e91347",
+          "searched_at": "2026-11-27T23:44:28.213124+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:4",
+          "metadata_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8",
+          "abstract_event_id": "exec-48e5f490-6a49-4cf2-96d6-1d46cc4060a8"
+        }
+      ]
+    },
+    {
+      "title": "Eviction and the Reproduction of Urban Poverty",
+      "authors": [
+        "Matthew Desmond"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2012",
+      "doi": "10.1086/666082",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+      "abstract_locator": "出版商入口重定向至同一 DOI 的摘要页。第118卷第1期，88–133页。Abstract 中的民族志与性别差异段落",
+      "abstract_excerpt": "fieldwork among evicted tenants and their landlords",
+      "abstract_summary": "作者结合行政记录、调查和民族志资料，发现美国内城黑人社区的驱逐相当普遍，女性被驱逐比例显著高于男性。对租客和房东的田野研究揭示了这一差异背后的多重机制。作者据此将驱逐视为贫困再生产的一环。本轮推论是，比较租客如何动员核验证据时，也应观察双方能否承受继续交涉的成本。",
+      "relevance": "substantive",
+      "relevance_reason": "提供住房租赁近邻对照，可用于检查协商结果是否部分取决于租客处境与房东的选择空间。适用于双方都有可辨认的退出成本和替代选项的案例。原研究关注房东驱逐及其性别差异，摘要未识别租客主动退租时检测报告对报价的作用。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+      "abstract_hash": "54d9c954310cd4a45e232d940f4c5a486f22198d63b397e7dc4cf56c5cd3e6af",
+      "excerpt_sha256": "4981ee11613430a927c54860ef65d978dd5031891fd8c5bd7629a2c49ded5ec5",
+      "searched_at": "2026-11-27T23:44:28.213124+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:5",
+      "metadata_event_id": "exec-70106806-a126-48d6-bc71-071813ad2197",
+      "abstract_event_id": "exec-70106806-a126-48d6-bc71-071813ad2197",
+      "article_id": "A_07e33afe61f90ec31b3e440a",
+      "provenance": [
+        {
+          "title": "Eviction and the Reproduction of Urban Poverty",
+          "authors": [
+            "Matthew Desmond"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2012",
+          "doi": "10.1086/666082",
+          "metadata_url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+          "abstract_locator": "出版商入口重定向至同一 DOI 的摘要页。第118卷第1期，88–133页。Abstract 中的民族志与性别差异段落",
+          "abstract_excerpt": "fieldwork among evicted tenants and their landlords",
+          "abstract_summary": "作者结合行政记录、调查和民族志资料，发现美国内城黑人社区的驱逐相当普遍，女性被驱逐比例显著高于男性。对租客和房东的田野研究揭示了这一差异背后的多重机制。作者据此将驱逐视为贫困再生产的一环。本轮推论是，比较租客如何动员核验证据时，也应观察双方能否承受继续交涉的成本。",
+          "relevance": "substantive",
+          "relevance_reason": "提供住房租赁近邻对照，可用于检查协商结果是否部分取决于租客处境与房东的选择空间。适用于双方都有可辨认的退出成本和替代选项的案例。原研究关注房东驱逐及其性别差异，摘要未识别租客主动退租时检测报告对报价的作用。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/full/10.1086/666082?mobileUi=0",
+          "abstract_hash": "54d9c954310cd4a45e232d940f4c5a486f22198d63b397e7dc4cf56c5cd3e6af",
+          "excerpt_sha256": "4981ee11613430a927c54860ef65d978dd5031891fd8c5bd7629a2c49ded5ec5",
+          "searched_at": "2026-11-27T23:44:28.213124+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:5",
+          "metadata_event_id": "exec-70106806-a126-48d6-bc71-071813ad2197",
+          "abstract_event_id": "exec-70106806-a126-48d6-bc71-071813ad2197"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-27T23:42:27.490690+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-27T23:44:28.213124+08:00",
+      "event_sha256": "024ee62b249415ec8a6e5413f90addf7b493ccd092041bb9c522888a46f9e977",
+      "response_sha256": "2e8b87d471f704f5114d84a8117c9387c4b4b8765280cbafc9eaf56a25a6a8d6",
+      "notes": [
+        "2026-11-27 初查。按每条搜索词和每次打开分别计费，共24个原生网页动作，其中12条搜索、12次打开，复开和超时均计入。发现并跟踪9篇九刊论文候选，逐篇打开并完成题录核实5篇，逐篇打开获得摘要5篇，纳入5篇。另打开理论来源1项与现实报道1项。未下载全文。",
+        "议题层实际查询依次包括 `site:journals.sagepub.com American Sociological Review dispute resolution mobilization grievances third party neighbor justice Felstiner Black abstract`、`社会学研究 社会 租赁 纠纷 证据 调解 法律动员 讨价还价 摘要`、`site:shxyj.ajcass.com 调解 纠纷 谈判 法律 证据 摘要 社会学研究 纠纷解决`、`site:society.shu.edu.cn 纠纷 调解 赔偿 谈判 社会 摘要`、`site:journals.sagepub.com American Sociological Review bargaining shadow law dispute settlement third party evidence OR eviction Desmond forced relocation`。首轮查询后即打开第三方介入、城市纠纷与征迁三个优先入口。随后将证据问题改写为赔偿、调解和谈判，找到医疗赔偿与农村调解。",
+        "题名补索使用 `site:shxyj.ajcass.com \"社会阶层与民事纠纷的解决\" 摘要` 和 `site:society.shu.edu.cn \"权力作用下中国城市居民的纠纷卷入与应对\" abstract 作者`。前者回到原刊 PDF 索引，后者找到期次目录和另一原刊摘要入口。渠道选择研究为后续比较协商与诉讼提供线索。",
+        "对象层实际查询为 `site:journals.uchicago.edu American Journal of Sociology disputes third parties mediation grievances landlord housing eviction negotiations Desmond abstract`、`租房 提前退租 押金 租赁纠纷 中介 第三方检测 社会学研究 社会 管理世界 经济研究` 和 `\"Eviction\" landlord \"negotiation\" \"American Sociological Review\" landlord tenant informal eviction Desmond`。AJS 驱逐论文的出版商入口跳转到同域同 DOI 摘要 https://www.journals.uchicago.edu/doi/abs/10.1086/666082?mobileUi=0 ，最终核对为2012年第118卷第1期。其余对象层结果多讨论租金定价、正式驱逐或刊外租客策略。",
+        "对象层打开的[《法治日报》租客采访](https://legalinfo.moj.gov.cn/zhfxfzzx/fzzxyw/202509/t20250908_524818.html)提供可追踪对照。马女士取得报告后同时提出举报和起诉，随后由中介组织三方协商。冯先生取得报告后遇到另一份复检报告和合同责任争议，最终通过判决解决。开放观察可按首次主张、报告提交、对方承认或反驳、外部程序启动、首次改价的顺序记录，同时保留租约条款和中介角色。两案材料尚不足以判断报告本身的作用。",
+        "理论层实际查询为 `Felstiner Abel Sarat Emergence Transformation Disputes Naming Blaming Claiming Wiley Cambridge abstract` 和 `\"The Emergence and Transformation of Disputes\" site:cambridge.org/core/journals/law-and-society-review`。先找到出版商 PDF 索引，再打开 Cambridge Core 的 HTML 入口。原刊为 Law & Society Review 1981年第15卷第3–4期。",
+        "THEORY|The Emergence and Transformation of Disputes: Naming, Blaming, Claiming . . .|https://www.cambridge.org/core/journals/law-and-society-review/article/emergence-and-transformation-of-disputes-naming-blaming-claiming/CC5A29351BCC355B8317FD13CAF29F09|受损经历经由命名、归责和提出要求转化为可观察的争议，当事人、代表和制度会影响不同阶段的目标及处理渠道。适用于可重建识别问题、归责、提出退租要求与对方回应顺序的案例，可用来定位检测改变了哪个环节。识别退款报价变化的原因还需同时观察复检、投诉或起诉预告和合同条款。",
+        "五篇均提供实质机制或对象近邻。九刊内仍缺直接比较第三方检测前后提前退租报价的研究。征迁论文题名沿用原刊网页题名及推荐引文的显示形式。本轮使用用户提供的项目规则，运行环境拒绝了本地技能与项目文件的读取调用。"
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "title": "社会阶层与民事纠纷的解决——转型时期中国的社会分化与法治发展",
+      "reason": "检索回显提供原刊 PDF 首面的提要，另有期刊参考文献可交叉核对卷期。本轮未打开 PDF 或取得已打开的 HTML 摘要页。其主要解释渠道选择，距离报价调整还有一层。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "权力作用下中国城市居民的纠纷卷入与应对",
+      "reason": "原刊单篇入口打开超时。之后找到原刊期次页与检索摘要。研究可为权力资源和正式渠道选择提供竞争解释，本轮优先保留涉及和解提案、赔偿或租赁退出的论文。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "Do the Poor Pay More for Housing? Exploitation, Profit, and Risk in Rental Markets",
+      "reason": "出版商搜索回显提供题录和摘要，本轮未打开单篇页。其主要机制是风险如何进入租金定价，与交涉中核验材料能否改变退出报价的联系较间接。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "No Safe Harbor: Eviction Filing in Public Housing",
+      "reason": "发现出版商页面，未打开核验摘要和完整题录。公共住房正式驱逐申请与本轮的私租提前退出协商存在制度差异。",
+      "batch": "batch_001"
+    }
+  ],
+  "status": "verification_pending",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696"
+}

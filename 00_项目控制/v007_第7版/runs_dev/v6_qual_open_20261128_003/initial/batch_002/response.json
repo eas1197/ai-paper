@@ -1,0 +1,60 @@
+{
+  "papers": [
+    {
+      "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+      "authors": ["Erin L. Kelly", "Phyllis Moen", "Eric Tranby"],
+      "journal": "American Sociological Review",
+      "year": 2011,
+      "doi": "10.1177/0003122411400056",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122411400056",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+      "abstract_locator": "Abstract，网页第31–33行。原刊76卷2期，265–290页。",
+      "abstract_excerpt": "whether schedule control mediates these effects",
+      "abstract_summary": "作者用一家白领组织608名员工在改革前后的纵向资料，考察改革如何改变工作家庭冲突及协调状况，结果指向员工排班控制权的提升这一主要路径。本轮推论是，通勤缩短所释放的时间能否自主使用，取决于组织是否允许员工调整具体时段。",
+      "relevance": "direct",
+      "relevance_reason": "可回应“通勤短了自然就更自由”的反诘：组织可以改变员工决定何时工作的权利。迁移到持续到岗的岗位，需确认改革触及午间离岗或下班时间，且员工能够实际行使选择权。摘要未单独识别午间离岗、同事反应或通勤缩短的作用。"
+    },
+    {
+      "title": "Rules, Relations, and Work",
+      "authors": ["Vincent J. Roscigno", "Carsten Sauer", "Peter Valet"],
+      "journal": "American Journal of Sociology",
+      "year": 2018,
+      "doi": "10.1086/697111",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "abstract_locator": "Abstract，网页第46–48行。原刊123卷6期，1784–1825页。题名后的上标1为脚注。",
+      "abstract_excerpt": "horizontal and vertical social relations",
+      "abstract_summary": "作者分析约2500名处于不同工作环境的德国员工，发现横向和纵向关系与满意度、公平感、组织承诺及工作努力有关。将正式规则纳入分析后，关系仍有解释力。本轮推论是，即使离岗规则一致，同事配合与主管态度也可能造成不同的时间自主体验。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“单位明文允许离岗，规则就足以解释谁能走”的反诘。若任务需要交接、同事代岗或主管协调，横向和纵向关系可作为两条待检验路径。文章的结果指标集中在工作评价和行为，无法据摘要判断关系对离岗自由的方向或大小。"
+    },
+    {
+      "title": "Overwork and the Slow Convergence in the Gender Gap in Wages",
+      "authors": ["Youngjoo Cha", "Kim A. Weeden"],
+      "journal": "American Sociological Review",
+      "year": 2014,
+      "doi": "10.1177/0003122414528936",
+      "metadata_url": "https://journals.sagepub.com/toc/asra/79/3",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+      "abstract_locator": "Abstract，估计长工时对总体工资差距贡献的句子在网页第32行。原刊79卷3期，457–484页。",
+      "abstract_excerpt": "an estimated 10 percent of the total wage gap",
+      "abstract_summary": "作者用1979至2009年美国人口现状调查资料发现，长工时日渐普遍且工资回报提高。男性更常从事长工时工作，这一变化扩大了性别工资差距，并抵消了教育等差距缩小带来的部分收益。本轮推论是，组织对长工时的奖励可能抬高按时离岗的机会成本。",
+      "relevance": "substantive",
+      "relevance_reason": "可部分回应“久留只反映个人偏好”的反诘：长工时存在可观察的经济回报。若目标单位的薪酬或晋升确实奖励延长工时，这条机制可以迁移。研究用工时衡量投入，无法区分现场久留、异地工作和单纯被看见，也无法识别午间离岗规则。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "新型劳动时间控制与虚假自由——外卖骑手的劳动过程研究",
+      "reason": "已核实李胜蓝、江立华发表于《社会学研究》2020年35卷6期。搜索结果展示了中国人民大学社会学视野网转载的摘要，两条转载入口的打开动作均超时。DOI入口跳转至工具无法访问的解析站点，未完成打开核验。"
+    }
+  ],
+  "search_notes": [
+    "本轮入围九刊候选共4篇，发现4篇、核实题录4篇、通过打开动作获得摘要3篇，纳入3篇。计数限进入逐篇核验的去重候选。两条既有题名作排重，本轮未下载全文。",
+    "网页动作实际为25个，包括15条搜索和10次打开，超出24个上限1个。末批计数失误，多执行了一条查找外卖骑手论文 DOI 与摘要的查询，该条查询未产生任何纳入记录。",
+    "议题层先查“社会学研究 在场 加班 工作时间 自主性 职场”和“American Sociological Review schedule control flexibility stigma work family workplace time Kelly”，随后改查“Changing Workplaces to Reduce Work-Family Conflict”“American Journal of Sociology work time office workplace interaction norms time Perlow”“American Sociological Review Overwork Cha Men and Women”及“社会学研究 骑手 劳动时间 2020 时间控制 摘要”。优先尝试打开外卖骑手和在场规范的早期结果后，再扩大至白领改革、同事关系和长工时回报。纳入条目的摘要由 Sage 和芝加哥大学出版社页面直接返回。白领改革的 Sage 摘要入口打开超时，同一 DOI 的另一 Sage 入口成功返回摘要。",
+    "对象层查询“通勤时间 时间分配 就近居住 到岗 员工 经济研究 社会 社会学研究 管理世界”，再以“通勤时间 企业生产效率 孙伟增 期刊 通勤 工作时间”确认近邻。《通勤与偷懒：交通时间影响工作效果的现场追踪研究》刊于《财经研究》，《职住分离、时间挤出与企业生产效率》刊于《经济学（季刊）》，均超出指定九刊。对象层尚缺同一批持续到岗员工在通勤缩短前后的时段用途与离岗权证据。",
+    "理论层查询“passive face time Elsbach Cable abstract organizational norms”，根据结果改用完整题名检索并打开 Sage 出版商页。该文以办公室专业人员的质性研究和实验区分正常工时与工时外的在场信号。",
+    "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/10.1177/0018726709353139|旁观者可在没有互动的情况下由在场时段自发推断员工特质，正常工时被看见容易被解读为可靠，工时外被看见容易被解读为投入。迁移到到岗员工时，需有可被同事或主管观察的在场差异，以及相对共享的常规工时预期。该机制解释印象形成，实际考核后果与离岗选择仍需查证。"
+  ]
+}

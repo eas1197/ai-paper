@@ -1,0 +1,364 @@
+{
+  "config_sha256": "9811ffa2737030b94177e62bdbac2c218de1bad5d5b10613fe606f69edb7e91a",
+  "collection_id": "COL_1ef962ff4fb07b93ae3fb6d5",
+  "engine": "codex_native_v1",
+  "config": {
+    "theme": "中国社会情境下可用公开一手记录研究的社会现象（自主探索）",
+    "target": 5,
+    "topic_search_phase": "initial",
+    "journals": [
+      "中国社会科学",
+      "社会学研究",
+      "社会",
+      "探索与争鸣",
+      "中国青年研究",
+      "经济研究",
+      "管理世界",
+      "American Sociological Review",
+      "American Journal of Sociology"
+    ],
+    "max_batches": 3,
+    "timeout_seconds": 480,
+    "excluded_titles": [],
+    "search_guidance": {
+      "issue": "青年生命历程中的时间自主与关系义务。以短住迁移为观察情境，追踪休息如何被解释、要求和中断。",
+      "why": "同一场所中，有人强调免受评价，有人利用时间做陶艺，也有人因服务落差给出负面评价。对照场所里，保留劳动关系与体验时间自主也能同时发生。解释对象因此落在具体义务和评价关系上。",
+      "object_search": "青年养老院 AND（住客 OR 入住 OR 续住 OR 退宿 OR 义工换宿）；数字游民社区 AND（共居 OR 离开 OR 重返 OR 远程工作）。",
+      "issue_search": "（青年 OR 职场 OR 间隔期）AND（休息正当性 OR 时间自主 OR 照料责任 OR 离职过渡）；（共居 OR 旅居）AND（服务落差 OR 劳动交换 OR 离场）。",
+      "theory_search": "时间自主、生命历程与关联生命、正当化、边界工作、软规训、策略性退却；temporal autonomy、linked lives、accounts、boundary work、strategic retreat。",
+      "specialist_journals": [],
+      "nine_journal_queries": {
+        "中国社会科学": [
+          "社会加速 时间秩序",
+          "青年 劳动伦理 生活方式"
+        ],
+        "社会学研究": [
+          "时间自主 家庭责任",
+          "生命历程 转折 照料"
+        ],
+        "社会": [
+          "边界工作 劳动 家庭",
+          "居住流动 社会关系"
+        ],
+        "探索与争鸣": [
+          "青年养老院 策略性退却",
+          "社会加速 青年 躺平"
+        ],
+        "中国青年研究": [
+          "青年养老院 间隔期",
+          "职场青年 离职 时间自主"
+        ],
+        "经济研究": [
+          "劳动供给 时间配置",
+          "家庭照料 就业退出"
+        ],
+        "管理世界": [
+          "远程办公 工作自主性",
+          "工作家庭边界 职业倦怠"
+        ],
+        "American Sociological Review": [
+          "schedule control work family",
+          "life course linked lives employment transitions"
+        ],
+        "American Journal of Sociology": [
+          "temporal autonomy moral evaluation",
+          "boundary work careers family obligations"
+        ]
+      },
+      "collection_plan": {
+        "unit": "一个住客的一次入住或离场轨迹。标注场所、时间和自述来源。同一次行动的平行报道用于交叉核查，重复转载合并。",
+        "next_queries": [
+          "\"青年养老院\" \"提前退宿\" 住客",
+          "\"青年养老院\" \"回去上班\" 住客",
+          "\"青年养老院\" \"义工换宿\" 住过",
+          "\"青年养老院\" \"续住\" 曼丢 成都 玉溪",
+          "\"NCC社区\" \"离开\" 住客",
+          "\"DN余村\" 入住 退款 离开"
+        ],
+        "inclusion": "仅收可直接打开并定位行动段落的公开采访、公开第一人称原帖或可定位时间戳的公开视频。场所公开规则用于核对费用、服务与门槛。保存URL、版本日期、位置与原发关系。标题、搜索摘要和推广素材不能替代住客经历。",
+        "analysis": "逐案标注入住前工作及照料安排、场所承诺、住中义务与评价对象、所述离场理由、已发生或计划中的后续行动。优先在同一场所比较顺利入住与失望离场，在不同场所比较有酬、无酬及暂时停工。缺项保留未知。",
+        "continuation_threshold": "追加到至少两个可识别青年养老院场所，并找到能核对原定停留与实际离场的公开叙述，以及对家庭或收入解释不利的个案。若关键序列仍然缺失，降格为公开叙述比较或搁置机制命题。"
+      },
+      "candidate_question": "在可识别的青年养老院场所中，住客和经营者在公开材料里如何说明暂时休息的正当性，又如何区分自愿投入、换宿交换和仍须履行的工作或照料义务？"
+    },
+    "run_mode": "dev",
+    "search_action_budget": 24,
+    "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+    "topic_batch_budget": true
+  },
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-28T14:43:03.877981+08:00",
+      "status": "completed",
+      "search_events": 5,
+      "finished_at": "2026-11-28T14:44:38.203272+08:00",
+      "response_sha256": "09ef5719a1ca21a005457a514c442b4e204993a499de696920173f9c15cb586e",
+      "notes": [
+        "截至2026-11-28，用完24个原生网页动作，其中17条搜索词、7次打开。按本答复逐条保留的去重候选计，发现10篇，核实九刊内题录6篇，实际打开并获得可用摘要3篇，距目标差2篇。另有1篇在搜索结果中显示摘要，打开时返回502。未下载全文。",
+        "议题层实际查询包括「site:shxyj.ajcass.com 时间 劳动 家庭 外卖 时间自主 摘要 社会学研究」「site:journals.sagepub.com American Sociological Review schedule control work family Kelly Moen abstract」「Kelly Changing Work Work Family Conflict 2014 PMC abstract」「site:shxyj.ajcass.com 外卖 数字控制 时间 劳动 外卖骑手 社会学研究 摘要」「site:society.shu.edu.cn 照料 工作 家庭 摘要 社会 女性 就业」「劳动秩序 外卖 社会学研究 陈龙 摘要」「照料 社会学研究 女性 就业 家庭 摘要」「家庭 照护 女性就业 社会 期刊 上海大学 摘要」「数字控制 陈龙 site:shxyj.ajcass.com」。排程控制研究获得出版商摘要，数字控制研究获得摘要搜索结果但打开失败，照料分支未完成九刊摘要核验。",
+        "对象及近邻层实际查询包括「中国青年研究 青年养老院 间隔期 离职 躺平 摘要」「探索与争鸣 青年养老院 躺平 社会加速 摘要 中国青年研究 数字游民」「中国青年研究 数字游民 躺平 离职 间隔期 摘要 中国青年研究」「生命时间的多力合成 间隔期 期刊 摘要」「间隔期 中国青年研究 OR 探索与争鸣 青年 摘要」「青年间隔期的异与同 摘要 黄亦宽 郑作彧」。直接命中的青年养老院论文刊于范围外期刊。改查间隔期和数字游牧后定位到《中国青年研究》候选，尚缺可打开的摘要。《探索与争鸣》官网同期提供两篇减速与躺平分型研究的摘要。",
+        "理论层实际查询为「Scott Lyman Accounts 1968 American Sociological Review abstract explanation unanticipated untoward」和「Scott Lyman Accounts 1968 JSTOR 2092239 abstract」。原作题录见 https://pubmed.ncbi.nlm.nih.gov/5644339/ ，该页无摘要。下列命题据安特卫普大学机构库所载研究对原作的明确引述，计为初查理论线索。",
+        "THEORY|Accounts|https://repository.uantwerpen.be/docman/irua/55f6d0/128980_2017_05_12.pdf|当某项行动偏离期待并受到评价时，当事人可能向具体受众说明行动或责任，以维持仍有利害关系的互动。用于短住材料时，需能识别谁提出质疑、质疑涉及哪项义务、谁作出解释，以及受众是否接受。",
+        "SAGE 的摘要入口直接返回原刊摘要，最终卷期由同次工具记录中的 PubMed 题录交叉核对。此次入选条目未使用跳转镜像。预算内未逐一覆盖九刊，也未核验具体场所的入住与离场轨迹。"
+      ],
+      "event_sha256": "b040008af05d2f5e0934e49b18f8fe672f35b79bdcfb2a330acabd614cd55690"
+    },
+    {
+      "batch": "batch_002",
+      "started_at": "2026-11-28T14:44:38.290412+08:00",
+      "status": "completed",
+      "search_events": 5,
+      "finished_at": "2026-11-28T14:45:58.548863+08:00",
+      "response_sha256": "989ca775a7417382a44e7672073be646a10db7aca9868db80b55ae8a1269c66b",
+      "notes": [
+        "截至2026-11-28共用24个原生网页动作，按单条计为15次查询、9次打开。未下载全文。筛出5篇进入逐篇判断，5篇的题名、作者、原刊与年份可核对，其中4篇在九刊内。成功打开并核读1篇目标论文的原摘要，交付1篇，距目标还差1篇。理论资料另计。横向查询未逐一覆盖九刊。",
+        "议题层检索「社会学研究 社会 时间自主 工作 家庭 边界 数字游民 摘要」「American Sociological Review work schedule control flexibility stigma family time autonomy overtime abstract」。随后以《社会》官网域名加「时间 劳动 家庭 边界 照料 青年」找到家庭责任案例并打开摘要。以《社会学研究》官网域名加「时间 工作 家庭 休闲 时间 义务 青年 数字劳动」，再以「从以生产为中心到以生活为中心 社会学研究 摘要 工作 休闲」追查观念变迁论文。用英文题名加「Sage pubmed Kelly Moen」核对时间控制论文，出版商两个入口的打开结果未给出可定位的摘要文本。",
+        "对象层检索「中国青年研究 青年养老院 数字游民 时间 休息 摘要」，用「青年养老院 主要特征 辩证审思 中国青年研究」核对同题论文的实际刊名。再查「青年养老院 义工换宿 数字游民 续住 退宿」「青年养老院 提前退宿 回去上班 住客 数字游民」「数字游民 中国青年研究 共居 流动 摘要」。发现提前退宿的报道线索和数字游民社区论文，随后用「流动中的过渡 距离化 牛天 王从健 中国青年研究 摘要」及「流动中的过渡 数字游民社区」加知网或机构域名追查，核实卷期目录。报道线索仍待打开核对原定停留与实际离场。",
+        "理论层检索「linked lives life course Elder 1998 linked lives abstract publisher」及「Accounts Scott Lyman 1968 excuses justifications American Sociological Review abstract publisher」。前者找到工作与家庭时间控制综述，后者找到行动解释的经典论文。两项均打开了可定位的摘要。",
+        "THEORY|Control over Time: Employers, Workers, and Families Shaping Work Schedules|https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041400|工作和家庭日程由相互依赖的人共同塑造，一人日程变动会传导给关系中的其他人。适用于材料可以追踪雇主、亲属或共同居住者之间的排程依赖及协商过程。",
+        "THEORY|Accounts|https://openurl.ebsco.com/contentitem/doi%3A10.2307/2092239?id=ebsco%3Adoi%3A10.2307%2F2092239&sid=ebsco%3Aplink%3Acrawler|当行动受到质疑，行动者可通过减轻自身责任或论证行为合理来弥合行动与期待之间的落差。分析休息的正当性时，适用于能识别评价者、其期待和当事人回应的材料。"
+      ],
+      "event_sha256": "0c0fadeb46eb8de09b363838e1b675a3310c16ee3fd99b9291475c5acc364dde"
+    },
+    {
+      "batch": "batch_003",
+      "started_at": "2026-11-28T14:45:58.657391+08:00",
+      "status": "completed",
+      "search_events": 7,
+      "finished_at": "2026-11-28T14:47:28.775768+08:00",
+      "response_sha256": "1a1eae10d1d98a5af50f96fe5ff9214e0c084aa8366008b80a08ef99cd2967ea",
+      "notes": [
+        "初查。原生网页动作共24个，其中检索词13条、打开11次，每条查询及每个打开目标各计1个动作。进入逐项筛读的九刊研究候选共6篇，核到题录6篇，成功打开并取得可定位原摘要2篇，最终纳入1篇。理论及新闻线索独立计量。未下载全文。",
+        "议题层首轮检索「社会学研究 数字劳动 时间自主 外卖骑手 时间 社会 期刊」「社会学研究 工作家庭 边界 时间 照料 女性 期刊 摘要」「探索与争鸣 社会加速 休息 时间 青年 中国青年研究 间隔年 离职」。先打开《社会》2024年第44卷第3期目录，核到梁萌《“数字泰勒主义”影响下的外卖平台“计件工资制”研究》及原摘要。该文重点是薪酬制度与劳动意识，休息的道德评价与本轮问题更贴近，选取郑小雪论文。",
+        "议题层随后用「新型劳动时间控制与虚假自由 社会学研究 shxyj」追踪骑手论文，并以准确题名叠加期刊官网或知网域名、DOI及作者名补查。用「中国青年研究 时间嵌入与脱嵌 青年 2021」定位熬夜论文，再以准确题名加作者、知网和万方查找摘要入口。两篇均保留核验缺口。",
+        "议题层据引文改查「时间的过度道德化 郑小雪 中国青年研究 摘要」，再查「当代青年为何 休而不息 郑小雪 摘要」「逆社会时钟 一项时间自主性考察 摘要 郑小雪」「休而不息 郑小雪 摘 要 关系时间」。纳入条目以高校作者页核题录、以实际打开的网页镜像核原刊首页摘要。镜像遮盖了 DOI 的一部分，最后一次打开 DOI 入口也未获可访问页面，因此 DOI 留空。",
+        "对象层查询「中国青年研究 青年养老院 间隔期 数字游民 共居」及「青年养老院 义工换宿 住客 数字游民 共居」。命中南方周末关于青年养老院住客、义工及经营规则的走访线索，本轮未逐案核对入住和离场过程。议题层检索另发现《新闻与写作》的数字游民时间组织研究，超出九刊范围。九刊仅作为准入范围，本轮未逐刊查全。",
+        "THEORY|Accounts|https://openurl.ebsco.com/contentitem/doi%3A10.2307%2F2092239?id=ebsco%3Adoi%3A10.2307%2F2092239&sid=ebsco%3Aplink%3Acrawler|以 Scott Lyman Accounts 1968 American Sociological Review abstract untoward behavior 定位理论，打开入口后由 EBSCO 同站跳转并返回摘要。Scott与Lyman区分辩解与正当化，解释行动受到质疑时人们如何处理行为与期待之间的落差。迁移到短住材料时，须能辨认谁提出或预期质疑、对谁作出说明。判断说明是否获得认可还需要回应证据。"
+      ],
+      "event_sha256": "95e78a8d03501d75cde95f4ebf2b7fcf5c0a27d5e1023e221f938ae82dfe2d37"
+    }
+  ],
+  "observations": [
+    {
+      "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+      "authors": [
+        "Erin L. Kelly",
+        "Phyllis Moen",
+        "J. Michael Oakes",
+        "Wen Fan",
+        "Cassandra Okechukwu",
+        "Kelly D. Davis",
+        "Leslie B. Hammer",
+        "Ellen Ernst Kossek",
+        "Rosalind Berkowitz King",
+        "Ginger C. Hanson",
+        "Frank Mierzwa",
+        "Lynne M. Casper"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2014",
+      "doi": "10.1177/0003122414531435",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_locator": "SAGE 文章页 Abstract，结果段第33行。最终刊于第79卷第3期，485–516页。",
+      "abstract_excerpt": "larger changes in schedule control and supervisor support for family and personal life",
+      "abstract_summary": "作者通过组织内分组随机试验发现，工作安排干预后，员工的排程控制和主管支持提升较明显，工作与家庭冲突及家庭时间不足小幅改善。研究者据此提出可检验推论，短住期间保有劳动关系的人也可能获得时间自主，前提是排程权得到承认。",
+      "relevance": "substantive",
+      "relevance_reason": "回应了仍在工作为何也能获得时间自主的反诘。适用于可以核对谁决定工时、主管是否支持以及谁可以临时召回住客的有酬远程工作个案。摘要中的组织干预无法拆分排程权与主管支持的独立作用，也无法解释换宿、服务落差或退宿。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_hash": "7cc96c495634d5282b0a90e8084e3a0db39dda8e4713acbf70430b8b9342cc74",
+      "excerpt_sha256": "c5ff07a000ab48f81aa55d04a7cb6b7ed3abae9860b30d2cdca1bd58da83987c",
+      "searched_at": "2026-11-28T14:44:38.200999+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3",
+      "abstract_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3"
+    },
+    {
+      "title": "“躺平”：抵御深度异化的另类姿势",
+      "authors": [
+        "马中红"
+      ],
+      "journal": "探索与争鸣",
+      "year": "2021",
+      "doi": null,
+      "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_locator": "官网2021年第12期，54–62页条目，摘要第215行。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+      "abstract_excerpt": "时间体制不断驱赶个体、削弱生命自主性",
+      "abstract_summary": "作者把躺平解释为社会加速和时间体制侵蚀生命自主性之后出现的减速策略，并指出不同群体可能采用不同方式应对加速。研究者据此提出可检验推论，住客若将短住描述为暂时摆脱催促或评价，减速可能成为其说明休息正当性的理由。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应为何休息会被表达为主动选择。迁移条件是住客自述能定位具体时间压力及其来源，并交代短住如何改变这种压力。宏观的社会加速解释无法判定陶艺属于自愿投入还是换宿义务，也无法解释同场所内因服务落差而离场的个案。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_hash": "1a1704249b6c35a4c081e24344f20f1821565b2bc020b0bed58602124239e1df",
+      "excerpt_sha256": "f16d3c9bae370db77505a04ab0612d5d6b99680edeae8baab42cc9916d29b4cb",
+      "searched_at": "2026-11-28T14:44:38.202272+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e"
+    },
+    {
+      "title": "分型与逻辑：“躺平”何以发生——基于默顿社会失范理论视角的分析",
+      "authors": [
+        "王钰文",
+        "王茂福"
+      ],
+      "journal": "探索与争鸣",
+      "year": "2021",
+      "doi": null,
+      "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_locator": "官网2021年第12期，63–73页条目，标题和作者见第221–225行，摘要位于该条目下。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+      "abstract_excerpt": "在微观发生机制、阶层基础、扩散逻辑和个体表现形态等方面均有所不同",
+      "abstract_summary": "作者以默顿的社会失范理论区分抵抗型、仪式型和摇摆型躺平，认为三类在发生机制、阶层基础、传播及表现上存在差异。研究者据此提出可检验推论，相似的短住安排可能容纳不同的职业目标，入住和离场叙述可用于辨认目标是否改变。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应住在同一场所的人为何仍可能按不同逻辑安排休息。迁移需要同一住客交代对职业或成功目标的态度，最好能比较入住与离场时点。该类型框架无法从停留时长推出动机，也无法判定收入、照料或服务体验是否导致提前离场。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_hash": "0f382a1a5e0bf561c3c7d8ad71f620f934fd31999f5f45c64a1fe3ec94763fba",
+      "excerpt_sha256": "2e62312b28b47cf8251bc5ac844119ba1acc5e8b97ea0e861a6d627a5542c047",
+      "searched_at": "2026-11-28T14:44:38.203272+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e"
+    },
+    {
+      "title": "何以为家：分而不散的农民家庭",
+      "authors": [
+        "何奇峰",
+        "周芯宇"
+      ],
+      "journal": "社会",
+      "year": "2024",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_locator": "《社会》官网第44卷第1期，149–177页，中文版摘要段落，第36–38行",
+      "abstract_excerpt": "家庭责任伦理跨越空间对分散在各地的家庭成员产生约束性力量",
+      "abstract_summary": "作者考察云南弥村四个农民家庭，指出分居是应对生计与社会变化的权宜安排。家庭遭遇重大变故时，承担责任的成员会调整个人生活与经济安排，家庭责任因而在空间分离后继续发挥约束作用。本研究据此推论，短住迁移中的照料要求可以沿离场前后的行动序列查证。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应搬离原居地便会解除家庭义务的反诘。迁移条件是公开记录能指认谁提出要求、义务何时被触发，以及住客是否因此改动停留计划。原研究的生计型分居与青年自愿短住动机不同，摘要中的家庭机制解释不到经营者的换宿要求、住客的服务评价或主动选择陶艺的理由。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_hash": "a5a6ed1e62fcf42c5dd6353d2c82638ea07408578b41ff5481c44f71f181ed44",
+      "excerpt_sha256": "a72d8abe37118fce6f653f883ac850eec58ef94a2181ff719fe3f00523382b1f",
+      "searched_at": "2026-11-28T14:45:58.548863+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5",
+      "abstract_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5"
+    },
+    {
+      "title": "时间的过度道德化——一个理解青年时间焦虑的视角",
+      "authors": [
+        "郑小雪"
+      ],
+      "journal": "中国青年研究",
+      "year": "2023",
+      "doi": null,
+      "metadata_url": "https://wenfa.henau.edu.cn/info/1026/2091.htm",
+      "abstract_url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+      "abstract_locator": "原刊2023年第2期第31页，题名和作者下方的「摘 要」段，网页第52–60行",
+      "abstract_excerpt": "过度以时间的道德标准来约束、压迫、剥削自我",
+      "abstract_summary": "作者追问为何自由时间增加后青年仍感到时间焦虑，指出工作伦理和优绩主义等标准可能被用来自我约束。对速度的推崇和对理想时间表的执着，是作者提出的解释。用于本研究的推论是，短住即使腾出了时间，住客仍可能按产出或进度要求评判自己的休息。",
+      "relevance": "substantive",
+      "relevance_reason": "可以回应「住客既然能自主安排时间，为什么还需要为休息辩护」的反诘。若公开叙述出现当事人以效率、履历进度或有用性评价自己的休息，可以用这一机制考察自我评价何时延续到短住场所。仅凭做陶艺或继续远程工作，无法判断行动源于道德压力。照料召回、换宿任务和服务落差导致的提前离场，需要各自的规则与行动序列证据。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+      "abstract_hash": "56acc74cfca0ad02943fbbf958d7ecbd9146052ad727649bbf8322a73f2e9400",
+      "excerpt_sha256": "37121f9c718d430d6db91ae4b42e1dbfdea9a5765c8243d18fa4d8a34a874960",
+      "searched_at": "2026-11-28T14:47:28.775768+08:00",
+      "batch": "batch_003",
+      "observation_id": "batch_003:1",
+      "metadata_event_id": "exec-8f5cd424-b06e-47c7-85e7-3867668d9640",
+      "abstract_event_id": "exec-a552f5b8-f170-4eca-88c8-8365bdbaf746"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "“数字控制”下的劳动秩序——外卖骑手的劳动控制研究",
+      "reason": "人大社会学视野网的搜索结果标明原刊为《社会学研究》2020年第6期，并显示摘要正文。实际打开返回502，缺少可复查的打开结果。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "青年间隔期的异与同：动态类型分异与残缺自主性",
+      "reason": "国家哲学社会科学文献中心卷期目录可核对黄亦宽、郑作彧及《中国青年研究》2025年第5期，精确题名复查仍只得到目录或参考文献。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "行走间隔年：当代中国青年的人生阶段性选择",
+      "reason": "主办机构的2013年总目录可核对敖成兵及《中国青年研究》原刊，本轮未取得摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "时间与青年流动：中国语境下的间隔年研究",
+      "reason": "参考文献显示《中国青年研究》2024年第11期，本轮未核对原刊题录和摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "脱嵌与迷惘：“间隔年”青年的另类内卷实践",
+      "reason": "参考文献显示《中国青年研究》2023年第11期，本轮未核对原刊题录和摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "“何以为家”：流动社会下青年数字游牧民的地方感研究",
+      "reason": "相关研究的参考文献指向《中国青年研究》2023年第8期，本轮未核对原刊题录和摘要。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "“青年养老院”：主要特征、兴起缘由及辩证审思",
+      "reason": "知网期刊目录显示原刊为《北京青年研究》，超出九刊范围。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+      "reason": "题录已核实为 Erin L. Kelly、Phyllis Moen、Eric Tranby 所著，American Sociological Review 2011年第76卷第2期，265–290页，DOI 10.1177/0003122411400056。SAGE 的 /doi/abs 入口打开超时，/doi 入口打开后的可见内容未返回摘要，PubMed 打开也未返回摘要。PMC 搜索结果显示原摘要，预算内未单独打开该记录，因此未纳入。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "流动中的过渡：“距离化”策略下的数字游民社区研究",
+      "reason": "国家哲学社会科学文献中心的卷期目录与参考文献均指向牛天、王从健，《中国青年研究》2025年第9期，56–63页。预算内仅取得目录与引文，缺少已打开的原摘要。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "从“以生产为中心”到“以生活为中心”——中国人工作—生活观念变迁研究（1990—2018）",
+      "reason": "人大社会学视野网的搜索结果显示吴玉玲、孙中伟发表于《社会学研究》2023年第4期，含内容提要，但打开页面超时。提要讨论总体工作、家庭与休闲观念的变迁，较难定位具体义务如何触发时间调整。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "“青年养老院”：主要特征、兴起缘由及辩证审思",
+      "reason": "知网题录显示张艳斌、田一博发表于《北京青年研究》2026年第1期，期刊超出本轮范围。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "当代青年为何“休而不息”——迈向关系时间的解释",
+      "reason": "作者所在高校页面与期刊目录记录一致，均指向《中国青年研究》2025年第3期第32–39页。国家哲学社会科学文献中心的目录入口打开返回403，未取得原摘要。",
+      "batch": "batch_003"
+    },
+    {
+      "title": "逆社会时钟：一项时间自主性考察",
+      "reason": "高校作者页核对到郑小雪、李琼及《中国青年研究》2022年第9期第81–88页。检索返回的转载从正文起始，未核实原摘要。",
+      "batch": "batch_003"
+    },
+    {
+      "title": "熬夜：青年的时间嵌入与脱嵌",
+      "reason": "人大复印报刊资料的检索结果显示原刊题录和摘要片段，但该链接为全文PDF，本轮未打开。期刊公众号转载的媒体入口打开超时。",
+      "batch": "batch_003"
+    },
+    {
+      "title": "新型劳动时间控制与虚假自由——外卖骑手的劳动过程研究",
+      "reason": "交叉题录指向李胜蓝、江立华及《社会学研究》2020年第6期。中国人民大学社会学视野网页的检索结果显示摘要，两次打开均超时。",
+      "batch": "batch_003"
+    }
+  ]
+}

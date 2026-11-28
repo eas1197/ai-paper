@@ -1,0 +1,190 @@
+{
+  "question": "For v6_qual_live_20261127, do public primary records document an English council granting an exception in one final-stage school transport appeal and denying an exception in another, under the same contemporaneous policy and after materially similar initial refusal grounds?",
+  "search_log": [
+    {
+      "council": "Swindon Borough Council",
+      "periods_screened": ["2024/25", "2025/26"],
+      "queries": [
+        "site:lgo.org.uk Swindon \"25-014-325\" school transport",
+        "site:lgo.org.uk/decisions/education/school-transport \"Swindon Borough Council\" \"stage two\" refused walking distance",
+        "site:lgo.org.uk \"Swindon Borough Council\" \"accompanied\" \"25 016 259\"",
+        "site:swindon.gov.uk \"2025/26\" \"home to school\" travel policy SEND"
+      ],
+      "policy_sources": [
+        {
+          "url": "https://www.swindon.gov.uk/download/downloads/id/11348/home_to_school_travel_policy_20242025.pdf",
+          "locator": "Section 2.1, statutory walking distance and ability to travel if accompanied"
+        },
+        {
+          "url": "https://www.swindon.gov.uk/download/downloads/id/11649/home_to_school_travel_policy_20252026.pdf",
+          "locator": "August 2025 edition, sections 2.1 and 7.2.3, eligibility and stage two"
+        }
+      ],
+      "result": "Located a September 2025 grant and a September 2025 refusal. The refusal statement omits the original ground and the panel's substantive reasoning."
+    },
+    {
+      "council": "Surrey County Council",
+      "periods_screened": ["2020 policy cycle through March 2022", "2022 refresh and subsequent cases through 2025/26"],
+      "queries": [
+        "site:lgo.org.uk \"21 010 100\" \"exceptional circumstances\" \"panel\"",
+        "site:lgo.org.uk \"Surrey County Council\" \"stage two\" \"decided to award\" \"school transport\" exceptional",
+        "site:lgo.org.uk/decisions/education/school-transport \"Surrey County Council\" \"exceptional circumstances\" \"allow the appeal\" transport",
+        "site:mycouncil.surreycc.gov.uk 2020 \"Travel Assistance\" \"Annex C\" transport policy 3.4"
+      ],
+      "policy_sources": [
+        {
+          "url": "https://mycouncil.surreycc.gov.uk/ieDecisionDetails.aspx?ID=4047",
+          "locator": "2020 approval, resolutions 3–4"
+        },
+        {
+          "url": "https://mycouncil.surreycc.gov.uk/documents/s65833/Annex%20C%20Home%20to%20School%20College%20Travel%20Policy%20final.pdf",
+          "locator": "Annex C, section 3.4 and section 4 on nearest suitable school, extenuating circumstances and appeals"
+        },
+        {
+          "url": "https://mycouncil.surreycc.gov.uk/mgAi.aspx?ID=38279",
+          "locator": "6 December 2023, item 50/23, purpose of report identifies a policy change implemented in 2022"
+        }
+      ],
+      "result": "Verified the anchor's council refusal. No same-period final-stage grant on similar grounds was verified."
+    },
+    {
+      "council": "Leicestershire County Council",
+      "periods_screened": ["2021/22 case records", "2024/25", "2025/26"],
+      "queries": [
+        "site:lgo.org.uk/decisions/education/school-transport \"Leicestershire County Council\" \"nearest school\" \"stage two\" \"exceptional\"",
+        "site:lgo.org.uk \"Leicestershire County Council\" \"not the nearest\" \"appeal\" \"school transport\"",
+        "site:lgo.org.uk \"24-010-669\" Leicestershire appeal refused nearest",
+        "site:leicestershire.gov.uk school transport policy 2024 2025 leicestershire pdf nearest school appeals"
+      ],
+      "policy_sources": [
+        {
+          "url": "https://www.leicestershire.gov.uk/sites/default/files/2023-09/Mainstream-home-to-school-transport-policy-2024-25.pdf",
+          "locator": "2024/25 policy, Appendix 1 sections 2–3 on grounds and stages of appeal"
+        },
+        {
+          "url": "https://www.leicestershire.gov.uk/sites/default/files/2024-08/Mainstream-home-to-school-transport-policy-2025-26.pdf",
+          "locator": "2025/26 policy, nearest Leicestershire school eligibility illustration"
+        }
+      ],
+      "result": "Verified the 2024/25 grant and a same-school-year application refusal. The latter has no verified final-stage exception ruling."
+    },
+    {
+      "council": "London Borough of Redbridge",
+      "periods_screened": ["2023 Ombudsman records", "2025 panel records"],
+      "queries": [
+        "site:lgo.org.uk \"24 020 173\" \"April 2025\" council",
+        "site:lgo.org.uk \"London Borough of Redbridge\" \"nearest suitable\" \"stage two\" transport appeal"
+      ],
+      "result": "Located a 2025 nearest-suitable-school exception grant and an older nearest-suitable-school appeal lead. Common policy coverage was not established."
+    }
+  ],
+  "verified_pairs": [],
+  "near_misses": [
+    {
+      "council": "Swindon Borough Council",
+      "cases": [
+        {
+          "id": "25-014-325",
+          "url": "https://www.lgo.org.uk/decisions/education/school-transport/25-014-325",
+          "ombudsman_decision_date": "2026-06-29",
+          "council_decision_dates": {
+            "initial": "Application in February 2025. Exact refusal date unpublished.",
+            "stage_one": "July 2025",
+            "stage_two": "September 2025"
+          },
+          "initial_refusal": "Paragraph 28 records a general ineligibility refusal. Paragraphs 30–31 specify the walking-distance and accompaniment grounds documented at review and appeal.",
+          "final_exception": "Paragraph 33 records that the stage-two panel found exceptional circumstances and allowed the appeal by awarding a personal travel budget.",
+          "relief_timing": "The budget was awarded at the September 2025 stage-two decision. Paragraphs 34–37 record the challenge to its suitability and the council's confirmation that the appeals process was complete. Paragraph 27 records a minibus award at the October 2024 stage-two appeal for the earlier year. Both were grants.",
+          "ombudsman_finding": "Not upheld. The Ombudsman found no fault in the 2025 decision-making and expressly excluded the October 2024 decision from investigation. See paragraph 5 and the final decision."
+        },
+        {
+          "id": "25-016-259",
+          "url": "https://www.lgo.org.uk/decisions/education/school-transport/25-016-259",
+          "ombudsman_decision_date": "2026-09-08",
+          "council_decision_dates": {
+            "initial": "May 2025",
+            "stage_one": "Early July 2025",
+            "stage_two": "September 2025, with written reasons sent one week later"
+          },
+          "initial_refusal": "Paragraphs 14–16 document the application refusal and unsuccessful stage-one review. They give no substantive refusal ground.",
+          "final_exception": "Paragraph 18 documents the stage-two refusal and says the council sent reasons. The statement does not reproduce the reasons or establish a separate ruling on exceptional circumstances.",
+          "relief_timing": "Paragraphs 14–19 do not document a relief offer.",
+          "ombudsman_finding": "Not upheld. Paragraph 24 finds no fault in the handling of the appeal."
+        }
+      ],
+      "exclusion": "The 2025/26 SEND policy is period-matched to the Swindon grant. The proposed refusal counterpart does not establish which policy governed that case, whether its original grounds were similar, or whether the panel expressly denied an exception. The October 2024 comparison is grant versus grant."
+    },
+    {
+      "council": "Surrey County Council",
+      "cases": [
+        {
+          "id": "21-010-100",
+          "url": "https://www.lgo.org.uk/decisions/education/school-transport/21-010-100",
+          "ombudsman_decision_date": "2022-03-14",
+          "council_decision_dates": {
+            "initial": "Unpublished",
+            "final_stage": "Unpublished, before 14 March 2022"
+          },
+          "initial_refusal": "Paragraph 6 records refusal because the school attended was not the closest school.",
+          "final_exception": "Paragraphs 8–10 identify the final-stage elected-member panel and record its finding that no exceptional circumstances warranted free transport.",
+          "applicable_policy_evidence": "Paragraphs 12 onward discuss the panel letter's reference to section 3.4. Surrey's 2020 approved Annex C contains section 3.4 on extended rights, alongside section 4 on nearest suitable school and appeals. The statement does not date the council decisions or expressly name the policy edition.",
+          "relief_timing": "Paragraphs 9–10 record consideration of extended rights at the final stage and rejection of that route in the outcome letter. They document no positive offer.",
+          "ombudsman_finding": "Closed after initial enquiries. The Ombudsman identified a mistake in the panel letter and declined to investigate. The council panel made the substantive refusal."
+        }
+      ],
+      "exclusion": "No verified Surrey grant under the same policy period on a similar nearest-school refusal was found. Surrey 23-013-826 concerns walking-route safety and accompaniment, with an Ombudsman finding about delay and communication. https://www.lgo.org.uk/decisions/education/school-transport/23-013-826"
+    },
+    {
+      "council": "Leicestershire County Council",
+      "cases": [
+        {
+          "id": "25-005-688",
+          "url": "https://www.lgo.org.uk/decisions/education/school-transport/25-005-688",
+          "ombudsman_decision_date": "2026-03-09",
+          "council_decision_dates": {
+            "initial": "For September 2024 entry, exact decision date unpublished",
+            "stage_one": "Late February 2025",
+            "stage_two": "Early May 2025"
+          },
+          "applicable_policy_evidence": "Paragraphs 15–18 identify the 2024/25 Mainstream Home to School/College Transport Policy and describe the nearest-school preference rule.",
+          "initial_refusal": "Paragraphs 22–24 record that the applicant had not applied to the nearer school.",
+          "final_exception": "Paragraphs 25–26 record the stage-two grant of free transport on exceptional grounds involving the admissions arrangements.",
+          "relief_timing": "Free transport was awarded at stage two. Paragraph 27 records a subsequent refund from the start of the 2025 summer term, and paragraph 29 places instructions for obtaining the free bus pass in late June 2025.",
+          "ombudsman_finding": "Upheld. Paragraphs 30–32 and 35–37 distinguish the panel's grant from the Ombudsman's findings of fault and the remedy of an apology."
+        },
+        {
+          "id": "24-010-669",
+          "url": "https://www.lgo.org.uk/decisions/education/school-transport/24-010-669",
+          "ombudsman_decision_date": "2024-12-10",
+          "initial_refusal": "Paragraphs 8–11 record an award for the nearest suitable school for September 2024 and refusal for a different, farther school outside the applicable frozen catchment area.",
+          "final_exception": null,
+          "relief_timing": "The award in paragraph 8 was for the original placement before the later application. It does not establish relief on appeal for the preferred school.",
+          "ombudsman_finding": "Closed after initial enquiries. Paragraph 11 addresses the application refusal."
+        }
+      ],
+      "exclusion": "The 2024/25 refusal candidate lacks a documented final-stage decision on an exception. The older nearest-school refusal in 21-002-674, decided by the Ombudsman on 4 May 2022, cannot establish common policy coverage with the May 2025 grant. https://www.lgo.org.uk/decisions/education/school-transport/21-002-674"
+    },
+    {
+      "council": "London Borough of Redbridge",
+      "cases": [
+        {
+          "id": "24-020-173",
+          "url": "https://www.lgo.org.uk/decisions/education/special-educational-needs/24-020-173",
+          "ombudsman_decision_date": "2026-01-26",
+          "initial_refusal": "Paragraph 43 records refusal because the placement was not the nearest suitable school.",
+          "final_exception": "Paragraph 45 records an April 2025 Travel Assistance Panel grant on exceptional grounds. Paragraph 35 describes stage two as a panel review. The case chronology does not expressly number the April hearing.",
+          "relief_timing": "Paragraph 45 says the council communicated the award a few days after the hearing and arranged shared transport from the following week. Paragraph 48 separately dates the start of private transport to July 2025.",
+          "ombudsman_finding": "Upheld in relation to delays in provision and transport. The council panel awarded the transport exception."
+        }
+      ],
+      "exclusion": "The older Redbridge lead 23-000-527 did not establish shared contemporary policy coverage with the April 2025 grant. The grant record also leaves the numbered appeal stage unconfirmed. https://www.lgo.org.uk/decisions/education/school-transport/23-000-527"
+    }
+  ],
+  "evidence_limits": [
+    "Zero pairs met all filters in the public records screened. Search coverage is limited to indexed documents and the council policy materials located.",
+    "The Swindon and Surrey anchor decision statements were available as substantive indexed text from the Ombudsman's site. Direct opens of those two statements timed out. Council policy PDFs and other Ombudsman case pages were opened directly.",
+    "Appeal letters, minutes and the contemporaneous documents sent to appellants were generally unavailable. Unpublished dates, grounds and offers remain unknown. A lack of documented earlier relief cannot establish that no earlier offer was made.",
+    "Ombudsman publication dates date complaint decisions. Eligibility refusal, exception ruling, communication of an offer and start of transport are separate events."
+  ],
+  "suggested_revision": "Record zero verified matched pairs and remove the within-council contrast from the current evidence claim. Retain two separately sourced observations: Swindon's September 2025 stage-two panel granted a personal travel budget after a walking-distance and accompaniment refusal was maintained at review, and Surrey's final-stage panel denied an exception following a nearest-school refusal. For a matched comparison, the highest-priority missing record is the September 2025 Swindon refusal letter or panel minute in 25-016-259, alongside the original refusal and the policy edition applied. Those records would need to establish the refusal grounds, the exception ruling and any relief offered or considered at each stage."
+}

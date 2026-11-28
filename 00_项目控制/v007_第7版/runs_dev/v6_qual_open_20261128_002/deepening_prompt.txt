@@ -1,0 +1,479 @@
+执行原3.x理论对话，依次比较对象、议题、理论三层各文献能支持的主张与证据边界；分别写理论预期、证伪预测、竞争解释、实质知识增量。在租赁情境和另一持续性预付契约之间逐条件映射概念与取证指标，检验是否同一理论问题、何时不能转换。允许论证不足。不得把摘要当全文或强行概括。输出中文 JSON，包含 core_question, specific_question, context, transition_test, literature_dialogue, competing_explanations, knowledge_gain, topic_reasoning（三键 opportunity、question、deepening，各有 reasoning，deepening 另有 change_kind=academic/design_only/unresolved）。
+{
+  "expectation": "若租约事先规定了结算期限，且双方能够核对同一条通知、对其效力有一致理解、其余结算条件均已满足，则押金应更可能在约定期限内结清。S2的退款承诺和S5报道中的转租约定只提供个案参照。关于通知认定与按期结清关系的预期仍待理论推导和比较检验。",
+  "observation": "按包内身份描述可暂列五起不同事件。S3重复展示的同一评论只计一次，S4同一报道转述双方说法仍是一条来源。所附核验结果未保留任何已核证的事件事实。包内叙述中，E1涉及重提后的页面报价，E2涉及退款承诺变化与自报和解到账，E3涉及自报拖延，E4涉及再次通知的效力争议与调解补偿，E5涉及转租条件未满足后的调解结果。这些材料分别指向报价、到账、等待和调解，无法直接比较统一的结算结果。",
+  "initial_explanation": "记录认定解释预期，通知起算日的改变先于报价或应结算日期的改变。合同与损失解释预期，结算差异随适用条款、欠费、房损或可核实的空置损失变化。第三方介入解释预期，在原有事实和证据稳定时，受理或调解改变继续拖延的成本，随后才出现让步。三者是待检验的竞争解释，也可能先后发生。若扣款方案先形成、通知效力异议后出现，还要考虑效力异议是为既定报价辩护的结果。",
+  "challenge": "现有材料没有证据证明任何一组事件的实际损失与退出条件同时相近。E1与E4都有撤回或重提线索，但分别涉及平台申请与续租登记，原合同、流程规则和剩余租期缺乏可比证据。E2与E4都涉及临近到期，但通知条款、费用及实际损失未对齐。E3找到接续人选不能证明已签约、入住或避免空置，E5明确以转租成功为退款条件且转租未成。E1的报价差额、E4的补偿和E5的调解结果也各自无法证明实际损失。当前案例来源偏向投诉、争执和调解，缺少同类顺利结清事件。",
+  "candidate_question": "在公开可追踪的城市住房租赁退出争议中，双方对哪次通知可以用于结算的主张，何时相对于首次结算报价出现，又如何随证据出示或第三方介入而变化？优先用E1和E4追查这一过程。只有补足条件相近的比较材料和约定结算期限后，才恢复通知认定是否影响按期结清的问题。",
+  "search_focus": "先查通知撤回、重提及续租登记规则，核对合同版本、原始通知与确认时间戳、历次报价、接续租约与空置日期、欠费和房损凭证、介入时间及到账凭证。再找同类合同、同一出租主体类型和相近剩余租期下的按时结清、延迟结清、未结清及介入后未让步案例。学术初查分别追问可核验记录如何进入契约执行、损失如何进入结算、第三方介入如何改变议价，并为每种解释找一项能与另外两种区分的观察。",
+  "conceptualization": "以一次独立租约退出为单位。分开编码通知发出、送达、双方可查验、对方承认、依规则可起算，以及搬离、交钥匙、租约终止和实际结算。共同可查验与获得承认分别测量，承认须有独立于退款结果的证据。将合同约定和应付费用、实际损失、报价及净到账分别记录。接续人选、签约、付款和入住各有独立指标。以经证据支持的约定结算日与实际结清日判断是否超期，缺约定期限时仅报告交房至结算的时长。页面报价、名义退款、另付补偿和净到账分别记录，未见到账凭据时注明证据状态。",
+  "abstract_relation": "在持续性契约退出时，一方已经交付的款项仍由另一方持有，结算取决于可识别的退出触发条件及可主张的扣减项目。待检验关系是，在适用规则和可核损失可比时，退出记录的可查验性及其获得承认的情况，是否影响款项结清的时间。实际损失和第三方介入分别对应扣减依据与议价条件，均可独立变化。",
+  "specific_context": "限于租客主动提出退出且已交押金的城市住房租赁。平台申请与私下通知、租期中途退出与临近到期提前搬离分层。E1与E4用于定位通知处理过程，E2与E3提供退款承诺或拖延的对照线索，E5用于检查明确转租条件下的适用边界。被报道的调解协议与实际履行分别记录。",
+  "context_conversion": "换到其他持续性契约时，保持四个关系条件：退出方已预先交付款项，对方在退出后仍掌握结算，存在可独立查验且可能被争议的退出触发条件，款项结清具有可观察的时间和结果。例如换到预付服务解约，可用解约申请回执和生效日映射通知记录，以未消费余额和约定可扣费用映射结算项目。住房交钥匙、空置和转租属于租赁场域的具体变量，应按新场域规则重新操作化。若申请即时自动生效且结算方无确认裁量，可将该场域作为检验适用边界的对照。",
+  "assessment": "退回原机制问题的正式检验，保留收窄后的争议过程问题进入学术初查和补证。原包在结构上已区分事件、概念、指标、解释和情境，证据上仍有两处混用风险：把通知被承认、依规则有效和结算成功互相代用，以及把报价或和解金额当作实际损失。五起材料可用于提出命题和定位证据缺口。待同类事件的退出条款、实际损失和结清结果可独立核对，并能区分通知异议、报价变化和第三方介入的先后，再评估是否恢复原问题。",
+  "research_actor": "codex-reality",
+  "critical_actor": "01a2204c-730e-7470-9031-328f87d595b1",
+  "critical_receipt": {
+    "response_sha256": "95a7e3b7d6d8f96b8f94071373fbaefdc8eb0df7f981458b6bfc4875d357e677",
+    "sha256": "2948387ae3526969e7bc604fcf33abe0268c467a92f023ffd6a6a955fde44e5a",
+    "events": "critical_events.jsonl"
+  }
+}
+
+{
+  "theory_search": "naming blaming claiming dispute transformation proof negotiation",
+  "issue": "持续性契约退出中的通知认定、责任主张和结算",
+  "specialist_journals": [],
+  "why": "分开通知证据、对方承认、结算报价与实际付款，比较第三方介入和实际损失等解释",
+  "object_search": "租赁退出 退租通知 押金 结算 争议",
+  "issue_search": "争议转化 契约退出 证据承认 非正式协商 责任"
+}
+
+{
+  "schema_version": 2,
+  "mode": "abstract_only",
+  "engine": "codex_native_v1",
+  "collection_id": "COL_abd7fc382d889b2582da1b96",
+  "collection_sha256": "714698bc6a464d75865a9f6f809d5a2a1ae1ba574f82b6754e1464a2da17129e",
+  "theme": "开放观察，研究主题待定",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ],
+  "verified_rows": 5,
+  "excerpt_visible_count": 4,
+  "rows": [
+    {
+      "title": "农村民间纠纷调解中的公平建构与公平逻辑",
+      "authors": [
+        "王汉生",
+        "王迪"
+      ],
+      "journal": "社会",
+      "year": "2012",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_locator": "第32卷第2期，171–198页，官网中文摘要",
+      "abstract_excerpt": "符合农村社会人们所普遍认可的公平提案",
+      "abstract_summary": "作者比较当代农村不同情境下的纠纷调解，指出调解人的角色及权威、上门调解等策略、维系关系的目标和双方认可的公平提案，共同影响协议如何达成。本轮推论是，退租报价的变化也可能来自调解者重述何为公平，值得与新证据出示后的变化比较。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应报价变化是否来自调解压力或公平标准变化。迁移条件是双方承认调解者具有介入资格，且记录能区分其提案与当事人对通知的认可。乡村熟人关系的约束力需另行核实，协议达成后的付款亦须另证。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_hash": "b4b7feb43c327ecd771205b0e7af3d577055e204c51487ad2bd79886ff4ec14d",
+      "excerpt_sha256": "3ac680608fec770e62b39da0314f60e6658f04a307f2af9f19e4e4db7720ae5a",
+      "searched_at": "2026-11-28T11:59:32.142932+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1",
+      "abstract_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1",
+      "article_id": "A_db445605d6ec0163d1bb892d",
+      "provenance": [
+        {
+          "title": "农村民间纠纷调解中的公平建构与公平逻辑",
+          "authors": [
+            "王汉生",
+            "王迪"
+          ],
+          "journal": "社会",
+          "year": "2012",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_locator": "第32卷第2期，171–198页，官网中文摘要",
+          "abstract_excerpt": "符合农村社会人们所普遍认可的公平提案",
+          "abstract_summary": "作者比较当代农村不同情境下的纠纷调解，指出调解人的角色及权威、上门调解等策略、维系关系的目标和双方认可的公平提案，共同影响协议如何达成。本轮推论是，退租报价的变化也可能来自调解者重述何为公平，值得与新证据出示后的变化比较。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应报价变化是否来自调解压力或公平标准变化。迁移条件是双方承认调解者具有介入资格，且记录能区分其提案与当事人对通知的认可。乡村熟人关系的约束力需另行核实，协议达成后的付款亦须另证。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_hash": "b4b7feb43c327ecd771205b0e7af3d577055e204c51487ad2bd79886ff4ec14d",
+          "excerpt_sha256": "3ac680608fec770e62b39da0314f60e6658f04a307f2af9f19e4e4db7720ae5a",
+          "searched_at": "2026-11-28T11:59:32.142932+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1",
+          "abstract_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1"
+        }
+      ],
+      "evidence_id": "E_7cbe9ff4a143cf9ac5d7a283",
+      "excerpt_visible_in_logged_result": true,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "“甩干”机制：中国乡村司法的运行逻辑",
+      "authors": [
+        "刘正强"
+      ],
+      "journal": "社会",
+      "year": "2014",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+      "abstract_locator": "第34卷第5期，147–173页，官网摘要",
+      "abstract_excerpt": "实现对案件事实的重新建构",
+      "abstract_summary": "作者以一起乡村诉讼解释基层法院如何依照形式理性筛除道德、习惯等因素，重新构造可供裁决的事实，并把这一过程联系到民事诉讼的受理和审理制度。本轮推论是，可比较退租沟通进入正式程序前后的叙述，观察哪次通知被保留为计算责任的事实。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应同一份通知为何到正式程序才被援引，机制在于受理和审理规则对事实的筛选。迁移需要保留协商记录及后续受理、裁决文本。该机制对私下承认和首次报价时点的解释有限。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+      "abstract_hash": "5973e82d49683e4f40efc92c160f01f004738cdf40e8dc71cff234bf1f8ba1eb",
+      "excerpt_sha256": "60c801a54c8b103520fa4291b6b0477d8f261736c10de3ba7e606b2c8ad81a22",
+      "searched_at": "2026-11-28T11:59:32.142932+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "article_id": "A_4387dc1012d8bde300fae3b1",
+      "provenance": [
+        {
+          "title": "“甩干”机制：中国乡村司法的运行逻辑",
+          "authors": [
+            "刘正强"
+          ],
+          "journal": "社会",
+          "year": "2014",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+          "abstract_locator": "第34卷第5期，147–173页，官网摘要",
+          "abstract_excerpt": "实现对案件事实的重新建构",
+          "abstract_summary": "作者以一起乡村诉讼解释基层法院如何依照形式理性筛除道德、习惯等因素，重新构造可供裁决的事实，并把这一过程联系到民事诉讼的受理和审理制度。本轮推论是，可比较退租沟通进入正式程序前后的叙述，观察哪次通知被保留为计算责任的事实。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应同一份通知为何到正式程序才被援引，机制在于受理和审理规则对事实的筛选。迁移需要保留协商记录及后续受理、裁决文本。该机制对私下承认和首次报价时点的解释有限。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/abstract/abstract7008.shtml",
+          "abstract_hash": "5973e82d49683e4f40efc92c160f01f004738cdf40e8dc71cff234bf1f8ba1eb",
+          "excerpt_sha256": "60c801a54c8b103520fa4291b6b0477d8f261736c10de3ba7e606b2c8ad81a22",
+          "searched_at": "2026-11-28T11:59:32.142932+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+          "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5"
+        }
+      ],
+      "evidence_id": "E_b248e8e7d14421f699b9309c",
+      "excerpt_visible_in_logged_result": true,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "争夺地带：从基层政府化解劳资纠纷看社会转型",
+      "authors": [
+        "张永宏"
+      ],
+      "journal": "社会",
+      "year": "2009",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract6625.shtml",
+      "abstract_locator": "第29卷第1期，89–108页，论文页摘要；卷期页码见题录网址的相关文章",
+      "abstract_excerpt": "基层政府的组织环境",
+      "abstract_summary": "作者以华南一处街道化解劳资纠纷的田野材料考察劳动合同制度实施，认为地方政府的组织环境、街道与社区关系的变化及产业转型相互作用，制约制度执行。本轮推论是，可把介入者的权限和组织约束纳入比较，检查责任主张的变化是否与其工作安排有关。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应责任主张的改变为何恰好发生在第三方介入后，提供组织环境这一竞争解释。迁移需要确认介入者的权限和职责，并有介入前后的材料。摘要未报告逐次证据出示、责任承认或实际支付的时序。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract6625.shtml",
+      "abstract_hash": "e1395486ceebf641210c1cdb610db6754b1f5fd02567d65446bcfc6ae263dc93",
+      "excerpt_sha256": "27ab1d45d48a9c25b79181d80332c6384891744fd10f892b015876fe31a19cc6",
+      "searched_at": "2026-11-28T11:59:32.143923+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1",
+      "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "article_id": "A_48a2c729c13a11e6fa505eae",
+      "provenance": [
+        {
+          "title": "争夺地带：从基层政府化解劳资纠纷看社会转型",
+          "authors": [
+            "张永宏"
+          ],
+          "journal": "社会",
+          "year": "2009",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2012/V32/I2/171",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract6625.shtml",
+          "abstract_locator": "第29卷第1期，89–108页，论文页摘要；卷期页码见题录网址的相关文章",
+          "abstract_excerpt": "基层政府的组织环境",
+          "abstract_summary": "作者以华南一处街道化解劳资纠纷的田野材料考察劳动合同制度实施，认为地方政府的组织环境、街道与社区关系的变化及产业转型相互作用，制约制度执行。本轮推论是，可把介入者的权限和组织约束纳入比较，检查责任主张的变化是否与其工作安排有关。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应责任主张的改变为何恰好发生在第三方介入后，提供组织环境这一竞争解释。迁移需要确认介入者的权限和职责，并有介入前后的材料。摘要未报告逐次证据出示、责任承认或实际支付的时序。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/abstract/abstract6625.shtml",
+          "abstract_hash": "e1395486ceebf641210c1cdb610db6754b1f5fd02567d65446bcfc6ae263dc93",
+          "excerpt_sha256": "27ab1d45d48a9c25b79181d80332c6384891744fd10f892b015876fe31a19cc6",
+          "searched_at": "2026-11-28T11:59:32.143923+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-34db75a2-3abe-4dbf-9b36-d4e35f7d89c1",
+          "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5"
+        }
+      ],
+      "evidence_id": "E_d16534bd6cb8ae75c363097f",
+      "excerpt_visible_in_logged_result": true,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "自由心证制度的本土实践:以我国西南地区基层环境侵权案件为分析对象",
+      "authors": [
+        "林浩舟"
+      ],
+      "journal": "社会",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+      "abstract_locator": "第40卷第3期，148–172页，官网摘要",
+      "abstract_excerpt": "在“自由心证”的过程中“做文章”是一项不得已的实践策略",
+      "abstract_summary": "作者以西南基层法院的环境侵权审理为例，认为法官在依程序认定事实的同时还面临服务地方大局的要求，因而在自由心证过程中采取策略。本轮推论是，可检查租赁争议中的第三方是否因承担其他任务，对同类通知材料采用了不同的认定标准。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应证据出示后事实认定变化能否完全归因于证明力变化。迁移要求第三方具有认定事实的裁量权，并能从文书或记录观察组织要求。环境侵权审判的制度压力无法直接推及私下协商，也不足以推断报价或付款。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+      "abstract_hash": "e97f7809f7429aea015e69dfc59980365f3628a70ac3aaf7e059015a8383fe60",
+      "excerpt_sha256": "1df5060edca75e109b8b8c9206dfafa7c825c5f49dea9649eab02d2557718d14",
+      "searched_at": "2026-11-28T11:59:32.143923+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:4",
+      "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "article_id": "A_d5cb54b782d0fbceb9810bcd",
+      "provenance": [
+        {
+          "title": "自由心证制度的本土实践:以我国西南地区基层环境侵权案件为分析对象",
+          "authors": [
+            "林浩舟"
+          ],
+          "journal": "社会",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+          "abstract_locator": "第40卷第3期，148–172页，官网摘要",
+          "abstract_excerpt": "在“自由心证”的过程中“做文章”是一项不得已的实践策略",
+          "abstract_summary": "作者以西南基层法院的环境侵权审理为例，认为法官在依程序认定事实的同时还面临服务地方大局的要求，因而在自由心证过程中采取策略。本轮推论是，可检查租赁争议中的第三方是否因承担其他任务，对同类通知材料采用了不同的认定标准。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应证据出示后事实认定变化能否完全归因于证明力变化。迁移要求第三方具有认定事实的裁量权，并能从文书或记录观察组织要求。环境侵权审判的制度压力无法直接推及私下协商，也不足以推断报价或付款。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/Y2020/V40/I3/148",
+          "abstract_hash": "e97f7809f7429aea015e69dfc59980365f3628a70ac3aaf7e059015a8383fe60",
+          "excerpt_sha256": "1df5060edca75e109b8b8c9206dfafa7c825c5f49dea9649eab02d2557718d14",
+          "searched_at": "2026-11-28T11:59:32.143923+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:4",
+          "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+          "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5"
+        }
+      ],
+      "evidence_id": "E_7bb6b6c257469a2337d2b795",
+      "excerpt_visible_in_logged_result": true,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "Unpolicing the Urban Poor: Consequences of Third-Party Policing for Inner-City Women",
+      "authors": [
+        "Matthew Desmond",
+        "Nicol Valdez"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2013",
+      "doi": "10.1177/0003122412470829",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+      "abstract_locator": "第78卷第1期，117–141页，SAGE 的 Abstract；2012年先行上线，2013年编入卷期",
+      "abstract_excerpt": "most property owners abated this “nuisance” by evicting battered women",
+      "abstract_summary": "作者分析密尔沃基两年间的全部滋扰处罚通知，发现将租客行为的责任施加给房东后，多数涉家暴通知的房东以驱逐受虐女性应对，房东也采取措施劝阻报警。本轮推论是，有制裁权的第三方可能通过改变房东面临的成本推动租赁退出。",
+      "relevance": "substantive",
+      "relevance_reason": "这是租赁退出的对象近邻，可回应第三方介入是否通过制裁改变房东激励。迁移条件是第三方能可信地施加成本，且介入时间可查。文中通知是公共执法通知，不能据此推断租客退租通知何时获承认、押金如何报价或是否结清。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+      "abstract_hash": "9580ba1d3465943b94244acf52f6dbf21f151a61c599c445d447040528826ea0",
+      "excerpt_sha256": "a3abceb8db5a52d636f5edcf028623b2fe54ed74f5e46911c183d286bf7fe7bc",
+      "searched_at": "2026-11-28T11:59:32.143923+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:5",
+      "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+      "article_id": "A_64f633fea9eee126672f23a9",
+      "provenance": [
+        {
+          "title": "Unpolicing the Urban Poor: Consequences of Third-Party Policing for Inner-City Women",
+          "authors": [
+            "Matthew Desmond",
+            "Nicol Valdez"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2013",
+          "doi": "10.1177/0003122412470829",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+          "abstract_locator": "第78卷第1期，117–141页，SAGE 的 Abstract；2012年先行上线，2013年编入卷期",
+          "abstract_excerpt": "most property owners abated this “nuisance” by evicting battered women",
+          "abstract_summary": "作者分析密尔沃基两年间的全部滋扰处罚通知，发现将租客行为的责任施加给房东后，多数涉家暴通知的房东以驱逐受虐女性应对，房东也采取措施劝阻报警。本轮推论是，有制裁权的第三方可能通过改变房东面临的成本推动租赁退出。",
+          "relevance": "substantive",
+          "relevance_reason": "这是租赁退出的对象近邻，可回应第三方介入是否通过制裁改变房东激励。迁移条件是第三方能可信地施加成本，且介入时间可查。文中通知是公共执法通知，不能据此推断租客退租通知何时获承认、押金如何报价或是否结清。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122412470829",
+          "abstract_hash": "9580ba1d3465943b94244acf52f6dbf21f151a61c599c445d447040528826ea0",
+          "excerpt_sha256": "a3abceb8db5a52d636f5edcf028623b2fe54ed74f5e46911c183d286bf7fe7bc",
+          "searched_at": "2026-11-28T11:59:32.143923+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:5",
+          "metadata_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5",
+          "abstract_event_id": "exec-91c4c1a4-f027-4b4f-b421-4e79e45096f5"
+        }
+      ],
+      "evidence_id": "E_96e8f59a532ae859426c915a",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    }
+  ],
+  "conflicts": [],
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696"
+}
+
+[
+  {
+    "title": "The Emergence and Transformation of Disputes: Naming, Blaming, Claiming . . .",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CC5A29351BCC355B8317FD13CAF29F09/S0023921600032400a.pdf/the-emergence-and-transformation-of-disputes-naming-blaming-claiming.pdf",
+    "claim": "Felstiner、Abel 与 Sarat（1981）认为，受损经历被识别、归责和提出救济要求是可中断、可变化的过程，正式和非正式机构都只接触其中一部分。应用于E1和E4时，须有带时间的往来材料，才能分别定位通知、对方承认、责任主张和索求救济，并比较首次报价前后；实际付款需独立凭据。",
+    "event_id": "exec-0a6ca778-9465-4869-9515-d251511c27d1"
+  }
+]
+
+{
+  "events": [
+    {
+      "identity": "E1，平台租约退出，取消后重提",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S1",
+          "statement": "租客称先发起转租，后申请退租，为再尝试转租而取消退租，重提时发现计时重置且页面显示多扣约半个月房租。",
+          "use": "当事人自述，定位原申请、状态变化和报价差额",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "投诉页面记录了商家回复和之后的自动完成状态，最终实际扣款与退款情况未知。",
+          "use": "核对投诉页面状态，结算结果按缺失处理",
+          "key": true,
+          "status": "unverified"
+        }
+      ],
+      "critical_gaps": [
+        "租客称先发起转租，后申请退租，为再尝试转租而取消退租，重提时发现计时重置且页面显示多扣约半个月房租。",
+        "投诉页面记录了商家回复和之后的自动完成状态，最终实际扣款与退款情况未知。"
+      ]
+    },
+    {
+      "identity": "E2，临近租期结束交房，随后追索押金",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S2",
+          "statement": "租客称在租约结束前约两周交还住房且未要求退还剩余租金，对方先承诺退款，后以提前离开为由提出违约扣款。",
+          "use": "当事人自述，区分实际搬离、承诺结算和后续扣款主张",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "租客称多次提交立案材料后进入司法程序，随后收到和解申请，并收到押金和有关费用。",
+          "use": "定位交涉过程和自报到账，司法介入的作用待检验",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "租客称在租约结束前约两周交还住房且未要求退还剩余租金，对方先承诺退款，后以提前离开为由提出违约扣款。",
+        "租客称多次提交立案材料后进入司法程序，随后收到和解申请，并收到押金和有关费用。"
+      ]
+    },
+    {
+      "identity": "E3，先找到接续租客，后追讨押金",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S3",
+          "statement": "评论者称提前找好了接续租客，押金仍拖了约三四个月，发生争执后对方才肯退。",
+          "use": "当事人自述，用于检查找到接续人选是否足以推动及时结算。实际承租与到账待核",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "评论者称提前找好了接续租客，押金仍拖了约三四个月，发生争执后对方才肯退。"
+      ]
+    },
+    {
+      "identity": "E4，撤回搬离意向后再次通知，社区调解",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S4",
+          "statement": "报道转述租客先表示搬离、再表示续住、最后再次通知搬离。租客主张再次通知仍满足合同期限，出租方以已登记续租为由要求转租或扣款。",
+          "use": "双方法各自立场由同一媒体转述，用于比较何种通知被承认",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S4",
+          "statement": "报道记载调解结果为全额退押金，同时租客另付一笔补偿。",
+          "use": "转述结算结果，区分名义退还和净收回",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "报道转述租客先表示搬离、再表示续住、最后再次通知搬离。租客主张再次通知仍满足合同期限，出租方以已登记续租为由要求转租或扣款。",
+        "报道记载调解结果为全额退押金，同时租客另付一笔补偿。"
+      ]
+    },
+    {
+      "identity": "E5，约定转租成功才退押金，最终未转成",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S5",
+          "statement": "报道记载双方约定转租成功后退押金，转租未成，法院调解结果为双方无需再向对方支付或赔偿。",
+          "use": "报道转述，作为预先明确结算条件的对照",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "报道记载双方约定转租成功后退押金，转租未成，法院调解结果为双方无需再向对方支付或赔偿。"
+      ]
+    }
+  ],
+  "event_count": 5,
+  "sensitivity": "正文省略姓名、账号、地址、投诉编号和可识别截图。为满足复核要求保留公开链接，链接仍可回溯发帖者，材料属于去标识而非匿名化。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "v6_qual_open_20261128_002",
+  "input_sha256": "1d3deee6bf412d33c8f816caaffd296fc4dd3cc0ab99931fa46150fb779d9a9d",
+  "exchange_sha256": null,
+  "reality_sha256": "08671e47ad04e8afbf9d22e9c47cede9d22a686b9c19929e242e0adfb1b2d8bd",
+  "formal_eligible": false
+}
+

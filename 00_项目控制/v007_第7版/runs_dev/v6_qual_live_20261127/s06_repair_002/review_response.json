@@ -1,0 +1,57 @@
+{
+  "outcome": "depth",
+  "academic_value": "revise",
+  "question": "在同一英格兰地方政府、同一适用政策期且初拒理由实质相近的学校交通最终申诉中，小组如何依据家庭实际通学条件认定例外？哪些裁决前或审议中的记录能够证明，某项当时获授权且实际可用的援助影响了例外认定？",
+  "reason": "第二次修补后的独立复核确认了家长亲述中的交通援助获准、申诉受阻和交通安排变更，但核实配对仍为零。斯温登两案已满足同一地方政府和最终申诉结果不同两项条件，适用政策期和初拒理由的可比性仍未建立。研究问题具有学术价值，因为它追问家庭实际通学困难如何进入地方政府的例外判断，以及可提供的援助是否影响该判断。现有证据可描述家庭经历与个别裁决，尚不足以解释相近案件为何出现不同结果，也无法判断援助可用性是否影响例外认定。",
+  "verified_pairs": [],
+  "exact_remaining_gaps": [
+    {
+      "候选": "斯温登 25-014-325／25-016-259，以及斯温登家长访谈",
+      "缺口": "两案均在2025年9月作出第二阶段裁决，一案以例外理由授予个人交通预算，另一案驳回。需要两案初拒通知或同期案卷来核对实质理由和实际援引的政策版本，并需要驳回案的裁决信或小组纪要核实其如何处理例外。两份官方裁决直开超时，本轮以准予案官方索引和驳回案裁决转载核对。家长访谈记录了初拒及申诉受阻，未报道该家庭的最终申诉裁决。报道中其他家庭获准的汇总也缺少可配对的个案理由、日期和政策依据。",
+      "来源定位": [
+        "[准予案官方裁决](https://www.lgo.org.uk/decisions/education/school-transport/25-014-325)",
+        "[驳回案裁决转载](https://www.accountabilityindex.uk/sources/lgo/decisions/lgo-25-016-259-swindon-borough-council/)",
+        "[斯温登2025年8月版政策，第7.2节](https://www.swindon.gov.uk/download/downloads/id/11649/home_to_school_travel_policy_20252026.pdf)",
+        "[斯温登家长访谈及申请时间线](https://swindonlink.com/education/send-transport-crisis/)"
+      ]
+    },
+    {
+      "候选": "肯特家长亲述／肯特 23-019-374",
+      "缺口": "家长在2024年1月确认主管机关是肯特郡议会，并报告申诉获准、获配每日出租车。仍缺初拒理由、实际适用政策、申诉是否到达最终阶段及小组认定依据。官方反向候选记录了资助被拒及最近合适学校的理由，但尚无材料将家长获准案与该理由及同一政策版本对应。监察专员后来对其中一名孩子的程序认定也不能补成原申诉小组的准予裁决。",
+      "来源定位": [
+        "[肯特家长原帖，2024年1月27日](https://www.mumsnet.com/talk/special_educational_needs/4994748-sen-school-transport-we-won-appeal-but)",
+        "[肯特监察专员裁决，第1、17至18段](https://www.lgo.org.uk/decisions/education/school-transport/23-019-374)"
+      ]
+    },
+    {
+      "候选": "莱斯特郡、萨里、雷德布里奇和斯塔福德郡既有候选",
+      "缺口": "莱斯特郡24-010-669仍缺适用政策条款、学区条件在初拒中的作用及最终申诉裁决。萨里21-010-100仍缺个案适用政策期及同政策期、初拒理由相近的最终准予案。雷德布里奇仍缺24-020-173的最终阶段证明、23-000-527的最终例外驳回记录及两案共同适用政策的依据。斯塔福德郡25-012-198提及同一家庭另一名孩子曾获援助，仍缺该孩子的初拒理由、政策期、最终申诉阶段及例外准予理由。",
+      "来源定位": [
+        "[莱斯特郡准予案](https://www.lgo.org.uk/decisions/education/school-transport/25-005-688)",
+        "[莱斯特郡另一案](https://www.lgo.org.uk/decisions/education/school-transport/24-010-669)",
+        "[萨里裁决](https://www.lgo.org.uk/decisions/education/school-transport/21-010-100)",
+        "[雷德布里奇准予线索](https://www.lgo.org.uk/decisions/education/special-educational-needs/24-020-173)",
+        "[雷德布里奇另一案](https://www.lgo.org.uk/decisions/education/school-transport/23-000-527)",
+        "[斯塔福德郡裁决](https://www.lgo.org.uk/decisions/education/school-transport/25-012-198)"
+      ]
+    },
+    {
+      "候选": "其他公开亲历线索",
+      "缺口": "步行路线安全帖只记录拟申诉，缺地方政府身份及最终裁决。单独乘车恢复案缺主管机关、政策和交通申诉裁决日期，争议涉及已获援助的乘车方式。出租车恢复帖缺主管机关及正式最终申诉记录。Cerebra新增线索有家长及经办人陈述，能追踪陪同步行理由及第二次申诉获准，但缺主管机关身份、适用政策、正式阶段记录及可配对的最终驳回案。",
+      "来源定位": [
+        "[步行路线安全申诉原帖](https://www.mumsnet.com/talk/am_i_being_unreasonable/4853903-to-ask-if-anyone-else-has-won-a-school-transport-appeal)",
+        "[单独乘车申诉自述](https://supportsendkids.org/question/1767710346523)",
+        "[出租车恢复更新](https://www.reddit.com/r/LegalAdviceUK/comments/1pko1es/update_council_are_giving_me_the_school_taxi_back/)",
+        "[Cerebra经办人及家长陈述](https://cerebra.org.uk/latest-news/helping-rajesh-get-to-school-safely/)"
+      ]
+    },
+    {
+      "候选": "援助可用性影响例外认定的机制",
+      "缺口": "需要可比两案的同期听证材料、纪要或裁决理由，明确何时提出哪项援助、谁有权批准、审议时能否为该家庭落实，以及小组如何把援助的可用性纳入准驳判断。还需核对家庭照护与陪同能力、路线安全及提交证据差异是否足以解释不同结果。斯温登准予案的公开记录能确认预算获授及后来未领取，仍缺小组在例外认定时如何使用该选项的证据。",
+      "来源定位": [
+        "[斯温登准予案，第27、31至34、45至49段](https://www.lgo.org.uk/decisions/education/school-transport/25-014-325)",
+        "[斯温登驳回案，第16至19段](https://www.lgo.org.uk/decisions/education/school-transport/25-016-259)"
+      ]
+    }
+  ]
+}

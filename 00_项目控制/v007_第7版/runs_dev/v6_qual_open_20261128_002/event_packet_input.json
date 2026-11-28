@@ -1,0 +1,118 @@
+{
+  "sources": {
+    "S1": "https://tousu.sina.com.cn/complaint/view/17364616982",
+    "S2": "https://www.zhihu.com/en/answer/2962913959",
+    "S3": "https://www.douban.com/group/topic/271444484/",
+    "S4": "https://huacheng.gz-cmc.com/pages/2020/06/24/dc3380bd0c1040238463702fbacbf5cc.html",
+    "S5": "https://img1.xinmin.cn/xmwb/2025-09-09/60909.pdf"
+  },
+  "events": [
+    {
+      "identity": "E1，平台租约退出，取消后重提",
+      "facts": [
+        {
+          "source_id": "S1",
+          "statement": "租客称先发起转租，后申请退租，为再尝试转租而取消退租，重提时发现计时重置且页面显示多扣约半个月房租。",
+          "use": "当事人自述，定位原申请、状态变化和报价差额",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "投诉页面记录了商家回复和之后的自动完成状态，最终实际扣款与退款情况未知。",
+          "use": "核对投诉页面状态，结算结果按缺失处理",
+          "key": true,
+          "status": "unverified"
+        }
+      ]
+    },
+    {
+      "identity": "E2，临近租期结束交房，随后追索押金",
+      "facts": [
+        {
+          "source_id": "S2",
+          "statement": "租客称在租约结束前约两周交还住房且未要求退还剩余租金，对方先承诺退款，后以提前离开为由提出违约扣款。",
+          "use": "当事人自述，区分实际搬离、承诺结算和后续扣款主张",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "租客称多次提交立案材料后进入司法程序，随后收到和解申请，并收到押金和有关费用。",
+          "use": "定位交涉过程和自报到账，司法介入的作用待检验",
+          "key": true,
+          "status": "single_account"
+        }
+      ]
+    },
+    {
+      "identity": "E3，先找到接续租客，后追讨押金",
+      "facts": [
+        {
+          "source_id": "S3",
+          "statement": "评论者称提前找好了接续租客，押金仍拖了约三四个月，发生争执后对方才肯退。",
+          "use": "当事人自述，用于检查找到接续人选是否足以推动及时结算。实际承租与到账待核",
+          "key": true,
+          "status": "single_account"
+        }
+      ]
+    },
+    {
+      "identity": "E4，撤回搬离意向后再次通知，社区调解",
+      "facts": [
+        {
+          "source_id": "S4",
+          "statement": "报道转述租客先表示搬离、再表示续住、最后再次通知搬离。租客主张再次通知仍满足合同期限，出租方以已登记续租为由要求转租或扣款。",
+          "use": "双方法各自立场由同一媒体转述，用于比较何种通知被承认",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S4",
+          "statement": "报道记载调解结果为全额退押金，同时租客另付一笔补偿。",
+          "use": "转述结算结果，区分名义退还和净收回",
+          "key": true,
+          "status": "single_account"
+        }
+      ]
+    },
+    {
+      "identity": "E5，约定转租成功才退押金，最终未转成",
+      "facts": [
+        {
+          "source_id": "S5",
+          "statement": "报道记载双方约定转租成功后退押金，转租未成，法院调解结果为双方无需再向对方支付或赔偿。",
+          "use": "报道转述，作为预先明确结算条件的对照",
+          "key": true,
+          "status": "single_account"
+        }
+      ]
+    }
+  ],
+  "sensitivity": "正文省略姓名、账号、地址、投诉编号和可识别截图。为满足复核要求保留公开链接，链接仍可回溯发帖者，材料属于去标识而非匿名化。",
+  "independence": "E1至E3为不同平台、不同叙述者及不同办理路径的亲历材料。E4至E5为另两起媒体报道事件。相同投诉页面的多次返回、豆瓣重复展示的同一评论均只计一次。未找到针对E1至E3同一事件的独立证据链。",
+  "search_log": {
+    "date": "2026-11-28",
+    "method": "原生网页实时检索，12条搜索词。下列按实际提交顺序记录，页面打开与页内查找另计。",
+    "queries": [
+      "小红书 豆瓣 亲历 我 第一次 送外卖 跑单 小区 门禁 外卖员",
+      "知乎 贴吧 我 租房 退租 押金 房东 转租 亲身经历",
+      "小黑盒 我 退款 steam 超过 2小时 退款成功 失败",
+      "微博 知乎 我 面试 被问 婚育 亲身经历 拒绝",
+      "site:douban.com/group/topic 提前退租 押金 房东 我 转租 退了",
+      "site:tieba.baidu.com/p 提前退租 押金 我 房东 转租",
+      "site:xiaohongshu.com 提前退租 转租 押金 房东",
+      "提前退租 押金 转租 租客 退出 成功 亲历 豆瓣 知乎 微博",
+      "site:tousu.sina.com.cn/complaint/view 自如 提前退租 15天 取消 重新 退款 确认完成",
+      "site:douban.com/group/topic 提前退租 顺利 退押金 我 房东 提前通知",
+      "site:zhihu.com 提前退租 找到下家 押金 退给我 亲历",
+      "site:tieba.baidu.com 提前退租 押金 退给我 找到下家"
+    ],
+    "access_and_gaps": [
+      "微博 https://m.weibo.cn/status/K5QcXdNA4 搜索命中访客入口，直接打开失败，未纳入事件。",
+      "小红书定向查询未获得可纳入的公开亲历正文。贴吧结果主要用于观察讨论线索，未纳入缺少完整事件过程的片段。",
+      "豆瓣另有合租者询问能否提前退出的原帖，已打开正文，因仍处于求助阶段且缺少结算后续，仅作候选线索。",
+      "首轮还返回数字游戏退款规则和求职婚育采访。租赁线索优先进入复核，是因为返回材料更容易定位多起独立行动过程。"
+    ]
+  }
+}

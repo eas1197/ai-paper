@@ -1,0 +1,382 @@
+{
+  "engine": "codex_native_v1",
+  "schema_version": 2,
+  "acquisition_mode": "abstract_only",
+  "collection_id": "COL_63ae2f422b3325224e958b46",
+  "theme": "公共服务中的制度规则与例外安排（开放选题，优先定性）",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ],
+  "target": 5,
+  "count": 5,
+  "articles": [
+    {
+      "title": "从“自保式执行”到有效治理——地方自主性实践的制度路径转换",
+      "authors": [
+        "方珂",
+        "张翔",
+        "蒋卓",
+        "余练宏"
+      ],
+      "journal": "社会学研究",
+      "year": "2023",
+      "doi": null,
+      "metadata_url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+      "abstract_url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+      "abstract_locator": "正文四位作者署名下的“提要”，第37行。文末出处载第38卷第2期。",
+      "abstract_excerpt": "将特殊困难对象纳入低保并形成基于正式规则的自我保护功能",
+      "abstract_summary": "作者以A省为例，指出在监管更重视错保的情况下，基层民政部门趋于收紧资格认定。部分地方借助正式制度行使裁量，在纳入特殊困难对象的同时降低问责风险。对本研究的推论是，可考察书面认定程序是否让申诉小组更有把握地确认并批准例外。",
+      "relevance": "direct",
+      "relevance_reason": "提供了常规资格难以覆盖的申请人经正式认定程序进入救助的机制，可回应“例外获准是否只能靠放松规则”的反诘。迁移条件是申诉小组确有例外授权，且记录能显示其核实和论证过程。低保研究无法说明何种通学替代安排可行，也无法估计援助形式与获准之间的关系。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+      "abstract_hash": "d7d48248e2ed7a69ebba3febdf074bb7b04489703e246aaf42505a51bfc5356a",
+      "excerpt_sha256": "ccb11ada6595969e5100802ede61d817d9431ed2baf903695de4c3f2956be930",
+      "searched_at": "2026-11-27T23:18:42.605064+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+      "abstract_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+      "article_id": "A_60a20f2c99f203662d259322",
+      "provenance": [
+        {
+          "title": "从“自保式执行”到有效治理——地方自主性实践的制度路径转换",
+          "authors": [
+            "方珂",
+            "张翔",
+            "蒋卓",
+            "余练宏"
+          ],
+          "journal": "社会学研究",
+          "year": "2023",
+          "doi": null,
+          "metadata_url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+          "abstract_url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+          "abstract_locator": "正文四位作者署名下的“提要”，第37行。文末出处载第38卷第2期。",
+          "abstract_excerpt": "将特殊困难对象纳入低保并形成基于正式规则的自我保护功能",
+          "abstract_summary": "作者以A省为例，指出在监管更重视错保的情况下，基层民政部门趋于收紧资格认定。部分地方借助正式制度行使裁量，在纳入特殊困难对象的同时降低问责风险。对本研究的推论是，可考察书面认定程序是否让申诉小组更有把握地确认并批准例外。",
+          "relevance": "direct",
+          "relevance_reason": "提供了常规资格难以覆盖的申请人经正式认定程序进入救助的机制，可回应“例外获准是否只能靠放松规则”的反诘。迁移条件是申诉小组确有例外授权，且记录能显示其核实和论证过程。低保研究无法说明何种通学替代安排可行，也无法估计援助形式与获准之间的关系。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://gzlz.gzhu.edu.cn/info/1023/1807.htm",
+          "abstract_hash": "d7d48248e2ed7a69ebba3febdf074bb7b04489703e246aaf42505a51bfc5356a",
+          "excerpt_sha256": "ccb11ada6595969e5100802ede61d817d9431ed2baf903695de4c3f2956be930",
+          "searched_at": "2026-11-27T23:18:42.605064+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+          "abstract_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08"
+        }
+      ]
+    },
+    {
+      "title": "A Sociology of Discordance: Negotiating Schemas of Deservingness and Codified Law in U.S. Asylum Status Determinations",
+      "authors": [
+        "Talia Shiff"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2021",
+      "doi": "10.1086/716485",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+      "abstract_locator": "出版商页面 Abstract，第45至48行。第127卷第2期，337–375页，卷期日期为2021年9月1日，页面另列2022年1月18日。",
+      "abstract_excerpt": "perceived discordance between codified law and moral schemas",
+      "abstract_summary": "作者结合对30名美国庇护官员的访谈、判例和政策文件，分析官员眼中值得保护的人与成文法规定的合格对象出现错位时，他们如何评价申请，以及何时更可能依赖既有偏见。对本研究的推论是，可区分小组对家庭困难的评价与对通学方案可行性的事实判断。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“同类初拒后的不同结果是否都源于通学条件差异”的反诘，提出值得援助的判断也可能影响证据如何被解读。适用于小组有解释规则的余地、案卷留有判断理由的情形。庇护资格研究无法解释交通预算、车辆供给或援助形式的选择。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+      "abstract_hash": "12782fe4a6e39e30419cd8b408bf41bf8e1fb3e70f325e8ab99e333b5b886906",
+      "excerpt_sha256": "ad9cf9334b844d53cd45b20fa2e53fba38b2998e036612c5be87e9e0e69120cf",
+      "searched_at": "2026-11-27T23:18:42.605064+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+      "abstract_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+      "article_id": "A_fff80a706bba18ddb88fb122",
+      "provenance": [
+        {
+          "title": "A Sociology of Discordance: Negotiating Schemas of Deservingness and Codified Law in U.S. Asylum Status Determinations",
+          "authors": [
+            "Talia Shiff"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2021",
+          "doi": "10.1086/716485",
+          "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+          "abstract_locator": "出版商页面 Abstract，第45至48行。第127卷第2期，337–375页，卷期日期为2021年9月1日，页面另列2022年1月18日。",
+          "abstract_excerpt": "perceived discordance between codified law and moral schemas",
+          "abstract_summary": "作者结合对30名美国庇护官员的访谈、判例和政策文件，分析官员眼中值得保护的人与成文法规定的合格对象出现错位时，他们如何评价申请，以及何时更可能依赖既有偏见。对本研究的推论是，可区分小组对家庭困难的评价与对通学方案可行性的事实判断。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“同类初拒后的不同结果是否都源于通学条件差异”的反诘，提出值得援助的判断也可能影响证据如何被解读。适用于小组有解释规则的余地、案卷留有判断理由的情形。庇护资格研究无法解释交通预算、车辆供给或援助形式的选择。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/716485",
+          "abstract_hash": "12782fe4a6e39e30419cd8b408bf41bf8e1fb3e70f325e8ab99e333b5b886906",
+          "excerpt_sha256": "ad9cf9334b844d53cd45b20fa2e53fba38b2998e036612c5be87e9e0e69120cf",
+          "searched_at": "2026-11-27T23:18:42.605064+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+          "abstract_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a"
+        }
+      ]
+    },
+    {
+      "title": "场域转换中的默契互动——中国“城管”的自由裁量行为及其逻辑",
+      "authors": [
+        "陈那波",
+        "卢施羽"
+      ],
+      "journal": "管理世界",
+      "year": "2013",
+      "doi": "10.19744/j.cnki.11-1235/f.2013.10.006",
+      "metadata_url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+      "abstract_url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+      "abstract_locator": "ResearchGate 论文记录的 Abstract，第28至30行。第10期由四川大学期刊社页面的参考文献交叉核对。",
+      "abstract_excerpt": "从\"帮扶\"到\"罚款\"等策略",
+      "abstract_summary": "作者以H市城管执法人员为对象，借助街头官僚理论和扎根编码，解释现场情境、制度与个人因素如何影响从帮扶到罚款的行动选择，并形成共处、躲避、按章处理或冲突等结果。对本研究的推论是，决策者可动用的回应手段可能改变裁量如何落实。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“裁量是否仅体现在准驳”的反诘，帮助追问小组能否借助不同形式的援助解决同一种通学障碍。迁移条件是小组具有选择援助形式的权限，且案卷能区分可供选择的手段和最终行动。城管现场互动无法解释书面申诉中的证据核实或例外准入门槛。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+      "abstract_hash": "7bf70c471c18063f9fcf550f079dc99a777612bca75dedb363f22a319c0d95bc",
+      "excerpt_sha256": "9c7f93ceca8c62379948a2b134fad97640829d496b20b1d49f07b31ef2b5df2f",
+      "searched_at": "2026-11-27T23:18:42.606064+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+      "abstract_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+      "article_id": "A_747f01af3cc312e2c62ed798",
+      "provenance": [
+        {
+          "title": "场域转换中的默契互动——中国“城管”的自由裁量行为及其逻辑",
+          "authors": [
+            "陈那波",
+            "卢施羽"
+          ],
+          "journal": "管理世界",
+          "year": "2013",
+          "doi": "10.19744/j.cnki.11-1235/f.2013.10.006",
+          "metadata_url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+          "abstract_url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+          "abstract_locator": "ResearchGate 论文记录的 Abstract，第28至30行。第10期由四川大学期刊社页面的参考文献交叉核对。",
+          "abstract_excerpt": "从\"帮扶\"到\"罚款\"等策略",
+          "abstract_summary": "作者以H市城管执法人员为对象，借助街头官僚理论和扎根编码，解释现场情境、制度与个人因素如何影响从帮扶到罚款的行动选择，并形成共处、躲避、按章处理或冲突等结果。对本研究的推论是，决策者可动用的回应手段可能改变裁量如何落实。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“裁量是否仅体现在准驳”的反诘，帮助追问小组能否借助不同形式的援助解决同一种通学障碍。迁移条件是小组具有选择援助形式的权限，且案卷能区分可供选择的手段和最终行动。城管现场互动无法解释书面申诉中的证据核实或例外准入门槛。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.researchgate.net/publication/351035246_changyuzhuanhuanzhongdemoqihudong--zhongguo_chengguan_deziyoucailiangxingweijiqiluoji",
+          "abstract_hash": "7bf70c471c18063f9fcf550f079dc99a777612bca75dedb363f22a319c0d95bc",
+          "excerpt_sha256": "9c7f93ceca8c62379948a2b134fad97640829d496b20b1d49f07b31ef2b5df2f",
+          "searched_at": "2026-11-27T23:18:42.606064+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08",
+          "abstract_event_id": "exec-d275b4e6-61c4-4dc0-b04d-c8dd51632a08"
+        }
+      ]
+    },
+    {
+      "title": "中国城市低保制度的瞄准度分析",
+      "authors": [
+        "宋锦",
+        "李实",
+        "王德文"
+      ],
+      "journal": "管理世界",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+      "abstract_url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+      "abstract_locator": "南开大学中国区域政策研究中心页面“摘要”，第179行。第183行列出作者及原刊2020年第6期。",
+      "abstract_excerpt": "低保金发放考虑了家庭收入、财产和人口特征",
+      "abstract_summary": "作者利用住户调查分析城市低保发放，发现实际审核结合收入、财产与家庭人口特征，兼顾基本保障和急难救助，并主张用多维口径衡量瞄准表现。对本研究的推论是，认定替代通学方案可行时，可分别考察费用、陪同条件和实际出行能力。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“表面上符合单项条件是否足以说明安排可行”的反诘，提供按多维条件评价资格认定的量化参照。迁移条件是辖区允许考虑这些维度，案卷也能在相同记录口径下支持比较。住户数据无法还原小组如何核验证据，也无法区分援助形式是例外获准的前提还是后续决定。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+      "abstract_hash": "d4f5d89a6ea3b16fb05602636e829e04cf1f9d44ca84131b73dcfc1a715544b1",
+      "excerpt_sha256": "bc4916b922acd69f905018fc2ace5dcc8148ea479da232356a33997960219286",
+      "searched_at": "2026-11-27T23:18:42.606064+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:4",
+      "metadata_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+      "abstract_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+      "article_id": "A_3c6721ef16d7d3e2b3329357",
+      "provenance": [
+        {
+          "title": "中国城市低保制度的瞄准度分析",
+          "authors": [
+            "宋锦",
+            "李实",
+            "王德文"
+          ],
+          "journal": "管理世界",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+          "abstract_url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+          "abstract_locator": "南开大学中国区域政策研究中心页面“摘要”，第179行。第183行列出作者及原刊2020年第6期。",
+          "abstract_excerpt": "低保金发放考虑了家庭收入、财产和人口特征",
+          "abstract_summary": "作者利用住户调查分析城市低保发放，发现实际审核结合收入、财产与家庭人口特征，兼顾基本保障和急难救助，并主张用多维口径衡量瞄准表现。对本研究的推论是，认定替代通学方案可行时，可分别考察费用、陪同条件和实际出行能力。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“表面上符合单项条件是否足以说明安排可行”的反诘，提供按多维条件评价资格认定的量化参照。迁移条件是辖区允许考虑这些维度，案卷也能在相同记录口径下支持比较。住户数据无法还原小组如何核验证据，也无法区分援助形式是例外获准的前提还是后续决定。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://chinareal.nankai.edu.cn/info/1101/8500.htm",
+          "abstract_hash": "d4f5d89a6ea3b16fb05602636e829e04cf1f9d44ca84131b73dcfc1a715544b1",
+          "excerpt_sha256": "bc4916b922acd69f905018fc2ace5dcc8148ea479da232356a33997960219286",
+          "searched_at": "2026-11-27T23:18:42.606064+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:4",
+          "metadata_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a",
+          "abstract_event_id": "exec-ded4b477-488b-49d4-a3e6-3fda05ab956a"
+        }
+      ]
+    },
+    {
+      "title": "Getting to Know You: Welfare Fraud Investigation and the Appropriation of Social Ties",
+      "authors": [
+        "Spencer Headworth"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2019",
+      "doi": "10.1177/0003122418818198",
+      "metadata_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+      "abstract_locator": "SAGE 原刊第84卷第1期，页面 Abstract 栏第1至4段，短摘见第1段",
+      "abstract_excerpt": "fraud investigators creatively exploit clients’ social networks",
+      "abstract_summary": "作者访谈美国五州的福利欺诈调查人员，指出调查人员通过主动举报、向并不知情的熟人取证及查看社交网络活动来搜集信息。这些做法可能使受助人丧失项目资格，也可能损害其支持网络。对本研究的推论是，申诉小组从何处取证、如何使用这些信息，可能影响其对家庭能否自行安排通学的判断。",
+      "relevance": "substantive",
+      "relevance_reason": "论文解释了公共福利经办人员如何主动搜集个案证据，以及这类证据如何进入可能导致资格取消的执法过程。它能回应一个反诘：初拒理由相近的案件为何仍可能出现不同判断？小组核实的信息及其来源可能有差异。迁移条件是小组有权补充或核实个案信息，记录也足以辨别证据来源、核实动作和裁决理由。福利欺诈调查与交通申诉的目标不同，论文无法说明何种替代通学安排实际可行、何种援助形式足以解决困难，或两者分别与例外获准有何关系。跨辖区比较时，记录详略差异也可能影响对核实过程的观察。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+      "abstract_hash": "75ff34c83cbfe7ab3e154452a63e48c2f08f432c9e0a9db132d85b65ee0c2a21",
+      "excerpt_sha256": "d5c180a6112aa67375709cc1221f6876367d5500f444a72952619da5ca2a3b5d",
+      "searched_at": "2026-11-27T23:20:03.607438+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-6cc53202-a99e-42d9-9f06-e8a172cb3305",
+      "abstract_event_id": "exec-6cc53202-a99e-42d9-9f06-e8a172cb3305",
+      "article_id": "A_fa2991378fd2743eb7d8b4fb",
+      "provenance": [
+        {
+          "title": "Getting to Know You: Welfare Fraud Investigation and the Appropriation of Social Ties",
+          "authors": [
+            "Spencer Headworth"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2019",
+          "doi": "10.1177/0003122418818198",
+          "metadata_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+          "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+          "abstract_locator": "SAGE 原刊第84卷第1期，页面 Abstract 栏第1至4段，短摘见第1段",
+          "abstract_excerpt": "fraud investigators creatively exploit clients’ social networks",
+          "abstract_summary": "作者访谈美国五州的福利欺诈调查人员，指出调查人员通过主动举报、向并不知情的熟人取证及查看社交网络活动来搜集信息。这些做法可能使受助人丧失项目资格，也可能损害其支持网络。对本研究的推论是，申诉小组从何处取证、如何使用这些信息，可能影响其对家庭能否自行安排通学的判断。",
+          "relevance": "substantive",
+          "relevance_reason": "论文解释了公共福利经办人员如何主动搜集个案证据，以及这类证据如何进入可能导致资格取消的执法过程。它能回应一个反诘：初拒理由相近的案件为何仍可能出现不同判断？小组核实的信息及其来源可能有差异。迁移条件是小组有权补充或核实个案信息，记录也足以辨别证据来源、核实动作和裁决理由。福利欺诈调查与交通申诉的目标不同，论文无法说明何种替代通学安排实际可行、何种援助形式足以解决困难，或两者分别与例外获准有何关系。跨辖区比较时，记录详略差异也可能影响对核实过程的观察。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+          "abstract_hash": "75ff34c83cbfe7ab3e154452a63e48c2f08f432c9e0a9db132d85b65ee0c2a21",
+          "excerpt_sha256": "d5c180a6112aa67375709cc1221f6876367d5500f444a72952619da5ca2a3b5d",
+          "searched_at": "2026-11-27T23:20:03.607438+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:1",
+          "metadata_event_id": "exec-6cc53202-a99e-42d9-9f06-e8a172cb3305",
+          "abstract_event_id": "exec-6cc53202-a99e-42d9-9f06-e8a172cb3305"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "batches": [
+    {
+      "batch": "batch_001",
+      "started_at": "2026-11-27T23:16:44.006383+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-27T23:18:42.606064+08:00",
+      "event_sha256": "8e45154447ef9bff81179923be55005df249639874dc59d4620a5561dbdc51fc",
+      "response_sha256": "cc11de52a0e2ec9380febe5fcbb2e54f19e435f667592e71371e42de7a530503",
+      "notes": [
+        "按初查处理。2026-11-27 共用24个原生网页动作，其中搜索词15条、打开9次。按进入逐篇筛查的九刊论文去重，发现6篇，核实题录6篇，成功打开并获得摘要4篇，距目标差1篇。全文下载0篇。工作区读取命令被环境拒绝，本轮直接按用户给定的检索和验收条件执行。",
+        "议题层先查“site:journals.sagepub.com American Sociological Review discretion welfare caseworkers rules clients eligibility qualitative”“site:journals.uchicago.edu American Journal of Sociology welfare caseworkers discretion eligibility rules clients qualitative”“行政裁量 基层 资格 低保 社会学研究 社会 管理世界 研究 摘要”。中文检索先出现低保研究和引文，随即打开方珂等的提要。在英文初查未形成可纳入候选后，用“American Sociological Review OR American Journal of Sociology discretionary decisions asylum judges gatekeeping deservingness school placement ethnography”扩展到资格裁决，核实了Shiff的AJS文章。",
+        "议题层另用9条查询追查5组确切题名。围绕“自保式低保执行”追加“李棉管 社会学研究 摘要 官网”“CNKI 提要 李棉管 2019”“提要 自保式瞄准偏差 李棉管”。围绕“从‘自保式执行’到有效治理”追加“方珂 社会学研究 摘要 site:shxyj.ajcass.com”“社会学研究 2023 DOI”。围绕“场域转换中的默契互动”追加“陈那波 卢施羽 管理世界 摘要”“管理世界 CNKI 陈那波 卢施羽 DOI”。另查“福利治理、政策执行与社会政策的目标定位 社会学研究 摘要 李迎生”和“中国城市低保制度的瞄准度分析 宋锦 管理世界 摘要 DOI”。以高校页面和可回链记录补足中文题录与摘要。AJS出版商入口直接返回摘要，未发生镜像跳转，年份按最终卷期登记。",
+        "对象层查“school transport appeal exceptional circumstances alternative arrangements personal transport budget local authority”及“school transport appeals American Sociological Review OR American Journal of Sociology OR 社会学研究”。九刊内未发现经核实的对象层论文。检索返回的莱斯特郡申诉说明列出家庭已尝试的替代通学方式，监察专员两个个案分别提供了替代方案可行性及已获个人交通预算是否合用的线索。这些网页只用于定位对象层，同一政策期和相近初拒理由仍是个案比较的条件，跨辖区还需核对资格口径与案卷范围。https://www.leicestershire.gov.uk/education-and-children/school-transport/school-transport-appeals https://www.lgo.org.uk/decisions/education/school-transport/25-018-700 https://www.lgo.org.uk/decisions/education/school-transport/25-014-325",
+        "理论层实际查询“Michael Lipsky Street Level Bureaucracy Russell Sage Foundation discretion resources”，返回基金会出版说明，记录1条经典理论线索。",
+        "THEORY|Street-Level Bureaucracy: Dilemmas of the Individual in Public Services|https://www.russellsage.org/publications/book/street-level-bureaucracy|Lipsky指出，一线公共服务人员在案件量大、目标含混和资源不足的条件下运用裁量，其日常判断塑造实际政策。迁移到最终申诉需核实小组的授权范围、资源约束以及能否在记录中观察其判断过程。"
+      ]
+    },
+    {
+      "batch": "batch_002",
+      "started_at": "2026-11-27T23:18:42.681073+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-27T23:20:03.607438+08:00",
+      "event_sha256": "81bb83aa1ddc678d1fee09ddf1ad109ff7f507022e68cde2883dd27b15c3d72d",
+      "response_sha256": "a57041bd522645add8c45ee523e02f610c50fbd787165266b260c6c5f1711b49",
+      "notes": [
+        "本轮用完24个原生网页动作，其中检索13次、打开11次，按每条查询和每个打开目标分别计费，未下载全文。按最终逐篇跟踪的候选计，发现5篇，核实题录4篇，实际打开并取得摘要2篇。限定九刊内分别为发现3篇、核实题录2篇、取得摘要1篇，最终纳入1篇。已打开核对的另1篇刊外候选凭原刊信息排除，未计入取得摘要数。",
+        "议题层先查 SAGE 的 ASR street level discretion welfare eligibility exceptions adjudication deservingness organizational、芝加哥大学出版社的 American Journal Sociology street level bureaucrats discretion public benefits eligibility caseworkers exceptions，以及“社会学研究 社会 管理世界 行政裁量 低保 资格 变通 基层 例外 申请”。先打开两篇英文候选，均属 Social Service Review。随后用 American Sociological Review discretion eligibility welfare investigations Headworth abstract public services qualitative 定位纳入论文，SAGE 入口直接返回原刊第84卷第1期题录及摘要，未发生镜像跳转。另查 Fong Getting Eyes in the Home Child Protective Services investigations American Sociological Review abstract sage，获得后续候选。",
+        "中文议题层将宽检索改为《福利治理、政策执行与社会政策目标定位》的精确题名，分别加入原刊域名、年份卷期、知网域名、DOI 或英文题名线索，以及万方、维普、国家哲学社会科学文献中心。另检索《制度环境、自由裁量权与中国社会政策执行》加“摘要 社会学研究”，结果指向刊外论文。已按给定的四个题名排重。",
+        "对象层查询 school transport appeal exceptional circumstances local authority alternative arrangements personal transport budget gov uk ombudsman，再限定 lgo.org.uk，加入 decisions、school transport、exceptional circumstances、personal travel budget 和 appeal。实际打开的监察专员决定涉及16岁以上学习者。报告指出，小组把政策所列的两个例外示例当作穷尽条件，也未说明个人交通预算在家庭无法开车或车辆另有用途时如何解决问题。该案提供了比较裁决理由的线索，跨年龄组或辖区使用时须核对适用规则。另一份涉及小巴与个人交通预算的决定出现在检索结果中，打开超时。https://www.lgo.org.uk/decisions/education/school-transport/23-009-736?chapter=2",
+        "理论层查询 Michael Lipsky Street-Level Bureaucracy Dilemmas Individual Public Services Russell Sage Foundation，并打开基金会出版页，核对30周年增订版对逐案裁量与常规化处理的解释。",
+        "THEORY|Street-Level Bureaucracy: Dilemmas of the Individual in Public Services|https://www.russellsage.org/publications/book/street-level-bureaucracy|承担逐案判断的公共服务人员在案量大、目标含混、资源不足且拥有实质裁量时，可能借助筛选与常规程序处理案件，从而改变政策的实际交付。用于学校交通终审时，须先核实小组的裁量权限、处理压力及可调用的交通资源。"
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "title": "福利治理、政策执行与社会政策目标定位——基于N村低保的考察",
+      "reason": "原刊索引、人大转载检索结果支持题录，搜索返回了摘要。人大转载页两次打开均超时，缺少成功打开并返回可核实摘要的页面。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "自保式低保执行——精准扶贫背景下石村的低保实践",
+      "reason": "原刊索引与引文支持李棉管、《社会学研究》2019年第6期。搜索主要返回原刊PDF的正文片段及不完整的提要开头，未获得可核实的摘要页面。",
+      "batch": "batch_001"
+    },
+    {
+      "title": "福利治理、政策执行与社会政策目标定位——基于N村低保的考察",
+      "reason": "《社会学研究》2017年第6期的题录可由原刊年度目录与学术机构页面交叉核对。人大社会学视野网搜索结果展示了摘要，但两处转载页的打开请求均超时，未取得实际打开返回的摘要。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "Getting Eyes in the Home: Child Protective Services Investigations and State Surveillance of Family Life",
+      "reason": "搜索结果定位到《American Sociological Review》第85卷第4期及学术机构保存的稿件摘要。优先完成了更贴近个案取证的候选，本文的出版商摘要页尚未打开核实。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "Street-Level Disparities: How Place Shapes the Process of Frontline Child Welfare Investigations",
+      "reason": "打开芝加哥大学出版社页面后确认原刊为 Social Service Review，超出指定九刊。",
+      "batch": "batch_002"
+    },
+    {
+      "title": "Welfare and Work Sanctions: Examining Discretion on the Front Lines",
+      "reason": "已打开出版商页面并核实摘要。论文直接涉及行政听证、正当事由例外和一线裁量，原刊为 Social Service Review，超出指定九刊。",
+      "batch": "batch_002"
+    }
+  ],
+  "status": "verification_pending",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696"
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "v6_qual_open_20261128_003",
+  "manifest_sha256": "f457859cf54df59f16f5745ff997b5a93d5c10b620d0705469a4cb0f14de6402",
+  "scope": "preliminary",
+  "base_batches": 1,
+  "additional_batches": 2,
+  "authorization": "2026-11-28 用户授权增加两轮初步材料采集，保留原消耗。",
+  "prior_receipt_sha256": "a2c405de98bf8d646a98a4f1a31180fd38ff93ce661f5aa039d921d521ec8174"
+}

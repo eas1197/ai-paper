@@ -1,0 +1,10 @@
+{
+  "core_question": "在住房提前退租纠纷中，第三方核验所得的信息在什么条件下会成为当事各方主张由谁承担退租费用的依据？",
+  "prior_question": "租赁纠纷中的第三方核验在什么条件下会改变对方提出的提前退出条件？",
+  "new_question": "在住房提前退租纠纷中，第三方核验所得的信息在什么条件下会成为当事各方主张由谁承担退租费用的依据？",
+  "theoretical_concern": "事实核验与费用责任主张之间的联系及边界",
+  "reason_for_conversion": "按问题选择网络公开文本过程比较",
+  "framework": "初步区分事实主张、核验、协商中的责任主张及费用安排，竞争解释留待审查",
+  "literature": "通约与补偿研究；命名、归责与主张；详见 initial/literature_matrix.json 与 theories.json",
+  "context": "公开中文平台的住房提前退租纠纷亲历事件"
+}

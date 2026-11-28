@@ -1,0 +1,61 @@
+{
+  "sources": {
+    "S1": "https://www.lgo.org.uk/decisions/education/school-transport/25-014-325",
+    "S2": "https://www.lgo.org.uk/decisions/education/school-transport/21-010-100"
+  },
+  "events": [
+    {
+      "identity": "个案A｜斯温登自治市议会｜学校交通援助第二阶段申诉｜2025年9月",
+      "facts": [
+        {
+          "source_id": "S1",
+          "statement": "议会以申请不符合常规资格标准为由拒绝提供学校交通援助。",
+          "use": "确认例外审查前的资格决定",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "第二阶段申诉委员会认定家庭情况属于例外，决定支持申诉并提供个人交通预算。",
+          "use": "编码结果为准予例外援助，援助形式为预算",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "监察专员记录，申请人认为预算无法解决上学交通困难，未接受也未领取预算。",
+          "use": "区分批准援助与实际领取",
+          "key": false,
+          "status": "single_account"
+        }
+      ]
+    },
+    {
+      "identity": "个案B｜萨里郡议会｜学校交通援助最终阶段申诉｜监察专员于2022年3月结案",
+      "facts": [
+        {
+          "source_id": "S2",
+          "statement": "议会以所就读学校并非离家最近的学校为由，拒绝提供免费学校交通。",
+          "use": "确认例外审查前的资格决定",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "最终申诉小组在决定函中指出，有距离更近且有空位的学校，并认定个案情况不足以例外提供免费交通，因此驳回申诉。",
+          "use": "编码结果为拒绝例外援助，记录决定函所述理由",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "监察专员指出决定函对低收入家庭交通援助政策的表述有误，经初步审查认为该错误不足以动摇整体决定，因此未启动调查。",
+          "use": "区分地方申诉结果与外部监督结论",
+          "key": false,
+          "status": "single_account"
+        }
+      ]
+    }
+  ],
+  "sensitivity": "两案涉及未成年人。仅保留公共机构、程序时间及与决定直接相关的事实，省略个人姓名、文书中的人物代号、学校名称、住址、诊断和具体家庭构成。"
+}

@@ -1,0 +1,739 @@
+{
+  "run_id": "v6_qual_open_20261128_003",
+  "mode": "dev",
+  "theme": "开放观察，研究主题待定",
+  "policy_sha256": "be114fe34376b9e0b98a344caec4be9d9d49afe038a28d2f7c3e7ee213684248",
+  "history": [
+    {
+      "stage": "正式独立学术初审",
+      "outcome": "academic_pass",
+      "academic_value": "pass",
+      "reason": "初审放行。把问题从通勤缩短后时间用在哪里，推进到员工如何判断自己能否离岗、需要同谁协调以及离开可能带来什么后果，构成实质学术深化。两则叙述足以支持提出问题，候选增量是识别正式时间安排相近时，离岗选择因工作关系而异的具体条件。输入中的近邻材料足以定位已有解释，尚不足以确认它们是否已说明这个条件差异。本裁决适用于学术初审。材料取得情况留待设计阶段，输入的正式资格标记仍为 false。",
+      "question": "持续到岗的员工如何描述午间休息和完成当日工作后的离岗可协商性？在正式规则和任务要求相近的情境中，哪些主管关系和同事关系使离开成为可自行决定、需要协调或可能招致负面评价的选择？",
+      "core_question": "正式休息和下班安排相近时，到岗员工实际行使离岗选择的条件有何差异？",
+      "topic_reasoning": {
+        "opportunity": {
+          "reasoning": "E1叙述就近居住使午间回家成为可能，并把下班后可支配的时间同时归于住得近和少加班。E2叙述就近居住时容易在办公室多待，工作交往和日常交往也有重叠。并读两则叙述，可以追问空间上能去哪里、工作关系中何时可以离开，以及离开后能否自行安排行动。两则叙述的时段、住房变动和工作条件有差异，适合用来发现问题。"
+        },
+        "question": {
+          "reasoning": "比较单位是员工讲述的具体离岗情境。午间和工作结束后分别比较，优先考察正式规则与任务要求相近的情境。通勤缩短可用来观察回家等活动何时进入可选范围，通勤未缩短的情境也可用于考察相似的离岗协商。两者分别对应空间可达性与组织中的行动选择。"
+        },
+        "deepening": {
+          "reasoning": "把时间自主落实为谁可以发起离开、谁能要求等待、是否需要交接或批准，以及员工预期何种后果。相同的久留行为可以来自未完任务、同事代岗不足、对评价的顾虑或自愿交往。问题由此转向不同工作关系下的行动选择，以及正式安排在什么条件下能实际行使。",
+          "change_kind": "academic"
+        }
+      },
+      "sociology_review": {
+        "value": {
+          "judgment": "pass",
+          "reason": "比较正式时段相近的到岗情境，可以辨认员工离岗时的决定权如何在主管、同事和员工之间分配。若离岗差异随交接需要变化，解释落在劳动协作。若交接已完成仍因评价顾虑而久留，解释落在组织中的在场期待。两种情形对何谓员工掌控工作时间有不同含义。"
+        },
+        "increment": {
+          "judgment": "pending",
+          "reason": "候选增量是说明正式排程控制相近时，离岗选择在哪些协作或评价条件下会分化。最接近的Kelly等2011年和2014年研究已在摘要中把组织安排、排程控制和工作家庭结果联系起来，Roscigno等提示正式规则之外的工作关系可能具有解释力。待核对直接近邻正文中的排程控制题项、离岗或在场实例及其比较范围，确认既有研究是否已经区分自行决定、交接协调与评价约束，并描述或解释了同样的条件差异。",
+          "kind": "condition",
+          "basis": "unverified"
+        },
+        "theory": {
+          "judgment": "pass",
+          "reason": "排程控制提供概念起点，离岗可协商性落实到离开的具体时点、决定者、协调对象和预期后果。被动在场理论提供评价解释，适用条件是在场可见且观察者会据此判断投入。交接需要、临时任务、自愿交往与空间可达性是可区分的解释。若任务与交接相近时，员工能够自行离开，也未报告可预期的评价代价，评价解释会减弱。若住得近只增加午间往返机会，而离岗的决定程序和后果相同，空间可达性足以解释该项用途差异。员工对评价的预期和实际考核后果须分别取证。"
+        },
+        "feasibility": {
+          "judgment": "pending",
+          "reason": "留待设计阶段。两则既有叙述可作为问题线索。具体离岗事件、适用于当事人的规则和不同角色的叙述是可能的材料路径，其取得条件和来源权限尚未核实。输入也没有给出这些材料已经证实无法取得的记录。"
+        },
+        "evidence": {
+          "judgment": "pass",
+          "reason": "S1第43至46行和S2第102至114行的单方叙述，加上入库摘要和理论摘述，足以支持初审提出可比较的问题。E1的午间回家和E2的办公室久留发生在不同情境，缺少考勤、时间日记和独立印证。现有证据的支持范围止于提出竞争解释和比较维度，离岗过程、通勤作用和设计冻结仍待后续证据。"
+        },
+        "development": {
+          "disposition": "proceed",
+          "reason": "在初审放行该候选问题。更值得追问的是，同事何时通过接手工作扩大彼此的离岗选择，何时又因彼此可见而使离岗带来评价压力。若直接近邻正文已解释相同条件下的这种差异，或后续材料显示差异只在往返是否可行，均应重审候选增量。进入补查、归档或冻结前须形成正向增量判断。复审以关键缺口是否解决为准，研究者可选择其他能够区分相关解释的问法。",
+          "research_question": "在正式规则与任务要求相近的到岗工作情境中，员工如何判断谁可以决定离岗？同事间的交接安排与主管或同事的在场评价何时使这种选择出现差异？"
+        }
+      },
+      "literature_review": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+          "locator": "Abstract，网页第31–33行",
+          "reading": "abstract",
+          "claim": "按入库摘要，Kelly、Moen和Tranby以白领组织改革前后的资料，将排程控制的提升作为理解工作家庭结果变化的重要路径。",
+          "scope": "一家白领组织的改革。待核正文中的控制权测量是否涉及固定到岗时段内的具体离岗协商。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "locator": "SAGE 79卷3期文章页，DOI下方摘要第31–34行",
+          "reading": "abstract",
+          "claim": "按入库摘要，Kelly等报告组织干预改善了排程控制与主管支持，工作家庭冲突和家庭时间充足度的改善较小。",
+          "scope": "信息技术企业的组合干预。待核正文中有无分别比较主管支持、同事协调和固定到岗时段的离岗选择。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+          "locator": "SAGE摘要第31–33行",
+          "reading": "abstract",
+          "claim": "按入库摘要，Schneider和Harknett报告不稳定、难以预测的排班与工作生活冲突及员工福祉相关。",
+          "scope": "美国服务业雇主排班。可用于提出时段可预期性的解释，固定班次内的离岗决定权需另查。"
+        },
+        {
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "locator": "Abstract，网页第46–48行",
+          "reading": "abstract",
+          "claim": "按入库摘要，Roscigno等报告，在纳入正式规则后，横向和纵向工作关系与工作评价和行为仍有关联。",
+          "scope": "德国多个工作环境。关系与离岗选择的直接联系需要查正文和相关实证。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+          "locator": "Abstract，网页第32行及所附摘要记录",
+          "reading": "abstract",
+          "claim": "按入库摘要，Cha和Weeden报告长工时的工资回报提高，并估计长工时对性别工资差距的贡献。",
+          "scope": "1979至2009年美国人口现状调查。长工时回报可提示离岗的潜在机会成本，具体单位如何评价现场久留仍需取证。"
+        }
+      ],
+      "theory_review": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/1523422307305489",
+          "reading": "supplied_claim",
+          "locator": null,
+          "claim": "输入将Kelly和Moen的排程控制概括为员工对工作时点、地点和时长的掌控。",
+          "scope": "为区分正式弹性和员工能实际行使的选择提供依据。输入未给原文位置，须补核概念是否已具体涵盖离岗协商。",
+          "event_ids": [
+            "exec-2300f850-5686-49d4-8732-7be65402d490"
+          ]
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+          "reading": "supplied_claim",
+          "locator": null,
+          "claim": "输入将Elsbach、Cable和Sherman的论点概括为，在场可见性会随所处时段引发可靠或投入的印象。",
+          "scope": "适用于可见在场形成印象的情境。输入未给原文位置，须核对是否涉及员工预期、改变离岗行为或实际考核后果。两条输入指向同一篇研究。",
+          "event_ids": [
+            "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6",
+            "exec-0d62675f-82b0-46ba-8f80-146204f9cf29"
+          ]
+        }
+      ],
+      "run_id": "v6_qual_open_20261128_003",
+      "input_sha256": "35c8ad5dfaa649bc3e10fcd6d06d0d85956cc7af600e251bdcd59b1c56ea7aaa",
+      "exchange_sha256": null,
+      "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+      "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+      "collection_sha256": "81c7a6fd2cebf505ff24bf11bfa79ea2aa48e06db80398c6d0554422e2c3e7cb",
+      "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+      "formal_eligible": false,
+      "research_actor": "01a2205c-60d1-7cf1-b8e6-02a3706c5294",
+      "critical_actor": "01a220f6-6b74-7d00-84b9-ef2ea2772c60",
+      "critical_receipt": {
+        "events": "sociology_review_audit_20261128\\fresh_contract_events.jsonl",
+        "sha256": "cc537064b3a157a23fdef041fe7b8da516d36a8134e934f8a4afa3975e638651",
+        "response_sha256": "9bece49b6c6ba020ab18d9fd3d97d7d28a8f834a91dd5a2f73b1eb093dadb800"
+      },
+      "method_receipt": {
+        "scope": "仅依据本轮输入作独立初审。两则事件按单方叙述处理，五篇入库文献按所附摘要记录处理，两项理论按所附主张处理。入库记录的日志可见摘录计数为0。",
+        "binding": "原反诘回执和证据指纹照录，未重新计算或核验。本轮未调用工具。"
+      },
+      "model": "gpt-6.2-sol",
+      "invocation_id": "01a220fd-2597-7671-a54d-c6d5001602f1",
+      "evidence_sha256": "103b60b3d0c64c54ab8fcf76ee9ef02defe37da91ca4ffb671b09357d763c1a9",
+      "events_sha256": "8dfc0b4713f440a7dc0210dc6f3eaf6b81446b57040266afa25c47a0dd2f809c",
+      "academic_value_statement": "问题有社会学价值。它追问同样拥有名义休息时间或已经到达下班时点的员工，为何可能有不同程度的实际离岗选择。如果差别来自任务交接，时间支配取决于协作安排。如果差别来自主管或同事对早走的评价，时间支配还取决于工作关系中的评价权。如果久留出于自愿交往，留在办公室也可以是员工自主安排时间的一种方式。这几种答案会改变我们对工作时间自主性的理解。"
+    },
+    {
+      "stage": "独立设计审查",
+      "outcome": "materials_pending",
+      "academic_value": "pass",
+      "data_feasibility": "pending",
+      "question": "在正式下班安排和任务完成状态相近的到岗工作情境中，员工尝试按时离岗时，谁掌握放行所需的交接，谁能提出继续在场的要求，同事先行又在什么条件下改变其他员工的离岗选择？",
+      "reason": "候选设计的实质增量在于比较同一次离岗过程中交接权、在场评价与同事先行如何分别约束或促成离开。所附近邻正文已覆盖白天离岗、结束工作时间和因私离开可能被视为不投入，新增价值落在这些具体互动如何改变离岗选择。现有亲历叙述给出了可追查的互动差异，但独立可比事件、当事人适用的规则和材料研究用途仍待核实，设计暂不冻结。",
+      "design": "以常规下班时点的一次具体离岗尝试为比较单位。优先在同一单位或规则和任务相近的岗位间配对，核对任务是否完成、是否仍需交接或代岗、谁能要求等待、同事何时先行、当事人何时离开。分别记录实际离开、现场评价、员工预期及有独立证据的正式后果。纳入无需协调便准点离开、交接完成后仍延迟离开的对照。午间审批材料和管理层改变离岗安排的催离事件用于检验比较边界。合并同一事件的转载，重复经历须能区分具体回合才分别计入。取得可追溯的事件材料并核实研究用途后复审。",
+      "research_case": {
+        "core_question": "在正式下班安排和任务完成状态相近的到岗工作情境中，员工尝试按时离岗时，谁掌握放行所需的交接，谁能提出继续在场的要求，同事先行又在什么条件下改变其他员工的离岗选择？",
+        "context": "研究对象为持续到岗员工在常规下班时点的离岗尝试。仓管交钥匙与论坛同事先行提供两种候选过程。通勤和午间往返用于说明问题来源，通勤缩短无需作为纳入条件。",
+        "hypotheses_or_propositions": [
+          "当离岗必须经过主管掌握的交接环节时，主管若以其他部门仍在场为由质疑先走，任务已完成的员工也可能推迟离开。若延迟随实际交接完成而消失，工作协作解释更有力。",
+          "在任务及交接要求相近的情况下，同事先行可能改变其他员工对何时可离开的判断。若跟随可由共同任务结束或统一放行解释，先行信号解释减弱。"
+        ]
+      },
+      "method_assessment": {
+        "selected": null,
+        "paths": {
+          "quantitative": {
+            "status": "not_applicable",
+            "reason": "本设计比较具体互动序列，输入未提供可识别离岗回合、交接状态和评价的结构化数据或抽样框。"
+          },
+          "secondary_interviews": {
+            "status": "unknown",
+            "reason": "仓管采访提供交接、现场质疑和所述延迟的线索，尚缺规则及任务可比的独立事件。公开阅览已有记录，研究用途仍待核。司法案例摘要和记者叙述按各自来源性质使用。"
+          },
+          "online_qualitative": {
+            "status": "unknown",
+            "reason": "两条可打开的V2EX主楼提供同事先行和部门口头表态的亲历线索。正式规则、任务状态及研究用途仍待核，输入未提供满足就绪契约的 attempt_001 回执。",
+            "approach": "public_text"
+          }
+        }
+      },
+      "sociology_review": {
+        "value": {
+          "judgment": "pass",
+          "reason": "比较名义下班安排相近的事件，可以识别员工的时间支配何时取决于工作交接，何时取决于主管对在场的评价，何时取决于同事行动提供的信号。三种答案分别指向岗位协作、纵向评价权与横向协调，对理解正式下班安排如何落实有不同含义。"
+        },
+        "increment": {
+          "judgment": "pass",
+          "kind": "condition",
+          "basis": "substantive",
+          "reason": "在所附近邻正文覆盖范围内，候选增量是识别交接节点何时成为施加在场评价的场合，以及在没有明确放行时同事先行何时能改变实际离岗。仓管亲历转述把主管掌握钥匙交接、引用其他部门仍在场及员工延迟离开连成一个过程。论坛自述提供同事先行后多人跟随的另一条可区分线索。所核正文已涵盖离岗控制及不投入评价，也已说明组织支持和组织期待的重要性。现有正文核对支持把这组具体关系条件作为独立的待研究增量。员工动机、条件实际作用及更广的文献覆盖仍待检验。"
+        },
+        "theory": {
+          "judgment": "pass",
+          "reason": "把离岗选择落实到交接完成、实际代岗需求、谁提出等待、是否有人先走和何时离开。交接完成后仍遭质疑更切合在场评价解释。先行与跟随若随公共放行信号同步，需检验共同信号解释。自愿久留、额外任务和岗位覆盖都可能产生相同表象。现场质疑、预期评价和正式处分分别编码，裁员经历不能据现有叙述归因为准点离岗。"
+        },
+        "feasibility": {
+          "judgment": "pending",
+          "reason": "已核实部分候选页面可公开阅览。补充具有相近规则、任务和时段的独立事件有可能，取得足够事件、核实适用制度和研究用途仍待确认。输入没有证实所需材料无法取得。"
+        },
+        "evidence": {
+          "judgment": "insufficient",
+          "reason": "目前材料足以拟定事件编码和对照条件。仓管与论坛叙述各有具体线索，但尚不能核实它们处于相近规则和任务条件下。午间材料主要涉及审批和执行，催离事件改变了单位安排。当前支持设计细化，尚不足以确认比较可实施或冻结设计。"
+        },
+        "development": {
+          "disposition": "verify",
+          "reason": "优先核实是否有独立事件能比较交接已完成后主管仍要求等待、同事先行后他人跟随，以及无人先行仍可自主离开。若补证显示差异主要随任务完成或主管统一放行变化，应重审关系解释。复审依据比较能否区分这些解释，研究者可采用其他可比事件或来源。",
+          "research_question": "同事何时能通过先行改变彼此对下班的判断，主管又何时能借交接环节要求任务已完成的员工继续在场？"
+        }
+      },
+      "topic_reasoning": {
+        "opportunity": {
+          "reasoning": "初审材料提出空间可达性与实际离岗选择可能分离。新增仓管和论坛亲历叙述把问题落实到离开前发生的互动，分别呈现交接时受到质疑及同事先行后出现跟随。"
+        },
+        "question": {
+          "reasoning": "聚焦常规下班时点，以具体离岗尝试为单位比较相近的规则和任务状态。午间审批、强制清场作为边界材料，避免将不同制度安排产生的差异归给关系。"
+        },
+        "deepening": {
+          "reasoning": "从是否拥有一般排程控制，推进到什么关系条件使离开在具体回合中实际可行。交接可以是任务所需，也可能给主管施加在场评价提供机会。同事先行则可能在正式规则未变时改变员工对离岗的判断。这些解释各有可观察序列和可削弱它的对照。",
+          "change_kind": "academic"
+        }
+      },
+      "literature_review": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3094103/",
+          "locator": "Schedule Control，第99–109行；测量和分析，第239–245行",
+          "reading": "relevant_body",
+          "claim": "所附正文核对显示，排程控制包括何时开始、结束及白天离岗，组织文化指标涉及因私离开被视为不投入。",
+          "scope": "一家白领组织的ROWE纵向部门对照。所附核对覆盖概念和测量，能排除把离岗控制或评价顾虑本身当作新发现。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122414531435",
+          "locator": "表3相关段落，第300–319行",
+          "reading": "relevant_body",
+          "claim": "所附正文核对显示，STAR同时改变排程控制和主管支持，部分员工更能在工作时段处理个人事务，研究也报告居家时数变化。",
+          "scope": "信息技术企业的组合干预。所附核对支持组织期待和实践会影响员工可调用的时间，尚未提供固定到岗条件下逐次交接、评价和先行的对照。"
+        },
+        {
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "locator": "出版方摘要，第46–48行",
+          "reading": "abstract",
+          "claim": "按所附摘要，作者报告纳入正式规则后，横向和纵向工作关系仍与工作评价及行为有关。",
+          "scope": "德国多个工作环境。摘要按作者自述处理，正文对离岗互动的覆盖待核。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+          "locator": null,
+          "reading": "supplied_claim",
+          "claim": "输入将研究概括为不同时间的被动在场可引发对可靠性或投入的印象。",
+          "scope": "可用于提出在场评价解释。正文位置、评价是否改变员工离岗及是否形成正式考核后果仍待核。"
+        }
+      ],
+      "run_id": "v6_qual_open_20261128_003",
+      "input_sha256": "35c8ad5dfaa649bc3e10fcd6d06d0d85956cc7af600e251bdcd59b1c56ea7aaa",
+      "exchange_sha256": null,
+      "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+      "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+      "collection_sha256": "81c7a6fd2cebf505ff24bf11bfa79ea2aa48e06db80398c6d0554422e2c3e7cb",
+      "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+      "evidence_sha256": "103b60b3d0c64c54ab8fcf76ee9ef02defe37da91ca4ffb671b09357d763c1a9",
+      "events_sha256": "1186ab2ac3d6b4768d2cda19fd8edda4f014134c7f280915a691acfc451a1add",
+      "conversion_sha256": "2a28ca9883bab7e5c981f94e2a8be0b32b30e1464cd73d95008dc4e7f53865b2",
+      "formal_eligible": false,
+      "research_actor": "01a2205c-60d1-7cf1-b8e6-02a3706c5294",
+      "critical_actor": "01a220f6-6b74-7d00-84b9-ef2ea2772c60",
+      "model": "gpt-6.2-sol",
+      "invocation_id": "01a22101-2dd0-7601-b71a-7cd98d61631f",
+      "critical_receipt": {
+        "events": "sociology_review_audit_20261128\\fresh_contract_events.jsonl",
+        "sha256": "cc537064b3a157a23fdef041fe7b8da516d36a8134e934f8a4afa3975e638651",
+        "response_sha256": "9bece49b6c6ba020ab18d9fd3d97d7d28a8f834a91dd5a2f73b1eb093dadb800"
+      },
+      "method_receipt": {
+        "scope": "本次独立设计裁决仅使用输入。两篇Kelly研究依据所附相关正文核对，Roscigno等依据摘要，在场印象研究依据所附理论主张。经验材料按亲历自述、采访转述、记者叙述和官方案例摘要各自的证据边界审查。",
+        "binding": "顶层调用标识、反诘回执和证据指纹沿用输入中的初审记录。材料采集回执单列。两组指纹均照录，未重新计算或核验。本次设计审查未调用工具，输入未给出本次新增调用凭证。",
+        "material_receipt": {
+          "status": "pending_independent_review",
+          "events_sha256": "3f11f30b60577df6a78eb17c2dbd256f0903620285236ce3a0ef2febdccac8e2",
+          "response_sha256": "28c2f5d09a910a94be4d86102635f3fc12ff158c1f8b16e8612010115ba06084",
+          "tool_events": 5,
+          "note": "输入记录采集共25项，超出24项上限1项。材料可用于本次定位比较缺口，正式资格仍为false。"
+        }
+      }
+    },
+    {
+      "stage": "独立设计审查",
+      "outcome": "materials_pending",
+      "academic_value": "pass",
+      "data_feasibility": "pending",
+      "question": "在正式下班安排和任务完成状态相近的到岗工作情境中，员工尝试按时离岗时，谁掌握放行所需的交接，谁能提出继续在场的要求，同事先行又在什么条件下改变其他员工的离岗选择？",
+      "reason": "追加采集提供了会议继续时员工提出次日补看并离岗、先走者受到主管负面评价、接班责任有明确制度安排等材料，细化了离岗受何种关系约束的判断。所核近邻正文已覆盖排程控制、离岗评价和主管支持。设计的实质增量在于区分责任移交、在场评价和先行信号各在什么条件下改变同一次离岗选择。两个批次仍缺研究用途已核、规则和任务状态可比较的独立事件，暂不冻结设计。",
+      "design": "以常规下班时点的一次具体离岗尝试为单位，优先在同一单位、相近岗位或同一岗位的不同可辨认回合中比较。逐案核对正式下班安排、当日任务、是否必须交接、接手是否已经发生、谁提出等待或允许离开、同事何时先走以及当事人何时离开。分别记录现场评价、预期后果与有独立依据的正式后果。优先比较交接完成后仍被要求留下、交接未完成而继续等待、提出替代安排后实际离开，以及同事先走后有人跟随或无人跟随的回合。对跟随事件尽量取得跟随者对自身任务和离岗决定的陈述。V2EX同一主帖跨批次合并，病房规则与成效按同一项目处理。午间案例、统一催离和病房项目汇总用于界定规则与行为指标的适用范围。复审以可追溯的独立事件、可核的比较条件和已核的研究用途为依据。",
+      "research_case": {
+        "core_question": "在正式下班安排和任务完成状态相近的到岗工作情境中，员工尝试按时离岗时，谁掌握放行所需的交接，谁能提出继续在场的要求，同事先行又在什么条件下改变其他员工的离岗选择？",
+        "context": "研究对象为持续到岗员工在常规下班时点的具体离岗尝试。仓管交钥匙、行政员工离开仍在进行的会议、受访者所述先走者遭评价，以及论坛所述同事跟随，分别提供待核的过程线索。病房项目提供接班职责的明确实例，适用范围限于该项目。",
+        "hypotheses_or_propositions": [
+          "若延迟随责任移交完成而消失，岗位协作解释获得支持。若任务和交接均已完成，员工仍因主管明确表达在场期待而留下，在场评价解释获得支持。",
+          "在任务、交接与统一放行条件相近时，同事先行可能改变其他员工对何时可以走的判断。若跟随随共同任务结束或主管统一表态同步发生，先行信号解释减弱。",
+          "员工有时可能通过提出可执行的替代安排离开，即使现场仍有继续参与的期待。应核对替代安排是否被接受、是否实际落实，以及主管回应是否改变离岗时间。"
+        ]
+      },
+      "method_assessment": {
+        "selected": null,
+        "paths": {
+          "quantitative": {
+            "status": "not_applicable",
+            "reason": "现有设计比较离岗互动序列。所附病房项目前后汇总涉及多项同期措施，缺少可连接任务、交接、评价和离岗时点的事件级数据。"
+          },
+          "secondary_interviews": {
+            "status": "unknown",
+            "reason": "两个批次有真实材料与事件标识，且记录了原报道或刊载页可读。仓管、会议离场和六点后等待各有比较价值，任务与规则的可比性和研究用途仍待核。"
+          },
+          "online_qualitative": {
+            "status": "unknown",
+            "reason": "两个批次有带材料与事件标识的公开文本回执。先行跟随的主要亲历材料来自跨批次重复的同一主帖，跟随者的任务与决定、适用制度和研究用途仍待核。",
+            "approach": "public_text"
+          }
+        }
+      },
+      "sociology_review": {
+        "value": {
+          "judgment": "pass",
+          "reason": "问题关乎正式下班安排如何转化成员工实际支配下班时间的能力。岗位是否有人接手、主管能否将先走评价为不投入、同事能否借相互观察协调离开，分别涉及责任分配、纵向评价权与横向协调。比较规则和任务状态相近的回合，可以判断何种社会关系在何种制度条件下约束离岗。"
+        },
+        "increment": {
+          "judgment": "pass",
+          "kind": "condition",
+          "basis": "substantive",
+          "reason": "相对于所核正文关于排程控制、因私离开受到评价和主管支持的解释，新增的研究内容是判断责任移交何时结束继续在场的义务、评价权何时仍能延长实际在场，以及同事先行何时影响离岗判断。仓管陈述将交钥匙、主管援引他部门仍在场与延迟连接起来。六点离开会议的报道提供了提出替代安排后实际离开的反例线索。六点后等待的受访者陈述则报告了先行者受到主管批评。现有材料足以界定具体的候选贡献，条件是否成立仍须通过可比事件检验。"
+        },
+        "theory": {
+          "judgment": "pass",
+          "reason": "责任移交对应可核对的接班职责与接手行为，在场评价对应具体发言、要求或后果，先行信号对应先走与跟随的时序以及当事人如何理解。共同任务结束、主管统一放行、临时增加任务和各自自愿留岗都可能产生相似时序。会议仍在进行时提出次日补看，使继续参与是否可替代成为可核条件。事业单位报道中九点离岗当天也在九点左右才完成工作，该回合只能检验任务结束与主管离场是否难以区分。"
+        },
+        "feasibility": {
+          "judgment": "pending",
+          "reason": "输入已记录若干候选网页可公开阅览，也提供了正式采集回执及材料标识。取得可比事件仍有可能，研究使用条件和满足比较要求的独立事件尚未核实。部分平台的访问失败只说明对应入口未取得正文。"
+        },
+        "evidence": {
+          "judgment": "insufficient",
+          "reason": "材料足以形成研究设计、明确竞争解释并界定若干边界。会议离岗事件的替代安排落实情况和主管答复未知，先行跟随材料缺跟随者的独立说明，仓管个案缺可核对的相近回合。病房规则和汇总结果来自同一项目，法院案例可核的是午间离开工位与事后处分。当前证据尚不足以确认核心比较可以实施或支持设计冻结。"
+        },
+        "development": {
+          "disposition": "verify",
+          "reason": "优先补核能让责任移交、主管明确要求与同事先行彼此区分的回合。一组规则相近且能核实任务、交接与离岗时序的独立事件，或同一组织中具有清楚区别的重复回合，均可改变设计判断。若补证显示等待主要随任务结束或统一放行变化，应相应修正关系解释。复审看证据能否解决区分问题，研究者可自行选择来源与组织场景。",
+          "research_question": "交接责任已有承接时，主管凭什么仍能要求员工留在现场，同事先行又在什么条件下会改变其他员工的离岗选择？"
+        }
+      },
+      "topic_reasoning": {
+        "opportunity": {
+          "reasoning": "两批材料共同提出一个可研究的差异。名义下班时间到来后，有人等候交接或他人离开，有人提出替代安排后离开，先走也可能引来主管批评。这些差异可用于追问实际支配下班时间的关系条件。"
+        },
+        "question": {
+          "reasoning": "聚焦常规下班时点的离岗回合，比较规则和任务进度相近时交接责任、评价表达与同事先行的不同组合。区分离开工位、离开单位与打卡，按材料能核实的行为记录。"
+        },
+        "deepening": {
+          "reasoning": "从一般排程控制推进到具体回合中责任如何转移、谁的评价会影响去留、谁的动作可被理解为可离开的信号。追加材料提供了替代参与、先走受批评和制度化接班三种可检验的线索，支持进一步区分这些关系条件。",
+          "change_kind": "academic"
+        }
+      },
+      "literature_review": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3094103/",
+          "locator": "Schedule Control，第99至109行；测量和分析，第239至245行",
+          "reading": "relevant_body",
+          "claim": "所附正文核对显示，排程控制包括开始、结束工作和白天离岗的时间，组织文化指标涉及因私离开被视为不投入。",
+          "scope": "一家白领组织的ROWE纵向部门对照。所核位置覆盖概念与测量。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122414531435",
+          "locator": "表3相关段落，第300至319行",
+          "reading": "relevant_body",
+          "claim": "所附正文核对显示，STAR同时改变排程控制和主管支持，研究报告部分员工更能在工作时段处理个人事务，也报告了居家工作时数变化。",
+          "scope": "信息技术企业的组合干预，所附段落涉及组织期待和时间安排，逐次交接、评价及先行的覆盖范围仍待查。"
+        },
+        {
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "locator": "出版方摘要，第46至48行",
+          "reading": "abstract",
+          "claim": "据作者摘要自述，纳入正式规则后，横向和纵向工作关系仍与工作评价及行为有关。",
+          "scope": "德国多个工作环境，正文对离岗互动的覆盖待核。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+          "locator": null,
+          "reading": "supplied_claim",
+          "claim": "输入将该研究概括为在不同时间被动在场可引发对可靠性或投入的印象。",
+          "scope": "供提出在场评价解释。正文位置、评价是否改变员工的离岗选择和是否形成正式后果均待核。"
+        }
+      ],
+      "run_id": "v6_qual_open_20261128_003",
+      "input_sha256": "35c8ad5dfaa649bc3e10fcd6d06d0d85956cc7af600e251bdcd59b1c56ea7aaa",
+      "exchange_sha256": null,
+      "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+      "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+      "collection_sha256": "81c7a6fd2cebf505ff24bf11bfa79ea2aa48e06db80398c6d0554422e2c3e7cb",
+      "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+      "evidence_sha256": "103b60b3d0c64c54ab8fcf76ee9ef02defe37da91ca4ffb671b09357d763c1a9",
+      "events_sha256": "932e7e44bd2deca412137b361fb5e5e3c865b462211e195a3b07979a18f4976d",
+      "conversion_sha256": "2a28ca9883bab7e5c981f94e2a8be0b32b30e1464cd73d95008dc4e7f53865b2",
+      "formal_eligible": false,
+      "research_actor": "01a2205c-60d1-7cf1-b8e6-02a3706c5294",
+      "critical_actor": "01a220f6-6b74-7d00-84b9-ef2ea2772c60",
+      "model": "gpt-6.2-sol",
+      "invocation_id": "01a221e3-63d0-7af0-9505-5cf331542462",
+      "critical_receipt": {
+        "events": "sociology_review_audit_20261128\\fresh_contract_events.jsonl",
+        "sha256": "cc537064b3a157a23fdef041fe7b8da516d36a8134e934f8a4afa3975e638651",
+        "response_sha256": "9bece49b6c6ba020ab18d9fd3d97d7d28a8f834a91dd5a2f73b1eb093dadb800"
+      },
+      "method_receipt": {
+        "scope": "本次审查仅使用输入，依据所附正文核对、摘要和理论主张判断近邻覆盖范围，按亲历自述、采访转述、记者叙述、机构自评与裁判资料的证据边界评价经验材料。",
+        "binding": "顶层调用标识、反诘回执和证据指纹照录上轮报告，适用范围为其原绑定记录。追加批次的指纹随补充回执单列。输入未提供本次独立审查的新调用凭证或合并证据指纹，所列指纹未经重新计算。",
+        "material_receipt": {
+          "status": "pending_independent_review",
+          "search_attempt": "attempt_001",
+          "events_sha256": "3f11f30b60577df6a78eb17c2dbd256f0903620285236ce3a0ef2febdccac8e2",
+          "response_sha256": "28c2f5d09a910a94be4d86102635f3fc12ff158c1f8b16e8612010115ba06084",
+          "tool_events": 5,
+          "note": "回执记载25项，超过24项上限1项。材料用于定位比较缺口，正式资格为false。"
+        },
+        "supplemental_material_receipt": {
+          "status": "pending_independent_review",
+          "search_attempt": "attempt_003",
+          "events_sha256": "8e4fe1b95609974e9f090f6591b036197ee8683d43d0348c9ef53d832b76ebf4",
+          "response_sha256": "562f664772438b8db242324c2c04472ba81fd630f16ee2d1cf5694fd78530134",
+          "conversion_sha256": "9454088aad93bc71fa2d21fa47bc05c9e9333b2137023c98164011c26014dbfc",
+          "tool_events": 5,
+          "formal_eligible": false,
+          "note": "回执记载12次查询和12次打开。V2EX先行跟随主帖与首批重复，病房两条记录来自同一项目。"
+        }
+      }
+    },
+    {
+      "stage": "独立设计审查",
+      "outcome": "pass",
+      "academic_value": "pass",
+      "data_feasibility": "pass",
+      "question": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+      "reason": "按定性理想型口径，现有材料足以冻结一项以公开文本为基础的比较设计。仓管采访呈现岗位交接与主管评价叠加，病房项目明确了责任承接的制度条件，六点会议离场和新人先走受批评的叙述区分了评价压力与实际离岗，论坛亲历叙述与事业单位采访呈现了观察他人行动后决定何时离开的过程。部门口头许可和管理方主动催离提供了区分同事先行与组织放行的边界案例。放行适用于类型建构、过程分析和反例比较。跟随者动机、正式处分和各机制的独立效果仍须按经验材料分别判断。",
+      "design": "以常规下班前后可定位的一次离岗过程或当事人明确描述的反复做法为分析单位，分别建构责任承接、主管评价与要求、同事先行信号三个可并存的理想型。逐案记录正式时点、已知任务与交接状态、谁提出要求或替代安排、行动顺序、文本实际记载的离岗行为与后果，缺项标为未知。用仓管叙述分析交钥匙与在场要求如何叠加，用病房制度及实施反馈明确责任承接的判准。对照六点会议离场与先走受批评的叙述，区分替代安排、实际离开、负面评价与正式后果。对照论坛先行跟随、事业单位等待与组织主动催离，判断共同任务结束、主管统一表态和同事先行在各叙述中能区分到什么程度。V2EX同一主帖两批合并，病房规则与成效作为同一项目的互补记录。午间案例用于界定审批、离开工位、离开厂区和事后处分的边界。跨场域比较以相同的行动环节和关系判准为基础，保留各场域的作息、岗位和制度差异。",
+      "research_case": {
+        "core_question": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+        "context": "聚焦到岗员工在常规下班附近由继续在场转为实际离开的过程。材料包括员工亲历自述、公开采访报道、机构制度与自评以及司法案例摘要。午间事件作为比较边界，病房制度与办公场景各自保留岗位条件。",
+        "hypotheses_or_propositions": [
+          "责任承接型关注仍需由谁承担的具体事务。若已有明确接手安排，叙述中仍出现以其他人员尚在场为理由的等待要求，应同时考察主管评价，而将交接是否实际完成单列。",
+          "主管评价与要求型关注谁能把先走评价为不积极、提出继续参与或主动要求离开。会议仍在进行时员工提出次日补看且实际离开，可用于考察参与方式的可替代性，主管答复与补看落实仍属未知。",
+          "同事先行信号型关注员工是否把他人的离开当作可以收拾或离岗的线索。若叙述同时涉及共同任务结束、主管离场或统一催离，应分别记录其时序。仅有先后顺序时，保留信号解释为待检验命题。"
+        ]
+      },
+      "method_assessment": {
+        "selected": "secondary_interviews",
+        "paths": {
+          "quantitative": {
+            "status": "not_applicable",
+            "reason": "研究实施以理想型和过程比较为主。院方汇总数据用于说明项目所报告的变化，无法分解多项同期措施的作用。"
+          },
+          "secondary_interviews": {
+            "status": "ready",
+            "reason": "公开采访与署名报道呈现了会议过程中的离场尝试、先行者受到的主管评价，以及带教师傅传达惯例后员工如何观察他人行动。所列三条可据回执免登录阅读。研究限于有出处的分析与概述，记录转述层级，减少可识别细节，遵守转载限制。整篇复制、再传播与 recontact 均未获得授权。",
+            "material_ids": [
+              "673f808093606ad4",
+              "bca346890c3c8516",
+              "a569c6c121f74b64"
+            ],
+            "search_attempt": "attempt_003",
+            "access": "verified",
+            "receipt_sha256": "fdd514277cf601a0b6b8314011ec38e9dd4f0992d1803b4d637079f1bead55a5",
+            "materials": [
+              "673f808093606ad4",
+              "bca346890c3c8516",
+              "a569c6c121f74b64"
+            ],
+            "reviewed_reuse": "修订后的问题聚焦常规下班时点的责任承接、主管在场要求与同事先行三种理想型，与 attempt_003 采集目标一致，所列真实核验材料直接支持比较分析。"
+          },
+          "online_qualitative": {
+            "status": "ready",
+            "reason": "所列主帖、院方电子报和法院案例据回执可免登录阅读，作为亲历叙述、接班制度与实施反馈、规则适用边界的补充。研究使用限于有出处的文本分析和概述。论坛分析减少可识别细节，院方材料遵守转载限制，不直接推定个体动机或逐人离岗时点。公开访问的核验范围为页面可读，复制与再发布许可仍待核实。",
+            "material_ids": [
+              "9377cee3523b989c",
+              "7bb7425ea88383e8",
+              "195fa546be110ebe",
+              "fc738bd698aa9357"
+            ],
+            "search_attempt": "attempt_003",
+            "access": "verified",
+            "approach": "public_text",
+            "receipt_sha256": "fdd514277cf601a0b6b8314011ec38e9dd4f0992d1803b4d637079f1bead55a5",
+            "materials": [
+              "9377cee3523b989c",
+              "7bb7425ea88383e8",
+              "195fa546be110ebe",
+              "fc738bd698aa9357"
+            ],
+            "reviewed_reuse": "修订后的问题聚焦常规下班时点的责任承接、主管在场要求与同事先行三种理想型，与 attempt_003 采集目标一致，所列真实核验材料直接支持比较分析。"
+          }
+        }
+      },
+      "sociology_review": {
+        "value": {
+          "judgment": "pass",
+          "reason": "问题把实际支配下班时间的能力放回岗位间的责任关系、上下级的评价权与同事间的协调关系中。若等待主要随责任承接而结束，解释重心在岗位协作。若等待在任务完成后仍随主管要求或他人先行变化，解释重心转向组织中的评价权与行动信号。不同答案会改变对正式作息如何在日常工作中得到落实的理解。"
+        },
+        "increment": {
+          "judgment": "pass",
+          "kind": "typology",
+          "basis": "substantive",
+          "reason": "两项已核的近邻相关正文分别覆盖排程控制和离岗评价的概念与测量，以及结合主管支持和排程控制的组织干预。相对于这些已核内容，本设计的增量是以具体离岗过程区分三类关系，并用行动顺序、要求的提出者与责任承担者辨认其叠加和边界。材料能支撑分类判准及其经验比较，三类关系的分布和实证解释留待分析。对近邻未读部分的覆盖保留判断。"
+        },
+        "theory": {
+          "judgment": "pass",
+          "reason": "责任承接以制度所定的接手职责、实际接手或替代安排辨认。主管评价与要求以可定位的质疑、批评、指令或许可辨认。同事先行以观察到谁先走、之后如何行动及叙述者怎样理解来辨认。六点会议仍在进行时员工离开，显示继续在场的要求与实际离岗可以并存。统一催离提供了集体离开的竞争解释，事业单位九点个案则显示任务结束与主管离场信号可能无法区分。"
+        },
+        "feasibility": {
+          "judgment": "pass",
+          "reason": "两批共13条材料记录，回执已核实所列来源可免登录阅读。现有公开采访、亲历叙述和制度事件材料足以实施有限的公开文本比较。来源权限仍按实际用途记录，页面公开可读支持本设计中的定位、分析和有出处的概述。复制、传播和超出此范围的研究使用条件待核。部分平台入口访问失败的记录不改变已取得材料的可读性。"
+        },
+        "evidence": {
+          "judgment": "pass",
+          "reason": "现有证据足以冻结三类理想型的判准、离岗过程的观察项和反例边界。仓管采访支持考察责任交接与在场评价如何叠加。病房规则和成效记录属于同一项目，支持界定接手职责与实施张力。会议离场支持区分提出替代方案、实际离岗与负面预期。跨批次重复的论坛主帖支持描述先行和跟随的时序，跟随者动机仍无直接证据。主管主动催离构成不同过程的边界案例，午间材料界定审批、工位离开和处分的观察边界。跨场域比较仅支持过程与类型认识，实际机制结论须在经验分析中逐案论证。"
+        },
+        "development": {
+          "disposition": "proceed",
+          "reason": "按既定理想型进入公开文本分析，并把同一事件的重复来源、各方表述与行为结果分开记录。若后续材料显示跟随主要发生在共同任务结束或管理方统一表态之后，应调整同事先行在该案例中的解释。若能定位接手之后仍被要求在场的过程，可进一步区分责任承接与评价权。后续以能否改变具体解释评估补证价值。",
+          "research_question": "当岗位责任已经有人承接，谁仍能要求员工继续在场，同事先行在什么条件下会成为其他员工采取行动的信号？"
+        }
+      },
+      "topic_reasoning": {
+        "opportunity": {
+          "reasoning": "正式下班时点到来后，材料呈现了交钥匙后等待、提出替代安排后离开、先走受批评、同事跟随以及管理方催离等不同过程，可以据此追问实际离岗如何受工作关系约束。"
+        },
+        "question": {
+          "reasoning": "以常规下班附近的离岗过程为中心，比较谁负责接手、谁能对继续在场提出要求、谁的先行能成为他人的行动线索。正式时点、任务进度、离开工位、离开单位和打卡分别按可见证据记录。"
+        },
+        "deepening": {
+          "reasoning": "从一般排程控制推进到责任承接、在场评价和同事先行三种可叠加关系的区分。用替代参与、主管催离和任务结束与离岗信号重合等情形界定各解释的适用范围。",
+          "change_kind": "academic"
+        }
+      },
+      "literature_review": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3094103/",
+          "locator": "Schedule Control，第99至109行；测量和分析，第239至245行",
+          "reading": "relevant_body",
+          "claim": "据所附正文核对，排程控制涉及开始、结束工作和白天离岗的时间。组织文化指标涉及因私事离开被视为不投入。",
+          "scope": "一家白领组织的ROWE纵向部门对照，已核范围为所列概念与测量段落。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122414531435",
+          "locator": "表3相关段落，第300至319行",
+          "reading": "relevant_body",
+          "claim": "据所附正文核对，STAR同时改变排程控制和主管支持。研究报告部分员工更能在工作时段处理个人事务，也报告了居家工作时数的变化。",
+          "scope": "信息技术企业的组合干预。已核段落涉及时间安排及组织期待，逐次离岗互动的正文覆盖范围待核。"
+        },
+        {
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "locator": "出版方摘要，第46至48行",
+          "reading": "abstract",
+          "claim": "据作者摘要自述，纳入正式规则后，横向和纵向工作关系仍与工作评价及行为有关。",
+          "scope": "德国多个工作环境，正文对下班离岗过程的覆盖范围待核。"
+        },
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+          "locator": null,
+          "reading": "supplied_claim",
+          "claim": "输入概括为在不同时段被动在场可能引发对可靠性或投入的印象。",
+          "scope": "用于提出在场评价解释。正文位置及其对实际离岗选择和正式后果的覆盖均待核。"
+        }
+      ],
+      "run_id": "v6_qual_open_20261128_003",
+      "input_sha256": "35c8ad5dfaa649bc3e10fcd6d06d0d85956cc7af600e251bdcd59b1c56ea7aaa",
+      "exchange_sha256": null,
+      "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+      "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+      "collection_sha256": "81c7a6fd2cebf505ff24bf11bfa79ea2aa48e06db80398c6d0554422e2c3e7cb",
+      "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+      "evidence_sha256": "103b60b3d0c64c54ab8fcf76ee9ef02defe37da91ca4ffb671b09357d763c1a9",
+      "events_sha256": "229fb1112dea3d984fded8c6d9329d6601473d8af92ec040c309265f937298bd",
+      "conversion_sha256": "2a28ca9883bab7e5c981f94e2a8be0b32b30e1464cd73d95008dc4e7f53865b2",
+      "formal_eligible": false,
+      "research_actor": "01a2205c-60d1-7cf1-b8e6-02a3706c5294",
+      "critical_actor": "01a220f6-6b74-7d00-84b9-ef2ea2772c60",
+      "model": "gpt-6.2-sol",
+      "invocation_id": "01a221ef-22b8-74c0-9e44-05124c58b4b1",
+      "critical_receipt": {
+        "events": "sociology_review_audit_20261128\\fresh_contract_events.jsonl",
+        "sha256": "cc537064b3a157a23fdef041fe7b8da516d36a8134e934f8a4afa3975e638651",
+        "response_sha256": "9bece49b6c6ba020ab18d9fd3d97d7d28a8f834a91dd5a2f73b1eb093dadb800"
+      },
+      "method_receipt": {
+        "scope": "本次复审仅依输入，逐类核对两批13条记录与近邻阅读范围。学术设计裁决依据用户指定的定性理想型口径。",
+        "binding": "顶层标识、反诘回执和证据指纹照录上轮原绑定记录。本次未获提供新的独立调用凭证或合并证据指纹，未重算所列指纹。学术设计放行与原回执的正式资格分别记录。",
+        "material_receipt": {
+          "status": "pending_independent_review",
+          "search_attempt": "attempt_001",
+          "events_sha256": "3f11f30b60577df6a78eb17c2dbd256f0903620285236ce3a0ef2febdccac8e2",
+          "response_sha256": "28c2f5d09a910a94be4d86102635f3fc12ff158c1f8b16e8612010115ba06084",
+          "tool_events": 5,
+          "note": "回执记载25项，超过24项上限1项，正式资格为false。六条材料在本次学术复审中按所载证据范围用于类型比较与边界判断。"
+        },
+        "supplemental_material_receipt": {
+          "status": "pending_independent_review",
+          "search_attempt": "attempt_003",
+          "events_sha256": "8e4fe1b95609974e9f090f6591b036197ee8683d43d0348c9ef53d832b76ebf4",
+          "response_sha256": "562f664772438b8db242324c2c04472ba81fd630f16ee2d1cf5694fd78530134",
+          "conversion_sha256": "9454088aad93bc71fa2d21fa47bc05c9e9333b2137023c98164011c26014dbfc",
+          "tool_events": 5,
+          "formal_eligible": false,
+          "note": "回执记载12次查询和12次打开。V2EX先行跟随主帖与首批重复，病房两条记录来自同一项目。"
+        }
+      }
+    }
+  ],
+  "status": "literature_budget_exhausted",
+  "formal_eligible": false,
+  "reality_first": true,
+  "method_paths": true,
+  "qual_search_receipts": true,
+  "explanation_first": true,
+  "issue_search": true,
+  "topic_reasoning_required": true,
+  "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+  "event_comparison_sha256": "e4b0d6171097cea1b3d4ab0d15e23ccc7c9b9c27ba284ff8da3b08e6709ec9f8",
+  "exchange_sha256": "0944cefa7dc7268c5f37304739dad2215196b40feae36935f47e1b24ef2da9c0",
+  "issue_plan_sha256": "7e617a1241de9abc6c12d7e38eb560221ceca497344eac2506b16264b75ae826",
+  "latest_search": {
+    "phase": "supplemental",
+    "verified_count": 8,
+    "collection_sha256": "cd2d75fc5c1a8eefb2c11ac54bf8f56e391b61a51ec586d1c881c7a92240d0a7"
+  },
+  "autonomous_steps": [
+    {
+      "action": "resume_deficit",
+      "count": 2,
+      "target": 5,
+      "deficit": 3,
+      "batch_limit": 3,
+      "used_batches": 1,
+      "remaining_batches": 2,
+      "recorded_search_events": 5,
+      "search_action_budget": 24,
+      "phase": "initial",
+      "origin": "controller",
+      "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+      "collection_sha256": "ad6b384804106ae9897aff5ffd6e552205dbad0bb1b6b8701fedc6f269eb5306",
+      "checkpoint_sha256": "18283d0bcb82d920bdd4ccfb9024a5b120a03a08fa4e812f102e16ed18dceea9",
+      "collection": {
+        "phase": "initial",
+        "count": 5,
+        "status": "preliminary_review",
+        "collection_status": "verification_pending"
+      }
+    },
+    {
+      "action": "resume_deficit",
+      "count": 1,
+      "target": 5,
+      "deficit": 4,
+      "batch_limit": 3,
+      "used_batches": 1,
+      "remaining_batches": 2,
+      "recorded_search_events": 5,
+      "search_action_budget": 24,
+      "phase": "supplemental",
+      "origin": "controller",
+      "collection_id": "COL_8523b877a329fc9232ae8df9",
+      "collection_sha256": "4bcf1f6ef270ba977ed9ad4734155d2e6ed8ccabcaacaa8ab37f86cdba6cfbc2",
+      "checkpoint_sha256": "e740dc9b9b0db0e6699b6c8cefbd4a5bd38f1dfa8c4cb7e45bae5fbe6c83825e",
+      "collection": {
+        "phase": "supplemental",
+        "count": 7,
+        "status": "supplemental",
+        "collection_status": "incomplete"
+      }
+    },
+    {
+      "action": "resume_deficit",
+      "count": 2,
+      "target": 5,
+      "deficit": 3,
+      "batch_limit": 3,
+      "used_batches": 2,
+      "remaining_batches": 1,
+      "recorded_search_events": 11,
+      "search_action_budget": 24,
+      "phase": "supplemental",
+      "origin": "controller",
+      "collection_id": "COL_8523b877a329fc9232ae8df9",
+      "collection_sha256": "1ccbc41e02b2171d6552e978e81cc3e9ac718cfd00fe0847a2e9fef29e09142d",
+      "checkpoint_sha256": "f1678836431b756755fea6379098c4f221360ed09b72bea663504f854e36400f",
+      "collection": {
+        "phase": "supplemental",
+        "count": 8,
+        "status": "supplemental",
+        "collection_status": "incomplete"
+      }
+    },
+    {
+      "action": "stop",
+      "count": 3,
+      "target": 5,
+      "deficit": 2,
+      "batch_limit": 3,
+      "used_batches": 3,
+      "remaining_batches": 0,
+      "recorded_search_events": 17,
+      "search_action_budget": 24,
+      "phase": "supplemental",
+      "origin": "controller",
+      "collection_id": "COL_8523b877a329fc9232ae8df9",
+      "collection_sha256": "cd2d75fc5c1a8eefb2c11ac54bf8f56e391b61a51ec586d1c881c7a92240d0a7",
+      "checkpoint_sha256": "10afcb3f1bef11c3b8da6e002771433a03952fc1780f2c648548f80ff487b023",
+      "failure_kind": "resource_limit",
+      "reason": "Effective literature target not reached within the remaining batch and search limits",
+      "unverified_count": 15
+    }
+  ],
+  "question": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+  "review_phase": "initial",
+  "research_method": {
+    "path": "secondary_interviews",
+    "approach": null,
+    "entry06": "planned",
+    "writing07": "planned",
+    "design05": "理论分析框架、研究命题、案例选择与二手访谈来源"
+  },
+  "initial_sha256": "e35855a683a287c316f38fc0edb333926b6c270b454d58ae286b3bc8aee947c6",
+  "stop_decision": {
+    "action": "stop",
+    "count": 3,
+    "target": 5,
+    "deficit": 2,
+    "batch_limit": 3,
+    "used_batches": 3,
+    "remaining_batches": 0,
+    "recorded_search_events": 17,
+    "search_action_budget": 24,
+    "phase": "supplemental",
+    "origin": "controller",
+    "collection_id": "COL_8523b877a329fc9232ae8df9",
+    "collection_sha256": "cd2d75fc5c1a8eefb2c11ac54bf8f56e391b61a51ec586d1c881c7a92240d0a7",
+    "checkpoint_sha256": "10afcb3f1bef11c3b8da6e002771433a03952fc1780f2c648548f80ff487b023",
+    "failure_kind": "resource_limit",
+    "reason": "Effective literature target not reached within the remaining batch and search limits",
+    "unverified_count": 15
+  }
+}

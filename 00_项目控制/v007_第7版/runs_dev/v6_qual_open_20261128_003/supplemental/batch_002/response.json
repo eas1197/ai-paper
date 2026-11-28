@@ -1,0 +1,63 @@
+{
+  "papers": [
+    {
+      "title": "Class Advantage and the Gender Divide: Flexibility on the Job and at Home",
+      "authors": ["Naomi Gerstel", "Dan Clawson"],
+      "journal": "American Journal of Sociology",
+      "year": 2014,
+      "doi": "10.1086/678270",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+      "abstract_locator": "出版商页面 Abstract，第1至3段。第120卷第2期的 Published In 栏标注2014年9月，页面顶部另显示2015年6月。",
+      "abstract_excerpt": "obtain little employee-based flexibility",
+      "abstract_summary": "作者以调查、访谈和观察比较四类医疗职业，认为职业地位影响员工取得工时弹性的能力，组织规则和性别期待共同塑造弹性的用途。护士更多用于照顾家庭，医生更多用于职业投入。本轮推论是，可调整工时的权利与实际离岗时间应分别观察。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“留得久是否就意味着缺少自主权”的反诘。掌握工时安排权的员工也可能把弹性用于工作。若到岗单位同样按岗位地位分配排班裁量权，这一解释可用于比较谁有权在常规下班时离开。摘要未检验交接完成与否、主管指令或同事先行对当日离岗的影响。"
+    },
+    {
+      "title": "Why Teamwork Fails: Obstacles to Workplace Change in Four Manufacturing Plants",
+      "authors": ["Steven P. Vallas"],
+      "journal": "American Sociological Review",
+      "year": 2003,
+      "doi": "10.1177/000312240306800203",
+      "metadata_url": "https://journals.sagepub.com/doi/10.1177/000312240306800203",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/000312240306800203",
+      "abstract_locator": "SAGE 页面 Abstract，第1至3段。第68卷第2期，2003年4月。",
+      "abstract_excerpt": "pitting a logic of standardization against managerial efforts to cultivate a logic of participation",
+      "abstract_summary": "作者比较四家制造工厂的团队改革，发现多数工厂收效有限，原有员工地位界线依旧存在。管理层偏重技术标准化，与鼓励员工参与的要求发生冲突。本轮推论是，团队制能否赋予员工交接裁量权，取决于哪些安排仍由管理层集中决定。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“实行团队制以后，员工是否就能自行安排交接”的反诘。若岗位之间存在任务依赖，且交接仍受管理层制定的标准约束，团队参与和交接决定权可能分属不同主体。摘要未观察具体交班行为、下班等待或同事离岗后的反应。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "竞速游戏：从时间规训到时间管控",
+      "reason": "检索结果核对到黄丹及《中国青年研究》2022年第6期。成功打开的虎嗅转载从导言开始，标注摘要的万维学术页面打开失败，原刊摘要未完成打开核验。"
+    },
+    {
+      "title": "熬夜：青年的时间嵌入与脱嵌",
+      "reason": "人大复印报刊资料的搜索结果显示陈晨、《中国青年研究》2021年第8期及摘要。虎嗅转载打开超时，未完成摘要的打开核验。"
+    },
+    {
+      "title": "加班依赖体制：再探青年农民工过度加班问题",
+      "reason": "打开的转载核对到孙中伟、黄婧玮及《中国青年研究》2021年第8期。页面提供转载导读，原刊摘要仍待核验。"
+    },
+    {
+      "title": "Getting a Job: Is There a Motherhood Penalty?",
+      "reason": "芝加哥大学出版社搜索结果显示题录及摘要。摘要关注招聘中的母职惩罚，情境和结果均离在职员工当日离岗较远，筛选后未继续打开。"
+    },
+    {
+      "title": "数字知识工人“加班同意”的双重社会建构",
+      "reason": "检索命中主管与同事在下班时点继续在场的材料，原刊为《上海对外经贸大学学报》，超出指定九刊。"
+    }
+  ],
+  "search_notes": [
+    "按进入逐篇筛选的独立题名计，发现7篇候选，核实题录5篇，其中3篇依靠转载或索引核对原刊信息。成功打开并取得原摘要2篇，均已纳入，距目标4篇差2篇。指定排重题名均未纳入。未下载全文。",
+    "动作复核共计25次，含15次搜索词查询和10次打开。最后一批打开前少算了1次动作，超出24次预算1次。打开失败也计入成本。",
+    "议题层先查 ASR schedule control、flexibility stigma、ideal worker，AJS face time、long hours、managers，以及中文的加班、同事、主管、在场与下班。先打开《加班依赖体制》的转载检查摘要，再以职业地位与工时弹性、团队协作与管理控制改写，取得两篇原刊摘要。追加 workplace peer effects 查询，九刊内仍缺少直接观察同事先行后的离岗行为的摘要证据。",
+    "对象层查询“通勤时间 时间分配 就近居住 到岗员工”，联用《经济研究》《管理世界》《中国青年研究》。近邻命中极端通勤与工作绩效研究，未取得能够解释常规下班时点离岗选择的合格摘要。",
+    "理论层实际查询 Gerstel Clawson Control over Time，以及 How Passive Face Time Affects Perceptions of Employees。前者为已打开的 Annual Reviews 综述页面，后者依据 SAGE 搜索结果中显示的摘要。两条理论线索均未计入候选论文数量。",
+    "THEORY|Control over Time: Employers, Workers, and Families Shaping Work Schedules|https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041400|综述提出，排班变化会沿相互关联的义务传导。若下班前确有任务衔接，同事先行可能改变余下人员的责任和可用时间。共享截止时间或面对同一主管也会造成同步行动，单凭离岗先后无法识别同事示范效应。",
+    "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/10.1177/0018726709353139?trk=article-ssr-frontend-pulse_little-text-block|办公室质性研究与实验指出，正常时段被看见可引发可靠性判断，时段外被看见可引发投入度判断。迁移到下班等待需要在场可被评价者观察，且员工预期该评价有后果。实际留岗效应仍待检验。"
+  ]
+}

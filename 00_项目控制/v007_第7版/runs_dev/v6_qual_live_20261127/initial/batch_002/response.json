@@ -1,0 +1,44 @@
+{
+  "papers": [
+    {
+      "title": "Getting to Know You: Welfare Fraud Investigation and the Appropriation of Social Ties",
+      "authors": ["Spencer Headworth"],
+      "journal": "American Sociological Review",
+      "year": 2019,
+      "doi": "10.1177/0003122418818198",
+      "metadata_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122418818198",
+      "abstract_locator": "SAGE 原刊第84卷第1期，页面 Abstract 栏第1至4段，短摘见第1段",
+      "abstract_excerpt": "fraud investigators creatively exploit clients’ social networks",
+      "abstract_summary": "作者访谈美国五州的福利欺诈调查人员，指出调查人员通过主动举报、向并不知情的熟人取证及查看社交网络活动来搜集信息。这些做法可能使受助人丧失项目资格，也可能损害其支持网络。对本研究的推论是，申诉小组从何处取证、如何使用这些信息，可能影响其对家庭能否自行安排通学的判断。",
+      "relevance": "substantive",
+      "relevance_reason": "论文解释了公共福利经办人员如何主动搜集个案证据，以及这类证据如何进入可能导致资格取消的执法过程。它能回应一个反诘：初拒理由相近的案件为何仍可能出现不同判断？小组核实的信息及其来源可能有差异。迁移条件是小组有权补充或核实个案信息，记录也足以辨别证据来源、核实动作和裁决理由。福利欺诈调查与交通申诉的目标不同，论文无法说明何种替代通学安排实际可行、何种援助形式足以解决困难，或两者分别与例外获准有何关系。跨辖区比较时，记录详略差异也可能影响对核实过程的观察。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "福利治理、政策执行与社会政策目标定位——基于N村低保的考察",
+      "reason": "《社会学研究》2017年第6期的题录可由原刊年度目录与学术机构页面交叉核对。人大社会学视野网搜索结果展示了摘要，但两处转载页的打开请求均超时，未取得实际打开返回的摘要。"
+    },
+    {
+      "title": "Getting Eyes in the Home: Child Protective Services Investigations and State Surveillance of Family Life",
+      "reason": "搜索结果定位到《American Sociological Review》第85卷第4期及学术机构保存的稿件摘要。优先完成了更贴近个案取证的候选，本文的出版商摘要页尚未打开核实。"
+    },
+    {
+      "title": "Street-Level Disparities: How Place Shapes the Process of Frontline Child Welfare Investigations",
+      "reason": "打开芝加哥大学出版社页面后确认原刊为 Social Service Review，超出指定九刊。"
+    },
+    {
+      "title": "Welfare and Work Sanctions: Examining Discretion on the Front Lines",
+      "reason": "已打开出版商页面并核实摘要。论文直接涉及行政听证、正当事由例外和一线裁量，原刊为 Social Service Review，超出指定九刊。"
+    }
+  ],
+  "search_notes": [
+    "本轮用完24个原生网页动作，其中检索13次、打开11次，按每条查询和每个打开目标分别计费，未下载全文。按最终逐篇跟踪的候选计，发现5篇，核实题录4篇，实际打开并取得摘要2篇。限定九刊内分别为发现3篇、核实题录2篇、取得摘要1篇，最终纳入1篇。已打开核对的另1篇刊外候选凭原刊信息排除，未计入取得摘要数。",
+    "议题层先查 SAGE 的 ASR street level discretion welfare eligibility exceptions adjudication deservingness organizational、芝加哥大学出版社的 American Journal Sociology street level bureaucrats discretion public benefits eligibility caseworkers exceptions，以及“社会学研究 社会 管理世界 行政裁量 低保 资格 变通 基层 例外 申请”。先打开两篇英文候选，均属 Social Service Review。随后用 American Sociological Review discretion eligibility welfare investigations Headworth abstract public services qualitative 定位纳入论文，SAGE 入口直接返回原刊第84卷第1期题录及摘要，未发生镜像跳转。另查 Fong Getting Eyes in the Home Child Protective Services investigations American Sociological Review abstract sage，获得后续候选。",
+    "中文议题层将宽检索改为《福利治理、政策执行与社会政策目标定位》的精确题名，分别加入原刊域名、年份卷期、知网域名、DOI 或英文题名线索，以及万方、维普、国家哲学社会科学文献中心。另检索《制度环境、自由裁量权与中国社会政策执行》加“摘要 社会学研究”，结果指向刊外论文。已按给定的四个题名排重。",
+    "对象层查询 school transport appeal exceptional circumstances local authority alternative arrangements personal transport budget gov uk ombudsman，再限定 lgo.org.uk，加入 decisions、school transport、exceptional circumstances、personal travel budget 和 appeal。实际打开的监察专员决定涉及16岁以上学习者。报告指出，小组把政策所列的两个例外示例当作穷尽条件，也未说明个人交通预算在家庭无法开车或车辆另有用途时如何解决问题。该案提供了比较裁决理由的线索，跨年龄组或辖区使用时须核对适用规则。另一份涉及小巴与个人交通预算的决定出现在检索结果中，打开超时。https://www.lgo.org.uk/decisions/education/school-transport/23-009-736?chapter=2",
+    "理论层查询 Michael Lipsky Street-Level Bureaucracy Dilemmas Individual Public Services Russell Sage Foundation，并打开基金会出版页，核对30周年增订版对逐案裁量与常规化处理的解释。",
+    "THEORY|Street-Level Bureaucracy: Dilemmas of the Individual in Public Services|https://www.russellsage.org/publications/book/street-level-bureaucracy|承担逐案判断的公共服务人员在案量大、目标含混、资源不足且拥有实质裁量时，可能借助筛选与常规程序处理案件，从而改变政策的实际交付。用于学校交通终审时，须先核实小组的裁量权限、处理压力及可调用的交通资源。"
+  ]
+}

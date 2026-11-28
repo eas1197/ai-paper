@@ -1,0 +1,64 @@
+{
+  "papers": [
+    {
+      "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+      "authors": ["Erin L. Kelly", "Phyllis Moen", "J. Michael Oakes", "Wen Fan", "Cassandra Okechukwu", "Kelly D. Davis", "Leslie B. Hammer", "Ellen Ernst Kossek", "Rosalind Berkowitz King", "Ginger C. Hanson", "Frank Mierzwa", "Lynne M. Casper"],
+      "journal": "American Sociological Review",
+      "year": 2014,
+      "doi": "10.1177/0003122414531435",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_locator": "SAGE 79 卷 3 期文章页，DOI 下方摘要，第 31–34 行",
+      "abstract_excerpt": "larger changes in schedule control and supervisor support",
+      "abstract_summary": "作者用信息技术企业的组群随机试验检验一项同时改变主管支持和工作时空安排的干预。员工的排程控制与主管支持改善较大，工作家庭冲突与家庭时间充足度改善较小。研究者推论是，组织调整可能改变员工实际可调用的时间。",
+      "relevance": "direct",
+      "relevance_reason": "可回应“员工只是因为工时变短才更有自主权”的反诘。试验没有发现工时增加，而摘要报告排程控制与主管支持改善。若到岗团队的主管同样有权调整工作实践与时间安排，这一机制可迁移。干预同时改变多项做法，不能据此拆分午间离岗规则、下班在场期待和同事互动各自的作用，也未考察通勤变化。"
+    },
+    {
+      "title": "Consequences of Routine Work-Schedule Instability for Worker Health and Well-Being",
+      "authors": ["Daniel Schneider", "Kristen Harknett"],
+      "journal": "American Sociological Review",
+      "year": 2019,
+      "doi": "10.1177/0003122418823184",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+      "abstract_locator": "SAGE 摘要段，第 31–33 行",
+      "abstract_excerpt": "unstable and unpredictable schedules",
+      "abstract_summary": "作者将排班不稳视为企业向劳动者转移风险的一种方式。美国服务业员工的福祉与排班不稳密切相关，工作生活冲突解释的关联多于家庭经济不安全。研究者推论是，即使通勤节省的分钟数相同，时段的可预期性也可能影响员工能否提前安排用途。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“只要腾出同样多的时间，就能同样使用”的反诘。如果到岗员工何时能离开会随任务交接、临时要求或人员覆盖而波动，时间可预期性的机制可以迁移。原研究考察雇主排班及福祉，不能说明固定班次内谁有权离岗，也无法区分同事协作需求与评价压力。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+      "reason": "已在 SAGE 参考文献及搜索记录中核对题录。SAGE 摘要入口打开超时，未验收摘要。"
+    },
+    {
+      "title": "Overwork and the Slow Convergence in the Gender Gap in Wages",
+      "reason": "已核对题名、作者、刊名、年份及 DOI。一次打开仅返回站点导航位置，另一次超时，未验收摘要。"
+    },
+    {
+      "title": "新型劳动时间控制与虚假自由——外卖骑手的劳动过程研究",
+      "reason": "中国人民大学社会学视野网索引展示了题录和摘要，引文记录补充了 DOI。实际打开摘要页超时。"
+    },
+    {
+      "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+      "reason": "已交叉核对林佳鹏、《中国青年研究》2022 年第 6 期。参考网打开结果落在相关文章区，题录平台打开超时，未验收摘要。"
+    },
+    {
+      "title": "虚设的下班“18∶30”：互联网企业超时劳动的边界政治",
+      "reason": "最后一轮查 DOI 时从引文发现该题名及原刊卷期。网页动作预算已用完，作者和摘要待核实。"
+    }
+  ],
+  "search_notes": [
+    "已核实并纳入 2 篇，距目标差 3 篇。按进入逐篇核查清单的九刊候选去重统计，发现 7 篇，核实题录 6 篇，打开网页并取得可定位原摘要 2 篇。实际使用 13 个搜索词和 11 个打开动作，共 24 个网页动作。未下载全文。两篇纳入论文的摘要均由 SAGE 入口直接返回，本轮未验收任何跳转至镜像的摘要。",
+    "议题层先查 `site:journals.sagepub.com American Sociological Review work schedule control flexibility stigma ideal worker work family Kelly Moen`、`site:journals.uchicago.edu American Journal Sociology work hours flexibility temporal work organization face time`、`社会学研究 社会 员工 工作时间 自主性 加班 在场 工作 家庭 摘要`，随即打开 SAGE 的组织干预摘要。首轮 AJS 查询未取得可纳入候选。",
+    "议题层随后查 `site:journals.sagepub.com American Sociological Review Schneider Harknett routine work schedule instability flexibility work family Moen well being`、`site:journals.sagepub.com American Sociological Review flexibility stigma work devotion long hours overwork Cha Weeden`，找到排班不稳、白领排程控制和超时劳动报酬三条线索，其中排班不稳通过摘要核实。中文改查 `社会学研究 时间 加班 互联网 劳动 控制 摘要 工时`、`中国青年研究 加班 在场 996 劳动 时间 自主 摘要`、`赶工或反内卷 中国青年研究 CNKI 黄丹 竞速游戏 时间管控`、`site:shxyj.ajcass.com 新型劳动时间控制与虚假自由 李胜蓝`、`新型劳动时间控制与虚假自由 DOI 社会学研究 中国知网`，得到平台劳动时间控制和大厂加班候选，也发现了紧贴下班边界的待核题名。",
+    "对象层查 `通勤时间 时间分配 就近居住 到岗 员工 经济研究 管理世界 通勤`，再改查 `通勤时间 管理世界 OR 经济研究 OR 社会学研究 居住 就业 通勤 工作时间 摘要`。命中的近邻集中于职住可达性、家庭陪伴、储蓄和工作绩效，未取得九刊中直接考察通勤缩短后离岗权限或腾出时间用途的可核验摘要。",
+    "理论层先从首轮 `schedule control flexibility stigma ideal worker` 的结果追查排程控制框架，再查 `passive face time Elsbach Cable Sherman organizational norms publisher abstract`。目前可提出两个有来源的机制：员工能否实际调整时段，以及可见在场是否被用于推断员工的可靠性或投入程度。两项机制都留下了午间离岗和同事互动的实证缺口。",
+    "THEORY|Rethinking the ClockWork of Work: Why Schedule Control May Pay Off at Work and at Home|https://journals.sagepub.com/doi/10.1177/1523422307305489|Kelly 和 Moen 将排程控制界定为员工对工作时点、地点和时长的掌控，并指出不同弹性安排赋予员工的控制权有别。用于分析午间离岗时，需要观察员工能否自行决定、是否需要批准以及安排能否实际执行。",
+    "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/10.1177/0018726709353139|Elsbach、Cable 和 Sherman 提出，办公室员工仅仅被看见，也可能引发观察者对其可靠性或投入程度的自发推断，具体取决于在场发生在常规工时内还是工时外。迁移到到岗团队时，需确认离岗是否可见，以及可见性是否进入评价。该机制只涉及被动观察，同事互动本身需要另行检验。",
+    "本轮九刊是纳入范围，检索依照议题优先和动作预算推进，未逐刊穷尽。开工时本地技能及项目文件的读取调用被环境拒绝，文献证据全部来自原生网页工具记录。"
+  ]
+}

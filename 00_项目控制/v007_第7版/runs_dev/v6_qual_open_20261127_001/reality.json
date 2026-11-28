@@ -1,0 +1,144 @@
+{
+  "phenomenon": "住房租客提出提前退租后，押金、租金和中介费如何结算，往往仍需经过协商。已打开的个案中，有租客在多轮交涉后报告达成结算，也有租客在发现账单差异后考虑放弃押金搬离，却面临合租方提出的转租或补偿要求。",
+  "search_focus": {
+    "stage": "现实线索初查",
+    "comparison_group": "已经入住、因居住或费用问题考虑提前退出、退出费用发生争议的住房租赁个案",
+    "comparison_dimensions": [
+      "退租触发事件",
+      "参与交涉的各方",
+      "租客采取的行动",
+      "对方提出的条件",
+      "可观察到的结算状态"
+    ],
+    "scope": "两个独立豆瓣个案的正文与行动节点可定位。百度贴吧提供跨平台线索，但两篇单帖均未能打开。公开发帖存在选择性，现有材料只支持个案比较，无法估计纠纷频率或各种做法的成功率。",
+    "gap": "缺少同一事件的对方说法及独立凭证。两个主案例分别为已结算自述和进行中求助，尚缺同等观察期内的可比结果。"
+  },
+  "sources": [
+    {
+      "url": "https://www.douban.com/group/topic/325100235/?_spm_id=MTQxOTgwOTMx",
+      "kind": "豆瓣小组原帖，租客亲历回顾",
+      "supports": "正文第60行记录前两轮协商及报警。第64行从准备检测和诉状写到中介协调，并在 results 段交代费用结算。",
+      "limits": "仅有发帖者叙述。未见检测报告、结算凭证或对方陈述，无法确认污染物是否超标。"
+    },
+    {
+      "url": "https://www.douban.com/group/topic/500713829/?_spm_id=MjU4NTMzNzM2",
+      "kind": "豆瓣小组原帖及楼主追评，租客亲历求助",
+      "supports": "正文第42行描述租客接手转租和自行查询水电账单。第53行描述交涉条件。第70行是楼主补充说明愿意放弃押金及合租方的要求。",
+      "limits": "账单差异及交涉经过来自发帖者，房东态度经合租方转述。未核验图片中的账单，也未见搬离或结算结果。第78行重复楼主追评，按同一事件处理。"
+    },
+    {
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=1749442",
+      "kind": "百度贴吧话题聚合页，原帖导流",
+      "supports": "相关贴推荐第99至100行可见到期后自述起诉的预览。第112至114行可见提前退租后自述中介以转租成功为退款条件的预览。",
+      "limits": "可核对聚合页显示的文字，两条单帖链接均返回403。预览仅作检索线索。"
+    }
+  ],
+  "event_packet": {
+    "sources": {
+      "S1": "https://www.douban.com/group/topic/325100235/?_spm_id=MTQxOTgwOTMx",
+      "S2": "https://www.douban.com/group/topic/500713829/?_spm_id=MjU4NTMzNzM2"
+    },
+    "events": [
+      {
+        "identity": "E1，租客因怀疑住房存在空气质量问题提出退租，与房东及中介协商",
+        "facts": [
+          {
+            "source_id": "S1",
+            "statement": "租客称，首次协商中房东提出扣押金、一个月房租及违约金。租客报警后未解决争议，第二次协商时房东同意只扣一个月房租。",
+            "use": "原帖正文第60行，定位初始条件和已采取的行动。",
+            "key": true,
+            "status": "single_account",
+            "sensitivity": "低，省略健康和家庭细节"
+          },
+          {
+            "source_id": "S1",
+            "statement": "租客称，再次沟通无果后联系检测机构并拟好诉状，随后由中介协调，最终拿回中介费、支付半个月房租，并停止推进诉讼。",
+            "use": "原帖正文第64行，从联系检测机构至 results 段，定位行动顺序与自述结果。",
+            "key": true,
+            "status": "single_account",
+            "sensitivity": "低"
+          }
+        ]
+      },
+      {
+        "identity": "E2，接手转租的合租者因水电账单争议考虑提前退出",
+        "facts": [
+          {
+            "source_id": "S2",
+            "statement": "租客称，过去向合租方分摊水电费，在觉得电费偏高后亲自向电网和水务查询，发现账单金额与收到的截图有差异。",
+            "use": "原帖正文第42行，定位查账行动与退租争议的起点。",
+            "key": true,
+            "status": "single_account",
+            "sensitivity": "低，省略账单金额和账户细节"
+          },
+          {
+            "source_id": "S2",
+            "statement": "发帖者称自己可以放弃押金并提前搬走，但合租方要求其找到接手者，或承担合租方另找住房的中介费。",
+            "use": "原帖正文第53行及楼主追评第70行，定位退出意向及合租方提出的条件。",
+            "key": true,
+            "status": "single_account",
+            "sensitivity": "低"
+          },
+          {
+            "source_id": "S2",
+            "statement": "据发帖者转述，合租方说房东要求到期搬走且不退押金。",
+            "use": "原帖正文第53行，作为当时传达给发帖者的信息。",
+            "key": false,
+            "status": "unverified",
+            "sensitivity": "低"
+          }
+        ]
+      }
+    ]
+  },
+  "search_log": {
+    "method": "原生网页搜索、打开网页、页内定位及点击原帖链接",
+    "native_actions": 19,
+    "queries": [
+      "site:douban.com/group/topic 房东 不退押金 我 起诉 退租 经历",
+      "site:zhihu.com 房东 不退押金 我 起诉 退租 亲身经历",
+      "site:tieba.baidu.com 房东 不退押金 退租 我 押金 维权",
+      "site:xiaohongshu.com 房东不退押金 我 退租 维权",
+      "租房 押金 退租 维权 后续 拿回 site:zhihu.com OR site:tieba.baidu.com OR site:weibo.com"
+    ],
+    "verification": [
+      "豆瓣退租协商原帖的无参数地址打开失败。随后用搜索命中的完整地址打开，核对正文第60及64行。",
+      "打开豆瓣合租查账原帖，核对正文第42、53行及楼主追评第70行。",
+      "打开贴吧话题聚合页，核对第99至100及112至114行，再分别点击两条原帖链接。"
+    ],
+    "access_failures": [
+      {
+        "target": "https://www.douban.com/group/topic/325100235/",
+        "result": "无参数地址无法访问，搜索结果中的完整地址可读。"
+      },
+      {
+        "target": "https://www.douban.com/group/topic/271444484/",
+        "result": "无参数地址无法访问，带参数页面打开后也未能重新定位搜索结果中的退押评论。"
+      },
+      {
+        "target": "https://www.zhihu.com/consult/people/990006937240616960",
+        "result": "通过搜索命中的带参数地址打开。结果摘要所示的公开咨询正文未在打开页面中重现。"
+      },
+      {
+        "target": "https://www.douban.com/group/720620/",
+        "result": "小组页可读，但未能在打开版本定位搜索索引中的拖延退押金帖子。"
+      },
+      {
+        "target": "https://tieba.baidu.com/p/8597359608",
+        "result": "点击原帖返回403，聚合页预览可读。"
+      },
+      {
+        "target": "https://tieba.baidu.com/p/8551866785",
+        "result": "点击原帖返回403，聚合页预览可读。"
+      },
+      {
+        "target": "weibo.com",
+        "result": "搜索工具报告 robots.txt 限制。本轮可见结果未核对到可纳入的当事人原帖。"
+      },
+      {
+        "target": "xiaohongshu.com",
+        "result": "本轮检索未返回可供打开核验的相关亲历笔记。"
+      }
+    ]
+  }
+}

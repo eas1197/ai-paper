@@ -1,0 +1,9 @@
+WARNING: failed to clean up stale arg0 temp dirs: 拒绝访问。 (os error 5)
+WARNING: proceeding, even though we could not create PATH aliases: 拒绝访问。 (os error 5) at path "C:\\Users\\hou\\.codex\\tmp\\arg0-windows\\codex-arg0iIT3xW"
+2026-11-27T14:47:53.315723Z  WARN codex_state::runtime: failed to open goals db at C:\Users\hou\.codex\goals_1.sqlite: failed to open goals DB at C:\Users\hou\.codex\goals_1.sqlite: error returned from database: (code: 14) unable to open database file
+2026-11-27T14:47:53.317042Z  WARN codex_rollout::state_db: failed to initialize state runtime: failed to initialize state runtime at C:\Users\hou\.codex: failed to open goals DB at C:\Users\hou\.codex\goals_1.sqlite: error returned from database: (code: 14) unable to open database file: error returned from database: (code: 14) unable to open database file: (code: 14) unable to open database file
+Reading additional input from stdin...
+2026-11-27T14:47:53.323314Z  INFO codex_cloud_config::service: Cloud config bundle load completed (none) elapsed_ms=0
+2026-11-27T14:47:53.327932Z  INFO codex_cloud_config::service: Cloud config bundle load completed (none) elapsed_ms=0
+2026-11-27T14:47:53.329420Z  INFO codex_http_client::custom_ca: using system root certificates because no CA override environment variable was selected codex_ca_certificate_configured=false ssl_cert_file_configured=false
+Error: failed to initialize in-process app-server client: 拒绝访问。 (os error 5)

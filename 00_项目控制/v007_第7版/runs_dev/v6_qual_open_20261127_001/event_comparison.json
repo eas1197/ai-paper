@@ -1,0 +1,72 @@
+{
+  "events": [
+    {
+      "identity": "E1，租客因怀疑住房存在空气质量问题提出退租，与房东及中介协商",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S1",
+          "statement": "租客称，首次协商中房东提出扣押金、一个月房租及违约金。租客报警后未解决争议，第二次协商时房东同意只扣一个月房租。",
+          "use": "原帖正文第60行，定位初始条件和已采取的行动。",
+          "key": true,
+          "status": "single_account",
+          "sensitivity": "低，省略健康和家庭细节"
+        },
+        {
+          "source_id": "S1",
+          "statement": "租客称，再次沟通无果后联系检测机构并拟好诉状，随后由中介协调，最终拿回中介费、支付半个月房租，并停止推进诉讼。",
+          "use": "原帖正文第64行，从联系检测机构至 results 段，定位行动顺序与自述结果。",
+          "key": true,
+          "status": "single_account",
+          "sensitivity": "低"
+        }
+      ],
+      "critical_gaps": [
+        "租客称，首次协商中房东提出扣押金、一个月房租及违约金。租客报警后未解决争议，第二次协商时房东同意只扣一个月房租。",
+        "租客称，再次沟通无果后联系检测机构并拟好诉状，随后由中介协调，最终拿回中介费、支付半个月房租，并停止推进诉讼。"
+      ]
+    },
+    {
+      "identity": "E2，接手转租的合租者因水电账单争议考虑提前退出",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S2",
+          "statement": "租客称，过去向合租方分摊水电费，在觉得电费偏高后亲自向电网和水务查询，发现账单金额与收到的截图有差异。",
+          "use": "原帖正文第42行，定位查账行动与退租争议的起点。",
+          "key": true,
+          "status": "single_account",
+          "sensitivity": "低，省略账单金额和账户细节"
+        },
+        {
+          "source_id": "S2",
+          "statement": "发帖者称自己可以放弃押金并提前搬走，但合租方要求其找到接手者，或承担合租方另找住房的中介费。",
+          "use": "原帖正文第53行及楼主追评第70行，定位退出意向及合租方提出的条件。",
+          "key": true,
+          "status": "single_account",
+          "sensitivity": "低"
+        },
+        {
+          "source_id": "S2",
+          "statement": "据发帖者转述，合租方说房东要求到期搬走且不退押金。",
+          "use": "原帖正文第53行，作为当时传达给发帖者的信息。",
+          "key": false,
+          "status": "unverified",
+          "sensitivity": "低"
+        }
+      ],
+      "critical_gaps": [
+        "租客称，过去向合租方分摊水电费，在觉得电费偏高后亲自向电网和水务查询，发现账单金额与收到的截图有差异。",
+        "发帖者称自己可以放弃押金并提前搬走，但合租方要求其找到接手者，或承担合租方另找住房的中介费。"
+      ]
+    }
+  ],
+  "event_count": 2,
+  "sensitivity": "仅公开亲历自述，去标识化使用。未见独立证据的事实仍是单方叙述；第二案未见最终结算。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "v6_qual_open_20261127_001",
+  "input_sha256": "5b0072edbc94e879884a8ff6620938c50be08a85c9ce8fa78796932db83fb822",
+  "exchange_sha256": null,
+  "reality_sha256": "003410e5f2f3ab9e03e65b094f54c5a20cf5d73cbc94250934a479d976e22060",
+  "formal_eligible": false
+}

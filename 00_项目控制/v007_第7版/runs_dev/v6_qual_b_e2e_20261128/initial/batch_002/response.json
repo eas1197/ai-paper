@@ -1,0 +1,44 @@
+{
+  "papers": [
+    {
+      "title": "何以为家：分而不散的农民家庭",
+      "authors": ["何奇峰", "周芯宇"],
+      "journal": "社会",
+      "year": 2024,
+      "doi": "",
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_locator": "《社会》官网第44卷第1期，149–177页，中文版摘要段落，第36–38行",
+      "abstract_excerpt": "家庭责任伦理跨越空间对分散在各地的家庭成员产生约束性力量",
+      "abstract_summary": "作者考察云南弥村四个农民家庭，指出分居是应对生计与社会变化的权宜安排。家庭遭遇重大变故时，承担责任的成员会调整个人生活与经济安排，家庭责任因而在空间分离后继续发挥约束作用。本研究据此推论，短住迁移中的照料要求可以沿离场前后的行动序列查证。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应搬离原居地便会解除家庭义务的反诘。迁移条件是公开记录能指认谁提出要求、义务何时被触发，以及住客是否因此改动停留计划。原研究的生计型分居与青年自愿短住动机不同，摘要中的家庭机制解释不到经营者的换宿要求、住客的服务评价或主动选择陶艺的理由。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+      "reason": "题录已核实为 Erin L. Kelly、Phyllis Moen、Eric Tranby 所著，American Sociological Review 2011年第76卷第2期，265–290页，DOI 10.1177/0003122411400056。SAGE 的 /doi/abs 入口打开超时，/doi 入口打开后的可见内容未返回摘要，PubMed 打开也未返回摘要。PMC 搜索结果显示原摘要，预算内未单独打开该记录，因此未纳入。"
+    },
+    {
+      "title": "流动中的过渡：“距离化”策略下的数字游民社区研究",
+      "reason": "国家哲学社会科学文献中心的卷期目录与参考文献均指向牛天、王从健，《中国青年研究》2025年第9期，56–63页。预算内仅取得目录与引文，缺少已打开的原摘要。"
+    },
+    {
+      "title": "从“以生产为中心”到“以生活为中心”——中国人工作—生活观念变迁研究（1990—2018）",
+      "reason": "人大社会学视野网的搜索结果显示吴玉玲、孙中伟发表于《社会学研究》2023年第4期，含内容提要，但打开页面超时。提要讨论总体工作、家庭与休闲观念的变迁，较难定位具体义务如何触发时间调整。"
+    },
+    {
+      "title": "“青年养老院”：主要特征、兴起缘由及辩证审思",
+      "reason": "知网题录显示张艳斌、田一博发表于《北京青年研究》2026年第1期，期刊超出本轮范围。"
+    }
+  ],
+  "search_notes": [
+    "截至2026-11-28共用24个原生网页动作，按单条计为15次查询、9次打开。未下载全文。筛出5篇进入逐篇判断，5篇的题名、作者、原刊与年份可核对，其中4篇在九刊内。成功打开并核读1篇目标论文的原摘要，交付1篇，距目标还差1篇。理论资料另计。横向查询未逐一覆盖九刊。",
+    "议题层检索「社会学研究 社会 时间自主 工作 家庭 边界 数字游民 摘要」「American Sociological Review work schedule control flexibility stigma family time autonomy overtime abstract」。随后以《社会》官网域名加「时间 劳动 家庭 边界 照料 青年」找到家庭责任案例并打开摘要。以《社会学研究》官网域名加「时间 工作 家庭 休闲 时间 义务 青年 数字劳动」，再以「从以生产为中心到以生活为中心 社会学研究 摘要 工作 休闲」追查观念变迁论文。用英文题名加「Sage pubmed Kelly Moen」核对时间控制论文，出版商两个入口的打开结果未给出可定位的摘要文本。",
+    "对象层检索「中国青年研究 青年养老院 数字游民 时间 休息 摘要」，用「青年养老院 主要特征 辩证审思 中国青年研究」核对同题论文的实际刊名。再查「青年养老院 义工换宿 数字游民 续住 退宿」「青年养老院 提前退宿 回去上班 住客 数字游民」「数字游民 中国青年研究 共居 流动 摘要」。发现提前退宿的报道线索和数字游民社区论文，随后用「流动中的过渡 距离化 牛天 王从健 中国青年研究 摘要」及「流动中的过渡 数字游民社区」加知网或机构域名追查，核实卷期目录。报道线索仍待打开核对原定停留与实际离场。",
+    "理论层检索「linked lives life course Elder 1998 linked lives abstract publisher」及「Accounts Scott Lyman 1968 excuses justifications American Sociological Review abstract publisher」。前者找到工作与家庭时间控制综述，后者找到行动解释的经典论文。两项均打开了可定位的摘要。",
+    "THEORY|Control over Time: Employers, Workers, and Families Shaping Work Schedules|https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041400|工作和家庭日程由相互依赖的人共同塑造，一人日程变动会传导给关系中的其他人。适用于材料可以追踪雇主、亲属或共同居住者之间的排程依赖及协商过程。",
+    "THEORY|Accounts|https://openurl.ebsco.com/contentitem/doi%3A10.2307/2092239?id=ebsco%3Adoi%3A10.2307%2F2092239&sid=ebsco%3Aplink%3Acrawler|当行动受到质疑，行动者可通过减轻自身责任或论证行为合理来弥合行动与期待之间的落差。分析休息的正当性时，适用于能识别评价者、其期待和当事人回应的材料。"
+  ]
+}

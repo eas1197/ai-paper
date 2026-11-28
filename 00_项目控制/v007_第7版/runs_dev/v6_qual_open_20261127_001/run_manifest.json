@@ -1,0 +1,196 @@
+{
+  "run_id": "v6_qual_open_20261127_001",
+  "theme": "开放观察公开网络亲历事件，自主选题，主题待定",
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "scope": "experimental",
+  "workload": {
+    "00": {
+      "attempts": 2,
+      "model_calls": 6,
+      "timeout_seconds": 720
+    },
+    "01": {
+      "cssci_journals": 2,
+      "pku_journals": 2,
+      "distinct_journals": 4
+    },
+    "02": {
+      "fulltext_style_min": 2
+    },
+    "03": {
+      "source_papers": 2,
+      "examples": 4
+    },
+    "04": {
+      "abstract_target": 10,
+      "core_fulltext_target": 2,
+      "views": 2,
+      "context_searches": 2
+    },
+    "05": {
+      "candidates": 2,
+      "explanations": 2,
+      "follow_up_searches": 1,
+      "iterations": 2,
+      "independent_reviews": 1
+    },
+    "06": {
+      "primary_models": 1,
+      "robustness_models": 1,
+      "references_per_method_min": 1,
+      "repetitions": 1,
+      "sample_max": 500,
+      "maxiter": 80
+    },
+    "07": {
+      "drafts": 1,
+      "max_words": 2500,
+      "revisions": 1,
+      "independent_reviews": 1
+    },
+    "08": {
+      "review_rounds": 1,
+      "independent_reviews": 1
+    },
+    "09": {
+      "cssci_candidates": 1,
+      "pku_candidates": 1,
+      "send": false
+    },
+    "10": {},
+    "11": {
+      "max_batches": 1,
+      "topic_batches_per_phase": 3,
+      "timeout_seconds": 480,
+      "native_search_actions": 24
+    },
+    "12": {
+      "migration_jobs": 1
+    }
+  },
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+  "registry_sha256": "80853e5a7bff2488b5c9e78199206725da6c1153d49e6e4b380e212a69ae3c85",
+  "stages": [
+    {
+      "module": "00",
+      "limits": {
+        "attempts": 2,
+        "model_calls": 6,
+        "timeout_seconds": 720
+      },
+      "status": "planned"
+    },
+    {
+      "module": "01",
+      "limits": {
+        "cssci_journals": 2,
+        "pku_journals": 2,
+        "distinct_journals": 4
+      },
+      "status": "planned"
+    },
+    {
+      "module": "02",
+      "limits": {
+        "fulltext_style_min": 2
+      },
+      "status": "planned"
+    },
+    {
+      "module": "03",
+      "limits": {
+        "source_papers": 2,
+        "examples": 4
+      },
+      "status": "planned"
+    },
+    {
+      "module": "04",
+      "limits": {
+        "abstract_target": 10,
+        "core_fulltext_target": 2,
+        "views": 2,
+        "context_searches": 2
+      },
+      "status": "planned"
+    },
+    {
+      "module": "05",
+      "limits": {
+        "candidates": 2,
+        "explanations": 2,
+        "follow_up_searches": 1,
+        "iterations": 2,
+        "independent_reviews": 1
+      },
+      "status": "planned"
+    },
+    {
+      "module": "06",
+      "limits": {
+        "primary_models": 1,
+        "robustness_models": 1,
+        "references_per_method_min": 1,
+        "repetitions": 1,
+        "sample_max": 500,
+        "maxiter": 80
+      },
+      "status": "planned"
+    },
+    {
+      "module": "07",
+      "limits": {
+        "drafts": 1,
+        "max_words": 2500,
+        "revisions": 1,
+        "independent_reviews": 1
+      },
+      "status": "planned"
+    },
+    {
+      "module": "08",
+      "limits": {
+        "review_rounds": 1,
+        "independent_reviews": 1
+      },
+      "status": "planned"
+    },
+    {
+      "module": "09",
+      "limits": {
+        "cssci_candidates": 1,
+        "pku_candidates": 1,
+        "send": false
+      },
+      "status": "planned"
+    },
+    {
+      "module": "10",
+      "limits": {},
+      "status": "planned"
+    },
+    {
+      "module": "11",
+      "limits": {
+        "max_batches": 1,
+        "topic_batches_per_phase": 3,
+        "timeout_seconds": 480,
+        "native_search_actions": 24
+      },
+      "status": "planned"
+    },
+    {
+      "module": "12",
+      "limits": {
+        "migration_jobs": 1
+      },
+      "status": "planned"
+    }
+  ],
+  "writing_policy": {
+    "deliverable": "full",
+    "explicit_full_paper": true
+  },
+  "writing_policy_sha256": "16c49c65dedb97a943214b0bf5ebbb31a30be2659f92b784e71789e0ef472736"
+}

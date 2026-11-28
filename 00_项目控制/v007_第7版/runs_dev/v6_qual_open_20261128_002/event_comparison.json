@@ -1,0 +1,116 @@
+{
+  "events": [
+    {
+      "identity": "E1，平台租约退出，取消后重提",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S1",
+          "statement": "租客称先发起转租，后申请退租，为再尝试转租而取消退租，重提时发现计时重置且页面显示多扣约半个月房租。",
+          "use": "当事人自述，定位原申请、状态变化和报价差额",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "投诉页面记录了商家回复和之后的自动完成状态，最终实际扣款与退款情况未知。",
+          "use": "核对投诉页面状态，结算结果按缺失处理",
+          "key": true,
+          "status": "unverified"
+        }
+      ],
+      "critical_gaps": [
+        "租客称先发起转租，后申请退租，为再尝试转租而取消退租，重提时发现计时重置且页面显示多扣约半个月房租。",
+        "投诉页面记录了商家回复和之后的自动完成状态，最终实际扣款与退款情况未知。"
+      ]
+    },
+    {
+      "identity": "E2，临近租期结束交房，随后追索押金",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S2",
+          "statement": "租客称在租约结束前约两周交还住房且未要求退还剩余租金，对方先承诺退款，后以提前离开为由提出违约扣款。",
+          "use": "当事人自述，区分实际搬离、承诺结算和后续扣款主张",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "租客称多次提交立案材料后进入司法程序，随后收到和解申请，并收到押金和有关费用。",
+          "use": "定位交涉过程和自报到账，司法介入的作用待检验",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "租客称在租约结束前约两周交还住房且未要求退还剩余租金，对方先承诺退款，后以提前离开为由提出违约扣款。",
+        "租客称多次提交立案材料后进入司法程序，随后收到和解申请，并收到押金和有关费用。"
+      ]
+    },
+    {
+      "identity": "E3，先找到接续租客，后追讨押金",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S3",
+          "statement": "评论者称提前找好了接续租客，押金仍拖了约三四个月，发生争执后对方才肯退。",
+          "use": "当事人自述，用于检查找到接续人选是否足以推动及时结算。实际承租与到账待核",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "评论者称提前找好了接续租客，押金仍拖了约三四个月，发生争执后对方才肯退。"
+      ]
+    },
+    {
+      "identity": "E4，撤回搬离意向后再次通知，社区调解",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S4",
+          "statement": "报道转述租客先表示搬离、再表示续住、最后再次通知搬离。租客主张再次通知仍满足合同期限，出租方以已登记续租为由要求转租或扣款。",
+          "use": "双方法各自立场由同一媒体转述，用于比较何种通知被承认",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S4",
+          "statement": "报道记载调解结果为全额退押金，同时租客另付一笔补偿。",
+          "use": "转述结算结果，区分名义退还和净收回",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "报道转述租客先表示搬离、再表示续住、最后再次通知搬离。租客主张再次通知仍满足合同期限，出租方以已登记续租为由要求转租或扣款。",
+        "报道记载调解结果为全额退押金，同时租客另付一笔补偿。"
+      ]
+    },
+    {
+      "identity": "E5，约定转租成功才退押金，最终未转成",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S5",
+          "statement": "报道记载双方约定转租成功后退押金，转租未成，法院调解结果为双方无需再向对方支付或赔偿。",
+          "use": "报道转述，作为预先明确结算条件的对照",
+          "key": true,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "报道记载双方约定转租成功后退押金，转租未成，法院调解结果为双方无需再向对方支付或赔偿。"
+      ]
+    }
+  ],
+  "event_count": 5,
+  "sensitivity": "正文省略姓名、账号、地址、投诉编号和可识别截图。为满足复核要求保留公开链接，链接仍可回溯发帖者，材料属于去标识而非匿名化。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "v6_qual_open_20261128_002",
+  "input_sha256": "1d3deee6bf412d33c8f816caaffd296fc4dd3cc0ab99931fa46150fb779d9a9d",
+  "exchange_sha256": null,
+  "reality_sha256": "08671e47ad04e8afbf9d22e9c47cede9d22a686b9c19929e242e0adfb1b2d8bd",
+  "formal_eligible": false
+}

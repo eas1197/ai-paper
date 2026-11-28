@@ -1,0 +1,236 @@
+Independent final S06 re-review of this same study after the second evidence repair. Verify any plausible firsthand comparison using native search, limit 24 actions. Prefer public firsthand actor accounts; official documents corroborate. Determine whether the original comparison standard (same council, same verified policy period, similar initial reasons, different final appeal decisions) and academic depth are met. Do not change the topic or requirement. Return JSON only in Chinese with outcome (academic_pass or depth), academic_value, question, reason, verified_pairs, and exact evidence gaps. Here are the previous review and new evidence:
+{
+  "outcome": "depth",
+  "academic_value": "revise",
+  "reason": "实时复核官方公开记录后，核实配对为零。斯温登两案确认属于同一地方政府，且均于2025年9月作出第二阶段裁决，但拒绝案未公开初拒理由、适用政策版本或对例外情形的具体认定。现有材料支持研究申诉小组如何在书面裁决中说明例外及援助形式。斯温登准予案同时记载了例外认定和个人交通预算的授予，仍缺少证据判断预算的可用性是否改变了认定门槛。",
+  "question": "在同一英格兰地方政府、同一适用政策期且初拒理由实质相近的学校交通最终申诉中，小组如何依据家庭实际通学条件认定例外？哪些裁决前或审议中的记录能够证明，某项当时获授权且实际可用的援助影响了例外认定？",
+  "verified_pairs": [],
+  "exact_remaining_gaps": [
+    {
+      "候选": "斯温登，25-014-325／25-016-259",
+      "已核实": "两案为同一地方政府、同月第二阶段裁决。前案明确认定例外并授予个人交通预算，家庭未领取。后案确认申诉被驳回，监察专员公开文书仅说明理由已另函告知。",
+      "缺口": "前案初拒摘要只写不符合资格，步行距离与陪同步行理由见后续复核。后案需要初拒通知、两阶段裁决理由和适用政策记录，以确认初拒理由是否实质相近、是否适用同一版本，以及小组是否明确审议并拒绝例外。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-014-325",
+          "位置": "第27至37、45至49段。直开超时，核对了官方站点索引正文。"
+        },
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-016-259",
+          "位置": "第14至19、24段。"
+        },
+        {
+          "网址": "https://www.swindon.gov.uk/download/downloads/id/11649/home_to_school_travel_policy_20252026.pdf",
+          "位置": "封面所载2025年8月版及第2.1、7.2.3节。政策文本可核对资格规则和申诉程序，个案适用仍需案件记录。"
+        }
+      ]
+    },
+    {
+      "候选": "莱斯特郡，25-005-688／24-010-669",
+      "已核实": "两案同属莱斯特郡，均涉及2024年9月入学后的交通资格。前案因未申请较近学校遭初拒，2025年5月第二阶段以招生安排相关的例外情形准予免费交通。后案记录了对较远且在适用学区范围外的学校的申请拒绝。",
+      "缺口": "后案缺少最终阶段裁决及例外审议理由。还需核实后案适用的具体政策条款，以及学区条件在初拒中的作用，才能判断两案初拒理由是否实质相近。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-005-688",
+          "位置": "第15至18、22至30段。直开超时，核对了官方站点索引正文。"
+        },
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/24-010-669",
+          "位置": "第8至11段。"
+        },
+        {
+          "网址": "https://www.leicestershire.gov.uk/sites/default/files/2023-09/Mainstream-home-to-school-transport-policy-2024-25.pdf",
+          "位置": "2024/25政策原PDF本轮返回403。前案公开裁决第15至18段载明政策版本并概述条款。"
+        }
+      ]
+    },
+    {
+      "候选": "萨里，21-010-100",
+      "已核实": "初拒理由为就读学校并非离家最近的学校，最终阶段小组明确认定无足以提供免费交通的例外情形。萨里官方会议记录确认2022年实施过政策变更。",
+      "缺口": "需取得该案地方政府裁决日期或明确援引的政策版本，并找到同一适用政策期内、初拒理由实质相近且最终阶段明确准予例外的萨里案。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/21-010-100",
+          "位置": "第6、8至12段。直开超时，核对了官方站点索引正文。"
+        },
+        {
+          "网址": "https://mycouncil.surreycc.gov.uk/mgAi.aspx?ID=38279",
+          "位置": "2023年12月6日第50/23项，报告目的段。"
+        }
+      ]
+    },
+    {
+      "候选": "雷德布里奇，24-020-173／23-000-527",
+      "已核实": "两案同属雷德布里奇，均涉及最近合适学校的判断。前案记录2025年4月交通援助小组以例外理由准予。后案涉及较早的学校安置及特别教育需要法庭程序，监察专员说明其无法就关联申诉事项作出认定。",
+      "缺口": "需确认前案4月听证确为最终阶段，后案有明确的最终阶段例外拒绝，以及两案实际适用同一版本的政策。法庭同意令中的交通费用承担条款无法确立地方政府小组的例外裁决。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/special-educational-needs/24-020-173",
+          "位置": "第30至35、43至48段。"
+        },
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/23-000-527",
+          "位置": "第37至44段。"
+        }
+      ]
+    },
+    {
+      "候选": "补查线索，斯塔福德郡25-012-198",
+      "已核实": "本案因就读学校并非最近合适学校而遭初拒，第二阶段小组明确拒绝例外。小组记录提及同一家庭另一名孩子此前获得交通援助，并指出情形已有变化。",
+      "缺口": "另一名孩子的初拒理由、实际适用的政策期、是否经最终阶段申诉及是否基于例外获准均未建立。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-012-198",
+          "位置": "第8至12段。"
+        }
+      ]
+    },
+    {
+      "候选": "援助选项影响例外认定的机制",
+      "缺口": "需要两案的听证材料、同期小组纪要或裁决理由，明确何时提出了哪些个案可调用的援助、谁有权批准、当时能否落实、小组如何评价家庭可行的替代安排，以及援助可用性如何进入准予或拒绝例外的理由。需要足够的个案材料区分援助选项的作用与家庭照护和陪同条件、学校可达性、地方授权及证据差异。预算在准予时被授予、后来未领取，只能分别确认裁决内容与领取结果。",
+      "来源定位": [
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-014-325",
+          "位置": "第27、31至34、45至49段，记载两学年的援助形式、2025年例外理由和预算未领取。"
+        },
+        {
+          "网址": "https://www.lgo.org.uk/decisions/education/school-transport/25-016-259",
+          "位置": "第16至19段，记载提交材料、听证、驳回及另行发函。"
+        }
+      ]
+    }
+  ],
+  "model": "gpt-6.2-sol",
+  "invocation_id": "01a21d9e-5847-7d53-bb32-656c9e4bbf49",
+  "evidence_sha256": "eb3319ae833d7cd9b5a2373fda5959b2b397094243744d72b13fee16448d01ff",
+  "supplement_sha256": {
+    "s06_repair_001/prompt.txt": "923ffd94f3fd6773597adbfaa8ddc526ebb6e54c1db8dc599bbcf65743b8d0f6",
+    "s06_repair_001/events.jsonl": "24a235011e472412486e058cdb0be385508c388b5f1a520329c858b2bda6a81b",
+    "s06_repair_001/response.json": "8374f8445cfd621496809d1680392eae6723d829cd1c50cc99027b3c884fe503",
+    "s06_repair_001/review_prompt.txt": "1b3e13f04a597ffa907e9e66c1ac239251d76f1997bf54ba95cd8e052233144e",
+    "s06_repair_001/review_events.jsonl": "3180cc5a64eb4dd01e849dc2535c2018c5a8c2d5f3609aef4b8e1b482392bc68",
+    "s06_repair_001/review_response.json": "c08fd5cee5957678c708d06309c6f04c7673854a58f692e45cb9611c5a013746"
+  }
+}
+
+{
+  "search_log": {
+    "scope": "Final S06 evidence repair for the existing English school transport appeals question",
+    "checked_on": "2026-11-27",
+    "native_search_queries_used": 16,
+    "query_limit": 24,
+    "queries": [
+      "Mumsnet Swindon school transport appeal refused won lost",
+      "Mumsnet Surrey school transport appeal refused upheld won",
+      "Mumsnet Staffordshire school transport appeal refused won",
+      "Reddit England council school transport appeal refused successful parent",
+      "site:mumsnet.com/talk \"school transport\" \"appeal\" \"won\"",
+      "site:mumsnet.com/talk \"school transport\" \"appeal\" \"unsuccessful\"",
+      "\"school transport\" \"appeal\" \"Surrey\" parent forum refused",
+      "\"school transport\" \"appeal\" \"Staffordshire\" parent forum won",
+      "Kent \"school transport\" \"appeal\" \"refused\" parents said failed",
+      "site:mumsnet.com Kent \"transport\" \"appeal\" \"refused\" school",
+      "Surrey parent \"school transport\" \"appeal\" \"we won\" OR \"we lost\"",
+      "Swindon OR Staffordshire \"school transport\" \"appeal\" \"we appealed\" OR \"our appeal\"",
+      "Kent school transport appeal \"we lost\" OR \"appeal was rejected\" parent taxi 2024",
+      "Surrey \"school transport\" \"appeal\" \"successful\" parents interview",
+      "Swindon Staffordshire school transport appeal family parent interview rejected overturned",
+      "site:mumsnet.com \"school transport\" \"appeal was refused\" OR \"lost our appeal\""
+    ]
+  },
+  "firsthand_events": [
+    {
+      "id": "S06-E01",
+      "council": "Kent County Council",
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://www.mumsnet.com/talk/special_educational_needs/4994748-sen-school-transport-we-won-appeal-but",
+      "source_locator": "Opening post, 27 January 2024",
+      "initial_decision": "School transport application refused twice. The post gives the parent's case for assistance and does not state the council's reasons for refusal.",
+      "procedure": "Parent took the refusals to appeal. The appeal stage is unspecified.",
+      "final_decision": "Appeal succeeded and daily taxi transport was awarded. The panel's reasoning is unspecified.",
+      "decision_date": "2024-01-26",
+      "date_basis": "Parent reports receiving the result the day before posting. The date is the notification date."
+    },
+    {
+      "id": "S06-E02",
+      "council": "Swindon Borough Council",
+      "policy_period": null,
+      "source_type": "Public parent interview with a contemporaneous chronology supplied by the reporter",
+      "source_url": "https://swindonlink.com/education/send-transport-crisis/",
+      "source_locator": "Parent interview and accompanying chronology, lines 80–86",
+      "initial_decision": "Transport for a new school was refused the day after the request. The council's reason is unspecified.",
+      "procedure": "Parent repeatedly asked how to appeal. The article reports that instructions arrived after the deadline had elapsed.",
+      "final_decision": null,
+      "decision_date": null,
+      "date_basis": "The article gives 26 July for the request, the next day for refusal and 4 September for receipt of appeal instructions. These are procedural dates.",
+      "status_at_source": "Initial refusal remained in effect and no appeal determination was reported."
+    },
+    {
+      "id": "S06-E03",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/4853903-to-ask-if-anyone-else-has-won-a-school-transport-appeal",
+      "source_locator": "Opening post, 21 July 2023",
+      "initial_decision": "School bus place refused because the distance was under the applicable two-mile threshold.",
+      "procedure": "Parent said they intended to appeal on walking-route safety grounds.",
+      "final_decision": null,
+      "decision_date": null,
+      "date_basis": "The post date anchors the report of refusal and intention to appeal."
+    },
+    {
+      "id": "S06-E04",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent post",
+      "source_url": "https://supportsendkids.org/question/1767710346523",
+      "source_locator": "Parent's account, lines 33–39",
+      "initial_decision": "Existing solo transport was changed to shared transport. The parent reports that no new risk assessment preceded the change.",
+      "procedure": "First appeal submitted in August 2024 and refused. The parent gathered professional evidence for stage two and reports initiating pre-action correspondence in October 2024.",
+      "final_decision": "The transport appeal succeeded and the authority concluded that solo transport was required. A separate reimbursement request was refused.",
+      "decision_date": null,
+      "date_basis": "August 2025 is the reported reimbursement complaint outcome date. The transport appeal decision date is unspecified."
+    },
+    {
+      "id": "S06-E05",
+      "council": null,
+      "policy_period": null,
+      "source_type": "Public parent update",
+      "source_url": "https://www.reddit.com/r/LegalAdviceUK/comments/1pko1es/update_council_are_giving_me_the_school_taxi_back/",
+      "source_locator": "Update, lines 24–29",
+      "initial_decision": "Existing school taxi provision was withdrawn.",
+      "procedure": "Parent wrote to the council citing the statutory transport duty. The council investigated. A formal appeal stage is unspecified.",
+      "final_decision": "The council overturned the withdrawal and said taxi provision would resume in January.",
+      "decision_date": null,
+      "date_basis": "Parent reports receiving the reversal letter on the day of the update."
+    }
+  ],
+  "matched_pairs": [],
+  "gaps": [
+    {
+      "council": "Swindon Borough Council",
+      "finding": "The identifiable parent interview documents a refusal and an obstacle to filing an appeal. The same article reports successful appeals in aggregate without individual refusal reasons, decisions or dates. The council's procedure describes senior-officer review followed by a subcommittee hearing.",
+      "corroboration_url": "https://www.swindon.gov.uk/info/20032/schools_and_education/414/school_travel_support/5"
+    },
+    {
+      "council": "Surrey County Council",
+      "finding": "An Ombudsman decision dated 28 September 2023 records that the council maintained a distance-based refusal after considering discretionary grounds. The public parent-testimony compilation could not be checked for a comparable firsthand event because targeted lookups timed out.",
+      "corroboration_url": "https://www.lgo.org.uk/decisions/education/school-transport/23-008-047"
+    },
+    {
+      "council": "Staffordshire County Council",
+      "finding": "Search results surfaced official appeal cases and council guidance. The two candidate Ombudsman ruling pages timed out on opening. No firsthand account with an explicit Staffordshire council identification and a final decision was verified.",
+      "corroboration_url": "https://www.staffordshire.gov.uk/roads-parking-and-transport/school-and-college-travel/under-16-education-travel-policy/school-0"
+    },
+    {
+      "council": "Kent County Council",
+      "finding": "The January 2024 parent-reported award lacks the council's initial refusal reasons and the applicable policy version. No opposite firsthand outcome with comparable initial grounds was verified for the same policy period.",
+      "corroboration_url": "https://www.kent.gov.uk/__data/assets/pdf_file/0006/195801/Home-to-school-transport-guidance-booklet.pdf"
+    },
+    {
+      "council": null,
+      "finding": "The additional accounts document distinct procedures and endpoints, including a planned safety appeal, a successful challenge to the mode of transport, and a withdrawal reversed after correspondence. Missing council identification or final appeal evidence prevents same-council pairing."
+    }
+  ]
+}

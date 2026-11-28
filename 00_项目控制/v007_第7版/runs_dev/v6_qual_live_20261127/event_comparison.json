@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "identity": "个案A｜斯温登自治市议会｜学校交通援助第二阶段申诉｜2025年9月",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S1",
+          "statement": "议会以申请不符合常规资格标准为由拒绝提供学校交通援助。",
+          "use": "确认例外审查前的资格决定",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "第二阶段申诉委员会认定家庭情况属于例外，决定支持申诉并提供个人交通预算。",
+          "use": "编码结果为准予例外援助，援助形式为预算",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S1",
+          "statement": "监察专员记录，申请人认为预算无法解决上学交通困难，未接受也未领取预算。",
+          "use": "区分批准援助与实际领取",
+          "key": false,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "议会以申请不符合常规资格标准为由拒绝提供学校交通援助。",
+        "第二阶段申诉委员会认定家庭情况属于例外，决定支持申诉并提供个人交通预算。"
+      ]
+    },
+    {
+      "identity": "个案B｜萨里郡议会｜学校交通援助最终阶段申诉｜监察专员于2022年3月结案",
+      "retained_facts": [],
+      "uncertain_facts": [
+        {
+          "source_id": "S2",
+          "statement": "议会以所就读学校并非离家最近的学校为由，拒绝提供免费学校交通。",
+          "use": "确认例外审查前的资格决定",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "最终申诉小组在决定函中指出，有距离更近且有空位的学校，并认定个案情况不足以例外提供免费交通，因此驳回申诉。",
+          "use": "编码结果为拒绝例外援助，记录决定函所述理由",
+          "key": true,
+          "status": "single_account"
+        },
+        {
+          "source_id": "S2",
+          "statement": "监察专员指出决定函对低收入家庭交通援助政策的表述有误，经初步审查认为该错误不足以动摇整体决定，因此未启动调查。",
+          "use": "区分地方申诉结果与外部监督结论",
+          "key": false,
+          "status": "single_account"
+        }
+      ],
+      "critical_gaps": [
+        "议会以所就读学校并非离家最近的学校为由，拒绝提供免费学校交通。",
+        "最终申诉小组在决定函中指出，有距离更近且有空位的学校，并认定个案情况不足以例外提供免费交通，因此驳回申诉。"
+      ]
+    }
+  ],
+  "event_count": 2,
+  "sensitivity": "两案涉及未成年人。仅保留公共机构、程序时间及与决定直接相关的事实，省略个人姓名、文书中的人物代号、学校名称、住址、诊断和具体家庭构成。",
+  "interpretation_status": "pending_independent_review",
+  "run_id": "v6_qual_live_20261127",
+  "input_sha256": "2ce7e012554432b0b6081e9db28f343ac99968c2c66670de62aa06c028dd969d",
+  "exchange_sha256": null,
+  "reality_sha256": "816b59efc3c3a7e3da32b58af7296e6fb69af9b97a44f7a85f081852bd2c3bcd",
+  "formal_eligible": false
+}

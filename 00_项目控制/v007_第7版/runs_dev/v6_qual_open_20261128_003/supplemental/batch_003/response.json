@@ -1,0 +1,47 @@
+{
+  "papers": [
+    {
+      "title": "Time Is Money? Wage Premiums and Penalties for Time-Related Occupational Demands",
+      "authors": ["Wei-hsin Yu", "Janet Chen-Lan Kuo"],
+      "journal": "American Journal of Sociology",
+      "year": 2022,
+      "doi": "10.1086/722963",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+      "abstract_locator": "出版商页面 Abstract 第2段。原刊第128卷第3期，820–865页，卷期标注2022年11月，网页顶部显示2023年1月20日。",
+      "abstract_excerpt": "require much temporal coordination and allow little work-structuring discretion",
+      "abstract_summary": "作者利用纵向数据和固定效应模型区分个人实际工时与职业预期工时。长工时要求和频繁截止期限对应薪酬溢价，时间协调要求高且工作安排裁量小的职业则有薪酬折损。本轮据此推论，比较到点离开与继续等待时，应分别观察任务协调要求、在场期待和实际停留。",
+      "relevance": "substantive",
+      "relevance_reason": "可部分回应“久留是否只因工作量大”的反诘，提供了区分时间协调要求和职业工时期待的依据。若离岗确实依赖接班人到位，且员工无权自行调整交接，时间协调机制可迁移至本题。论文估计的是职业时间要求与工资的关系，主管现场指令、同事先走的示范作用以及当天等待的触发条件仍缺证据。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+      "reason": "检索结果显示林佳鹏发表于《中国青年研究》2022年第6期，摘要索引涉及规范型和情感型加班。题录页两次打开均超时。https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906"
+    },
+    {
+      "title": "竞速游戏：从时间规训到时间管控",
+      "reason": "检索结果指向黄丹发表于《中国青年研究》2022年第6期，研究涉及互联网企业的同侪竞争和时间管理。转载入口打开超时，原刊摘要未通过打开动作核实。https://m.huxiu.com/article/578346.html"
+    },
+    {
+      "title": "从被管理的手到被管理的心——劳动过程视野下的加班研究",
+      "reason": "期刊总目录检索结果列出庄家炽及《社会学研究》2018年第3期。搜到的相关作者讲座摘要属于另一材料，原刊摘要尚待核实。https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2018-11-20/Issue/iydl3i53.pdf"
+    },
+    {
+      "title": "精细化管理与金融从业人员加班问题研究",
+      "reason": "引文记录显示庄家炽、韩心茹发表于《中国青年研究》2021年第8期，第22–28页，尚未定位可核验的原刊摘要入口。"
+    },
+    {
+      "title": "加班依赖体制：再探青年农民工过度加班问题",
+      "reason": "打开的转载页载明孙中伟、黄婧玮及《中国青年研究》2021年第8期。文前概述标为导读，原刊摘要仍待核实。其薪酬依赖机制可用于检验员工留下是否出于收入压力。https://www.pltyw.com/html/View/Coworkers/2022/07/14/15092.html"
+    }
+  ],
+  "search_notes": [
+    "本轮纳入1篇，目标缺2篇。按单条查询和单页打开合计使用24个原生网页动作，其中查询18次、打开6次，重复打开和超时均计入。按进入逐篇记录的去重论文计，发现6篇、打开页面核实题录2篇、打开页面取得可核实原刊摘要1篇。刊外理论材料另获得1篇出版商摘要。未下载全文。",
+    "议题层先查 ASR 与 AJS 的 workplace norms、coworkers、overwork、availability 和 flexibility stigma，以及中文的加班、在场、同事、下班。首轮即打开3个候选入口。后续以交接班、劳动过程和命中题名收窄搜索，并补查金融从业人员和互联网企业。英文原刊摘要区分了职业工时期待、时间协调和工作安排裁量。中文线索最接近到点去留，但可打开的原刊摘要证据仍有缺口。",
+    "对象层实际查询使用‘通勤时间 加班 时间分配 经济研究 管理世界 社会学研究’。命中通勤与睡眠、福祉及活动安排的材料，该轮查询未获得能同时解释通勤缩短与到岗员工下班去留的合格摘要。",
+    "理论层从工时控制与在场期待收窄到 passive face time、Elsbach、Cable、Sherman，并按 DOI 查到并打开 SAGE 摘要页。适用条件是员工在场可见，且观察者据此判断其工作投入。若同事并非可比较的对象，或同事已获特许，其先行能否改变留下者对离岗后果的预期仍待验证。",
+    "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/abs/10.1177/0018726709353139|专业办公室的质性研究和实验表明，常规工时内被看见容易引出可靠性判断，常规工时外被看见容易引出投入度判断。该解释适用于在场能被评价者观察、且在场被用来推断员工特质的情境。研究测量评价推断，员工离开或等待的选择仍需行为证据。"
+  ]
+}

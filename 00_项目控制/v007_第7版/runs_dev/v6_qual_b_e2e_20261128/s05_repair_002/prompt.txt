@@ -1,0 +1,405 @@
+最后一次 S05 返修的独立复审。用最多24次原生搜索动作核对相关原文与反例，优先同一青年养老院中是否有住客停止换宿劳动、经营者如何回应和实际住宿后果的可定位一手记录。候选是经营者承认休息合理，却执行停止劳动引致的住宿后果，区分公开认可与拒绝权；若原 Yao 对软规训已能预期此结果、材料仅为规则宣传或角色表述，不能强行认定增量。西昌学院论文 PDF https://xbsk.xcc.edu.cn/xcxyxbsk/article/pdf/20241228005 可核对已述的劳动抵扣。分别记录近邻文献可解释内容、候选增量、可证伪边界、实际材料状态。不得把摘要当正文。仅原生网页工具，不读文件、不运行命令。中文JSON：outcome=academic_pass 或 increment/depth/value/concept，academic_value=pass/revise，reason, question, core_question, next_action, source_audit, topic_reasoning（opportunity、question、deepening 均含 reasoning，deepening 另含 change_kind=academic/design_only/unresolved）。
+{
+  "outcome": "increment",
+  "academic_value": "revise",
+  "reason": "S05暂不通过。同场所、同任务的双角色比较提高了检验精度，但即使观察到两种说法并存，也只支持双方用不同理由解释同一劳动。住客说自己可以停，体现的是其对可拒绝性的判断。经营者说劳动可以换取住宿，表达的是交换条件。前者不足以证明休息获得他人认可，后者也不足以证明停止劳动会影响这位住客的续住资格。按所附正文定位，Yao已经讨论时间掌控和经营者的有条件包容。新增命题仍需说明，为什么对休息的认可会在住客失去停止劳动的实际选择时继续存在，以及原作的解释在哪种情形下会遗漏这一结果。",
+  "question": "在同一场所、同一次入住安排中，住客表示想停止某项院内劳动时，经营者如何回应其休息要求，原有的住宿资格或费用条件又如何变化？",
+  "core_question": "当经营者能够执行与续住挂钩的劳动条件时，经营者是否仍会明确认可同一住客停下来休息的正当性，同时因其停止劳动而改变其续住条件？这种认可与后果并存的情形，能否限定Yao关于自主性与有条件包容的解释？",
+  "next_action": "将回查单位定为同一住客、同一任务和同一次入住安排，核对三项材料：住客提出拒绝或停止，经营者明确回应其休息是否合理，以及拒绝后原条件下的续住资格、费用或实际安排是否改变。可检验预期是，在经营者明确认可休息的情况下，停止劳动仍会触发事先约定且实际执行的住宿后果。若可核对的同任务材料中角色判断一致、交换条件只见于招募广告，或差异随活动种类而非评价关系变化，撤回本版主张。若只有两种说法而缺少认可回应或执行记录，将结果限定为叙述差异。若原作已解释认可为何在约束实际执行时继续存在，且本案无法指出适用边界，则不再以此申报理论增量。",
+  "topic_reasoning": {
+    "opportunity": {
+      "reasoning": "最值得复核的是同一经营者可以承认住客休息合理，同时掌握并行使改变其续住条件的权力。所附材料中的陶艺自述与换宿说法提供了查找入口，目前尚未配对到同一任务和入住安排。"
+    },
+    "question": {
+      "reasoning": "住客自认有选择、经营者认可其休息、以及住客停止劳动后能否按原条件续住，是三项可分别核对的判断。双角色叙述可以检验理由是否分歧，针对实际拒绝的回应和后果才可检验认可与实际选择是否分离。"
+    },
+    "deepening": {
+      "change_kind": "design_only",
+      "reasoning": "本次已经完成的推进是把比较单位收紧，并区分叙述、认可与实际后果。将可拒绝性对应时间自主、将换宿条件对应有条件包容，仍可沿用原有解释。潜在的学术推进是界定何种条件能让认可在住宿约束被执行后继续存在，并说明这个预期与原作可推出的判断有何差别。所附正文点核不足以确认这项差别，关键词未命中也无法确定原作的论证范围。"
+    }
+  },
+  "model": "gpt-6.2-sol",
+  "invocation_id": "01a220ea-84df-7540-9521-4e6352230e37",
+  "evidence_sha256": "bb4ef7ede302352da7e856b60a28d851d353692c887e1b017e73294e709b9777",
+  "receipts": {
+    "prompt.txt": "10642daa511540c52aa14fc64dd19b6c7f859402ba73c7d3bacdadc6d9e3f37e",
+    "events.jsonl": "b75b92c5bca7a7f8bb5edc8fabb4b54568c6c5b3b900a6e93ab9d27a779b2e23",
+    "response.json": "6fbf612294634866b1f83885b00ae9e5150546f154a4fa6291adf129ce860a3e"
+  }
+}
+
+{
+  "schema_version": 2,
+  "mode": "abstract_only",
+  "engine": "codex_native_v1",
+  "collection_id": "COL_1ef962ff4fb07b93ae3fb6d5",
+  "collection_sha256": "3f68b45b58a6862982767a2fc74a3226e84fd36921dec817b6463377fe17e159",
+  "theme": "中国社会情境下可用公开一手记录研究的社会现象（自主探索）",
+  "journals": [
+    "中国社会科学",
+    "社会学研究",
+    "社会",
+    "探索与争鸣",
+    "中国青年研究",
+    "经济研究",
+    "管理世界",
+    "American Sociological Review",
+    "American Journal of Sociology"
+  ],
+  "verified_rows": 5,
+  "excerpt_visible_count": 0,
+  "rows": [
+    {
+      "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+      "authors": [
+        "Erin L. Kelly",
+        "Phyllis Moen",
+        "J. Michael Oakes",
+        "Wen Fan",
+        "Cassandra Okechukwu",
+        "Kelly D. Davis",
+        "Leslie B. Hammer",
+        "Ellen Ernst Kossek",
+        "Rosalind Berkowitz King",
+        "Ginger C. Hanson",
+        "Frank Mierzwa",
+        "Lynne M. Casper"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2014",
+      "doi": "10.1177/0003122414531435",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_locator": "SAGE 文章页 Abstract，结果段第33行。最终刊于第79卷第3期，485–516页。",
+      "abstract_excerpt": "larger changes in schedule control and supervisor support for family and personal life",
+      "abstract_summary": "作者通过组织内分组随机试验发现，工作安排干预后，员工的排程控制和主管支持提升较明显，工作与家庭冲突及家庭时间不足小幅改善。研究者据此提出可检验推论，短住期间保有劳动关系的人也可能获得时间自主，前提是排程权得到承认。",
+      "relevance": "substantive",
+      "relevance_reason": "回应了仍在工作为何也能获得时间自主的反诘。适用于可以核对谁决定工时、主管是否支持以及谁可以临时召回住客的有酬远程工作个案。摘要中的组织干预无法拆分排程权与主管支持的独立作用，也无法解释换宿、服务落差或退宿。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_hash": "7cc96c495634d5282b0a90e8084e3a0db39dda8e4713acbf70430b8b9342cc74",
+      "excerpt_sha256": "c5ff07a000ab48f81aa55d04a7cb6b7ed3abae9860b30d2cdca1bd58da83987c",
+      "searched_at": "2026-11-28T14:44:38.200999+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3",
+      "abstract_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3",
+      "article_id": "A_4e6a6ca192245865c127c1af",
+      "provenance": [
+        {
+          "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+          "authors": [
+            "Erin L. Kelly",
+            "Phyllis Moen",
+            "J. Michael Oakes",
+            "Wen Fan",
+            "Cassandra Okechukwu",
+            "Kelly D. Davis",
+            "Leslie B. Hammer",
+            "Ellen Ernst Kossek",
+            "Rosalind Berkowitz King",
+            "Ginger C. Hanson",
+            "Frank Mierzwa",
+            "Lynne M. Casper"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2014",
+          "doi": "10.1177/0003122414531435",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_locator": "SAGE 文章页 Abstract，结果段第33行。最终刊于第79卷第3期，485–516页。",
+          "abstract_excerpt": "larger changes in schedule control and supervisor support for family and personal life",
+          "abstract_summary": "作者通过组织内分组随机试验发现，工作安排干预后，员工的排程控制和主管支持提升较明显，工作与家庭冲突及家庭时间不足小幅改善。研究者据此提出可检验推论，短住期间保有劳动关系的人也可能获得时间自主，前提是排程权得到承认。",
+          "relevance": "substantive",
+          "relevance_reason": "回应了仍在工作为何也能获得时间自主的反诘。适用于可以核对谁决定工时、主管是否支持以及谁可以临时召回住客的有酬远程工作个案。摘要中的组织干预无法拆分排程权与主管支持的独立作用，也无法解释换宿、服务落差或退宿。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_hash": "7cc96c495634d5282b0a90e8084e3a0db39dda8e4713acbf70430b8b9342cc74",
+          "excerpt_sha256": "c5ff07a000ab48f81aa55d04a7cb6b7ed3abae9860b30d2cdca1bd58da83987c",
+          "searched_at": "2026-11-28T14:44:38.200999+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3",
+          "abstract_event_id": "exec-15a3d03c-c076-4513-8a5b-34d3d945fbe3"
+        }
+      ],
+      "evidence_id": "E_e54127b84034eab370681bcf",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "“躺平”：抵御深度异化的另类姿势",
+      "authors": [
+        "马中红"
+      ],
+      "journal": "探索与争鸣",
+      "year": "2021",
+      "doi": null,
+      "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_locator": "官网2021年第12期，54–62页条目，摘要第215行。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+      "abstract_excerpt": "时间体制不断驱赶个体、削弱生命自主性",
+      "abstract_summary": "作者把躺平解释为社会加速和时间体制侵蚀生命自主性之后出现的减速策略，并指出不同群体可能采用不同方式应对加速。研究者据此提出可检验推论，住客若将短住描述为暂时摆脱催促或评价，减速可能成为其说明休息正当性的理由。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应为何休息会被表达为主动选择。迁移条件是住客自述能定位具体时间压力及其来源，并交代短住如何改变这种压力。宏观的社会加速解释无法判定陶艺属于自愿投入还是换宿义务，也无法解释同场所内因服务落差而离场的个案。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_hash": "1a1704249b6c35a4c081e24344f20f1821565b2bc020b0bed58602124239e1df",
+      "excerpt_sha256": "f16d3c9bae370db77505a04ab0612d5d6b99680edeae8baab42cc9916d29b4cb",
+      "searched_at": "2026-11-28T14:44:38.202272+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "article_id": "A_b15c236f5bcdf265736e9819",
+      "provenance": [
+        {
+          "title": "“躺平”：抵御深度异化的另类姿势",
+          "authors": [
+            "马中红"
+          ],
+          "journal": "探索与争鸣",
+          "year": "2021",
+          "doi": null,
+          "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_locator": "官网2021年第12期，54–62页条目，摘要第215行。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+          "abstract_excerpt": "时间体制不断驱赶个体、削弱生命自主性",
+          "abstract_summary": "作者把躺平解释为社会加速和时间体制侵蚀生命自主性之后出现的减速策略，并指出不同群体可能采用不同方式应对加速。研究者据此提出可检验推论，住客若将短住描述为暂时摆脱催促或评价，减速可能成为其说明休息正当性的理由。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应为何休息会被表达为主动选择。迁移条件是住客自述能定位具体时间压力及其来源，并交代短住如何改变这种压力。宏观的社会加速解释无法判定陶艺属于自愿投入还是换宿义务，也无法解释同场所内因服务落差而离场的个案。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_hash": "1a1704249b6c35a4c081e24344f20f1821565b2bc020b0bed58602124239e1df",
+          "excerpt_sha256": "f16d3c9bae370db77505a04ab0612d5d6b99680edeae8baab42cc9916d29b4cb",
+          "searched_at": "2026-11-28T14:44:38.202272+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+          "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e"
+        }
+      ],
+      "evidence_id": "E_3a0ace6f8a5c796019e9e308",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "分型与逻辑：“躺平”何以发生——基于默顿社会失范理论视角的分析",
+      "authors": [
+        "王钰文",
+        "王茂福"
+      ],
+      "journal": "探索与争鸣",
+      "year": "2021",
+      "doi": null,
+      "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_locator": "官网2021年第12期，63–73页条目，标题和作者见第221–225行，摘要位于该条目下。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+      "abstract_excerpt": "在微观发生机制、阶层基础、扩散逻辑和个体表现形态等方面均有所不同",
+      "abstract_summary": "作者以默顿的社会失范理论区分抵抗型、仪式型和摇摆型躺平，认为三类在发生机制、阶层基础、传播及表现上存在差异。研究者据此提出可检验推论，相似的短住安排可能容纳不同的职业目标，入住和离场叙述可用于辨认目标是否改变。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应住在同一场所的人为何仍可能按不同逻辑安排休息。迁移需要同一住客交代对职业或成功目标的态度，最好能比较入住与离场时点。该类型框架无法从停留时长推出动机，也无法判定收入、照料或服务体验是否导致提前离场。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+      "abstract_hash": "0f382a1a5e0bf561c3c7d8ad71f620f934fd31999f5f45c64a1fe3ec94763fba",
+      "excerpt_sha256": "2e62312b28b47cf8251bc5ac844119ba1acc5e8b97ea0e861a6d627a5542c047",
+      "searched_at": "2026-11-28T14:44:38.203272+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:3",
+      "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+      "article_id": "A_780b63e8724ce79852ea2079",
+      "provenance": [
+        {
+          "title": "分型与逻辑：“躺平”何以发生——基于默顿社会失范理论视角的分析",
+          "authors": [
+            "王钰文",
+            "王茂福"
+          ],
+          "journal": "探索与争鸣",
+          "year": "2021",
+          "doi": null,
+          "metadata_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_locator": "官网2021年第12期，63–73页条目，标题和作者见第221–225行，摘要位于该条目下。官网条目带有专题前缀“中国社会心态：动向与样态（四）”。",
+          "abstract_excerpt": "在微观发生机制、阶层基础、扩散逻辑和个体表现形态等方面均有所不同",
+          "abstract_summary": "作者以默顿的社会失范理论区分抵抗型、仪式型和摇摆型躺平，认为三类在发生机制、阶层基础、传播及表现上存在差异。研究者据此提出可检验推论，相似的短住安排可能容纳不同的职业目标，入住和离场叙述可用于辨认目标是否改变。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应住在同一场所的人为何仍可能按不同逻辑安排休息。迁移需要同一住客交代对职业或成功目标的态度，最好能比较入住与离场时点。该类型框架无法从停留时长推出动机，也无法判定收入、照料或服务体验是否导致提前离场。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.tsyzm.cn/CN/volumn/volumn_1563.shtml",
+          "abstract_hash": "0f382a1a5e0bf561c3c7d8ad71f620f934fd31999f5f45c64a1fe3ec94763fba",
+          "excerpt_sha256": "2e62312b28b47cf8251bc5ac844119ba1acc5e8b97ea0e861a6d627a5542c047",
+          "searched_at": "2026-11-28T14:44:38.203272+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:3",
+          "metadata_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e",
+          "abstract_event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e"
+        }
+      ],
+      "evidence_id": "E_1f55598352c1a0f2f6a0003d",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "何以为家：分而不散的农民家庭",
+      "authors": [
+        "何奇峰",
+        "周芯宇"
+      ],
+      "journal": "社会",
+      "year": "2024",
+      "doi": null,
+      "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_locator": "《社会》官网第44卷第1期，149–177页，中文版摘要段落，第36–38行",
+      "abstract_excerpt": "家庭责任伦理跨越空间对分散在各地的家庭成员产生约束性力量",
+      "abstract_summary": "作者考察云南弥村四个农民家庭，指出分居是应对生计与社会变化的权宜安排。家庭遭遇重大变故时，承担责任的成员会调整个人生活与经济安排，家庭责任因而在空间分离后继续发挥约束作用。本研究据此推论，短住迁移中的照料要求可以沿离场前后的行动序列查证。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应搬离原居地便会解除家庭义务的反诘。迁移条件是公开记录能指认谁提出要求、义务何时被触发，以及住客是否因此改动停留计划。原研究的生计型分居与青年自愿短住动机不同，摘要中的家庭机制解释不到经营者的换宿要求、住客的服务评价或主动选择陶艺的理由。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+      "abstract_hash": "a5a6ed1e62fcf42c5dd6353d2c82638ea07408578b41ff5481c44f71f181ed44",
+      "excerpt_sha256": "a72d8abe37118fce6f653f883ac850eec58ef94a2181ff719fe3f00523382b1f",
+      "searched_at": "2026-11-28T14:45:58.548863+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5",
+      "abstract_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5",
+      "article_id": "A_d9998f0a9d04e8d0da4d9393",
+      "provenance": [
+        {
+          "title": "何以为家：分而不散的农民家庭",
+          "authors": [
+            "何奇峰",
+            "周芯宇"
+          ],
+          "journal": "社会",
+          "year": "2024",
+          "doi": null,
+          "metadata_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+          "abstract_url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+          "abstract_locator": "《社会》官网第44卷第1期，149–177页，中文版摘要段落，第36–38行",
+          "abstract_excerpt": "家庭责任伦理跨越空间对分散在各地的家庭成员产生约束性力量",
+          "abstract_summary": "作者考察云南弥村四个农民家庭，指出分居是应对生计与社会变化的权宜安排。家庭遭遇重大变故时，承担责任的成员会调整个人生活与经济安排，家庭责任因而在空间分离后继续发挥约束作用。本研究据此推论，短住迁移中的照料要求可以沿离场前后的行动序列查证。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应搬离原居地便会解除家庭义务的反诘。迁移条件是公开记录能指认谁提出要求、义务何时被触发，以及住客是否因此改动停留计划。原研究的生计型分居与青年自愿短住动机不同，摘要中的家庭机制解释不到经营者的换宿要求、住客的服务评价或主动选择陶艺的理由。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.society.shu.edu.cn/CN/abstract/abstract20264.shtml",
+          "abstract_hash": "a5a6ed1e62fcf42c5dd6353d2c82638ea07408578b41ff5481c44f71f181ed44",
+          "excerpt_sha256": "a72d8abe37118fce6f653f883ac850eec58ef94a2181ff719fe3f00523382b1f",
+          "searched_at": "2026-11-28T14:45:58.548863+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:1",
+          "metadata_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5",
+          "abstract_event_id": "exec-fc5e2dec-e534-4c30-ba83-9fdfe6ca67f5"
+        }
+      ],
+      "evidence_id": "E_04f26d1acfedf0d32cb645b1",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "时间的过度道德化——一个理解青年时间焦虑的视角",
+      "authors": [
+        "郑小雪"
+      ],
+      "journal": "中国青年研究",
+      "year": "2023",
+      "doi": null,
+      "metadata_url": "https://wenfa.henau.edu.cn/info/1026/2091.htm",
+      "abstract_url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+      "abstract_locator": "原刊2023年第2期第31页，题名和作者下方的「摘 要」段，网页第52–60行",
+      "abstract_excerpt": "过度以时间的道德标准来约束、压迫、剥削自我",
+      "abstract_summary": "作者追问为何自由时间增加后青年仍感到时间焦虑，指出工作伦理和优绩主义等标准可能被用来自我约束。对速度的推崇和对理想时间表的执着，是作者提出的解释。用于本研究的推论是，短住即使腾出了时间，住客仍可能按产出或进度要求评判自己的休息。",
+      "relevance": "substantive",
+      "relevance_reason": "可以回应「住客既然能自主安排时间，为什么还需要为休息辩护」的反诘。若公开叙述出现当事人以效率、履历进度或有用性评价自己的休息，可以用这一机制考察自我评价何时延续到短住场所。仅凭做陶艺或继续远程工作，无法判断行动源于道德压力。照料召回、换宿任务和服务落差导致的提前离场，需要各自的规则与行动序列证据。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+      "abstract_hash": "56acc74cfca0ad02943fbbf958d7ecbd9146052ad727649bbf8322a73f2e9400",
+      "excerpt_sha256": "37121f9c718d430d6db91ae4b42e1dbfdea9a5765c8243d18fa4d8a34a874960",
+      "searched_at": "2026-11-28T14:47:28.775768+08:00",
+      "batch": "batch_003",
+      "observation_id": "batch_003:1",
+      "metadata_event_id": "exec-8f5cd424-b06e-47c7-85e7-3867668d9640",
+      "abstract_event_id": "exec-a552f5b8-f170-4eca-88c8-8365bdbaf746",
+      "article_id": "A_a93628e872cb82820c9250d2",
+      "provenance": [
+        {
+          "title": "时间的过度道德化——一个理解青年时间焦虑的视角",
+          "authors": [
+            "郑小雪"
+          ],
+          "journal": "中国青年研究",
+          "year": "2023",
+          "doi": null,
+          "metadata_url": "https://wenfa.henau.edu.cn/info/1026/2091.htm",
+          "abstract_url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+          "abstract_locator": "原刊2023年第2期第31页，题名和作者下方的「摘 要」段，网页第52–60行",
+          "abstract_excerpt": "过度以时间的道德标准来约束、压迫、剥削自我",
+          "abstract_summary": "作者追问为何自由时间增加后青年仍感到时间焦虑，指出工作伦理和优绩主义等标准可能被用来自我约束。对速度的推崇和对理想时间表的执着，是作者提出的解释。用于本研究的推论是，短住即使腾出了时间，住客仍可能按产出或进度要求评判自己的休息。",
+          "relevance": "substantive",
+          "relevance_reason": "可以回应「住客既然能自主安排时间，为什么还需要为休息辩护」的反诘。若公开叙述出现当事人以效率、履历进度或有用性评价自己的休息，可以用这一机制考察自我评价何时延续到短住场所。仅凭做陶艺或继续远程工作，无法判断行动源于道德压力。照料召回、换宿任务和服务落差导致的提前离场，需要各自的规则与行动序列证据。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.scribd.com/document/734016478/%E6%97%B6%E9%97%B4%E7%9A%84%E8%BF%87%E5%BA%A6%E9%81%93%E5%BE%B7%E5%8C%96-%E4%B8%80%E4%B8%AA%E7%90%86%E8%A7%A3%E9%9D%92%E5%B9%B4%E6%97%B6%E9%97%B4%E7%84%A6%E8%99%91%E7%9A%84%E8%A7%86%E8%A7%92-%E9%83%91%E5%B0%8F%E9%9B%AA321",
+          "abstract_hash": "56acc74cfca0ad02943fbbf958d7ecbd9146052ad727649bbf8322a73f2e9400",
+          "excerpt_sha256": "37121f9c718d430d6db91ae4b42e1dbfdea9a5765c8243d18fa4d8a34a874960",
+          "searched_at": "2026-11-28T14:47:28.775768+08:00",
+          "batch": "batch_003",
+          "observation_id": "batch_003:1",
+          "metadata_event_id": "exec-8f5cd424-b06e-47c7-85e7-3867668d9640",
+          "abstract_event_id": "exec-a552f5b8-f170-4eca-88c8-8365bdbaf746"
+        }
+      ],
+      "evidence_id": "E_14783bacfcae9485eeac4380",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    }
+  ],
+  "conflicts": [],
+  "run_mode": "dev",
+  "formal_eligible": false,
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696"
+}
+
+[
+  {
+    "title": "Accounts",
+    "url": "https://repository.uantwerpen.be/docman/irua/55f6d0/128980_2017_05_12.pdf",
+    "claim": "当某项行动偏离期待并受到评价时，当事人可能向具体受众说明行动或责任，以维持仍有利害关系的互动。用于短住材料时，需能识别谁提出质疑、质疑涉及哪项义务、谁作出解释，以及受众是否接受。",
+    "event_id": "exec-8e636f33-cf98-458e-ac02-ed4e3a7e311e"
+  },
+  {
+    "title": "Control over Time: Employers, Workers, and Families Shaping Work Schedules",
+    "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041400",
+    "claim": "工作和家庭日程由相互依赖的人共同塑造，一人日程变动会传导给关系中的其他人。适用于材料可以追踪雇主、亲属或共同居住者之间的排程依赖及协商过程。",
+    "event_id": "exec-6e7a6234-3ae8-4c13-bd4e-822dc328bbd5"
+  },
+  {
+    "title": "Accounts",
+    "url": "https://openurl.ebsco.com/contentitem/doi%3A10.2307/2092239?id=ebsco%3Adoi%3A10.2307%2F2092239&sid=ebsco%3Aplink%3Acrawler",
+    "claim": "当行动受到质疑，行动者可通过减轻自身责任或论证行为合理来弥合行动与期待之间的落差。分析休息的正当性时，适用于能识别评价者、其期待和当事人回应的材料。",
+    "event_id": "exec-cf49d6b4-e416-43ff-bcf8-c334368c1730"
+  }
+]
+
+# Yao 2025 最强近邻正文定位
+- 正文入口 https://lup.lub.lu.se/luur/download?fileOId=9204219&func=downloadFile&recordOId=9204218
+- 原 URL 与 curl 下载未成功，备用机构库 PDF 可用网页文字检索。以下为正文点核，有正文位置，未声称读完全文。
+- §5.1.2 第 38–39 页（网页提取 497–507 行），比较求职压力、职场压力、婚育期望等动机，也比较把短住描述为必要休息、逃避或自救的话语。原初问题“如何公开说明暂时休息的正当性”与此直接重叠。
+- §5.1.2 网页提取 540 行附近，已涉及不同住客的重返意向和家庭压力。不可将提出退出或重返视为新的理论贡献。
+- §5.3.1 第 55–56 页（692–702 行），处理家庭照料、经济责任及其与工作风险的联系。
+- §5.3.2 第 62 页（763–772 行），分析经营者筛选、特定情绪风格与有条件包容。经营者对休息施加条件已在近邻研究内。
+- 待独立审查：跨场所公开的住客与经营者话语如何把休息与持续劳动/换宿相容化，可能提出更窄的比较。但角色差异、交换义务和可区分现有解释的证据仍需核定，不能用观察场所增加直接宣称理论增量。
+进一步核对 §5.1.2 第 41–42 页（535–548 行），研究已比较长住与短住、持续接触原工作，以及远程工作收入和重返意向。不将这些概念的并置视为新解释。原文页 62–63（763–783 行）讨论空间中的行为筛选和情绪风格约束。对 exchange、work exchange、chores 的文本查询未定位劳动换宿的同类分析，仍无法凭无命中断言全文空白。
+
