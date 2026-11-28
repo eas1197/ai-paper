@@ -354,6 +354,45 @@ def advance(work, state):
     return decision
 
 
+def validate_sociology_review(report):
+    assessment = report.get("sociology_review", {})
+    for key in ("value", "increment", "theory", "feasibility", "evidence"):
+        row = assessment.get(key, {})
+        if (row.get("judgment") not in {"pass", "revise", "pending", "insufficient"}
+                or not isinstance(row.get("reason"), str) or not row["reason"].strip()):
+            raise ValueError(f"Independent review must assess {key} separately")
+    increment = assessment["increment"]
+    if (increment.get("kind") not in {"theory", "mechanism", "typology", "condition", "description", "none"}
+            or increment.get("basis") not in {"substantive", "overlap", "unverified", "undetermined"}):
+        raise ValueError("State the contribution type and basis of the increment judgment")
+    if increment["basis"] == "overlap":
+        neighbors = increment.get("neighbors", [])
+        if not neighbors or any(
+                row.get("reading") not in {"fulltext", "relevant_body"}
+                or not all(isinstance(row.get(key), str) and row[key].strip()
+                           for key in ("url", "locator", "claim", "scope"))
+                or not row["url"].startswith("https://") for row in neighbors):
+            raise ValueError("A definitive overlap judgment requires verified near-neighbor text")
+    development = assessment.get("development", {})
+    if (development.get("disposition") not in {"proceed", "verify", "local_revision", "reframe", "eliminate"}
+            or not all(isinstance(development.get(key), str) and development[key].strip()
+                       for key in ("reason", "research_question"))):
+        raise ValueError("Record a developmental recommendation and its rationale")
+    outcome = report["outcome"]
+    if outcome == "increment" and increment["basis"] in {"unverified", "undetermined"}:
+        raise ValueError("Unverified overlap cannot be the basis of an academic rejection")
+    if outcome in {"pass", "academic_pass", "materials_pending", "missing_data"}:
+        increment_ok = increment["judgment"] == "pass" or (
+            outcome == "academic_pass" and increment["judgment"] == "pending"
+            and increment["basis"] in {"unverified", "undetermined"})
+        if (any(assessment[key]["judgment"] != "pass" for key in ("value", "theory"))
+                or increment["kind"] == "none" or not increment_ok):
+            raise ValueError("Academic approval requires value, increment and theory judgments")
+    if outcome == "pass" and any(assessment[key]["judgment"] != "pass" for key in ("feasibility", "evidence")):
+        raise ValueError("Design approval requires feasible materials and stage-appropriate evidence")
+
+
+
 def review(work, state, report):
     if state["status"] not in {"preliminary_review", "design_review", "final_review", "materials_pending", *ACADEMIC.values()}:
         raise ValueError("No academic review is due")
@@ -367,6 +406,8 @@ def review(work, state, report):
     if any(row["invocation_id"] == report["invocation_id"] for row in state["history"]):
         raise ValueError("Duplicate review invocation")
     outcome = report["outcome"]
+    if state.get("topic_reasoning_required") and outcome != "technical":
+        validate_sociology_review(report)
     if state.get("topic_reasoning_required") and outcome in {"academic_pass", "pass", "missing_data", "materials_pending"}:
         bundles = report.get("topic_reasoning", {})
         for stage in TASKS:
@@ -623,6 +664,7 @@ def prepare(work, state):
             "量化不可行时检查适用的访谈与网络材料。所有适用路径材料确实不足才归档。"
         )
     if state.get("topic_reasoning_required"):
+        task["independent_sociology_review"] = (VERSION / "sociology_review.md").read_text(encoding="utf-8")
         task["topic_reasoning_instruction"] = (
             "独立正向审查须提交 topic_reasoning，按 opportunity、question、deepening 分别记录 reasoning。"
             "deepening 须记录 change_kind，只有 academic 可作正向判断。依各阶段任务交代概念、情境与理论增量。"

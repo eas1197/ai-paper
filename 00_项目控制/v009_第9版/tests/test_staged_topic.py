@@ -8,6 +8,42 @@ from staged_topic import (ROOT, archive, digest, freeze, issue_plan, literature_
                           record_issue_plan, record_reality, review, route, search, write)
 
 
+from staged_topic import validate_sociology_review
+
+
+class SociologyReviewTest(unittest.TestCase):
+    def test_descriptive_value_can_pass_initial_review_before_empirical_validation(self):
+        report = {"outcome": "academic_pass", "sociology_review": {
+            "value": {"judgment": "pass", "reason": "Distinguish documented forms of social exclusion"},
+            "increment": {"judgment": "pass", "reason": "Adds an independently informative description",
+                          "kind": "description", "basis": "substantive"},
+            "theory": {"judgment": "pass", "reason": "Classification has a defined basis"},
+            "feasibility": {"judgment": "pending", "reason": "Access is not yet verified"},
+            "evidence": {"judgment": "pending", "reason": "Empirical findings are not yet tested"},
+            "development": {"disposition": "verify", "reason": "Confirm access in design review",
+                            "research_question": "How does exclusion differ across documented settings?"},
+        }}
+        validate_sociology_review(report)
+        row = report["sociology_review"]["increment"]
+        row.update(judgment="pending", basis="unverified")
+        validate_sociology_review(report)
+        report["outcome"] = "pass"
+        with self.assertRaisesRegex(ValueError, "Academic approval"):
+            validate_sociology_review(report)
+        row.update(judgment="pass", basis="substantive")
+        with self.assertRaisesRegex(ValueError, "Design approval"):
+            validate_sociology_review(report)
+        report["outcome"] = "increment"
+        row.update(judgment="revise", basis="unverified")
+        with self.assertRaisesRegex(ValueError, "Unverified overlap"):
+            validate_sociology_review(report)
+        row.update(basis="overlap", neighbors=[{"url": "https://example.org/paper", "locator": "abstract",
+                                                "claim": "same outcome", "scope": "same comparison",
+                                                "reading": "abstract"}])
+        with self.assertRaisesRegex(ValueError, "verified near-neighbor"):
+            validate_sociology_review(report)
+
+
 class StagedTopicTest(unittest.TestCase):
     def test_literature_continues_only_for_deficit_with_budget(self):
         checkpoint = {"config": {"max_batches": 2, "search_action_budget": 24},
