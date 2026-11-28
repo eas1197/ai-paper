@@ -74,18 +74,47 @@ def run_arm(work, context, arm, *, retry=False):
     for index, role in enumerate(ROLES):
         allow_search = role != "critique"
         folder = area / f"{index + 1:02}_{role}"
+        attempts = {0: folder}
+        for attempt in area.glob(folder.name + "_retry*"):
+            suffix = attempt.name[len(folder.name + "_retry"):]
+            if not suffix:
+                attempts[1] = attempt
+            elif suffix.isascii() and suffix.isdecimal() and int(suffix) >= 2 and suffix == str(int(suffix)):
+                attempts[int(suffix)] = attempt
+        accepted = next((number for number in sorted(attempts)
+                         if (attempts[number] / "accepted.json").exists()), None)
+        if accepted is not None:
+            folder = attempts[accepted]
+        elif retry and folder.exists():
+            number = 1
+            while number in attempts:
+                number += 1
+            suffix = "_retry" if number == 1 else f"_retry{number}"
+            folder = folder.with_name(folder.name + suffix)
+
+        turn_limit = 0
+        if allow_search:
+            # Rebuild an accepted request using only the spend that preceded it.
+            earlier_attempts = {path for number, path in attempts.items()
+                                if accepted is not None and number < accepted}
+            spent = sum(len(evidence(path)) for path in area.glob("*/events.jsonl")
+                        if "critique" not in path.parent.name
+                        and (accepted is None or path.parent.name[:2] < folder.name[:2]
+                             or path.parent in earlier_attempts))
+            remaining_search = sources["native_search_actions"] - spent
+            if accepted is None and remaining_search <= 0:
+                raise ValueError("Frozen native search budget exhausted")
+            turn_limit = min(search_limit, remaining_search)
         instruction = (
             "独立反诘：以同一学术标准找最强反例，审候选与近邻能否区分及材料可行性。"
             "只分析请求内的材料。禁止调用任何工具、读文件、执行命令或联网。"
             "不得为自己审稿。只返回 JSON，包含 objections, action_required, limits。"
             if not allow_search else COMMON + TASKS[arm][int(role == "revision")]
-            + f"最多 {search_limit} 个原生联网事件，新增证据请逐条给出真实打开页面的 URL。"
+            + f"最多 {turn_limit} 个原生联网事件，新增证据请逐条给出真实打开页面的 URL。"
         )
         request = {"instruction": instruction, "context": context,
                    "prior": [entry["answer"] for entry in history]}
-        if retry and folder.exists() and not (folder / "accepted.json").exists():
-            folder = folder.with_name(folder.name + "_retry")
-        if (folder / "accepted.json").exists():
+        if accepted is not None:
             record = load(folder / "accepted.json")
             if load(folder / "request.json") != request or digest(load(folder / "response.json")) != record["answer_sha256"]:
                 raise ValueError("Saved checkpoint changed")
@@ -94,16 +123,11 @@ def run_arm(work, context, arm, *, retry=False):
                 raise ValueError(f"Inspect incomplete turn before retry: {folder}")
             if sum(p.is_dir() for p in area.iterdir()) >= control["model_calls"]:
                 raise ValueError("Frozen model call budget exhausted")
-            if allow_search:
-                spent = sum(len(evidence(path)) for path in area.glob("*/events.jsonl")
-                            if "critique" not in path.parent.name)
-                if spent + search_limit > sources["native_search_actions"]:
-                    raise ValueError("Frozen native search budget exhausted")
             folder.mkdir()
             write(folder / "request.json", request)
             record = native_call(folder, request, allow_search=allow_search, timeout=control["timeout_seconds"])
             trace = evidence(folder / "events.jsonl")
-            if len(trace) > (search_limit if allow_search else 0):
+            if len(trace) > turn_limit:
                 raise ValueError("Native search budget exceeded")
             answer = load(folder / "response.json")
             if not isinstance(answer, dict):
