@@ -17,3 +17,18 @@
 ## 历史功能回归
 
 使用现分支代码、原运行凭证和隔离副本，未启动新模型调用。教育重放三个真实裁决，经 topic32.check 和 topic_run.record 依次进入 question、deepening、formal。共享单车重算 3 个事件、初查 5 篇、复核终审与 S08 哈希。二手交易重算 4 个事件及初查 1/5，刊外对话与后来人工补得文献不计入。社区食堂重算 3 个事件及初查 2/5，人工核验和理论另计。后三案均通过原独立反诘凭证结构校验；重放确认原结果，未重新执行学术审查或把两项历史缺额改为过关。
+
+## 新批次真实验收点
+
+v6_qual_open_20261128_002 按 v009 入口完成无主题预设的真实联网观察、5 个独立事件比较及独立反诘。反方指出合同条件及实际损失无法视为可比，收窄为书面通知、证据出示与结算报价在交涉中如何相互作用。上位条件是有预付款、退出触发可核验、对方仍掌握结算、结清结果可观察。情境转换提出预付服务解约，用申请回执及生效日替换退租通知指标。上述为研究设计与适用边界，未经该替代场域实证。恢复点为文献初查，正式定题、材料适足性审查和 S08 未完成。
+
+- run_manifest.json 736ead4dcdc531275747a246ce877eb7f4b5d430546ae60668c76c36f2c4ad78
+- reality_prompt.txt f24d913328fa0fd60597406161c7fa40142f0a46e4e953d23326fe6cf322340b
+- reality_events.jsonl 1ae8c193059b83ffc1cd8271a9f94b397dc284839b9ddd35497f57a1330fee06
+- reality_response.json e320217471e092f09161b5d35b4cf6149201bf9761293a5b9db1cc0a985bb17c
+- event_comparison.json 5daa7674e91e9e04497f42bc679316bea514f8be19ff40c69eb743462e8444dc
+- critical_prompt.txt a17d628192448cc32d4fefbe8b796748c81a1cf5dc1d33c95456f9df55812378
+- critical_events.jsonl 2948387ae3526969e7bc604fcf33abe0268c467a92f023ffd6a6a955fde44e5a
+- critical_response.json 95a7e3b7d6d8f96b8f94071373fbaefdc8eb0df7f981458b6bfc4875d357e677
+- explanation_exchange.json d50d1070241d87ea9abe222b0131be4871fa372ba4f464a4decea2bb85187095
+- issue_plan.json ab2a0e14f116312a122ea555611b7f20c35e24171b79faf87501cce7781fde93

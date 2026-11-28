@@ -80,3 +80,7 @@ v6_qual_open_20261127_001 通过学术初审，设计审查停在 materials_pend
 ## 新 3.x 实跑恢复点
 
 v6_qual_open_20261128_001 概念化经两次补证与独立复审通过，原 topic32 到 question，冻结探索预算已用尽。旧 materials_pending 批次保留。见 [阶段凭证](open-qual-20261128-001.md)。Stata 暂缓。
+
+## 原 3.x 执行方式恢复
+
+四案离线回归已完成。新批次 v6_qual_open_20261128_002 完成观察、事件比较与独立反诘，接续文献初查。旧批次继续保留。见 [执行和回归](3x-execution-regression-20261128.md)。
