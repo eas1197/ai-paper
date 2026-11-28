@@ -22,7 +22,7 @@ from codex_literature import collect, evidence, group, url_event
 from collect_common import digest, load, normalize, write
 from native_receiving import receive
 from method_paths import PATHS, select_method, verify_material_review
-from event_protocol import OBSERVATION, PUBLIC_EVENT_SOURCES, validate_exchange
+from event_protocol import OBSERVATION, PUBLIC_EVENT_SOURCES, compare_events, validate_exchange
 
 POLICY = load(VERSION / "search_policy.json")
 SCHEMA = ROOT / REGISTRY["modules"]["04"] / "templates/native_response.schema.json"
@@ -79,7 +79,9 @@ def route(history, outcome):
     raise ValueError("Unknown outcome")
 
 
-def init(run_id, mode, theme, *, full_paper=False):
+def init(run_id, mode, theme, *, full_paper=False, research_route="A"):
+    if research_route not in {"A", "B"} or (research_route == "B" and mode != "dev"):
+        raise ValueError("6.0B is an experimental research route")
     if mode == "dev":
         work = run_mode.start(run_id, theme, full_paper=full_paper)
         manifest = run_mode.verified_run(work)
@@ -95,6 +97,11 @@ def init(run_id, mode, theme, *, full_paper=False):
           "policy_sha256": digest(POLICY), "history": [], "status": "reality", "formal_eligible": False,
           "reality_first": True, "method_paths": True, "qual_search_receipts": True,
           "explanation_first": True, "issue_search": True, "topic_reasoning_required": True})
+    if research_route == "B":
+        state_file = work / "staged_topic.json"
+        state = load(state_file)
+        state.update(research_route="B", status="research_exploration")
+        write(state_file, state)
     return work
 
 
@@ -110,9 +117,7 @@ def issue_plan(work, state):
     return plan
 
 
-def record_issue_plan(work, state, plan):
-    if state["status"] != "issue_positioning":
-        raise ValueError("Position the issue after the critical exchange")
+def validate_issue_plan(plan):
     for key in ("issue", "why", "object_search", "issue_search", "theory_search"):
         if not isinstance(plan.get(key), str) or not plan[key].strip():
             raise ValueError("Explain issue placement and all three search layers")
@@ -123,6 +128,12 @@ def record_issue_plan(work, state, plan):
                 or not row["publisher_url"].startswith("https://") or row["name"] in names):
             raise ValueError("Added journals need separate standing, topical fit and official publisher evidence")
         names.add(row["name"])
+
+
+def record_issue_plan(work, state, plan):
+    if state["status"] != "issue_positioning":
+        raise ValueError("Position the issue after the critical exchange")
+    validate_issue_plan(plan)
     write(work / "issue_plan.json", plan)
     state.update(status="initial", issue_plan_sha256=digest(plan))
 
@@ -455,11 +466,61 @@ def evidence_hash(work, state, path, theory):
         if digest(comparison) != state["event_comparison_sha256"]:
             raise ValueError("Pre-search event comparison changed")
         evidence["event_comparison"] = comparison
+    if state.get("research_route") == "B":
+        research = load(work / "research_packet.json")
+        if digest(research) != state["research_packet_sha256"]:
+            raise ValueError("Autonomous research packet changed")
+        evidence["research_packet"] = research
     return digest(evidence)
+
+
+def record_research(work, state, packet):
+    """Accept B's jointly developed artifacts through the existing evidence checks."""
+    if state.get("research_route") != "B" or state["status"] != "research_exploration":
+        raise ValueError("Only a new 6.0B run accepts an autonomous research packet")
+    comparison = compare_events(packet["event_packet"])
+    if comparison["event_count"] < 2:
+        raise ValueError("Compare independent action events before the evidence handoff")
+    exchange = packet["exchange"]
+    validate_exchange(exchange)
+    receipt = exchange["critical_receipt"]
+    for kind in ("events", "response"):
+        file = (work / receipt[kind]).resolve()
+        if not file.is_relative_to(work.resolve()):
+            raise ValueError("Independent challenge files must belong to this run")
+        if hashlib.sha256(file.read_bytes()).hexdigest() != receipt[f"{kind}_sha256"]:
+            raise ValueError("Independent challenge receipt changed")
+    calls = [json.loads(line) for line in (work / receipt["events"]).read_text(
+        encoding="utf-8-sig").splitlines()]
+    if ([row["thread_id"] for row in calls if row["type"] == "thread.started"] != [exchange["critical_actor"]]
+            or not any(row["type"] == "turn.completed" for row in calls)):
+        raise ValueError("Independent challenge lacks a completed Codex invocation")
+    if not isinstance(exchange.get("search_focus"), str) or not exchange["search_focus"].strip():
+        raise ValueError("State the literature search focus")
+    for stage in TASKS:
+        check_topic_reasoning(stage, packet["topic_reasoning"].get(stage, {}), {"verdict": "REVISE"})
+    validate_issue_plan(packet["issue_plan"])
+    candidate = {**state, "status": "reality"}
+    record_reality(work, candidate, packet["reality"])
+    comparison.update(run_id=state["run_id"], input_sha256=digest(packet["event_packet"]),
+                      exchange_sha256=None, reality_sha256=candidate["reality_sha256"], formal_eligible=False)
+    write(work / "event_comparison.json", comparison)
+    write(work / "explanation_exchange.json", exchange)
+    candidate.update(status="issue_positioning", exchange_sha256=digest(exchange),
+                     event_comparison_sha256=digest(comparison))
+    record_issue_plan(work, candidate, packet["issue_plan"])
+    write(work / "research_packet.json", packet)
+    state.update(candidate, research_packet_sha256=digest(packet))
+
 
 
 def prepare(work, state):
     status = state["status"]
+    if status == "research_exploration":
+        return {"status": status, "theme": state["theme"], "research_route": "B",
+                "requirements": TASKS, "source_instruction": PUBLIC_EVENT_SOURCES,
+                "instruction": "自主查证、比较候选、选理论、回看审查意见并重构。成果可反复迭代，各证据及独立反诘须可追溯。",
+                "workload": run_mode.verified_run(work)["workload"]}
     final = status == "final_review" or state.get("review_phase") == "final"
     path = work / ("merged_literature.json" if final else "initial/literature_matrix.json")
     theory = work / "initial/theories.json"
@@ -504,6 +565,15 @@ def prepare(work, state):
             "独立正向审查须提交 topic_reasoning，按 opportunity、question、deepening 分别记录 reasoning。"
             "deepening 须记录 change_kind，只有 academic 可作正向判断。依各阶段任务交代概念、情境与理论增量。"
         )
+    if state.get("research_route") == "B":
+        research = load(work / "research_packet.json")
+        if digest(research) != state["research_packet_sha256"]:
+            raise ValueError("Autonomous research packet changed")
+        task.update(research_route="B", research_context=research, review_history=state["history"],
+                    research_instruction="继续独立选择论证顺序，比较候选、竞争理论及证据，并逐项回应审查。"
+                                         "学术门禁和材料凭证仍须独立通过。")
+        if path.is_file() and theory.is_file():
+            task.update(literature=load(path), theories_context=load(theory))
     if path.is_file() and theory.is_file():
         task["evidence_sha256"] = evidence_hash(work, state, path, theory)
         task["papers"] = str(path)
@@ -513,10 +583,11 @@ def prepare(work, state):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("init", "reality", "exchange", "issue", "initial", "supplemental", "advance", "review", "prepare", "status", "s08"))
+    parser.add_argument("command", choices=("init", "research", "reality", "exchange", "issue", "initial", "supplemental", "advance", "review", "prepare", "status", "s08"))
     parser.add_argument("run_id")
     parser.add_argument("--mode", choices=("dev", "formal"), default="dev")
     parser.add_argument("--theme")
+    parser.add_argument("--research-route", choices=("A", "B"), default="A")
     parser.add_argument("--full-paper", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--report", type=Path)
@@ -526,7 +597,7 @@ def main():
     if args.command == "init":
         if not args.theme:
             parser.error("--theme is required")
-        print(init(args.run_id, args.mode, args.theme, full_paper=args.full_paper))
+        print(init(args.run_id, args.mode, args.theme, full_paper=args.full_paper, research_route=args.research_route))
         return
     base = run_mode.RUNS if args.mode == "dev" else VERSION / "runs_candidate"
     work = (base / args.run_id).resolve()
@@ -549,6 +620,8 @@ def main():
             result = advance(work, state)
         elif args.command == "review":
             review(work, state, load(args.report))
+        elif args.command == "research":
+            record_research(work, state, load(args.report))
         elif args.command == "reality":
             record_reality(work, state, load(args.report))
         elif args.command == "exchange":
