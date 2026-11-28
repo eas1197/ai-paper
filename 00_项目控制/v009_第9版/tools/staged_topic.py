@@ -215,9 +215,21 @@ def search(work, state, phase, resume, *, budget_migration=None, external=None):
             **plan, "candidate_question": load(work / "explanation_exchange.json")["candidate_question"],
         }
     if manifest:
+        base_limit = run_mode.load(run_mode.CONTROL / "dev_profile.json")["11"]["topic_batches_per_phase"]
+        auth_file = work / f"{phase}_budget_authorization.json"
+        if auth_file.is_file():
+            grant = load(auth_file)
+            extra = grant.get("additional_batches")
+            if (grant.get("run_id") == manifest["run_id"]
+                    and grant.get("manifest_sha256") == hashlib.sha256((work / "run_manifest.json").read_bytes()).hexdigest()
+                    and grant.get("scope") == phase
+                    and grant.get("base_batches") == base_limit
+                    and type(extra) is int and extra >= 1
+                    and isinstance(grant.get("authorization"), str) and grant["authorization"].strip()):
+                base_limit += extra
         config.update(run_mode="dev", search_action_budget=budget["native_search_actions"],
                       workload_sha256=manifest["workload_sha256"], topic_batch_budget=True,
-                      max_batches=run_mode.load(run_mode.CONTROL / "dev_profile.json")["11"]["topic_batches_per_phase"])
+                      max_batches=base_limit)
     original_rows = []
     if initial:
         initial, original = receipt(first, journals)
@@ -284,6 +296,18 @@ def advance(work, state):
         folder = work / phase
         checkpoint = load(folder / "checkpoint.json")
         limit = run_mode.load(run_mode.CONTROL / "dev_profile.json")["11"]["topic_batches_per_phase"]
+        auth_file = work / f"{phase}_budget_authorization.json"
+        if auth_file.is_file():
+            grant = load(auth_file)
+            extra = grant.get("additional_batches")
+            manifest = load(work / "run_manifest.json")
+            if (grant.get("run_id") == manifest["run_id"]
+                    and grant.get("manifest_sha256") == hashlib.sha256((work / "run_manifest.json").read_bytes()).hexdigest()
+                    and grant.get("scope") == phase
+                    and grant.get("base_batches") == limit
+                    and type(extra) is int and extra >= 1
+                    and isinstance(grant.get("authorization"), str) and grant["authorization"].strip()):
+                limit += extra
         if state["mode"] != "dev" or checkpoint["config"]["max_batches"] >= limit:
             return {"action": "already_stopped", "status": state["status"], "decision": prior}
         matrix, _ = receipt(folder, checkpoint["config"]["journals"])
@@ -306,7 +330,9 @@ def advance(work, state):
     if checkpoint.get("engine") == EXTERNAL_ENGINE:
         receipt(folder, config["journals"])
         return {"action": "wait_for_external_batch", "status": phase}
-    if state["mode"] == "dev" and not config.get("topic_batch_budget"):
+    if state["mode"] == "dev" and (
+            not config.get("topic_batch_budget")
+            or state.get("budget_resume", {}).get("new_batch_limit", 0) > config["max_batches"]):
         migration = state.get("budget_resume", {}).get("prior_stop", {})
         if migration.get("checkpoint_sha256") != digest(checkpoint):
             raise ValueError("Legacy continuation requires the verified prior stop record")
@@ -345,7 +371,11 @@ def advance(work, state):
         decision["unverified_count"] = len(result.get("unverified", []))
         state["stop_decision"] = decision
     elif decision["action"] == "resume_deficit":
-        decision["collection"] = search(work, state, phase, True)
+        migration = state.get("budget_resume", {}).get("prior_stop", {}).get("checkpoint_sha256")
+        if migration and digest(checkpoint) == migration:
+            decision["collection"] = search(work, state, phase, True, budget_migration=migration)
+        else:
+            decision["collection"] = search(work, state, phase, True)
         if state["status"] == phase and state["mode"] == "dev":
             state.setdefault("autonomous_steps", []).append(decision)
             write(work / "staged_topic.json", state)
