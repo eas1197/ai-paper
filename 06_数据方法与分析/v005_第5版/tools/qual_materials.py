@@ -172,13 +172,30 @@ def main():
             raise ValueError("Framework collection requires an actual preliminary search for the same question")
     area.mkdir(exist_ok=True)
     budget = manifest["workload"]["11"]
+    authorization = args.dev_run / "preliminary_budget_authorization.json"
     with job_lock(area):
+        batch_cap = budget["max_batches"]
+        if not framework and authorization.is_file():
+            grant = load(authorization)
+            extra = grant.get("additional_batches")
+            if (grant.get("run_id") != manifest["run_id"]
+                    or grant.get("manifest_sha256") != sha(args.dev_run / "run_manifest.json")
+                    or grant.get("scope") != "preliminary"
+                    or grant.get("base_batches") != batch_cap
+                    or type(extra) is not int or extra < 1
+                    or not isinstance(grant.get("authorization"), str) or not grant["authorization"].strip()):
+                raise ValueError("Invalid preliminary material budget authorization")
+            batch_cap += extra
+            write(folder.parent / "preliminary_budget_receipt.json", {
+                "base_batches": budget["max_batches"], "maximum_batches": batch_cap,
+                "authorization_sha256": sha(authorization),
+            })
         # An interrupted login before any CLI search does not consume a real search batch.
         used = sum(not (existing / "login_status.json").is_file()
                    or load(existing / "login_status.json").get("chatgpt") is not False
                    or (existing / "events.jsonl").exists()
                    for existing in area.glob("attempt_[0-9][0-9][0-9]") if existing.is_dir())
-        if used >= budget["max_batches"]:
+        if used >= batch_cap:
             raise ValueError("Experimental qualitative search batch budget exhausted")
         folder.mkdir(exist_ok=False)
     write(folder / "conversion.json", packet)
