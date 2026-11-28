@@ -62,3 +62,5 @@ class WritingPlanTest(unittest.TestCase):
                     self.assertEqual(review["requested_deliverable"], expected)
                     self.assertEqual(review["review_status"], "pending")
                     self.assertFalse(review["formal_eligible"])
+                    self.assertEqual(len(review["substantive_review_questions"]), 8)
+                    self.assertTrue(any("调换两个章节的顺序" in q for q in review["substantive_review_questions"]))

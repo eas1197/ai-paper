@@ -1,0 +1,35 @@
+{
+  "papers": [
+    {
+      "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+      "authors": ["Mary C. Brinton", "Eunsil Oh"],
+      "journal": "American Journal of Sociology",
+      "year": 2019,
+      "doi": "10.1086/704369",
+      "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+      "abstract_excerpt": "labor market structure and workplace norms",
+      "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。"
+    }
+  ],
+  "unverified": [
+    {
+      "title": "从被管理的手到被管理的心——劳动过程视野下的加班研究",
+      "reason": "原刊年度目录核实庄家炽、《社会学研究》2018年第3期。机构入口与 DOI 入口均未返回摘要，已打开的《文化纵横》转载为删节版，无法据此定位原刊摘要。原刊目录 https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2018-11-20/Issue/iydl3i53.pdf"
+    },
+    {
+      "title": "Getting a Job: Is There a Motherhood Penalty?",
+      "reason": "检索结果发现出版商摘要入口。该研究更接近招聘评价，优先核验职场规范与时间约束相关的日韩研究后即停止，未打开本篇摘要。"
+    }
+  ],
+  "search_notes": [
+    "议题层先用 American Sociological Review work devotion time norms、American Journal of Sociology face time work hours、社会学研究 加班 在场 同事、管理世界 员工 加班 主管 查找。中文结果指向劳动过程研究，随后用完整题名、内容提要和 DOI 定位原刊摘要，核实了题录。英文结果提供日韩长工时与在场规范线索，随后用 Brinton Oh American Journal of Sociology 2019 Japan Korea abstract 定位出版商页面，同轮用 Getting a Job Is There a Motherhood Penalty Correll 查找评价机制近邻。",
+    "对象层用 通勤时间 就近居住 工作时间 时间分配 社会学研究 管理世界 经济研究 查询。靠前近邻涉及通勤与工作效率、晚通勤出发时间，刊物超出九刊范围。",
+    "理论层沿 work devotion 与 face time 线索查询 Competing Devotions Blair Loy Harvard University Press，并打开出版商授权平台的图书介绍。",
+    "THEORY|Competing Devotions: Career and Family among Women Executives|https://www.degruyterbrill.com/document/doi/10.4159/9780674021594/html|工作奉献图式使雇主和客户把高度时间投入和专注视为职业承诺。原著考察金融业女性高管，迁移到常规下班情境须核对主管或客户是否以可见在场判断投入，以及这种判断是否影响员工的评价或机会。",
+    "按重点跟进的九刊候选计，发现3篇，核实题录2篇，打开并获得原刊摘要1篇，纳入1篇。共24个网页动作，含15条搜索查询和9次打开。纳入条目的出版商摘要入口直接返回摘要，最终刊载于第125卷第1期。全文下载0篇。"
+  ]
+}

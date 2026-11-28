@@ -3,7 +3,7 @@
   "mode": "abstract_only",
   "engine": "codex_native_v1",
   "collection_id": "COL_8523b877a329fc9232ae8df9",
-  "collection_sha256": "cd2d75fc5c1a8eefb2c11ac54bf8f56e391b61a51ec586d1c881c7a92240d0a7",
+  "collection_sha256": "499af38224efd6be0ee29e5b2f119e6ce512a592d2417be9239a5680a18cc8e0",
   "theme": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
   "journals": [
     "中国社会科学",
@@ -16,8 +16,8 @@
     "American Sociological Review",
     "American Journal of Sociology"
   ],
-  "verified_rows": 3,
-  "excerpt_visible_count": 0,
+  "verified_rows": 5,
+  "excerpt_visible_count": 1,
   "rows": [
     {
       "title": "996在职青年的超时工作及社会心理后果研究——基于CLDS数据的实证分析",
@@ -196,6 +196,124 @@
         }
       ],
       "evidence_id": "E_b50402a831d1afd9fe3b7a01",
+      "excerpt_visible_in_logged_result": false,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+      "authors": [
+        "林佳鹏"
+      ],
+      "journal": "中国青年研究",
+      "year": "2022",
+      "doi": "10.19633/j.cnki.11-2579/d.2022.0078",
+      "metadata_url": "https://m.fx361.com/news/2022/0713/14423613.html",
+      "abstract_url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_locator": "题录页「文献摘要」段，原生搜索返回整段，直接打开超时",
+      "abstract_excerpt": "加班原因做规范型与情感型的二分",
+      "abstract_summary": "作者以互联网大厂的90后员工为对象，区分规范型与情感型加班，考察员工对不同加班情形的态度和行为选择，指出企业规范上下班时间后，超时工作仍然存在。对本研究的推论是，到点后是否离开还可能取决于员工如何理解留下的理由。",
+      "relevance": "substantive",
+      "relevance_reason": "回应了「正式下班时间明确，为何员工仍会留下」的反诘。可迁移到正式工时清楚、团队成员仍需判断某次加班是否合乎规范的到岗环境。摘要没有分别检验责任是否完成交接、主管是否要求继续在场，以及同事先走是否改变员工选择，也未区分实际加班与留在现场等待。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_hash": "ada3865da58aa10749ecd94e07c80ed18b7fe57174682861074be563e5e7784b",
+      "excerpt_sha256": "8cf4eb6102a69b2db3b16780d33be548d3e8b8141573c9e9936124d1e0c1563e",
+      "searched_at": "2026-11-28T20:42:54.577525+08:00",
+      "batch": "batch_004",
+      "observation_id": "batch_004:1",
+      "metadata_event_id": "exec-48e408ee-3c40-4d06-9a6d-460873a38f5a",
+      "abstract_event_id": "exec-d8205d0a-008d-4984-9557-62cde0b2f441",
+      "article_id": "A_feadeb6e39cc404d6d050822",
+      "provenance": [
+        {
+          "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+          "authors": [
+            "林佳鹏"
+          ],
+          "journal": "中国青年研究",
+          "year": "2022",
+          "doi": "10.19633/j.cnki.11-2579/d.2022.0078",
+          "metadata_url": "https://m.fx361.com/news/2022/0713/14423613.html",
+          "abstract_url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+          "abstract_locator": "题录页「文献摘要」段，原生搜索返回整段，直接打开超时",
+          "abstract_excerpt": "加班原因做规范型与情感型的二分",
+          "abstract_summary": "作者以互联网大厂的90后员工为对象，区分规范型与情感型加班，考察员工对不同加班情形的态度和行为选择，指出企业规范上下班时间后，超时工作仍然存在。对本研究的推论是，到点后是否离开还可能取决于员工如何理解留下的理由。",
+          "relevance": "substantive",
+          "relevance_reason": "回应了「正式下班时间明确，为何员工仍会留下」的反诘。可迁移到正式工时清楚、团队成员仍需判断某次加班是否合乎规范的到岗环境。摘要没有分别检验责任是否完成交接、主管是否要求继续在场，以及同事先走是否改变员工选择，也未区分实际加班与留在现场等待。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+          "abstract_hash": "ada3865da58aa10749ecd94e07c80ed18b7fe57174682861074be563e5e7784b",
+          "excerpt_sha256": "8cf4eb6102a69b2db3b16780d33be548d3e8b8141573c9e9936124d1e0c1563e",
+          "searched_at": "2026-11-28T20:42:54.577525+08:00",
+          "batch": "batch_004",
+          "observation_id": "batch_004:1",
+          "metadata_event_id": "exec-48e408ee-3c40-4d06-9a6d-460873a38f5a",
+          "abstract_event_id": "exec-d8205d0a-008d-4984-9557-62cde0b2f441"
+        }
+      ],
+      "evidence_id": "E_1a2dfd84e57564f949f7f87e",
+      "excerpt_visible_in_logged_result": true,
+      "analysis_status": "not_analyzed"
+    },
+    {
+      "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+      "authors": [
+        "Mary C. Brinton",
+        "Eunsil Oh"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2019",
+      "doi": "10.1086/704369",
+      "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+      "abstract_excerpt": "labor market structure and workplace norms",
+      "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_hash": "f449a8b0a3a34b5dd1debc09969ec451841640f31b513cfeff945a758ac0fc4e",
+      "excerpt_sha256": "bd48315166b91ac9b2ad79adf8800dbba588033e622a4e9a0e0a1d00ad75c55b",
+      "searched_at": "2026-11-28T20:51:35.300311+08:00",
+      "batch": "batch_006",
+      "observation_id": "batch_006:1",
+      "metadata_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+      "abstract_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+      "article_id": "A_3b991ffff63587b8829695f6",
+      "provenance": [
+        {
+          "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+          "authors": [
+            "Mary C. Brinton",
+            "Eunsil Oh"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2019",
+          "doi": "10.1086/704369",
+          "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+          "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+          "abstract_excerpt": "labor market structure and workplace norms",
+          "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+          "abstract_hash": "f449a8b0a3a34b5dd1debc09969ec451841640f31b513cfeff945a758ac0fc4e",
+          "excerpt_sha256": "bd48315166b91ac9b2ad79adf8800dbba588033e622a4e9a0e0a1d00ad75c55b",
+          "searched_at": "2026-11-28T20:51:35.300311+08:00",
+          "batch": "batch_006",
+          "observation_id": "batch_006:1",
+          "metadata_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+          "abstract_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368"
+        }
+      ],
+      "evidence_id": "E_1052ef0783dd678a3303ca01",
       "excerpt_visible_in_logged_result": false,
       "analysis_status": "not_analyzed"
     }

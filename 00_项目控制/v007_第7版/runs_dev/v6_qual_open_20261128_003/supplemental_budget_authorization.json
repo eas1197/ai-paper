@@ -1,0 +1,9 @@
+{
+  "run_id": "v6_qual_open_20261128_003",
+  "manifest_sha256": "f457859cf54df59f16f5745ff997b5a93d5c10b620d0705469a4cb0f14de6402",
+  "scope": "supplemental",
+  "base_batches": 3,
+  "additional_batches": 4,
+  "prior_checkpoint_sha256": "1086973db09022d9c746b85fbd31465018d13dfc2d5abe1ae72c61a60f5345c7",
+  "authorization": "用户于2026-11-28授权优化检索策略（优先只看前几条易直开结果）并补齐最后1篇文献。"
+}

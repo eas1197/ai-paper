@@ -1,0 +1,826 @@
+# 独立社会学学术审查
+
+依据 3.x 的问题形成、理论对话和独立裁决规范。先确定当前关卡，再分别给出五项判断。
+
+1. 研究价值 value。说明问题会改变哪项社会学认识，为什么不同答案值得区分。检查比较对象、社会关系、行动与制度条件，不按题材新奇程度判断。
+2. 学术增量 increment。可属于理论、机制、类型、条件，或有独立认知价值的描述。说明相对于已核验的最接近解释，多知道了什么。能被既有理论容纳只是相容性，不能直接推出已有研究解释了、预测了或描述了同一结果。换地域、换样本、重新命名或改良取证不单独构成增量。类型与描述无需强制提供因果反事实，但须交代支持分类、比较或分布认识的证据。
+3. 理论逻辑 theory。检查概念和可观察对象是否对应，已有解释如何适用，推论如何成立，条件和反例是否能改变判断。对过程或机制研究核对竞争解释及可区分之处；对描述或类型研究核对分类根据、比较边界和反例。
+4. 材料可行性 feasibility。分别判断是否可能取得、已经核实可取得，或已经证实不可取得。缺正式采集记录、来源权限待查与已确认无材料分开记录。
+5. 证据充分性 evidence。写明证据足以支持什么。初审看是否能提出有依据的问题；设计审查看能否实施；终审与 S08 看证据能否支持冻结设计。经验阶段才判断实际研究结论。不得把未验证的命题当事实，也不得提前要求已证明结论。
+6. 定性研究方法论口径。定性研究以理想型建构、机制过程分析与类型学比较为核心，不得以定量准实验的“同单位控制变量配对”“全员交叉举证”或“统计样本代表性”作为放行门槛。只要已有真实、可追溯的亲历叙述与公开事件/制度材料能够清晰支撑核心理想型、行动过程张力、竞争解释区分及反例边界，且公开可访问性已核验，设计阶段即可判定材料可行并放行；单方叙述局限、跨场域边界及公开文本的研究使用边界须如实载明，并在后续分析中严守证据边界。
+
+对直接近邻，明确读到的是全文、相关正文还是摘要，并记录所核主张、原文位置与适用范围。未充分核验的近邻可列为疑点和补查方向，不能作为确定性否决。摘要按作者自述处理。若仅依待核近邻，保留不确定判断；若因选题自身只调整操作而退回，写清这一独立理由。
+
+发展性意见须区分放行、补核、局部修改、重构问题与淘汰。指出更值得追问的社会学关系和可能改变判断的证据。建议方向供研究者选择，复审看是否解决关键缺口，不考核是否照做。淘汰及返修额度按原规则执行。保留独立调用、证据指纹和原学术标准。
+
+报告附 sociology_review。value、increment、theory、feasibility、evidence 各为对象，含 judgment（pass/revise/pending/insufficient）和 reason。increment 另填 kind（theory/mechanism/typology/condition/description/none），basis（substantive/overlap/unverified/undetermined）。仅在以已核的直接重叠作确定性否决时用 overlap，并给 neighbors 数组，每项含 url、locator、claim、scope，reading 为 fulltext 或 relevant_body。development 含 disposition（proceed/verify/local_revision/reframe/eliminate）、reason、research_question。保持原 outcome、topic_reasoning、方法回执和证据绑定字段。程序只校验契约，不能替代学术判断。
+学术初审可用 academic_pass 放行一个具备明确候选贡献、已有实质学术深化、但仍待核对近邻覆盖范围的问题。此时增量可标 pending 并写明待核事项；进入补查、归档或冻结前仍须形成正向增量判断。
+保留 3.x 论证字段的确切键名。topic_reasoning.opportunity 与 topic_reasoning.question 各含 reasoning 字符串，topic_reasoning.deepening 含 reasoning 字符串及 change_kind（academic/design_only/unresolved）。使用其他键名的评审报告需退回修正格式，保留原裁决。
+
+最终独立审查（final_review，用于判断是否放行进入 s08_ready 并冻结定性研究设计）。请结合已通过的 design_review_003、合并后的 10 篇九刊文献（merged_literature.json）及理论证据（theories.json），依据上述第6条定性理想型口径审查学术价值、实质增量、理论逻辑、材料可行性与设计可冻结性。JSON only，outcome pass/materials_pending/increment/depth/value/concept，academic_value 精确枚举 pass/revise，data_feasibility 精确枚举 pass/pending，question, reason, design（字符串）, research_case（core_question 等于 question，context，hypotheses_or_propositions 字符串数组），method_assessment（selected 和 paths 包含 quantitative,secondary_interviews,online_qualitative，每个 status ready/unknown/not_applicable 和 reason；ready 须保留 attempt_003 的 materials、search_attempt、access verified、receipt_sha256、reviewed_reuse，online approach public_text），sociology_review 五项与 development，topic_reasoning 固定 opportunity/question/deepening。只用输入，不调用任何工具。
+
+## 已通过的设计审查 design_review_003
+{
+  "stage": "独立设计审查",
+  "outcome": "pass",
+  "academic_value": "pass",
+  "data_feasibility": "pass",
+  "question": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+  "reason": "按定性理想型口径，现有材料足以冻结一项以公开文本为基础的比较设计。仓管采访呈现岗位交接与主管评价叠加，病房项目明确了责任承接的制度条件，六点会议离场和新人先走受批评的叙述区分了评价压力与实际离岗，论坛亲历叙述与事业单位采访呈现了观察他人行动后决定何时离开的过程。部门口头许可和管理方主动催离提供了区分同事先行与组织放行的边界案例。放行适用于类型建构、过程分析和反例比较。跟随者动机、正式处分和各机制的独立效果仍须按经验材料分别判断。",
+  "design": "以常规下班前后可定位的一次离岗过程或当事人明确描述的反复做法为分析单位，分别建构责任承接、主管评价与要求、同事先行信号三个可并存的理想型。逐案记录正式时点、已知任务与交接状态、谁提出要求或替代安排、行动顺序、文本实际记载的离岗行为与后果，缺项标为未知。用仓管叙述分析交钥匙与在场要求如何叠加，用病房制度及实施反馈明确责任承接的判准。对照六点会议离场与先走受批评的叙述，区分替代安排、实际离开、负面评价与正式后果。对照论坛先行跟随、事业单位等待与组织主动催离，判断共同任务结束、主管统一表态和同事先行在各叙述中能区分到什么程度。V2EX同一主帖两批合并，病房规则与成效作为同一项目的互补记录。午间案例用于界定审批、离开工位、离开厂区和事后处分的边界。跨场域比较以相同的行动环节和关系判准为基础，保留各场域的作息、岗位和制度差异。",
+  "research_case": {
+    "core_question": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+    "context": "聚焦到岗员工在常规下班附近由继续在场转为实际离开的过程。材料包括员工亲历自述、公开采访报道、机构制度与自评以及司法案例摘要。午间事件作为比较边界，病房制度与办公场景各自保留岗位条件。",
+    "hypotheses_or_propositions": [
+      "责任承接型关注仍需由谁承担的具体事务。若已有明确接手安排，叙述中仍出现以其他人员尚在场为理由的等待要求，应同时考察主管评价，而将交接是否实际完成单列。",
+      "主管评价与要求型关注谁能把先走评价为不积极、提出继续参与或主动要求离开。会议仍在进行时员工提出次日补看且实际离开，可用于考察参与方式的可替代性，主管答复与补看落实仍属未知。",
+      "同事先行信号型关注员工是否把他人的离开当作可以收拾或离岗的线索。若叙述同时涉及共同任务结束、主管离场或统一催离，应分别记录其时序。仅有先后顺序时，保留信号解释为待检验命题。"
+    ]
+  },
+  "method_assessment": {
+    "selected": "secondary_interviews",
+    "paths": {
+      "quantitative": {
+        "status": "not_applicable",
+        "reason": "研究实施以理想型和过程比较为主。院方汇总数据用于说明项目所报告的变化，无法分解多项同期措施的作用。"
+      },
+      "secondary_interviews": {
+        "status": "ready",
+        "reason": "公开采访与署名报道呈现了会议过程中的离场尝试、先行者受到的主管评价，以及带教师傅传达惯例后员工如何观察他人行动。所列三条可据回执免登录阅读。研究限于有出处的分析与概述，记录转述层级，减少可识别细节，遵守转载限制。整篇复制、再传播与 recontact 均未获得授权。",
+        "material_ids": [
+          "673f808093606ad4",
+          "bca346890c3c8516",
+          "a569c6c121f74b64"
+        ],
+        "search_attempt": "attempt_003",
+        "access": "verified",
+        "receipt_sha256": "fdd514277cf601a0b6b8314011ec38e9dd4f0992d1803b4d637079f1bead55a5",
+        "materials": [
+          "673f808093606ad4",
+          "bca346890c3c8516",
+          "a569c6c121f74b64"
+        ],
+        "reviewed_reuse": "修订后的问题聚焦常规下班时点的责任承接、主管在场要求与同事先行三种理想型，与 attempt_003 采集目标一致，所列真实核验材料直接支持比较分析。"
+      },
+      "online_qualitative": {
+        "status": "ready",
+        "reason": "所列主帖、院方电子报和法院案例据回执可免登录阅读，作为亲历叙述、接班制度与实施反馈、规则适用边界的补充。研究使用限于有出处的文本分析和概述。论坛分析减少可识别细节，院方材料遵守转载限制，不直接推定个体动机或逐人离岗时点。公开访问的核验范围为页面可读，复制与再发布许可仍待核实。",
+        "material_ids": [
+          "9377cee3523b989c",
+          "7bb7425ea88383e8",
+          "195fa546be110ebe",
+          "fc738bd698aa9357"
+        ],
+        "search_attempt": "attempt_003",
+        "access": "verified",
+        "approach": "public_text",
+        "receipt_sha256": "fdd514277cf601a0b6b8314011ec38e9dd4f0992d1803b4d637079f1bead55a5",
+        "materials": [
+          "9377cee3523b989c",
+          "7bb7425ea88383e8",
+          "195fa546be110ebe",
+          "fc738bd698aa9357"
+        ],
+        "reviewed_reuse": "修订后的问题聚焦常规下班时点的责任承接、主管在场要求与同事先行三种理想型，与 attempt_003 采集目标一致，所列真实核验材料直接支持比较分析。"
+      }
+    }
+  },
+  "sociology_review": {
+    "value": {
+      "judgment": "pass",
+      "reason": "问题把实际支配下班时间的能力放回岗位间的责任关系、上下级的评价权与同事间的协调关系中。若等待主要随责任承接而结束，解释重心在岗位协作。若等待在任务完成后仍随主管要求或他人先行变化，解释重心转向组织中的评价权与行动信号。不同答案会改变对正式作息如何在日常工作中得到落实的理解。"
+    },
+    "increment": {
+      "judgment": "pass",
+      "kind": "typology",
+      "basis": "substantive",
+      "reason": "两项已核的近邻相关正文分别覆盖排程控制和离岗评价的概念与测量，以及结合主管支持和排程控制的组织干预。相对于这些已核内容，本设计的增量是以具体离岗过程区分三类关系，并用行动顺序、要求的提出者与责任承担者辨认其叠加和边界。材料能支撑分类判准及其经验比较，三类关系的分布和实证解释留待分析。对近邻未读部分的覆盖保留判断。"
+    },
+    "theory": {
+      "judgment": "pass",
+      "reason": "责任承接以制度所定的接手职责、实际接手或替代安排辨认。主管评价与要求以可定位的质疑、批评、指令或许可辨认。同事先行以观察到谁先走、之后如何行动及叙述者怎样理解来辨认。六点会议仍在进行时员工离开，显示继续在场的要求与实际离岗可以并存。统一催离提供了集体离开的竞争解释，事业单位九点个案则显示任务结束与主管离场信号可能无法区分。"
+    },
+    "feasibility": {
+      "judgment": "pass",
+      "reason": "两批共13条材料记录，回执已核实所列来源可免登录阅读。现有公开采访、亲历叙述和制度事件材料足以实施有限的公开文本比较。来源权限仍按实际用途记录，页面公开可读支持本设计中的定位、分析和有出处的概述。复制、传播和超出此范围的研究使用条件待核。部分平台入口访问失败的记录不改变已取得材料的可读性。"
+    },
+    "evidence": {
+      "judgment": "pass",
+      "reason": "现有证据足以冻结三类理想型的判准、离岗过程的观察项和反例边界。仓管采访支持考察责任交接与在场评价如何叠加。病房规则和成效记录属于同一项目，支持界定接手职责与实施张力。会议离场支持区分提出替代方案、实际离岗与负面预期。跨批次重复的论坛主帖支持描述先行和跟随的时序，跟随者动机仍无直接证据。主管主动催离构成不同过程的边界案例，午间材料界定审批、工位离开和处分的观察边界。跨场域比较仅支持过程与类型认识，实际机制结论须在经验分析中逐案论证。"
+    },
+    "development": {
+      "disposition": "proceed",
+      "reason": "按既定理想型进入公开文本分析，并把同一事件的重复来源、各方表述与行为结果分开记录。若后续材料显示跟随主要发生在共同任务结束或管理方统一表态之后，应调整同事先行在该案例中的解释。若能定位接手之后仍被要求在场的过程，可进一步区分责任承接与评价权。后续以能否改变具体解释评估补证价值。",
+      "research_question": "当岗位责任已经有人承接，谁仍能要求员工继续在场，同事先行在什么条件下会成为其他员工采取行动的信号？"
+    }
+  },
+  "topic_reasoning": {
+    "opportunity": {
+      "reasoning": "正式下班时点到来后，材料呈现了交钥匙后等待、提出替代安排后离开、先走受批评、同事跟随以及管理方催离等不同过程，可以据此追问实际离岗如何受工作关系约束。"
+    },
+    "question": {
+      "reasoning": "以常规下班附近的离岗过程为中心，比较谁负责接手、谁能对继续在场提出要求、谁的先行能成为他人的行动线索。正式时点、任务进度、离开工位、离开单位和打卡分别按可见证据记录。"
+    },
+    "deepening": {
+      "reasoning": "从一般排程控制推进到责任承接、在场评价和同事先行三种可叠加关系的区分。用替代参与、主管催离和任务结束与离岗信号重合等情形界定各解释的适用范围。",
+      "change_kind": "academic"
+    }
+  },
+  "literature_review": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3094103/",
+      "locator": "Schedule Control，第99至109行；测量和分析，第239至245行",
+      "reading": "relevant_body",
+      "claim": "据所附正文核对，排程控制涉及开始、结束工作和白天离岗的时间。组织文化指标涉及因私事离开被视为不投入。",
+      "scope": "一家白领组织的ROWE纵向部门对照，已核范围为所列概念与测量段落。"
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/10.1177/0003122414531435",
+      "locator": "表3相关段落，第300至319行",
+      "reading": "relevant_body",
+      "claim": "据所附正文核对，STAR同时改变排程控制和主管支持。研究报告部分员工更能在工作时段处理个人事务，也报告了居家工作时数的变化。",
+      "scope": "信息技术企业的组合干预。已核段落涉及时间安排及组织期待，逐次离岗互动的正文覆盖范围待核。"
+    },
+    {
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "locator": "出版方摘要，第46至48行",
+      "reading": "abstract",
+      "claim": "据作者摘要自述，纳入正式规则后，横向和纵向工作关系仍与工作评价及行为有关。",
+      "scope": "德国多个工作环境，正文对下班离岗过程的覆盖范围待核。"
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+      "locator": null,
+      "reading": "supplied_claim",
+      "claim": "输入概括为在不同时段被动在场可能引发对可靠性或投入的印象。",
+      "scope": "用于提出在场评价解释。正文位置及其对实际离岗选择和正式后果的覆盖均待核。"
+    }
+  ],
+  "run_id": "v6_qual_open_20261128_003",
+  "input_sha256": "35c8ad5dfaa649bc3e10fcd6d06d0d85956cc7af600e251bdcd59b1c56ea7aaa",
+  "exchange_sha256": null,
+  "reality_sha256": "5efdb3b488df51f687a541c9adfabcf8c1893c10be501a163dc775799ed5bae1",
+  "collection_id": "COL_17b93b87d2a8cda7f9dcb0ff",
+  "collection_sha256": "81c7a6fd2cebf505ff24bf11bfa79ea2aa48e06db80398c6d0554422e2c3e7cb",
+  "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+  "evidence_sha256": "103b60b3d0c64c54ab8fcf76ee9ef02defe37da91ca4ffb671b09357d763c1a9",
+  "events_sha256": "229fb1112dea3d984fded8c6d9329d6601473d8af92ec040c309265f937298bd",
+  "conversion_sha256": "2a28ca9883bab7e5c981f94e2a8be0b32b30e1464cd73d95008dc4e7f53865b2",
+  "formal_eligible": false,
+  "research_actor": "01a2205c-60d1-7cf1-b8e6-02a3706c5294",
+  "critical_actor": "01a220f6-6b74-7d00-84b9-ef2ea2772c60",
+  "model": "gpt-6.2-sol",
+  "invocation_id": "01a221ef-22b8-74c0-9e44-05124c58b4b1",
+  "critical_receipt": {
+    "events": "sociology_review_audit_20261128\\fresh_contract_events.jsonl",
+    "sha256": "cc537064b3a157a23fdef041fe7b8da516d36a8134e934f8a4afa3975e638651",
+    "response_sha256": "9bece49b6c6ba020ab18d9fd3d97d7d28a8f834a91dd5a2f73b1eb093dadb800"
+  },
+  "method_receipt": {
+    "scope": "本次复审仅依输入，逐类核对两批13条记录与近邻阅读范围。学术设计裁决依据用户指定的定性理想型口径。",
+    "binding": "顶层标识、反诘回执和证据指纹照录上轮原绑定记录。本次未获提供新的独立调用凭证或合并证据指纹，未重算所列指纹。学术设计放行与原回执的正式资格分别记录。",
+    "material_receipt": {
+      "status": "pending_independent_review",
+      "search_attempt": "attempt_001",
+      "events_sha256": "3f11f30b60577df6a78eb17c2dbd256f0903620285236ce3a0ef2febdccac8e2",
+      "response_sha256": "28c2f5d09a910a94be4d86102635f3fc12ff158c1f8b16e8612010115ba06084",
+      "tool_events": 5,
+      "note": "回执记载25项，超过24项上限1项，正式资格为false。六条材料在本次学术复审中按所载证据范围用于类型比较与边界判断。"
+    },
+    "supplemental_material_receipt": {
+      "status": "pending_independent_review",
+      "search_attempt": "attempt_003",
+      "events_sha256": "8e4fe1b95609974e9f090f6591b036197ee8683d43d0348c9ef53d832b76ebf4",
+      "response_sha256": "562f664772438b8db242324c2c04472ba81fd630f16ee2d1cf5694fd78530134",
+      "conversion_sha256": "9454088aad93bc71fa2d21fa47bc05c9e9333b2137023c98164011c26014dbfc",
+      "tool_events": 5,
+      "formal_eligible": false,
+      "note": "回执记载12次查询和12次打开。V2EX先行跟随主帖与首批重复，病房两条记录来自同一项目。"
+    }
+  }
+}
+
+
+## 合并后的 10 篇九刊文献 merged_literature.json
+{
+  "rows": [
+    {
+      "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+      "authors": [
+        "Erin L. Kelly",
+        "Phyllis Moen",
+        "J. Michael Oakes",
+        "Wen Fan",
+        "Cassandra Okechukwu",
+        "Kelly D. Davis",
+        "Leslie B. Hammer",
+        "Ellen Ernst Kossek",
+        "Rosalind Berkowitz King",
+        "Ginger C. Hanson",
+        "Frank Mierzwa",
+        "Lynne M. Casper"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2014",
+      "doi": "10.1177/0003122414531435",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_locator": "SAGE 79 卷 3 期文章页，DOI 下方摘要，第 31–34 行",
+      "abstract_excerpt": "larger changes in schedule control and supervisor support",
+      "abstract_summary": "作者用信息技术企业的组群随机试验检验一项同时改变主管支持和工作时空安排的干预。员工的排程控制与主管支持改善较大，工作家庭冲突与家庭时间充足度改善较小。研究者推论是，组织调整可能改变员工实际可调用的时间。",
+      "relevance": "direct",
+      "relevance_reason": "可回应“员工只是因为工时变短才更有自主权”的反诘。试验没有发现工时增加，而摘要报告排程控制与主管支持改善。若到岗团队的主管同样有权调整工作实践与时间安排，这一机制可迁移。干预同时改变多项做法，不能据此拆分午间离岗规则、下班在场期待和同事互动各自的作用，也未考察通勤变化。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+      "abstract_hash": "529aab7992abe6dfd48359a284bb01950954f8908df36744d8bd64ac11059c5f",
+      "excerpt_sha256": "f58daafff029ee963b529bdbb01ae6f3876135fff81249f00d0dc20a8dfb1401",
+      "searched_at": "2026-11-28T15:08:05.961054+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:1",
+      "metadata_event_id": "exec-2300f850-5686-49d4-8732-7be65402d490",
+      "abstract_event_id": "exec-2300f850-5686-49d4-8732-7be65402d490",
+      "article_id": "A_4e6a6ca192245865c127c1af",
+      "provenance": [
+        {
+          "title": "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+          "authors": [
+            "Erin L. Kelly",
+            "Phyllis Moen",
+            "J. Michael Oakes",
+            "Wen Fan",
+            "Cassandra Okechukwu",
+            "Kelly D. Davis",
+            "Leslie B. Hammer",
+            "Ellen Ernst Kossek",
+            "Rosalind Berkowitz King",
+            "Ginger C. Hanson",
+            "Frank Mierzwa",
+            "Lynne M. Casper"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2014",
+          "doi": "10.1177/0003122414531435",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_locator": "SAGE 79 卷 3 期文章页，DOI 下方摘要，第 31–34 行",
+          "abstract_excerpt": "larger changes in schedule control and supervisor support",
+          "abstract_summary": "作者用信息技术企业的组群随机试验检验一项同时改变主管支持和工作时空安排的干预。员工的排程控制与主管支持改善较大，工作家庭冲突与家庭时间充足度改善较小。研究者推论是，组织调整可能改变员工实际可调用的时间。",
+          "relevance": "direct",
+          "relevance_reason": "可回应“员工只是因为工时变短才更有自主权”的反诘。试验没有发现工时增加，而摘要报告排程控制与主管支持改善。若到岗团队的主管同样有权调整工作实践与时间安排，这一机制可迁移。干预同时改变多项做法，不能据此拆分午间离岗规则、下班在场期待和同事互动各自的作用，也未考察通勤变化。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414531435",
+          "abstract_hash": "529aab7992abe6dfd48359a284bb01950954f8908df36744d8bd64ac11059c5f",
+          "excerpt_sha256": "f58daafff029ee963b529bdbb01ae6f3876135fff81249f00d0dc20a8dfb1401",
+          "searched_at": "2026-11-28T15:08:05.961054+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:1",
+          "metadata_event_id": "exec-2300f850-5686-49d4-8732-7be65402d490",
+          "abstract_event_id": "exec-2300f850-5686-49d4-8732-7be65402d490"
+        }
+      ]
+    },
+    {
+      "title": "Consequences of Routine Work-Schedule Instability for Worker Health and Well-Being",
+      "authors": [
+        "Daniel Schneider",
+        "Kristen Harknett"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2019",
+      "doi": "10.1177/0003122418823184",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+      "abstract_locator": "SAGE 摘要段，第 31–33 行",
+      "abstract_excerpt": "unstable and unpredictable schedules",
+      "abstract_summary": "作者将排班不稳视为企业向劳动者转移风险的一种方式。美国服务业员工的福祉与排班不稳密切相关，工作生活冲突解释的关联多于家庭经济不安全。研究者推论是，即使通勤节省的分钟数相同，时段的可预期性也可能影响员工能否提前安排用途。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“只要腾出同样多的时间，就能同样使用”的反诘。如果到岗员工何时能离开会随任务交接、临时要求或人员覆盖而波动，时间可预期性的机制可以迁移。原研究考察雇主排班及福祉，不能说明固定班次内谁有权离岗，也无法区分同事协作需求与评价压力。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+      "abstract_hash": "2f206e085047af7e7fbff02511fc7dacbc70767c618a807a57de1fdc3dcc14a5",
+      "excerpt_sha256": "c1fea22e2030333d4b4811e910e10aa7283fa2dc9ba3798fbc8b4015a094b5ca",
+      "searched_at": "2026-11-28T15:08:05.962089+08:00",
+      "batch": "batch_001",
+      "observation_id": "batch_001:2",
+      "metadata_event_id": "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6",
+      "abstract_event_id": "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6",
+      "article_id": "A_c0eecd147169826339fd707a",
+      "provenance": [
+        {
+          "title": "Consequences of Routine Work-Schedule Instability for Worker Health and Well-Being",
+          "authors": [
+            "Daniel Schneider",
+            "Kristen Harknett"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2019",
+          "doi": "10.1177/0003122418823184",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+          "abstract_locator": "SAGE 摘要段，第 31–33 行",
+          "abstract_excerpt": "unstable and unpredictable schedules",
+          "abstract_summary": "作者将排班不稳视为企业向劳动者转移风险的一种方式。美国服务业员工的福祉与排班不稳密切相关，工作生活冲突解释的关联多于家庭经济不安全。研究者推论是，即使通勤节省的分钟数相同，时段的可预期性也可能影响员工能否提前安排用途。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“只要腾出同样多的时间，就能同样使用”的反诘。如果到岗员工何时能离开会随任务交接、临时要求或人员覆盖而波动，时间可预期性的机制可以迁移。原研究考察雇主排班及福祉，不能说明固定班次内谁有权离岗，也无法区分同事协作需求与评价压力。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122418823184?journalCode=asra&mod=article_inline",
+          "abstract_hash": "2f206e085047af7e7fbff02511fc7dacbc70767c618a807a57de1fdc3dcc14a5",
+          "excerpt_sha256": "c1fea22e2030333d4b4811e910e10aa7283fa2dc9ba3798fbc8b4015a094b5ca",
+          "searched_at": "2026-11-28T15:08:05.962089+08:00",
+          "batch": "batch_001",
+          "observation_id": "batch_001:2",
+          "metadata_event_id": "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6",
+          "abstract_event_id": "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6"
+        }
+      ]
+    },
+    {
+      "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+      "authors": [
+        "Erin L. Kelly",
+        "Phyllis Moen",
+        "Eric Tranby"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2011",
+      "doi": "10.1177/0003122411400056",
+      "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122411400056",
+      "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+      "abstract_locator": "Abstract，网页第31–33行。原刊76卷2期，265–290页。",
+      "abstract_excerpt": "whether schedule control mediates these effects",
+      "abstract_summary": "作者用一家白领组织608名员工在改革前后的纵向资料，考察改革如何改变工作家庭冲突及协调状况，结果指向员工排班控制权的提升这一主要路径。本轮推论是，通勤缩短所释放的时间能否自主使用，取决于组织是否允许员工调整具体时段。",
+      "relevance": "direct",
+      "relevance_reason": "可回应“通勤短了自然就更自由”的反诘：组织可以改变员工决定何时工作的权利。迁移到持续到岗的岗位，需确认改革触及午间离岗或下班时间，且员工能够实际行使选择权。摘要未单独识别午间离岗、同事反应或通勤缩短的作用。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+      "abstract_hash": "c12586977f1cb349255d92bce42c1674fc65b16fcb65c47a83f912fdcdfcc634",
+      "excerpt_sha256": "2a11c6a17033a8b94b3824aaf88773c8ed48e4ad553fe62e9e223b1576bf5766",
+      "searched_at": "2026-11-28T15:09:30.539545+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:1",
+      "metadata_event_id": "exec-0d62675f-82b0-46ba-8f80-146204f9cf29",
+      "abstract_event_id": "exec-904793ec-096f-4935-a6e5-ffd90f772620",
+      "article_id": "A_c9d195dc2d34b2fa037f246b",
+      "provenance": [
+        {
+          "title": "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+          "authors": [
+            "Erin L. Kelly",
+            "Phyllis Moen",
+            "Eric Tranby"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2011",
+          "doi": "10.1177/0003122411400056",
+          "metadata_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122411400056",
+          "abstract_url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+          "abstract_locator": "Abstract，网页第31–33行。原刊76卷2期，265–290页。",
+          "abstract_excerpt": "whether schedule control mediates these effects",
+          "abstract_summary": "作者用一家白领组织608名员工在改革前后的纵向资料，考察改革如何改变工作家庭冲突及协调状况，结果指向员工排班控制权的提升这一主要路径。本轮推论是，通勤缩短所释放的时间能否自主使用，取决于组织是否允许员工调整具体时段。",
+          "relevance": "direct",
+          "relevance_reason": "可回应“通勤短了自然就更自由”的反诘：组织可以改变员工决定何时工作的权利。迁移到持续到岗的岗位，需确认改革触及午间离岗或下班时间，且员工能够实际行使选择权。摘要未单独识别午间离岗、同事反应或通勤缩短的作用。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/10.1177/0003122411400056",
+          "abstract_hash": "c12586977f1cb349255d92bce42c1674fc65b16fcb65c47a83f912fdcdfcc634",
+          "excerpt_sha256": "2a11c6a17033a8b94b3824aaf88773c8ed48e4ad553fe62e9e223b1576bf5766",
+          "searched_at": "2026-11-28T15:09:30.539545+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:1",
+          "metadata_event_id": "exec-0d62675f-82b0-46ba-8f80-146204f9cf29",
+          "abstract_event_id": "exec-904793ec-096f-4935-a6e5-ffd90f772620"
+        }
+      ]
+    },
+    {
+      "title": "Rules, Relations, and Work",
+      "authors": [
+        "Vincent J. Roscigno",
+        "Carsten Sauer",
+        "Peter Valet"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2018",
+      "doi": "10.1086/697111",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "abstract_locator": "Abstract，网页第46–48行。原刊123卷6期，1784–1825页。题名后的上标1为脚注。",
+      "abstract_excerpt": "horizontal and vertical social relations",
+      "abstract_summary": "作者分析约2500名处于不同工作环境的德国员工，发现横向和纵向关系与满意度、公平感、组织承诺及工作努力有关。将正式规则纳入分析后，关系仍有解释力。本轮推论是，即使离岗规则一致，同事配合与主管态度也可能造成不同的时间自主体验。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“单位明文允许离岗，规则就足以解释谁能走”的反诘。若任务需要交接、同事代岗或主管协调，横向和纵向关系可作为两条待检验路径。文章的结果指标集中在工作评价和行为，无法据摘要判断关系对离岗自由的方向或大小。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+      "abstract_hash": "859202d79029da8333e6abf49d0ae08ca604d9e2d40b84b6d3e074c491ca8b09",
+      "excerpt_sha256": "3d5e0baf282294e28bc553ec2644c95aab288f867ff4595811f376927a82d6ff",
+      "searched_at": "2026-11-28T15:09:30.540556+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:2",
+      "metadata_event_id": "exec-cdde771a-51ed-4a36-9a39-777e361d222c",
+      "abstract_event_id": "exec-cdde771a-51ed-4a36-9a39-777e361d222c",
+      "article_id": "A_6221e0fe073df70eda2de1bf",
+      "provenance": [
+        {
+          "title": "Rules, Relations, and Work",
+          "authors": [
+            "Vincent J. Roscigno",
+            "Carsten Sauer",
+            "Peter Valet"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2018",
+          "doi": "10.1086/697111",
+          "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "abstract_locator": "Abstract，网页第46–48行。原刊123卷6期，1784–1825页。题名后的上标1为脚注。",
+          "abstract_excerpt": "horizontal and vertical social relations",
+          "abstract_summary": "作者分析约2500名处于不同工作环境的德国员工，发现横向和纵向关系与满意度、公平感、组织承诺及工作努力有关。将正式规则纳入分析后，关系仍有解释力。本轮推论是，即使离岗规则一致，同事配合与主管态度也可能造成不同的时间自主体验。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“单位明文允许离岗，规则就足以解释谁能走”的反诘。若任务需要交接、同事代岗或主管协调，横向和纵向关系可作为两条待检验路径。文章的结果指标集中在工作评价和行为，无法据摘要判断关系对离岗自由的方向或大小。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/697111?journalCode=ajs",
+          "abstract_hash": "859202d79029da8333e6abf49d0ae08ca604d9e2d40b84b6d3e074c491ca8b09",
+          "excerpt_sha256": "3d5e0baf282294e28bc553ec2644c95aab288f867ff4595811f376927a82d6ff",
+          "searched_at": "2026-11-28T15:09:30.540556+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:2",
+          "metadata_event_id": "exec-cdde771a-51ed-4a36-9a39-777e361d222c",
+          "abstract_event_id": "exec-cdde771a-51ed-4a36-9a39-777e361d222c"
+        }
+      ]
+    },
+    {
+      "title": "Overwork and the Slow Convergence in the Gender Gap in Wages",
+      "authors": [
+        "Youngjoo Cha",
+        "Kim A. Weeden"
+      ],
+      "journal": "American Sociological Review",
+      "year": "2014",
+      "doi": "10.1177/0003122414528936",
+      "metadata_url": "https://journals.sagepub.com/toc/asra/79/3",
+      "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+      "abstract_locator": "Abstract，估计长工时对总体工资差距贡献的句子在网页第32行。原刊79卷3期，457–484页。",
+      "abstract_excerpt": "an estimated 10 percent of the total wage gap",
+      "abstract_summary": "作者用1979至2009年美国人口现状调查资料发现，长工时日渐普遍且工资回报提高。男性更常从事长工时工作，这一变化扩大了性别工资差距，并抵消了教育等差距缩小带来的部分收益。本轮推论是，组织对长工时的奖励可能抬高按时离岗的机会成本。",
+      "relevance": "substantive",
+      "relevance_reason": "可部分回应“久留只反映个人偏好”的反诘：长工时存在可观察的经济回报。若目标单位的薪酬或晋升确实奖励延长工时，这条机制可以迁移。研究用工时衡量投入，无法区分现场久留、异地工作和单纯被看见，也无法识别午间离岗规则。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+      "abstract_hash": "6d613cde0a12a67f8af2e8c0fda3f8bf362f4f9537dd6d1b4b08213ff60d2e77",
+      "excerpt_sha256": "c4c3d1198a3dca254c5a045f6fdc6573a37bcb3a5cb5b834008da3ef41ce8575",
+      "searched_at": "2026-11-28T15:09:30.541555+08:00",
+      "batch": "batch_002",
+      "observation_id": "batch_002:3",
+      "metadata_event_id": "exec-ef2c1cd0-608d-4788-9768-bf11b9265913",
+      "abstract_event_id": "exec-0d62675f-82b0-46ba-8f80-146204f9cf29",
+      "article_id": "A_a96d20cc9c859df3cc2cb6e2",
+      "provenance": [
+        {
+          "title": "Overwork and the Slow Convergence in the Gender Gap in Wages",
+          "authors": [
+            "Youngjoo Cha",
+            "Kim A. Weeden"
+          ],
+          "journal": "American Sociological Review",
+          "year": "2014",
+          "doi": "10.1177/0003122414528936",
+          "metadata_url": "https://journals.sagepub.com/toc/asra/79/3",
+          "abstract_url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+          "abstract_locator": "Abstract，估计长工时对总体工资差距贡献的句子在网页第32行。原刊79卷3期，457–484页。",
+          "abstract_excerpt": "an estimated 10 percent of the total wage gap",
+          "abstract_summary": "作者用1979至2009年美国人口现状调查资料发现，长工时日渐普遍且工资回报提高。男性更常从事长工时工作，这一变化扩大了性别工资差距，并抵消了教育等差距缩小带来的部分收益。本轮推论是，组织对长工时的奖励可能抬高按时离岗的机会成本。",
+          "relevance": "substantive",
+          "relevance_reason": "可部分回应“久留只反映个人偏好”的反诘：长工时存在可观察的经济回报。若目标单位的薪酬或晋升确实奖励延长工时，这条机制可以迁移。研究用工时衡量投入，无法区分现场久留、异地工作和单纯被看见，也无法识别午间离岗规则。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0003122414528936",
+          "abstract_hash": "6d613cde0a12a67f8af2e8c0fda3f8bf362f4f9537dd6d1b4b08213ff60d2e77",
+          "excerpt_sha256": "c4c3d1198a3dca254c5a045f6fdc6573a37bcb3a5cb5b834008da3ef41ce8575",
+          "searched_at": "2026-11-28T15:09:30.541555+08:00",
+          "batch": "batch_002",
+          "observation_id": "batch_002:3",
+          "metadata_event_id": "exec-ef2c1cd0-608d-4788-9768-bf11b9265913",
+          "abstract_event_id": "exec-0d62675f-82b0-46ba-8f80-146204f9cf29"
+        }
+      ]
+    },
+    {
+      "title": "996在职青年的超时工作及社会心理后果研究——基于CLDS数据的实证分析",
+      "authors": [
+        "聂伟",
+        "风笑天"
+      ],
+      "journal": "中国青年研究",
+      "year": "2020",
+      "doi": null,
+      "metadata_url": "https://journal.psych.ac.cn/xlkxjz/cn/y2022/v30/i12/2666",
+      "abstract_url": "https://www.36kr.com/p/703068356377479",
+      "abstract_locator": "《中国青年研究》2020年第5期。期刊公众号授权转载页第58行注明来源，第60至61行为摘要。",
+      "abstract_excerpt": "工作自主性对减少主观加班和强化自愿加班发挥积极作用",
+      "abstract_summary": "作者基于全国劳动力动态调查发现，逾半数在职青年存在客观加班，近三分之一被迫加班。工作自主性与较少感知到加班、较多自愿加班相关，工作与生活空间一体化也与自愿延长工时相关。对本题的推论是，即使留岗时长相近，员工对离岗时点的支配程度仍可能不同。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“员工留下就说明组织要求在场”的反诘，因为工作自主性较高时也可能出现自愿加班。迁移到常规下班情境，需要分别确认员工当时能否离岗、岗位是否仍需有人承接，以及个人是否有意继续工作。摘要未观测下班时点的等待，也无法识别主管要求和同事先行的独立作用。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.36kr.com/p/703068356377479",
+      "abstract_hash": "d5e28de883c7a169206b0ede79983eac9b01a26c62017200c574f3cacc2ea605",
+      "excerpt_sha256": "ebd622217fe685415580eac6c8c473260974f66bd374820c9c05f92daf71a43f",
+      "searched_at": "2026-11-28T19:38:58.622870+08:00",
+      "batch": "batch_001",
+      "observation_id": "supplemental:batch_001:1",
+      "metadata_event_id": "exec-a9c518d4-cba7-4384-b095-e36bc3f85aea",
+      "abstract_event_id": "exec-a9c518d4-cba7-4384-b095-e36bc3f85aea",
+      "article_id": "A_c26564787e96dd9c3b400816",
+      "provenance": [
+        {
+          "title": "996在职青年的超时工作及社会心理后果研究——基于CLDS数据的实证分析",
+          "authors": [
+            "聂伟",
+            "风笑天"
+          ],
+          "journal": "中国青年研究",
+          "year": "2020",
+          "doi": null,
+          "metadata_url": "https://journal.psych.ac.cn/xlkxjz/cn/y2022/v30/i12/2666",
+          "abstract_url": "https://www.36kr.com/p/703068356377479",
+          "abstract_locator": "《中国青年研究》2020年第5期。期刊公众号授权转载页第58行注明来源，第60至61行为摘要。",
+          "abstract_excerpt": "工作自主性对减少主观加班和强化自愿加班发挥积极作用",
+          "abstract_summary": "作者基于全国劳动力动态调查发现，逾半数在职青年存在客观加班，近三分之一被迫加班。工作自主性与较少感知到加班、较多自愿加班相关，工作与生活空间一体化也与自愿延长工时相关。对本题的推论是，即使留岗时长相近，员工对离岗时点的支配程度仍可能不同。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“员工留下就说明组织要求在场”的反诘，因为工作自主性较高时也可能出现自愿加班。迁移到常规下班情境，需要分别确认员工当时能否离岗、岗位是否仍需有人承接，以及个人是否有意继续工作。摘要未观测下班时点的等待，也无法识别主管要求和同事先行的独立作用。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.36kr.com/p/703068356377479",
+          "abstract_hash": "d5e28de883c7a169206b0ede79983eac9b01a26c62017200c574f3cacc2ea605",
+          "excerpt_sha256": "ebd622217fe685415580eac6c8c473260974f66bd374820c9c05f92daf71a43f",
+          "searched_at": "2026-11-28T19:38:58.622870+08:00",
+          "batch": "batch_001",
+          "observation_id": "supplemental:batch_001:1",
+          "metadata_event_id": "exec-a9c518d4-cba7-4384-b095-e36bc3f85aea",
+          "abstract_event_id": "exec-a9c518d4-cba7-4384-b095-e36bc3f85aea"
+        }
+      ]
+    },
+    {
+      "title": "Class Advantage and the Gender Divide: Flexibility on the Job and at Home",
+      "authors": [
+        "Naomi Gerstel",
+        "Dan Clawson"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2014",
+      "doi": "10.1086/678270",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+      "abstract_locator": "出版商页面 Abstract，第1至3段。第120卷第2期的 Published In 栏标注2014年9月，页面顶部另显示2015年6月。",
+      "abstract_excerpt": "obtain little employee-based flexibility",
+      "abstract_summary": "作者以调查、访谈和观察比较四类医疗职业，认为职业地位影响员工取得工时弹性的能力，组织规则和性别期待共同塑造弹性的用途。护士更多用于照顾家庭，医生更多用于职业投入。本轮推论是，可调整工时的权利与实际离岗时间应分别观察。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“留得久是否就意味着缺少自主权”的反诘。掌握工时安排权的员工也可能把弹性用于工作。若到岗单位同样按岗位地位分配排班裁量权，这一解释可用于比较谁有权在常规下班时离开。摘要未检验交接完成与否、主管指令或同事先行对当日离岗的影响。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+      "abstract_hash": "08246e74152efb18d97530468c8eb0fde5b0a1e9b37d9925ca5b9b8b78caf4e6",
+      "excerpt_sha256": "9a119e0dc2cda36e05772b18b2733b89fce000fdc2b86d0239635a82bdac4b2d",
+      "searched_at": "2026-11-28T19:40:41.660812+08:00",
+      "batch": "batch_002",
+      "observation_id": "supplemental:batch_002:1",
+      "metadata_event_id": "exec-ccf70767-8708-4ca4-9c30-db2bcbe44262",
+      "abstract_event_id": "exec-ccf70767-8708-4ca4-9c30-db2bcbe44262",
+      "article_id": "A_e0d36c518f3a56c3085fe0f0",
+      "provenance": [
+        {
+          "title": "Class Advantage and the Gender Divide: Flexibility on the Job and at Home",
+          "authors": [
+            "Naomi Gerstel",
+            "Dan Clawson"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2014",
+          "doi": "10.1086/678270",
+          "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+          "abstract_locator": "出版商页面 Abstract，第1至3段。第120卷第2期的 Published In 栏标注2014年9月，页面顶部另显示2015年6月。",
+          "abstract_excerpt": "obtain little employee-based flexibility",
+          "abstract_summary": "作者以调查、访谈和观察比较四类医疗职业，认为职业地位影响员工取得工时弹性的能力，组织规则和性别期待共同塑造弹性的用途。护士更多用于照顾家庭，医生更多用于职业投入。本轮推论是，可调整工时的权利与实际离岗时间应分别观察。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“留得久是否就意味着缺少自主权”的反诘。掌握工时安排权的员工也可能把弹性用于工作。若到岗单位同样按岗位地位分配排班裁量权，这一解释可用于比较谁有权在常规下班时离开。摘要未检验交接完成与否、主管指令或同事先行对当日离岗的影响。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/678270",
+          "abstract_hash": "08246e74152efb18d97530468c8eb0fde5b0a1e9b37d9925ca5b9b8b78caf4e6",
+          "excerpt_sha256": "9a119e0dc2cda36e05772b18b2733b89fce000fdc2b86d0239635a82bdac4b2d",
+          "searched_at": "2026-11-28T19:40:41.660812+08:00",
+          "batch": "batch_002",
+          "observation_id": "supplemental:batch_002:1",
+          "metadata_event_id": "exec-ccf70767-8708-4ca4-9c30-db2bcbe44262",
+          "abstract_event_id": "exec-ccf70767-8708-4ca4-9c30-db2bcbe44262"
+        }
+      ]
+    },
+    {
+      "title": "Time Is Money? Wage Premiums and Penalties for Time-Related Occupational Demands",
+      "authors": [
+        "Wei-hsin Yu",
+        "Janet Chen-Lan Kuo"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2022",
+      "doi": "10.1086/722963",
+      "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+      "abstract_locator": "出版商页面 Abstract 第2段。原刊第128卷第3期，820–865页，卷期标注2022年11月，网页顶部显示2023年1月20日。",
+      "abstract_excerpt": "require much temporal coordination and allow little work-structuring discretion",
+      "abstract_summary": "作者利用纵向数据和固定效应模型区分个人实际工时与职业预期工时。长工时要求和频繁截止期限对应薪酬溢价，时间协调要求高且工作安排裁量小的职业则有薪酬折损。本轮据此推论，比较到点离开与继续等待时，应分别观察任务协调要求、在场期待和实际停留。",
+      "relevance": "substantive",
+      "relevance_reason": "可部分回应“久留是否只因工作量大”的反诘，提供了区分时间协调要求和职业工时期待的依据。若离岗确实依赖接班人到位，且员工无权自行调整交接，时间协调机制可迁移至本题。论文估计的是职业时间要求与工资的关系，主管现场指令、同事先走的示范作用以及当天等待的触发条件仍缺证据。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+      "abstract_hash": "38880ca2b6bfbade4e8ca77d8af67f9b1e35da89d3a21c4b069a61a02c776294",
+      "excerpt_sha256": "4b9f75ea19fdfdfddfe7b415e7a3787c94d11889e7ddb54790a56ab6c8d4eaf3",
+      "searched_at": "2026-11-28T19:42:13.948710+08:00",
+      "batch": "batch_003",
+      "observation_id": "supplemental:batch_003:1",
+      "metadata_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb",
+      "abstract_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb",
+      "article_id": "A_2566ff1f5f7c84541618bacd",
+      "provenance": [
+        {
+          "title": "Time Is Money? Wage Premiums and Penalties for Time-Related Occupational Demands",
+          "authors": [
+            "Wei-hsin Yu",
+            "Janet Chen-Lan Kuo"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2022",
+          "doi": "10.1086/722963",
+          "metadata_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+          "abstract_locator": "出版商页面 Abstract 第2段。原刊第128卷第3期，820–865页，卷期标注2022年11月，网页顶部显示2023年1月20日。",
+          "abstract_excerpt": "require much temporal coordination and allow little work-structuring discretion",
+          "abstract_summary": "作者利用纵向数据和固定效应模型区分个人实际工时与职业预期工时。长工时要求和频繁截止期限对应薪酬溢价，时间协调要求高且工作安排裁量小的职业则有薪酬折损。本轮据此推论，比较到点离开与继续等待时，应分别观察任务协调要求、在场期待和实际停留。",
+          "relevance": "substantive",
+          "relevance_reason": "可部分回应“久留是否只因工作量大”的反诘，提供了区分时间协调要求和职业工时期待的依据。若离岗确实依赖接班人到位，且员工无权自行调整交接，时间协调机制可迁移至本题。论文估计的是职业时间要求与工资的关系，主管现场指令、同事先走的示范作用以及当天等待的触发条件仍缺证据。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722963?journalCode=ajs",
+          "abstract_hash": "38880ca2b6bfbade4e8ca77d8af67f9b1e35da89d3a21c4b069a61a02c776294",
+          "excerpt_sha256": "4b9f75ea19fdfdfddfe7b415e7a3787c94d11889e7ddb54790a56ab6c8d4eaf3",
+          "searched_at": "2026-11-28T19:42:13.948710+08:00",
+          "batch": "batch_003",
+          "observation_id": "supplemental:batch_003:1",
+          "metadata_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb",
+          "abstract_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb"
+        }
+      ]
+    },
+    {
+      "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+      "authors": [
+        "林佳鹏"
+      ],
+      "journal": "中国青年研究",
+      "year": "2022",
+      "doi": "10.19633/j.cnki.11-2579/d.2022.0078",
+      "metadata_url": "https://m.fx361.com/news/2022/0713/14423613.html",
+      "abstract_url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_locator": "题录页「文献摘要」段，原生搜索返回整段，直接打开超时",
+      "abstract_excerpt": "加班原因做规范型与情感型的二分",
+      "abstract_summary": "作者以互联网大厂的90后员工为对象，区分规范型与情感型加班，考察员工对不同加班情形的态度和行为选择，指出企业规范上下班时间后，超时工作仍然存在。对本研究的推论是，到点后是否离开还可能取决于员工如何理解留下的理由。",
+      "relevance": "substantive",
+      "relevance_reason": "回应了「正式下班时间明确，为何员工仍会留下」的反诘。可迁移到正式工时清楚、团队成员仍需判断某次加班是否合乎规范的到岗环境。摘要没有分别检验责任是否完成交接、主管是否要求继续在场，以及同事先走是否改变员工选择，也未区分实际加班与留在现场等待。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_hash": "ada3865da58aa10749ecd94e07c80ed18b7fe57174682861074be563e5e7784b",
+      "excerpt_sha256": "8cf4eb6102a69b2db3b16780d33be548d3e8b8141573c9e9936124d1e0c1563e",
+      "searched_at": "2026-11-28T20:42:54.577525+08:00",
+      "batch": "batch_004",
+      "observation_id": "supplemental:batch_004:1",
+      "metadata_event_id": "exec-48e408ee-3c40-4d06-9a6d-460873a38f5a",
+      "abstract_event_id": "exec-d8205d0a-008d-4984-9557-62cde0b2f441",
+      "article_id": "A_feadeb6e39cc404d6d050822",
+      "provenance": [
+        {
+          "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+          "authors": [
+            "林佳鹏"
+          ],
+          "journal": "中国青年研究",
+          "year": "2022",
+          "doi": "10.19633/j.cnki.11-2579/d.2022.0078",
+          "metadata_url": "https://m.fx361.com/news/2022/0713/14423613.html",
+          "abstract_url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+          "abstract_locator": "题录页「文献摘要」段，原生搜索返回整段，直接打开超时",
+          "abstract_excerpt": "加班原因做规范型与情感型的二分",
+          "abstract_summary": "作者以互联网大厂的90后员工为对象，区分规范型与情感型加班，考察员工对不同加班情形的态度和行为选择，指出企业规范上下班时间后，超时工作仍然存在。对本研究的推论是，到点后是否离开还可能取决于员工如何理解留下的理由。",
+          "relevance": "substantive",
+          "relevance_reason": "回应了「正式下班时间明确，为何员工仍会留下」的反诘。可迁移到正式工时清楚、团队成员仍需判断某次加班是否合乎规范的到岗环境。摘要没有分别检验责任是否完成交接、主管是否要求继续在场，以及同事先走是否改变员工选择，也未区分实际加班与留在现场等待。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+          "abstract_hash": "ada3865da58aa10749ecd94e07c80ed18b7fe57174682861074be563e5e7784b",
+          "excerpt_sha256": "8cf4eb6102a69b2db3b16780d33be548d3e8b8141573c9e9936124d1e0c1563e",
+          "searched_at": "2026-11-28T20:42:54.577525+08:00",
+          "batch": "batch_004",
+          "observation_id": "supplemental:batch_004:1",
+          "metadata_event_id": "exec-48e408ee-3c40-4d06-9a6d-460873a38f5a",
+          "abstract_event_id": "exec-d8205d0a-008d-4984-9557-62cde0b2f441"
+        }
+      ]
+    },
+    {
+      "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+      "authors": [
+        "Mary C. Brinton",
+        "Eunsil Oh"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2019",
+      "doi": "10.1086/704369",
+      "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+      "abstract_excerpt": "labor market structure and workplace norms",
+      "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_hash": "f449a8b0a3a34b5dd1debc09969ec451841640f31b513cfeff945a758ac0fc4e",
+      "excerpt_sha256": "bd48315166b91ac9b2ad79adf8800dbba588033e622a4e9a0e0a1d00ad75c55b",
+      "searched_at": "2026-11-28T20:51:35.300311+08:00",
+      "batch": "batch_006",
+      "observation_id": "supplemental:batch_006:1",
+      "metadata_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+      "abstract_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+      "article_id": "A_3b991ffff63587b8829695f6",
+      "provenance": [
+        {
+          "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+          "authors": [
+            "Mary C. Brinton",
+            "Eunsil Oh"
+          ],
+          "journal": "American Journal of Sociology",
+          "year": "2019",
+          "doi": "10.1086/704369",
+          "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+          "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+          "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+          "abstract_excerpt": "labor market structure and workplace norms",
+          "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+          "relevance": "substantive",
+          "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。",
+          "status": "valid_abstract",
+          "provider": "codex_native_web",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+          "abstract_hash": "f449a8b0a3a34b5dd1debc09969ec451841640f31b513cfeff945a758ac0fc4e",
+          "excerpt_sha256": "bd48315166b91ac9b2ad79adf8800dbba588033e622a4e9a0e0a1d00ad75c55b",
+          "searched_at": "2026-11-28T20:51:35.300311+08:00",
+          "batch": "batch_006",
+          "observation_id": "supplemental:batch_006:1",
+          "metadata_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+          "abstract_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "initial_sha256": "e35855a683a287c316f38fc0edb333926b6c270b454d58ae286b3bc8aee947c6",
+  "supplemental_sha256": "a5bf198bc0611101c948cfc1f6c2c7bfe0d34a34438bc6199c1235150ba642fc"
+}
+
+
+## 理论证据 initial/theories.json
+[
+  {
+    "title": "Rethinking the ClockWork of Work: Why Schedule Control May Pay Off at Work and at Home",
+    "url": "https://journals.sagepub.com/doi/10.1177/1523422307305489",
+    "claim": "Kelly 和 Moen 将排程控制界定为员工对工作时点、地点和时长的掌控，并指出不同弹性安排赋予员工的控制权有别。用于分析午间离岗时，需要观察员工能否自行决定、是否需要批准以及安排能否实际执行。",
+    "event_id": "exec-2300f850-5686-49d4-8732-7be65402d490"
+  },
+  {
+    "title": "How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference",
+    "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+    "claim": "Elsbach、Cable 和 Sherman 提出，办公室员工仅仅被看见，也可能引发观察者对其可靠性或投入程度的自发推断，具体取决于在场发生在常规工时内还是工时外。迁移到到岗团队时，需确认离岗是否可见，以及可见性是否进入评价。该机制只涉及被动观察，同事互动本身需要另行检验。",
+    "event_id": "exec-824b4c2a-ed86-458e-96d6-b9147e911ec6"
+  },
+  {
+    "title": "How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference",
+    "url": "https://journals.sagepub.com/doi/10.1177/0018726709353139",
+    "claim": "旁观者可在没有互动的情况下由在场时段自发推断员工特质，正常工时被看见容易被解读为可靠，工时外被看见容易被解读为投入。迁移到到岗员工时，需有可被同事或主管观察的在场差异，以及相对共享的常规工时预期。该机制解释印象形成，实际考核后果与离岗选择仍需查证。",
+    "event_id": "exec-0d62675f-82b0-46ba-8f80-146204f9cf29"
+  }
+]

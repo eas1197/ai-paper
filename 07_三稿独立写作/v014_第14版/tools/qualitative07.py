@@ -85,8 +85,22 @@ def receive(task, draft):
             'section_characters': counts, 'abstract_characters': abstract_count}
 
 
-REVIEW_CHECKS = ('research_question', 'literature', 'framework', 'method', 'evidence',
-                 'counterexamples', 'claims_and_citations', 'language', 'conclusion')
+REVIEW_CHECKS = (
+    'research_question', 'literature', 'framework', 'method', 'evidence',
+    'counterexamples', 'claims_and_citations', 'language', 'conclusion',
+    'progression_and_coherence', 'narrative_integrity', 'chapter_swap_test',
+)
+
+SUBSTANTIVE_REVIEW_QUESTIONS = (
+    '1. 全文是否围绕同一个核心问题推进？',
+    '2. 各章节之间是否具有真实的逻辑承接？',
+    '3. 文献综述是否形成解释路径，而非文献罗列？',
+    '4. 本文理论框架是否具有明确的解释增量？',
+    '5. 定性案例是否同时具有叙事完整性和分析价值？',
+    '6. 段落是否存在重复论证、机械衔接或防御性表达？',
+    '7. 摘要和结论是否准确回应研究发现？',
+    '8. 如果调换两个章节的顺序，文章的论证是否会受到影响？',
+)
 
 
 def native_receipt(folder):
@@ -181,12 +195,21 @@ def native_provider(role, request, folder):
     folder.mkdir(parents=True, exist_ok=False)
     schema = folder / 'schema.json'
     write(schema, REVIEW_SCHEMA if role == 'review' else DRAFT_SCHEMA)
-    instruction = ('独立审稿。逐项核对源证据、理论增量、竞争解释、论证和语言；不得为通过而放宽标准。'
-                   '仅全部实质检查通过时 accepted；否则 revise（给出具体定位和动作）或 rejected。'
-                   if role == 'review' else
-                   '依据冻结材料和原语言规则撰写完整定性论文；六节标题使用一、至六、的顺序，'
-                   '摘要和结果、结论绑定真实矩阵。提供逐条主张及来源定位台账，不得虚构。'
-                   '若有返修任务，按其逐项修改整个稿件，不得改变冻结结论与证据强度。')
+    instruction = (
+        '独立审稿。逐项核对源证据、理论增量、竞争解释、论证和语言；不得为通过而放宽标准。'
+        '须逐项核验以下八项实质审查问题并在 checks（含 progression_and_coherence、narrative_integrity、chapter_swap_test）给出实质理由：'
+        + ' '.join(SUBSTANTIVE_REVIEW_QUESTIONS)
+        + ' 若任意调换两章顺序不影响论证、文献仅罗列堆砌、案例切碎跳人或存在防御性自我反驳，不得 accepted；'
+        '仅全部实质检查通过时 accepted；否则 revise（给出具体定位和动作）或 rejected。'
+        if role == 'review' else
+        '依据冻结材料和原语言规则撰写完整定性论文；严格落实七项写作原则：'
+        '1.全文与段落层层递进而非章节拼接；2.文献综述按解释路径递进，每篇文献承担明确论证功能且原则上置于最关键位置只出现一次；'
+        '3.严格区分各章节功能不提前越位；4.经验分析每节聚焦一个主要案例，先完整交代关键事件再解释，采用阶段性时间表达；'
+        '5.围绕对象命题与机制推进，避免“某某学者认为”领句（经典理论家例外）；6.不用防御性自我反驳，将适用范围融入判断本身；'
+        '7.结论采用总起段加若干简短结论及解释段。六节标题使用一、至六、的顺序，'
+        '摘要和结果、结论绑定真实矩阵。提供逐条主张及来源定位台账，不得虚构。'
+        '若有返修任务，按其逐项修改整个稿件，不得改变冻结结论与证据强度。'
+    )
     prompt = instruction + '\n' + json.dumps(request, ensure_ascii=False)
     code = invoke(cli_executable(), folder, prompt, schema, timeout=1800, model='gpt-6.2-sol')
     if code != 0:

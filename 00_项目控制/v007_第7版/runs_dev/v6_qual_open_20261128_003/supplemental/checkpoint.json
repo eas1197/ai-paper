@@ -1,5 +1,5 @@
 {
-  "config_sha256": "f693e35f9ba806584e5eb5d4bc34464a3edbe47ecb22b6c98e1163e8b9809f4d",
+  "config_sha256": "f17887edbcb0b279cc83faeba2f8c9e778dd3ecb7e3f7f15299c06a8faa065bd",
   "collection_id": "COL_8523b877a329fc9232ae8df9",
   "engine": "codex_native_v1",
   "config": {
@@ -17,7 +17,7 @@
       "American Sociological Review",
       "American Journal of Sociology"
     ],
-    "max_batches": 3,
+    "max_batches": 7,
     "timeout_seconds": 480,
     "excluded_titles": [
       "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
@@ -92,6 +92,55 @@
         "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/abs/10.1177/0018726709353139|专业办公室的质性研究和实验表明，常规工时内被看见容易引出可靠性判断，常规工时外被看见容易引出投入度判断。该解释适用于在场能被评价者观察、且在场被用来推断员工特质的情境。研究测量评价推断，员工离开或等待的选择仍需行为证据。"
       ],
       "event_sha256": "d87ed1a19b42c3c84d38533e4b9a3da0bacc9ec01698add18bc339f192263345"
+    },
+    {
+      "batch": "batch_004",
+      "started_at": "2026-11-28T20:41:37.086599+08:00",
+      "status": "completed",
+      "search_events": 6,
+      "finished_at": "2026-11-28T20:42:54.577525+08:00",
+      "response_sha256": "9951d3bc719634ee7f538778c47c74c57dfb551d267a12e07d97add2f4d74f1a",
+      "notes": [
+        "预算用尽，共24个原生网页动作，含17条查询、4次打开、3次页内定位。按最终纳入及列出的未纳入候选计，发现5篇，核实题录5篇，获得明确标作原摘要的文本3篇，其中仅1篇同时满足刊源、排重和相关性要求。未下载全文。",
+        "议题层先查「下班 加班 在场 同事 主管 职场 时间自主性」及 ASR/AJS 的「face time」「work hours coworkers peer norms」「work time autonomy」，随后用「赶工或反内卷」「竞速游戏」「加班依赖体制」回查题录和摘要。最贴近主管与同事行为的结果超出九刊范围。本轮仍缺少比较同事先走效应和检验责任交接的合格摘要。",
+        "对象层查询「通勤时间 就近居住 时间分配 到岗 员工」并限定《经济研究》《管理世界》《社会学研究》。主要命中通勤与绩效、城市居民时间分配等近邻研究，未发现摘要能把通勤缩短同常规下班时点的离岗决定连起来。",
+        "林佳鹏一文的刊期为2022年第6期。DOI入口未返回可核实页面，也未确认跳转。题名与刊期在转载页核对，整段摘要来自原生搜索实际返回的题录页内容，题录页直开超时。DOI见搜索返回的后续文献引文。",
+        "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/abs/10.1177/0018726709353139|基于专业办公室员工的质性研究和实验，常规工时内被看见容易被解读为可靠，工时之外被看见容易被解读为投入。这一解释适用于员工是否留场可被评价者看到、而评价者可能据此推断工作态度的环境。把这种推断延伸为员工因预期主管评价而等待，仍需离岗行为证据。"
+      ],
+      "event_sha256": "67afd57c528d437f203942bff437ff5011e24cf7aef58122b840c355913f13a0"
+    },
+    {
+      "batch": "batch_005",
+      "started_at": "2026-11-28T20:42:54.708259+08:00",
+      "status": "completed",
+      "search_events": 7,
+      "finished_at": "2026-11-28T20:44:06.969991+08:00",
+      "response_sha256": "6fc69cfd00734fe97c30ec159597e6ad770cc87149d2433b36554c7d221010b5",
+      "notes": [
+        "新论文目标为1篇，最终纳入0篇。以上4条优先候选中，3条的题名、作者、刊名和年份有检索结果支持，其中1条存在期次冲突。实际打开并获得原摘要的候选为1条，题录与原摘要均通过准入核验的候选为0条。另打开并核实了1条理论资料，未计入论文。",
+        "议题层先查 ASR 的 working hours、face time、working late，以及 AJS 的 work hours、coworkers leaving、workplace time norms。中文先查“加班 下班 在场 主管 同事 加班文化”，随后用“中国青年研究 加班 劳动 时间 控制 下班”及“竞速游戏”“加班依赖体制”“新型劳动时间控制与虚假自由”等题名追查。最接近下班时点的上海白领加班民族志发表于 Asian Anthropology，超出指定刊单。ASR 的 schedule control 检索命中排重文献，未纳入。",
+        "对象层查询“通勤时间 时间分配 就近居住 员工 下班 加班 经济研究 中国青年研究”。打开的近邻论文提供了通勤挤出工作与闲暇的证据，离岗决定仍需另行查证。",
+        "理论层从 passive face time、schedule control、presence 改为精确题名检索。打开 DOI 入口后跳转至 Sage，返回 Human Relations 第63卷第6期的摘要。",
+        "THEORY|How passive ‘face time’ affects perceptions of employees: Evidence of spontaneous trait inference|https://journals.sagepub.com/doi/10.1177/0018726709353139|在办公室员工的在场可被他人观察时，常规工时内被看见容易被解读为可靠，工时外被看见容易被解读为投入，观察者可以自发形成这一判断。迁移到下班场景的条件是主管或同事能观察到谁留下、谁离开，且会把在场用于评价。该研究的结果变量是观察者印象，岗位责任能否交接、同事先走是否改变他人的离岗决定仍缺直接证据。",
+        "本轮实际使用19次查询和7次打开，共26个原生网页动作，超出24次上限2次。最后一批的3个动作使累计数从23增至26。未下载全文。"
+      ],
+      "event_sha256": "49d57681530da4363669424bf3bd99c0bf0e7bdc8e7e8207017d5486fe8a2c10"
+    },
+    {
+      "batch": "batch_006",
+      "started_at": "2026-11-28T20:50:24.810364+08:00",
+      "status": "completed",
+      "search_events": 7,
+      "finished_at": "2026-11-28T20:51:35.300311+08:00",
+      "response_sha256": "2b8a8da61ee28a347c6c3b307e5ddd91f2f9d65444948a3e622da8f9e91f585a",
+      "notes": [
+        "议题层先用 American Sociological Review work devotion time norms、American Journal of Sociology face time work hours、社会学研究 加班 在场 同事、管理世界 员工 加班 主管 查找。中文结果指向劳动过程研究，随后用完整题名、内容提要和 DOI 定位原刊摘要，核实了题录。英文结果提供日韩长工时与在场规范线索，随后用 Brinton Oh American Journal of Sociology 2019 Japan Korea abstract 定位出版商页面，同轮用 Getting a Job Is There a Motherhood Penalty Correll 查找评价机制近邻。",
+        "对象层用 通勤时间 就近居住 工作时间 时间分配 社会学研究 管理世界 经济研究 查询。靠前近邻涉及通勤与工作效率、晚通勤出发时间，刊物超出九刊范围。",
+        "理论层沿 work devotion 与 face time 线索查询 Competing Devotions Blair Loy Harvard University Press，并打开出版商授权平台的图书介绍。",
+        "THEORY|Competing Devotions: Career and Family among Women Executives|https://www.degruyterbrill.com/document/doi/10.4159/9780674021594/html|工作奉献图式使雇主和客户把高度时间投入和专注视为职业承诺。原著考察金融业女性高管，迁移到常规下班情境须核对主管或客户是否以可见在场判断投入，以及这种判断是否影响员工的评价或机会。",
+        "按重点跟进的九刊候选计，发现3篇，核实题录2篇，打开并获得原刊摘要1篇，纳入1篇。共24个网页动作，含15条搜索查询和9次打开。纳入条目的出版商摘要入口直接返回摘要，最终刊载于第125卷第1期。全文下载0篇。"
+      ],
+      "event_sha256": "e4a3ea21af70f500825beec9e8724d8ed8c931fa55fbe4fafe6ed966500188f8"
     }
   ],
   "observations": [
@@ -175,6 +224,59 @@
       "observation_id": "batch_003:1",
       "metadata_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb",
       "abstract_event_id": "exec-38f8bda3-c360-48c4-b8a5-325343f970bb"
+    },
+    {
+      "title": "赶工或反内卷？90后“大厂”青年加班现象研究",
+      "authors": [
+        "林佳鹏"
+      ],
+      "journal": "中国青年研究",
+      "year": "2022",
+      "doi": "10.19633/j.cnki.11-2579/d.2022.0078",
+      "metadata_url": "https://m.fx361.com/news/2022/0713/14423613.html",
+      "abstract_url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_locator": "题录页「文献摘要」段，原生搜索返回整段，直接打开超时",
+      "abstract_excerpt": "加班原因做规范型与情感型的二分",
+      "abstract_summary": "作者以互联网大厂的90后员工为对象，区分规范型与情感型加班，考察员工对不同加班情形的态度和行为选择，指出企业规范上下班时间后，超时工作仍然存在。对本研究的推论是，到点后是否离开还可能取决于员工如何理解留下的理由。",
+      "relevance": "substantive",
+      "relevance_reason": "回应了「正式下班时间明确，为何员工仍会留下」的反诘。可迁移到正式工时清楚、团队成员仍需判断某次加班是否合乎规范的到岗环境。摘要没有分别检验责任是否完成交接、主管是否要求继续在场，以及同事先走是否改变员工选择，也未区分实际加班与留在现场等待。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://journal.yuanpingjia.com.cn/Journal/ArticleDetails/35906",
+      "abstract_hash": "ada3865da58aa10749ecd94e07c80ed18b7fe57174682861074be563e5e7784b",
+      "excerpt_sha256": "8cf4eb6102a69b2db3b16780d33be548d3e8b8141573c9e9936124d1e0c1563e",
+      "searched_at": "2026-11-28T20:42:54.577525+08:00",
+      "batch": "batch_004",
+      "observation_id": "batch_004:1",
+      "metadata_event_id": "exec-48e408ee-3c40-4d06-9a6d-460873a38f5a",
+      "abstract_event_id": "exec-d8205d0a-008d-4984-9557-62cde0b2f441"
+    },
+    {
+      "title": "Babies, Work, or Both? Highly Educated Women’s Employment and Fertility in East Asia",
+      "authors": [
+        "Mary C. Brinton",
+        "Eunsil Oh"
+      ],
+      "journal": "American Journal of Sociology",
+      "year": "2019",
+      "doi": "10.1086/704369",
+      "metadata_url": "https://www.journals.uchicago.edu/toc/ajs/2019/125/1",
+      "abstract_url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_locator": "出版商文章页 Abstract 第2段，第47行。正式刊载于2019年7月第125卷第1期，第105–140页。",
+      "abstract_excerpt": "labor market structure and workplace norms",
+      "abstract_summary": "作者根据对日韩育龄高学历男女的160余次深度访谈指出，劳动力市场结构与职场规范强化了家庭内部按性别分配照护劳动的格局，使许多已婚女性放弃就业或考虑只生一个孩子。用于本轮的推论是，即使通勤缩短，若职场仍限制员工何时可以离开，节省的时间也未必能由员工自行安排。",
+      "relevance": "substantive",
+      "relevance_reason": "可回应“通勤缩短就会增加可自主支配的时间”这一反诘。摘要显示，职场规范与家庭分工会共同约束员工的时间安排。迁移到日常下班情境的条件是，主管把可见在场当作履责或投入的信号，且员工预期准点离开会影响评价。这是待检验的迁移条件。原研究考察持续就业与育儿选择，无法判断岗位责任有人承接后员工是否会离开、主管如何执行在场要求，或同事先行何时会带动其他人离开。",
+      "status": "valid_abstract",
+      "provider": "codex_native_web",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/704369",
+      "abstract_hash": "f449a8b0a3a34b5dd1debc09969ec451841640f31b513cfeff945a758ac0fc4e",
+      "excerpt_sha256": "bd48315166b91ac9b2ad79adf8800dbba588033e622a4e9a0e0a1d00ad75c55b",
+      "searched_at": "2026-11-28T20:51:35.300311+08:00",
+      "batch": "batch_006",
+      "observation_id": "batch_006:1",
+      "metadata_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368",
+      "abstract_event_id": "exec-67974d84-2620-42ef-ac95-c49f75638368"
     }
   ],
   "rejected": [
@@ -252,6 +354,144 @@
       "title": "加班依赖体制：再探青年农民工过度加班问题",
       "reason": "打开的转载页载明孙中伟、黄婧玮及《中国青年研究》2021年第8期。文前概述标为导读，原刊摘要仍待核实。其薪酬依赖机制可用于检验员工留下是否出于收入压力。https://www.pltyw.com/html/View/Coworkers/2022/07/14/15092.html",
       "batch": "batch_003"
+    },
+    {
+      "title": "竞速游戏：从时间规训到时间管控",
+      "reason": "核实黄丹发表于《中国青年研究》2022年第6期。期刊公众号转载可回链，但本轮打开超时，另一搜索结果只返回介绍文字，完整原摘要未核实。",
+      "batch": "batch_004"
+    },
+    {
+      "title": "加班依赖体制：再探青年农民工过度加班问题",
+      "reason": "转载注明孙中伟、黄婧玮发表于《中国青年研究》2021年第8期，所得内容为转载导读，原刊摘要未核实。",
+      "batch": "batch_004"
+    },
+    {
+      "title": "Getting a Job: Is There a Motherhood Penalty?",
+      "reason": "芝加哥大学出版社返回完整题录与摘要，原刊为 American Journal of Sociology 第112卷第5期。摘要检验招聘中的母职惩罚，未检验在岗员工的离开或等待，按相关性排除。",
+      "batch": "batch_004"
+    },
+    {
+      "title": "数字知识工人“加班同意”的双重社会建构",
+      "reason": "搜索结果出现领导或同事未离开时员工跟随留场的叙述。原刊《上海对外经贸大学学报》超出本轮九刊范围，按刊源排除。",
+      "batch": "batch_004"
+    },
+    {
+      "title": "竞速游戏：从时间规训到时间管控",
+      "reason": "期刊公众号转载线索和学术引文均指向黄丹、《中国青年研究》2022年第6期。研究聚焦互联网大企业员工的自我时间管理，贴近本轮的时间支配权问题。打开转载入口超时，未取得可定位的原摘要。",
+      "batch": "batch_005"
+    },
+    {
+      "title": "新型劳动时间控制与虚假自由——外卖骑手的劳动过程研究",
+      "reason": "多条引文指向李胜蓝、江立华和《社会学研究》2020年第6期，一处作者机构页面标为第5期。打开中国人民大学转载页和知网页均未取得摘要，期次也未在原刊页面复核。",
+      "batch": "batch_005"
+    },
+    {
+      "title": "加班依赖体制：再探青年农民工过度加班问题",
+      "reason": "转载与学术引文指向孙中伟、黄婧玮和《中国青年研究》2021年第8期。检索结果提供了低基本工资与加班收入依赖的线索，尚未打开页面核实原摘要。",
+      "batch": "batch_005"
+    },
+    {
+      "title": "职住分离、时间挤出与企业生产效率",
+      "reason": "已打开北京大学学术期刊网页面并读到摘要，所见题录未确认其原刊属于指定九刊。摘要讨论通勤时间对工作和闲暇的挤出，对岗位交接、主管在场要求和同事先行均无直接证据。",
+      "batch": "batch_005"
+    },
+    {
+      "title": "从被管理的手到被管理的心——劳动过程视野下的加班研究",
+      "reason": "原刊年度目录核实庄家炽、《社会学研究》2018年第3期。机构入口与 DOI 入口均未返回摘要，已打开的《文化纵横》转载为删节版，无法据此定位原刊摘要。原刊目录 https://shxyj.ajcass.com/Admin/UploadFile/20130926008/2018-11-20/Issue/iydl3i53.pdf",
+      "batch": "batch_006"
+    },
+    {
+      "title": "Getting a Job: Is There a Motherhood Penalty?",
+      "reason": "检索结果发现出版商摘要入口。该研究更接近招聘评价，优先核验职场规范与时间约束相关的日韩研究后即停止，未打开本篇摘要。",
+      "batch": "batch_006"
+    }
+  ],
+  "budget_history": [
+    {
+      "prior_config": {
+        "theme": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+        "target": 5,
+        "topic_search_phase": "supplemental",
+        "journals": [
+          "中国社会科学",
+          "社会学研究",
+          "社会",
+          "探索与争鸣",
+          "中国青年研究",
+          "经济研究",
+          "管理世界",
+          "American Sociological Review",
+          "American Journal of Sociology"
+        ],
+        "max_batches": 3,
+        "timeout_seconds": 480,
+        "excluded_titles": [
+          "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+          "Consequences of Routine Work-Schedule Instability for Worker Health and Well-Being",
+          "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+          "Rules, Relations, and Work",
+          "Overwork and the Slow Convergence in the Gender Gap in Wages"
+        ],
+        "search_guidance": {
+          "issue": "工作组织如何分配时间支配权",
+          "why": "通勤距离变化可腾出不同用途的时段，需把员工可离岗的权利与久留时间区别开",
+          "object_search": "通勤时间 时间分配 就近居住 到岗员工",
+          "issue_search": "职场在场规范 员工离岗 自主性 工作家庭边界",
+          "theory_search": "schedule control temporal autonomy face time organizational norms",
+          "specialist_journals": [],
+          "candidate_question": "在继续到岗且通勤时间缩短的员工中，午间离岗规则、下班时的在场期待与同事互动，分别在什么条件下影响员工能否自主安排工作日的时间？"
+        },
+        "run_mode": "dev",
+        "search_action_budget": 24,
+        "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+        "topic_batch_budget": true
+      },
+      "prior_config_sha256": "f693e35f9ba806584e5eb5d4bc34464a3edbe47ecb22b6c98e1163e8b9809f4d",
+      "prior_checkpoint_sha256": "10afcb3f1bef11c3b8da6e002771433a03952fc1780f2c648548f80ff487b023",
+      "changed_at": "2026-11-28T20:41:37.041598+08:00"
+    },
+    {
+      "prior_config": {
+        "theme": "在常规下班时点，岗位责任的承接、主管对在场的要求和同事的先行，分别在什么条件下影响到岗员工是离开还是继续等待？",
+        "target": 5,
+        "topic_search_phase": "supplemental",
+        "journals": [
+          "中国社会科学",
+          "社会学研究",
+          "社会",
+          "探索与争鸣",
+          "中国青年研究",
+          "经济研究",
+          "管理世界",
+          "American Sociological Review",
+          "American Journal of Sociology"
+        ],
+        "max_batches": 5,
+        "timeout_seconds": 480,
+        "excluded_titles": [
+          "Changing Work and Work-Family Conflict: Evidence from the Work, Family, and Health Network",
+          "Consequences of Routine Work-Schedule Instability for Worker Health and Well-Being",
+          "Changing Workplaces to Reduce Work-Family Conflict: Schedule Control in a White-Collar Organization",
+          "Rules, Relations, and Work",
+          "Overwork and the Slow Convergence in the Gender Gap in Wages"
+        ],
+        "search_guidance": {
+          "issue": "工作组织如何分配时间支配权",
+          "why": "通勤距离变化可腾出不同用途的时段，需把员工可离岗的权利与久留时间区别开",
+          "object_search": "通勤时间 时间分配 就近居住 到岗员工",
+          "issue_search": "职场在场规范 员工离岗 自主性 工作家庭边界",
+          "theory_search": "schedule control temporal autonomy face time organizational norms",
+          "specialist_journals": [],
+          "candidate_question": "在继续到岗且通勤时间缩短的员工中，午间离岗规则、下班时的在场期待与同事互动，分别在什么条件下影响员工能否自主安排工作日的时间？"
+        },
+        "run_mode": "dev",
+        "search_action_budget": 24,
+        "workload_sha256": "6f1d8b18dc3ed7e94c179cd61aa6305e9e76316b45ecf0d63cc7c05af2a99696",
+        "topic_batch_budget": true
+      },
+      "prior_config_sha256": "194002de5ac6c97a6e288c89e7a8fdc85d4a1df8a0590b65ef0bf2afbdae5cad",
+      "prior_checkpoint_sha256": "1086973db09022d9c746b85fbd31465018d13dfc2d5abe1ae72c61a60f5345c7",
+      "changed_at": "2026-11-28T20:50:24.769810+08:00"
     }
   ]
 }

@@ -29,10 +29,22 @@ FRAMEWORK_FIELDS = {
 }
 CASE_FIELDS = {"background": "案例背景", "selection": "案例选择",
                "materials": "资料来源", "method": "研究方法"}
+SUBSTANTIVE_REVIEW_QUESTIONS = [
+    "1. 全文是否围绕同一个核心问题推进？",
+    "2. 各章节之间是否具有真实的逻辑承接？",
+    "3. 文献综述是否形成解释路径，而非文献罗列？",
+    "4. 本文理论框架是否具有明确的解释增量？",
+    "5. 定性案例是否同时具有叙事完整性和分析价值？",
+    "6. 段落是否存在重复论证、机械衔接或防御性表达？",
+    "7. 摘要和结论是否准确回应研究发现？",
+    "8. 如果调换两个章节的顺序，文章的论证是否会受到影响？",
+]
+
 REVIEW_CRITERIA = [
-    "各章和各节承担可执行的论证任务，材料定位可回查。",
-    "证据范围与计划提出的主张相符，跨章节衔接最终回答核心问题。",
-    "定性维度由理论推演，逐章结合经验材料和理论解释，结论整合各维度并回应既有理论。",
+    "各章和各节承担可执行的论证任务，材料定位可回查，且严格区分章节功能（不提前越位）。",
+    "证据范围与计划提出的主张相符，跨章节及段落内部形成真实递进承接（任意调换两章顺序将破坏论证推进）。",
+    "文献综述按解释路径层层递进、每篇文献承担明确论证功能并原则上置于最关键位置只出现一次。",
+    "定性维度由理论推演并交代相对已有解释的增量，每节聚焦主要案例保持叙事完整性，先完整交代关键事件再展开解释，结论凝练为总起段加若干简短结论及解释段。",
     "定量方案遵循本项目的正式设计及结果口径，写作方案的结构检查不构成正式稿件验收。",
 ]
 
@@ -182,7 +194,9 @@ def produce(work, packet, manifest, *, output=None):
         "input_sha256": digest(packet), "plan_sha256": hashlib.sha256(plan.read_bytes()).hexdigest(),
         "topic_sha256": hashlib.sha256(frozen_path.read_bytes()).hexdigest() if frozen_path.is_file() else None,
         "analysis_matrix_sha256": hashlib.sha256(matrix_path.read_bytes()).hexdigest() if matrix_path else None,
-        "review_criteria": REVIEW_CRITERIA, "review_status": "pending",
+        "review_criteria": REVIEW_CRITERIA,
+        "substantive_review_questions": SUBSTANTIVE_REVIEW_QUESTIONS,
+        "review_status": "pending",
         "question_binding": question_binding,
         "full_draft_entry": ("existing_quantitative_with_upstream_gates"
                              if mode == "full" and packet["method"] == "quantitative"
