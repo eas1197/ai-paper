@@ -138,6 +138,18 @@ def theories(folder, state):
             if len(parts) == 4 and parts[0].strip() == "THEORY":
                 _, title, url, claim = (s.strip() for s in parts)
                 event = url_event(url, trace)
+                if not event and title and url.startswith("https://doi.org/"):
+                    # A reported DOI may refer to a publisher page actually returned by the tool.
+                    prefix = normalize(title)
+                    candidates = {
+                        row["url"] for item in trace for row in item.get("results", [])
+                        if isinstance(row.get("url"), str) and row.get("snippet")
+                        and normalize((row.get("title") or "").split(" | ", 1)[0]) == prefix
+                        and url_event(row["url"], [item])
+                    }
+                    if len(candidates) == 1:
+                        url = candidates.pop()
+                        event = url_event(url, trace)
                 if event and title and claim:
                     accepted.append({"title": title, "url": url, "claim": claim, "event_id": event})
     return accepted
@@ -298,7 +310,10 @@ def advance(work, state):
         state["status"] = "literature_budget_exhausted"
         state["stop_decision"] = decision
     elif decision["action"] == "verify" and phase == "initial" and not load(folder / "theories.json"):
-        decision.update(action="wait_for_theory_evidence", failure_kind="unverified_evidence")
+        if theories(folder, checkpoint):
+            decision["collection"] = search(work, state, phase, True)
+        else:
+            decision.update(action="wait_for_theory_evidence", failure_kind="unverified_evidence")
     elif decision["action"] == "stop":
         state["status"] = "literature_budget_exhausted"
         decision["failure_kind"] = "resource_limit"

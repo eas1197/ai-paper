@@ -32,3 +32,12 @@ v6_qual_open_20261128_002 按 v009 入口完成无主题预设的真实联网观
 - critical_response.json 95a7e3b7d6d8f96b8f94071373fbaefdc8eb0df7f981458b6bfc4875d357e677
 - explanation_exchange.json d50d1070241d87ea9abe222b0131be4871fa372ba4f464a4decea2bb85187095
 - issue_plan.json ab2a0e14f116312a122ea555611b7f20c35e24171b79faf87501cce7781fde93
+
+## 三层初查接续
+
+同一原生批次核实 5 条摘要。理论笔记使用 DOI，而原生结果给出唯一同标题出版社原作页面，旧入口未入账。修复为 DOI 无匹配时仅接受带摘要片段且唯一同标题的原生 URL，继续绑定事件，原批次重放未新增检索。状态 preliminary_review。原控制模块回归 17 通过。
+
+- initial/batch_001/events.jsonl 014a7faa6730d50266cbf24964f52adcd3ee016cfb412b1dbcf39e27e30a20bb
+- initial/checkpoint.json cccb6d78160a5589fb2928bfd43bce01bcee198a67533874f46bd5a06c51cf92
+- initial/literature_matrix.json e207e60b0b303a059e69ab8ed0949f8c780857e4d1c00fb17c7e01db631ef362
+- initial/theories.json 12f7cf09634a68b19791612cb37252f06b0da78d58aca6dd9ec4e0bc5e2603e3
